@@ -26,7 +26,14 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-WEBHOOK_SECRET: str = os.environ.get("WEBHOOK_SECRET", "change-me-please")
+_DEFAULT_SECRET_SENTINEL = "change-me-please"
+WEBHOOK_SECRET: str = os.environ.get("WEBHOOK_SECRET", "")
+
+if not WEBHOOK_SECRET or WEBHOOK_SECRET == _DEFAULT_SECRET_SENTINEL:
+    raise RuntimeError(
+        "WEBHOOK_SECRET is unset or set to the placeholder default. "
+        "Refusing to start. Set WEBHOOK_SECRET to a strong random value."
+    )
 
 # Guard against the empty-string-splits-to-{''} footgun
 ALLOWED_SENDERS: set = {
@@ -36,6 +43,7 @@ ALLOWED_SENDERS: set = {
 }
 
 _GITHUB_API = "https://api.github.com"
+_MAX_TOPIC_LEN = 500
 
 
 # ── Auth helpers ───────────────────────────────────────────────────────────────
@@ -135,11 +143,7 @@ def extract_topic_from_email(subject: str, body: str) -> str:
     prefix = "PODCAST:"
     if subject.upper().startswith(prefix):
         return subject[len(prefix):].strip()
-    for line in body.splitlines():
-        line = line.strip()
-        if line:
-            return line
-    return subject.strip()
+    return ""
 
 
 # ── Routes ─────────────────────────────────────────────────────────────────────
@@ -158,15 +162,20 @@ def inbound_email():
     subject = request.form.get("subject", "")
     body = request.form.get("text", "") or request.form.get("html", "")
 
-    if ALLOWED_SENDERS and sender:
-        sender_addr = sender.split("<")[-1].rstrip(">").strip().lower()
-        if sender_addr not in ALLOWED_SENDERS:
-            logger.warning(f"Rejected sender: {sender_addr!r}")
-            return jsonify({"error": "sender not allowed"}), 403
+    if not ALLOWED_SENDERS:
+        logger.warning("ALLOWED_SENDERS is empty — rejecting inbound email")
+        return jsonify({"error": "sender not allowed"}), 403
+
+    sender_addr = sender.split("<")[-1].rstrip(">").strip().lower()
+    if sender_addr not in ALLOWED_SENDERS:
+        logger.warning(f"Rejected sender: {sender_addr!r}")
+        return jsonify({"error": "sender not allowed"}), 403
 
     topic = extract_topic_from_email(subject, body)
     if not topic:
         return jsonify({"error": "could not extract topic"}), 400
+    if len(topic) > _MAX_TOPIC_LEN:
+        return jsonify({"error": f"topic exceeds {_MAX_TOPIC_LEN} chars"}), 413
 
     try:
         result = trigger_generation(topic)
@@ -181,12 +190,18 @@ def inbound_email():
 @app.route("/webhook/prompt", methods=["POST"])
 def direct_prompt():
     data = request.get_json(silent=True) or {}
-    if data.get("secret") != WEBHOOK_SECRET and not _verify_secret(request):
+    plaintext_secret = data.get("secret", "")
+    plaintext_match = isinstance(plaintext_secret, str) and hmac.compare_digest(
+        plaintext_secret, WEBHOOK_SECRET
+    )
+    if not plaintext_match and not _verify_secret(request):
         return jsonify({"error": "unauthorized"}), 401
 
     topic = data.get("topic", "").strip()
     if not topic:
         return jsonify({"error": "topic required"}), 400
+    if len(topic) > _MAX_TOPIC_LEN:
+        return jsonify({"error": f"topic exceeds {_MAX_TOPIC_LEN} chars"}), 413
 
     try:
         result = trigger_generation(topic)
