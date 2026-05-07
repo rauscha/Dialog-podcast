@@ -1,0 +1,6 @@
+.env
+episodes/
+logs/
+__pycache__/
+*.pyc
+*.wav

@@ -1,0 +1,88 @@
+name: Generate Podcast Episode
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Episode topic"
+        required: true
+        type: string
+
+  repository_dispatch:
+    types: [podcast_request]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Python dependencies
+        run: |
+          # audiocraft, torch, and torchaudio are excluded from CI — they are
+          # several GB and exceed the free-tier runner limits. MusicGen runs
+          # locally only. The USE_MUSIC=false env var disables it for CI runs.
+          grep -vE '^\s*(audiocraft|torch|torchaudio)' requirements.txt \
+            > /tmp/requirements-ci.txt
+          pip install -r /tmp/requirements-ci.txt
+
+      - name: Resolve topic
+        id: vars
+        env:
+          INPUT_TOPIC: ${{ github.event.inputs.topic }}
+          PAYLOAD_TOPIC: ${{ github.event.client_payload.topic }}
+        run: |
+          TOPIC="${INPUT_TOPIC:-$PAYLOAD_TOPIC}"
+          if [ -z "$TOPIC" ]; then
+            echo "::error::No topic provided via workflow_dispatch input or repository_dispatch payload."
+            exit 1
+          fi
+          echo "topic=$TOPIC" >> "$GITHUB_OUTPUT"
+
+      - name: Generate episode
+        env:
+          TOPIC: ${{ steps.vars.outputs.topic }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          SKIP_GIT: "1"
+          USE_MUSIC: "false"
+        run: |
+          python generate_podcast.py "$TOPIC" --repo .
+
+      - name: Commit and push episode
+        env:
+          TOPIC: ${{ steps.vars.outputs.topic }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add episodes/ feed.xml
+          if git diff --staged --quiet; then
+            echo "No new files to commit — episode may have already been pushed."
+          else
+            git commit -m "New episode: $TOPIC"
+            git push
+          fi
