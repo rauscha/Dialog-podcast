@@ -62,6 +62,13 @@ try:
 except ImportError:
     HAS_REQUESTS = False
 
+# ── Models ─────────────────────────────────────────────────────────────────────
+# Research stays on Opus for quality; dialogue + fact-check on Sonnet for cost.
+_RESEARCH_MODEL   = "claude-opus-4-5"
+_DIALOGUE_MODEL   = "claude-sonnet-4-6"
+_FACT_CHECK_MODEL = "claude-sonnet-4-6"
+
+
 # ── Config ─────────────────────────────────────────────────────────────────────
 
 DEFAULTS: dict = {
@@ -205,10 +212,12 @@ def _extract_sources(script: str) -> list:
             in_sources = True
             continue
         if in_sources:
-            if stripped and not stripped.startswith("#"):
-                sources.append(stripped)
-            elif stripped.startswith("#"):
-                break
+            if not stripped or stripped.startswith("#"):
+                # Blank line or section header ends the sources list
+                if sources:
+                    break
+                continue
+            sources.append(stripped)
     return sources[:12]
 
 
@@ -218,7 +227,7 @@ def research_and_script(topic: str, cfg: dict, client: anthropic.Anthropic) -> d
     # Pass 1 — Research brief
     logger.info(f"[1/5] Researching topic: {topic!r}")
     research_resp = client.messages.create(
-        model="claude-opus-4-5",
+        model=_RESEARCH_MODEL,
         max_tokens=4096,
         system=_RESEARCH_SYSTEM,
         messages=[
@@ -238,7 +247,7 @@ def research_and_script(topic: str, cfg: dict, client: anthropic.Anthropic) -> d
     # Pass 2 — Dialogue script
     logger.info("[2/5] Writing Cedar/Marin dialogue script...")
     dialogue_resp = client.messages.create(
-        model="claude-opus-4-5",
+        model=_DIALOGUE_MODEL,
         max_tokens=8192,
         system=_DIALOGUE_SYSTEM.format(target_words=target_words),
         messages=[
@@ -257,7 +266,7 @@ def research_and_script(topic: str, cfg: dict, client: anthropic.Anthropic) -> d
     # Pass 3 — Fact-check
     logger.info("[3/5] Fact-checking script...")
     fc_resp = client.messages.create(
-        model="claude-opus-4-5",
+        model=_FACT_CHECK_MODEL,
         max_tokens=8192,
         system=_FACT_CHECK_SYSTEM,
         messages=[{"role": "user", "content": raw_script}],
@@ -333,6 +342,11 @@ def _xml_escape(text: str) -> str:
     )
 
 
+def _cdata_safe(text: str) -> str:
+    """Defuse CDATA-end sequences so a string can't break out of <![CDATA[ ... ]]>."""
+    return text.replace("]]>", "]]]]><![CDATA[>")
+
+
 # ── Two-voice TTS ──────────────────────────────────────────────────────────────
 
 def _parse_dialogue_turns(script: str, cfg: dict) -> list:
@@ -394,7 +408,7 @@ def _ffmpeg_concat(parts: list, output: Path) -> None:
             "-ar", "44100", "-ac", "2", "-b:a", "128k",
             str(output),
         ]
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         if result.returncode != 0:
             raise RuntimeError(f"ffmpeg concat failed: {result.stderr[:500]}")
     finally:
@@ -424,7 +438,7 @@ def _tts_openai_voice(
             continue
         logger.debug(f"TTS chunk {i + 1}/{len(chunks)} voice={voice!r} ({len(chunk)} chars)")
         response = oa_client.audio.speech.create(
-            model="tts-1-hd",
+            model="gpt-4o-mini-tts",
             voice=voice,
             input=chunk,
         )
@@ -671,7 +685,7 @@ def update_rss(
     preview = _xml_escape(
         re.sub(r"^(CEDAR|MARIN):\s*", "", episode["script"][:500], flags=re.MULTILINE)
     )
-    description = preview + "..." + sources_html + music_html
+    description = _cdata_safe(preview + "..." + sources_html + music_html)
 
     new_item = _ITEM_TEMPLATE.format(
         title       = _xml_escape(episode["topic"]),
@@ -706,11 +720,14 @@ def update_rss(
 
 
 def git_publish(audio_path: Path, repo_root: Path, topic: str) -> None:
+    safe_topic = re.sub(r"[\r\n]+", " ", topic).strip()[:120] or "(untitled)"
     for cmd in [
         ["git", "add", str(audio_path), "feed.xml"],
-        ["git", "commit", "-m", f"New episode: {topic}"],
+        ["git", "commit", "-m", f"New episode: {safe_topic}"],
     ]:
-        result = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True)
+        result = subprocess.run(
+            cmd, cwd=repo_root, capture_output=True, text=True, timeout=60
+        )
         if result.returncode != 0:
             raise RuntimeError(
                 f"git {cmd[1]} failed:\n{result.stderr}"
@@ -720,7 +737,7 @@ def git_publish(audio_path: Path, repo_root: Path, topic: str) -> None:
     last_err = ""
     for attempt in range(3):
         result = subprocess.run(
-            ["git", "push"], cwd=repo_root, capture_output=True, text=True
+            ["git", "push"], cwd=repo_root, capture_output=True, text=True, timeout=120
         )
         if result.returncode == 0:
             return
@@ -828,8 +845,10 @@ def run(topic: str, repo_root: Path = Path(".")) -> dict:
             git_publish(audio_path, repo_root, topic)
 
     finally:
-        if work_dir.exists():
-            shutil.rmtree(work_dir, ignore_errors=True)
+        # TODO 2026-06-06: re-enable to stop bloating disk; kept off for first-month debug window.
+        # if work_dir.exists():
+        #     shutil.rmtree(work_dir, ignore_errors=True)
+        pass
 
     logger.info(
         f"\nDone!  Episode: {topic!r}  "

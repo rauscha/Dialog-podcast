@@ -4,3 +4,6 @@ logs/
 __pycache__/
 *.pyc
 *.wav
+
+# Claude Code harness state (worktrees, plans, agent transcripts)
+.claude/

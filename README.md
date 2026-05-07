@@ -83,32 +83,15 @@ Output files land in `episodes/`.
 
 ---
 
-## Triggering via webhook
+## Triggering remotely
 
-Start the Flask server:
-```bash
-python email_trigger.py
+The active remote-trigger path is a **Telegram bot** running on your tower. See [`telegram-instructions.md`](telegram-instructions.md) for setup (≈10 minutes: create bot via `@BotFather`, set two env vars, optional Windows Task Scheduler auto-start). The bot uses long-polling — outbound only — so your machine never exposes a port.
+
 ```
-
-### Direct POST
-```bash
-curl -X POST http://localhost:5001/webhook/prompt \
-  -H "Content-Type: application/json" \
-  -d '{"topic": "dark matter and the large-scale structure of the universe", "secret": "your-webhook-secret"}'
+You (phone) → Telegram → bot on your tower → generate_podcast.py → episode + RSS
 ```
 
-### Email webhook (Mailgun / SendGrid inbound parse)
-Configure your email provider to POST inbound mail to `http://your-server:5001/webhook/email`. Emails from addresses in `ALLOWED_SENDERS` whose subject starts with `PODCAST:` will trigger generation:
-```
-Subject: PODCAST: the Cambrian explosion
-```
-
-### Monitoring
-```
-GET /status       — last 40 lines of the current generation log
-GET /logs         — last 100 lines
-GET /health       — {"status": "ok"}
-```
+> **Archived alternative:** the SendGrid email + Flask webhook + Fly.io path lives under [`archive/email-webhook/`](archive/email-webhook/README.md). It's preserved (with Phase-1 security fixes already applied) so you can revive it later if your needs change.
 
 ---
 
@@ -151,7 +134,9 @@ All keys can be overridden by environment variables (see `.env.example`).
 ```
 generate_podcast.py   — orchestrator: research → script → TTS → music → RSS
   ├── music_gen.py    — MusicGen wrapper; generates Cedar's theme music
-  └── clip_mixer.py  — YouTube clip extraction and audio assembly
+  └── clip_mixer.py   — YouTube clip extraction and audio assembly
 
-email_trigger.py      — Flask webhook server (email + direct POST)
+telegram_bot.py       — long-polling Telegram bot; spawns generate_podcast.py per message
+
+archive/email-webhook/ — deprecated SendGrid + Flask + Fly.io path (see its README)
 ```

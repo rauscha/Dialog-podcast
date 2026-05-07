@@ -57,6 +57,7 @@ def generate_music(
             ["ffmpeg", "-y", "-i", str(wav_path), "-b:a", "128k", str(mp3_path)],
             capture_output=True,
             text=True,
+            timeout=120,
         )
         if result.returncode != 0:
             raise RuntimeError(f"ffmpeg WAV→MP3 conversion failed: {result.stderr[:300]}")

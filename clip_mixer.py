@@ -8,9 +8,26 @@ import shutil
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.parse import urlparse
 import tempfile
 
 import anthropic
+
+_ALLOWED_VIDEO_HOSTS = {
+    "youtube.com", "www.youtube.com", "m.youtube.com",
+    "music.youtube.com", "youtu.be",
+}
+
+# Sonnet for the cue-annotation pass — short structured-JSON task, no quality regression vs Opus.
+_CUE_MODEL = "claude-sonnet-4-6"
+
+
+def _is_allowed_video_url(url: str) -> bool:
+    try:
+        host = (urlparse(url).hostname or "").lower()
+    except ValueError:
+        return False
+    return host in _ALLOWED_VIDEO_HOSTS
 
 
 @dataclass
@@ -77,7 +94,7 @@ def _extract_text(content_blocks) -> str:
 def annotate_script_with_cues(script: str) -> tuple:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     resp = client.messages.create(
-        model="claude-opus-4-5",
+        model=_CUE_MODEL,
         max_tokens=5000,
         system=_CUE_SYSTEM,
         messages=[{"role": "user", "content": script}],
@@ -109,7 +126,13 @@ def search_youtube(query: str, max_results: int = 5) -> list:
         "yt-dlp", "--dump-json", "--flat-playlist",
         f"ytsearch{max_results}:{query}", "--no-warnings",
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    try:
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=60
+        )
+    except subprocess.TimeoutExpired:
+        print(f"   [clip] yt-dlp search timed out for query: {query!r}")
+        return []
     videos = []
     for line in result.stdout.strip().splitlines():
         try:
@@ -164,6 +187,9 @@ def extract_clip(cue: ClipCue, work_dir: Path):
         return None
 
     video_url   = video.get("url") or f"https://www.youtube.com/watch?v={video.get('id', '')}"
+    if not _is_allowed_video_url(video_url):
+        print(f"   [clip] Refusing non-YouTube URL for {cue.cue_id}: {video_url!r}")
+        return None
     video_title = video.get("title", "Unknown")
     channel     = video.get("channel") or video.get("uploader", "Unknown")
     year        = str(video.get("upload_date", ""))[:4] or "n.d."
@@ -185,7 +211,13 @@ def extract_clip(cue: ClipCue, work_dir: Path):
         "--quiet",
         video_url,
     ]
-    result = subprocess.run(dl_cmd, capture_output=True, text=True, timeout=120)
+    try:
+        result = subprocess.run(
+            dl_cmd, capture_output=True, text=True, timeout=120
+        )
+    except subprocess.TimeoutExpired:
+        print(f"   [clip] yt-dlp download timed out for {cue.cue_id}")
+        return None
     if result.returncode != 0:
         print(f"   [clip] yt-dlp failed for {cue.cue_id}: {result.stderr[:200]}")
         return None
@@ -203,7 +235,14 @@ def extract_clip(cue: ClipCue, work_dir: Path):
         "-ar", "44100", "-ac", "2",
         str(out_path),
     ]
-    result = subprocess.run(cut_cmd, capture_output=True, text=True)
+    try:
+        result = subprocess.run(
+            cut_cmd, capture_output=True, text=True, timeout=120
+        )
+    except subprocess.TimeoutExpired:
+        print(f"   [clip] ffmpeg trim timed out for {cue.cue_id}")
+        raw_file.unlink(missing_ok=True)
+        return None
     raw_file.unlink(missing_ok=True)
 
     if result.returncode != 0 or not out_path.exists():
@@ -227,7 +266,12 @@ def _get_audio_duration(path: Path) -> float:
         "ffprobe", "-v", "quiet",
         "-print_format", "json", "-show_format", str(path),
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    try:
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=30
+        )
+    except subprocess.TimeoutExpired:
+        return 0.0
     try:
         data = json.loads(result.stdout)
         return float(data["format"]["duration"])
@@ -256,7 +300,7 @@ def _ffmpeg_concat(parts: list, output: Path) -> None:
             "-ar", "44100", "-ac", "2", "-b:a", "128k",
             str(output),
         ]
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         if result.returncode != 0:
             raise RuntimeError(f"ffmpeg concat failed: {result.stderr[:500]}")
     finally:
