@@ -795,7 +795,7 @@ def update_rss(
 def git_publish(audio_path: Path, repo_root: Path, topic: str) -> None:
     safe_topic = re.sub(r"[\r\n]+", " ", topic).strip()[:120] or "(untitled)"
     for cmd in [
-        ["git", "add", str(audio_path), "feed.xml"],
+        ["git", "add", "-f", str(audio_path), "feed.xml"],
         ["git", "commit", "-m", f"New episode: {safe_topic}"],
     ]:
         result = subprocess.run(

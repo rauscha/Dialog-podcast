@@ -1,5 +1,5 @@
 .env
-episodes/
+episodes/*_work/
 logs/
 __pycache__/
 *.pyc
