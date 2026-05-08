@@ -54,7 +54,7 @@ class ExtractedClip:
 # ── Script annotation ──────────────────────────────────────────────────────────
 
 _CUE_SYSTEM = """\
-You are a podcast producer enriching a Dialog episode with illustrative audio clips.
+You are a podcast producer enriching an Asynchronous episode with illustrative audio clips.
 
 The script is a two-host dialogue between Cedar and Marin. Your job: insert
 CLIP_CUE blocks at 2-4 natural moments where a real audio excerpt would

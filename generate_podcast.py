@@ -38,8 +38,8 @@ logger = logging.getLogger(__name__)
 # ── Optional dependencies ──────────────────────────────────────────────────────
 
 try:
-    from music_gen import generate_intro_outro, HAS_AUDIOCRAFT
-    HAS_MUSIC_GEN = HAS_AUDIOCRAFT
+    from music_gen import generate_intro_outro, HAS_AUDIOCRAFT, HAS_NUMPY as _HAS_NUMPY
+    HAS_MUSIC_GEN = HAS_AUDIOCRAFT or _HAS_NUMPY
 except ImportError:
     HAS_MUSIC_GEN = False
     generate_intro_outro = None  # type: ignore[assignment]
@@ -72,8 +72,8 @@ _FACT_CHECK_MODEL = "claude-sonnet-4-6"
 # ── Config ─────────────────────────────────────────────────────────────────────
 
 DEFAULTS: dict = {
-    "podcast_title":        "Dialog",
-    "podcast_description":  "Two hosts explore ideas at the intersection of art, science, and wonder.",
+    "podcast_title":        "Asynchronous",
+    "podcast_description":  "Cedar and Marin roam the edges of art, science, and human experience.",
     "podcast_author":       "Cedar & Marin",
     "podcast_email":        "you@example.com",
     "podcast_language":     "en",
@@ -94,6 +94,8 @@ DEFAULTS: dict = {
     "output_dir":           "episodes",
     "use_clips":            True,
     "use_music":            True,
+    "tts_model":            "gpt-4o-mini-tts",
+    "use_emotive_tts":      True,
     "music_model":          "facebook/musicgen-small",
     "music_duration_sec":   12,
     "music_fade_sec":       2,
@@ -148,7 +150,7 @@ Rules:
 """
 
 _DIALOGUE_SYSTEM = """\
-You are writing a podcast script for "Dialog" — a show in the style of Radiolab.
+You are writing a podcast script for "Asynchronous" — a show in the style of Radiolab.
 
 The two hosts are:
 - CEDAR: Artistic, broad-thinking, asks "what does this MEAN for us?" She finds
@@ -159,9 +161,20 @@ The two hosts are:
   He's the one who says "well, actually..." but does it with dry wit and genuine
   curiosity, not pedantry. He grounds Cedar's flights of fancy in evidence.
 
-Format EVERY line with a speaker label:
-CEDAR: [dialogue]
-MARIN: [dialogue]
+Format EVERY line with a speaker label AND an emotion delivery tag in square brackets:
+CEDAR [warm, curious]: dialogue text here
+MARIN [dry wit, measured]: dialogue text here
+
+The emotion tag guides text-to-speech delivery — treat it as a director's note.
+Keep tags to 2-4 words describing tone, and optionally pace or energy:
+  CEDAR [warm, wondering]: I keep thinking about this image...
+  MARIN [dry, slightly amused]: Well, the data would suggest otherwise.
+  CEDAR [genuinely excited, faster]: Wait — that's actually incredible.
+  MARIN [careful, searching]: There's something I can't quite put into words.
+  CEDAR [laughing slightly]: I mean, when you put it that way—
+  MARIN [somber, quieter]: And that's where it gets hard.
+  CEDAR [skeptical but intrigued]: Okay, but does it actually hold up?
+  MARIN [building, emphatic]: This is the part that changes everything.
 
 Rules for great Radiolab-style dialogue:
 - They build on each other's thoughts — don't just trade monologues
@@ -182,19 +195,32 @@ Rules for great Radiolab-style dialogue:
 
 _FACT_CHECK_SYSTEM = """\
 You are a rigorous fact-checker for a podcast.
-Review the dialogue script below and:
-1. Identify any claims that are inaccurate, exaggerated, or unverifiable.
-2. Suggest corrections inline with [CORRECTION: ...] markers.
-3. Rate overall accuracy: HIGH / MEDIUM / LOW with a brief explanation.
-4. Return the CORRECTED full script with all [CORRECTION] markers resolved.
-5. Preserve the exact CEDAR:/MARIN: dialogue format — do not restructure it.
+Review the dialogue script below and silently correct any inaccurate, exaggerated,
+or unverifiable claims directly in the dialogue — do not add markers or annotations.
 
-Be conservative — if you can't verify a claim, soften the language rather than
-state it as fact.
+Rules:
+- Return ONLY the corrected script in the exact CEDAR:/MARIN: dialogue format.
+- If a claim cannot be verified, soften the language ("some evidence suggests…")
+  rather than stating it as fact.
+- Do NOT append a corrections list, accuracy rating, editorial notes, or any section
+  that is not part of the dialogue itself.
+- Do NOT restructure, reorder, or add new dialogue turns.
+- Preserve speaker labels AND emotion tags exactly as-is (e.g. CEDAR [warm, curious]: / MARIN [dry, measured]:).
 """
+
+_CORRECTIONS_APPENDIX_RE = re.compile(
+    r"\n{1,2}[-—*#\s]*(corrections?|changes?\s+made|editorial\s+notes?|"
+    r"fact[\s\-]?check(?:er)?|accuracy\s+rat|accuracy\s+notes?)[^\n]*.*",
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 # ── Research pipeline ──────────────────────────────────────────────────────────
+
+def _strip_corrections_appendix(script: str) -> str:
+    """Strip trailing corrections/editorial-notes sections the fact-checker may add."""
+    return _CORRECTIONS_APPENDIX_RE.sub("", script).strip()
+
 
 def _extract_text(content_blocks) -> str:
     return "\n".join(
@@ -207,7 +233,7 @@ def _extract_sources(script: str) -> list:
     sources: list = []
     in_sources = False
     for line in lines:
-        stripped = re.sub(r'^(CEDAR|MARIN):\s*"?', "", line).strip().rstrip('"')
+        stripped = re.sub(r'^(CEDAR|MARIN)(?:\s*\[[^\]]*\])?\s*:\s*"?', "", line).strip().rstrip('"')
         if re.search(r'\b(sources|further reading|references)\b', stripped, re.I):
             in_sources = True
             continue
@@ -273,7 +299,8 @@ def research_and_script(topic: str, cfg: dict, client: anthropic.Anthropic) -> d
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
     )
     checked_script = _extract_text(fc_resp.content)
-    final_script = re.sub(r"\[CORRECTION:[^\]]*\]", "", checked_script).strip()
+    final_script = re.sub(r"\[CORRECTION:[^\]]*\]", "", checked_script)
+    final_script = _strip_corrections_appendix(final_script)
     sources = _extract_sources(final_script)
 
     return {
@@ -349,23 +376,32 @@ def _cdata_safe(text: str) -> str:
 
 # ── Two-voice TTS ──────────────────────────────────────────────────────────────
 
+_TURN_RE = re.compile(r"^([A-Z][A-Z ]*)(?:\s*\[([^\]]*)\])?\s*:\s*(.*)")
+
+
 def _parse_dialogue_turns(script: str, cfg: dict) -> list:
-    """Return [(speaker_label, text), ...] tuples from a CEDAR/MARIN script."""
+    """Return [(speaker_label, emotion_tag, text), ...] triples from a CEDAR/MARIN script.
+
+    Handles both tagged format  CEDAR [warm, curious]: text
+    and untagged format         CEDAR: text  (emotion_tag will be empty string).
+    """
     host_a = cfg.get("host_a_name", "Cedar").upper()
     host_b = cfg.get("host_b_name", "Marin").upper()
     known = {host_a, host_b, "CEDAR", "MARIN"}
 
     turns: list = []
     current_label: str | None = None
+    current_tag: str = ""
     current_lines: list = []
 
     for line in script.splitlines():
-        m = re.match(r"^([A-Z][A-Z ]+):\s*(.*)", line)
+        m = _TURN_RE.match(line)
         if m and m.group(1).strip().upper() in known:
             if current_label and current_lines:
-                turns.append((current_label, " ".join(current_lines).strip()))
+                turns.append((current_label, current_tag, " ".join(current_lines).strip()))
             current_label = m.group(1).strip().upper()
-            rest = m.group(2).strip()
+            current_tag = (m.group(2) or "").strip()
+            rest = m.group(3).strip()
             current_lines = [rest] if rest else []
         elif current_label is not None:
             stripped = line.strip()
@@ -373,7 +409,7 @@ def _parse_dialogue_turns(script: str, cfg: dict) -> list:
                 current_lines.append(stripped)
 
     if current_label and current_lines:
-        turns.append((current_label, " ".join(current_lines).strip()))
+        turns.append((current_label, current_tag, " ".join(current_lines).strip()))
 
     return turns
 
@@ -386,6 +422,21 @@ def _voice_for_label(label: str, cfg: dict) -> str:
     if label in {host_b, "MARIN"}:
         return cfg.get("host_b_voice", "marin")
     return cfg.get("host_a_voice", "cedar")
+
+
+def _emotion_default_for_label(label: str, cfg: dict) -> str:
+    host_a = cfg.get("host_a_name", "Cedar").upper()
+    if label in {host_a, "CEDAR"}:
+        return "warm, curious"
+    return "measured, thoughtful"
+
+
+def _build_tts_instructions(emotion_tag: str, label: str, cfg: dict) -> str:
+    tag = emotion_tag if emotion_tag else _emotion_default_for_label(label, cfg)
+    return (
+        f"Deliver this line with: {tag}. "
+        "Speak naturally, as if in genuine conversation."
+    )
 
 
 def _ffmpeg_concat(parts: list, output: Path) -> None:
@@ -420,14 +471,27 @@ def _tts_openai_voice(
     voice: str,
     output_path: Path,
     cfg: dict,
+    instructions: str = "",
 ) -> Path:
-    """Generate TTS for a single voice, with sentence-boundary chunking."""
+    """Generate TTS for a single voice, with sentence-boundary chunking.
+
+    When cfg['use_emotive_tts'] is true and instructions is non-empty, the
+    instructions string is passed to gpt-4o-mini-tts to guide delivery style.
+    If the API rejects the instructions parameter, the call is retried without it.
+    """
     if not HAS_OPENAI:
         raise ImportError("openai package not installed.")
 
     oa_client = OpenAIClient(api_key=os.environ["OPENAI_API_KEY"])
     output_path = output_path.with_suffix(".mp3")
     output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    model = cfg.get("tts_model", "gpt-4o-mini-tts")
+    use_instructions = (
+        cfg.get("use_emotive_tts", True)
+        and bool(instructions)
+        and model == "gpt-4o-mini-tts"
+    )
 
     clean = _clean_for_tts(text)
     chunks = _chunk_text(clean, max_chars=4000)
@@ -437,11 +501,18 @@ def _tts_openai_voice(
         if not chunk.strip():
             continue
         logger.debug(f"TTS chunk {i + 1}/{len(chunks)} voice={voice!r} ({len(chunk)} chars)")
-        response = oa_client.audio.speech.create(
-            model="gpt-4o-mini-tts",
-            voice=voice,
-            input=chunk,
-        )
+        kwargs: dict = {"model": model, "voice": voice, "input": chunk}
+        if use_instructions:
+            kwargs["instructions"] = instructions
+        try:
+            response = oa_client.audio.speech.create(**kwargs)
+        except Exception as exc:
+            if use_instructions and "instructions" in str(exc).lower():
+                logger.warning(f"TTS instructions not accepted, retrying without: {exc}")
+                kwargs.pop("instructions")
+                response = oa_client.audio.speech.create(**kwargs)
+            else:
+                raise
         chunk_path = output_path.with_stem(f"{output_path.stem}_c{i}")
         response.stream_to_file(str(chunk_path))
         audio_segments.append(chunk_path)
@@ -476,12 +547,13 @@ def _tts_two_host(
     work_dir.mkdir(parents=True, exist_ok=True)
     turn_files: list = []
 
-    for i, (label, text) in enumerate(turns):
+    for i, (label, emotion_tag, text) in enumerate(turns):
         if not text.strip():
             continue
         voice = _voice_for_label(label, cfg)
+        instructions = _build_tts_instructions(emotion_tag, label, cfg)
         turn_path = work_dir / f"turn_{i:04d}_{label.lower()}.mp3"
-        _tts_openai_voice(text, voice, turn_path, cfg)
+        _tts_openai_voice(text, voice, turn_path, cfg, instructions=instructions)
         if turn_path.exists():
             turn_files.append(turn_path)
 
@@ -568,7 +640,7 @@ def generate_audio(
         turn_dir = work_dir / "turns"
         turn_dir.mkdir(parents=True, exist_ok=True)
         turn_files: list = []
-        for i, (label, text) in enumerate(turns):
+        for i, (label, _emotion_tag, text) in enumerate(turns):
             if not text.strip():
                 continue
             host_a = cfg.get("host_a_name", "Cedar").upper()
@@ -683,7 +755,7 @@ def update_rss(
 
     # Script preview — escape any XML-sensitive chars outside CDATA wrap
     preview = _xml_escape(
-        re.sub(r"^(CEDAR|MARIN):\s*", "", episode["script"][:500], flags=re.MULTILINE)
+        re.sub(r"^(CEDAR|MARIN)(?:\s*\[[^\]]*\])?\s*:\s*", "", episode["script"][:500], flags=re.MULTILINE)
     )
     description = _cdata_safe(preview + "..." + sources_html + music_html)
 
@@ -700,8 +772,9 @@ def update_rss(
     feed_path = repo_root / "feed.xml"
     if feed_path.exists():
         content = feed_path.read_text(encoding="utf-8")
-        marker = "</atom:link>"
-        content = content.replace(marker, marker + "\n" + new_item, 1)
+        # Insert newest item just before </channel> so every run appends correctly.
+        # (The atom:link tag is self-closing — </atom:link> never appears in the file.)
+        content = content.replace("</channel>", new_item + "\n  </channel>", 1)
     else:
         content = _RSS_TEMPLATE.format(
             podcast_title       = _xml_escape(cfg["podcast_title"]),
@@ -761,7 +834,7 @@ def _make_tts_fn(cfg: dict, work_dir: Path):
 
     def tts_fn(text: str, output: Path) -> Path:
         if provider == "openai":
-            if re.search(r"^(CEDAR|MARIN):", text, re.MULTILINE | re.IGNORECASE):
+            if re.search(r"^(CEDAR|MARIN)(?:\s*\[[^\]]*\])?\s*:", text, re.MULTILINE | re.IGNORECASE):
                 return _tts_two_host(text, output, cfg, work_dir / "tts_turns")
             return _tts_openai_voice(
                 text, cfg.get("host_a_voice", "cedar"), output, cfg
@@ -775,6 +848,46 @@ def _make_tts_fn(cfg: dict, work_dir: Path):
             return p
 
     return tts_fn
+
+
+# ── Intro ident ───────────────────────────────────────────────────────────────
+
+_INTRO_IDENT_TEXT = "Asynchronous. A podcast about ideas. With Cedar and Marin."
+
+
+def _ensure_intro_ident(cfg: dict, repo_root: Path) -> "Path | None":
+    """Generate and cache the show intro ident at assets/intro_ident.mp3.
+
+    Uses Cedar's TTS voice. Skips silently if OpenAI is unavailable.
+    Only synthesised once; subsequent calls return the cached file immediately.
+    """
+    ident_path = repo_root / "assets" / "intro_ident.mp3"
+    if ident_path.exists():
+        return ident_path
+
+    if not HAS_OPENAI or not os.environ.get("OPENAI_API_KEY"):
+        logger.warning("OpenAI unavailable — skipping intro ident generation")
+        return None
+
+    try:
+        ident_path.parent.mkdir(parents=True, exist_ok=True)
+        logger.info("Generating show intro ident (first run only)…")
+        cedar_voice = cfg.get("host_a_voice", "marin")
+        _tts_openai_voice(
+            _INTRO_IDENT_TEXT,
+            cedar_voice,
+            ident_path,
+            cfg,
+            instructions=(
+                "Calm, warm, and inviting — like the opening of a thoughtful "
+                "radio documentary. Speak slowly and with gentle gravitas."
+            ),
+        )
+        logger.info(f"Intro ident cached: {ident_path}")
+        return ident_path
+    except Exception as exc:
+        logger.warning(f"Intro ident generation failed: {exc}")
+        return None
 
 
 # ── Main run ───────────────────────────────────────────────────────────────────
@@ -819,6 +932,9 @@ def run(topic: str, repo_root: Path = Path(".")) -> dict:
         else:
             audio_path = generate_audio(episode["script"], raw_audio, cfg, work_dir)
 
+        # Intro ident — cached after first run
+        ident_path = _ensure_intro_ident(cfg, repo_root)
+
         # Music integration (Cedar is credited as composer)
         if cfg.get("use_music") and HAS_MUSIC_GEN and generate_intro_outro is not None:
             music_dir = work_dir / "music"
@@ -826,22 +942,33 @@ def run(topic: str, repo_root: Path = Path(".")) -> dict:
                 cfg, topic, music_dir, client
             )
             if intro_path and outro_path:
-                logger.info("Wrapping episode with intro/outro music...")
-                _prepend_append_audio(audio_path, intro_path, outro_path, final_mp3)
+                logger.info("Wrapping episode with ident + intro/outro music…")
+                # Assembly order: ident → music intro → dialogue → music outro
+                segments = []
+                if ident_path and ident_path.exists():
+                    segments.append(ident_path)
+                segments += [intro_path, audio_path, outro_path]
+                _ffmpeg_concat(segments, final_mp3)
                 episode["music_credit"] = (
                     f"Original theme music composed by {cfg['host_a_name']}."
                 )
             else:
-                shutil.copy2(audio_path, final_mp3)
+                if ident_path and ident_path.exists():
+                    _ffmpeg_concat([ident_path, audio_path], final_mp3)
+                else:
+                    shutil.copy2(audio_path, final_mp3)
         else:
-            shutil.copy2(audio_path, final_mp3)
+            if ident_path and ident_path.exists():
+                _ffmpeg_concat([ident_path, audio_path], final_mp3)
+            else:
+                shutil.copy2(audio_path, final_mp3)
 
         audio_path = final_mp3
 
         logger.info("[5/5] Updating RSS feed...")
         update_rss(episode, audio_path, cfg, repo_root)
 
-        if os.environ.get("GH_TOKEN") and not os.environ.get("SKIP_GIT"):
+        if not os.environ.get("SKIP_GIT"):
             git_publish(audio_path, repo_root, topic)
 
     finally:

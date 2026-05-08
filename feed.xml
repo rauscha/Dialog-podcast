@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dialog</title>
+    <link>https://rauscha.github.io/Dialog-podcast</link>
+    <description>Two hosts explore ideas at the intersection of art, science, and wonder.</description>
+    <language>en</language>
+    <itunes:author>Cedar &amp; Marin</itunes:author>
+    <itunes:category text="Science"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Cedar &amp; Marin</itunes:name>
+      <itunes:email>you@example.com</itunes:email>
+    </itunes:owner>
+    <atom:link href="https://rauscha.github.io/Dialog-podcast/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+      <title>The history of fetoscopy</title>
+      <description><![CDATA[Now I have all the research I need. Let me compile the full fact-check and produce the corrected script.
+
+---
+
+## FACT-CHECK REPORT
+
+### Issues Identified
+
+**1. Westin&apos;s instrument: &quot;panendoscope originally designed for looking at bladders&quot;**
+The script states Westin used a *panendoscope &quot;originally designed for looking at bladders.&quot;* This is partially misleading. 
+Westin used a 10-mm McCarthy panendoscope.
+ A McCarthy panendoscope is a urological instrument, but it is designed for examining bot...<br><br><strong>Sources:</strong><ul><li>**3. Number of cases: &quot;three cases&quot;**</li></ul>]]></description>
+      <pubDate>Thu, 07 May 2026 23:06:13 +0000</pubDate>
+      <guid isPermaLink="false">82e12d9272559e8935a8afcb4382c4c9b5fedeee20d391ac1c56f3419c383d07</guid>
+      <enclosure url="https://rauscha.github.io/Dialog-podcast/episodes/20260507_180139_The_history_of_fetoscopy.mp3" length="12589809" type="audio/mpeg"/>
+      <itunes:duration>15:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+      <item>
+      <title>History of the Labor curve</title>
+      <description><![CDATA[Cedar and Marin discuss: History of the Labor curve.]]></description>
+      <pubDate>Fri, 08 May 2026 03:12:48 +0000</pubDate>
+      <guid isPermaLink="false">fbeb440e9e10b39a3059bff2ca21fe720298c26ffff65475241e3d7b2355a506</guid>
+      <enclosure url="https://rauscha.github.io/Dialog-podcast/episodes/20260507_220940_History_of_the_Labor_curve.mp3" length="8257662" type="audio/mpeg"/>
+      <itunes:duration>8:36</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+      <item>
+      <title>The history of fetoscopy</title>
+      <description><![CDATA[Cedar and Marin discuss: The history of fetoscopy.]]></description>
+      <pubDate>Fri, 08 May 2026 03:17:43 +0000</pubDate>
+      <guid isPermaLink="false">18a826634e37d5787bb5788e76950a3f81adc915d625c5096c097e5afbbedad0</guid>
+      <enclosure url="https://rauscha.github.io/Dialog-podcast/episodes/20260507_221105_The_history_of_fetoscopy.mp3" length="20735416" type="audio/mpeg"/>
+      <itunes:duration>21:35</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

@@ -10,6 +10,7 @@ import asyncio
 import logging
 import os
 import sys
+import time
 from pathlib import Path
 
 from telegram import Update
@@ -21,10 +22,17 @@ from telegram.ext import (
     filters,
 )
 
+_log_dir = Path(__file__).parent / "logs"
+_log_dir.mkdir(parents=True, exist_ok=True)
+_file_handler = logging.FileHandler(_log_dir / "bot.log", encoding="utf-8")
+_file_handler.setFormatter(logging.Formatter(
+    "%(asctime)s [%(levelname)s] %(name)s — %(message)s", datefmt="%H:%M:%S"
+))
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
     datefmt="%H:%M:%S",
+    handlers=[_file_handler, logging.StreamHandler()],
 )
 logger = logging.getLogger(__name__)
 
@@ -142,16 +150,27 @@ async def handle_topic(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", start_cmd))
-    app.add_handler(CommandHandler("help", start_cmd))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_topic))
+    retry_delay = 5
+    while True:
+        try:
+            app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+            app.add_handler(CommandHandler("start", start_cmd))
+            app.add_handler(CommandHandler("help", start_cmd))
+            app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_topic))
 
-    logger.info(
-        f"Bot polling started. Allowed users: {sorted(ALLOWED_USERS)}. "
-        f"Repo path: {PODCAST_REPO_PATH}"
-    )
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+            logger.info(
+                f"Bot polling started. Allowed users: {sorted(ALLOWED_USERS)}. "
+                f"Repo path: {PODCAST_REPO_PATH}"
+            )
+            app.run_polling(allowed_updates=Update.ALL_TYPES)
+            retry_delay = 5  # clean exit — reset backoff
+        except (KeyboardInterrupt, SystemExit):
+            logger.info("Bot stopped.")
+            break
+        except Exception as exc:
+            logger.error(f"Bot crashed: {exc!r}. Restarting in {retry_delay}s...")
+            time.sleep(retry_delay)
+            retry_delay = min(retry_delay * 2, 300)  # cap at 5 minutes
 
 
 if __name__ == "__main__":
