@@ -95,5 +95,22 @@ A handful of channels! Ko...<br><br><strong>Sources:</strong><ul><li>Genuinely, 
       <itunes:duration>15:00</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
+      <item>
+      <title>Basics of mobile app development on Claude Code</title>
+      <description><![CDATA[Okay, so I want to tell you about a Saturday.
+
+A Saturday.
+
+A developer named Levin — he&apos;s a software engineer at a company called Wiz — he sits down on a Saturday morning, probably with coffee, and he types a prompt into his terminal. And he&apos;s basically saying: take this thing. This fifty-thousand-line Python library. And turn it into Go.
+
+Which would normally take...
+
+Two ...<br><br><strong>Sources:</strong><ul><li>The METR randomized controlled trial on AI coding productivity — that one is genuinely worth reading in full, the methodology is careful—</li></ul><br><em>Original theme music composed by Cedar.</em>]]></description>
+      <pubDate>Fri, 08 May 2026 21:10:24 +0000</pubDate>
+      <guid isPermaLink="false">b0810f80d37714023407b3413a67ff91d8f40ccca46cfcb090ca7d91274c370f</guid>
+      <enclosure url="https://rauscha.github.io/Dialog-podcast/episodes/20260508_160457_Basics_of_mobile_app_development_on_Claude_Code.mp3" length="11981678" type="audio/mpeg"/>
+      <itunes:duration>15:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
   </channel>
 </rss>
