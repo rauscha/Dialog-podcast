@@ -13,8 +13,9 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:owner>
       <itunes:name>Cedar &amp; Marin</itunes:name>
-      <itunes:email>you@example.com</itunes:email>
+      <itunes:email>podcast@andrewrausch.com</itunes:email>
     </itunes:owner>
+    <itunes:image href="https://rauscha.github.io/Dialog-podcast/assets/cover.jpg"/>
     <atom:link href="https://rauscha.github.io/Dialog-podcast/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
       <title>The history of fetoscopy</title>

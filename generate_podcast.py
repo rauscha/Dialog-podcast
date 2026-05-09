@@ -76,6 +76,7 @@ DEFAULTS: dict = {
     "podcast_description":  "Cedar and Marin roam the edges of art, science, and human experience.",
     "podcast_author":       "Cedar & Marin",
     "podcast_email":        "you@example.com",
+    "podcast_image":        "",
     "podcast_language":     "en",
     "podcast_category":     "Science",
     "github_user":          "",
@@ -301,6 +302,10 @@ def research_and_script(topic: str, cfg: dict, client: anthropic.Anthropic) -> d
     checked_script = _extract_text(fc_resp.content)
     final_script = re.sub(r"\[CORRECTION:[^\]]*\]", "", checked_script)
     final_script = _strip_corrections_appendix(final_script)
+    # Strip any preamble text before the first speaker line
+    first_turn = re.search(r"^(CEDAR|MARIN)(?:\s*\[[^\]]*\])?\s*:", final_script, re.MULTILINE)
+    if first_turn:
+        final_script = final_script[first_turn.start():]
     sources = _extract_sources(final_script)
 
     return {
@@ -710,6 +715,7 @@ _RSS_TEMPLATE = """\
       <itunes:name>{podcast_author}</itunes:name>
       <itunes:email>{podcast_email}</itunes:email>
     </itunes:owner>
+    <itunes:image href="{podcast_image_url}"/>
     <atom:link href="{feed_url}" rel="self" type="application/rss+xml"/>
     {items}
   </channel>
@@ -784,6 +790,7 @@ def update_rss(
             podcast_author      = _xml_escape(cfg["podcast_author"]),
             podcast_category    = _xml_escape(cfg["podcast_category"]),
             podcast_email       = _xml_escape(cfg["podcast_email"]),
+            podcast_image_url   = cfg.get("podcast_image", ""),
             feed_url            = feed_url,
             items               = new_item,
         )
