@@ -6,6 +6,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlparse
@@ -123,7 +124,8 @@ def _parse_cues(annotated_script: str) -> list:
 
 def search_youtube(query: str, max_results: int = 5) -> list:
     cmd = [
-        "yt-dlp", "--dump-json", "--flat-playlist",
+        sys.executable, "-m", "yt_dlp",
+        "--dump-json", "--flat-playlist",
         f"ytsearch{max_results}:{query}", "--no-warnings",
     ]
     try:
@@ -201,7 +203,7 @@ def extract_clip(cue: ClipCue, work_dir: Path):
     # Download only the needed segment — avoids full-video download
     raw_audio = work_dir / f"{cue.cue_id}_raw.%(ext)s"
     dl_cmd = [
-        "yt-dlp",
+        sys.executable, "-m", "yt_dlp",
         "--extract-audio",
         "--audio-format", "mp3",
         "--audio-quality", "5",
@@ -219,7 +221,7 @@ def extract_clip(cue: ClipCue, work_dir: Path):
         print(f"   [clip] yt-dlp download timed out for {cue.cue_id}")
         return None
     if result.returncode != 0:
-        print(f"   [clip] yt-dlp failed for {cue.cue_id}: {result.stderr[:200]}")
+        print(f"   [clip] yt-dlp failed for {cue.cue_id}: {result.stderr[:1000]}")
         return None
 
     raw_files = list(work_dir.glob(f"{cue.cue_id}_raw.*"))

@@ -13,8 +13,8 @@ logger = logging.getLogger(__name__)
 
 try:
     from audiocraft.models import MusicGen
-    import torchaudio
     import torch
+    import soundfile as _sf
     HAS_AUDIOCRAFT = True
 except ImportError:
     HAS_AUDIOCRAFT = False
@@ -58,8 +58,9 @@ def generate_music(
     wav_path = output_path.with_suffix(".wav")
     wav_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Remove batch dimension before saving: [channels, samples]
-    torchaudio.save(str(wav_path), wav.squeeze(0).cpu(), sample_rate)
+    # [batch, channels, samples] → [samples, channels] for soundfile
+    wav_np = wav.squeeze(0).cpu().numpy().T
+    _sf.write(str(wav_path), wav_np, sample_rate)
 
     mp3_path = output_path.with_suffix(".mp3")
     try:
