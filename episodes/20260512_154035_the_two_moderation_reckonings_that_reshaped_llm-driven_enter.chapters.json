@@ -1,0 +1,37 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "The Cold Open \u2013 The Last Message**"
+    },
+    {
+      "startTime": 68.15,
+      "title": "The First Reckoning \u2013 AI Dungeon\u2019s Filter Crisis**"
+    },
+    {
+      "startTime": 136.29,
+      "title": "The Exodus \u2013 NovelAI\u2019s Rise**"
+    },
+    {
+      "startTime": 204.44,
+      "title": "The Second Reckoning \u2013 Character.AI and the Sewell Setzer Case**"
+    },
+    {
+      "startTime": 272.59,
+      "title": "Legal Frameworks \u2013 The Product vs. Service Question**"
+    },
+    {
+      "startTime": 340.74,
+      "title": "The FTC Inquiry \u2013 Regulatory Pressure**"
+    },
+    {
+      "startTime": 408.88,
+      "title": "Counterintuitive Findings \u2013 The Hidden Costs of Design**"
+    },
+    {
+      "startTime": 477.03,
+      "title": "The Reflective Ending \u2013 The Question of Design**"
+    }
+  ],
+  "version": "1.2.0"
+}
