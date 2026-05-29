@@ -1,0 +1,317 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "The Sound of Limitation"
+    },
+    {
+      "start_sec": 65.79,
+      "start_time": "1:06",
+      "title": "The NES APU \u2013 Five Channels, Infinite Possibility"
+    },
+    {
+      "start_sec": 131.59,
+      "start_time": "2:12",
+      "title": "Koji Kondo\u2019s Masterclass in Channel Allocation"
+    },
+    {
+      "start_sec": 197.38,
+      "start_time": "3:17",
+      "title": "The SID Chip \u2013 A Synthesizer in a Computer"
+    },
+    {
+      "start_sec": 263.18,
+      "start_time": "4:23",
+      "title": "Rob Hubbard \u2013 The Father of the Chiptune Arpeggio"
+    },
+    {
+      "start_sec": 328.97,
+      "start_time": "5:29",
+      "title": "Music Theory \u2013 Baroque Counterpoint and Chiptune"
+    },
+    {
+      "start_sec": 394.76,
+      "start_time": "6:35",
+      "title": "Composing a Chiptune Melody \u2013 A Worked Example"
+    },
+    {
+      "start_sec": 460.56,
+      "start_time": "7:41",
+      "title": "Failure Modes \u2013 When Constraints Backfire"
+    },
+    {
+      "start_sec": 526.35,
+      "start_time": "8:46",
+      "title": "Practice Plan \u2013 From Tracker to Master"
+    },
+    {
+      "start_sec": 592.15,
+      "start_time": "9:52",
+      "title": "The Power of Constraints \u2013 A Final Reflection"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d.companion.json",
+  "duration_sec": 702.939932,
+  "episode_type": "how_to",
+  "episode_type_label": "Teaching How-To",
+  "follow_up_links": [
+    {
+      "reason": "The definitive technical reference for the Ricoh 2A03's audio processing unit. Documents the exact specifications: two pulse channels with 4 duty cycles (12.5%, 25%, 50%, 75%), triangle wave, noise, and DPCM. Essential for understanding hardware constraints that shaped the genre.",
+      "source": "NESdev Wiki",
+      "title": "NES APU Technical Reference",
+      "url": "https://www.nesdev.org/wiki/APU"
+    },
+    {
+      "reason": "Academic paper arguing the SID chip is responsible for shaping the sound of video game music. Covers how Rob Hubbard and Martin Galway developed custom low-level drivers to create pseudo-polyphony through rapid arpeggiation and channel sharing.",
+      "source": "G|A|M|E Journal",
+      "title": "Driving the SID Chip: Assembly Language, Composition, and Sound Design for the C64",
+      "url": "https://www.gamejournal.it/driving-the-sid-chip-assembly-language-composition-and-sound-design-for-the-c64/"
+    },
+    {
+      "reason": "Documents Hubbard's pioneering techniques including exploiting the SID's volume register to produce sample playback\u2014altering the register thousands of times per second. Composed over 75 game soundtracks between 1985-1989.",
+      "source": "Wikipedia",
+      "title": "Rob Hubbard Biography",
+      "url": "https://en.wikipedia.org/wiki/Rob_Hubbard"
+    },
+    {
+      "reason": "Modern gold standard for authentic chiptune. Composed in FamiTracker using VRC6 expansion audio. The NSF file can play on real NES hardware. Demonstrates how to apply classic techniques to contemporary game scoring.",
+      "source": "Bandcamp / Shovel Knight Wiki",
+      "title": "Shovel Knight Original Soundtrack",
+      "url": "https://virt.bandcamp.com/album/shovel-knight-original-soundtrack"
+    },
+    {
+      "reason": "First Nintendo employee to specialize in musical composition (joined 1984). His approach to the NES's 4-channel constraint\u2014maximizing polyphony through efficient channel allocation, looping motifs, minimalist arrangements\u2014became the template for game music composition.",
+      "source": "Grokipedia / Wikipedia",
+      "title": "Koji Kondo Profile",
+      "url": "https://en.wikipedia.org/wiki/Koji_Kondo"
+    },
+    {
+      "reason": "Explains how Bob Yannes designed the SID chip as a general-purpose synthesizer, not just a game sound chip. Covers Martin Galway's pulse-width modulation mastery and why arpeggiation became chiptune's 'most evocative and enduring sonic fingerprint.'",
+      "source": "The Conversation",
+      "title": "The Sound of SID: 35 Years of Chiptune's Influence on Electronic Music",
+      "url": "https://theconversation.com/the-sound-of-sid-35-years-of-chiptunes-influence-on-electronic-music-74935"
+    },
+    {
+      "reason": "Practitioner's guide covering NES chip specifications in detail: pulse wave duty cycles, triangle wave fixed volume, noise channel presets, DPCM limitations. Includes expansion chip specs (VRC6, MMC5, FDS).",
+      "source": "Ozzed.net",
+      "title": "How to Make 8-bit Music: A Comprehensive Guide",
+      "url": "https://ozzed.net/how-to-make-8-bit-music.shtml"
+    },
+    {
+      "reason": "Community discussion crediting Martin Galway as 'the father of the chiptune arpeggio effect' with Kong Strikes Back (1985). Explains the key distinction: classical arpeggios avoid simultaneous notes for movement; chip arpeggios WANT chords but lack the means.",
+      "source": "ChipMusic.org Forums",
+      "title": "Chiptune Arpeggio History Discussion",
+      "url": "https://chipmusic.org/forums/topic/19119/ultra-fast-arpeggio-technique/"
+    }
+  ],
+  "generated_at": "2026-05-29T21:36:29.671197+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Avoids romanticizing the process without acknowledging the steep learning curve",
+        "Does not claim to be a real person or affiliated with any institution"
+      ],
+      "credential_frame": "A former sound designer for retro game re-releases and a researcher at the Chiptune Preservation Institute, Dr. Virel has spent over a decade analyzing the technical and artistic constraints of 8-bit and 16-bit audio hardware.",
+      "delivery_baseline": "Conversational but precise, with a slight emphasis on technical terms when necessary.",
+      "display_name": "Dr. Elise Virel",
+      "expertise": "Explaining how the NES APU and SID chip functioned, the creative techniques used by early chiptune composers, and the music theory principles that underpin chiptune composition (e.g., counterpoint, arpeggios, and duty cycle manipulation).",
+      "field": "Sound Design and Music Technology",
+      "label": "CHIPTECH EXPERT",
+      "personality": "Analytical, precise, and enthusiastic about the intersection of hardware limitations and artistic innovation. Speaks with a conversational tone that balances technical depth with accessibility.",
+      "role_in_episode": "Clarifies the hardware limitations of the NES and SID chip, explains how composers like Koji Kondo and Rob Hubbard used arpeggios and duty cycles to simulate chords, and discusses the relevance of baroque counterpoint in chiptune composition.",
+      "synthetic": true,
+      "voice": "alloy"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "The NES APU has exactly 5 channels: two pulse wave generators with 4 duty cycles (12.5%, 25%, 50%, 75%), one triangle wave, one noise channel, and one DPCM sample channel.",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S1",
+        "S7"
+      ]
+    },
+    {
+      "claim": "The 25% and 75% duty cycles sound nearly identical to human ears because pulse waves are reflexive\u20145/95 sounds the same as 95/5. This means the NES effectively has only 3 distinct pulse timbres, not 4.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "The NES triangle wave has no volume control\u2014it's either on or off. The triangle is generated by stepping a 4-bit counter from 0 to 15 and back, creating an overtone four octaves higher at 1/8 the volume, giving it a characteristic 'buzzing' quality.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "The Commodore 64's SID chip (MOS 6581) was designed by Bob Yannes as a general-purpose synthesizer chip, not specifically for games. It has 3 independent voices with ADSR envelopes, multimode filter (low-pass, high-pass, band-pass), and ring modulation\u2014features found in professional synthesizers costing thousands of dollars.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S2",
+        "S6"
+      ]
+    },
+    {
+      "claim": "Rob Hubbard discovered that altering the SID's volume register thousands of times per second produces an audible click, enabling crude but surprisingly clear sample playback on 8-bit hardware. This technique was used in Skate or Die! for sampled guitar and organ chords.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Martin Galway is widely credited as the father of the chiptune arpeggio effect, with his song for Kong Strikes Back (1985) allegedly being the first musical use of the technique.",
+      "confidence": "Medium (community consensus, not definitively documented)",
+      "id": "C6",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "Koji Kondo was the first person at Nintendo to specialize in musical composition (joined 1984). He adapted to the NES's 4-channel constraint by maximizing polyphony through efficient channel allocation\u2014typically dedicating channels to melody, bass, and percussion while reserving noise for effects.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "claim": "The Shovel Knight soundtrack was composed in FamiTracker using VRC6 expansion audio (the same chip used in Japanese Castlevania III). The NSF file is under 1 megabyte and can play on real NES/Famicom hardware.",
+      "confidence": "High",
+      "id": "C8",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "Chiptune arpeggios serve the opposite purpose of classical arpeggios: classical composers arpeggiate to avoid simultaneous notes and add movement; chip composers arpeggiate because they WANT chords but lack the polyphony to play them.",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "The 50% duty cycle (true square wave) sounds 'deliciously thick and retro-gamey.' The 12.5% duty cycle sounds thin and nasal, like a Game Boy. The 25% adds warmth between these extremes.",
+      "confidence": "High",
+      "id": "C10",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "NESdev Community",
+      "id": "S1",
+      "publication": "NESdev Wiki",
+      "title": "NES APU Technical Reference",
+      "url": "https://www.nesdev.org/wiki/APU",
+      "why_it_matters": "The definitive technical reference for the Ricoh 2A03's audio processing unit. Documents the exact specifications: two pulse channels with 4 duty cycles (12.5%, 25%, 50%, 75%), triangle wave, noise, and DPCM. Essential for understanding hardware constraints that shaped the genre.",
+      "year": "2026 (continuously updated)"
+    },
+    {
+      "author": "Kenneth B. McAlpine",
+      "id": "S2",
+      "publication": "G|A|M|E Journal",
+      "title": "Driving the SID Chip: Assembly Language, Composition, and Sound Design for the C64",
+      "url": "https://www.gamejournal.it/driving-the-sid-chip-assembly-language-composition-and-sound-design-for-the-c64/",
+      "why_it_matters": "Academic paper arguing the SID chip is responsible for shaping the sound of video game music. Covers how Rob Hubbard and Martin Galway developed custom low-level drivers to create pseudo-polyphony through rapid arpeggiation and channel sharing.",
+      "year": "2017"
+    },
+    {
+      "author": "Wikipedia Contributors",
+      "id": "S3",
+      "publication": "Wikipedia",
+      "title": "Rob Hubbard Biography",
+      "url": "https://en.wikipedia.org/wiki/Rob_Hubbard",
+      "why_it_matters": "Documents Hubbard's pioneering techniques including exploiting the SID's volume register to produce sample playback\u2014altering the register thousands of times per second. Composed over 75 game soundtracks between 1985-1989.",
+      "year": "2026"
+    },
+    {
+      "author": "Jake Kaufman (Virt)",
+      "id": "S4",
+      "publication": "Bandcamp / Shovel Knight Wiki",
+      "title": "Shovel Knight Original Soundtrack",
+      "url": "https://virt.bandcamp.com/album/shovel-knight-original-soundtrack",
+      "why_it_matters": "Modern gold standard for authentic chiptune. Composed in FamiTracker using VRC6 expansion audio. The NSF file can play on real NES hardware. Demonstrates how to apply classic techniques to contemporary game scoring.",
+      "year": "2014"
+    },
+    {
+      "author": "Various",
+      "id": "S5",
+      "publication": "Grokipedia / Wikipedia",
+      "title": "Koji Kondo Profile",
+      "url": "https://en.wikipedia.org/wiki/Koji_Kondo",
+      "why_it_matters": "First Nintendo employee to specialize in musical composition (joined 1984). His approach to the NES's 4-channel constraint\u2014maximizing polyphony through efficient channel allocation, looping motifs, minimalist arrangements\u2014became the template for game music composition.",
+      "year": "2026"
+    },
+    {
+      "author": "Kenneth B. McAlpine",
+      "id": "S6",
+      "publication": "The Conversation",
+      "title": "The Sound of SID: 35 Years of Chiptune's Influence on Electronic Music",
+      "url": "https://theconversation.com/the-sound-of-sid-35-years-of-chiptunes-influence-on-electronic-music-74935",
+      "why_it_matters": "Explains how Bob Yannes designed the SID chip as a general-purpose synthesizer, not just a game sound chip. Covers Martin Galway's pulse-width modulation mastery and why arpeggiation became chiptune's 'most evocative and enduring sonic fingerprint.'",
+      "year": "2017"
+    },
+    {
+      "author": "Ozzed",
+      "id": "S7",
+      "publication": "Ozzed.net",
+      "title": "How to Make 8-bit Music: A Comprehensive Guide",
+      "url": "https://ozzed.net/how-to-make-8-bit-music.shtml",
+      "why_it_matters": "Practitioner's guide covering NES chip specifications in detail: pulse wave duty cycles, triangle wave fixed volume, noise channel presets, DPCM limitations. Includes expansion chip specs (VRC6, MMC5, FDS).",
+      "year": "Ongoing"
+    },
+    {
+      "author": "ChipMusic.org Community",
+      "id": "S8",
+      "publication": "ChipMusic.org Forums",
+      "title": "Chiptune Arpeggio History Discussion",
+      "url": "https://chipmusic.org/forums/topic/19119/ultra-fast-arpeggio-technique/",
+      "why_it_matters": "Community discussion crediting Martin Galway as 'the father of the chiptune arpeggio effect' with Kong Strikes Back (1985). Explains the key distinction: classical arpeggios avoid simultaneous notes for movement; chip arpeggios WANT chords but lack the means.",
+      "year": "2016"
+    }
+  ],
+  "sources": [
+    "NES APU Technical Reference - NESdev Wiki - 2026 (continuously updated) (https://www.nesdev.org/wiki/APU)",
+    "Driving the SID Chip: Assembly Language, Composition, and Sound Design for the C64 - G|A|M|E Journal - 2017 (https://www.gamejournal.it/driving-the-sid-chip-assembly-language-composition-and-sound-design-for-the-c64/)",
+    "Rob Hubbard Biography - Wikipedia - 2026 (https://en.wikipedia.org/wiki/Rob_Hubbard)",
+    "Shovel Knight Original Soundtrack - Bandcamp / Shovel Knight Wiki - 2014 (https://virt.bandcamp.com/album/shovel-knight-original-soundtrack)",
+    "Koji Kondo Profile - Grokipedia / Wikipedia - 2026 (https://en.wikipedia.org/wiki/Koji_Kondo)",
+    "The Sound of SID: 35 Years of Chiptune's Influence on Electronic Music - The Conversation - 2017 (https://theconversation.com/the-sound-of-sid-35-years-of-chiptunes-influence-on-electronic-music-74935)",
+    "How to Make 8-bit Music: A Comprehensive Guide - Ozzed.net - Ongoing (https://ozzed.net/how-to-make-8-bit-music.shtml)",
+    "Chiptune Arpeggio History Discussion - ChipMusic.org Forums - 2016 (https://chipmusic.org/forums/topic/19119/ultra-fast-arpeggio-technique/)"
+  ],
+  "topic": "how do I build a classic chiptune sound, first from a sound design perspective, then from a music theory perspective, this should be an example-heavy episode",
+  "tts_routes": {
+    "CEDAR": {
+      "model": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "voice": "marin"
+    },
+    "CHIPTECH EXPERT": {
+      "model": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "voice": "alloy"
+    },
+    "MARIN": {
+      "model": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "voice": "cedar"
+    }
+  },
+  "word_count": 2015
+}

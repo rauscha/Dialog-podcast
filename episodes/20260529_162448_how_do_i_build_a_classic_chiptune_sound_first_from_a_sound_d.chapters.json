@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "The Sound of Limitation"
+    },
+    {
+      "startTime": 65.79,
+      "title": "The NES APU \u2013 Five Channels, Infinite Possibility"
+    },
+    {
+      "startTime": 131.59,
+      "title": "Koji Kondo\u2019s Masterclass in Channel Allocation"
+    },
+    {
+      "startTime": 197.38,
+      "title": "The SID Chip \u2013 A Synthesizer in a Computer"
+    },
+    {
+      "startTime": 263.18,
+      "title": "Rob Hubbard \u2013 The Father of the Chiptune Arpeggio"
+    },
+    {
+      "startTime": 328.97,
+      "title": "Music Theory \u2013 Baroque Counterpoint and Chiptune"
+    },
+    {
+      "startTime": 394.76,
+      "title": "Composing a Chiptune Melody \u2013 A Worked Example"
+    },
+    {
+      "startTime": 460.56,
+      "title": "Failure Modes \u2013 When Constraints Backfire"
+    },
+    {
+      "startTime": 526.35,
+      "title": "Practice Plan \u2013 From Tracker to Master"
+    },
+    {
+      "startTime": 592.15,
+      "title": "The Power of Constraints \u2013 A Final Reflection"
+    }
+  ],
+  "version": "1.2.0"
+}
