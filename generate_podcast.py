@@ -71,6 +71,14 @@ try:
 except ImportError:
     HAS_CLIP_MIXER = False
 
+try:
+    from sonic_footnote_mixer import ResolvedFootnote, prepare_footnotes
+    HAS_FOOTNOTE_MIXER = True
+except ImportError:
+    HAS_FOOTNOTE_MIXER = False
+    ResolvedFootnote = None  # type: ignore[assignment]
+    prepare_footnotes = None  # type: ignore[assignment]
+
 # ── Models ─────────────────────────────────────────────────────────────────────
 # Research stays on Opus for quality; dialogue + fact-check on Sonnet for cost.
 _RESEARCH_MODEL   = "claude-opus-4-5"
@@ -2587,8 +2595,14 @@ def _tts_two_host(
     output_path: Path,
     cfg: dict,
     work_dir: Path,
+    footnotes: list | None = None,
 ) -> Path:
-    """Generate routed TTS from a speaker-labelled dialogue script."""
+    """Generate routed TTS from a speaker-labelled dialogue script.
+
+    If `footnotes` is a list of ResolvedFootnote records, each cue's audio is
+    spliced into the per-turn sequence immediately after the planned turn,
+    before the inter-turn silence.
+    """
     turns = _parse_dialogue_turns(script, cfg)
     if not turns:
         logger.warning("No dialogue turns found - falling back to default TTS route")
@@ -2603,6 +2617,7 @@ def _tts_two_host(
 
     work_dir.mkdir(parents=True, exist_ok=True)
     turn_files: list = []
+    turn_indices: list[int] = []
     guest_voice_indexes: dict[str, int] = {}
 
     for i, (label, emotion_tag, text) in enumerate(turns):
@@ -2622,9 +2637,22 @@ def _tts_two_host(
         )
         if generated_path.exists():
             turn_files.append(generated_path)
+            turn_indices.append(i)
 
     if not turn_files:
         raise RuntimeError("No turn audio files were generated")
+
+    if footnotes:
+        footnotes_by_after: dict[int, list] = {}
+        for fn in footnotes:
+            footnotes_by_after.setdefault(int(fn.after_turn), []).append(fn)
+        spliced: list = []
+        for file_path, turn_idx in zip(turn_files, turn_indices):
+            spliced.append(file_path)
+            for fn in footnotes_by_after.get(turn_idx, []):
+                if Path(fn.audio_path).exists():
+                    spliced.append(Path(fn.audio_path))
+        turn_files = spliced
 
     output_path = output_path.with_suffix(".mp3")
     silence_path: Path | None = None
@@ -2637,7 +2665,10 @@ def _tts_two_host(
         cfg,
     )
 
+    footnote_paths = {Path(fn.audio_path) for fn in (footnotes or [])}
     for p in turn_files:
+        if p in footnote_paths:
+            continue  # keep footnote files so they can be archived in the work dir
         p.unlink(missing_ok=True)
     if silence_path:
         silence_path.unlink(missing_ok=True)
@@ -2670,6 +2701,7 @@ def generate_audio(
     output_path: Path,
     cfg: dict,
     work_dir: Path,
+    footnotes: list | None = None,
 ) -> Path:
     """Generate episode audio from a dialogue script."""
     route_summary = _tts_routes_summary_for_script(script, cfg)
@@ -2680,7 +2712,7 @@ def generate_audio(
         }
     )
     logger.info(f"[4/5] Generating audio via routed TTS providers: {providers}")
-    return _tts_two_host(script, output_path, cfg, work_dir / "turns")
+    return _tts_two_host(script, output_path, cfg, work_dir / "turns", footnotes=footnotes)
 
 
 def _prepend_append_audio(
@@ -3254,6 +3286,43 @@ def run(
                     stage=current_stage,
                 )
 
+            resolved_footnotes: list = []
+            footnote_plan = episode.get("sonic_footnote_plan") or {}
+            planned_cues = footnote_plan.get("cues") or []
+            if (
+                cfg.get("use_sonic_footnotes", True)
+                and HAS_FOOTNOTE_MIXER
+                and prepare_footnotes is not None
+                and planned_cues
+            ):
+                if use_clips:
+                    # Phase 1: clip + footnote co-mixing not yet supported; clips
+                    # owns the splice path. Footnotes are deferred for this run.
+                    manifest.add_warning(
+                        "Sonic footnotes skipped this run: not yet supported alongside use_clips=true.",
+                        stage=current_stage,
+                    )
+                else:
+                    try:
+                        sonic_catalog, _ = load_sonic_footnotes_catalog(repo_root, cfg)
+                        resolved_footnotes = prepare_footnotes(
+                            script=episode["script"],
+                            plan=footnote_plan,
+                            catalog=sonic_catalog,
+                            cfg=cfg,
+                            work_dir=work_dir / "footnotes",
+                            client=client,
+                        )
+                    except Exception as exc:
+                        logger.warning(
+                            f"Sonic footnote resolution failed ({exc}); shipping without cues"
+                        )
+                        manifest.add_warning(
+                            f"Sonic footnote resolution failed: {exc}",
+                            stage=current_stage,
+                        )
+                        resolved_footnotes = []
+
             if use_clips:
                 tts_fn = _make_tts_fn(cfg, work_dir)
                 try:
@@ -3273,14 +3342,38 @@ def run(
                         f"Clip pipeline failed; generated dialogue-only audio: {exc}",
                         stage=current_stage,
                     )
-                    audio_path = generate_audio(episode["script"], raw_audio, cfg, work_dir)
+                    audio_path = generate_audio(
+                        episode["script"], raw_audio, cfg, work_dir,
+                        footnotes=resolved_footnotes,
+                    )
                     attributions = []
             else:
-                audio_path = generate_audio(episode["script"], raw_audio, cfg, work_dir)
+                audio_path = generate_audio(
+                    episode["script"], raw_audio, cfg, work_dir,
+                    footnotes=resolved_footnotes,
+                )
 
             if attributions:
                 episode["clip_attributions"] = attributions
                 manifest.set_clips(attributions)
+
+            if resolved_footnotes:
+                inserted_attribs = [fn.attribution for fn in resolved_footnotes]
+                inserted_records = [
+                    {
+                        "catalog_id": fn.catalog_id,
+                        "after_turn": fn.after_turn,
+                        "duration_sec": round(fn.duration_sec, 2),
+                        "source_url": fn.source_url,
+                        "attribution": fn.attribution,
+                    }
+                    for fn in resolved_footnotes
+                ]
+                episode["sonic_footnote_attributions"] = inserted_attribs
+                episode["sonic_footnote_inserted"] = inserted_records
+                manifest.data["sonic_footnote_attributions"] = inserted_attribs
+                manifest.data["sonic_footnote_inserted"] = inserted_records
+                manifest.save()
 
             ident_path = _ensure_intro_ident(cfg, repo_root)
             if ident_path:
