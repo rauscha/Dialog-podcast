@@ -1,6 +1,10 @@
 .env
+APIS.txt
 episodes/*_work/
 logs/
+.runtime/
+learning_paths/
+personal_context.json
 __pycache__/
 *.pyc
 *.wav
