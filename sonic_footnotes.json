@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "avoid_when": "The topic is only metaphorically about launching or exploration.",
+      "best_for": "A brief historical or engineering beat where a real mission-control texture matters.",
+      "credit": "Audio source: NASA",
+      "id": "nasa_apollo_countdown",
+      "label": "NASA Apollo countdown or mission control call",
+      "license_family": "public_domain",
+      "license_label": "NASA media guidelines",
+      "source": "NASA",
+      "source_url": "https://www.nasa.gov/audio-and-ringtones/",
+      "status": "curated_source",
+      "suggested_search": "Apollo 11 countdown NASA audio",
+      "topics": ["space", "moon", "apollo", "launch", "engineering", "history"]
+    },
+    {
+      "avoid_when": "The episode already has enough atmosphere from music or narration.",
+      "best_for": "A moment that needs the listener to feel a remote environment, not just hear facts.",
+      "credit": "Audio source: NASA",
+      "id": "nasa_mars_wind",
+      "label": "NASA Mars wind or rover environmental audio",
+      "license_family": "public_domain",
+      "license_label": "NASA media guidelines",
+      "source": "NASA",
+      "source_url": "https://www.nasa.gov/audio-and-ringtones/",
+      "status": "curated_source",
+      "suggested_search": "NASA Mars wind audio",
+      "topics": ["mars", "planetary science", "space", "weather", "robotics"]
+    },
+    {
+      "avoid_when": "The script would imply it is literal audible sound in space without explanation.",
+      "best_for": "A demonstration beat about translating data into audible form.",
+      "credit": "Audio source: NASA",
+      "id": "nasa_jupiter_radio",
+      "label": "NASA planetary radio emission sonification",
+      "license_family": "public_domain",
+      "license_label": "NASA media guidelines",
+      "source": "NASA",
+      "source_url": "https://www.nasa.gov/audio-and-ringtones/",
+      "status": "curated_source",
+      "suggested_search": "NASA Jupiter radio emissions audio",
+      "topics": ["jupiter", "radio", "magnetosphere", "space", "sonification"]
+    },
+    {
+      "avoid_when": "No specific file has been chosen and attributed.",
+      "best_for": "A short signal-processing or communication-history flourish.",
+      "credit": "Credit per selected Wikimedia Commons file",
+      "id": "commons_morse_code",
+      "label": "Morse code signal",
+      "license_family": "cc_by",
+      "license_label": "Per-file Commons license required",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Morse_code_audio_files",
+      "status": "requires_file_verification",
+      "suggested_search": "Wikimedia Commons Morse code audio CC BY",
+      "topics": ["telegraph", "radio", "communication", "signals", "history"]
+    },
+    {
+      "avoid_when": "It would become a cute but distracting joke.",
+      "best_for": "A timing/rhythm beat where an audible tick explains the concept faster than words.",
+      "credit": "Credit per selected Wikimedia Commons file",
+      "id": "commons_metronome",
+      "label": "Metronome tick",
+      "license_family": "cc_by",
+      "license_label": "Per-file Commons license required",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Metronomes",
+      "status": "requires_file_verification",
+      "suggested_search": "Wikimedia Commons metronome audio",
+      "topics": ["music", "time", "rhythm", "metronome", "measurement"]
+    },
+    {
+      "avoid_when": "The final audio will already include generated music in the same frequency range.",
+      "best_for": "A physics or music beat that benefits from hearing pitch stability.",
+      "credit": "Credit per selected Wikimedia Commons file",
+      "id": "commons_tuning_fork",
+      "label": "Tuning fork tone",
+      "license_family": "cc_by",
+      "license_label": "Per-file Commons license required",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Audio_files_of_tuning_forks",
+      "status": "requires_file_verification",
+      "suggested_search": "Wikimedia Commons tuning fork audio",
+      "topics": ["sound", "frequency", "music", "physics", "hearing"]
+    },
+    {
+      "avoid_when": "A file is CC BY-NC or license metadata is missing.",
+      "best_for": "A real-world place or machine texture when a CC0 file is selected.",
+      "credit": "Credit optional for CC0, but keep source metadata in manifest",
+      "id": "freesound_cc0_field_recording",
+      "label": "CC0 field recording from Freesound",
+      "license_family": "cc0",
+      "license_label": "Must verify selected file is CC0",
+      "source": "Freesound",
+      "source_url": "https://freesound.org/",
+      "status": "requires_file_verification",
+      "suggested_search": "Freesound CC0 field recording",
+      "topics": ["nature", "city", "machines", "ambience", "field recording"]
+    },
+    {
+      "avoid_when": "Rights metadata is unclear or the clip is merely decorative.",
+      "best_for": "A historical episode where a specific archival recording is materially relevant.",
+      "credit": "Credit per selected Internet Archive item",
+      "id": "internet_archive_public_domain",
+      "label": "Public-domain archival audio from Internet Archive",
+      "license_family": "public_domain",
+      "license_label": "Must verify item rights metadata",
+      "source": "Internet Archive",
+      "source_url": "https://archive.org/details/audio",
+      "status": "requires_item_verification",
+      "suggested_search": "Internet Archive public domain audio",
+      "topics": ["history", "speech", "archive", "radio", "public domain"]
+    }
+  ],
+  "policy": {
+    "allowed_license_families": ["public_domain", "cc0", "cc_by", "cc_by_sa"],
+    "disallowed_license_families": ["cc_by_nc", "cc_by_nd", "unknown", "restricted"],
+    "max_duration_sec": 8,
+    "max_per_episode": 2,
+    "script_rule": "Do not include sound-effect markup in spoken script text. The plan is an editorial/mixing note saved to the manifest.",
+    "selection_rule": "Use a sonic footnote only when it clarifies, demonstrates, or emotionally sharpens a specific beat. Silence is preferred over decoration."
+  },
+  "schema_version": 1,
+  "sources_reviewed": [
+    {
+      "name": "NASA Images and Media Guidelines",
+      "note": "NASA audio/media are generally not subject to US copyright, but NASA should be acknowledged and third-party marked material is excluded.",
+      "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+    },
+    {
+      "name": "Wikimedia Commons licensing",
+      "note": "Commons hosts public-domain and freely licensed media with per-file obligations.",
+      "url": "https://commons.wikimedia.org/wiki/Commons:Licensing"
+    },
+    {
+      "name": "Freesound licensing FAQ",
+      "note": "Freesound includes CC0, CC BY, and CC BY-NC sounds; only CC0/CC BY are allowed here.",
+      "url": "https://freesound.org/help/faq/"
+    },
+    {
+      "name": "Internet Archive metadata",
+      "note": "Internet Archive item-level licenseurl and rights fields must be checked before use.",
+      "url": "https://internetarchive.readthedocs.io/en/stable/metadata.html"
+    }
+  ]
+}
