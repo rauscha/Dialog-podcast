@@ -2,27 +2,42 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
-## In-flight: P1-C — Sonic footnotes (full ship)
+## Decision (2026-05-30): clips OFF, cues are the keeper
 
-User chose "full ship" on 2026-05-30. Broken into 4 backend phases + an optional Phase 1.5.
+User decided to **leave YouTube clips off** (`use_clips: false` stays the default and we're not building co-mixing for now). Reasons:
+- Auto-selected clips were low quality — wrong sections of the source video, wrong text.
+- Music clips didn't *flow* — making them flow in/out is editorial taste work, best left to a human editor for now.
+- They were frequently extraneous.
+- Rights are non-trivial but were the *secondary* concern.
+
+**Cues (sonic footnotes) are the focus.** Their job is narrower and better suited to automation: **punctuate and separate** at section breaks. No "wrong 15 seconds" failure mode.
+
+Phase 5 (clip + cue co-mixing) is **parked, not deleted** — design preserved at the bottom of this file if it's ever revived.
+
+## In-flight: P1-C — Sonic footnotes (cues)
+
+User chose "full ship" on 2026-05-30. NASA backend (Phase 1) is in; remaining phases below.
 
 - [x] **Phase 1** — NASA backend + skeleton + splice wiring. Committed `4664f29`.
-- [ ] **Phase 1.5** — LLM timestamp picker. Reads a NASA episode's description and picks a sensible cue moment instead of the fixed 5-sec offset. Conditional on a real Phase 1 episode sounding bad.
+- [ ] **Test a Phase 1 cue episode and LISTEN first.** `python generate_podcast.py "fm synthesis"` (clips are off by default — no env var needed). The new NASA cues haven't been heard yet; this decides what comes next.
+- [ ] **Phase 1.5** — LLM timestamp picker. Reads a NASA episode's description and picks a sensible cue moment instead of the fixed 5-sec offset. **Promote this if the test episode's cues feel random** — cue quality is now the whole game.
 - [ ] **Phase 2** — Wikimedia Commons backend. MediaWiki API category listing + per-file `extmetadata` license parsing. Covers `commons_morse_code`, `commons_metronome`, `commons_tuning_fork`.
 - [ ] **Phase 3** — Internet Archive backend. `advancedsearch.php` + `licenseurl`/`rights` parsing. Covers `internet_archive_public_domain`.
 - [ ] **Phase 4** — Freesound backend. Requires `FREESOUND_API_KEY` in `.env` (user signs up at freesound.org/help/developers/). Covers `freesound_cc0_field_recording`.
-- [ ] **Phase 5 — clip + cue co-mixing.** ← **ACTIVE PRIORITY** (2026-05-30; user wants YouTube clips AND cues in the same episode). Currently the two are mutually exclusive: the gate at `generate_podcast.py:3298` skips cues whenever `use_clips=true`.
-  - **Why it's not trivial:** clips and cues use two different insertion rulers. Clips slot in by text-marker position (`<<<CLIP_CUE>>>`) and `assemble_with_clips` (`clip_mixer.py:317`) TTS's multi-turn *chunks* at a time. Cues slot in by *turn index* via the footnote splice in `_tts_two_host` (`generate_podcast.py:2645`). A cue's "after turn 8" has no meaning inside a clip chunk that starts at turn 5.
-  - **Design:** unify on the turn-index ruler. (1) Map each clip cue to the turn it follows. (2) Build the episode as one per-turn audio list (cue path already does this). (3) One splice pass inserts both clips and cues after the right turns. (4) Collision rule when both land after the same turn (suggest clip-then-cue).
-  - **Rights:** keep `use_clips` default `false` in `config.json`; make clips a per-run opt-in (`$env:USE_CLIPS="true"`) that now coexists with cues, so the published feed stays clean.
-  - Key files: `clip_mixer.py` (`assemble_with_clips` ~317, `process_clips` ~386), `generate_podcast.py` (`_tts_two_host` ~2593 / splice ~2645, orchestration + skip gate ~3280–3354, `_make_tts_fn` ~2989).
 
-> Note (2026-05-30): the "clips vanished from my last episode" report was **not a bug** — clips are off by config (`use_clips: false`, deliberate since `888bb6f` for YouTube-copyright reasons). Last episode ran clean with cues. Phase 5 is the path to having both.
+## Cue quality & editorial polish (the keepers from the co-mixing discussion)
+
+These apply to cues alone and are where the "make it feel intentional" wins live:
+
+- [ ] **Consolidate turn enumeration (step zero).** Cue *planning* (`_place_cues` → `_enumerate_turns` in `sonic_footnote_mixer.py`) and cue *splicing* (`_tts_two_host` → `_parse_dialogue_turns` in `generate_podcast.py`) count turns with two different functions. They can disagree (the footnote one ignores the cfg-aware speaker filter), causing off-by-one placement. Collapse to one shared enumeration before doing more placement work.
+- [ ] **Restraint / interruption budget.** Cap cues per episode, enforce a minimum gap between them, and bias placement toward genuine section breaks. Directly counters the "frequently extraneous" problem. Fewer, better.
+- [ ] **Transition flow.** Tune fades and per-segment level-matching at the cue↔dialogue seams so a cue reads as intentional punctuation, not a bolted-on clip.
+- [ ] **Dry-run timeline.** A mode that prints the planned episode turn-by-turn with `[CUE]` markers *before* any TTS or network calls — cheap iteration on placement without generating a full episode.
 
 ## P1 — remaining items (from deep review)
 
 - [ ] **D — Break Cedar/Marin turn symmetry.** Add an interruption / overlap pass to the dialogue script step. One Sonnet call, prompt-only change.
-- [ ] **E — Parallelize TTS and yt-dlp clip downloads.** `concurrent.futures.ThreadPoolExecutor` around the per-turn TTS loop and the clip downloads. **Biggest wall-clock win in the deep review.**
+- [ ] **E — Parallelize TTS and yt-dlp clip downloads.** `concurrent.futures.ThreadPoolExecutor` around the per-turn TTS loop (clip downloads moot while clips are off). **Biggest wall-clock win in the deep review.**
 - [ ] **F — `cache_control: ephemeral` on long static system prompts.** Anthropic SDK. Apply to the four named system prompts + the research-brief block + host-memory bible block.
 - [ ] **G — Proactive Telegram completion notification.** Single outbound message when generation finishes, with website link + elapsed time.
 - [ ] **H — Pin `requirements.txt`, run `pip-audit`.** Floating lower bounds today; pin exact and write down baseline date + result.
@@ -61,3 +76,11 @@ These are real but second-order. Pull from here when P1 is closer to done.
 - **Closing callback** — last 60 seconds of each ep references a prior episode's idea using `host_memory.json`. Highest leverage per effort.
 - **Reading-room companion** — per-episode annotated reading list under a "Going Deeper" tab. Haiku pass, ~$0.001/ep.
 - **Generative chapter art** — one small abstract illustration per chapter. ~$0.02/ep via FLUX-schnell.
+
+## Parked: Phase 5 — clip + cue co-mixing (not pursuing for now)
+
+Shelved 2026-05-30 (see decision at top). Design kept in case clips are ever revisited:
+- Clips and cues use two different insertion rulers — clips by text-marker position (`<<<CLIP_CUE>>>`, `assemble_with_clips` in `clip_mixer.py:317`, TTS'ing multi-turn chunks), cues by turn index (`_tts_two_host` splice, `generate_podcast.py:2645`). A cue's "after turn 8" is meaningless inside a clip chunk starting at turn 5.
+- Merge approach: unify on the turn-index ruler — map each clip cue to the turn it follows, build one per-turn audio list, one splice pass inserts both, with a collision rule (clip-then-cue) when both land after the same turn.
+- The cue-skip gate that makes them mutually exclusive lives at `generate_podcast.py:3298`.
+- If revived, decide rights stance first (published feed = cues only, clips private-only was the leaning) and consider cue-as-rights-safe-fallback for a missing clip.

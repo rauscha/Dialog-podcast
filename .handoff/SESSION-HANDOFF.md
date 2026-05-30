@@ -2,24 +2,23 @@
 
 ## STATE (read this first)
 - Branch: `main`, working tree clean, synced with `origin/main` (no unpushed code).
-- This was a **diagnostic session, no code changed.** The output is a finding + a plan, both written down (here + `NEXT-STEPS.md`).
-- Headline finding: the "YouTube clips disappeared from my last episode" was **not a bug.** Clips are off by config (`use_clips: false`) and have been since commit `888bb6f` — deliberately, for the YouTube-copyright reason the consultant flagged. The last episode (chiptune, 2026-05-29) ran clean (zero warnings) and spliced its 2 sonic cues fine. Nothing stripped the clips; they were never enabled.
-- User's goal: have YouTube clips AND sonic-footnote cues in the same episode. That requires **Phase 5 (co-mixing)**, which is now the bumped-up priority (ahead of footnote Phase 2). User chose "build co-mixing" and then called hand-off, so the build itself is **not started** — fresh session recommended.
+- This was a **diagnostic + decision session, no code changed.** Output is a finding and a direction, both on disk (here + `NEXT-STEPS.md`).
+- **Decision: clips stay OFF; cues are the focus.** Started by investigating "YouTube clips vanished from my last episode" — that was **not a bug** (clips are off by config, `use_clips: false`, deliberate since `888bb6f`; last episode ran clean with 2 cues). Explored clip+cue co-mixing (Phase 5), then the user decided **not** to pursue clips: auto-selected clips were low quality (wrong sections/text), music clips didn't flow (editorial/human work), and were often extraneous; rights non-trivial but secondary. **Cues (sonic footnotes) win — their job is to punctuate and separate.**
+- Phase 5 (co-mixing) is **parked, not deleted** (design preserved at the bottom of `NEXT-STEPS.md`).
 
 ## Done this session
-- Diagnosed the missing-clips question (see above). Confirmed via `config.json` (`use_clips: false`), git history (`888bb6f` set it false; only the initial commit had it true), and the last episode's `episode_manifest.json` (`clips: []`, `warnings: []`, 2 cues present).
-- Traced both audio splice engines end-to-end and designed Phase 5. Wrote the design into `NEXT-STEPS.md` under the Phase 5 bullet.
+- Diagnosed the missing-clips question: off by config, not a regression. Confirmed via `config.json`, git history (`888bb6f`), and the last episode's `episode_manifest.json` (`clips: []`, `warnings: []`, 2 cues present).
+- Made the clips-off / cues-focus decision and rewrote `NEXT-STEPS.md` around it: cue phases promoted, a new "Cue quality & editorial polish" section added, Phase 5 moved to a parked section.
 
 ## Next up
-1. **Phase 5 — clip + cue co-mixing** (fresh session; the build wasn't started). Full design is in `NEXT-STEPS.md`. Short version: clips and cues currently use two different rulers — clips slot in by text-marker position (`<<<CLIP_CUE>>>`) and TTS multi-turn chunks; cues slot in by turn index. Unify on the turn-index ruler and do one splice pass that inserts both. Then make per-run `$env:USE_CLIPS="true"` work alongside cues while keeping the published default `false`.
-2. **Then test Phase 1 + clips on one real episode and listen** — `$env:USE_CLIPS="true"; python generate_podcast.py "fm synthesis"`. Was deferred from last session; do it once co-mixing lands so you hear both at once.
-3. Footnote **Phase 2 (Wikimedia Commons)** drops to third — it was #1 before, now behind the user's clip goal.
-4. P1-D (break Cedar/Marin turn symmetry), P1-E (parallelize TTS/clips) as before.
+1. **Test a Phase 1 cue episode and LISTEN.** `python generate_podcast.py "fm synthesis"` (clips off by default — no env var). The NASA cues haven't actually been heard yet; this decides what's next.
+2. **Phase 1.5 (LLM cue-moment picker)** if the cues feel random — cue quality is now the whole game. Otherwise **Phase 2 (Wikimedia Commons backend)**.
+3. **Cue editorial polish (the keepers):** consolidate turn enumeration (step zero — real latent off-by-one bug), interruption budget/restraint, transition-flow fades/levels, dry-run `[CUE]` timeline. See the "Cue quality & editorial polish" section in `NEXT-STEPS.md`.
+4. P1-D (turn symmetry), P1-E (parallelize TTS) as before.
 
 ## Watch out for
-- **The cue-skip gate is intentional**, at `generate_podcast.py:3298` — it skips cues whenever `use_clips` is true (with a manifest warning). Phase 5 removes this gate; don't be surprised it's there.
-- **Two different insertion rulers** is the core difficulty (text-marker position vs turn index). Naively threading footnotes into the clip path breaks because `assemble_with_clips` TTS's multi-turn chunks, so global turn indices don't survive inside a chunk. The fix is to unify on the per-turn list, not to thread one into the other.
-- **Collision rule needed:** when a clip and a cue both land after the same turn, pick an order (suggest clip-then-cue) so the splice is deterministic.
-- **Rights:** keep `use_clips` default `false` in `config.json` for published runs. Co-mixing should make clips a per-run opt-in, not flip the default.
-- Key files for the build: `clip_mixer.py` (`assemble_with_clips`, ~line 317; `process_clips`, ~386) and `generate_podcast.py` (`_tts_two_host` footnote splice, ~2645; the orchestration + skip gate, ~3280–3354; `_make_tts_fn`, ~2989).
+- **Don't build clips / Phase 5** — explicitly shelved this session. `NEXT-STEPS.md` no longer lists it as a priority; the parked design is at the very bottom.
+- **Turn-enumeration mismatch is a real latent bug**, independent of clips: cue planning uses `_enumerate_turns` (`sonic_footnote_mixer.py`) while cue splicing uses `_parse_dialogue_turns` (`generate_podcast.py`); they can disagree on what "turn N" is. Fix before more placement work.
+- Key cue files: `sonic_footnote_mixer.py` (`prepare_footnotes`, `_place_cues`), `generate_podcast.py` (`_plan_sonic_footnotes` ~1291, `_tts_two_host` splice ~2645, orchestration ~3280–3354).
 - Standing carryovers (unchanged): work-dir cleanup re-enable on 2026-06-06; Telegram token rotation (not urgent, git clean); `bash scripts/install-hooks.sh` per-clone on the desktop; `use_sonic_footnotes` defaults True.
+- Cosmetic: an earlier pushed commit (`2baddfc`) has a mangled message (stray `@`/backticks) from a shell-syntax slip; content is fine, left as-is rather than force-pushing `main`.
