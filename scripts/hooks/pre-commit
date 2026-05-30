@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Reject commits containing what looks like a real Telegram bot token or
+# Anthropic/OpenAI API key. Patterns from reviews/2026-05-30-deep-review.md item A.
+#
+# Canonical source: scripts/hooks/pre-commit (tracked in repo).
+# Installed copy:   .git/hooks/pre-commit (per-clone, run scripts/install-hooks.sh).
+
+staged=$(git diff --cached -U0)
+if [ -z "$staged" ]; then
+    exit 0
+fi
+
+patterns=(
+    '[0-9]{9,10}:[A-Za-z0-9_-]{35}'   # Telegram bot token
+    'sk-ant-[A-Za-z0-9_-]{20,}'        # Anthropic key
+    'sk-proj-[A-Za-z0-9_-]{20,}'       # OpenAI project-scoped key
+    'sk-[A-Za-z0-9]{40,}'              # legacy OpenAI key
+)
+
+for pat in "${patterns[@]}"; do
+    if echo "$staged" | grep -E -q "$pat"; then
+        echo "Possible secret in staged diff (pattern: $pat). Aborting commit." >&2
+        echo "If this is a false positive (e.g., a placeholder in .env.example), use git commit --no-verify." >&2
+        exit 1
+    fi
+done
+
+exit 0
