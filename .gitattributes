@@ -1,0 +1,4 @@
+# Shell scripts must keep LF line endings even on Windows checkouts.
+# Git's MSYS2 bash chokes on CRLF in shebangs / `if` blocks.
+*.sh        text eol=lf
+scripts/hooks/*  text eol=lf
