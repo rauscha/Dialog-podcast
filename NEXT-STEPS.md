@@ -11,7 +11,13 @@ User chose "full ship" on 2026-05-30. Broken into 4 backend phases + an optional
 - [ ] **Phase 2** — Wikimedia Commons backend. MediaWiki API category listing + per-file `extmetadata` license parsing. Covers `commons_morse_code`, `commons_metronome`, `commons_tuning_fork`.
 - [ ] **Phase 3** — Internet Archive backend. `advancedsearch.php` + `licenseurl`/`rights` parsing. Covers `internet_archive_public_domain`.
 - [ ] **Phase 4** — Freesound backend. Requires `FREESOUND_API_KEY` in `.env` (user signs up at freesound.org/help/developers/). Covers `freesound_cc0_field_recording`.
-- [ ] **Phase 5 (cleanup)** — Combined clip + footnote co-mixing path. Currently footnotes defer when `use_clips=True`.
+- [ ] **Phase 5 — clip + cue co-mixing.** ← **ACTIVE PRIORITY** (2026-05-30; user wants YouTube clips AND cues in the same episode). Currently the two are mutually exclusive: the gate at `generate_podcast.py:3298` skips cues whenever `use_clips=true`.
+  - **Why it's not trivial:** clips and cues use two different insertion rulers. Clips slot in by text-marker position (`<<<CLIP_CUE>>>`) and `assemble_with_clips` (`clip_mixer.py:317`) TTS's multi-turn *chunks* at a time. Cues slot in by *turn index* via the footnote splice in `_tts_two_host` (`generate_podcast.py:2645`). A cue's "after turn 8" has no meaning inside a clip chunk that starts at turn 5.
+  - **Design:** unify on the turn-index ruler. (1) Map each clip cue to the turn it follows. (2) Build the episode as one per-turn audio list (cue path already does this). (3) One splice pass inserts both clips and cues after the right turns. (4) Collision rule when both land after the same turn (suggest clip-then-cue).
+  - **Rights:** keep `use_clips` default `false` in `config.json`; make clips a per-run opt-in (`$env:USE_CLIPS="true"`) that now coexists with cues, so the published feed stays clean.
+  - Key files: `clip_mixer.py` (`assemble_with_clips` ~317, `process_clips` ~386), `generate_podcast.py` (`_tts_two_host` ~2593 / splice ~2645, orchestration + skip gate ~3280–3354, `_make_tts_fn` ~2989).
+
+> Note (2026-05-30): the "clips vanished from my last episode" report was **not a bug** — clips are off by config (`use_clips: false`, deliberate since `888bb6f` for YouTube-copyright reasons). Last episode ran clean with cues. Phase 5 is the path to having both.
 
 ## P1 — remaining items (from deep review)
 
