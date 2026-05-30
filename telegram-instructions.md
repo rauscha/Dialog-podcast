@@ -1,172 +1,252 @@
-# Telegram-bot trigger — setup guide
+# Telegram Command Center - Setup Guide
 
-End-to-end: you message a Telegram bot from your phone → the bot, running on your tower, spawns `generate_podcast.py` → episode lands in `episodes/`, RSS updates, optional `git push`. No internet exposure: the bot connects *outbound* to Telegram, so your tower never opens a port.
+End to end: you message a Telegram bot from your phone, the bot running on your tower spawns `generate_podcast.py`, and the episode lands in `episodes/` with RSS updated. The bot connects outbound to Telegram, so your tower does not need to expose an inbound port.
 
----
+## 1. Create The Bot
 
-## 1. Create the bot (5 min)
-
-1. On your phone, open Telegram and message **`@BotFather`** (it's a real, official bot).
+1. Open Telegram and message `@BotFather`.
 2. Send `/newbot`.
-3. Pick a **display name** (e.g. *Dialog Podcast Bot*) — this is what shows in chats.
-4. Pick a **username** ending in `bot` (e.g. `dialog_podcast_andre_bot`). Must be globally unique.
-5. BotFather replies with an **HTTP API token** that looks like `1234567890:AAExxxx...`. **This is your `TELEGRAM_BOT_TOKEN`.** Keep it secret — anyone with it can impersonate the bot.
+3. Pick a display name, for example `Asynchronous Podcast Bot`.
+4. Pick a username ending in `bot`.
+5. BotFather replies with an HTTP API token. This is `TELEGRAM_BOT_TOKEN`; keep it secret.
 
 Optional but recommended:
-- `/setdescription` → "Generates Dialog podcast episodes from a topic prompt."
-- `/setprivacy` → **Disable** (default is enabled, which restricts the bot from seeing non-command messages in groups; harmless for 1:1 chats but flip it for clarity).
 
----
+- `/setdescription` -> `Turns topic prompts into Asynchronous podcast episodes.`
+- Keep BotFather privacy enabled unless you intentionally use group chats.
 
-## 2. Get your Telegram user ID (1 min)
+## 2. Get Your Telegram User ID
 
-1. Message **`@userinfobot`** on Telegram.
-2. It replies with your numeric ID, e.g. `123456789`. **This is your `TELEGRAM_ALLOWED_USERS`.**
-3. If multiple people should be able to trigger the bot, comma-separate (e.g. `123456789,987654321`).
+1. Message `@userinfobot`.
+2. It replies with your numeric user ID, for example `123456789`.
+3. Put that value in `TELEGRAM_ALLOWED_USERS`.
 
-The bot ignores messages from any sender not in this list. There is no other auth — the user-ID allowlist is the security boundary.
+The bot ignores users not in this list. Group chats are rejected unless their numeric chat ID appears in `TELEGRAM_ALLOWED_CHATS`.
 
----
-
-## 3. Install the library
+## 3. Install Dependencies
 
 ```powershell
-pip install python-telegram-bot
+pip install -r requirements.txt
 ```
 
-(The repo's `requirements.txt` already pins `python-telegram-bot>=21.0`, so `pip install -r requirements.txt` works too.)
+## 4. Set Environment Variables
 
----
+Add these to `.env`:
 
-## 4. Set environment variables
-
-Add to your `.env` (or set in the system environment):
-
-```
-TELEGRAM_BOT_TOKEN=1234567890:AAE...your-token-from-step-1
+```text
+TELEGRAM_BOT_TOKEN=1234567890:AAE...your-token-from-BotFather
 TELEGRAM_ALLOWED_USERS=123456789
+TELEGRAM_ALLOWED_CHATS=
 PODCAST_REPO_PATH=C:\Dialog-podcast
-```
+GENERATION_TIMEOUT_SEC=7200
 
-Plus the existing keys you already have:
-
-```
 ANTHROPIC_API_KEY=sk-ant-...
 OPENAI_API_KEY=sk-...
-GH_TOKEN=ghp_...
-GITHUB_USER=your-github-username
-GITHUB_REPO=dialog-podcast
-SKIP_GIT=1   # set to disable the git push during local testing
+ELEVENLABS_API_KEY=
+SKIP_GIT=true
+USE_CLIPS=false
+USE_SONIC_FOOTNOTES=true
+SONIC_FOOTNOTES_CATALOG=sonic_footnotes.json
+EPISODE_TYPE=deep_dive
+USE_GUEST_HOSTS=true
+GUEST_HOST_MODE=auto
+GUEST_HOST_MAX=1
+GUEST_HOST_VOICE_POOL=ash,ballad,coral,sage,shimmer,echo,onyx,nova,alloy,fable
+TTS_PROVIDER=openai
+HOST_A_VOICE=marin
+HOST_B_VOICE=cedar
+ELEVENLABS_MODEL=eleven_turbo_v2
+ELEVENLABS_STABILITY=0.5
+ELEVENLABS_SIMILARITY_BOOST=0.75
+ELEVENLABS_GUEST_VOICE_IDS=
+TTS_DEFAULT_ROUTE={}
+TTS_ROUTES={}
+TTS_REQUEST_TIMEOUT_SEC=180
+TTS_COMMAND=
+TTS_COMMAND_CWD=
+TTS_COMMAND_TIMEOUT_SEC=600
+TURN_SILENCE_MS=180
+USE_AUDIO_MASTERING=true
+AUDIO_BITRATE=192k
+AUDIO_SAMPLE_RATE=44100
+AUDIO_CHANNELS=2
+AUDIO_LOUDNESS_I=-16.0
+AUDIO_TRUE_PEAK=-1.5
+AUDIO_LRA=11.0
+AUDIO_HIGHPASS_HZ=60
+AUDIO_LOWPASS_HZ=18000
+MUSIC_PROMPT_MODEL=claude-haiku-4-5-20251001
+SCRIPT_QUALITY_PIPELINE=true
+HOST_MEMORY_PATH=host_memory.json
+USE_PERSONAL_CONTEXT=true
+PERSONAL_CONTEXT_PATH=personal_context.json
+PERSONAL_CONTEXT_MAX_TOPICS=24
+PERSONAL_CONTEXT_SIMILARITY_THRESHOLD=0.34
+PERSONAL_CONTEXT_SYNC_MANIFESTS=true
+RESEARCH_MODEL=claude-opus-4-5
+DIALOGUE_MODEL=claude-sonnet-4-6
+FACT_CHECK_MODEL=claude-sonnet-4-6
+LOCAL_LLM_PROVIDER=ollama
+LOCAL_LLM_BASE_URL=http://127.0.0.1:11434
+LOCAL_LLM_API_KEY_ENV=LOCAL_LLM_API_KEY
+LOCAL_LLM_TIMEOUT_SEC=3600
+LOCAL_LLM_NUM_CTX=32768
+LOCAL_LLM_KEEP_ALIVE=30m
+LOCAL_LLM_THINK=false
+LEARNING_PATH_DIR=learning_paths
+LEARNING_PATH_DEFAULT_EPISODES=5
+LEARNING_PATH_DEFAULT_LEVEL=beginner-to-intermediate
 ```
 
----
+`USE_CLIPS=false` is the safer default for published runs. Turn clips on only for private experiments or rights-cleared sources.
 
-## 5. Sanity test
+TTS can be mixed per speaker in `config.json` or with JSON env vars. For example, set `TTS_ROUTES={"CEDAR":{"provider":"openai","voice":"marin"},"MARIN":{"provider":"elevenlabs","voice_id":"..."}}` to keep Cedar on OpenAI while Marin uses ElevenLabs. Telegram commands use whatever routes are active when the generation starts.
+
+## 5. Load `.env` In PowerShell
+
+```powershell
+Get-Content .env | ForEach-Object {
+  if ($_ -notmatch '^#' -and $_ -match '=') {
+    $k,$v = $_ -split '=',2
+    [Environment]::SetEnvironmentVariable($k.Trim(), $v.Trim())
+  }
+}
+```
+
+## 6. Run The Bot
 
 ```powershell
 python telegram_bot.py
 ```
 
-You should see:
+Expected log:
 
-```
-HH:MM:SS [INFO] __main__ — Bot polling started. Allowed users: [123456789]. Repo path: C:\Dialog-podcast
-```
-
-Open Telegram, find your bot by its `@username`, send `/start`. You should get a greeting back. Send a short topic like `"a brief test"` to confirm the round-trip works (it will start generation, which takes 15 min — interrupt with Ctrl-C if you don't want to wait).
-
----
-
-## 6. Auto-start on Windows login (Task Scheduler)
-
-This makes the bot start whenever you log in to Windows, so it's quietly running in the background and ready to receive your dog-walk topic ideas.
-
-1. Press **Win+R**, type `taskschd.msc`, hit Enter.
-2. **Action menu → Create Task...** (NOT "Create Basic Task" — we need the full options).
-3. **General** tab:
-   - **Name:** `Dialog Podcast Bot`
-   - **Description:** `Long-polling Telegram bot that triggers podcast generation`
-   - Check **Run only when user is logged on** (default).
-   - Leave **Configure for** at *Windows 10/11*.
-4. **Triggers** tab → **New...**:
-   - **Begin the task:** `At log on`
-   - **Specific user:** your account
-   - **Delay task for:** `30 seconds` (lets network/services come up first)
-   - OK.
-5. **Actions** tab → **New...**:
-   - **Action:** `Start a program`
-   - **Program/script:** the full path to your Python — find it with `where python` in PowerShell. Typically:
-     `C:\Users\<you>\AppData\Local\Programs\Python\Python312\python.exe`
-   - **Add arguments:** `telegram_bot.py`
-   - **Start in:** `C:\Dialog-podcast`
-   - OK.
-6. **Conditions** tab:
-   - **UNCHECK** *Start the task only if the computer is on AC power* (otherwise it won't run on a laptop on battery).
-7. **Settings** tab:
-   - Check **Allow task to be run on demand**.
-   - **If the task fails, restart every:** `1 minute`, attempt up to `3` times.
-   - **If the running task does not end when requested, force it to stop**.
-8. **OK** → enter your password if prompted.
-
-Test it: right-click the task → **Run**. Open Task Manager → Details → look for `python.exe` running with command line `telegram_bot.py`. Send your bot a message — it should respond.
-
----
-
-## 7. Where do logs go?
-
-**Bot's own logs** (startup, allow/reject decisions, crashes):
-- When run from a terminal: visible in that terminal.
-- When run from Task Scheduler: not captured by default. Easiest fix — wrap with a redirect. Edit your Task Scheduler **Add arguments** field to:
-  ```
-  -c "import sys; sys.stdout = open(r'C:\Dialog-podcast\logs\bot.log', 'a', buffering=1, encoding='utf-8'); sys.stderr = sys.stdout; exec(open('telegram_bot.py', encoding='utf-8').read())"
-  ```
-  …or simpler: write a one-line `run_bot.bat` and have Task Scheduler run that:
-  ```bat
-  @echo off
-  python C:\Dialog-podcast\telegram_bot.py >> C:\Dialog-podcast\logs\bot.log 2>&1
-  ```
-
-**Generation logs** (the actual episode generation): always written to `C:\Dialog-podcast\logs\latest.log` regardless of how the bot was started.
-
----
-
-## 8. Stopping / restarting
-
-- **Stop:** Task Manager → Details → right-click `python.exe` (the one running `telegram_bot.py`) → End task. Or `taskkill /IM python.exe` (kills *all* python processes — careful).
-- **Restart:** Task Scheduler → right-click the task → **End**, then **Run**.
-- **Disable temporarily:** Task Scheduler → right-click → **Disable**.
-
----
-
-## 9. Full flow recap
-
-```
-you (phone, walking dog)
-       ↓
-   "the history of the internet"  →  Telegram
-       ↓
-   long-polling bot on your tower
-       ↓
-   subprocess: python generate_podcast.py "..."
-       ↓ (~15 min, on your 4080)
-   research → script → fact-check → TTS → music → MP3
-       ↓
-   feed.xml updated, optional git push to GitHub Pages
-       ↓
-   bot replies: "Done — check episodes/"
-       ↓
-   tomorrow's commute: hit play in your podcast app
+```text
+HH:MM:SS [INFO] __main__ - Bot polling started. Allowed users: [123456789]. Allowed chats: []. Repo: C:\Dialog-podcast
 ```
 
----
+Open Telegram, find your bot, and send `/start`.
 
-## 10. Troubleshooting
+## 7. Commands
+
+```text
+/generate <topic>  Start a new episode generation
+/gen <topic>       Short alias for /generate
+/generate --type how_to <topic>
+/generate landscape: <topic>
+/generate --guest <topic>
+/generate --no-guest <topic>
+/generate --guest-mode force <topic>
+/series <topic> 5 episodes beginner-to-intermediate
+/series --plan-only <topic>
+/queue <topic>     Add a topic to the in-memory queue
+/queue             Show queued topics
+/types             Show available episode formats
+/next              Run the next queued topic
+/status            Show active subprocess, lock, log, and latest manifest
+/latest            Show the most recent episode manifest
+/paths             Show the latest learning path
+/context           Show personal context and covered topics
+/remember domain <text>
+/remember background <text>
+/remember depth <text>
+/tts               Show active TTS routing config
+/cancel            Stop the active generation process
+/doctor            Check env vars, tools, config, and lock state
+```
+
+Plain text no longer starts expensive work. It replies with a hint to use `/generate` or `/queue`.
+
+Available episode types:
+
+```text
+deep_dive, overview, how_to, landscape, case_study, myth_bust,
+story, debate, history, field_guide, decision_brief, critique,
+future_scenario, lab_notes, complete_fiction, review
+```
+
+## 8. Metadata And Logs
+
+Each generation writes:
+
+```text
+episodes/<timestamp>_<topic>_work/episode_manifest.json
+episodes/<timestamp>_<topic>_work/research_brief.md
+episodes/<timestamp>_<topic>_work/source_cards.json
+episodes/<timestamp>_<topic>_work/guest_plan.json
+episodes/<timestamp>_<topic>_work/beat_sheet.md
+episodes/<timestamp>_<topic>_work/personal_context_snapshot.json
+episodes/<timestamp>_<topic>_work/personal_context_update.json
+episodes/<timestamp>_<topic>_work/sonic_footnote_plan.json
+episodes/<timestamp>_<topic>_work/draft_script.txt
+episodes/<timestamp>_<topic>_work/natural_script.txt
+episodes/<timestamp>_<topic>_work/fact_checked_script.txt
+episodes/<timestamp>_<topic>_work/script.txt
+episodes/<timestamp>_<topic>.chapters.json
+episodes/<timestamp>_<topic>.companion.json
+logs/<timestamp>_<topic>.log
+logs/latest.log
+```
+
+Learning path mode writes:
+
+```text
+learning_paths/<path_id>_<topic>/learning_path.json
+learning_paths/<path_id>_<topic>/learning_path.md
+learning_paths/latest_learning_path.json
+```
+
+Unless `/series --plan-only ...` is used, the planned episodes are added to the in-memory queue and can be generated one at a time with `/next`.
+
+The manifest tracks run ID, topic, status, current stage, config options, models, script pass artifacts, guest expert decisions, personal-context snapshots, sonic footnote decisions, audio mastering settings, sources, claims, clip credits, audio duration, output paths, publish URLs, warnings, and errors. Telegram `/status` and `/latest` read this manifest instead of guessing from logs.
+
+`index.html` reads `feed.xml` plus each episode companion JSON to show a webplayer, clickable chapters, and follow-up links on the GitHub Pages companion site.
+
+Guest expert mode can add a synthetic/composite interview guest with a distinct TTS voice when the topic benefits from outside authority. Use `--guest` to force one, `--no-guest` to suppress one, or leave `GUEST_HOST_MODE=auto` for the producer pass to decide. Guest personas are not real people or voice impersonations.
+
+`sonic_footnotes.json` is a rights-aware open-source sound catalog. The script pipeline can propose tiny sonic flourishes from it, but remote items still need specific-file/license verification before any future mixer inserts audio.
+
+`personal_context.json` is your local private listener profile. Use `/remember background ...`, `/remember domain ...`, `/remember depth ...`, `/remember goal ...`, `/remember style ...`, and `/remember avoid ...` to teach the bot what to assume about you. The generator also records covered topics there, so repeated topics are treated as deeper follow-ups instead of fresh primers.
+
+`host_memory.json` is the persistent character bible for Cedar and Marin. The generator snapshots it into each work directory, then appends small callback-worthy memories after a successful script pass.
+
+## 9. Auto-Start On Windows Login
+
+Use Task Scheduler:
+
+1. Open `taskschd.msc`.
+2. Create Task.
+3. General:
+   - Name: `Asynchronous Podcast Bot`
+   - Run only when user is logged on.
+4. Triggers:
+   - At log on.
+   - Delay task for 30 seconds.
+5. Actions:
+   - Program/script: full path to `python.exe`.
+   - Add arguments: `telegram_bot.py`.
+   - Start in: `C:\Dialog-podcast`.
+6. Settings:
+   - Allow task to be run on demand.
+   - Restart on failure.
+
+The included `watchdog.ps1` can also restart the bot if the process disappears.
+
+## 10. Safety Notes
+
+- `/generate` is required for new work; accidental plain text does not launch a run.
+- A cross-process lock at `.runtime/generation.lock` prevents overlapping CLI and Telegram runs.
+- Use private chats by default. Add explicit group IDs to `TELEGRAM_ALLOWED_CHATS` only when you want group control.
+- Use `SKIP_GIT=true` while testing locally.
+
+## 11. Troubleshooting
 
 | Symptom | Cause / fix |
 |---|---|
-| `RuntimeError: TELEGRAM_BOT_TOKEN is unset` | Env var not set in the shell or scheduled task. Double-check `.env` is loaded, or set it in Task Scheduler's environment via the wrapping `.bat`. |
-| Bot ignores your messages silently | Your user ID isn't in `TELEGRAM_ALLOWED_USERS`. Check via `@userinfobot` again — IDs are numeric, no `@`. |
-| `Conflict: terminated by other getUpdates request` | Two bot instances are running with the same token. Only one can poll at a time. Find and kill the duplicate. |
-| Bot says "I'm already generating" | `_generation_lock` is held. If you suspect a stuck run, restart the bot — the lock is in-memory only. |
-| Generation fails with `model not found: claude-sonnet-4-6` | Update the `anthropic` SDK: `pip install --upgrade anthropic`. |
-| `model not found: gpt-4o-mini-tts` | Update the `openai` SDK: `pip install --upgrade openai`. |
+| `RuntimeError: TELEGRAM_BOT_TOKEN is unset` | Env var is not loaded in the shell or scheduled task. |
+| Bot ignores messages | Your numeric ID is not in `TELEGRAM_ALLOWED_USERS`, or the group is not in `TELEGRAM_ALLOWED_CHATS`. |
+| `Conflict: terminated by other getUpdates request` | Two bot instances are running with the same token. |
+| Bot says a generation is already running | Check `/status`; use `/cancel` only if you intend to stop it. |
+| `/doctor` says ffmpeg or ffprobe is missing | Install ffmpeg and make sure it is on PATH for the bot process. |
+| `model not found: claude-sonnet-4-6` | Update the Anthropic SDK. |
+| `model not found: gpt-4o-mini-tts` | Update the OpenAI SDK. |
