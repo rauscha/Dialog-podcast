@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""music_gen.py — Generative intro/outro music via Meta's MusicGen (audiocraft).
+"""music_gen.py - Generative intro/outro music via Meta's MusicGen (audiocraft).
 
 Falls back to a numpy/scipy ambient pad when audiocraft is not installed.
 """
@@ -8,6 +8,8 @@ import logging
 import subprocess
 import wave as _wave_mod
 from pathlib import Path
+
+import llm_engines
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +27,7 @@ try:
 except ImportError:
     HAS_NUMPY = False
 
-# Fastest available Claude model — prompt generation is a 10-word task
+# Fastest available Claude model; prompt generation is a 10-word task.
 _HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
 
@@ -35,6 +37,7 @@ def generate_music(
     output_path: Path,
     model_name: str = "facebook/musicgen-small",
     fade_sec: float = 2.0,
+    bitrate: str = "192k",
 ) -> Path:
     """Generate music from a text prompt, apply fades, and save as MP3.
 
@@ -58,22 +61,26 @@ def generate_music(
     wav_path = output_path.with_suffix(".wav")
     wav_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # [batch, channels, samples] → [samples, channels] for soundfile
+    # [batch, channels, samples] -> [samples, channels] for soundfile
     wav_np = wav.squeeze(0).cpu().numpy().T
     _sf.write(str(wav_path), wav_np, sample_rate)
 
     mp3_path = output_path.with_suffix(".mp3")
     try:
         result = subprocess.run(
-            ["ffmpeg", "-y", "-i", str(wav_path), "-b:a", "128k", str(mp3_path)],
+            [
+                "ffmpeg", "-y", "-i", str(wav_path),
+                "-c:a", "libmp3lame", "-b:a", bitrate,
+                str(mp3_path),
+            ],
             capture_output=True,
             text=True,
             timeout=120,
         )
         if result.returncode != 0:
-            raise RuntimeError(f"ffmpeg WAV→MP3 conversion failed: {result.stderr[:300]}")
+            raise RuntimeError(f"ffmpeg WAV to MP3 conversion failed: {result.stderr[:300]}")
     finally:
-        # Always remove the intermediate WAV, even if ffmpeg is not installed or fails
+        # Always remove the intermediate WAV, even if ffmpeg is not installed or fails.
         wav_path.unlink(missing_ok=True)
 
     return mp3_path
@@ -83,8 +90,9 @@ def generate_music_numpy(
     duration_sec: int,
     output_path: Path,
     fade_sec: float = 2.0,
+    bitrate: str = "192k",
 ) -> Path:
-    """Generate a simple ambient pad using numpy — no GPU or audiocraft required.
+    """Generate a simple ambient pad using numpy; no GPU or audiocraft required.
 
     Layered Cmaj7 sine waves + slow LFO tremolo + optional scipy low-pass filter,
     written as a stereo 44100 Hz WAV then converted to MP3 via ffmpeg.
@@ -134,32 +142,52 @@ def generate_music_numpy(
     mp3_path = output_path.with_suffix(".mp3")
     try:
         result = subprocess.run(
-            ["ffmpeg", "-y", "-i", str(wav_path), "-b:a", "128k", str(mp3_path)],
+            [
+                "ffmpeg", "-y", "-i", str(wav_path),
+                "-c:a", "libmp3lame", "-b:a", bitrate,
+                str(mp3_path),
+            ],
             capture_output=True,
             text=True,
             timeout=120,
         )
         if result.returncode != 0:
-            raise RuntimeError(f"ffmpeg WAV→MP3 conversion failed: {result.stderr[:300]}")
+            raise RuntimeError(f"ffmpeg WAV to MP3 conversion failed: {result.stderr[:300]}")
     finally:
         wav_path.unlink(missing_ok=True)
 
     return mp3_path
 
 
-def get_music_prompt(topic: str, anthropic_client) -> str:
+def get_music_prompt(topic: str, anthropic_client, cfg: dict | None = None) -> str:
     """Ask Claude Haiku for a concise MusicGen-compatible prompt for the episode topic."""
+    cfg = cfg or {}
+    model = str(cfg.get("music_prompt_model") or _HAIKU_MODEL)
+    system = "Write compact MusicGen prompts for a thoughtful curiosity podcast."
+    content = (
+        f"Write a 10-15 word music generation prompt for a podcast episode about: {topic}\n"
+        "The music should feel curious, warm, intimate, and slightly cinematic.\n"
+        "Reply with ONLY the music description, no explanation, no quotes."
+    )
+    if llm_engines.is_local_model(model):
+        return llm_engines.generate_text(
+            model=model,
+            system=system,
+            content=content,
+            max_tokens=64,
+            cfg=cfg,
+            temperature=0.35,
+        ).strip()
+    if anthropic_client is None:
+        clean_topic = " ".join(str(topic).split())[:80]
+        return f"warm intimate curious cinematic texture for {clean_topic}"
     resp = anthropic_client.messages.create(
-        model=_HAIKU_MODEL,
+        model=model,
         max_tokens=64,
         messages=[
             {
                 "role": "user",
-                "content": (
-                    f"Write a 10-15 word music generation prompt for a podcast episode about: {topic}\n"
-                    "The music should feel curious, warm, and slightly cinematic — like Radiolab's theme.\n"
-                    "Reply with ONLY the music description, no explanation, no quotes."
-                ),
+                "content": content,
             }
         ],
     )
@@ -176,10 +204,9 @@ def generate_intro_outro(
 
     Tries MusicGen (audiocraft) first; falls back to the numpy ambient pad when
     audiocraft is not installed. Returns (intro_path, outro_path) or (None, None).
-    Cedar is credited as the composer of the show's theme music.
     """
     if not HAS_AUDIOCRAFT and not HAS_NUMPY:
-        logger.warning("Neither audiocraft nor numpy installed — skipping music generation")
+        logger.warning("Neither audiocraft nor numpy installed; skipping music generation")
         return None, None
 
     try:
@@ -187,10 +214,11 @@ def generate_intro_outro(
 
         duration = int(cfg.get("music_duration_sec", 12))
         fade_sec = float(cfg.get("music_fade_sec", 2.0))
+        bitrate = str(cfg.get("audio_bitrate", "192k"))
 
         if HAS_AUDIOCRAFT:
             try:
-                prompt = get_music_prompt(topic, anthropic_client)
+                prompt = get_music_prompt(topic, anthropic_client, cfg)
                 logger.info(f"Music prompt (MusicGen): {prompt!r}")
                 model_name = cfg.get("music_model", "facebook/musicgen-small")
                 intro_path = generate_music(
@@ -199,6 +227,7 @@ def generate_intro_outro(
                     output_path=work_dir / "intro_music.mp3",
                     model_name=model_name,
                     fade_sec=fade_sec,
+                    bitrate=bitrate,
                 )
                 outro_path = generate_music(
                     prompt=prompt,
@@ -206,6 +235,7 @@ def generate_intro_outro(
                     output_path=work_dir / "outro_music.mp3",
                     model_name=model_name,
                     fade_sec=fade_sec * 2.0,
+                    bitrate=bitrate,
                 )
                 logger.info(f"Intro music generated: {intro_path}")
                 logger.info(f"Outro music generated: {outro_path}")
@@ -214,22 +244,24 @@ def generate_intro_outro(
                 if HAS_NUMPY:
                     logger.warning(
                         f"MusicGen failed ({type(exc).__name__}: {exc!s:.120}) "
-                        "— falling back to numpy ambient pad"
+                        "- falling back to numpy ambient pad"
                     )
                 else:
                     raise
 
-        logger.info("audiocraft unavailable — using numpy ambient pad for music")
+        logger.info("audiocraft unavailable; using numpy ambient pad for music")
         intro_path = generate_music_numpy(
             duration_sec=duration,
             output_path=work_dir / "intro_music.mp3",
             fade_sec=fade_sec,
+            bitrate=bitrate,
         )
-        # Outro uses 2x fade duration for a more natural fade-to-silence ending
+        # Outro uses 2x fade duration for a more natural fade-to-silence ending.
         outro_path = generate_music_numpy(
             duration_sec=duration,
             output_path=work_dir / "outro_music.mp3",
             fade_sec=fade_sec * 2.0,
+            bitrate=bitrate,
         )
 
         logger.info(f"Intro music generated: {intro_path}")

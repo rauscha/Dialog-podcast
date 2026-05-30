@@ -235,6 +235,7 @@ def extract_clip(cue: ClipCue, work_dir: Path):
         "-t", str(duration + 2),
         "-af", f"afade=t=in:st=0:d=0.5,afade=t=out:st={duration + 1}:d=0.5",
         "-ar", "44100", "-ac", "2",
+        "-c:a", "libmp3lame", "-b:a", "192k",
         str(out_path),
     ]
     try:
@@ -299,7 +300,7 @@ def _ffmpeg_concat(parts: list, output: Path) -> None:
         cmd = [
             "ffmpeg", "-y", "-f", "concat", "-safe", "0",
             "-i", str(list_path),
-            "-ar", "44100", "-ac", "2", "-b:a", "128k",
+            "-ar", "44100", "-ac", "2", "-c:a", "libmp3lame", "-b:a", "192k",
             str(output),
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
