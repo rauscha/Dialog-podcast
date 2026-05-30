@@ -32,10 +32,15 @@ if ($procs) {
 
 Write-Log "DEAD    - bot process not found, restarting..."
 
-# Load API keys from User-level environment (not stored in .env)
-$env:ANTHROPIC_API_KEY  = [System.Environment]::GetEnvironmentVariable("ANTHROPIC_API_KEY",  "User")
-$env:OPENAI_API_KEY     = [System.Environment]::GetEnvironmentVariable("OPENAI_API_KEY",     "User")
-$env:ELEVENLABS_API_KEY = [System.Environment]::GetEnvironmentVariable("ELEVENLABS_API_KEY", "User")
+# Load API keys from User-level environment when present, without erasing
+# inherited process values. This lets scheduled runs use persistent keys while
+# preserving manually started sessions that already have secrets loaded.
+foreach ($keyName in @("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "ELEVENLABS_API_KEY")) {
+    $userValue = [System.Environment]::GetEnvironmentVariable($keyName, "User")
+    if ($userValue) {
+        Set-Item "Env:$keyName" $userValue
+    }
+}
 
 # Load bot-specific vars from .env (TELEGRAM_BOT_TOKEN, TELEGRAM_ALLOWED_USERS, etc.)
 $EnvFile = "C:\Dialog-podcast\.env"
