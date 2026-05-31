@@ -8,7 +8,7 @@
 
 ## Done this session
 - **Picked up clean**, then chose to test with a new episode instead of "fm synthesis": `--type deep_dive --guest` on "the history of barbecue competitions".
-- **Hit + fixed an auth failure.** First run died at the research step with `401 invalid x-api-key`. Root cause: on CRANE-DESK the LLM keys live in **Windows User-scope env**, and that `ANTHROPIC_API_KEY` had been **revoked/rotated** (well-formed, just rejected). User added a fresh key to `.env` (gitignored); validated with a 1-token call; re-ran clean. **OpenAI key was fine.**
+- **Hit + fixed an auth failure (root cause partially open).** First run died at the research step with `401 invalid x-api-key` — the run's process environment carried an *invalid* `ANTHROPIC_API_KEY` value (likely harness-injected; not fully root-caused). Fixed by adding a fresh valid key to `.env` (gitignored), which takes precedence; validated with a 1-token call and re-ran clean. **Correction: the Windows User-scope key is NOT revoked** — later tested in isolation and it authenticates fine. OpenAI key was fine too.
 - **Generated the episode** (exit 0): 1179 words, Cedar 13 / Marin 13 / guest 8 turns. Forced guest booked **Dr. Evelyn Cross — "Black Pitmaster Historian"** (voice *nova*), entering on the racial-erasure beats. Guest path works on paper.
 - **Published it** the way the pipeline normally does (direct to `main` — GitHub Pages serves the feed/MP3s from main): staged mp3 + feed.xml + `.chapters.json` + `.companion.json` + `host_memory.json`, committed, pushed, confirmed HTTP 200 + feed item live.
 
@@ -23,7 +23,7 @@
 4. **Turn-enumeration consolidation (step zero, still pending).** `_enumerate_turns` vs `_parse_dialogue_turns` can disagree; fix before more placement work.
 
 ## Watch out for
-- **Stale Anthropic key on CRANE-DESK.** The Windows **User-scope** `ANTHROPIC_API_KEY` is still the revoked one. Runs now work only because `.env` (gitignored) overrides it. If `.env` is ever cleared on this box it'll 401 again — fix the User-scope key with `setx` when convenient, or keep relying on `.env`.
+- **Two distinct, valid Anthropic keys on CRANE-DESK (both work).** `.env` (gitignored) holds the key this project uses; the Windows **User-scope** `ANTHROPIC_API_KEY` is a *different but also valid* key — verified by direct auth test 2026-05-30 (NOT revoked; the earlier in-session assumption was wrong). This project has **no `.env` auto-load** (no `load_dotenv`), so the User-scope key is likely what authenticates the Telegram bot / other projects when `.env` isn't sourced. **Decision (user, 2026-05-30): leave it in place** — don't delete without checking what depends on it.
 - **This was a TEST episode but it's now PUBLIC.** It used `--guest` (forced) and shipped to the live feed. If you don't want a barbecue episode in the public feed long-term, remove the `<item>` from `feed.xml` + delete the MP3 and re-push. Left as-is for now so he can listen on his phone.
 - `host_memory.json` was committed this session (pipeline normally leaves it uncommitted). Minor deviation; keeps the tree clean and the show-memory in sync, but watch for JSON merge conflicts if the laptop also updates it.
 - Standing carryovers (unchanged): work-dir cleanup re-enable 2026-06-06; Telegram token rotation (not urgent, git clean); cosmetic mangled commit msg on `2baddfc`; clips stay OFF / cues are the focus (decision from last session holds).
