@@ -1,0 +1,37 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "Cold Open - The Gilded Box**"
+    },
+    {
+      "startTime": 49.18,
+      "title": "The Chamberlen Secret**"
+    },
+    {
+      "startTime": 98.35,
+      "title": "The Rickets Connection**"
+    },
+    {
+      "startTime": 147.53,
+      "title": "William Smellie and the Standardization of Forceps**"
+    },
+    {
+      "startTime": 196.71,
+      "title": "The Death of Princess Charlotte**"
+    },
+    {
+      "startTime": 245.89,
+      "title": "The Decline of Forceps in the 21st Century**"
+    },
+    {
+      "startTime": 295.06,
+      "title": "Ethical Questions and the Legacy of Forceps**"
+    },
+    {
+      "startTime": 344.24,
+      "title": "Reflective Ending - Who Decides?**"
+    }
+  ],
+  "version": "1.2.0"
+}
