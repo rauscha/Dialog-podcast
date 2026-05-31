@@ -1,6 +1,7 @@
 .env
 APIS.txt
 episodes/*_work/
+episodes/tts_comparison/_work/
 logs/
 .runtime/
 learning_paths/

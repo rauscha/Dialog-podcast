@@ -122,6 +122,14 @@ DEFAULTS: dict = {
     "elevenlabs_model":     "eleven_turbo_v2",
     "elevenlabs_stability": 0.5,
     "elevenlabs_similarity_boost": 0.75,
+    "fish_audio_voice_id_a": "",
+    "fish_audio_voice_id_b": "",
+    "fish_audio_guest_voice_ids": "",
+    "fish_audio_model":     "s2-pro",
+    "fish_audio_mp3_bitrate": 192,
+    "fish_audio_temperature": 0.7,
+    "fish_audio_top_p":     0.7,
+    "fish_audio_latency":   "normal",
     "target_minutes":       15,
     "output_dir":           "episodes",
     "episode_type":         "deep_dive",
@@ -200,6 +208,7 @@ _INT_CONFIG_KEYS = {
     "audio_channels",
     "audio_highpass_hz",
     "audio_lowpass_hz",
+    "fish_audio_mp3_bitrate",
 }
 _FLOAT_CONFIG_KEYS = {
     "music_fade_sec",
@@ -209,6 +218,8 @@ _FLOAT_CONFIG_KEYS = {
     "audio_lra",
     "elevenlabs_stability",
     "elevenlabs_similarity_boost",
+    "fish_audio_temperature",
+    "fish_audio_top_p",
 }
 _JSON_CONFIG_KEYS = {
     "tts_default_route",
@@ -2088,6 +2099,17 @@ def _legacy_tts_route_for_label(label: str, cfg: dict, guest_index: int = 0) -> 
                 "similarity_boost": cfg.get("elevenlabs_similarity_boost"),
             }
         )
+    elif provider == "fish_audio":
+        route.update(
+            {
+                "reference_id": _fish_audio_voice_for_label(label, cfg, guest_index),
+                "model": cfg.get("fish_audio_model"),
+                "mp3_bitrate": cfg.get("fish_audio_mp3_bitrate"),
+                "temperature": cfg.get("fish_audio_temperature"),
+                "top_p": cfg.get("fish_audio_top_p"),
+                "latency": cfg.get("fish_audio_latency"),
+            }
+        )
     elif provider == "command":
         route.update({"voice": _voice_for_label(label, cfg), "command": cfg.get("tts_command")})
     return _clean_tts_route(route)
@@ -2119,6 +2141,20 @@ def _tts_route_for_label(label: str, cfg: dict, guest_index: int = 0) -> dict:
         route.setdefault("model", cfg.get("elevenlabs_model"))
         route.setdefault("stability", cfg.get("elevenlabs_stability"))
         route.setdefault("similarity_boost", cfg.get("elevenlabs_similarity_boost"))
+    elif provider == "fish_audio":
+        # Accept reference_id / voice_id / voice from explicit routes; normalize to reference_id.
+        if route.get("voice") and not route.get("reference_id"):
+            route["reference_id"] = route["voice"]
+        if route.get("voice_id") and not route.get("reference_id"):
+            route["reference_id"] = route["voice_id"]
+        route.pop("voice", None)
+        route.pop("voice_id", None)
+        route.setdefault("reference_id", _fish_audio_voice_for_label(label, cfg, guest_index))
+        route.setdefault("model", cfg.get("fish_audio_model"))
+        route.setdefault("mp3_bitrate", cfg.get("fish_audio_mp3_bitrate"))
+        route.setdefault("temperature", cfg.get("fish_audio_temperature"))
+        route.setdefault("top_p", cfg.get("fish_audio_top_p"))
+        route.setdefault("latency", cfg.get("fish_audio_latency"))
     elif provider == "command":
         route.setdefault("voice", _voice_for_label(label, cfg))
         route.setdefault("command", cfg.get("tts_command"))
@@ -2135,6 +2171,9 @@ def _public_tts_route(route: dict) -> dict:
     if "voice_id" in public and public.get("provider") == "elevenlabs":
         voice_id = str(public["voice_id"])
         public["voice_id"] = f"{voice_id[:4]}...{voice_id[-4:]}" if len(voice_id) > 10 else "set"
+    if "reference_id" in public and public.get("provider") == "fish_audio":
+        ref_id = str(public["reference_id"])
+        public["reference_id"] = f"{ref_id[:4]}...{ref_id[-4:]}" if len(ref_id) > 10 else "set"
     return public
 
 
@@ -2167,6 +2206,22 @@ def _elevenlabs_voice_for_label(label: str, cfg: dict, guest_index: int = 0) -> 
     if guest_voice_ids:
         return guest_voice_ids[guest_index % len(guest_voice_ids)]
     return str(cfg.get("elevenlabs_voice_id_b") or cfg.get("elevenlabs_voice_id_a") or "")
+
+
+def _fish_audio_voice_for_label(label: str, cfg: dict, guest_index: int = 0) -> str:
+    host_a = cfg.get("host_a_name", "Cedar").upper()
+    host_b = cfg.get("host_b_name", "Marin").upper()
+    if label in {host_a, "CEDAR"}:
+        return str(cfg.get("fish_audio_voice_id_a", ""))
+    if label in {host_b, "MARIN"}:
+        return str(cfg.get("fish_audio_voice_id_b", ""))
+    guest = _guest_for_label(label, cfg)
+    if guest and guest.get("fish_audio_voice_id"):
+        return str(guest["fish_audio_voice_id"])
+    guest_voice_ids = _csv_list(cfg.get("fish_audio_guest_voice_ids"))
+    if guest_voice_ids:
+        return guest_voice_ids[guest_index % len(guest_voice_ids)]
+    return str(cfg.get("fish_audio_voice_id_b") or cfg.get("fish_audio_voice_id_a") or "")
 
 
 def _emotion_default_for_label(label: str, cfg: dict) -> str:

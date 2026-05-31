@@ -35,7 +35,7 @@ except ImportError:
     req_lib = None  # type: ignore[assignment]
     HAS_REQUESTS = False
 
-SUPPORTED_TTS_PROVIDERS = {"openai", "elevenlabs", "command"}
+SUPPORTED_TTS_PROVIDERS = {"openai", "elevenlabs", "fish_audio", "command"}
 
 
 def clean_for_tts(text: str) -> str:
@@ -146,6 +146,13 @@ def synthesize_tts(
         )
     if provider == "elevenlabs":
         return synthesize_elevenlabs(
+            text=text,
+            output_path=output_path,
+            route=route,
+            cfg=cfg,
+        )
+    if provider == "fish_audio":
+        return synthesize_fish_audio(
             text=text,
             output_path=output_path,
             route=route,
@@ -282,6 +289,92 @@ def synthesize_elevenlabs(
 
     if not chunk_paths:
         raise RuntimeError("No ElevenLabs audio generated")
+    if len(chunk_paths) == 1:
+        chunk_paths[0].replace(output_path)
+    else:
+        ffmpeg_concat_configured(chunk_paths, output_path, cfg)
+        for path in chunk_paths:
+            path.unlink(missing_ok=True)
+    return output_path
+
+
+def synthesize_fish_audio(
+    *,
+    text: str,
+    output_path: Path,
+    route: dict[str, Any],
+    cfg: dict[str, Any],
+) -> Path:
+    """Fish Audio HTTP TTS — POST https://api.fish.audio/v1/tts.
+
+    Voice is selected via `reference_id`. Model version (`s1` or `s2-pro`) is
+    passed via the `model` HTTP header, NOT the JSON body. Response streams
+    raw audio bytes in the requested format (mp3 by default).
+    """
+    if not HAS_REQUESTS or req_lib is None:
+        raise ImportError("requests package not installed.")
+    api_key_env = str(route.get("api_key_env") or "FISH_AUDIO_API_KEY")
+    api_key = os.environ.get(api_key_env, "")
+    if not api_key:
+        raise ValueError(f"{api_key_env} is not set.")
+    reference_id = str(
+        route.get("reference_id") or route.get("voice_id") or route.get("voice") or ""
+    ).strip()
+    if not reference_id:
+        raise ValueError("Fish Audio TTS route is missing reference_id.")
+
+    output_path = output_path.with_suffix(".mp3")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    # Fish Audio's documented max chunk_length is 300 chars; we chunk at the
+    # text level too so very long turns don't hit per-request limits.
+    chunks = chunk_text(clean_for_tts(text), max_chars=int(route.get("max_chars", 2000)))
+    model = str(route.get("model") or cfg.get("fish_audio_model") or "s2-pro")
+    mp3_bitrate = int(route.get("mp3_bitrate") or cfg.get("fish_audio_mp3_bitrate") or 192)
+    temperature = float(route.get("temperature", cfg.get("fish_audio_temperature", 0.7)))
+    top_p = float(route.get("top_p", cfg.get("fish_audio_top_p", 0.7)))
+    latency = str(route.get("latency") or cfg.get("fish_audio_latency") or "normal")
+
+    url = "https://api.fish.audio/v1/tts"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "model": model,
+    }
+    chunk_paths: list[Path] = []
+
+    for idx, chunk in enumerate(chunks):
+        if not chunk.strip():
+            continue
+        payload: dict[str, Any] = {
+            "text": chunk,
+            "reference_id": reference_id,
+            "format": "mp3",
+            "mp3_bitrate": mp3_bitrate,
+            "temperature": temperature,
+            "top_p": top_p,
+            "latency": latency,
+            "normalize": True,
+        }
+        prosody = route.get("prosody")
+        if isinstance(prosody, dict):
+            payload["prosody"] = prosody
+        response = req_lib.post(
+            url,
+            json=payload,
+            headers=headers,
+            timeout=int(route.get("timeout_sec", cfg.get("tts_request_timeout_sec", 180))),
+            stream=False,
+        )
+        if response.status_code != 200:
+            raise RuntimeError(
+                f"Fish Audio TTS failed ({response.status_code}): {response.text[:500]}"
+            )
+        chunk_path = output_path.with_stem(f"{output_path.stem}_fish_{idx}")
+        chunk_path.write_bytes(response.content)
+        chunk_paths.append(chunk_path)
+
+    if not chunk_paths:
+        raise RuntimeError("No Fish Audio audio generated")
     if len(chunk_paths) == 1:
         chunk_paths[0].replace(output_path)
     else:
