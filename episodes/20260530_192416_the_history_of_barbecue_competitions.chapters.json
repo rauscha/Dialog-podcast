@@ -1,0 +1,37 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "The Parking Lot and the Porn Theater"
+    },
+    {
+      "startTime": 47.06,
+      "title": "The First Lady of BBQ"
+    },
+    {
+      "startTime": 94.13,
+      "title": "The Chili Connection"
+    },
+    {
+      "startTime": 141.19,
+      "title": "The Kansas City Barbeque Society"
+    },
+    {
+      "startTime": 188.26,
+      "title": "The Erasure"
+    },
+    {
+      "startTime": 235.32,
+      "title": "The One-Bite Problem"
+    },
+    {
+      "startTime": 282.38,
+      "title": "The Affectionate Disagreement"
+    },
+    {
+      "startTime": 329.45,
+      "title": "The Open Questions"
+    }
+  ],
+  "version": "1.2.0"
+}

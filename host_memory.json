@@ -17,6 +17,15 @@
       "run_id": "20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d",
       "topic": "how do I build a classic chiptune sound, first from a sound design perspective, then from a music theory perspective, this should be an example-heavy episode",
       "usable_callback": "the use of arpeggiation as a technique to simulate chords in chiptune, and its historical roots in Martin Galway's work on the Commodore 64"
+    },
+    {
+      "cedar_noticed": "the erasure of Black pitmasters in the origin story of barbecue competitions and the tension between tradition and spectacle",
+      "created_at": "2026-05-31T00:30:16.641436+00:00",
+      "marin_challenged": "the commercialization and institutionalization of barbecue competitions, and the question of whether they can honor their roots while evolving",
+      "relationship_moment": "Cedar's realization that the competition scene has a complex racial history, and Marin's confirmation that the issue is systemic and structural",
+      "run_id": "20260530_192416_the_history_of_barbecue_competitions",
+      "topic": "the history of barbecue competitions",
+      "usable_callback": "the 1895 Cotton States Exposition and the erasure of Black labor in the barbecue served there"
     }
   ],
   "hosts": {
@@ -80,7 +89,12 @@
     "this is how it works",
     "you have to remember",
     "it's all about",
-    "this is the way"
+    "this is the way",
+    "the thing about institutional change",
+    "the thing about barbecue",
+    "the thing about competition barbecue",
+    "the real question lies",
+    "the unresolved question"
   ],
   "relationship": {
     "chemistry": "Cedar pulls Marin toward meaning; Marin pulls Cedar toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -141,6 +155,45 @@
         "sound design"
       ],
       "why_keep": "This memory highlights a key technique in chiptune composition and its origins, which is crucial for understanding the genre's musical theory and creative approach."
+    },
+    {
+      "created_at": "2026-05-31T00:30:16.641436+00:00",
+      "id": "20260530_192416_the_history_of_barbecue_competitions_01",
+      "summary": "The origin of the Memphis in May World Championship Barbecue Cooking Contest in a parking lot, its connection to chili cookoffs, and the exclusion of Black pitmasters from the competition scene's narrative",
+      "tags": [
+        "Memphis in May",
+        "barbecue competitions",
+        "racial history",
+        "chili cookoffs",
+        "Black pitmasters"
+      ],
+      "why_keep": "This memory captures the foundational tension between tradition and spectacle in barbecue competitions and the racial erasure that shaped the scene."
+    },
+    {
+      "created_at": "2026-05-31T00:30:16.641436+00:00",
+      "id": "20260530_192416_the_history_of_barbecue_competitions_02",
+      "summary": "The 1895 Cotton States Exposition in Atlanta, where the barbecue served was attributed to a white sheriff while the Black labor behind it went unacknowledged, highlighting a pattern of erasure",
+      "tags": [
+        "Cotton States Exposition",
+        "racial erasure",
+        "barbecue history",
+        "Black labor",
+        "institutional exclusion"
+      ],
+      "why_keep": "This memory is essential for understanding the systemic exclusion of Black pitmasters and the institutional roots of the competition scene's racial history."
+    },
+    {
+      "created_at": "2026-05-31T00:30:16.641436+00:00",
+      "id": "20260530_192416_the_history_of_barbecue_competitions_03",
+      "summary": "The Kansas City Barbeque Society's founding in 1985 and its eventual financial distress, illustrating the tension between the competition scene's growth and its institutional challenges",
+      "tags": [
+        "Kansas City Barbeque Society",
+        "institutional change",
+        "competition scene",
+        "financial distress",
+        "barbecue history"
+      ],
+      "why_keep": "This memory highlights the paradox of the competition scene's success and its eventual institutional struggles, which is crucial for understanding its evolution."
     }
   ],
   "show": {
@@ -153,5 +206,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-05-29T21:31:46.629478+00:00"
+  "updated_at": "2026-05-31T00:30:16.642037+00:00"
 }

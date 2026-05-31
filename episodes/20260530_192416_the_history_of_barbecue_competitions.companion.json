@@ -1,0 +1,323 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260530_192416_the_history_of_barbecue_competitions.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "The Parking Lot and the Porn Theater"
+    },
+    {
+      "start_sec": 47.06,
+      "start_time": "0:47",
+      "title": "The First Lady of BBQ"
+    },
+    {
+      "start_sec": 94.13,
+      "start_time": "1:34",
+      "title": "The Chili Connection"
+    },
+    {
+      "start_sec": 141.19,
+      "start_time": "2:21",
+      "title": "The Kansas City Barbeque Society"
+    },
+    {
+      "start_sec": 188.26,
+      "start_time": "3:08",
+      "title": "The Erasure"
+    },
+    {
+      "start_sec": 235.32,
+      "start_time": "3:55",
+      "title": "The One-Bite Problem"
+    },
+    {
+      "start_sec": 282.38,
+      "start_time": "4:42",
+      "title": "The Affectionate Disagreement"
+    },
+    {
+      "start_sec": 329.45,
+      "start_time": "5:29",
+      "title": "The Open Questions"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260530_192416_the_history_of_barbecue_competitions.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260530_192416_the_history_of_barbecue_competitions.companion.json",
+  "duration_sec": 421.511723,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "Foundational source tracing competitions from the 1959 Kaiser Foil Cookoff in Hawaii through the 1972 World Championship Cow Country BBQ Cookout in Texas. Establishes that modern BBQ competitions were modeled on chili cookoffs.",
+      "source": "AmazingRibs.com",
+      "title": "The History Of Barbecue Competitions",
+      "url": "https://amazingribs.com/barbecue-history-and-culture/history-barbecue-competitions/"
+    },
+    {
+      "reason": "Documents the 1978 founding of the World Championship Barbecue Cooking Contest with 26 teams, Bessie Louise Cathey's $500 win on a $12 entry fee, and growth to 250+ teams from 20+ states.",
+      "source": "Wikipedia",
+      "title": "Memphis in May - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Memphis_in_May"
+    },
+    {
+      "reason": "Details KCBS founding in 1985 by Carolyn and Gary Wells and Rick Welch, growth to 15,000+ members, and the 2020 organizational turmoil including declining membership and financial distress.",
+      "source": "Wikipedia",
+      "title": "Kansas City Barbeque Society - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kansas_City_Barbeque_Society"
+    },
+    {
+      "reason": "Investigative piece revealing KCBS's $3 million headquarters sale, CEO departure after 7 months, board resignations, and declining contest participation\u2014the institutional crisis of competitive BBQ.",
+      "source": "KCUR (NPR Kansas City)",
+      "title": "Beloved Kansas City Barbeque Society In Turmoil, Financial Distress, Losing Members",
+      "url": "https://www.kcur.org/news/2020-01-06/beloved-kansas-city-barbeque-society-in-turmoil-financial-distress-losing-members"
+    },
+    {
+      "reason": "Documents the erasure of Black labor from barbecue history, including the 1895 Cotton States Exposition where Black chefs' work was credited to white Sheriff John Callaway.",
+      "source": "Atlanta History Center Blog",
+      "title": "From Pit to Plate: How We Became a Barbecue Nation",
+      "url": "https://www.atlantahistorycenter.com/blog/from-pit-to-plate-a-brief-history-of-american-barbecue/"
+    },
+    {
+      "reason": "Profile of 'Remus Powers,' who founded the Diddy-Wa-Diddy sauce contest in his backyard in 1984, wrote the KCBS judges' oath, and co-created the Certified BBQ Judge curriculum.",
+      "source": "Wikipedia",
+      "title": "Ardie Davis - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ardie_Davis"
+    },
+    {
+      "reason": "Reports that only 5 of 36 Barbecue Hall of Fame inductees are Black, and documents Texas Monthly's admission that brisket-centric judging excluded Black establishments.",
+      "source": "HuffPost",
+      "title": "These Black Pitmasters Are Hustling To Preserve Barbecue's Roots",
+      "url": "https://www.huffpost.com/entry/black-pitmasters-barbecue_l_5d0a5ed1e4b0e560b70d2cf2"
+    },
+    {
+      "reason": "Reveals that Bessie Lou Cathey's 'secret sauce' was store-bought Hyde Park brand, and that judge Audrey Gonzalez still measures all entries against Cathey's 1978 ribs.",
+      "source": "Memphis Magazine",
+      "title": "A Tale of Two Teams",
+      "url": "https://memphismagazine.com/features/a-tale-of-two-teams/"
+    }
+  ],
+  "generated_at": "2026-05-31T00:33:35.582221+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Avoid making overly emotional statements without historical backing",
+        "Do not claim to speak for all Black pitmasters",
+        "Avoid suggesting that competition barbecue is entirely irredeemable"
+      ],
+      "credential_frame": "A scholar and activist who has spent two decades documenting the overlooked contributions of Black pitmasters to American barbecue traditions.",
+      "delivery_baseline": "Speak with measured intensity, as if delivering a lecture but with a personal stake in the subject.",
+      "display_name": "Dr. Evelyn Cross",
+      "expertise": "Explaining the systemic erasure of Black culinary influence in competitive barbecue and the broader implications for cultural preservation and institutional accountability.",
+      "field": "Cultural History and Culinary Justice",
+      "label": "BLACK PITMASTER HISTORIAN",
+      "personality": "Thoughtful, incisive, and passionate about reclaiming marginalized histories. Speaks with a calm but firm tone, often challenging assumptions with historical evidence.",
+      "role_in_episode": "Provides context for the racial erasure in the competition circuit, deepens the discussion on inclusivity, and offers a critical lens on the fragility of the institutions that govern the sport.",
+      "synthetic": true,
+      "voice": "nova"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "The first barbecue cooking competition was the Kaiser Foil Cookoff in 1959 in Hawaii, just months after statehood, with a $10,000 grand prize and a 'For Men Only' format.",
+      "confidence": "high",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Modern barbecue competitions were modeled on chili cookoffs, the first of which was held at the 1952 State Fair of Texas in Dallas.",
+      "confidence": "high",
+      "id": "C2",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "The Memphis in May World Championship Barbecue Cooking Contest began in 1978 with 26 teams competing for $1,000 in prize money in a parking lot next to the Orpheum Theatre.",
+      "confidence": "high",
+      "id": "C3",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Bessie Louise Cathey, a Memphis homemaker, won the first Memphis in May competition with a $500 prize on a $12 entry fee\u2014and her 'secret' sauce was store-bought Hyde Park brand.",
+      "confidence": "high",
+      "id": "C4",
+      "source_ids": [
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "claim": "The Kansas City Barbeque Society was founded in 1985 by Carolyn and Gary Wells and Rick Welch, and grew to become the largest competitive barbecue organization in the world with over 15,000 members.",
+      "confidence": "high",
+      "id": "C5",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "The American Royal Barbecue Contest began in 1980 and by 1998 became 'The World's Largest Barbecue' with 340+ competing teams.",
+      "confidence": "high",
+      "id": "C6",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "By 2020, KCBS was in financial distress, selling its $3 million headquarters, with its CEO departing after only 7 months and board members resigning amid turmoil.",
+      "confidence": "high",
+      "id": "C7",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "Of 36 Barbecue Hall of Fame inductees, only 5 are Black, despite barbecue's origins in Black and Indigenous American culinary traditions.",
+      "confidence": "high",
+      "id": "C8",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "Competition barbecue is fundamentally different from restaurant or backyard barbecue\u2014optimized for one bite rather than a full meal, often sweeter and more intensely flavored.",
+      "confidence": "high",
+      "id": "C9",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Ardie Davis (aka Remus Powers) founded the Diddy-Wa-Diddy National Barbecue Sauce Contest in his backyard in 1984, which became the American Royal International BBQ Sauce Contest.",
+      "confidence": "high",
+      "id": "C10",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "The Jack Daniel's World Championship Invitational Barbecue has been held in Lynchburg, Tennessee for over 30 years, drawing 40,000+ visitors and teams from around the world.",
+      "confidence": "high",
+      "id": "C11",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "The competition circuit became 'virtually all white' as many Black pitmasters pulled out because events felt 'too much about money and big sponsors and too little about good pork.'",
+      "confidence": "medium-high",
+      "id": "C12",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Meathead Goldwyn",
+      "id": "S1",
+      "publication": "AmazingRibs.com",
+      "title": "The History Of Barbecue Competitions",
+      "url": "https://amazingribs.com/barbecue-history-and-culture/history-barbecue-competitions/",
+      "why_it_matters": "Foundational source tracing competitions from the 1959 Kaiser Foil Cookoff in Hawaii through the 1972 World Championship Cow Country BBQ Cookout in Texas. Establishes that modern BBQ competitions were modeled on chili cookoffs.",
+      "year": "2025"
+    },
+    {
+      "author": "Wikipedia contributors",
+      "id": "S2",
+      "publication": "Wikipedia",
+      "title": "Memphis in May - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Memphis_in_May",
+      "why_it_matters": "Documents the 1978 founding of the World Championship Barbecue Cooking Contest with 26 teams, Bessie Louise Cathey's $500 win on a $12 entry fee, and growth to 250+ teams from 20+ states.",
+      "year": "2026"
+    },
+    {
+      "author": "Wikipedia contributors",
+      "id": "S3",
+      "publication": "Wikipedia",
+      "title": "Kansas City Barbeque Society - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kansas_City_Barbeque_Society",
+      "why_it_matters": "Details KCBS founding in 1985 by Carolyn and Gary Wells and Rick Welch, growth to 15,000+ members, and the 2020 organizational turmoil including declining membership and financial distress.",
+      "year": "2025"
+    },
+    {
+      "author": "KCUR Staff",
+      "id": "S4",
+      "publication": "KCUR (NPR Kansas City)",
+      "title": "Beloved Kansas City Barbeque Society In Turmoil, Financial Distress, Losing Members",
+      "url": "https://www.kcur.org/news/2020-01-06/beloved-kansas-city-barbeque-society-in-turmoil-financial-distress-losing-members",
+      "why_it_matters": "Investigative piece revealing KCBS's $3 million headquarters sale, CEO departure after 7 months, board resignations, and declining contest participation\u2014the institutional crisis of competitive BBQ.",
+      "year": "2020"
+    },
+    {
+      "author": "Atlanta History Center",
+      "id": "S5",
+      "publication": "Atlanta History Center Blog",
+      "title": "From Pit to Plate: How We Became a Barbecue Nation",
+      "url": "https://www.atlantahistorycenter.com/blog/from-pit-to-plate-a-brief-history-of-american-barbecue/",
+      "why_it_matters": "Documents the erasure of Black labor from barbecue history, including the 1895 Cotton States Exposition where Black chefs' work was credited to white Sheriff John Callaway.",
+      "year": "2025"
+    },
+    {
+      "author": "Wikipedia contributors",
+      "id": "S6",
+      "publication": "Wikipedia",
+      "title": "Ardie Davis - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ardie_Davis",
+      "why_it_matters": "Profile of 'Remus Powers,' who founded the Diddy-Wa-Diddy sauce contest in his backyard in 1984, wrote the KCBS judges' oath, and co-created the Certified BBQ Judge curriculum.",
+      "year": "2025"
+    },
+    {
+      "author": "HuffPost Staff",
+      "id": "S7",
+      "publication": "HuffPost",
+      "title": "These Black Pitmasters Are Hustling To Preserve Barbecue's Roots",
+      "url": "https://www.huffpost.com/entry/black-pitmasters-barbecue_l_5d0a5ed1e4b0e560b70d2cf2",
+      "why_it_matters": "Reports that only 5 of 36 Barbecue Hall of Fame inductees are Black, and documents Texas Monthly's admission that brisket-centric judging excluded Black establishments.",
+      "year": "2021"
+    },
+    {
+      "author": "Memphis Magazine",
+      "id": "S8",
+      "publication": "Memphis Magazine",
+      "title": "A Tale of Two Teams",
+      "url": "https://memphismagazine.com/features/a-tale-of-two-teams/",
+      "why_it_matters": "Reveals that Bessie Lou Cathey's 'secret sauce' was store-bought Hyde Park brand, and that judge Audrey Gonzalez still measures all entries against Cathey's 1978 ribs.",
+      "year": "2017"
+    }
+  ],
+  "sources": [
+    "The History Of Barbecue Competitions - AmazingRibs.com - 2025 (https://amazingribs.com/barbecue-history-and-culture/history-barbecue-competitions/)",
+    "Memphis in May - Wikipedia - Wikipedia - 2026 (https://en.wikipedia.org/wiki/Memphis_in_May)",
+    "Kansas City Barbeque Society - Wikipedia - Wikipedia - 2025 (https://en.wikipedia.org/wiki/Kansas_City_Barbeque_Society)",
+    "Beloved Kansas City Barbeque Society In Turmoil, Financial Distress, Losing Members - KCUR (NPR Kansas City) - 2020 (https://www.kcur.org/news/2020-01-06/beloved-kansas-city-barbeque-society-in-turmoil-financial-distress-losing-members)",
+    "From Pit to Plate: How We Became a Barbecue Nation - Atlanta History Center Blog - 2025 (https://www.atlantahistorycenter.com/blog/from-pit-to-plate-a-brief-history-of-american-barbecue/)",
+    "Ardie Davis - Wikipedia - Wikipedia - 2025 (https://en.wikipedia.org/wiki/Ardie_Davis)",
+    "These Black Pitmasters Are Hustling To Preserve Barbecue's Roots - HuffPost - 2021 (https://www.huffpost.com/entry/black-pitmasters-barbecue_l_5d0a5ed1e4b0e560b70d2cf2)",
+    "A Tale of Two Teams - Memphis Magazine - 2017 (https://memphismagazine.com/features/a-tale-of-two-teams/)"
+  ],
+  "topic": "the history of barbecue competitions",
+  "tts_routes": {
+    "BLACK PITMASTER HISTORIAN": {
+      "model": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "voice": "nova"
+    },
+    "CEDAR": {
+      "model": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "voice": "marin"
+    },
+    "MARIN": {
+      "model": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "voice": "cedar"
+    }
+  },
+  "word_count": 1179
+}
