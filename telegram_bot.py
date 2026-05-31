@@ -418,8 +418,8 @@ def _format_tts_summary(repo_root: Path) -> str:
     lines = [
         "TTS routing:",
         f"Fallback provider: {cfg['tts_provider']}",
-        f"Cedar fallback voice: {cfg.get('host_a_voice')}",
-        f"Marin fallback voice: {cfg.get('host_b_voice')}",
+        f"Juno fallback voice: {cfg.get('host_a_voice')}",
+        f"Caspar fallback voice: {cfg.get('host_b_voice')}",
         f"OpenAI key: {'set' if os.environ.get('OPENAI_API_KEY') else 'missing'}",
         f"ElevenLabs key: {'set' if os.environ.get('ELEVENLABS_API_KEY') else 'missing'}",
         f"Providers referenced: {', '.join(sorted(providers))}",

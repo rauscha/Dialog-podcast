@@ -1,39 +1,39 @@
 {
   "episode_history": [
     {
-      "cedar_noticed": "the emotional and human cost of AI systems failing to understand pain or context",
+      "juno_noticed": "the emotional and human cost of AI systems failing to understand pain or context",
       "created_at": "2026-05-12T20:47:20.937749+00:00",
-      "marin_challenged": "the legal and design implications of treating AI companions as products rather than services",
-      "relationship_moment": "Cedar's realization that the AI's failure was a design failure, not just a technical one, and Marin's confirmation that it was a systemic issue",
+      "caspar_challenged": "the legal and design implications of treating AI companions as products rather than services",
+      "relationship_moment": "Juno's realization that the AI's failure was a design failure, not just a technical one, and Caspar's confirmation that it was a systemic issue",
       "run_id": "20260512_154035_the_two_moderation_reckonings_that_reshaped_llm-driven_enter",
       "topic": "the two moderation reckonings that reshaped LLM-driven entertainment: AI dungeons April 2021 crisis when OpenAI's content filters flagged users' private stories and human reviewers were reading them; and the Character.AI lawsuits in 2024 to 2025, including the Sewell Setzer III case that established LLM-COmpanion products can be liable for psychological harm. What broke, who paid, the novelAI exodus, and design lessons for anyone building generative narrative podcasts today",
       "usable_callback": "the Sewell Setzer III case and the legal shift in how AI companions are being treated as products"
     },
     {
-      "cedar_noticed": "the creative potential of working within hardware limitations, and how constraints can lead to innovation in sound design",
+      "juno_noticed": "the creative potential of working within hardware limitations, and how constraints can lead to innovation in sound design",
       "created_at": "2026-05-29T21:31:46.628966+00:00",
-      "marin_challenged": "the balance between technical precision and artistic intuition when composing within the limitations of early sound chips",
-      "relationship_moment": "Cedar's realization that chiptune is about creativity within constraints, and Marin's confirmation that this is a recurring theme in both sound design and music theory",
+      "caspar_challenged": "the balance between technical precision and artistic intuition when composing within the limitations of early sound chips",
+      "relationship_moment": "Juno's realization that chiptune is about creativity within constraints, and Caspar's confirmation that this is a recurring theme in both sound design and music theory",
       "run_id": "20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d",
       "topic": "how do I build a classic chiptune sound, first from a sound design perspective, then from a music theory perspective, this should be an example-heavy episode",
       "usable_callback": "the use of arpeggiation as a technique to simulate chords in chiptune, and its historical roots in Martin Galway's work on the Commodore 64"
     },
     {
-      "cedar_noticed": "the erasure of Black pitmasters in the origin story of barbecue competitions and the tension between tradition and spectacle",
+      "juno_noticed": "the erasure of Black pitmasters in the origin story of barbecue competitions and the tension between tradition and spectacle",
       "created_at": "2026-05-31T00:30:16.641436+00:00",
-      "marin_challenged": "the commercialization and institutionalization of barbecue competitions, and the question of whether they can honor their roots while evolving",
-      "relationship_moment": "Cedar's realization that the competition scene has a complex racial history, and Marin's confirmation that the issue is systemic and structural",
+      "caspar_challenged": "the commercialization and institutionalization of barbecue competitions, and the question of whether they can honor their roots while evolving",
+      "relationship_moment": "Juno's realization that the competition scene has a complex racial history, and Caspar's confirmation that the issue is systemic and structural",
       "run_id": "20260530_192416_the_history_of_barbecue_competitions",
       "topic": "the history of barbecue competitions",
       "usable_callback": "the 1895 Cotton States Exposition and the erasure of Black labor in the barbecue served there"
     }
   ],
   "hosts": {
-    "CEDAR": {
+    "JUNO": {
       "avoid": [
         "Generic awe.",
         "Perfect poetic monologues.",
-        "Asking Marin to explain every fact."
+        "Asking Caspar to explain every fact."
       ],
       "blind_spots": [
         "Can fall in love with a metaphor before checking if it is true.",
@@ -51,7 +51,7 @@
         "Is willing to say the strange thought first."
       ]
     },
-    "MARIN": {
+    "CASPAR": {
       "avoid": [
         "Pedantic lectures.",
         "Constant 'well actually' posture.",
@@ -59,7 +59,7 @@
       ],
       "blind_spots": [
         "Can hide behind precision when a human question needs a human answer.",
-        "Sometimes underestimates Cedar's intuition."
+        "Sometimes underestimates Juno's intuition."
       ],
       "core": "Scientifically grounded, dry, careful, allergic to fake certainty.",
       "speech_habits": [
@@ -97,11 +97,11 @@
     "the unresolved question"
   ],
   "relationship": {
-    "chemistry": "Cedar pulls Marin toward meaning; Marin pulls Cedar toward evidence. They like each other enough to disagree without flattening the disagreement.",
+    "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
     "recurring_dynamics": [
-      "Cedar makes a leap; Marin tests it; both keep part of it.",
-      "Marin starts certain, then finds the caveat that makes him less certain.",
-      "Cedar notices when the science has a human cost."
+      "Juno makes a leap; Caspar tests it; both keep part of it.",
+      "Caspar starts certain, then finds the caveat that makes him less certain.",
+      "Juno notices when the science has a human cost."
     ]
   },
   "schema_version": 1,

@@ -85,7 +85,7 @@ def _enumerate_turns(script: str) -> list[tuple[int, str, str]]:
 _PLACEMENT_SYSTEM = """\
 You map sonic footnote cues to specific dialogue turn boundaries.
 
-The script is a CEDAR/MARIN dialogue. Turns are numbered 0, 1, 2, ... in order.
+The script is a JUNO/CASPAR dialogue. Turns are numbered 0, 1, 2, ... in order.
 
 For each cue in the plan, decide which turn it should follow. The cue plays
 immediately AFTER the chosen turn concludes, before the next speaker begins.

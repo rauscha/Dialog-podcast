@@ -1,24 +1,26 @@
 #!/usr/bin/env python3
-"""Triple TTS comparison driver — OpenAI vs ElevenLabs vs Fish Audio.
+"""TTS comparison driver — OpenAI vs ElevenLabs vs Cartesia.
 
-Renders the SAME short Cedar/Marin script through each provider so you can
+Renders the SAME short Juno/Caspar script through each provider so you can
 A/B/C the voice quality back-to-back. No research, no script generation, no
-music, no git push. Just three MP3s side-by-side.
+music, no git push. Just the MP3s side-by-side.
 
-Outputs to `episodes/tts_comparison/{openai,elevenlabs,fish_audio}.mp3`.
+Outputs to `episodes/tts_comparison/{openai,elevenlabs,cartesia}.mp3`.
 
 Voice IDs are read from config.json — set `elevenlabs_voice_id_a/_b` and
-`fish_audio_voice_id_a/_b` before running, or override by env:
-    CEDAR_OPENAI_VOICE, MARIN_OPENAI_VOICE
-    CEDAR_ELEVENLABS_VOICE, MARIN_ELEVENLABS_VOICE
-    CEDAR_FISH_VOICE, MARIN_FISH_VOICE
+`cartesia_voice_id_a/_b` before running, or override by env (handy for trying
+candidate voices without editing config):
+    JUNO_OPENAI_VOICE, CASPAR_OPENAI_VOICE
+    JUNO_ELEVENLABS_VOICE, CASPAR_ELEVENLABS_VOICE
+    JUNO_CARTESIA_VOICE, CASPAR_CARTESIA_VOICE
 
 A provider is skipped (with a clear message) if its key or voices are missing,
 so you can iterate one provider at a time.
 
 Usage:
-    python compare_tts.py                       # all three
-    python compare_tts.py openai elevenlabs     # subset
+    python compare_tts.py                       # all available
+    python compare_tts.py cartesia              # just one
+    python compare_tts.py elevenlabs cartesia   # subset
 """
 
 from __future__ import annotations
@@ -57,40 +59,40 @@ import tts_engines  # noqa: E402 — env must be loaded first
 # ---------------------------------------------------------------------------
 SCRIPT: list[tuple[str, str, str]] = [
     (
-        "CEDAR",
+        "JUNO",
         "warm, curious",
         "So I want to start with a number that genuinely stopped me cold. "
         "In 1977, the Voyager Golden Record was launched with 116 images, "
         "55 greetings, and one song by Chuck Berry.",
     ),
     (
-        "MARIN",
+        "CASPAR",
         "amused, dry",
         "And that's the part everyone remembers — Johnny B. Goode flying out "
         "of the solar system at seventeen kilometers per second. But the "
         "selection committee almost cut it. Carl Sagan had to fight for it.",
     ),
     (
-        "CEDAR",
+        "JUNO",
         "delighted",
         "Wait, why? Was it the lyrics?",
     ),
     (
-        "MARIN",
+        "CASPAR",
         "thoughtful",
         "Partly. Some members thought rock and roll was, quote, 'adolescent.' "
         "Sagan's response was that adolescence is one of the more interesting "
         "things humans do, and we shouldn't hide it from anyone listening.",
     ),
     (
-        "CEDAR",
+        "JUNO",
         "quiet, reflective",
         "There's something kind of beautiful about that. The first thing an "
         "alien civilization might hear from us — we picked the music we were "
         "slightly embarrassed by.",
     ),
     (
-        "MARIN",
+        "CASPAR",
         "agreeing",
         "Right. And it's still going. Voyager 1 crossed into interstellar "
         "space in 2012. That record is the longest-running radio broadcast "
@@ -111,8 +113,8 @@ def _build_route(provider: str, label: str, cfg: dict) -> dict | None:
     if provider == "openai":
         voice = (
             os.environ.get(f"{label}_OPENAI_VOICE")
-            or (cfg.get("host_a_voice") if label == "CEDAR" else cfg.get("host_b_voice"))
-            or ("marin" if label == "CEDAR" else "cedar")
+            or (cfg.get("host_a_voice") if label == "JUNO" else cfg.get("host_b_voice"))
+            or ("marin" if label == "JUNO" else "cedar")
         )
         return {
             "provider": "openai",
@@ -122,7 +124,7 @@ def _build_route(provider: str, label: str, cfg: dict) -> dict | None:
         }
     if provider == "elevenlabs":
         voice_id = os.environ.get(f"{label}_ELEVENLABS_VOICE") or (
-            cfg.get("elevenlabs_voice_id_a") if label == "CEDAR"
+            cfg.get("elevenlabs_voice_id_a") if label == "JUNO"
             else cfg.get("elevenlabs_voice_id_b")
         )
         if not voice_id:
@@ -134,21 +136,22 @@ def _build_route(provider: str, label: str, cfg: dict) -> dict | None:
             "stability": float(cfg.get("elevenlabs_stability", 0.5)),
             "similarity_boost": float(cfg.get("elevenlabs_similarity_boost", 0.75)),
         }
-    if provider == "fish_audio":
-        ref_id = os.environ.get(f"{label}_FISH_VOICE") or (
-            cfg.get("fish_audio_voice_id_a") if label == "CEDAR"
-            else cfg.get("fish_audio_voice_id_b")
+    if provider == "cartesia":
+        voice_id = os.environ.get(f"{label}_CARTESIA_VOICE") or (
+            cfg.get("cartesia_voice_id_a") if label == "JUNO"
+            else cfg.get("cartesia_voice_id_b")
         )
-        if not ref_id:
+        if not voice_id:
             return None
         return {
-            "provider": "fish_audio",
-            "reference_id": ref_id,
-            "model": cfg.get("fish_audio_model") or "s2-pro",
-            "mp3_bitrate": int(cfg.get("fish_audio_mp3_bitrate", 192)),
-            "temperature": float(cfg.get("fish_audio_temperature", 0.7)),
-            "top_p": float(cfg.get("fish_audio_top_p", 0.7)),
-            "latency": cfg.get("fish_audio_latency") or "normal",
+            "provider": "cartesia",
+            "voice_id": voice_id,
+            "model": cfg.get("cartesia_model") or "sonic-3.5",
+            "version": cfg.get("cartesia_version") or "2026-03-01",
+            "sample_rate": int(cfg.get("cartesia_sample_rate", 44100)),
+            "bit_rate": int(cfg.get("cartesia_bit_rate", 192000)),
+            "language": cfg.get("cartesia_language") or "en",
+            "speed": float(cfg.get("cartesia_speed", 1.0)),
         }
     raise ValueError(f"unknown provider: {provider}")
 
@@ -156,7 +159,7 @@ def _build_route(provider: str, label: str, cfg: dict) -> dict | None:
 _KEY_ENVS = {
     "openai": "OPENAI_API_KEY",
     "elevenlabs": "ELEVENLABS_API_KEY",
-    "fish_audio": "FISH_AUDIO_API_KEY",
+    "cartesia": "CARTESIA_API_KEY",
 }
 
 
@@ -165,7 +168,7 @@ def _missing_prereqs(provider: str, cfg: dict) -> list[str]:
     key_env = _KEY_ENVS[provider]
     if not os.environ.get(key_env):
         missing.append(f"env {key_env}")
-    for label in ("CEDAR", "MARIN"):
+    for label in ("JUNO", "CASPAR"):
         if _build_route(provider, label, cfg) is None:
             missing.append(f"{label} voice id")
     return missing
@@ -206,7 +209,11 @@ def render_provider(
 
 def main() -> int:
     cfg = _load_cfg()
-    requested = [a.lower() for a in sys.argv[1:]] or ["openai", "elevenlabs", "fish_audio"]
+    requested = [a.lower() for a in sys.argv[1:]] or [
+        "openai",
+        "elevenlabs",
+        "cartesia",
+    ]
     unknown = [p for p in requested if p not in _KEY_ENVS]
     if unknown:
         print(f"Unknown provider(s): {unknown}. Valid: {list(_KEY_ENVS)}")

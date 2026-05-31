@@ -45,7 +45,7 @@ _DEFAULTS = {
 
 _LEARNING_PATH_SYSTEM = """\
 You are the curriculum producer for "Asynchronous", a source-grounded two-host
-audio learning show hosted by Cedar and Marin.
+audio learning show hosted by Juno and Caspar.
 
 Create a 3-8 episode mini-course from the user's topic. The output must be JSON
 only. No Markdown fence, no commentary.

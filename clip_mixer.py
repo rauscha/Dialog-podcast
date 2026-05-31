@@ -57,7 +57,7 @@ class ExtractedClip:
 _CUE_SYSTEM = """\
 You are a podcast producer enriching an Asynchronous episode with illustrative audio clips.
 
-The script is a two-host dialogue between Cedar and Marin. Your job: insert
+The script is a two-host dialogue between Juno and Caspar. Your job: insert
 CLIP_CUE blocks at 2-4 natural moments where a real audio excerpt would
 illustrate a point or add texture.
 
@@ -70,8 +70,8 @@ For each cue, output a JSON block at the insertion point:
   "context": "what this clip illustrates in 1 sentence",
   "timestamp_hint": "0:00",
   "duration_sec": 20,
-  "intro_text": "CEDAR: Oh wait — let's actually hear this in her own words.",
-  "outro_text": "MARIN: And that's exactly what the data confirmed."
+  "intro_text": "JUNO: Oh wait — let's actually hear this in her own words.",
+  "outro_text": "CASPAR: And that's exactly what the data confirmed."
 }
 CLIP_CUE>>>
 
@@ -79,7 +79,7 @@ Rules:
 - Maximum 4 cues, minimum 2
 - duration_sec must be 10-28 (never 30+)
 - intro_text and outro_text MUST be attributed to a host with a speaker label:
-  "CEDAR: ..." or "MARIN: ..." — use whichever fits the conversational flow
+  "JUNO: ..." or "CASPAR: ..." — use whichever fits the conversational flow
 - search_query must be specific enough to find the right video
 - Space cues out — not back to back
 - Return the FULL script with cue blocks inserted inline
@@ -325,7 +325,7 @@ def assemble_with_clips(
     """Interleave narration TTS segments with extracted clips.
 
     two_host_tts_fn: if provided, used for intro/outro text that may carry
-    CEDAR:/MARIN: speaker labels; falls back to tts_fn if None.
+    JUNO:/CASPAR: speaker labels; falls back to tts_fn if None.
     """
     label_aware_fn = two_host_tts_fn if two_host_tts_fn is not None else tts_fn
 

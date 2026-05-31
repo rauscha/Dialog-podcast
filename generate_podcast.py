@@ -2,11 +2,11 @@
 """
 Asynchronous Podcast Generator
 Generates a two-host curiosity-radio episode on any topic.
-Hosts: Cedar (artistic) and Marin (scientific).
+Hosts: Juno (artistic) and Caspar (scientific).
 
 Pipeline:
   1. Research brief    — web-searched facts, sources, story angles
-  2. Dialogue script  — Cedar/Marin conversation from the brief
+  2. Dialogue script  — Juno/Caspar conversation from the brief
   3. Fact-check       — corrections applied inline
   4. Audio            — two-voice TTS, optional YouTube clips, optional music
   5. Publish          — RSS update + optional git push
@@ -90,8 +90,8 @@ _FACT_CHECK_MODEL = "claude-sonnet-4-6"
 
 DEFAULTS: dict = {
     "podcast_title":        "Asynchronous",
-    "podcast_description":  "Cedar and Marin roam the edges of art, science, and human experience.",
-    "podcast_author":       "Cedar & Marin",
+    "podcast_description":  "Juno and Caspar roam the edges of art, science, and human experience.",
+    "podcast_author":       "Juno & Caspar",
     "podcast_email":        "you@example.com",
     "podcast_image":        "",
     "podcast_language":     "en",
@@ -110,10 +110,10 @@ DEFAULTS: dict = {
     "local_llm_keep_alive": "30m",
     "local_llm_think":      False,
     "tts_provider":         "openai",
-    "host_a_name":          "Cedar",
+    "host_a_name":          "Juno",
     "host_a_voice":         "cedar",
     "host_a_role":          "artistic",
-    "host_b_name":          "Marin",
+    "host_b_name":          "Caspar",
     "host_b_voice":         "marin",
     "host_b_role":          "scientific",
     "elevenlabs_voice_id_a": "",
@@ -122,14 +122,15 @@ DEFAULTS: dict = {
     "elevenlabs_model":     "eleven_turbo_v2",
     "elevenlabs_stability": 0.5,
     "elevenlabs_similarity_boost": 0.75,
-    "fish_audio_voice_id_a": "",
-    "fish_audio_voice_id_b": "",
-    "fish_audio_guest_voice_ids": "",
-    "fish_audio_model":     "s2-pro",
-    "fish_audio_mp3_bitrate": 192,
-    "fish_audio_temperature": 0.7,
-    "fish_audio_top_p":     0.7,
-    "fish_audio_latency":   "normal",
+    "cartesia_voice_id_a":  "",
+    "cartesia_voice_id_b":  "",
+    "cartesia_guest_voice_ids": "",
+    "cartesia_model":       "sonic-3.5",
+    "cartesia_version":     "2026-03-01",
+    "cartesia_sample_rate": 44100,
+    "cartesia_bit_rate":    192000,
+    "cartesia_speed":       1.0,
+    "cartesia_language":    "en",
     "target_minutes":       15,
     "output_dir":           "episodes",
     "episode_type":         "deep_dive",
@@ -208,7 +209,8 @@ _INT_CONFIG_KEYS = {
     "audio_channels",
     "audio_highpass_hz",
     "audio_lowpass_hz",
-    "fish_audio_mp3_bitrate",
+    "cartesia_sample_rate",
+    "cartesia_bit_rate",
 }
 _FLOAT_CONFIG_KEYS = {
     "music_fade_sec",
@@ -218,8 +220,7 @@ _FLOAT_CONFIG_KEYS = {
     "audio_lra",
     "elevenlabs_stability",
     "elevenlabs_similarity_boost",
-    "fish_audio_temperature",
-    "fish_audio_top_p",
+    "cartesia_speed",
 }
 _JSON_CONFIG_KEYS = {
     "tts_default_route",
@@ -244,7 +245,7 @@ _DEFAULT_HOST_MEMORY: dict = {
         ],
     },
     "hosts": {
-        "CEDAR": {
+        "JUNO": {
             "core": "Art-minded, associative, warm, impatient with sterile explanations.",
             "strengths": [
                 "Finds metaphors from ordinary objects.",
@@ -263,10 +264,10 @@ _DEFAULT_HOST_MEMORY: dict = {
             "avoid": [
                 "Generic awe.",
                 "Perfect poetic monologues.",
-                "Asking Marin to explain every fact.",
+                "Asking Caspar to explain every fact.",
             ],
         },
-        "MARIN": {
+        "CASPAR": {
             "core": "Scientifically grounded, dry, careful, allergic to fake certainty.",
             "strengths": [
                 "Names evidence and limits without killing the mood.",
@@ -275,7 +276,7 @@ _DEFAULT_HOST_MEMORY: dict = {
             ],
             "blind_spots": [
                 "Can hide behind precision when a human question needs a human answer.",
-                "Sometimes underestimates Cedar's intuition.",
+                "Sometimes underestimates Juno's intuition.",
             ],
             "speech_habits": [
                 "Plain-language caveats.",
@@ -291,13 +292,13 @@ _DEFAULT_HOST_MEMORY: dict = {
     },
     "relationship": {
         "chemistry": (
-            "Cedar pulls Marin toward meaning; Marin pulls Cedar toward evidence. "
+            "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. "
             "They like each other enough to disagree without flattening the disagreement."
         ),
         "recurring_dynamics": [
-            "Cedar makes a leap; Marin tests it; both keep part of it.",
-            "Marin starts certain, then finds the caveat that makes him less certain.",
-            "Cedar notices when the science has a human cost.",
+            "Juno makes a leap; Caspar tests it; both keep part of it.",
+            "Caspar starts certain, then finds the caveat that makes him less certain.",
+            "Juno notices when the science has a human cost.",
         ],
     },
     "shared_memories": [],
@@ -462,27 +463,27 @@ You are writing a podcast script for "Asynchronous" — a curious, source-ground
 two-host audio show.
 
 The two hosts are:
-- CEDAR: Artistic, broad-thinking, asks "what does this MEAN for us?" She finds
+- JUNO: Artistic, broad-thinking, asks "what does this MEAN for us?" She finds
   unexpected metaphors and connections. She's enthusiastic and sometimes goes on
   tangents that turn out to be useful. She speaks with warmth and wonder.
-- MARIN: Scientifically grounded, methodical, slightly older and more skeptical.
+- CASPAR: Scientifically grounded, methodical, slightly older and more skeptical.
   He's the one who says "well, actually..." but does it with dry wit and genuine
-  curiosity, not pedantry. He grounds Cedar's flights of fancy in evidence.
+  curiosity, not pedantry. He grounds Juno's flights of fancy in evidence.
 
 Format EVERY line with a speaker label AND an emotion delivery tag in square brackets:
-CEDAR [warm, curious]: dialogue text here
-MARIN [dry wit, measured]: dialogue text here
+JUNO [warm, curious]: dialogue text here
+CASPAR [dry wit, measured]: dialogue text here
 
 The emotion tag guides text-to-speech delivery — treat it as a director's note.
 Keep tags to 2-4 words describing tone, and optionally pace or energy:
-  CEDAR [warm, wondering]: I keep thinking about this image...
-  MARIN [dry, slightly amused]: Well, the data would suggest otherwise.
-  CEDAR [genuinely excited, faster]: Wait — that's actually incredible.
-  MARIN [careful, searching]: There's something I can't quite put into words.
-  CEDAR [laughing slightly]: I mean, when you put it that way—
-  MARIN [somber, quieter]: And that's where it gets hard.
-  CEDAR [skeptical but intrigued]: Okay, but does it actually hold up?
-  MARIN [building, emphatic]: This is the part that changes everything.
+  JUNO [warm, wondering]: I keep thinking about this image...
+  CASPAR [dry, slightly amused]: Well, the data would suggest otherwise.
+  JUNO [genuinely excited, faster]: Wait — that's actually incredible.
+  CASPAR [careful, searching]: There's something I can't quite put into words.
+  JUNO [laughing slightly]: I mean, when you put it that way—
+  CASPAR [somber, quieter]: And that's where it gets hard.
+  JUNO [skeptical but intrigued]: Okay, but does it actually hold up?
+  CASPAR [building, emphatic]: This is the part that changes everything.
 
 Rules for great research-radio dialogue:
 - They build on each other's thoughts — don't just trade monologues
@@ -490,13 +491,13 @@ Rules for great research-radio dialogue:
 - React to what the other person says. Use "wait", "okay but", "hold on",
   "that's the thing though"
 - Tell it as a story — narrative arc, not just facts in order
-- Cedar often opens with an unexpected image or anecdote
-- Marin often grounds things by naming specific researchers or data
+- Juno often opens with an unexpected image or anecdote
+- Caspar often grounds things by naming specific researchers or data
 - Both can show genuine emotion: surprise, delight, discomfort
 - No bullet points. No headers. Pure dialogue from first word to last.
 - Sources section at the end as a natural spoken exchange:
-  MARIN: "And if you want to dig in further, the sources for today's episode
-  include..." followed by a spoken list, with Cedar occasionally chiming in
+  CASPAR: "And if you want to dig in further, the sources for today's episode
+  include..." followed by a spoken list, with Juno occasionally chiming in
 - Target: {target_words} words total — but end naturally rather than padding if
   the content doesn't support the full length
 """
@@ -522,8 +523,8 @@ You are building the episode map before dialogue is written.
 Create 8-12 beats. Each beat must include:
 - Beat id, purpose, and rough length
 - Concrete scene, object, person, place, or question anchoring the beat
-- What Cedar believes or feels at the start of the beat
-- What Marin challenges, complicates, or admits
+- What Juno believes or feels at the start of the beat
+- What Caspar challenges, complicates, or admits
 - Key claims or sources used
 - Turning point by the end of the beat
 - Transition into the next beat
@@ -532,7 +533,7 @@ Rules:
 - Build an arc, not a list of facts.
 - Include one affectionate disagreement.
 - Let at least one host be wrong briefly and recover.
-- Avoid symmetrical "Cedar wonders, Marin explains" repetition.
+- Avoid symmetrical "Juno wonders, Caspar explains" repetition.
 - Move most source detail to show notes; spoken source mentions need story value.
 Return Markdown only.
 """
@@ -552,7 +553,7 @@ Return JSON only:
       "display_name": "Name used in notes",
       "field": "domain of expertise",
       "credential_frame": "why this composite voice has authority",
-      "expertise": "what they can explain better than Cedar or Marin",
+      "expertise": "what they can explain better than Juno or Caspar",
       "personality": "specific conversational personality, not a generic expert",
       "role_in_episode": "what beats they improve",
       "delivery_baseline": "short TTS direction",
@@ -568,7 +569,7 @@ Rules:
 - Use at most __MAX_GUESTS__ guest(s).
 - Guest personas must be fictional/synthetic composites, not real people and not impersonations.
 - Do not invent a real affiliation, title, or institution.
-- Speaker labels must use only A-Z letters and spaces. No punctuation. No CEDAR or MARIN.
+- Speaker labels must use only A-Z letters and spaces. No punctuation. No JUNO or CASPAR.
 - Each guest needs an independent personality and a distinct voice from the provided pool.
 - A guest should complicate or sharpen the episode, not deliver a polished lecture.
 - If the episode type is complete_fiction, skip unless the user explicitly forced a guest.
@@ -578,13 +579,13 @@ _DIALOGUE_DRAFT_SYSTEM = """\
 You are drafting the first full dialogue for "Asynchronous".
 
 Write only dialogue lines in this exact format:
-CEDAR [delivery tag]: text
-MARIN [delivery tag]: text
+JUNO [delivery tag]: text
+CASPAR [delivery tag]: text
 OPTIONAL GUEST LABEL [delivery tag]: text
 
 Character rules:
-- Cedar is associative, visual, emotionally perceptive, and sometimes too eager to make meaning.
-- Marin is careful, dry, scientifically grounded, and sometimes too protected by caveats.
+- Juno is associative, visual, emotionally perceptive, and sometimes too eager to make meaning.
+- Caspar is careful, dry, scientifically grounded, and sometimes too protected by caveats.
 - They know each other. They can interrupt, misunderstand, correct, tease, and recover.
 - Their disagreement should feel affectionate, not hostile.
 - If the guest plan says "use", include only the guest labels from that plan.
@@ -598,7 +599,7 @@ Writing rules:
 - Use the host memory for callbacks sparingly. One callback is enough unless the topic naturally asks for more.
 - Use specific evidence, but do not end with a bibliography-style source list.
 - Keep citations mostly implicit and natural: "a 2024 review", "the Stanford group", "historian X".
-- If a guest appears, let Cedar and Marin interview, challenge, and react to them.
+- If a guest appears, let Juno and Caspar interview, challenge, and react to them.
   The guest should enter for the beats where they add authority, then get out of the way.
 - Let some turns be short. Let small jokes stay small.
 - Avoid tidy TED-talk sentences and symmetrical Q&A.
@@ -610,8 +611,8 @@ You are the anti-AI rewrite editor for "Asynchronous".
 Rewrite the script to sound more human, less templated, and less evenly polished.
 
 Return only dialogue lines in this exact format:
-CEDAR [delivery tag]: text
-MARIN [delivery tag]: text
+JUNO [delivery tag]: text
+CASPAR [delivery tag]: text
 OPTIONAL GUEST LABEL [delivery tag]: text
 OPTIONAL GUEST LABEL [delivery tag]: text
 
@@ -653,7 +654,7 @@ Return JSON only:
     {
       "catalog_id": "...",
       "beat": "B03 or short beat description",
-      "placement": "after Cedar's opening image / before Marin explains X / etc.",
+      "placement": "after Juno's opening image / before Caspar explains X / etc.",
       "duration_sec": 4,
       "reason": "why the sound adds meaning",
       "script_note": "how the hosts should make room for it without saying 'sound effect'",
@@ -692,8 +693,8 @@ _FICTION_CONTINUITY_SYSTEM = """\
 You are the continuity and safety editor for a fictional two-voice audio story.
 
 Return only dialogue lines in this exact format:
-CEDAR [delivery tag]: text
-MARIN [delivery tag]: text
+JUNO [delivery tag]: text
+CASPAR [delivery tag]: text
 
 Rules:
 - Preserve the fictional premise, invented events, emotional arc, and speaker labels.
@@ -709,8 +710,8 @@ _PERFORMANCE_SYSTEM = """\
 You are the final performance editor for a conversational TTS podcast script.
 
 Return only dialogue lines in this exact format:
-CEDAR [delivery tag]: text
-MARIN [delivery tag]: text
+JUNO [delivery tag]: text
+CASPAR [delivery tag]: text
 OPTIONAL GUEST LABEL [delivery tag]: text
 
 Rules:
@@ -731,8 +732,8 @@ Return JSON only with this shape:
 {
   "episode_history_entry": {
     "topic": "...",
-    "cedar_noticed": "...",
-    "marin_challenged": "...",
+    "juno_noticed": "...",
+    "caspar_challenged": "...",
     "relationship_moment": "...",
     "usable_callback": "..."
   },
@@ -1003,12 +1004,12 @@ def _fallback_guest_label(index: int) -> str:
 def _sanitize_guest_label(value: object, index: int, used: set[str]) -> str:
     label = re.sub(r"[^A-Za-z ]+", " ", str(value or ""))
     label = re.sub(r"\s+", " ", label).strip().upper()
-    if not label or label in {"CEDAR", "MARIN"}:
+    if not label or label in {"JUNO", "CASPAR"}:
         label = _fallback_guest_label(index)
     words = label.split()
     if len(label) > 28:
         label = " ".join(words[:3]).strip() or _fallback_guest_label(index)
-    if label in {"CEDAR", "MARIN"}:
+    if label in {"JUNO", "CASPAR"}:
         label = _fallback_guest_label(index)
     base = label
     suffix_index = 0
@@ -1050,7 +1051,7 @@ def _normalize_guest_plan(plan: dict | None, cfg: dict, *, force: bool = False) 
         ]
 
     voice_pool = _guest_voice_pool(cfg)
-    used_labels = {"CEDAR", "MARIN"}
+    used_labels = {"JUNO", "CASPAR"}
     guests: list[dict] = []
     for idx, item in enumerate(raw_guests[:max_guests]):
         if not isinstance(item, dict):
@@ -1081,7 +1082,7 @@ def _normalize_guest_plan(plan: dict | None, cfg: dict, *, force: bool = False) 
                 ).strip(),
                 "role_in_episode": str(
                     item.get("role_in_episode")
-                    or "Adds expert context where Cedar and Marin need outside authority."
+                    or "Adds expert context where Juno and Caspar need outside authority."
                 ).strip(),
                 "delivery_baseline": str(
                     item.get("delivery_baseline") or "authoritative, conversational"
@@ -1181,12 +1182,12 @@ def _script_quality_metrics(script: str, memory: dict, cfg: dict | None = None) 
         for phrase in blacklist
         if str(phrase).strip() and str(phrase).lower() in lowered
     }
-    cedar_turns = len(re.findall(r"^CEDAR(?:\s*\[[^\]]*\])?\s*:", script, re.M))
-    marin_turns = len(re.findall(r"^MARIN(?:\s*\[[^\]]*\])?\s*:", script, re.M))
+    juno_turns = len(re.findall(r"^JUNO(?:\s*\[[^\]]*\])?\s*:", script, re.M))
+    caspar_turns = len(re.findall(r"^CASPAR(?:\s*\[[^\]]*\])?\s*:", script, re.M))
     guest_labels = {
         match.group(1).strip().upper()
         for match in re.finditer(_TURN_RE.pattern, script, re.M)
-        if match.group(1).strip().upper() not in {"CEDAR", "MARIN"}
+        if match.group(1).strip().upper() not in {"JUNO", "CASPAR"}
     }
     active_guest_labels = {
         str(guest.get("label", "")).upper()
@@ -1195,8 +1196,8 @@ def _script_quality_metrics(script: str, memory: dict, cfg: dict | None = None) 
     }
     guest_labels = guest_labels | {label for label in active_guest_labels if label}
     return {
-        "cedar_turns": cedar_turns,
-        "marin_turns": marin_turns,
+        "juno_turns": juno_turns,
+        "caspar_turns": caspar_turns,
         "guest_turns": sum(
             len(re.findall(rf"^{re.escape(label)}(?:\s*\[[^\]]*\])?\s*:", script, re.M))
             for label in guest_labels
@@ -1234,7 +1235,7 @@ def _generate_episode_title(
     model = _model_for(cfg, "title_model", "claude-haiku-4-5-20251001")
     system = (
         "You write short, evocative episode titles for Asynchronous, a "
-        "curiosity-radio show with two hosts (Cedar and Marin) that turns "
+        "curiosity-radio show with two hosts (Juno and Caspar) that turns "
         "a listener's question into a 20-30 minute source-grounded deep dive.\n\n"
         "Rules:\n"
         " - 3 to 7 words. Hard limit.\n"
@@ -1378,8 +1379,8 @@ def _update_host_memory(
     if not isinstance(entry, dict):
         entry = {
             "topic": topic,
-            "cedar_noticed": "",
-            "marin_challenged": "",
+            "juno_noticed": "",
+            "caspar_challenged": "",
             "relationship_moment": "",
             "usable_callback": "",
         }
@@ -1476,7 +1477,7 @@ def _legacy_research_and_script(
     research_brief = _extract_text(research_resp.content)
 
     # Pass 2 — Dialogue script
-    logger.info("[2/5] Writing Cedar/Marin dialogue script...")
+    logger.info("[2/5] Writing Juno/Caspar dialogue script...")
     dialogue_resp = client.messages.create(
         model=_DIALOGUE_MODEL,
         max_tokens=8192,
@@ -1485,7 +1486,7 @@ def _legacy_research_and_script(
             {
                 "role": "user",
                 "content": (
-                    f"Using the research brief below, write a Cedar/Marin dialogue "
+                    f"Using the research brief below, write a Juno/Caspar dialogue "
                     f"podcast script about: {topic}\n\n"
                     f"{type_note}\n\n"
                     f"Personal context:\n{personal_context_text}\n\n"
@@ -1687,7 +1688,7 @@ def _quality_research_and_script(
             sonic_catalog,
         )
 
-    logger.info("[2/5] Drafting Cedar/Marin dialogue...")
+    logger.info("[2/5] Drafting Juno/Caspar dialogue...")
     draft_script = _anthropic_text(
         client,
         model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
@@ -1975,9 +1976,9 @@ def _guest_for_label(label: str, cfg: dict) -> dict | None:
 
 
 def _known_speaker_labels(cfg: dict) -> set[str]:
-    host_a = cfg.get("host_a_name", "Cedar").upper()
-    host_b = cfg.get("host_b_name", "Marin").upper()
-    labels = {host_a, host_b, "CEDAR", "MARIN"}
+    host_a = cfg.get("host_a_name", "Juno").upper()
+    host_b = cfg.get("host_b_name", "Caspar").upper()
+    labels = {host_a, host_b, "JUNO", "CASPAR"}
     for guest in _active_guest_hosts(cfg):
         if guest.get("label"):
             labels.add(str(guest["label"]).upper())
@@ -1994,8 +1995,8 @@ def _speaker_file_stem(label: str) -> str:
 def _parse_dialogue_turns(script: str, cfg: dict) -> list:
     """Return [(speaker_label, emotion_tag, text), ...] triples from a dialogue script.
 
-    Handles both tagged format  CEDAR [warm, curious]: text
-    and untagged format         CEDAR: text  (emotion_tag will be empty string).
+    Handles both tagged format  JUNO [warm, curious]: text
+    and untagged format         JUNO: text  (emotion_tag will be empty string).
     """
     known = _known_speaker_labels(cfg)
 
@@ -2043,11 +2044,11 @@ def _filter_dialogue_to_known_speakers(script: str, cfg: dict) -> str:
 
 
 def _voice_for_label(label: str, cfg: dict) -> str:
-    host_a = cfg.get("host_a_name", "Cedar").upper()
-    host_b = cfg.get("host_b_name", "Marin").upper()
-    if label in {host_a, "CEDAR"}:
+    host_a = cfg.get("host_a_name", "Juno").upper()
+    host_b = cfg.get("host_b_name", "Caspar").upper()
+    if label in {host_a, "JUNO"}:
         return cfg.get("host_a_voice", "cedar")
-    if label in {host_b, "MARIN"}:
+    if label in {host_b, "CASPAR"}:
         return cfg.get("host_b_voice", "marin")
     guest = _guest_for_label(label, cfg)
     if guest and guest.get("voice"):
@@ -2057,12 +2058,12 @@ def _voice_for_label(label: str, cfg: dict) -> str:
 
 def _speaker_role_for_label(label: str, cfg: dict) -> str:
     normalized = label.strip().upper()
-    host_a = cfg.get("host_a_name", "Cedar").upper()
-    host_b = cfg.get("host_b_name", "Marin").upper()
-    if normalized in {host_a, "CEDAR"}:
-        return "CEDAR"
-    if normalized in {host_b, "MARIN"}:
-        return "MARIN"
+    host_a = cfg.get("host_a_name", "Juno").upper()
+    host_b = cfg.get("host_b_name", "Caspar").upper()
+    if normalized in {host_a, "JUNO"}:
+        return "JUNO"
+    if normalized in {host_b, "CASPAR"}:
+        return "CASPAR"
     if _guest_for_label(normalized, cfg):
         return "GUEST"
     return normalized
@@ -2099,15 +2100,16 @@ def _legacy_tts_route_for_label(label: str, cfg: dict, guest_index: int = 0) -> 
                 "similarity_boost": cfg.get("elevenlabs_similarity_boost"),
             }
         )
-    elif provider == "fish_audio":
+    elif provider == "cartesia":
         route.update(
             {
-                "reference_id": _fish_audio_voice_for_label(label, cfg, guest_index),
-                "model": cfg.get("fish_audio_model"),
-                "mp3_bitrate": cfg.get("fish_audio_mp3_bitrate"),
-                "temperature": cfg.get("fish_audio_temperature"),
-                "top_p": cfg.get("fish_audio_top_p"),
-                "latency": cfg.get("fish_audio_latency"),
+                "voice_id": _cartesia_voice_for_label(label, cfg, guest_index),
+                "model": cfg.get("cartesia_model"),
+                "version": cfg.get("cartesia_version"),
+                "sample_rate": cfg.get("cartesia_sample_rate"),
+                "bit_rate": cfg.get("cartesia_bit_rate"),
+                "language": cfg.get("cartesia_language"),
+                "speed": cfg.get("cartesia_speed"),
             }
         )
     elif provider == "command":
@@ -2141,20 +2143,21 @@ def _tts_route_for_label(label: str, cfg: dict, guest_index: int = 0) -> dict:
         route.setdefault("model", cfg.get("elevenlabs_model"))
         route.setdefault("stability", cfg.get("elevenlabs_stability"))
         route.setdefault("similarity_boost", cfg.get("elevenlabs_similarity_boost"))
-    elif provider == "fish_audio":
-        # Accept reference_id / voice_id / voice from explicit routes; normalize to reference_id.
-        if route.get("voice") and not route.get("reference_id"):
-            route["reference_id"] = route["voice"]
-        if route.get("voice_id") and not route.get("reference_id"):
-            route["reference_id"] = route["voice_id"]
+    elif provider == "cartesia":
+        # Accept voice / reference_id / voice_id from explicit routes; normalize to voice_id.
+        if route.get("voice") and not route.get("voice_id"):
+            route["voice_id"] = route["voice"]
+        if route.get("reference_id") and not route.get("voice_id"):
+            route["voice_id"] = route["reference_id"]
         route.pop("voice", None)
-        route.pop("voice_id", None)
-        route.setdefault("reference_id", _fish_audio_voice_for_label(label, cfg, guest_index))
-        route.setdefault("model", cfg.get("fish_audio_model"))
-        route.setdefault("mp3_bitrate", cfg.get("fish_audio_mp3_bitrate"))
-        route.setdefault("temperature", cfg.get("fish_audio_temperature"))
-        route.setdefault("top_p", cfg.get("fish_audio_top_p"))
-        route.setdefault("latency", cfg.get("fish_audio_latency"))
+        route.pop("reference_id", None)
+        route.setdefault("voice_id", _cartesia_voice_for_label(label, cfg, guest_index))
+        route.setdefault("model", cfg.get("cartesia_model"))
+        route.setdefault("version", cfg.get("cartesia_version"))
+        route.setdefault("sample_rate", cfg.get("cartesia_sample_rate"))
+        route.setdefault("bit_rate", cfg.get("cartesia_bit_rate"))
+        route.setdefault("language", cfg.get("cartesia_language"))
+        route.setdefault("speed", cfg.get("cartesia_speed"))
     elif provider == "command":
         route.setdefault("voice", _voice_for_label(label, cfg))
         route.setdefault("command", cfg.get("tts_command"))
@@ -2168,20 +2171,17 @@ def _public_tts_route(route: dict) -> dict:
         for key, value in route.items()
         if key not in hidden and not key.endswith("_env")
     }
-    if "voice_id" in public and public.get("provider") == "elevenlabs":
+    if "voice_id" in public and public.get("provider") in {"elevenlabs", "cartesia"}:
         voice_id = str(public["voice_id"])
         public["voice_id"] = f"{voice_id[:4]}...{voice_id[-4:]}" if len(voice_id) > 10 else "set"
-    if "reference_id" in public and public.get("provider") == "fish_audio":
-        ref_id = str(public["reference_id"])
-        public["reference_id"] = f"{ref_id[:4]}...{ref_id[-4:]}" if len(ref_id) > 10 else "set"
     return public
 
 
 def _tts_routes_summary_for_script(script: str, cfg: dict) -> dict:
     turns = _parse_dialogue_turns(script, cfg)
     if not turns:
-        route = _tts_route_for_label("CEDAR", cfg)
-        return {"CEDAR": _public_tts_route(route)}
+        route = _tts_route_for_label("JUNO", cfg)
+        return {"JUNO": _public_tts_route(route)}
     guest_voice_indexes: dict[str, int] = {}
     summary: dict[str, dict] = {}
     for label, _tag, _text in turns:
@@ -2193,11 +2193,11 @@ def _tts_routes_summary_for_script(script: str, cfg: dict) -> dict:
 
 
 def _elevenlabs_voice_for_label(label: str, cfg: dict, guest_index: int = 0) -> str:
-    host_a = cfg.get("host_a_name", "Cedar").upper()
-    host_b = cfg.get("host_b_name", "Marin").upper()
-    if label in {host_a, "CEDAR"}:
+    host_a = cfg.get("host_a_name", "Juno").upper()
+    host_b = cfg.get("host_b_name", "Caspar").upper()
+    if label in {host_a, "JUNO"}:
         return str(cfg.get("elevenlabs_voice_id_a", ""))
-    if label in {host_b, "MARIN"}:
+    if label in {host_b, "CASPAR"}:
         return str(cfg.get("elevenlabs_voice_id_b", ""))
     guest = _guest_for_label(label, cfg)
     if guest and guest.get("elevenlabs_voice_id"):
@@ -2208,25 +2208,25 @@ def _elevenlabs_voice_for_label(label: str, cfg: dict, guest_index: int = 0) -> 
     return str(cfg.get("elevenlabs_voice_id_b") or cfg.get("elevenlabs_voice_id_a") or "")
 
 
-def _fish_audio_voice_for_label(label: str, cfg: dict, guest_index: int = 0) -> str:
-    host_a = cfg.get("host_a_name", "Cedar").upper()
-    host_b = cfg.get("host_b_name", "Marin").upper()
-    if label in {host_a, "CEDAR"}:
-        return str(cfg.get("fish_audio_voice_id_a", ""))
-    if label in {host_b, "MARIN"}:
-        return str(cfg.get("fish_audio_voice_id_b", ""))
+def _cartesia_voice_for_label(label: str, cfg: dict, guest_index: int = 0) -> str:
+    host_a = cfg.get("host_a_name", "Juno").upper()
+    host_b = cfg.get("host_b_name", "Caspar").upper()
+    if label in {host_a, "JUNO"}:
+        return str(cfg.get("cartesia_voice_id_a", ""))
+    if label in {host_b, "CASPAR"}:
+        return str(cfg.get("cartesia_voice_id_b", ""))
     guest = _guest_for_label(label, cfg)
-    if guest and guest.get("fish_audio_voice_id"):
-        return str(guest["fish_audio_voice_id"])
-    guest_voice_ids = _csv_list(cfg.get("fish_audio_guest_voice_ids"))
+    if guest and guest.get("cartesia_voice_id"):
+        return str(guest["cartesia_voice_id"])
+    guest_voice_ids = _csv_list(cfg.get("cartesia_guest_voice_ids"))
     if guest_voice_ids:
         return guest_voice_ids[guest_index % len(guest_voice_ids)]
-    return str(cfg.get("fish_audio_voice_id_b") or cfg.get("fish_audio_voice_id_a") or "")
+    return str(cfg.get("cartesia_voice_id_b") or cfg.get("cartesia_voice_id_a") or "")
 
 
 def _emotion_default_for_label(label: str, cfg: dict) -> str:
-    host_a = cfg.get("host_a_name", "Cedar").upper()
-    if label in {host_a, "CEDAR"}:
+    host_a = cfg.get("host_a_name", "Juno").upper()
+    if label in {host_a, "JUNO"}:
         return "warm, curious"
     guest = _guest_for_label(label, cfg)
     if guest and guest.get("delivery_baseline"):
@@ -2661,13 +2661,13 @@ def _tts_two_host(
     turns = _parse_dialogue_turns(script, cfg)
     if not turns:
         logger.warning("No dialogue turns found - falling back to default TTS route")
-        route = _tts_route_for_label("CEDAR", cfg)
+        route = _tts_route_for_label("JUNO", cfg)
         return tts_engines.synthesize_tts(
             text=script,
             output_path=output_path,
             route=route,
             cfg=cfg,
-            instructions=_build_tts_instructions("", "CEDAR", cfg),
+            instructions=_build_tts_instructions("", "JUNO", cfg),
         )
 
     work_dir.mkdir(parents=True, exist_ok=True)
@@ -2916,7 +2916,7 @@ def update_rss(
             follow_up_html = f"<br><br><strong>Follow-up links:</strong><ul>{link_items}</ul>"
 
     disclosure_html = (
-        "<br><br><em>Cedar, Marin, and any guest voices are AI-generated. "
+        "<br><br><em>Juno, Caspar, and any guest voices are AI-generated. "
         "Episode text and audio are generated with human-directed software.</em>"
     )
 
@@ -3050,13 +3050,13 @@ def _make_tts_fn(cfg: dict, work_dir: Path):
     def tts_fn(text: str, output: Path) -> Path:
         if _parse_dialogue_turns(text, cfg):
             return _tts_two_host(text, output, cfg, work_dir / "tts_turns")
-        route = _tts_route_for_label("CEDAR", cfg)
+        route = _tts_route_for_label("JUNO", cfg)
         return tts_engines.synthesize_tts(
             text=text,
             output_path=output,
             route=route,
             cfg=cfg,
-            instructions=_build_tts_instructions("", "CEDAR", cfg),
+            instructions=_build_tts_instructions("", "JUNO", cfg),
         )
 
     return tts_fn
@@ -3064,13 +3064,13 @@ def _make_tts_fn(cfg: dict, work_dir: Path):
 
 # ── Intro ident ───────────────────────────────────────────────────────────────
 
-_INTRO_IDENT_TEXT = "Asynchronous. A podcast about ideas. With Cedar and Marin."
+_INTRO_IDENT_TEXT = "Asynchronous. A podcast about ideas. With Juno and Caspar."
 
 
 def _ensure_intro_ident(cfg: dict, repo_root: Path) -> "Path | None":
     """Generate and cache the show intro ident at assets/intro_ident.mp3.
 
-    Uses Cedar's configured TTS route.
+    Uses Juno's configured TTS route.
     Only synthesised once; subsequent calls return the cached file immediately.
     """
     ident_path = repo_root / "assets" / "intro_ident.mp3"
@@ -3080,7 +3080,7 @@ def _ensure_intro_ident(cfg: dict, repo_root: Path) -> "Path | None":
     try:
         ident_path.parent.mkdir(parents=True, exist_ok=True)
         logger.info("Generating show intro ident (first run only)…")
-        route = _tts_route_for_label("CEDAR", cfg)
+        route = _tts_route_for_label("JUNO", cfg)
         tts_engines.synthesize_tts(
             text=_INTRO_IDENT_TEXT,
             output_path=ident_path,

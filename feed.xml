@@ -7,13 +7,13 @@
   <channel>
     <title>Asynchronous</title>
     <link>https://rauscha.github.io/Dialog-podcast</link>
-    <description>Cedar and Marin turn stray curiosities into source-grounded audio journeys.</description>
+    <description>Juno and Caspar turn stray curiosities into source-grounded audio journeys.</description>
     <language>en</language>
-    <itunes:author>Cedar &amp; Marin</itunes:author>
+    <itunes:author>Juno &amp; Caspar</itunes:author>
     <itunes:category text="Science"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:owner>
-      <itunes:name>Cedar &amp; Marin</itunes:name>
+      <itunes:name>Juno &amp; Caspar</itunes:name>
       <itunes:email>podcast@andrewrausch.com</itunes:email>
     </itunes:owner>
     <itunes:image href="https://rauscha.github.io/Dialog-podcast/assets/cover.jpg"/>
