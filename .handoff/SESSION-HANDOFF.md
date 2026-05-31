@@ -1,24 +1,29 @@
-# Session hand-off — 2026-05-30 (machine: laptop)
+# Session hand-off — 2026-05-30 (machine: desktop / CRANE-DESK)
 
 ## STATE (read this first)
-- Branch: `main`, working tree clean, synced with `origin/main` (no unpushed code).
-- This was a **diagnostic + decision session, no code changed.** Output is a finding and a direction, both on disk (here + `NEXT-STEPS.md`).
-- **Decision: clips stay OFF; cues are the focus.** Started by investigating "YouTube clips vanished from my last episode" — that was **not a bug** (clips are off by config, `use_clips: false`, deliberate since `888bb6f`; last episode ran clean with 2 cues). Explored clip+cue co-mixing (Phase 5), then the user decided **not** to pursue clips: auto-selected clips were low quality (wrong sections/text), music clips didn't flow (editorial/human work), and were often extraneous; rights non-trivial but secondary. **Cues (sonic footnotes) win — their job is to punctuate and separate.**
-- Phase 5 (co-mixing) is **parked, not deleted** (design preserved at the bottom of `NEXT-STEPS.md`).
+- Branch: `main`, working tree clean, synced with `origin/main`. No unpushed commits, no stray worktrees.
+- This session **shipped a real test episode** to exercise the Phase 1 (NASA) sonic-footnote cues, on a richer topic than planned: a **deep dive with a forced guest** on the history of barbecue competitions.
+- Episode is **LIVE** on the public feed: *"The Sauce That Won a Competition"* (7:02). Committed + pushed (`d52f6f6`), verified serving via GitHub Pages.
+- **The whole point was to LISTEN and decide cue direction — that listen has NOT happened yet.** The user is listening on his phone. His verdict on the cue + guest is the gating input for what's next (Phase 1.5 vs Phase 2). Everything below is structural read-off from the artifacts, not a substitute for his ears.
 
 ## Done this session
-- Diagnosed the missing-clips question: off by config, not a regression. Confirmed via `config.json`, git history (`888bb6f`), and the last episode's `episode_manifest.json` (`clips: []`, `warnings: []`, 2 cues present).
-- Made the clips-off / cues-focus decision and rewrote `NEXT-STEPS.md` around it: cue phases promoted, a new "Cue quality & editorial polish" section added, Phase 5 moved to a parked section.
+- **Picked up clean**, then chose to test with a new episode instead of "fm synthesis": `--type deep_dive --guest` on "the history of barbecue competitions".
+- **Hit + fixed an auth failure.** First run died at the research step with `401 invalid x-api-key`. Root cause: on CRANE-DESK the LLM keys live in **Windows User-scope env**, and that `ANTHROPIC_API_KEY` had been **revoked/rotated** (well-formed, just rejected). User added a fresh key to `.env` (gitignored); validated with a 1-token call; re-ran clean. **OpenAI key was fine.**
+- **Generated the episode** (exit 0): 1179 words, Cedar 13 / Marin 13 / guest 8 turns. Forced guest booked **Dr. Evelyn Cross — "Black Pitmaster Historian"** (voice *nova*), entering on the racial-erasure beats. Guest path works on paper.
+- **Published it** the way the pipeline normally does (direct to `main` — GitHub Pages serves the feed/MP3s from main): staged mp3 + feed.xml + `.chapters.json` + `.companion.json` + `host_memory.json`, committed, pushed, confirmed HTTP 200 + feed item live.
+
+## Cue test — the actual finding (awaiting his ears to confirm)
+- Planner proposed **2 cues; only 1 was inserted.** The 2nd (`commons_morse_code`) needs the **Wikimedia backend = Phase 2, which isn't built**, so it **dropped silently — no warning, no error.** Real gap.
+- The one cue that landed (`nasa_apollo_countdown`) used a **fallback query ('Apollo 11')** and actually grabbed 4s of an unrelated **NASA podcast episode** (`Ep393_Crew-11`), not a countdown. Placed **"after turn 0"** (before the hosts finish the opening image). This is the "cues feel random" signal — strong structural argument for **Phase 1.5**.
 
 ## Next up
-1. **Test a Phase 1 cue episode and LISTEN.** `python generate_podcast.py "fm synthesis"` (clips off by default — no env var). The NASA cues haven't actually been heard yet; this decides what's next.
-2. **Phase 1.5 (LLM cue-moment picker)** if the cues feel random — cue quality is now the whole game. Otherwise **Phase 2 (Wikimedia Commons backend)**.
-3. **Cue editorial polish (the keepers):** consolidate turn enumeration (step zero — real latent off-by-one bug), interruption budget/restraint, transition-flow fades/levels, dry-run `[CUE]` timeline. See the "Cue quality & editorial polish" section in `NEXT-STEPS.md`.
-4. P1-D (turn symmetry), P1-E (parallelize TTS) as before.
+1. **USER LISTENS, then decides direction.** Cue feels random/wrong → build **Phase 1.5 (LLM cue-moment + smarter source selection)**. Cue placement feels fine → **Phase 2 (Wikimedia backend)**. Also judge: does *nova* read distinct from Cedar/Marin, and do the guest's entrances/exits land?
+2. **Fix: silent cue drop.** Cues planned against unbuilt backends must **log a warning** (and surface in the manifest), not vanish. Cheap, do regardless.
+3. **Fix: NASA fallback grabs unrelated audio.** `nasa_apollo_countdown` resolving to a random NASA podcast clip is a real quality bug — the fixed-offset + keyword-fallback path produces "wrong N seconds." This overlaps heavily with the Phase 1.5 motivation.
+4. **Turn-enumeration consolidation (step zero, still pending).** `_enumerate_turns` vs `_parse_dialogue_turns` can disagree; fix before more placement work.
 
 ## Watch out for
-- **Don't build clips / Phase 5** — explicitly shelved this session. `NEXT-STEPS.md` no longer lists it as a priority; the parked design is at the very bottom.
-- **Turn-enumeration mismatch is a real latent bug**, independent of clips: cue planning uses `_enumerate_turns` (`sonic_footnote_mixer.py`) while cue splicing uses `_parse_dialogue_turns` (`generate_podcast.py`); they can disagree on what "turn N" is. Fix before more placement work.
-- Key cue files: `sonic_footnote_mixer.py` (`prepare_footnotes`, `_place_cues`), `generate_podcast.py` (`_plan_sonic_footnotes` ~1291, `_tts_two_host` splice ~2645, orchestration ~3280–3354).
-- Standing carryovers (unchanged): work-dir cleanup re-enable on 2026-06-06; Telegram token rotation (not urgent, git clean); `bash scripts/install-hooks.sh` per-clone on the desktop; `use_sonic_footnotes` defaults True.
-- Cosmetic: an earlier pushed commit (`2baddfc`) has a mangled message (stray `@`/backticks) from a shell-syntax slip; content is fine, left as-is rather than force-pushing `main`.
+- **Stale Anthropic key on CRANE-DESK.** The Windows **User-scope** `ANTHROPIC_API_KEY` is still the revoked one. Runs now work only because `.env` (gitignored) overrides it. If `.env` is ever cleared on this box it'll 401 again — fix the User-scope key with `setx` when convenient, or keep relying on `.env`.
+- **This was a TEST episode but it's now PUBLIC.** It used `--guest` (forced) and shipped to the live feed. If you don't want a barbecue episode in the public feed long-term, remove the `<item>` from `feed.xml` + delete the MP3 and re-push. Left as-is for now so he can listen on his phone.
+- `host_memory.json` was committed this session (pipeline normally leaves it uncommitted). Minor deviation; keeps the tree clean and the show-memory in sync, but watch for JSON merge conflicts if the laptop also updates it.
+- Standing carryovers (unchanged): work-dir cleanup re-enable 2026-06-06; Telegram token rotation (not urgent, git clean); cosmetic mangled commit msg on `2baddfc`; clips stay OFF / cues are the focus (decision from last session holds).

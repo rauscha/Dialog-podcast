@@ -19,8 +19,11 @@ Phase 5 (clip + cue co-mixing) is **parked, not deleted** — design preserved a
 User chose "full ship" on 2026-05-30. NASA backend (Phase 1) is in; remaining phases below.
 
 - [x] **Phase 1** — NASA backend + skeleton + splice wiring. Committed `4664f29`.
-- [ ] **Test a Phase 1 cue episode and LISTEN first.** `python generate_podcast.py "fm synthesis"` (clips are off by default — no env var needed). The new NASA cues haven't been heard yet; this decides what comes next.
-- [ ] **Phase 1.5** — LLM timestamp picker. Reads a NASA episode's description and picks a sensible cue moment instead of the fixed 5-sec offset. **Promote this if the test episode's cues feel random** — cue quality is now the whole game.
+- [x] **Test a Phase 1 cue episode** — done 2026-05-30 (desktop). Shipped *"The Sauce That Won a Competition"* (deep_dive + forced guest, BBQ competitions), now LIVE on the feed (`d52f6f6`). **AWAITING the user's LISTEN verdict** — that decides Phase 1.5 vs Phase 2. Structural findings below.
+  - Planner proposed 2 cues; **only 1 inserted.** The 2nd (`commons_morse_code`) needs the Wikimedia backend (Phase 2, unbuilt) and **dropped silently** — no warning/error.
+  - The inserted NASA cue (`nasa_apollo_countdown`) fell back to query `'Apollo 11'` and grabbed 4s of an **unrelated NASA podcast** (`Ep393_Crew-11`), not a countdown; placed **after turn 0** (before hosts finish the open). → strong structural case for Phase 1.5.
+  - Guest path worked on paper: Dr. Evelyn Cross (voice *nova*, 8 turns). Confirm by ear.
+- [ ] **Phase 1.5** — LLM timestamp picker + smarter source selection. Reads a NASA episode's description and picks a sensible cue moment instead of the fixed 5-sec offset, and stops grabbing semantically-unrelated audio on fallback. **PROMOTED — the test episode's cue was both mis-sourced and oddly placed.** Cue quality is the whole game.
 - [ ] **Phase 2** — Wikimedia Commons backend. MediaWiki API category listing + per-file `extmetadata` license parsing. Covers `commons_morse_code`, `commons_metronome`, `commons_tuning_fork`.
 - [ ] **Phase 3** — Internet Archive backend. `advancedsearch.php` + `licenseurl`/`rights` parsing. Covers `internet_archive_public_domain`.
 - [ ] **Phase 4** — Freesound backend. Requires `FREESOUND_API_KEY` in `.env` (user signs up at freesound.org/help/developers/). Covers `freesound_cc0_field_recording`.
@@ -29,6 +32,8 @@ User chose "full ship" on 2026-05-30. NASA backend (Phase 1) is in; remaining ph
 
 These apply to cues alone and are where the "make it feel intentional" wins live:
 
+- [ ] **Surface dropped cues (new, from 2026-05-30 test).** A planned cue whose backend isn't built (e.g. `commons_morse_code` → Wikimedia) currently vanishes with no warning and no manifest note. Log a warning and record the skip in the manifest. Cheap; do regardless of the Phase 1.5 call.
+- [ ] **Fix NASA fallback source quality (new, from 2026-05-30 test).** `nasa_apollo_countdown` fell back to a keyword query and pulled a random NASA *podcast* clip (`Ep393_Crew-11`), not a countdown — the "wrong N seconds" failure mode cues were supposed to avoid. Overlaps with Phase 1.5; honor catalog semantics or fail closed (silence) instead of grabbing unrelated audio.
 - [ ] **Consolidate turn enumeration (step zero).** Cue *planning* (`_place_cues` → `_enumerate_turns` in `sonic_footnote_mixer.py`) and cue *splicing* (`_tts_two_host` → `_parse_dialogue_turns` in `generate_podcast.py`) count turns with two different functions. They can disagree (the footnote one ignores the cfg-aware speaker filter), causing off-by-one placement. Collapse to one shared enumeration before doing more placement work.
 - [ ] **Restraint / interruption budget.** Cap cues per episode, enforce a minimum gap between them, and bias placement toward genuine section breaks. Directly counters the "frequently extraneous" problem. Fewer, better.
 - [ ] **Transition flow.** Tune fades and per-segment level-matching at the cue↔dialogue seams so a cue reads as intentional punctuation, not a bolted-on clip.
