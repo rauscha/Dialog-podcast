@@ -2,6 +2,17 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
+## In-flight: TTS voice quality (NEW — top priority as of 2026-05-31)
+
+User listened to the BBQ test episode and verdict on hosts: **OpenAI gpt-4o-mini-tts reads stilted** compared to ElevenLabs and Fish Audio he uses in other projects. Voice quality jumps the queue above cue work — if hosts feel stilted, polishing cues is rearranging deck chairs.
+
+Fish Audio is now wired as a third provider (commit `59f522b`). Three comparison MP3s sit at `episodes/tts_comparison/{openai,elevenlabs,fish_audio}.mp3` (same 6-turn Cedar/Marin script across all three) waiting on a back-to-back listen.
+
+- [ ] **LISTEN to the three MP3s.** Verdict picks the new default provider and decides voice swaps. This gates everything below.
+- [ ] **Voice swaps if needed.** Current picks: ElevenLabs Bella (Cedar) + Antoni (Marin); Fish Audio Sarah (Cedar) + Ethan (Marin). All educated guesses, not user-verified. Fish Audio library: fish.audio/voice-library/ filter by `narration`. `compare_tts.py` supports per-run env overrides (`CEDAR_ELEVENLABS_VOICE` etc.) for fast iteration.
+- [ ] **Lock the winner.** Set `tts_provider` + voice IDs in `config.json`, run a real short episode end-to-end with the new provider, confirm pipeline still ships, then make it the default for the next published episode.
+- [ ] **(Cross-machine note)** If working on the laptop, add `ELEVENLABS_API_KEY` + `FISH_AUDIO_API_KEY` to that machine's `.env` first — keys are on desktop only.
+
 ## Decision (2026-05-30): clips OFF, cues are the keeper
 
 User decided to **leave YouTube clips off** (`use_clips: false` stays the default and we're not building co-mixing for now). Reasons:
@@ -19,11 +30,9 @@ Phase 5 (clip + cue co-mixing) is **parked, not deleted** — design preserved a
 User chose "full ship" on 2026-05-30. NASA backend (Phase 1) is in; remaining phases below.
 
 - [x] **Phase 1** — NASA backend + skeleton + splice wiring. Committed `4664f29`.
-- [x] **Test a Phase 1 cue episode** — done 2026-05-30 (desktop). Shipped *"The Sauce That Won a Competition"* (deep_dive + forced guest, BBQ competitions), now LIVE on the feed (`d52f6f6`). **AWAITING the user's LISTEN verdict** — that decides Phase 1.5 vs Phase 2. Structural findings below.
-  - Planner proposed 2 cues; **only 1 inserted.** The 2nd (`commons_morse_code`) needs the Wikimedia backend (Phase 2, unbuilt) and **dropped silently** — no warning/error.
-  - The inserted NASA cue (`nasa_apollo_countdown`) fell back to query `'Apollo 11'` and grabbed 4s of an **unrelated NASA podcast** (`Ep393_Crew-11`), not a countdown; placed **after turn 0** (before hosts finish the open). → strong structural case for Phase 1.5.
-  - Guest path worked on paper: Dr. Evelyn Cross (voice *nova*, 8 turns). Confirm by ear.
-- [ ] **Phase 1.5** — LLM timestamp picker + smarter source selection. Reads a NASA episode's description and picks a sensible cue moment instead of the fixed 5-sec offset, and stops grabbing semantically-unrelated audio on fallback. **PROMOTED — the test episode's cue was both mis-sourced and oddly placed.** Cue quality is the whole game.
+- [x] **Test a Phase 1 cue episode** — done 2026-05-30 (desktop). Shipped *"The Sauce That Won a Competition"* (deep_dive + forced guest, BBQ competitions), now LIVE on the feed (`d52f6f6`).
+- [x] **User listen verdict (2026-05-31).** Cue is a complete miss (4s of unrelated NASA podcast intro, weirdly placed, confusing). Guest voice barely distinguishable but IS a different voice and the beats make sense. **Voice quality more broadly: stilted vs ElevenLabs/Fish Audio.** Phase 1.5 wins decisively over Phase 2; voice work jumps above all cue work.
+- [ ] **Phase 1.5** — LLM timestamp picker + smarter source selection. Reads a NASA episode's description and picks a sensible cue moment instead of the fixed 5-sec offset, and stops grabbing semantically-unrelated audio on fallback. **Resume after voice provider is chosen.**
 - [ ] **Phase 2** — Wikimedia Commons backend. MediaWiki API category listing + per-file `extmetadata` license parsing. Covers `commons_morse_code`, `commons_metronome`, `commons_tuning_fork`.
 - [ ] **Phase 3** — Internet Archive backend. `advancedsearch.php` + `licenseurl`/`rights` parsing. Covers `internet_archive_public_domain`.
 - [ ] **Phase 4** — Freesound backend. Requires `FREESOUND_API_KEY` in `.env` (user signs up at freesound.org/help/developers/). Covers `freesound_cc0_field_recording`.
