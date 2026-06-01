@@ -1,38 +1,26 @@
 # Session hand-off — 2026-05-31 (machine: desktop / CRANE-DESK)
 
 ## STATE (read this first)
-- Branch: `main`, working tree clean, synced with `origin/main`. No unpushed commits, no stray worktrees.
-- **The whole session's deliverable is three MP3s waiting on a back-to-back listen.** The user gave his BBQ-episode verdict (cue is a complete miss; guest barely distinguishable but workable; **OpenAI voices feel stilted vs ElevenLabs/Fish Audio in his other projects**). That pivoted priority: voice quality is now the top lever, above all cue work.
-- This session built Fish Audio as a third TTS provider, then ran a triple comparison so he can A/B/C OpenAI vs ElevenLabs vs Fish Audio on the same 6-turn script. **The listen has NOT happened yet.** His verdict picks the new default provider, gates voice swaps, and only then does cue work resume.
+- Branch: `main`, clean + synced with `origin/main` after this hand-off. Only the main worktree exists — nothing stranded anywhere.
+- **A new feature was planned, approved, and its Phase 1 shipped: "Asynchronous Rounds" — three weekly auto-generated journal-digest shows** (MFM Rounds / The Fetal Frontier / Signal in the Scan) for the commute. Phase 1 is the **ranking engine only — it generates NO audio, writes NO files, publishes nothing.** It picks the most important recent papers per field and prints a ranked table. Validated live across all three shows and the picks look genuinely good.
+- This session also committed the **prior session's pending voice work** (Juno/Caspar doc sweep, cross-provider Cartesia guests, per-turn loudness, voice-ID validation) that had been sitting uncommitted. The whole TTS-provider question from the last hand-off is now closed.
 
 ## Done this session
-- **Confirmed cue + voice verdict** from the BBQ episode listen: NASA cue was a complete miss (4s of an unrelated podcast intro); guest voice barely distinguishable but conceptually works; **OpenAI gpt-4o-mini-tts reads stilted** compared to ElevenLabs / Fish Audio used in other projects.
-- **Re-prioritized.** Voice quality jumps the queue above cue work. Phase 1.5 still wins over Phase 2 for cues. "Fail closed to silence" promoted from option to rule.
-- **Wired Fish Audio as a third TTS provider** (commit `59f522b`):
-  - `tts_engines.py`: `synthesize_fish_audio()` mirroring the ElevenLabs path. POST `api.fish.audio/v1/tts`, Bearer auth, `model` selected via HTTP header (`s2-pro` default). Registered in `SUPPORTED_TTS_PROVIDERS`, dispatch added in `synthesize_tts()`.
-  - `generate_podcast.py`: `fish_audio_*` DEFAULTS + INT/FLOAT key registration, `_fish_audio_voice_for_label()` helper, branches in `_legacy_tts_route_for_label` and `_tts_route_for_label`, sanitization in `_public_tts_route`.
-  - `config.json`: voice IDs locked in with `_*_label` companion keys for human readability. **Both ElevenLabs and Fish Audio voice IDs are educated guesses — see Watch out for.**
-  - `compare_tts.py`: new standalone driver, hardcoded 6-turn Cedar/Marin script (Voyager Golden Record), auto-loads `.env` (no `dotenv` dep), skips a provider cleanly if its key or voice IDs are missing.
-- **Rendered the three comparison MP3s** (~45s each, all clean, ~4MB combined) and committed them so they travel with `git pull`:
-  - `episodes/tts_comparison/openai.mp3` — OpenAI voices `marin` (Cedar) / `cedar` (Marin)
-  - `episodes/tts_comparison/elevenlabs.mp3` — **Bella** (Cedar, female) / **Antoni** (Marin, male)
-  - `episodes/tts_comparison/fish_audio.mp3` — **Sarah** (Cedar, female narrator) / **Ethan** (Marin, male educational)
-- API keys (`ELEVENLABS_API_KEY`, `FISH_AUDIO_API_KEY`) added to desktop `.env` by the user.
+- **Planned + approved the digest feature.** Full plan: `C:\Users\andre\.claude\plans\idempotent-strolling-riddle.md` (read it before Phase 2). Key decisions: headline + 3–5 rounds format, rolling 6-month window, sub-brand under Juno/Caspar, 3 separate feeds, citation-free ranking.
+- **Shipped Phase 1** (`58d0a67`): `digest_sources.py` (PubMed/Europe PMC/Altmetric/SCImago clients, all soft-fail), `digest_ranker.py` (discover→ledger-filter→enrich→batched-LLM→score→pick), `digest_shows.py` + `digests.json` (3 shows), `digest_ledger.py` (DOI ledger), `assets/sjr_2024.csv` (quartile table), `digest` episode type, `--digest-dry-run <show>` CLI. Soft-failure + copyright firewall tested.
+- **Committed prior voice finalization** (`ff6715c` docs + validator; `58d0a67` carries the config/engine parts): ElevenLabs hosts + Cartesia guests, Fish dropped, per-turn loudness, 13/13 voices validated.
 
 ## Next up
-1. **LISTEN to all three MP3s back-to-back.** That verdict gates everything else. Decide: which provider becomes the new default? Or do we pair providers per host (e.g. ElevenLabs Cedar + Fish Audio Marin)? Are the picked voices keepers or swap candidates?
-2. **Swap voice IDs if needed.** Fish Audio voice library is at fish.audio/voice-library/ (filter by `narration` tag). ElevenLabs library has hundreds of premade voices. Driver supports per-run env overrides (`CEDAR_ELEVENLABS_VOICE`, `MARIN_ELEVENLABS_VOICE`, `CEDAR_FISH_VOICE`, `MARIN_FISH_VOICE`) for fast iteration without editing config.
-3. **Lock the winner into `config.json`** (`tts_provider` + voice IDs), regenerate a small real episode to confirm the pipeline still works end-to-end with the new provider, ship it.
-4. **Then return to cue work.** Same queue as before but with sharper rules:
-   - **(cheap, do regardless)** Silent dropped-cue warning + manifest note (e.g. `commons_morse_code` vanishing because Wikimedia backend isn't built).
-   - **(cheap, do regardless)** NASA fallback fail-closed to silence — never grab semantically-unrelated audio.
-   - **Phase 1.5**: LLM timestamp picker + smarter source selection.
-   - Turn-enumeration consolidation (step zero) still pending.
+1. **Phase 2 — digest episode type + research branch (generates the first real audio).** Extract `_script_from_research_package`, add `_digest_research_and_script` (cloud research model, NO tools, paraphrase-only), branch on `cfg["digest_articles"]`, `_run_with_cfg` + `run_digest(show_id)` + `--digest` CLI. Plan §"Build phases". **Recommend a fresh session for this** — it's a different subsystem.
+2. **Phase 3** multi-feed publishing, then **Phase 4** scheduling (Task Scheduler) + bot `/digest`.
+3. Optional: eyeball more `--digest-dry-run` output and tune the LLM ranking prompt before spending audio.
 
 ## Watch out for
-- **Voice IDs are guesses, not user-verified.** Picked by searching ElevenLabs default library + querying Fish Audio's `/model` endpoint filtered to `narration`-tagged top scorers. The names match the Cedar/Marin personas on paper but he hasn't confirmed by ear. Fully expect at least one swap.
-- **OpenAI render uses voices literally named "marin" and "cedar"** — those are OpenAI's gpt-4o-mini-tts voice names, predating the show. The OpenAI track should sound identical to the BBQ episode. Not a bug; expect it.
-- **Apples-to-oranges gender split.** ElevenLabs + Fish Audio renders use female Cedar / male Marin (max distinguishability). OpenAI render uses the existing same-genderish neutral pair. If he wants like-for-like, the driver makes swapping trivial.
-- **API keys live in desktop `.env` only.** If picking up on the laptop, `ELEVENLABS_API_KEY` and `FISH_AUDIO_API_KEY` need to be added to that machine's `.env` before `compare_tts.py` will produce anything on those two providers. The driver skips with a clear message if a key is missing.
-- **Test MP3s are committed.** `episodes/tts_comparison/{openai,elevenlabs,fish_audio}.mp3` are in git (so they travel cross-machine). If voices change, regenerate and the diff will show. Per-turn intermediates under `_work/` are gitignored.
-- **Standing carryovers (unchanged):** work-dir cleanup re-enable 2026-06-06; Telegram token rotation (not urgent, git clean); cosmetic mangled commit msg on `2baddfc`; clips stay OFF / cues are the focus (decision holds).
+- **Phase 1 publishes nothing.** No feeds, no episodes, no audio. The dry-run is read-only. Don't expect a feed yet.
+- **Ranking is LLM-dominant on fresh papers** — Altmetric is empty for papers <6 wk old (404→None), so its weight renormalizes onto the LLM. By design; tune the LLM prompt, not the weights.
+- **Quartile CSV is a curated 12-journal table**, not the full SCImago export (SCImago returns 403 to scripted downloads). Drop the official export into `assets/sjr_*.csv` and it supersedes (newest filename wins).
+- **The `digest` episode type is already registered** in `episode_types.py` (pulled forward so show config validates). Don't re-add it in Phase 2.
+- **Shared-file commit note:** `58d0a67` also contains the cross-provider-guest + per-turn-loudness changes, because `config.json`/`generate_podcast.py`/`.env.example` were touched by both that prior effort and the digest work (couldn't cleanly split without interactive staging).
+- **Laptop pickup:** add `NCBI_EMAIL` (+ optional `NCBI_API_KEY`) to `.env` for digests; `ELEVENLABS_API_KEY` + `CARTESIA_API_KEY` for audio (Fish key no longer used); `bash scripts/install-hooks.sh` for the pre-commit secret hook.
+- **Pre-existing bug:** RSS `<description>` leaked a fact-check preamble (`_strip_to_dialogue` anchors on first `SPEAKER:` line). Noted in NEXT-STEPS; digests share the path.
+- **Standing carryovers:** work-dir cleanup re-enable 2026-06-06; Telegram token rotation (not urgent, git clean); CRLF→LF warnings on commit are benign.
