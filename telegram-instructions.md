@@ -100,7 +100,7 @@ LEARNING_PATH_DEFAULT_LEVEL=beginner-to-intermediate
 
 `USE_CLIPS=false` is the safer default for published runs. Turn clips on only for private experiments or rights-cleared sources.
 
-TTS can be mixed per speaker in `config.json` or with JSON env vars. For example, set `TTS_ROUTES={"CEDAR":{"provider":"openai","voice":"marin"},"MARIN":{"provider":"elevenlabs","voice_id":"..."}}` to keep Cedar on OpenAI while Marin uses ElevenLabs. Telegram commands use whatever routes are active when the generation starts.
+TTS can be mixed per speaker in `config.json` or with JSON env vars. For example, set `TTS_ROUTES={"JUNO":{"provider":"openai","voice":"marin"},"CASPAR":{"provider":"elevenlabs","voice_id":"..."}}` to keep Juno on OpenAI while Caspar uses ElevenLabs. Telegram commands use whatever routes are active when the generation starts.
 
 ## 5. Load `.env` In PowerShell
 
@@ -208,7 +208,7 @@ Guest expert mode can add a synthetic/composite interview guest with a distinct 
 
 `personal_context.json` is your local private listener profile. Use `/remember background ...`, `/remember domain ...`, `/remember depth ...`, `/remember goal ...`, `/remember style ...`, and `/remember avoid ...` to teach the bot what to assume about you. The generator also records covered topics there, so repeated topics are treated as deeper follow-ups instead of fresh primers.
 
-`host_memory.json` is the persistent character bible for Cedar and Marin. The generator snapshots it into each work directory, then appends small callback-worthy memories after a successful script pass.
+`host_memory.json` is the persistent character bible for Juno and Caspar. The generator snapshots it into each work directory, then appends small callback-worthy memories after a successful script pass.
 
 ## 9. Auto-Start On Windows Login
 

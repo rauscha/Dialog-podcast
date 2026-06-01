@@ -39,7 +39,7 @@ telegram_bot.py       long-polling Telegram bot; spawns generate_podcast.py as a
 ### Pipeline steps in `generate_podcast.py`
 
 1. **Research** (`_RESEARCH_MODEL` = Opus) — web_search tool, produces a fact-rich brief
-2. **Dialogue script** (`_DIALOGUE_MODEL` = Sonnet) — Cedar/Marin conversation from the brief; speaker lines tagged `CEDAR [emotion]: text`
+2. **Dialogue script** (`_DIALOGUE_MODEL` = Sonnet) — Juno/Caspar conversation from the brief; speaker lines tagged `JUNO [emotion]: text`
 3. **Fact-check** (`_FACT_CHECK_MODEL` = Sonnet) — corrects inline; strips any corrections appendix it appends
 4. **Audio** — per-turn TTS via OpenAI `gpt-4o-mini-tts` with per-line emotion instructions; ffmpeg concat; optional YouTube clips interleaved by `clip_mixer.py`; optional MusicGen intro/outro bookends; show intro ident prepended (cached at `assets/intro_ident.mp3`)
 5. **RSS + git** — appends new `<item>` to `feed.xml`; `git add / commit / push` (skipped if `SKIP_GIT=1`)

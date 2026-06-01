@@ -1,6 +1,6 @@
 # Asynchronous
 
-Asynchronous is a personal curiosity-radio generator. Send it a topic, and Cedar and Marin turn that stray question into a source-grounded two-host episode with research, dialogue, fact-checking, two-voice TTS, optional generated music, and RSS publishing.
+Asynchronous is a personal curiosity-radio generator. Send it a topic, and Juno and Caspar turn that stray question into a source-grounded two-host episode with research, dialogue, fact-checking, two-voice TTS, optional generated music, and RSS publishing.
 
 The active remote workflow is local-first: a Telegram bot runs on your home machine, receives a topic from your phone, and launches the generation pipeline without exposing an inbound port.
 
@@ -8,9 +8,9 @@ The active remote workflow is local-first: a Telegram bot runs on your home mach
 
 ## The Hosts
 
-**Cedar** - Artistic, broad-thinking, asks "what does this mean for us?" She finds unexpected metaphors, follows tangents that sometimes become the point, and speaks with warmth and wonder.
+**Juno** - Artistic, broad-thinking, asks "what does this mean for us?" She finds unexpected metaphors, follows tangents that sometimes become the point, and speaks with warmth and wonder.
 
-**Marin** - Scientifically grounded, methodical, slightly older and more skeptical. He is the "well, actually" voice with dry wit and genuine curiosity, not pedantry. He names researchers, cites data, and keeps Cedar's flights of fancy anchored in evidence.
+**Caspar** - Scientifically grounded, methodical, slightly older and more skeptical. He is the "well, actually" voice with dry wit and genuine curiosity, not pedantry. He names researchers, cites data, and keeps Juno's flights of fancy anchored in evidence.
 
 ---
 
@@ -149,7 +149,7 @@ Defaults live in `generate_podcast.py`, repo settings live in `config.json`, and
 |-----|---------|-------------|
 | `podcast_title` | `"Asynchronous"` | RSS feed title |
 | `podcast_description` | Personal curiosity-radio description | RSS feed description |
-| `podcast_author` | `"Cedar & Marin"` | iTunes author field |
+| `podcast_author` | `"Juno & Caspar"` | iTunes author field |
 | `podcast_email` | `"you@example.com"` | iTunes owner email |
 | `podcast_language` | `"en"` | RSS language tag |
 | `podcast_category` | `"Science"` | iTunes category |
@@ -165,11 +165,11 @@ Defaults live in `generate_podcast.py`, repo settings live in `config.json`, and
 | `local_llm_num_ctx` | `32768` | Ollama context window hint |
 | `local_llm_keep_alive` | `"30m"` | Ollama model keep-alive hint |
 | `local_llm_think` | `false` | Disable Ollama thinking output by default so pipeline calls return clean script text |
-| `tts_provider` | `"openai"` | Fallback TTS provider: `"openai"`, `"elevenlabs"`, or `"command"` |
-| `host_a_name` | `"Cedar"` | Display name for host A |
+| `tts_provider` | `"openai"` | Fallback TTS provider: `"openai"`, `"elevenlabs"`, `"cartesia"`, or `"command"` |
+| `host_a_name` | `"Juno"` | Display name for host A |
 | `host_a_voice` | `"cedar"` | Default OpenAI/local-command voice for host A |
 | `host_a_role` | `"artistic"` | Informational label |
-| `host_b_name` | `"Marin"` | Display name for host B |
+| `host_b_name` | `"Caspar"` | Display name for host B |
 | `host_b_voice` | `"marin"` | Default OpenAI/local-command voice for host B |
 | `host_b_role` | `"scientific"` | Informational label |
 | `elevenlabs_voice_id_a` | `""` | ElevenLabs voice ID for host A |
@@ -178,7 +178,7 @@ Defaults live in `generate_podcast.py`, repo settings live in `config.json`, and
 | `elevenlabs_stability` | `0.5` | Default ElevenLabs stability setting |
 | `elevenlabs_similarity_boost` | `0.75` | Default ElevenLabs similarity setting |
 | `tts_default_route` | `{}` | Route fields merged into every speaker before per-speaker overrides |
-| `tts_routes` | `{}` | Speaker-specific route map keyed by `DEFAULT`, `CEDAR`, `MARIN`, `GUEST`, or exact speaker label |
+| `tts_routes` | `{}` | Speaker-specific route map keyed by `DEFAULT`, `JUNO`, `CASPAR`, `GUEST`, or exact speaker label |
 | `tts_request_timeout_sec` | `180` | Network timeout for provider HTTP calls |
 | `tts_command` | `""` | Generic local command adapter for experimental TTS engines |
 | `tts_command_cwd` | `""` | Optional working directory for command TTS |
@@ -197,10 +197,16 @@ Defaults live in `generate_podcast.py`, repo settings live in `config.json`, and
 | `use_guest_hosts` | `true` | Allow synthetic/composite guest expert personas |
 | `guest_host_mode` | `"auto"` | Guest mode: `"auto"`, `"force"`, or `"off"` |
 | `guest_host_max` | `1` | Maximum guest personas per episode |
-| `guest_host_voice_pool` | OpenAI voice IDs | Voice pool for guest personas, excluding Cedar/Marin voices where possible |
+| `guest_host_voice_pool` | OpenAI voice IDs | Voice pool for guest personas, excluding Juno/Caspar voices where possible |
 | `elevenlabs_guest_voice_ids` | `""` | Optional comma-separated ElevenLabs voice IDs for guest personas |
+| `cartesia_guest_voice_ids` | `""` | Optional comma-separated Cartesia voice IDs for guest personas |
+| `guest_cross_provider` | `true` | Let guest personas draw from both the ElevenLabs and Cartesia guest pools (rotated per topic) so they sound clearly distinct from the hosts |
+| `cartesia_voice_id_a` / `cartesia_voice_id_b` | `""` | Cartesia host voice IDs (unused while hosts run on ElevenLabs) |
+| `cartesia_model` | `"sonic-3.5"` | Cartesia model ID for Cartesia routes |
+| `cartesia_version` | `"2026-03-01"` | Cartesia API version header (config-overridable for server-side bumps) |
+| `normalize_turn_loudness` | `true` | Loudness-match every speaker turn before concat so cross-provider voices sit at one consistent level |
 | `script_quality_pipeline` | `true` | Use the multi-pass script writers' room |
-| `host_memory_path` | `"host_memory.json"` | Persistent Cedar/Marin memory and character bible |
+| `host_memory_path` | `"host_memory.json"` | Persistent Juno/Caspar memory and character bible |
 | `host_memory_max_episodes` | `12` | Episode memories retained for future callbacks |
 | `host_memory_max_items` | `18` | Shared host memories retained |
 | `use_personal_context` | `true` | Tune episodes to your background, preferred depth, domains, and prior coverage |
@@ -239,12 +245,12 @@ Example `config.json` override:
     "max_chars": 3800
   },
   "tts_routes": {
-    "CEDAR": {
+    "JUNO": {
       "provider": "openai",
       "voice": "marin",
       "model": "gpt-4o-mini-tts"
     },
-    "MARIN": {
+    "CASPAR": {
       "provider": "elevenlabs",
       "voice_id": "your-elevenlabs-voice-id",
       "model": "eleven_turbo_v2",
@@ -267,7 +273,7 @@ For local or experimental engines, use the `command` provider. The process must 
     "DEFAULT": {
       "provider": "command",
       "command": "python local_tts.py --text {text_path} --out {output_path} --voice {voice}",
-      "voice": "cedar-local",
+      "voice": "host-local",
       "model": "my-local-engine"
     }
   }
@@ -436,4 +442,4 @@ Each run writes `episode_manifest.json`, `research_brief.md`, `source_cards.json
 
 The default script path is now multi-pass: research package -> thesis -> guest decision -> beat sheet and host stance map -> dialogue draft -> anti-cliche rewrite -> fact-check -> performance script -> host-memory update. Set `SCRIPT_QUALITY_PIPELINE=false` for the older, faster three-pass path.
 
-AI-generated voices are synthetic; public descriptions should disclose that Cedar and Marin are generated hosts.
+AI-generated voices are synthetic; public descriptions should disclose that Juno and Caspar are generated hosts.
