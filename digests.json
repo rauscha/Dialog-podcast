@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "shows": {
+    "mfm": {
+      "display_name": "MFM Rounds",
+      "description": "A weekly peer-level digest of the most important new maternal-fetal medicine research, with Juno and Caspar.",
+      "author": "Juno & Caspar",
+      "category": "Science:Medicine",
+      "feed_filename": "feed-mfm.xml",
+      "cover_image": "https://rauscha.github.io/Dialog-podcast/assets/cover-mfm.jpg",
+      "episode_type": "digest",
+      "audience": "A practicing maternal-fetal medicine physician. Speak peer-to-peer; assume specialist knowledge of obstetrics, perinatology, and study design.",
+      "target_minutes": 16,
+      "window_months": 6,
+      "top_n": 5,
+      "max_rounds": 5,
+      "include_preprints": false,
+      "schedule": { "weekday": "mon", "hour": 5 },
+      "journals": {
+        "issns": ["0002-9378", "1097-6868", "2589-9333", "0029-7844", "1873-233X", "1470-0328", "1471-0528", "0960-7692", "1469-0705"],
+        "ta_names": ["Am J Obstet Gynecol", "Am J Obstet Gynecol MFM", "Obstet Gynecol", "BJOG", "Ultrasound Obstet Gynecol"]
+      },
+      "mesh_terms": ["Pregnancy Complications", "Prenatal Care", "Premature Birth", "Pre-Eclampsia", "Fetal Growth Retardation", "Pregnancy, High-Risk", "Stillbirth"],
+      "keywords": ["maternal-fetal medicine", "preeclampsia", "preterm birth", "stillbirth", "fetal growth restriction", "gestational diabetes"]
+    },
+    "fetal": {
+      "display_name": "The Fetal Frontier",
+      "description": "A weekly peer-level digest of the most important new research in fetal and prenatal diagnosis and therapy, with Juno and Caspar.",
+      "author": "Juno & Caspar",
+      "category": "Science:Medicine",
+      "feed_filename": "feed-fetal.xml",
+      "cover_image": "https://rauscha.github.io/Dialog-podcast/assets/cover-fetal.jpg",
+      "episode_type": "digest",
+      "audience": "A maternal-fetal medicine and fetal-therapy specialist. Speak peer-to-peer; assume specialist knowledge of prenatal diagnosis, fetal intervention, and genetics.",
+      "target_minutes": 16,
+      "window_months": 6,
+      "top_n": 5,
+      "max_rounds": 5,
+      "include_preprints": true,
+      "schedule": { "weekday": "wed", "hour": 5 },
+      "journals": {
+        "issns": ["0197-3851", "1097-0223", "1015-3837", "1421-9964", "0960-7692", "1469-0705"],
+        "ta_names": ["Prenat Diagn", "Fetal Diagn Ther", "Ultrasound Obstet Gynecol"]
+      },
+      "mesh_terms": ["Prenatal Diagnosis", "Fetal Therapies", "Fetoscopy", "Fetal Diseases", "Congenital Abnormalities", "Genetic Testing"],
+      "keywords": ["fetal therapy", "fetal surgery", "prenatal diagnosis", "cell-free DNA", "noninvasive prenatal testing", "fetoscopy", "fetal MRI"]
+    },
+    "ai": {
+      "display_name": "Signal in the Scan",
+      "description": "A weekly peer-level digest of the most important new research on AI in medicine, focused on obstetrics and gynecology and on medical imaging, with Juno and Caspar.",
+      "author": "Juno & Caspar",
+      "category": "Science:Medicine",
+      "feed_filename": "feed-ai.xml",
+      "cover_image": "https://rauscha.github.io/Dialog-podcast/assets/cover-ai.jpg",
+      "episode_type": "digest",
+      "audience": "A physician following clinical AI, primarily in obstetrics and gynecology and secondarily in medical imaging. Speak peer-to-peer; assume comfort with study design and basic machine-learning terms.",
+      "target_minutes": 16,
+      "window_months": 6,
+      "top_n": 5,
+      "max_rounds": 5,
+      "include_preprints": true,
+      "schedule": { "weekday": "fri", "hour": 5 },
+      "topic_bias": { "obgyn": 1.0, "imaging": 0.6, "general": 0.5, "other": 0.4 },
+      "journals": {
+        "issns": ["0033-8419", "1527-1315", "2638-6100", "2589-7500", "2398-6352", "2836-9386", "1067-5027", "1527-974X", "0002-9378", "1097-6868", "0029-7844", "1873-233X", "0960-7692", "1469-0705"],
+        "ta_names": ["Radiology", "Radiol Artif Intell", "Lancet Digit Health", "NPJ Digit Med", "NEJM AI", "J Am Med Inform Assoc", "Am J Obstet Gynecol", "Obstet Gynecol", "Ultrasound Obstet Gynecol"]
+      },
+      "mesh_terms": ["Artificial Intelligence", "Deep Learning", "Machine Learning", "Neural Networks, Computer", "Diagnostic Imaging", "Image Interpretation, Computer-Assisted"],
+      "keywords": ["artificial intelligence", "deep learning", "machine learning", "foundation model", "large language model", "obstetric ultrasound", "computer-aided diagnosis"]
+    }
+  }
+}

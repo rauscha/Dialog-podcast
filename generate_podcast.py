@@ -146,6 +146,7 @@ DEFAULTS: dict = {
     "guest_host_mode":      "auto",
     "guest_host_max":       1,
     "guest_host_voice_pool": "ash,ballad,coral,sage,shimmer,echo,onyx,nova,alloy,fable",
+    "guest_cross_provider": True,
     "script_quality_pipeline": True,
     "host_memory_path":     "host_memory.json",
     "host_memory_max_episodes": 12,
@@ -155,6 +156,12 @@ DEFAULTS: dict = {
     "personal_context_max_topics": 24,
     "personal_context_similarity_threshold": 0.34,
     "personal_context_sync_manifests": True,
+    # Weekly journal-digest shows (Asynchronous Rounds) — show defs live in digests.json
+    "digest_rank_model":    "claude-sonnet-4-6",
+    "ncbi_email":           "",
+    "ncbi_api_key_env":     "NCBI_API_KEY",
+    "altmetric_enabled":    True,
+    "digest_output_dir":    "episodes",
     "tts_model":            "gpt-4o-mini-tts",
     "tts_default_route":    {},
     "tts_routes":           {},
@@ -165,6 +172,7 @@ DEFAULTS: dict = {
     "use_emotive_tts":      True,
     "turn_silence_ms":      180,
     "use_audio_mastering":  True,
+    "normalize_turn_loudness": True,
     "audio_bitrate":        "192k",
     "audio_sample_rate":    44100,
     "audio_channels":       2,
@@ -190,7 +198,10 @@ _BOOL_CONFIG_KEYS = {
     "use_personal_context",
     "personal_context_sync_manifests",
     "use_audio_mastering",
+    "guest_cross_provider",
+    "normalize_turn_loudness",
     "local_llm_think",
+    "altmetric_enabled",
 }
 _INT_CONFIG_KEYS = {
     "target_minutes",
@@ -996,6 +1007,30 @@ def _guest_voice_pool(cfg: dict) -> list[str]:
     return distinct or voices or [str(cfg.get("host_a_voice") or "cedar")]
 
 
+def _combined_guest_voice_pool(cfg: dict) -> list[dict]:
+    """ElevenLabs + Cartesia guest voices interleaved and tagged by provider.
+
+    Interleaving (EL, Cartesia, EL, Cartesia, ...) keeps both providers in play
+    even for single-guest episodes once the per-topic rotation offset is applied,
+    so the Cartesia voices actually get used instead of always losing to slot 0.
+    """
+    el_ids = _csv_list(cfg.get("elevenlabs_guest_voice_ids"))
+    car_ids = _csv_list(cfg.get("cartesia_guest_voice_ids"))
+    pool: list[dict] = []
+    for idx in range(max(len(el_ids), len(car_ids))):
+        if idx < len(el_ids):
+            pool.append({"provider": "elevenlabs", "voice_id": el_ids[idx]})
+        if idx < len(car_ids):
+            pool.append({"provider": "cartesia", "voice_id": car_ids[idx]})
+    return pool
+
+
+def _stable_seed(text: str) -> int:
+    """Deterministic, PYTHONHASHSEED-independent non-negative int from text."""
+    digest = hashlib.md5(str(text or "").encode("utf-8")).hexdigest()
+    return int(digest[:8], 16)
+
+
 def _fallback_guest_label(index: int) -> str:
     labels = ["GUEST EXPERT", "GUEST ANALYST", "GUEST GUIDE", "GUEST CRITIC"]
     return labels[index] if index < len(labels) else f"GUEST {chr(65 + (index % 26))}"
@@ -1021,7 +1056,7 @@ def _sanitize_guest_label(value: object, index: int, used: set[str]) -> str:
     return label
 
 
-def _normalize_guest_plan(plan: dict | None, cfg: dict, *, force: bool = False) -> dict:
+def _normalize_guest_plan(plan: dict | None, cfg: dict, *, force: bool = False, topic: str = "") -> dict:
     max_guests = int(cfg.get("guest_host_max", 1))
     if force and max_guests <= 0:
         max_guests = 1
@@ -1051,6 +1086,10 @@ def _normalize_guest_plan(plan: dict | None, cfg: dict, *, force: bool = False) 
         ]
 
     voice_pool = _guest_voice_pool(cfg)
+    combined_guest_pool = (
+        _combined_guest_voice_pool(cfg) if cfg.get("guest_cross_provider", True) else []
+    )
+    guest_seed = _stable_seed(topic)
     used_labels = {"JUNO", "CASPAR"}
     guests: list[dict] = []
     for idx, item in enumerate(raw_guests[:max_guests]):
@@ -1066,36 +1105,42 @@ def _normalize_guest_plan(plan: dict | None, cfg: dict, *, force: bool = False) 
             voice = voice_pool[len(guests) % len(voice_pool)]
         display_name = str(item.get("display_name") or label.title()).strip()
         field = str(item.get("field") or "domain expertise").strip()
-        guests.append(
-            {
-                "label": label,
-                "display_name": display_name,
-                "field": field,
-                "credential_frame": str(
-                    item.get("credential_frame")
-                    or "Synthetic composite expert persona based on the episode research."
-                ).strip(),
-                "expertise": str(item.get("expertise") or field).strip(),
-                "personality": str(
-                    item.get("personality")
-                    or "Specific, conversational, careful with uncertainty."
-                ).strip(),
-                "role_in_episode": str(
-                    item.get("role_in_episode")
-                    or "Adds expert context where Juno and Caspar need outside authority."
-                ).strip(),
-                "delivery_baseline": str(
-                    item.get("delivery_baseline") or "authoritative, conversational"
-                ).strip(),
-                "voice": voice,
-                "boundaries": [
-                    str(boundary).strip()
-                    for boundary in item.get("boundaries", [])
-                    if str(boundary).strip()
-                ][:6],
-                "synthetic": True,
-            }
-        )
+        guest_entry = {
+            "label": label,
+            "display_name": display_name,
+            "field": field,
+            "credential_frame": str(
+                item.get("credential_frame")
+                or "Synthetic composite expert persona based on the episode research."
+            ).strip(),
+            "expertise": str(item.get("expertise") or field).strip(),
+            "personality": str(
+                item.get("personality")
+                or "Specific, conversational, careful with uncertainty."
+            ).strip(),
+            "role_in_episode": str(
+                item.get("role_in_episode")
+                or "Adds expert context where Juno and Caspar need outside authority."
+            ).strip(),
+            "delivery_baseline": str(
+                item.get("delivery_baseline") or "authoritative, conversational"
+            ).strip(),
+            "voice": voice,
+            "boundaries": [
+                str(boundary).strip()
+                for boundary in item.get("boundaries", [])
+                if str(boundary).strip()
+            ][:6],
+            "synthetic": True,
+        }
+        if combined_guest_pool:
+            picked = combined_guest_pool[(guest_seed + len(guests)) % len(combined_guest_pool)]
+            guest_entry["tts_provider"] = picked["provider"]
+            if picked["provider"] == "elevenlabs":
+                guest_entry["elevenlabs_voice_id"] = picked["voice_id"]
+            elif picked["provider"] == "cartesia":
+                guest_entry["cartesia_voice_id"] = picked["voice_id"]
+        guests.append(guest_entry)
 
     decision = "use" if (force or str(plan.get("decision")).lower() == "use") and guests else "skip"
     return {
@@ -1171,7 +1216,7 @@ def _plan_guest_hosts(
         temperature=0.35,
         cfg=cfg,
     )
-    return _normalize_guest_plan(_extract_json_object(raw_plan), cfg, force=force)
+    return _normalize_guest_plan(_extract_json_object(raw_plan), cfg, force=force, topic=topic)
 
 
 def _script_quality_metrics(script: str, memory: dict, cfg: dict | None = None) -> dict:
@@ -2056,6 +2101,21 @@ def _voice_for_label(label: str, cfg: dict) -> str:
     return cfg.get("host_a_voice", "cedar")
 
 
+def _guest_provider_override(label: str, cfg: dict) -> str | None:
+    """A booked guest can carry its own TTS provider (e.g. Cartesia while the
+    hosts run on ElevenLabs), assigned at plan-normalize time. Returns that
+    provider when cross-provider guests are enabled, else None to fall back to
+    the global ``tts_provider``."""
+    if not cfg.get("guest_cross_provider", True):
+        return None
+    guest = _guest_for_label(label, cfg)
+    if guest:
+        provider = str(guest.get("tts_provider") or "").strip().lower()
+        if provider in _VALID_TTS_PROVIDERS:
+            return provider
+    return None
+
+
 def _speaker_role_for_label(label: str, cfg: dict) -> str:
     normalized = label.strip().upper()
     host_a = cfg.get("host_a_name", "Juno").upper()
@@ -2087,7 +2147,7 @@ def _explicit_tts_route_for_label(label: str, cfg: dict) -> dict:
 
 
 def _legacy_tts_route_for_label(label: str, cfg: dict, guest_index: int = 0) -> dict:
-    provider = str(cfg.get("tts_provider") or "openai").lower()
+    provider = _guest_provider_override(label, cfg) or str(cfg.get("tts_provider") or "openai").lower()
     route: dict = {"provider": provider}
     if provider == "openai":
         route.update({"voice": _voice_for_label(label, cfg), "model": cfg.get("tts_model")})
@@ -2338,6 +2398,96 @@ def _ffmpeg_concat_configured(parts: list, output: Path, cfg: dict) -> None:
         sample_rate=int(cfg.get("audio_sample_rate", 44100)),
         channels=int(cfg.get("audio_channels", 2)),
     )
+
+
+def _parse_loudnorm_json(stderr: str) -> dict | None:
+    """Pull the measurement JSON that ffmpeg's loudnorm prints to stderr."""
+    try:
+        end = stderr.rindex("}")
+        start = stderr.rindex("{", 0, end)
+        data = json.loads(stderr[start : end + 1])
+    except (ValueError, json.JSONDecodeError):
+        return None
+    keys = ("input_i", "input_tp", "input_lra", "input_thresh", "target_offset")
+    if not all(key in data for key in keys):
+        return None
+    return {key: data[key] for key in keys}
+
+
+def _normalize_turn_loudness(path: Path, cfg: dict, work_dir: Path) -> None:
+    """Loudness-match one rendered turn in place so cross-provider voices align.
+
+    ElevenLabs hosts and ElevenLabs/Cartesia guests can be mastered to different
+    reference levels by their providers. The final program master sets overall
+    loudness but cannot fix per-speaker balance, so each turn is leveled to a
+    common target before concat. Two-pass linear loudnorm (measure -> linear
+    gain) preserves natural dynamics and respects true-peak; if measurement is
+    unavailable we fall back to single-pass, and any failure leaves the turn
+    untouched. Never aborts the episode over a normalization hiccup.
+    """
+    if not cfg.get("normalize_turn_loudness", True):
+        return
+    path = Path(path)
+    if not path.exists():
+        return
+
+    target_i = float(cfg.get("audio_loudness_i", -16.0))
+    target_tp = float(cfg.get("audio_true_peak", -1.5))
+    target_lra = float(cfg.get("audio_lra", 11.0))
+    sample_rate = int(cfg.get("audio_sample_rate", 44100))
+    channels = int(cfg.get("audio_channels", 2))
+    base = f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}"
+
+    measured: dict | None = None
+    try:
+        probe = subprocess.run(
+            [
+                "ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
+                "-af", base + ":print_format=json", "-f", "null", "-",
+            ],
+            capture_output=True, text=True, timeout=120,
+        )
+        measured = _parse_loudnorm_json(probe.stderr)
+    except (subprocess.SubprocessError, OSError):
+        measured = None
+
+    if measured is not None:
+        try:
+            input_i = float(measured["input_i"])
+        except (TypeError, ValueError):
+            input_i = float("-inf")
+        if not (input_i > -70.0):
+            return  # near-silent / unmeasurable: leave the turn as recorded
+        af = (
+            f"{base}:measured_I={measured['input_i']}"
+            f":measured_TP={measured['input_tp']}"
+            f":measured_LRA={measured['input_lra']}"
+            f":measured_thresh={measured['input_thresh']}"
+            f":offset={measured['target_offset']}"
+            ":linear=true:print_format=summary"
+        )
+    else:
+        af = base + ":print_format=summary"
+
+    normalized = work_dir / f"{path.stem}_norm{path.suffix}"
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg", "-y", "-i", str(path), "-af", af,
+                "-ar", str(sample_rate), "-ac", str(channels),
+                "-c:a", "libmp3lame", "-b:a", _audio_bitrate_value(cfg),
+                str(normalized),
+            ],
+            capture_output=True, text=True, timeout=180,
+        )
+        if result.returncode == 0 and normalized.exists() and normalized.stat().st_size > 0:
+            normalized.replace(path)
+        else:
+            logger.debug("Turn loudness normalize skipped (ffmpeg rc=%s)", result.returncode)
+            normalized.unlink(missing_ok=True)
+    except (subprocess.SubprocessError, OSError) as exc:
+        logger.debug("Turn loudness normalize error: %s", exc)
+        normalized.unlink(missing_ok=True)
 
 
 def _master_audio(input_path: Path, output_path: Path, cfg: dict, work_dir: Path) -> dict:
@@ -2691,6 +2841,7 @@ def _tts_two_host(
             instructions=instructions,
         )
         if generated_path.exists():
+            _normalize_turn_loudness(generated_path, cfg, work_dir)
             turn_files.append(generated_path)
             turn_indices.append(i)
 
@@ -3591,7 +3742,46 @@ if __name__ == "__main__":
         action="store_true",
         help="Disable guest experts for this episode.",
     )
+    parser.add_argument(
+        "--digest-dry-run",
+        metavar="SHOW_ID",
+        default=None,
+        help="Rank a digest show's recent articles and print the ranked table; generates no audio.",
+    )
     args = parser.parse_args()
+
+    if args.digest_dry_run:
+        # Phase 1: ranking-only preview. No audio, no writes.
+        import digest_ranker
+        from digest_shows import DigestConfigError, get_show
+        from digest_ledger import load_ledger
+
+        repo_root = Path(args.repo)
+        try:
+            show = get_show(repo_root, args.digest_dry_run)
+        except DigestConfigError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            sys.exit(2)
+        cfg = load_config(repo_root)
+        akey = os.environ.get("ANTHROPIC_API_KEY")
+        client = anthropic.Anthropic(api_key=akey) if akey else None
+        if client is None:
+            logger.warning("ANTHROPIC_API_KEY not set; ranking uses metadata signals only (no LLM importance).")
+        result = digest_ranker.rank_show(
+            show,
+            load_ledger(repo_root, show["id"]),
+            client,
+            cfg=cfg,
+            repo_root=repo_root,
+            dry_run=True,
+        )
+        try:
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # journal titles carry non-cp1252 chars
+        except Exception:
+            pass
+        print(digest_ranker.format_dry_run_table(result))
+        sys.exit(0)
+
     topic = args.topic or input("Enter podcast topic: ").strip()
     if not topic:
         sys.exit(1)

@@ -152,6 +152,31 @@ EPISODE_TYPES: dict[str, dict[str, str | list[str]]] = {
         "host_dynamic": "Juno notices what finally clicked; Caspar turns it into retrieval practice.",
         "avoid": "Avoid bland recap. Make the listener actively retrieve and connect ideas.",
     },
+    "digest": {
+        "label": "Journal Digest",
+        "tagline": "A weekly peer-level rounds on the most important new papers in a niche.",
+        "best_for": "Recurring research round-ups for a specialist who already knows the field.",
+        "research_focus": (
+            "Work ONLY from the supplied ranked article list. For the headline paper, surface design, "
+            "population, effect size, key limitations, and how it changes practice. For each quick-hit "
+            "round, give one paraphrased finding, the journal, and why it matters to a specialist. "
+            "Paraphrase from the metadata provided; never reproduce abstracts verbatim."
+        ),
+        "structure": (
+            "Cold open on why this week matters -> headline paper in depth (design, numbers, caveats, "
+            "practice impact) -> 3 to 5 rapid rounds (one finding each) -> what to watch / still unsettled "
+            "-> sign-off; journal and DOI citations go in the show notes."
+        ),
+        "host_dynamic": (
+            "Caspar drives methods, statistics, and evidence quality; Juno presses on clinical meaning, "
+            "patient-facing stakes, and what actually changes. Peer-to-peer, not explainer; assume the "
+            "listener is a specialist physician."
+        ),
+        "avoid": (
+            "Avoid lay-explainer framing, defining basic specialist terms, reading abstracts verbatim, "
+            "hype, and overclaiming from single small studies. Label preprints and weak evidence clearly."
+        ),
+    },
 }
 
 EPISODE_TYPE_ALIASES: dict[str, str] = {
@@ -214,6 +239,10 @@ EPISODE_TYPE_ALIASES: dict[str, str] = {
     "recap": "review",
     "quiz": "review",
     "assessment": "review",
+    "journal": "digest",
+    "rounds": "digest",
+    "roundup": "digest",
+    "weekly": "digest",
 }
 
 
