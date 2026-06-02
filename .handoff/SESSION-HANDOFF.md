@@ -1,26 +1,37 @@
-# Session hand-off — 2026-05-31 (machine: desktop / CRANE-DESK)
+# Session hand-off — 2026-06-01 (machine: laptop)
 
 ## STATE (read this first)
-- Branch: `main`, clean + synced with `origin/main` after this hand-off. Only the main worktree exists — nothing stranded anywhere.
-- **A new feature was planned, approved, and its Phase 1 shipped: "Asynchronous Rounds" — three weekly auto-generated journal-digest shows** (MFM Rounds / The Fetal Frontier / Signal in the Scan) for the commute. Phase 1 is the **ranking engine only — it generates NO audio, writes NO files, publishes nothing.** It picks the most important recent papers per field and prints a ranked table. Validated live across all three shows and the picks look genuinely good.
-- This session also committed the **prior session's pending voice work** (Juno/Caspar doc sweep, cross-provider Cartesia guests, per-turn loudness, voice-ID validation) that had been sitting uncommitted. The whole TTS-provider question from the last hand-off is now closed.
+- Branch `main`, clean after this handoff commit + push.
+- 2 prior commits + this handoff went out: `93642d4` (Phase 2 digests) + `98ad4b2` (Phase 3 multi-feed publishing).
+- **Asynchronous Rounds Phase 3 shipped.** Each digest show now publishes into its own `feed-<show>.xml` with per-show channel metadata + cover URL, and the DOI ledger fills after each successful publish. End-to-end smoke `--digest mfm` produced a publishable 10:01 episode and validated everything.
+- One decision is genuinely waiting: **whether to ship the smoke MFM episode as the inaugural MFM Rounds drop, or re-run later.** Smoke artifacts (MP3 + feed-mfm.xml + ledger) are laptop-only — see *Watch out for*.
 
 ## Done this session
-- **Planned + approved the digest feature.** Full plan: `C:\Users\andre\.claude\plans\idempotent-strolling-riddle.md` (read it before Phase 2). Key decisions: headline + 3–5 rounds format, rolling 6-month window, sub-brand under Juno/Caspar, 3 separate feeds, citation-free ranking.
-- **Shipped Phase 1** (`58d0a67`): `digest_sources.py` (PubMed/Europe PMC/Altmetric/SCImago clients, all soft-fail), `digest_ranker.py` (discover→ledger-filter→enrich→batched-LLM→score→pick), `digest_shows.py` + `digests.json` (3 shows), `digest_ledger.py` (DOI ledger), `assets/sjr_2024.csv` (quartile table), `digest` episode type, `--digest-dry-run <show>` CLI. Soft-failure + copyright firewall tested.
-- **Committed prior voice finalization** (`ff6715c` docs + validator; `58d0a67` carries the config/engine parts): ElevenLabs hosts + Cartesia guests, Fish dropped, per-turn loudness, 13/13 voices validated.
+- **Phase 3 multi-feed publishing (`98ad4b2`):**
+  - `update_rss(feed_meta=...)` writes per-show feed file + channel metadata; `git_publish(feed_filename=...)`; `_run_with_cfg` threads both through.
+  - `_feed_meta_from_show` (new helper) builds the override dict from `digests.json` (title, description, author, category, cover_image).
+  - `digest_ledger.record_episode` (new) writes covered DOIs + PMIDs + episode_url after publish; idempotent on re-runs, soft-fails on weird records.
+  - Cover art generated locally via SDXL on the 4080 (`scripts/gen_covers.py`, `HF_HOME=D:\FLUX`). FLUX-schnell deferred — repo is HF-gated.
+  - Bonus fix: RSS `<description>` preamble leak (from prior NEXT-STEPS bug list). `update_rss` now defensively re-runs `_strip_to_dialogue` before slicing the preview and falls back to the episode topic if no `SPEAKER:` line is found.
+- **Smoke `--digest mfm`** (SKIP_GIT): title *"Screening Chronic Hypertension Before Aspirin"*, 10:01 mastered MP3, peer-level study-design framing ("not a new observational cohort—it's embedded within RCT infrastructure"), all 5 DOIs recorded in `mfm_ledger.json`, `feed.xml` untouched.
 
 ## Next up
-1. **Phase 2 — digest episode type + research branch (generates the first real audio).** Extract `_script_from_research_package`, add `_digest_research_and_script` (cloud research model, NO tools, paraphrase-only), branch on `cfg["digest_articles"]`, `_run_with_cfg` + `run_digest(show_id)` + `--digest` CLI. Plan §"Build phases". **Recommend a fresh session for this** — it's a different subsystem.
-2. **Phase 3** multi-feed publishing, then **Phase 4** scheduling (Task Scheduler) + bot `/digest`.
-3. Optional: eyeball more `--digest-dry-run` output and tune the LLM ranking prompt before spending audio.
+1. **Decide whether to publish the smoke MFM episode.** Listen at `episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3` (laptop only). To ship:
+   ```powershell
+   git add feed-mfm.xml digests/ episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.*
+   git commit -m "Publish MFM Rounds inaugural episode"
+   git push
+   ```
+   Then submit `https://rauscha.github.io/Dialog-podcast/feed-mfm.xml` to Spotify for Creators (one-time per digest show).
+2. **Cover-art polish (optional).** MFM (navy stripes) + AI (mint grid) are abstract but generic. Fetal (coral topography) is the strongest. Re-roll: edit the seed/prompt tuple in `scripts/gen_covers.py` and run `python scripts/gen_covers.py mfm ai`.
+3. **Phase 4 — scheduling + on-demand.** `run_all_due_digests`, `--digest-all`, per-show weekday gating with `last_run`, `run_digests.ps1` + one daily Windows Task Scheduler entry, Telegram `/digest` command. **Recommend a fresh session for this** — different subsystem (cron / bot).
+
+See `.handoff/PENDING-DECISIONS.md` for the four open decisions in checklist form.
 
 ## Watch out for
-- **Phase 1 publishes nothing.** No feeds, no episodes, no audio. The dry-run is read-only. Don't expect a feed yet.
-- **Ranking is LLM-dominant on fresh papers** — Altmetric is empty for papers <6 wk old (404→None), so its weight renormalizes onto the LLM. By design; tune the LLM prompt, not the weights.
-- **Quartile CSV is a curated 12-journal table**, not the full SCImago export (SCImago returns 403 to scripted downloads). Drop the official export into `assets/sjr_*.csv` and it supersedes (newest filename wins).
-- **The `digest` episode type is already registered** in `episode_types.py` (pulled forward so show config validates). Don't re-add it in Phase 2.
-- **Shared-file commit note:** `58d0a67` also contains the cross-provider-guest + per-turn-loudness changes, because `config.json`/`generate_podcast.py`/`.env.example` were touched by both that prior effort and the digest work (couldn't cleanly split without interactive staging).
-- **Laptop pickup:** add `NCBI_EMAIL` (+ optional `NCBI_API_KEY`) to `.env` for digests; `ELEVENLABS_API_KEY` + `CARTESIA_API_KEY` for audio (Fish key no longer used); `bash scripts/install-hooks.sh` for the pre-commit secret hook.
-- **Pre-existing bug:** RSS `<description>` leaked a fact-check preamble (`_strip_to_dialogue` anchors on first `SPEAKER:` line). Noted in NEXT-STEPS; digests share the path.
-- **Standing carryovers:** work-dir cleanup re-enable 2026-06-06; Telegram token rotation (not urgent, git clean); CRLF→LF warnings on commit are benign.
+- **Laptop-only artifacts.** `feed-mfm.xml`, `digests/mfm_ledger.json`, and both smoke episodes (`20260601_190410_*` from Phase 2, `20260601_203813_*` from Phase 3) are uncommitted — deliberately, since the publish decision wasn't made. **They do NOT sync to desktop via git pull.** Two options on desktop: (a) copy the MP3 over manually if you want to listen to *this specific* take, or (b) just re-run `python generate_podcast.py --digest mfm` — same paper set (ledger never committed), fresh script, ~10 min + ~$0.50.
+- **`feed.xml` still contains the historical preamble leak** from a 2026-05-07 episode. The fact-check fix protects *future* writes only. Cleaning the historical entry means editing the XML by hand or re-rendering that specific `<item>`. Not urgent.
+- **SDXL weights at `D:\FLUX`** (~7 GB). FLUX-schnell never downloaded due to HF gating. `HF_HOME` is set inside `scripts/gen_covers.py` only, not globally — other HF usage on this machine still hits the default C: cache.
+- **iTunes nested categories not implemented.** `Science:Medicine` from `digests.json` collapses to flat `Science` in the channel block. Listed in NEXT-STEPS.md as Phase 3.5 polish (along with stricter `_strip_to_dialogue` regex).
+- **Telegram bot token rotation** still pending (memory note). Git history is verified clean.
+- **Work-dir cleanup re-enables on 2026-06-06.** Memory reminder; uncomment `shutil.rmtree` in `generate_podcast.py`.
