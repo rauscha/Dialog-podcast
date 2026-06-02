@@ -35,6 +35,24 @@
       "run_id": "20260531_141432_a_history_of_the_use_of_forceps_in_obstetrics",
       "topic": "A history of the use of forceps in obstetrics",
       "usable_callback": "the story of Princess Charlotte of Wales and how her death shifted the medical community toward intervention in childbirth"
+    },
+    {
+      "caspar_challenged": "his own assumption that methodological precision could contain the survivor quality-of-life findings; he revised mid-episode when the Saigal data and the disability survey gap proved too large to dismiss",
+      "created_at": "2026-06-02T11:48:00.787939+00:00",
+      "juno_noticed": "that the survival statistics at 22 weeks are partly built from hospitals that never tried \u2014 a policy choice baked into the evidence base, fed back as neutral data",
+      "relationship_moment": "Caspar said 'I came in treating the survivor data as a soft counterpoint. It's not. It's evidence.' \u2014 a genuine mid-episode revision that Juno didn't push for but held space for",
+      "run_id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia",
+      "topic": "Investigate the ethics of resuscitation decisions at periviability, focused on the 22\u201325 week gestational window. This is the hardest frontier in perinatal ethics because survival rates are real but morbidity rates are also high and center-dependent\u2014a 23-weeker at a level-IV NICU in Toronto has a meaningfully different prognosis than the same infant at a rural facility. Structure the episode around three interlocking problems: (1) The data problem\u2014explain what the NICHD Neonatal Research Network outcomes data actually shows for 22, 23, 24, and 25 weekers (survival rates, rates of major morbidity including severe IVH, NEC, chronic lung disease, neurodevelopmental impairment), and why data from centers of excellence may not apply to the family sitting in front of a community-hospital clinician at 3 a.m. (2) The consent problem\u2014how do you obtain genuinely informed consent from parents who are terrified, often under time pressure, and confronted with statistics they cannot meaningfully process? Discuss the research on how framing effects (presenting survival vs. mortality first) influence parental decisions, and what 'shared decision-making' actually means versus what it devolves to in practice. (3) The values problem\u2014whose quality-of-life judgment counts? Introduce the disability rights critique of prognostic reasoning: the argument that clinicians systematically underestimate the quality of life of children with disabilities, and cite the empirical work (e.g., Saigal's studies on ELBW survivors' self-assessed quality of life vs. clinician predictions). Close by naming what remains genuinely unresolved: whether parental preference should be decisive at 22 weeks when the evidence is so uncertain, and how different hospital protocols handle that question differently. Be specific with numbers. Avoid generic 'this is complicated' hedging\u2014name the actual tensions.",
+      "usable_callback": "Saigal's McMaster study: 86% of ELBW adolescents had functional limitations, 61% gave themselves perfect quality-of-life scores vs. 49% of normal-birthweight peers \u2014 and Caspar's admission that he had to revise something"
+    },
+    {
+      "caspar_challenged": "His own initial framing of In re A.C. as a win; revised mid-episode when Pemberton v. Tallahassee demonstrated that 'virtually all cases' and 'extremely rare and truly exceptional' are not narrow protections but open invitations \u2014 any exception to autonomy becomes a mechanism for stretching the exception.",
+      "created_at": "2026-06-02T12:14:36.297038+00:00",
+      "juno_noticed": "That the gap between what Angela Carder said out loud and what the court recorded as her 'wishes' is itself the finding \u2014 and that the speed of the process (six hours) is not incidental but the condition under which refusal becomes practically impossible.",
+      "relationship_moment": "Caspar said 'I was going to call that strong protection. I'm revising that.' \u2014 unprompted, before Juno pushed. Juno held the line: 'So the exception is defined by whoever has the power to call something exceptional.' They arrived at the same place from different directions.",
+      "run_id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n",
+      "topic": "Use the 1987 Angela Carder case as the primary lens, but do not stop there\u2014use it to open outward to the structural pattern it represents and how courts and clinical practice have (or have not) evolved since. Angela Carder was a 27-year-old woman with recurrent bone cancer, 25 weeks pregnant, who was dying; a Washington D.C. hospital obtained a court order for an emergency cesarean over her explicit refusal. The infant died within hours; Carder died two days later. The DC Court of Appeals later ruled the order was wrong. Narrate the case with specific detail (what the hospital's reasoning was, what the court heard, what Carder herself said, what the ACLU argued). Then use it to examine: (1) the legal doctrine of bodily integrity and how courts have applied it inconsistently to pregnant vs. non-pregnant patients\u2014including forced cesarean cases in the UK and Ireland as international comparators; (2) the 'fetal protection' argument and where it has been used to justify court-ordered interventions, including cases of substance-using pregnant people being detained or prosecuted; (3) the ACOG and ACNM positions on maternal-fetal conflict, and what 'almost never' means in practice when they say forced intervention is almost never justified; (4) the under-discussed epistemic problem: clinicians are frequently wrong about the urgency of the situation they're using to override a refusal. What does the literature say about how often emergency cesareans obtained over patient objection were later judged to have been unnecessary? Close by posing the unresolved question directly: Is there any coherent ethical position that simultaneously respects full maternal autonomy and grants the near-term fetus significant moral weight? Don't resolve it artificially.",
+      "usable_callback": "Caspar's revision on In re A.C. \u2014 'the loophole isn't accidental, it's structural' \u2014 and Juno's formulation: 'A door that opens from the outside.' Also: Wisconsin's sealed proceedings where the fetus gets a court-appointed attorney before the mother does."
     }
   ],
   "hosts": {
@@ -108,7 +126,26 @@
     "the thing about innovation",
     "the thing about the Chamberlens",
     "the thing about medical knowledge",
-    "the thing about the 17th century"
+    "the thing about the 17th century",
+    "the thing about periviability",
+    "the thing about consent",
+    "the thing about disability",
+    "the thing about prognosis",
+    "whose judgment counts",
+    "the data runs out",
+    "making lemonade",
+    "dressed as a prediction",
+    "the evidence base",
+    "the thing about resuscitation",
+    "the thing about bodily autonomy",
+    "the thing about forced intervention",
+    "the thing about fetal protection",
+    "virtually all cases",
+    "almost never justified",
+    "extremely rare and truly exceptional",
+    "the exception proves the rule",
+    "a door that opens from the outside",
+    "the loophole isn't accidental"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -244,6 +281,90 @@
         "public perception"
       ],
       "why_keep": "This memory captures a turning point in the history of obstetrics and the broader implications of medical decision-making, which is crucial for understanding the legacy of forceps."
+    },
+    {
+      "created_at": "2026-06-02T11:48:00.787939+00:00",
+      "id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia_01",
+      "summary": "Vermont Oxford Network 2024 data: overall survival at 22 weeks was 24.9%, but among infants who received postnatal life support it was 35.4%. The gap exists because the first number includes every infant never resuscitated. Rysavy 2015 found hospital treatment rates accounted for 78% of between-hospital survival variation at 22\u201323 weeks \u2014 institutional philosophy, not biology, determines survival at 22 weeks.",
+      "tags": [
+        "periviability",
+        "22 weeks",
+        "survival data",
+        "institutional variation",
+        "circular evidence"
+      ],
+      "why_keep": "Captures the specific circularity argument \u2014 survival data built from non-treating hospitals fed back as neutral evidence \u2014 which became the episode's structural spine and is a usable callback for any future episode on medical statistics, consent, or institutional bias."
+    },
+    {
+      "created_at": "2026-06-02T11:48:00.787939+00:00",
+      "id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia_02",
+      "summary": "Saigal's McMaster study on ELBW adolescent survivors: 86% had functional limitations, yet 61% rated their quality of life as perfect vs. 49% of normal-birthweight controls. Caspar revised his position on this mid-episode, moving from treating it as a methodological soft point to acknowledging it as evidence. The 82.4% of U.S. physicians who believe disabled people have worse quality of life vs. Albrecht and Devlieger's finding that 54% of people with moderate-to-serious disabilities report good or excellent quality of life \u2014 a gap Caspar called 'too large and too consistent to be noise.'",
+      "tags": [
+        "Saigal",
+        "ELBW survivors",
+        "quality of life",
+        "disability rights critique",
+        "clinician bias",
+        "Caspar revision"
+      ],
+      "why_keep": "The Saigal finding plus Caspar's on-air revision is a strong relationship callback \u2014 it's the moment where his precision-first posture genuinely broke. Usable in any future episode touching disability, prognosis, or whose judgment counts."
+    },
+    {
+      "created_at": "2026-06-02T11:48:00.787939+00:00",
+      "id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia_03",
+      "summary": "Juno's closing line: 'I came into this thinking the problem was that we didn't have enough information. I think the problem is that we haven't decided what the information is for.' Paired with Dr. Voss's: 'The disagreement among clinicians is not a sign that we need better data. It's a sign that we haven't agreed on whose judgment counts when the data runs out.'",
+      "tags": [
+        "periviability",
+        "consent",
+        "values",
+        "closing line",
+        "unresolved tension"
+      ],
+      "why_keep": "A clean formulation of the episode's core tension that could be called back whenever the show revisits medicine, ethics, or the limits of evidence-based reasoning."
+    },
+    {
+      "created_at": "2026-06-02T12:14:36.297038+00:00",
+      "id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n_01",
+      "summary": "Angela Carder, 27, recurrent Ewing's sarcoma, 25-26 weeks pregnant, said 'I don't want it done' more than once. George Washington University Hospital petitioned the court without contacting her oncologist, who later said he would have testified the surgery was medically inadvisable. Three-judge appellate panel denied stay by telephone in minutes. Infant died within hours; Carder died two days later, cesarean listed as contributing cause. DC Court of Appeals vacated the order three years later in In re A.C. \u2014 but preserved 'extremely rare and truly exceptional' exceptions. Pemberton v. Tallahassee (1999) used that exception to uphold a forced cesarean nine years later.",
+      "tags": [
+        "Angela Carder",
+        "In re A.C.",
+        "forced cesarean",
+        "bodily integrity",
+        "Pemberton",
+        "fetal protection",
+        "obstetric coercion"
+      ],
+      "why_keep": "The Carder case is the episode's structural spine and a usable callback for any future episode on consent, bodily autonomy, medical power, or the gap between legal doctrine and clinical practice. The oncologist detail and the six-hour clock are specific enough to anchor future references."
+    },
+    {
+      "created_at": "2026-06-02T12:14:36.297038+00:00",
+      "id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n_02",
+      "summary": "Kolder 1987 NEJM survey: 88% of court-ordered obstetric interventions obtained in six hours or less; 81% of women subjected to them were Black, Asian, or Hispanic; all were poor. Six cases where predictions of fetal harm were later found inaccurate. No systematic mechanism exists for retrospective review of cases where clinical urgency was overstated \u2014 the uncertainty is structurally invisible. Caspar's framing: 'The legal framework treats clinical judgment as authoritative precisely in the situations where uncertainty is highest and the stakes of error are irreversible.'",
+      "tags": [
+        "Kolder survey",
+        "forced intervention",
+        "race",
+        "class",
+        "clinical accuracy",
+        "epistemic problem",
+        "obstetric coercion"
+      ],
+      "why_keep": "The demographic data and the epistemic invisibility argument are specific and usable in future episodes on medical racism, consent under pressure, or the limits of clinical authority."
+    },
+    {
+      "created_at": "2026-06-02T12:14:36.297038+00:00",
+      "id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n_03",
+      "summary": "Caspar's structural formulation on autonomy exceptions: 'If autonomy is truly paramount, there can be no exception. If there can be an exception, autonomy is not paramount. Every attempt to define the exception narrowly gets used by the people with power to do the defining.' Juno's closing: 'She said it more than once. She'd been in hospitals her whole life \u2014 she knew what she was refusing. And thirty-eight years later we're still arguing about whether there's a version of the framework where that sentence is enough.' Caspar: 'I don't think we've found one.'",
+      "tags": [
+        "autonomy",
+        "exception logic",
+        "closing exchange",
+        "unresolved tension",
+        "Angela Carder",
+        "bodily integrity"
+      ],
+      "why_keep": "A clean formulation of the episode's core structural argument, usable as a callback whenever the show revisits consent, legal exceptions, or the gap between stated principles and institutional practice."
     }
   ],
   "show": {
@@ -256,5 +377,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-05-31T19:20:42.111429+00:00"
+  "updated_at": "2026-06-02T12:14:36.298041+00:00"
 }
