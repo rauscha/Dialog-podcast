@@ -1,0 +1,378 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 The Clock"
+    },
+    {
+      "start_sec": 64.01,
+      "start_time": "1:04",
+      "title": "\u2014 Angela Carder, Specifically"
+    },
+    {
+      "start_sec": 128.03,
+      "start_time": "2:08",
+      "title": "\u2014 The Petition and the Missing Oncologist"
+    },
+    {
+      "start_sec": 192.04,
+      "start_time": "3:12",
+      "title": "\u2014 The Bedside Court"
+    },
+    {
+      "start_sec": 256.05,
+      "start_time": "4:16",
+      "title": "\u2014 \"Virtually All Cases\" and the Loophole"
+    },
+    {
+      "start_sec": 320.06,
+      "start_time": "5:20",
+      "title": "\u2014 UK and Ireland: The Capacity Trap"
+    },
+    {
+      "start_sec": 384.08,
+      "start_time": "6:24",
+      "title": "\u2014 Dr. Vale: The Bedside Assessment"
+    },
+    {
+      "start_sec": 448.09,
+      "start_time": "7:28",
+      "title": "\u2014 The Demographic Pattern and Pregnancy Criminalization"
+    },
+    {
+      "start_sec": 512.1,
+      "start_time": "8:32",
+      "title": "\u2014 \"Almost Never\" and What It Contains"
+    },
+    {
+      "start_sec": 576.11,
+      "start_time": "9:36",
+      "title": "\u2014 The Unresolved Question"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n.companion.json",
+  "duration_sec": 685.125805,
+  "episode_type": "case_study",
+  "episode_type_label": "Case Study",
+  "follow_up_links": [
+    {
+      "reason": "The landmark appellate decision that vacated the forced cesarean order, establishing that 'in virtually all cases' a pregnant patient's decision must be honored. First American appellate case decided against forced cesarean, though issued after Carder's death.",
+      "source": "District of Columbia Court of Appeals",
+      "title": "In re A.C., 573 A.2d 1235 (D.C. 1990)",
+      "url": "https://law.justia.com/cases/district-of-columbia/court-of-appeals/1990/87-609-4.html"
+    },
+    {
+      "reason": "The foundational survey documenting forced obstetric interventions across 11 states. Found court orders obtained in 86% of cases sought; 81% of women were Black, Asian, or Hispanic; all were poor. Reported six cases where predictions of fetal harm were inaccurate.",
+      "source": "New England Journal of Medicine",
+      "title": "Court-Ordered Obstetrical Interventions",
+      "url": "https://repository.library.georgetown.edu/handle/10822/727661"
+    },
+    {
+      "reason": "ACOG's current ethical guidance stating the College 'opposes the use of coerced medical interventions for pregnant women' and 'strongly discourages' court-ordered interventions. Contains the critical 'virtually all cases' language.",
+      "source": "Obstetrics & Gynecology",
+      "title": "ACOG Committee Opinion No. 664: Refusal of Medically Recommended Treatment During Pregnancy",
+      "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2016/06/refusal-of-medically-recommended-treatment-during-pregnancy"
+    },
+    {
+      "reason": "Post-In re A.C. case where court upheld forced cesarean, finding state interest in viable fetus outweighed mother's bodily integrity. Demonstrates that In re A.C. did not end forced interventions\u2014courts continue to find 'exceptional cases.'",
+      "source": "Federal Supplement",
+      "title": "Pemberton v. Tallahassee Memorial Regional Center, 66 F. Supp. 2d 1247",
+      "url": "https://law.justia.com/cases/federal/district-courts/FSupp2/66/1247/2489193/"
+    },
+    {
+      "reason": "First reported Irish case on cesarean refusal. Court refused to order forced cesarean, holding it would be 'a gross violation of her right to bodily integrity' even with constitutional fetal life protections under Article 40.3.3.",
+      "source": "Irish High Court",
+      "title": "Health Service Executive v B (2016)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5907905/"
+    },
+    {
+      "reason": "UK landmark establishing that 'a mentally competent patient has an absolute right to refuse to consent to medical treatment for any reason, rational or irrational.' But also found needle phobia created temporary incapacity\u2014showing how capacity determinations can circumvent autonomy.",
+      "source": "Family Law Reports",
+      "title": "Re MB (Medical Treatment) [1997] EWCA Civ 3093",
+      "url": "https://www.globalhealthrights.org/wp-content/uploads/2013/03/EWCA-1997-Re-MB-Medical-Treatment.pdf"
+    },
+    {
+      "reason": "Documents over 1,800 cases from 1973-2022 where pregnant people were deprived of constitutional rights under pretext of protecting 'unborn life.' Shows pregnancy criminalization accelerating, with substance use as primary entry point.",
+      "source": "Pregnancy Justice",
+      "title": "The Rise of Pregnancy Criminalization: A Pregnancy Justice Report",
+      "url": "https://www.pregnancyjusticeus.org/rise-of-pregnancy-criminalization-report/"
+    },
+    {
+      "reason": "ACLU's comprehensive account of the Carder case and subsequent litigation, including the argument that court-ordered intervention 'drives women at high risk of complications during pregnancy and childbirth out of the health care system.'",
+      "source": "ACLU",
+      "title": "Coercive and Punitive Governmental Responses to Women's Conduct During Pregnancy",
+      "url": "https://www.aclu.org/documents/coercive-and-punitive-governmental-responses-womens-conduct-during-pregnancy"
+    }
+  ],
+  "generated_at": "2026-06-02T12:20:57.307683+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim specific error rates as established fact\u2014the literature is limited and the guest should say so",
+        "Should not imply that all forced interventions are wrong or that all refusals should be honored without qualification",
+        "Should not speak as if capacity assessment is a solved problem with clear protocols",
+        "Should not name or imply any real institution, hospital system, or identifiable case beyond those already in the research package"
+      ],
+      "cartesia_voice_id": "5ee9feff-1265-424a-9d7f-8e4d431a12c7",
+      "credential_frame": "A composite voice drawing on maternal-fetal medicine specialists, clinical ethicists embedded in labor and delivery units, and researchers who study how urgency is constructed and communicated in obstetric emergencies",
+      "delivery_baseline": "Measured pace, slight hesitation before key claims, not performatively warm\u2014clinical but not cold. Speaks as if choosing words carefully because the stakes of imprecision are real.",
+      "display_name": "Dr. Vale",
+      "expertise": "The phenomenology of the bedside capacity assessment under time pressure\u2014who performs it, how long it takes, what counts as evidence of incapacity, and how the institutional interest in a particular outcome shapes the assessment. Also: what the literature actually says about retrospective review of emergency cesarean decisions and how often the clinical picture that justified override was later found to be inaccurate or overstated.",
+      "field": "obstetric ethics and clinical decision-making under uncertainty",
+      "label": "DR VALE",
+      "personality": "Careful, slightly reluctant, speaks in qualifications that feel earned rather than evasive. Has clearly thought about this for a long time and is not comfortable with where the thinking leads. Does not perform neutrality\u2014has a position, but holds it with visible tension. Interrupts themselves to add a caveat. Not a crusader.",
+      "role_in_episode": "Enters after the Carder case narrative is established, to address the epistemic problem directly. Complicates the clean legal framing by describing what the decision actually looks like from inside the institution. Should make Caspar's structural analysis feel more uncomfortable, not more confirmed. Exits before the closing ethical question so Juno and Caspar can hold that unresolved.",
+      "synthetic": true,
+      "tts_provider": "cartesia",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "Angela Carder was diagnosed with Ewing's sarcoma at age 13, survived through aggressive treatment, married at 27, and became pregnant. At 26 weeks gestation, her cancer recurred and metastasized to her lung. She was admitted to George Washington University Hospital.",
+      "confidence": "high",
+      "id": "C1",
+      "source_ids": [
+        "S1",
+        "S8"
+      ]
+    },
+    {
+      "claim": "When told by her doctor that she might die as a result of the ordered surgery and that he would not perform it without her consent, Carder said repeatedly, 'I don't want it done.' This declaration did not sway the hospital to withdraw its petition or the court to amend its order.",
+      "confidence": "high",
+      "id": "C2",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "The hospital petitioned the court without first contacting Carder's longtime cancer specialist, who later stated he would have testified that the operation was 'medically inadvisable both for Angela Carder and for the fetus.'",
+      "confidence": "high",
+      "id": "C3",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "Evidence presented to the court hypothesized the fetus had a 50-60% chance of survival, which would decrease if the procedure was delayed. Doctors' testimony was contradictory regarding prognosis. The judge was unable to identify Carder's wishes or her level of competency.",
+      "confidence": "high",
+      "id": "C4",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "A three-judge appellate panel denied a motion to stay the order during an emergency telephone appeal. The cesarean was performed. The infant (Lindsay Marie Carder) died within two hours; Angela Carder died two days later. The c-section was listed as a contributing cause of her death.",
+      "confidence": "high",
+      "id": "C5",
+      "source_ids": [
+        "S1",
+        "S8"
+      ]
+    },
+    {
+      "claim": "The D.C. Court of Appeals en banc vacated the order on April 26, 1990, holding that 'in virtually all cases the question of what is to be done is to be decided by the patient\u2014the pregnant woman\u2014on behalf of herself and the fetus.' The court did not grant absolute autonomy, leaving open 'extremely rare and truly exceptional' cases.",
+      "confidence": "high",
+      "id": "C6",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "120 organizations filed amicus briefs supporting Carder, including the American Medical Association and ACOG. Only two groups defended the forced surgery: Americans United for Life and the United States Conference of Catholic Bishops.",
+      "confidence": "high",
+      "id": "C7",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "The 1987 Kolder survey found court orders for cesarean sections had been obtained in 11 states, for hospital detentions in 2 states, and for intrauterine transfusions in 1 state. Court orders were obtained in 86% of cases sought. 81% of women were Black, Asian, or Hispanic; all were poor.",
+      "confidence": "high",
+      "id": "C8",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "The Kolder survey reported six cases in which forced cesareans were sought where the prediction of harm to the fetus was found to be inaccurate. In 88% of cases, the court order was obtained in six or fewer hours.",
+      "confidence": "high",
+      "id": "C9",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "ACOG Committee Opinion 664 (2016) states: 'Pregnancy is not an exception to the principle that a decisionally capable patient has the right to refuse treatment, even treatment needed to maintain life.' ACOG 'opposes the use of coerced medical interventions for pregnant women' and 'strongly discourages' court-ordered interventions.",
+      "confidence": "high",
+      "id": "C10",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "In Pemberton v. Tallahassee (1999), a woman attempting VBAC at home was brought to the hospital against her will by ambulance after a court order. The court held that the state's interest in preserving the life of an unborn child outweighed the mother's constitutional interest of bodily integrity, distinguishing In re A.C. as leaving open 'extremely rare and truly exceptional' cases.",
+      "confidence": "high",
+      "id": "C11",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "In the UK Re MB case (1997), the Court of Appeal held that 'a mentally competent patient has an absolute right to refuse to consent to medical treatment for any reason, rational or irrational, or for no reason at all, even where that decision may lead to his or her own death.' However, the court found MB's needle phobia created temporary incapacity.",
+      "confidence": "high",
+      "id": "C12",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "In Ireland's HSE v B (2016), Justice Twomey refused to order a forced cesarean on a woman who had three prior cesareans and wanted vaginal birth, stating: 'If Ms. B was not pregnant, the performance of invasive surgery upon her, against her will, would be a gross violation of her right to bodily integrity.'",
+      "confidence": "high",
+      "id": "C13",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "claim": "Wisconsin is one of five states that allow civil detention for pregnant people accused of substance use. Its law (Act 292) gives 'unborn children' from zygotes to embryos full human rights\u2014the only state to do so. Proceedings occur under seal with a court-appointed attorney for the fetus but often none for the pregnant person.",
+      "confidence": "high",
+      "id": "C14",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "From 1973 to 2022, Pregnancy Justice documented more than 1,800 cases where pregnant people were deprived of constitutional rights under the pretext of protecting 'unborn life.' Pregnancy outcomes other than abortion\u2014including birth and pregnancy loss\u2014were far more likely to result in criminalization, most often under the guise of addressing substance use.",
+      "confidence": "high",
+      "id": "C15",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "In the 2012 Alessandra Pacchieri case in the UK, an Italian woman with bipolar disorder was detained under the Mental Health Act, subjected to a court-ordered cesarean, and had her baby taken into custody and put up for adoption. The case drew international criticism.",
+      "confidence": "high",
+      "id": "C16",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "D.C. Court of Appeals (en banc)",
+      "id": "S1",
+      "publication": "District of Columbia Court of Appeals",
+      "title": "In re A.C., 573 A.2d 1235 (D.C. 1990)",
+      "url": "https://law.justia.com/cases/district-of-columbia/court-of-appeals/1990/87-609-4.html",
+      "why_it_matters": "The landmark appellate decision that vacated the forced cesarean order, establishing that 'in virtually all cases' a pregnant patient's decision must be honored. First American appellate case decided against forced cesarean, though issued after Carder's death.",
+      "year": "1990"
+    },
+    {
+      "author": "Kolder VEB, Gallagher J, Parsons MT",
+      "id": "S2",
+      "publication": "New England Journal of Medicine",
+      "title": "Court-Ordered Obstetrical Interventions",
+      "url": "https://repository.library.georgetown.edu/handle/10822/727661",
+      "why_it_matters": "The foundational survey documenting forced obstetric interventions across 11 states. Found court orders obtained in 86% of cases sought; 81% of women were Black, Asian, or Hispanic; all were poor. Reported six cases where predictions of fetal harm were inaccurate.",
+      "year": "1987"
+    },
+    {
+      "author": "American College of Obstetricians and Gynecologists",
+      "id": "S3",
+      "publication": "Obstetrics & Gynecology",
+      "title": "ACOG Committee Opinion No. 664: Refusal of Medically Recommended Treatment During Pregnancy",
+      "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2016/06/refusal-of-medically-recommended-treatment-during-pregnancy",
+      "why_it_matters": "ACOG's current ethical guidance stating the College 'opposes the use of coerced medical interventions for pregnant women' and 'strongly discourages' court-ordered interventions. Contains the critical 'virtually all cases' language.",
+      "year": "2016"
+    },
+    {
+      "author": "U.S. District Court, N.D. Florida",
+      "id": "S4",
+      "publication": "Federal Supplement",
+      "title": "Pemberton v. Tallahassee Memorial Regional Center, 66 F. Supp. 2d 1247",
+      "url": "https://law.justia.com/cases/federal/district-courts/FSupp2/66/1247/2489193/",
+      "why_it_matters": "Post-In re A.C. case where court upheld forced cesarean, finding state interest in viable fetus outweighed mother's bodily integrity. Demonstrates that In re A.C. did not end forced interventions\u2014courts continue to find 'exceptional cases.'",
+      "year": "1999"
+    },
+    {
+      "author": "Mr. Justice Twomey, Irish High Court",
+      "id": "S5",
+      "publication": "Irish High Court",
+      "title": "Health Service Executive v B (2016)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5907905/",
+      "why_it_matters": "First reported Irish case on cesarean refusal. Court refused to order forced cesarean, holding it would be 'a gross violation of her right to bodily integrity' even with constitutional fetal life protections under Article 40.3.3.",
+      "year": "2016"
+    },
+    {
+      "author": "Court of Appeal of England and Wales",
+      "id": "S6",
+      "publication": "Family Law Reports",
+      "title": "Re MB (Medical Treatment) [1997] EWCA Civ 3093",
+      "url": "https://www.globalhealthrights.org/wp-content/uploads/2013/03/EWCA-1997-Re-MB-Medical-Treatment.pdf",
+      "why_it_matters": "UK landmark establishing that 'a mentally competent patient has an absolute right to refuse to consent to medical treatment for any reason, rational or irrational.' But also found needle phobia created temporary incapacity\u2014showing how capacity determinations can circumvent autonomy.",
+      "year": "1997"
+    },
+    {
+      "author": "Pregnancy Justice (formerly National Advocates for Pregnant Women)",
+      "id": "S7",
+      "publication": "Pregnancy Justice",
+      "title": "The Rise of Pregnancy Criminalization: A Pregnancy Justice Report",
+      "url": "https://www.pregnancyjusticeus.org/rise-of-pregnancy-criminalization-report/",
+      "why_it_matters": "Documents over 1,800 cases from 1973-2022 where pregnant people were deprived of constitutional rights under pretext of protecting 'unborn life.' Shows pregnancy criminalization accelerating, with substance use as primary entry point.",
+      "year": "2022"
+    },
+    {
+      "author": "ACLU Reproductive Freedom Project",
+      "id": "S8",
+      "publication": "ACLU",
+      "title": "Coercive and Punitive Governmental Responses to Women's Conduct During Pregnancy",
+      "url": "https://www.aclu.org/documents/coercive-and-punitive-governmental-responses-womens-conduct-during-pregnancy",
+      "why_it_matters": "ACLU's comprehensive account of the Carder case and subsequent litigation, including the argument that court-ordered intervention 'drives women at high risk of complications during pregnancy and childbirth out of the health care system.'",
+      "year": "2005"
+    }
+  ],
+  "sources": [
+    "In re A.C., 573 A.2d 1235 (D.C. 1990) - District of Columbia Court of Appeals - 1990 (https://law.justia.com/cases/district-of-columbia/court-of-appeals/1990/87-609-4.html)",
+    "Court-Ordered Obstetrical Interventions - New England Journal of Medicine - 1987 (https://repository.library.georgetown.edu/handle/10822/727661)",
+    "ACOG Committee Opinion No. 664: Refusal of Medically Recommended Treatment During Pregnancy - Obstetrics & Gynecology - 2016 (https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2016/06/refusal-of-medically-recommended-treatment-during-pregnancy)",
+    "Pemberton v. Tallahassee Memorial Regional Center, 66 F. Supp. 2d 1247 - Federal Supplement - 1999 (https://law.justia.com/cases/federal/district-courts/FSupp2/66/1247/2489193/)",
+    "Health Service Executive v B (2016) - Irish High Court - 2016 (https://pmc.ncbi.nlm.nih.gov/articles/PMC5907905/)",
+    "Re MB (Medical Treatment) [1997] EWCA Civ 3093 - Family Law Reports - 1997 (https://www.globalhealthrights.org/wp-content/uploads/2013/03/EWCA-1997-Re-MB-Medical-Treatment.pdf)",
+    "The Rise of Pregnancy Criminalization: A Pregnancy Justice Report - Pregnancy Justice - 2022 (https://www.pregnancyjusticeus.org/rise-of-pregnancy-criminalization-report/)",
+    "Coercive and Punitive Governmental Responses to Women's Conduct During Pregnancy - ACLU - 2005 (https://www.aclu.org/documents/coercive-and-punitive-governmental-responses-womens-conduct-during-pregnancy)"
+  ],
+  "topic": "Use the 1987 Angela Carder case as the primary lens, but do not stop there\u2014use it to open outward to the structural pattern it represents and how courts and clinical practice have (or have not) evolved since. Angela Carder was a 27-year-old woman with recurrent bone cancer, 25 weeks pregnant, who was dying; a Washington D.C. hospital obtained a court order for an emergency cesarean over her explicit refusal. The infant died within hours; Carder died two days later. The DC Court of Appeals later ruled the order was wrong. Narrate the case with specific detail (what the hospital's reasoning was, what the court heard, what Carder herself said, what the ACLU argued). Then use it to examine: (1) the legal doctrine of bodily integrity and how courts have applied it inconsistently to pregnant vs. non-pregnant patients\u2014including forced cesarean cases in the UK and Ireland as international comparators; (2) the 'fetal protection' argument and where it has been used to justify court-ordered interventions, including cases of substance-using pregnant people being detained or prosecuted; (3) the ACOG and ACNM positions on maternal-fetal conflict, and what 'almost never' means in practice when they say forced intervention is almost never justified; (4) the under-discussed epistemic problem: clinicians are frequently wrong about the urgency of the situation they're using to override a refusal. What does the literature say about how often emergency cesareans obtained over patient objection were later judged to have been unnecessary? Close by posing the unresolved question directly: Is there any coherent ethical position that simultaneously respects full maternal autonomy and grants the near-term fetus significant moral weight? Don't resolve it artificially.",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "DR VALE": {
+      "bit_rate": 192000,
+      "language": "en",
+      "model": "sonic-3.5",
+      "provider": "cartesia",
+      "sample_rate": 44100,
+      "speed": 1.0,
+      "version": "2026-03-01",
+      "voice_id": "5ee9...12c7"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "kdnR...n2DI"
+    }
+  },
+  "word_count": 1921
+}

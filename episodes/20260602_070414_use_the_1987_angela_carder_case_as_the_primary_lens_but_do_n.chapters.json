@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 The Clock"
+    },
+    {
+      "startTime": 64.01,
+      "title": "\u2014 Angela Carder, Specifically"
+    },
+    {
+      "startTime": 128.03,
+      "title": "\u2014 The Petition and the Missing Oncologist"
+    },
+    {
+      "startTime": 192.04,
+      "title": "\u2014 The Bedside Court"
+    },
+    {
+      "startTime": 256.05,
+      "title": "\u2014 \"Virtually All Cases\" and the Loophole"
+    },
+    {
+      "startTime": 320.06,
+      "title": "\u2014 UK and Ireland: The Capacity Trap"
+    },
+    {
+      "startTime": 384.08,
+      "title": "\u2014 Dr. Vale: The Bedside Assessment"
+    },
+    {
+      "startTime": 448.09,
+      "title": "\u2014 The Demographic Pattern and Pregnancy Criminalization"
+    },
+    {
+      "startTime": 512.1,
+      "title": "\u2014 \"Almost Never\" and What It Contains"
+    },
+    {
+      "startTime": 576.11,
+      "title": "\u2014 The Unresolved Question"
+    }
+  ],
+  "version": "1.2.0"
+}
