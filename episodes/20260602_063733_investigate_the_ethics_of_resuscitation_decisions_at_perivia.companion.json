@@ -1,0 +1,329 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: Two Hospitals, Same Night"
+    },
+    {
+      "start_sec": 62.18,
+      "start_time": "1:02",
+      "title": "\u2014 The Denominator Trap"
+    },
+    {
+      "start_sec": 124.36,
+      "start_time": "2:04",
+      "title": "\u2014 The Self-Fulfilling Machine"
+    },
+    {
+      "start_sec": 186.53,
+      "start_time": "3:07",
+      "title": "\u2014 The Consent Problem Arrives"
+    },
+    {
+      "start_sec": 248.71,
+      "start_time": "4:09",
+      "title": "\u2014 Dr. Voss Enters: No Neutral Frame"
+    },
+    {
+      "start_sec": 310.89,
+      "start_time": "5:11",
+      "title": "\u2014 The Morbidity Numbers"
+    },
+    {
+      "start_sec": 373.07,
+      "start_time": "6:13",
+      "title": "\u2014 The Saigal Inversion"
+    },
+    {
+      "start_sec": 435.24,
+      "start_time": "7:15",
+      "title": "\u2014 The Disability Rights Critique Has Evidence"
+    },
+    {
+      "start_sec": 497.42,
+      "start_time": "8:17",
+      "title": "\u2014 Whose Decision Is It at 22 Weeks?"
+    },
+    {
+      "start_sec": 559.6,
+      "start_time": "9:20",
+      "title": "\u2014 What Remains Genuinely Unresolved"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia.companion.json",
+  "duration_sec": 666.776576,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "The foundational study showing that hospital rates of active treatment accounted for 78% of between-hospital variation in survival at 22-23 weeks. Demonstrates that outcomes are intervention-dependent, not just biology-dependent. Active treatment rates ranged from 0-100% at 22 weeks and 25-100% at 23 weeks across 24 academic centers.",
+      "source": "New England Journal of Medicine",
+      "title": "Between-Hospital Variation in Treatment and Outcomes in Extremely Preterm Infants",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1410689"
+    },
+    {
+      "reason": "Landmark study demonstrating that framing effects significantly influence parental decisions about resuscitation of 23-weekers. Presenting outcomes as 'survival with lack of disability' versus 'chance of dying and likelihood of disability' changed treatment preferences, even though the statistics were mathematically equivalent.",
+      "source": "Pediatrics",
+      "title": "Message Framing and Perinatal Decisions",
+      "url": "https://publications.aap.org/pediatrics/article/122/1/109/73005/Message-Framing-and-Perinatal-Decisions"
+    },
+    {
+      "reason": "Foundational disability studies paper showing that 54.3% of respondents with moderate-to-serious disabilities reported excellent or good quality of life. Challenges the assumption that clinicians can accurately predict quality of life for disabled individuals.",
+      "source": "Social Science & Medicine",
+      "title": "The Disability Paradox: High Quality of Life Against All Odds",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10390038/"
+    },
+    {
+      "reason": "Pioneering McMaster University study showing that 61% of ELBW adolescents gave themselves perfect QOL scores versus 49% of normal birth weight controls\u2014despite 86% having functional limitations. Directly challenges prognostic pessimism in neonatal counseling.",
+      "source": "JAMA",
+      "title": "Self-perceived Health Status and Health-related Quality of Life of Extremely Low-birth-weight Infants at Adolescence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8691552/"
+    },
+    {
+      "reason": "Most current large-scale U.S. data: 22,953 infants at 636 hospitals. Shows survival ranging from 24.9% at 22 weeks to 82.0% at 25 weeks overall, and 35.4% to 82.0% among those receiving postnatal life support. Postnatal life support at 22 weeks increased from 61.6% in 2020 to 73.7% in 2022.",
+      "source": "Pediatrics",
+      "title": "Survival of Infants Born at 22 to 25 Weeks' Gestation Receiving Care in the NICU: 2020\u20132022",
+      "url": "https://publications.aap.org/pediatrics/article/154/4/e2024065963/199459/Survival-of-Infants-Born-at-22-to-25-Weeks"
+    },
+    {
+      "reason": "Survey of 424 neonatal and 115 MFM providers showing 52% of neonatologists and 35% of MFM specialists rarely/never perform joint counseling\u2014despite 80-82% believing it would improve counseling. Reveals structural barriers to optimal consent processes.",
+      "source": "Journal of Perinatology",
+      "title": "Joint Periviability Counseling Between Neonatology and Obstetrics is a Rare Occurrence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32859941/"
+    },
+    {
+      "reason": "Recent review examining how ableist assumptions about quality of life, normalcy, and parental burden shape clinical counseling. Argues for explicitly anti-ableist stance in NICU shared decision-making.",
+      "source": "Seminars in Perinatology",
+      "title": "Disability, Ableism, and Decision-Making at Extreme Prematurity",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0146000525000758"
+    },
+    {
+      "reason": "Comprehensive 2024 review of periviability ethics. Notes that among surveyed New England neonatologists, 24% would resuscitate against parental wishes at 24 weeks, while 100% would resuscitate at parental request. At 22 weeks, 25% would attempt resuscitation at parental request.",
+      "source": "PMC/Journal of Perinatology",
+      "title": "The Ethics and Practice of Periviability Care",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11049503/"
+    }
+  ],
+  "generated_at": "2026-06-02T11:52:08.540133+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim to represent any specific hospital protocol or institution",
+        "Should not overstate certainty about what the 'right' resuscitation threshold is",
+        "Should not present the disability rights critique as fully resolved within clinical practice",
+        "Should not imply that better training alone would fix framing effects or consent failures"
+      ],
+      "cartesia_voice_id": "9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
+      "credential_frame": "Composite of neonatologist-ethicists who have published on periviability counseling, worked across academic and community NICU settings, and engaged directly with disability rights scholarship in clinical contexts",
+      "delivery_baseline": "Measured pace, slight pauses before difficult claims, no vocal uplift at sentence ends. Sounds like someone choosing words carefully because the words have consequences.",
+      "display_name": "Dr. Voss",
+      "expertise": "The lived texture of periviability counseling\u2014what shared decision-making actually looks like at 3 a.m., how clinicians choose which denominator to hand a family, and why the disability paradox data hasn't changed practice the way it should have",
+      "field": "Neonatal ethics and periviability counseling",
+      "label": "DR VOSS",
+      "personality": "Precise but unsettled. Uses clinical language and then catches herself in it. Has clearly revised her views over a career and is not done revising. Does not perform certainty. Gets quietly sharp when Caspar reaches for a procedural fix.",
+      "role_in_episode": "Enters at the transition from the consent problem to the values problem. Gives the Saigal finding its clinical weight\u2014not as a study result but as something that changed how she counsels. Complicates the framing-effects discussion by noting there is no neutral frame and she has never found one. Stays through the close, where she names the specific disagreement among neonatologists about parental authority at 22 weeks without resolving it.",
+      "synthetic": true,
+      "tts_provider": "cartesia",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "Hospital rates of active treatment accounted for 78% of between-hospital variation in survival and 75% of variation in survival without severe impairment among infants born at 22-23 weeks gestation.",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Active treatment rates at 22 weeks ranged from 0% to 100% across hospitals, and from 25% to 100% at 23 weeks, demonstrating massive institutional variation in practice.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Among infants receiving postnatal life support (2020-2022 data), survival was 35.4% at 22 weeks, rising to 82.0% at 25 weeks. Overall survival (including those not receiving active treatment) was 24.9% at 22 weeks.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "claim": "Framing effects significantly influence parental decisions: presenting outcomes as survival versus mortality rates changes treatment preferences even when statistics are mathematically identical.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "52% of neonatologists and 35% of MFM specialists report rarely or never performing joint periviability counseling, despite 80-82% believing it would improve counseling quality.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "82.4% of U.S. physicians believe people with significant disability have worse quality of life than non-disabled people, yet 54.3% of people with moderate-to-serious disabilities report good or excellent quality of life.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "61% of ELBW adolescents gave themselves perfect quality of life scores compared to 49% of normal birth weight controls\u2014despite 86% having functional limitations.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "Among infants surviving to follow-up, 63% of those born at 22 weeks, 42% at 23 weeks, 37% at 24 weeks, and 31% at 25 weeks had moderate or severe neurodevelopmental impairment.",
+      "confidence": "High",
+      "id": "C8",
+      "source_ids": [
+        "S1",
+        "S5"
+      ]
+    },
+    {
+      "claim": "Among surveyed New England neonatologists, 24% would resuscitate at 24 weeks against parental wishes, while 100% would resuscitate at parental request. At 22 weeks, 25% would attempt resuscitation at parental request.",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "In Japan and Sweden, survival rates exceeding 50% at 22 weeks have been demonstrated in centers providing proactive care, showing that outcomes are highly dependent on institutional commitment to active treatment.",
+      "confidence": "Medium-High",
+      "id": "C10",
+      "source_ids": [
+        "S5"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Matthew A. Rysavy, Lei Li, Edward F. Bell, et al. (NICHD Neonatal Research Network)",
+      "id": "S1",
+      "publication": "New England Journal of Medicine",
+      "title": "Between-Hospital Variation in Treatment and Outcomes in Extremely Preterm Infants",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1410689",
+      "why_it_matters": "The foundational study showing that hospital rates of active treatment accounted for 78% of between-hospital variation in survival at 22-23 weeks. Demonstrates that outcomes are intervention-dependent, not just biology-dependent. Active treatment rates ranged from 0-100% at 22 weeks and 25-100% at 23 weeks across 24 academic centers.",
+      "year": 2015
+    },
+    {
+      "author": "Marlyse F. Haward, Ryan O. Murphy, John M. Lorenz",
+      "id": "S2",
+      "publication": "Pediatrics",
+      "title": "Message Framing and Perinatal Decisions",
+      "url": "https://publications.aap.org/pediatrics/article/122/1/109/73005/Message-Framing-and-Perinatal-Decisions",
+      "why_it_matters": "Landmark study demonstrating that framing effects significantly influence parental decisions about resuscitation of 23-weekers. Presenting outcomes as 'survival with lack of disability' versus 'chance of dying and likelihood of disability' changed treatment preferences, even though the statistics were mathematically equivalent.",
+      "year": 2008
+    },
+    {
+      "author": "Gary L. Albrecht, Patrick J. Devlieger",
+      "id": "S3",
+      "publication": "Social Science & Medicine",
+      "title": "The Disability Paradox: High Quality of Life Against All Odds",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10390038/",
+      "why_it_matters": "Foundational disability studies paper showing that 54.3% of respondents with moderate-to-serious disabilities reported excellent or good quality of life. Challenges the assumption that clinicians can accurately predict quality of life for disabled individuals.",
+      "year": 1999
+    },
+    {
+      "author": "Saroj Saigal, David Feeny, Peter Rosenbaum, et al.",
+      "id": "S4",
+      "publication": "JAMA",
+      "title": "Self-perceived Health Status and Health-related Quality of Life of Extremely Low-birth-weight Infants at Adolescence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8691552/",
+      "why_it_matters": "Pioneering McMaster University study showing that 61% of ELBW adolescents gave themselves perfect QOL scores versus 49% of normal birth weight controls\u2014despite 86% having functional limitations. Directly challenges prognostic pessimism in neonatal counseling.",
+      "year": 1996
+    },
+    {
+      "author": "Vermont Oxford Network",
+      "id": "S5",
+      "publication": "Pediatrics",
+      "title": "Survival of Infants Born at 22 to 25 Weeks' Gestation Receiving Care in the NICU: 2020\u20132022",
+      "url": "https://publications.aap.org/pediatrics/article/154/4/e2024065963/199459/Survival-of-Infants-Born-at-22-to-25-Weeks",
+      "why_it_matters": "Most current large-scale U.S. data: 22,953 infants at 636 hospitals. Shows survival ranging from 24.9% at 22 weeks to 82.0% at 25 weeks overall, and 35.4% to 82.0% among those receiving postnatal life support. Postnatal life support at 22 weeks increased from 61.6% in 2020 to 73.7% in 2022.",
+      "year": 2024
+    },
+    {
+      "author": "Reed R, Grossman T, Askin G, Gerber LM, Kasdorf E",
+      "id": "S6",
+      "publication": "Journal of Perinatology",
+      "title": "Joint Periviability Counseling Between Neonatology and Obstetrics is a Rare Occurrence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32859941/",
+      "why_it_matters": "Survey of 424 neonatal and 115 MFM providers showing 52% of neonatologists and 35% of MFM specialists rarely/never perform joint counseling\u2014despite 80-82% believing it would improve counseling. Reveals structural barriers to optimal consent processes.",
+      "year": 2020
+    },
+    {
+      "author": "Anne Sullivan, Jennifer Arnold",
+      "id": "S7",
+      "publication": "Seminars in Perinatology",
+      "title": "Disability, Ableism, and Decision-Making at Extreme Prematurity",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0146000525000758",
+      "why_it_matters": "Recent review examining how ableist assumptions about quality of life, normalcy, and parental burden shape clinical counseling. Argues for explicitly anti-ableist stance in NICU shared decision-making.",
+      "year": 2025
+    },
+    {
+      "author": "Multiple authors",
+      "id": "S8",
+      "publication": "PMC/Journal of Perinatology",
+      "title": "The Ethics and Practice of Periviability Care",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11049503/",
+      "why_it_matters": "Comprehensive 2024 review of periviability ethics. Notes that among surveyed New England neonatologists, 24% would resuscitate against parental wishes at 24 weeks, while 100% would resuscitate at parental request. At 22 weeks, 25% would attempt resuscitation at parental request.",
+      "year": 2024
+    }
+  ],
+  "sources": [
+    "Between-Hospital Variation in Treatment and Outcomes in Extremely Preterm Infants - New England Journal of Medicine - 2015 (https://www.nejm.org/doi/full/10.1056/NEJMoa1410689)",
+    "Message Framing and Perinatal Decisions - Pediatrics - 2008 (https://publications.aap.org/pediatrics/article/122/1/109/73005/Message-Framing-and-Perinatal-Decisions)",
+    "The Disability Paradox: High Quality of Life Against All Odds - Social Science & Medicine - 1999 (https://pubmed.ncbi.nlm.nih.gov/10390038/)",
+    "Self-perceived Health Status and Health-related Quality of Life of Extremely Low-birth-weight Infants at Adolescence - JAMA - 1996 (https://pubmed.ncbi.nlm.nih.gov/8691552/)",
+    "Survival of Infants Born at 22 to 25 Weeks' Gestation Receiving Care in the NICU: 2020\u20132022 - Pediatrics - 2024 (https://publications.aap.org/pediatrics/article/154/4/e2024065963/199459/Survival-of-Infants-Born-at-22-to-25-Weeks)",
+    "Joint Periviability Counseling Between Neonatology and Obstetrics is a Rare Occurrence - Journal of Perinatology - 2020 (https://pubmed.ncbi.nlm.nih.gov/32859941/)",
+    "Disability, Ableism, and Decision-Making at Extreme Prematurity - Seminars in Perinatology - 2025 (https://www.sciencedirect.com/science/article/abs/pii/S0146000525000758)",
+    "The Ethics and Practice of Periviability Care - PMC/Journal of Perinatology - 2024 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11049503/)"
+  ],
+  "topic": "Investigate the ethics of resuscitation decisions at periviability, focused on the 22\u201325 week gestational window. This is the hardest frontier in perinatal ethics because survival rates are real but morbidity rates are also high and center-dependent\u2014a 23-weeker at a level-IV NICU in Toronto has a meaningfully different prognosis than the same infant at a rural facility. Structure the episode around three interlocking problems: (1) The data problem\u2014explain what the NICHD Neonatal Research Network outcomes data actually shows for 22, 23, 24, and 25 weekers (survival rates, rates of major morbidity including severe IVH, NEC, chronic lung disease, neurodevelopmental impairment), and why data from centers of excellence may not apply to the family sitting in front of a community-hospital clinician at 3 a.m. (2) The consent problem\u2014how do you obtain genuinely informed consent from parents who are terrified, often under time pressure, and confronted with statistics they cannot meaningfully process? Discuss the research on how framing effects (presenting survival vs. mortality first) influence parental decisions, and what 'shared decision-making' actually means versus what it devolves to in practice. (3) The values problem\u2014whose quality-of-life judgment counts? Introduce the disability rights critique of prognostic reasoning: the argument that clinicians systematically underestimate the quality of life of children with disabilities, and cite the empirical work (e.g., Saigal's studies on ELBW survivors' self-assessed quality of life vs. clinician predictions). Close by naming what remains genuinely unresolved: whether parental preference should be decisive at 22 weeks when the evidence is so uncertain, and how different hospital protocols handle that question differently. Be specific with numbers. Avoid generic 'this is complicated' hedging\u2014name the actual tensions.",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "DR VOSS": {
+      "bit_rate": 192000,
+      "language": "en",
+      "model": "sonic-3.5",
+      "provider": "cartesia",
+      "sample_rate": 44100,
+      "speed": 1.0,
+      "version": "2026-03-01",
+      "voice_id": "9626...c8bc"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "kdnR...n2DI"
+    }
+  },
+  "word_count": 1939
+}
