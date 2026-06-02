@@ -972,8 +972,12 @@ def _source_labels_from_cards(cards: list | None) -> list:
         title = str(card.get("title") or card.get("source") or "").strip()
         publication = str(card.get("publication") or card.get("publisher") or "").strip()
         year = str(card.get("year") or "").strip()
+        author = str(card.get("author") or "").strip()
         url = str(card.get("url") or "").strip()
-        parts = [p for p in [title, publication, year] if p]
+        # Author is a single last name (e.g. "Wright"); render as "Wright et al."
+        # so digest show-notes give listeners a complete handle on each paper.
+        author_label = f"{author} et al." if author and " " not in author and len(author) < 40 else author
+        parts = [p for p in [author_label, publication, year, title] if p]
         label = " - ".join(parts)
         if url:
             label = f"{label} ({url})" if label else url
@@ -1638,6 +1642,11 @@ def _script_from_research_package(
     if not isinstance(key_claims, list):
         key_claims = []
 
+    is_digest = (str(cfg.get("episode_type", "")).strip().lower() == "digest")
+    digest_overlay = (
+        f"\n\n{_digest_performance_overlay(research_package)}" if is_digest else ""
+    )
+
     logger.info("[2/5] Planning thesis and audience promise...")
     thesis = _anthropic_text(
         client,
@@ -1650,6 +1659,7 @@ def _script_from_research_package(
             f"Host memory:\n{host_memory_text}\n\n"
             f"Personal context:\n{personal_context_text}\n\n"
             f"Research package:\n{json.dumps(research_package, indent=2)[:24000]}"
+            f"{digest_overlay}"
         ),
         temperature=0.5,
         cfg=cfg,
@@ -1683,6 +1693,7 @@ def _script_from_research_package(
             f"Editorial memo:\n{thesis}\n\n"
             f"Guest plan:\n{json.dumps(guest_plan, indent=2)}\n\n"
             f"Research package:\n{json.dumps(research_package, indent=2)[:26000]}"
+            f"{digest_overlay}"
         ),
         temperature=0.55,
         cfg=cfg,
@@ -1733,6 +1744,7 @@ def _script_from_research_package(
             "If the guest plan decision is skip, do not include guest speaker labels. "
             "If it is use, include the guest naturally and only with the listed labels.\n\n"
             f"Research package:\n{json.dumps(research_package, indent=2)[:26000]}"
+            f"{digest_overlay}"
         ),
         temperature=0.75,
         cfg=cfg,
@@ -1755,6 +1767,7 @@ def _script_from_research_package(
             f"Beat sheet:\n{beat_sheet}\n\n"
             f"Sonic footnote plan:\n{json.dumps(sonic_footnote_plan, indent=2)}\n\n"
             f"Draft script:\n{draft_script}"
+            f"{digest_overlay}"
         ),
         temperature=0.65,
         cfg=cfg,
@@ -1830,6 +1843,7 @@ def _script_from_research_package(
             f"Personal context:\n{personal_context_text}\n\n"
             f"{'Continuity-reviewed fictional script' if fiction_mode else 'Fact-checked script'}:\n"
             f"{fact_checked_script}"
+            f"{digest_overlay}"
         ),
         temperature=0.45,
         cfg=cfg,
@@ -1967,24 +1981,62 @@ _DIGEST_RESEARCH_SYSTEM = """\
 You are the editorial producer for a peer-level weekly journal-club podcast.
 You have already been handed a ranked list of recently published articles
 (one headline + 3-5 quick-hit rounds), each with a short already-paraphrased
-finding line, journal, year, evidence tier, and DOI. You will NOT see the
-abstracts and must NEVER reproduce abstract text verbatim.
+finding line, journal, year, first_author, evidence tier, and DOI. You will
+NOT see the abstracts and must NEVER reproduce abstract text verbatim.
 
 Your job: assemble a clean research package the dialogue writer can use to
 draft a peer-to-peer rounds-style episode. Stay clinical and concrete.
 Paraphrase the supplied findings further if useful; never invent numbers or
 claims that are not in the supplied finding line.
 
+Listeners hear this on their commute and cannot click through to show notes
+in real time. Every paper's first spoken mention must therefore announce
+itself as a citation, not as "a new study." You produce the exact spoken
+intro line for each paper so the dialogue writer cannot drift.
+
 Return JSON only with these keys:
 - topic
+- headline_intro: ONE spoken sentence the dialogue writer will deliver
+  verbatim or near-verbatim on first mention of the headline paper. Form:
+  "From [journal abbreviation], [year]: [first_author] et al., [study
+  design including n if known] — [short paper title or topic phrase]."
+  Use "and colleagues" if first_author is null. Keep it natural enough to
+  speak. Example: "From AJOG, 2026: Wright and colleagues, an RCT-embedded
+  multicenter cohort of about 4,800 chronic hypertensives — first-trimester
+  biomarker screening before aspirin."
+- rounds_intros: array of one spoken intro sentence per rounds paper in
+  rank order, same form as headline_intro. One sentence each.
+- structural_plan: object with shape {
+    "headline_share": 0.55,
+    "rounds_share_each": 0.10,
+    "pivot_line": "the literal spoken sentence the host says to transition
+       from the headline segment into rounds — e.g. 'Rounds — four other
+       things this week.' Keep it short, declarative, no rhetorical flourish.",
+    "headline_arc": [
+       "clinical question the paper answers",
+       "design choice that earns the evidence grade",
+       "effect size or key result in numbers",
+       "important caveat or limitation",
+       "what changes in practice (or honestly: what doesn't)"
+    ],
+    "rounds_beat_template": [
+       "form-first intro (use rounds_intros line verbatim)",
+       "the finding in one sentence",
+       "the one caveat the listener must hear",
+       "the clinical hook — what to do or watch for"
+    ]
+  }
+  These are instructions for the downstream beat sheet and dialogue stages.
 - readable_brief: 4-8 paragraphs. Open with why this week matters in the
   field. Walk through the headline paper (design, what was measured, the
-  effect, key caveats, what it would change in practice). Then string the
-  rounds together with a real through-line — not a list. End with what to
-  watch and what is still unsettled.
+  effect, key caveats, what it would change in practice) — full structure,
+  not a hook. Then a clean break — one paragraph per rounds paper, each
+  opening with the formal citation, NOT with narrative through-line. End
+  with what to watch and what is still unsettled.
 - source_cards: one entry per article in rank order (headline first, then
   rounds), shape {id,title,author,publication,year,url,why_it_matters}.
-  Use the supplied bibliographic data verbatim; author may be left empty.
+  Populate `author` from the supplied first_author field — leave empty
+  ONLY if first_author was null in the input.
 - key_claims: array of {id,claim,confidence,source_ids}. One per article.
   claim is the finding in your own words. confidence is "high" for RCT,
   meta-analysis, or large multicenter; "medium" for solid observational;
@@ -1993,11 +2045,110 @@ Return JSON only with these keys:
 - counterintuitive_findings: 0-3 surprises across the supplied papers.
 - open_questions: 2-4 honest unresolved questions in this niche.
 - things_to_avoid: hype, lay-explainer framing, defining basic specialist
-  terms, reading any abstract verbatim, overclaiming from small studies.
+  terms, reading any abstract verbatim, overclaiming from small studies,
+  metaphor-led opens, personal anecdotes, chatty asides about "the patient
+  in the room."
 
 Do not invent additional articles. Do not add citation counts. Return only
 the JSON object — no preamble, no closing remarks.
 """
+
+
+_DIGEST_PERFORMANCE_OVERLAY_TEMPLATE = """\
+================================================================
+DIGEST EPISODE OVERLAY — this overrides any conflicting rule above
+================================================================
+This is a peer-level journal-club rounds episode, not a curiosity radio
+show. Two rules from the general "Asynchronous" voice are explicitly
+overridden:
+
+1. "Move most source detail to show notes; spoken source mentions need
+   story value." — DOES NOT APPLY HERE. The citation IS the story value.
+   Listeners are commuting clinicians who cannot click through in real
+   time. They need to hear the journal, year, first author, design, and
+   n out loud so they can note the paper for later.
+2. "Juno opens with an unexpected image or anecdote." — DOES NOT APPLY.
+   No metaphor opens, no personal anecdotes, no "I keep thinking about
+   this image." Cold open names what this week's lead paper changes.
+
+Tone & register:
+- Consultant on morning rounds presenting papers to peers. Dry, concrete,
+  measured. Disagreement is welcome but must sit on data, not vibes. No
+  chatty asides like "not a satisfying answer for the patient in the
+  room." Open in form.
+
+Structure (use these literal anchors):
+- COLD OPEN (one or two beats): name what this week's lead paper changes
+  in plain clinical terms. No metaphor.
+- HEADLINE SEGMENT — approximately {headline_share_pct}% of runtime.
+  First spoken mention of the headline paper MUST be this line, verbatim
+  or very close to it:
+      "{headline_intro}"
+  Then follow the headline arc: clinical question → design choice that
+  earns the evidence grade → effect in numbers → key caveat → what
+  changes in practice (be honest if the answer is "nothing yet").
+- PIVOT into rounds. Speak this sentence (or a very close variant):
+      "{pivot_line}"
+- ROUNDS SEGMENT — approximately {rounds_share_each_pct}% of runtime per
+  paper. Each round opens with its bibliographic intro verbatim or near-
+  verbatim. Intros in rank order:
+{rounds_intros_block}
+  Each round then follows: finding in one sentence → one caveat the
+  listener must hear → clinical hook (what to do or watch for). Keep it
+  fast. Do NOT let any round expand into headline-length back-and-forth.
+- CLOSE (one or two beats): what to watch, what is still unsettled. Sign
+  off with a short reference to show notes for DOIs.
+
+Citation rules:
+- Every paper's first spoken mention uses its formal citation line.
+  Later references can be shorter ("the Wright cohort," "the Danish
+  study"). The goal: a listener driving to work can note which paper
+  to look up.
+- The headline and each round must be distinctly identifiable by ear.
+  Equal-weight treatment of all five papers is a failure mode.
+
+Strip on contact:
+- Metaphor opens, image-led cold opens, "I keep thinking about..."
+- Casual asides about the patient experience that aren't operationally
+  specific.
+- Any spoken sentence that could appear unchanged on a wellness-influencer
+  podcast.
+================================================================
+"""
+
+
+def _digest_performance_overlay(research_package: dict) -> str:
+    """Build the digest-specific overlay text appended to downstream prompts."""
+    plan = research_package.get("structural_plan") or {}
+    try:
+        headline_share = float(plan.get("headline_share") or 0.55)
+    except (TypeError, ValueError):
+        headline_share = 0.55
+    try:
+        rounds_each = float(plan.get("rounds_share_each") or 0.10)
+    except (TypeError, ValueError):
+        rounds_each = 0.10
+    pivot = str(plan.get("pivot_line") or "Rounds — other things this week.").strip()
+    headline_intro = str(research_package.get("headline_intro") or "").strip()
+    rounds_intros = research_package.get("rounds_intros") or []
+    if not isinstance(rounds_intros, list):
+        rounds_intros = []
+    intro_lines = [str(line).strip() for line in rounds_intros if str(line).strip()]
+    rounds_block = (
+        "\n".join(f"      {i+1}. {line}" for i, line in enumerate(intro_lines))
+        or "      (no rounds intros supplied — open each with formal citation)"
+    )
+    headline_display = (
+        headline_intro
+        or "(headline intro missing — open with formal citation: journal, year, first author, design, n, title)"
+    )
+    return _DIGEST_PERFORMANCE_OVERLAY_TEMPLATE.format(
+        headline_share_pct=int(round(headline_share * 100)),
+        rounds_share_each_pct=int(round(rounds_each * 100)),
+        headline_intro=headline_display,
+        pivot_line=pivot,
+        rounds_intros_block=rounds_block,
+    )
 
 
 def _digest_research_and_script(
@@ -2033,6 +2184,7 @@ def _digest_research_and_script(
             "title": article.get("title", ""),
             "journal": article.get("journal", ""),
             "year": article.get("year"),
+            "first_author": article.get("first_author") or None,
             "doi": article.get("doi"),
             "url": article.get("url", ""),
             "quartile": article.get("quartile"),
@@ -2089,8 +2241,12 @@ def _digest_research_and_script(
             "Reading abstracts verbatim",
             "Lay-explainer framing or basic-term definitions",
             "Overclaiming from small or preprint studies",
+            "Metaphor-led opens, personal anecdotes, chatty patient-room asides",
         ],
     )
+    research_package.setdefault("headline_intro", "")
+    research_package.setdefault("rounds_intros", [])
+    research_package.setdefault("structural_plan", {})
     research_package["digest_input"] = article_brief
 
     return _script_from_research_package(

@@ -377,6 +377,7 @@ def _clean(rec: dict[str, Any], role: str, rank: int) -> dict[str, Any]:
         "title": rec.get("title", ""),
         "journal": rec.get("journal", ""),
         "year": rec.get("year"),
+        "first_author": rec.get("first_author") or None,
         "quartile": rec.get("quartile"),
         "evidence": rec.get("_evid"),
         "altmetric_pct": rec.get("_alt"),

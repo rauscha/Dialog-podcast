@@ -173,9 +173,18 @@ def _parse_one_pubmed_article(art: ET.Element) -> dict[str, Any]:
     abstract = "\n".join(abstract_parts)
 
     authors = 0
+    first_author: str | None = None
     for a in art.findall(".//Article/AuthorList/Author"):
         if a.find("LastName") is not None or a.find("CollectiveName") is not None:
             authors += 1
+            if first_author is None:
+                last = _text(a.find("LastName"))
+                if last:
+                    first_author = last
+                else:
+                    collective = _text(a.find("CollectiveName"))
+                    if collective:
+                        first_author = collective
 
     doi = None
     for tag in (".//Article/ELocationID[@EIdType='doi']", ".//PubmedData/ArticleIdList/ArticleId[@IdType='doi']"):
@@ -205,6 +214,7 @@ def _parse_one_pubmed_article(art: ET.Element) -> dict[str, Any]:
         "pub_date": pub_date,
         "entry_date": entry_date or pub_date,
         "authors": authors,
+        "first_author": first_author,
         "publication_types": pub_types,
         "mesh": mesh,
         "abstract": abstract,
@@ -311,11 +321,22 @@ def _parse_europepmc(r: dict[str, Any]) -> dict[str, Any]:
             mesh.append(name)
 
     authors = 0
+    first_author: str | None = None
     author_list = (r.get("authorList") or {}).get("author") or []
     if author_list:
         authors = len(author_list)
+        first = author_list[0] if isinstance(author_list[0], dict) else {}
+        first_author = (
+            (first.get("lastName") or "").strip()
+            or (first.get("fullName") or "").strip().split(",")[0].strip()
+            or None
+        )
     elif r.get("authorString"):
-        authors = len([a for a in str(r["authorString"]).split(",") if a.strip()])
+        parts = [a.strip() for a in str(r["authorString"]).split(",") if a.strip()]
+        authors = len(parts)
+        if parts:
+            # authorString is "Wright DE, Smith J, Jones A" — first token has trailing initials.
+            first_author = parts[0].split(" ")[0] or None
 
     doi = (r.get("doi") or "").strip().lower() or None
     pub_date = r.get("firstPublicationDate") or None
@@ -341,6 +362,7 @@ def _parse_europepmc(r: dict[str, Any]) -> dict[str, Any]:
         "pub_date": pub_date,
         "entry_date": pub_date,
         "authors": authors,
+        "first_author": first_author,
         "publication_types": list(pub_types),
         "mesh": mesh,
         "abstract": (r.get("abstractText") or "").strip(),
