@@ -1,0 +1,73 @@
+{
+  "backlog": [],
+  "covered": {
+    "10.1002/uog.70212": {
+      "aired_at": "2026-06-02T01:48:04.273743+00:00",
+      "doi": "10.1002/uog.70212",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+      "pmid": "41903191",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "First-trimester prediction and prevention of preterm pre-eclampsia in women with chronic hypertension.",
+      "url": "https://doi.org/10.1002/uog.70212",
+      "year": 2026
+    },
+    "10.1002/uog.70244": {
+      "aired_at": "2026-06-02T01:48:04.273743+00:00",
+      "doi": "10.1002/uog.70244",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+      "pmid": "42177627",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode.",
+      "url": "https://doi.org/10.1002/uog.70244",
+      "year": 2026
+    },
+    "10.1016/j.ajogmf.2026.101989": {
+      "aired_at": "2026-06-02T01:48:04.273743+00:00",
+      "doi": "10.1016/j.ajogmf.2026.101989",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+      "pmid": "42114769",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Improving 1-Year Survival at 22 Weeks Gestation: Which Perinatal Interventions Matter?",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101989",
+      "year": 2026
+    },
+    "10.1097/aog.0000000000006325": {
+      "aired_at": "2026-06-02T01:48:04.273743+00:00",
+      "doi": "10.1097/aog.0000000000006325",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+      "pmid": "42208070",
+      "publication": "Obstet Gynecol",
+      "title": "Gestational Weight Gain and Pregnancy Outcomes After Semaglutide Exposure.",
+      "url": "https://doi.org/10.1097/aog.0000000000006325",
+      "year": 2026
+    },
+    "10.1111/1471-0528.70265": {
+      "aired_at": "2026-06-02T01:48:04.273743+00:00",
+      "doi": "10.1111/1471-0528.70265",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+      "pmid": "42152801",
+      "publication": "BJOG",
+      "title": "Proteinuria in Preeclampsia and Long-Term Risk of Maternal Kidney and Cardiovascular Disease: A Population-Based Cohort Study.",
+      "url": "https://doi.org/10.1111/1471-0528.70265",
+      "year": 2026
+    }
+  },
+  "last_run": {
+    "aired_at": "2026-06-02T01:48:04.273743+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+    "recorded_keys": [
+      "10.1002/uog.70212",
+      "10.1097/aog.0000000000006325",
+      "10.1111/1471-0528.70265",
+      "10.1016/j.ajogmf.2026.101989",
+      "10.1002/uog.70244"
+    ],
+    "window": {
+      "from": "2025/11/29",
+      "to": "2026/06/02"
+    }
+  },
+  "schema_version": 1,
+  "show_id": "mfm",
+  "updated_at": "2026-06-02T01:48:04.273743+00:00"
+}

@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Empiric Reflex"
+    },
+    {
+      "start_sec": 61.8,
+      "start_time": "1:02",
+      "title": "\u2014 Headline Setup: Who's in the Room"
+    },
+    {
+      "start_sec": 123.6,
+      "start_time": "2:04",
+      "title": "\u2014 Headline Deep Dive: Effect Size and What It Means"
+    },
+    {
+      "start_sec": 185.41,
+      "start_time": "3:05",
+      "title": "\u2014 Round 1: Proteinuria Severity and Long-Term Cardiorenal Risk (BJOG)"
+    },
+    {
+      "start_sec": 247.21,
+      "start_time": "4:07",
+      "title": "\u2014 Round 2: Semaglutide Into Pregnancy (Green Journal)"
+    },
+    {
+      "start_sec": 309.01,
+      "start_time": "5:09",
+      "title": "\u2014 Round 3: 22-Week Survival and the Intervention Bundle (AJOG MFM)"
+    },
+    {
+      "start_sec": 370.81,
+      "start_time": "6:11",
+      "title": "\u2014 Round 4: FMF Calibration Across Conception Modes (Ultrasound Obstet Gynecol)"
+    },
+    {
+      "start_sec": 432.62,
+      "start_time": "7:13",
+      "title": "\u2014 What to Watch / Still Unsettled"
+    },
+    {
+      "start_sec": 494.42,
+      "start_time": "8:14",
+      "title": "\u2014 Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.companion.json",
+  "duration_sec": 601.220091,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Provides RCT-level evidence that biomarker-driven first-trimester screening and aspirin prophylaxis delay preterm preeclampsia in chronic hypertensives\u2014directly informing whether to screen universally or treat empirically.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "First-trimester prediction and prevention of preterm pre-eclampsia in women with chronic hypertension.",
+      "url": "https://doi.org/10.1002/uog.70212"
+    },
+    {
+      "reason": "First large propensity-matched EMR analysis linking ongoing semaglutide use into pregnancy with adverse outcomes, sharpening preconception counseling for patients on GLP-1 agonists.",
+      "source": "Obstet Gynecol",
+      "title": "Gestational Weight Gain and Pregnancy Outcomes After Semaglutide Exposure.",
+      "url": "https://doi.org/10.1097/aog.0000000000006325"
+    },
+    {
+      "reason": "Quantifies how proteinuria severity at preeclampsia diagnosis predicts decades-long maternal cardiorenal risk, enabling more individualized postpartum surveillance.",
+      "source": "BJOG",
+      "title": "Proteinuria in Preeclampsia and Long-Term Risk of Maternal Kidney and Cardiovascular Disease: A Population-Based Cohort Study.",
+      "url": "https://doi.org/10.1111/1471-0528.70265"
+    },
+    {
+      "reason": "Identifies specific interventions\u2014steroids, ventilation, surfactant\u2014that independently improve one-year survival at 22 weeks, strengthening evidence-based periviability counseling.",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Improving 1-Year Survival at 22 Weeks Gestation: Which Perinatal Interventions Matter?",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101989"
+    },
+    {
+      "reason": "Demonstrates that FMF preeclampsia screening calibration varies by ART versus spontaneous conception, prompting context-specific interpretation in fertility-treatment pregnancies.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode.",
+      "url": "https://doi.org/10.1002/uog.70244"
+    }
+  ],
+  "generated_at": "2026-06-02T01:48:04.249742+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "In women with chronic hypertension, the FMF first-trimester competing-risks model accurately identifies those at elevated risk for preterm preeclampsia, and aspirin prophylaxis in screen-positive patients delays delivery due to preterm disease.",
+      "confidence": "high",
+      "id": "claim-1",
+      "source_ids": [
+        "src-1"
+      ]
+    },
+    {
+      "claim": "Continued semaglutide exposure into pregnancy is associated with abnormal gestational weight gain patterns and higher rates of adverse pregnancy outcomes compared with discontinuation before conception or no exposure.",
+      "confidence": "medium",
+      "id": "claim-2",
+      "source_ids": [
+        "src-2"
+      ]
+    },
+    {
+      "claim": "Greater severity of proteinuria during a preeclamptic pregnancy independently predicts increased long-term maternal risk of chronic hypertension, chronic kidney disease, and cardiovascular disease.",
+      "confidence": "medium",
+      "id": "claim-3",
+      "source_ids": [
+        "src-3"
+      ]
+    },
+    {
+      "claim": "Among 22-week live births managed with active intervention, antenatal corticosteroids, mechanical ventilation, and surfactant administration each independently improve one-year survival.",
+      "confidence": "medium",
+      "id": "claim-4",
+      "source_ids": [
+        "src-4"
+      ]
+    },
+    {
+      "claim": "Performance of the FMF first-trimester preeclampsia screening algorithm differs by conception mode, with varying preeclampsia incidence across ART, ovulation-induction, and spontaneous conception groups.",
+      "confidence": "medium",
+      "id": "claim-5",
+      "source_ids": [
+        "src-5"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "",
+      "id": "src-1",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "First-trimester prediction and prevention of preterm pre-eclampsia in women with chronic hypertension.",
+      "url": "https://doi.org/10.1002/uog.70212",
+      "why_it_matters": "Provides RCT-level evidence that biomarker-driven first-trimester screening and aspirin prophylaxis delay preterm preeclampsia in chronic hypertensives\u2014directly informing whether to screen universally or treat empirically.",
+      "year": 2026
+    },
+    {
+      "author": "",
+      "id": "src-2",
+      "publication": "Obstet Gynecol",
+      "title": "Gestational Weight Gain and Pregnancy Outcomes After Semaglutide Exposure.",
+      "url": "https://doi.org/10.1097/aog.0000000000006325",
+      "why_it_matters": "First large propensity-matched EMR analysis linking ongoing semaglutide use into pregnancy with adverse outcomes, sharpening preconception counseling for patients on GLP-1 agonists.",
+      "year": 2026
+    },
+    {
+      "author": "",
+      "id": "src-3",
+      "publication": "BJOG",
+      "title": "Proteinuria in Preeclampsia and Long-Term Risk of Maternal Kidney and Cardiovascular Disease: A Population-Based Cohort Study.",
+      "url": "https://doi.org/10.1111/1471-0528.70265",
+      "why_it_matters": "Quantifies how proteinuria severity at preeclampsia diagnosis predicts decades-long maternal cardiorenal risk, enabling more individualized postpartum surveillance.",
+      "year": 2026
+    },
+    {
+      "author": "",
+      "id": "src-4",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Improving 1-Year Survival at 22 Weeks Gestation: Which Perinatal Interventions Matter?",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101989",
+      "why_it_matters": "Identifies specific interventions\u2014steroids, ventilation, surfactant\u2014that independently improve one-year survival at 22 weeks, strengthening evidence-based periviability counseling.",
+      "year": 2026
+    },
+    {
+      "author": "",
+      "id": "src-5",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode.",
+      "url": "https://doi.org/10.1002/uog.70244",
+      "why_it_matters": "Demonstrates that FMF preeclampsia screening calibration varies by ART versus spontaneous conception, prompting context-specific interpretation in fertility-treatment pregnancies.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "First-trimester prediction and prevention of preterm pre-eclampsia in women with chronic hypertension. - Ultrasound Obstet Gynecol - 2026 (https://doi.org/10.1002/uog.70212)",
+    "Gestational Weight Gain and Pregnancy Outcomes After Semaglutide Exposure. - Obstet Gynecol - 2026 (https://doi.org/10.1097/aog.0000000000006325)",
+    "Proteinuria in Preeclampsia and Long-Term Risk of Maternal Kidney and Cardiovascular Disease: A Population-Based Cohort Study. - BJOG - 2026 (https://doi.org/10.1111/1471-0528.70265)",
+    "Improving 1-Year Survival at 22 Weeks Gestation: Which Perinatal Interventions Matter? - Am J Obstet Gynecol MFM - 2026 (https://doi.org/10.1016/j.ajogmf.2026.101989)",
+    "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode. - Ultrasound Obstet Gynecol - 2026 (https://doi.org/10.1002/uog.70244)"
+  ],
+  "topic": "MFM Rounds - week of 2026/06/02",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "kdnR...n2DI"
+    }
+  },
+  "word_count": 1590
+}

@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Empiric Reflex"
+    },
+    {
+      "startTime": 61.8,
+      "title": "\u2014 Headline Setup: Who's in the Room"
+    },
+    {
+      "startTime": 123.6,
+      "title": "\u2014 Headline Deep Dive: Effect Size and What It Means"
+    },
+    {
+      "startTime": 185.41,
+      "title": "\u2014 Round 1: Proteinuria Severity and Long-Term Cardiorenal Risk (BJOG)"
+    },
+    {
+      "startTime": 247.21,
+      "title": "\u2014 Round 2: Semaglutide Into Pregnancy (Green Journal)"
+    },
+    {
+      "startTime": 309.01,
+      "title": "\u2014 Round 3: 22-Week Survival and the Intervention Bundle (AJOG MFM)"
+    },
+    {
+      "startTime": 370.81,
+      "title": "\u2014 Round 4: FMF Calibration Across Conception Modes (Ultrasound Obstet Gynecol)"
+    },
+    {
+      "startTime": 432.62,
+      "title": "\u2014 What to Watch / Still Unsettled"
+    },
+    {
+      "startTime": 494.42,
+      "title": "\u2014 Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}
