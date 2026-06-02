@@ -3170,9 +3170,23 @@ def update_rss(
     audio_path: Path,
     cfg: dict,
     repo_root: Path,
-) -> None:
+    *,
+    feed_meta: dict | None = None,
+) -> Path:
+    """Append a new <item> to the show's RSS feed; create the feed if absent.
+
+    When ``feed_meta`` is None, writes to ``feed.xml`` with channel metadata
+    drawn from ``cfg`` — the original open-topic show behavior. When
+    ``feed_meta`` is provided (digest runs), it must supply ``feed_filename``
+    plus per-show channel overrides (title/description/author/category/image)
+    so each digest publishes into its own feed at e.g. ``feed-mfm.xml``.
+
+    Returns the absolute path of the feed file that was written.
+    """
+    feed_meta = feed_meta or {}
+    feed_filename = feed_meta.get("feed_filename") or "feed.xml"
     base_url  = f"https://{cfg['github_user']}.github.io/{cfg['github_repo']}"
-    feed_url  = f"{base_url}/feed.xml"
+    feed_url  = f"{base_url}/{feed_filename}"
     audio_url = f"{base_url}/{cfg['output_dir']}/{audio_path.name}"
     file_size = audio_path.stat().st_size if audio_path.exists() else 0
     pub_date  = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
@@ -3253,12 +3267,28 @@ def update_rss(
         "Episode text and audio are generated with human-directed software.</em>"
     )
 
-    # Script preview — escape any XML-sensitive chars outside CDATA wrap
+    # Script preview — escape any XML-sensitive chars outside CDATA wrap.
+    # Defensive re-strip first: if any upstream pass leaks prose preamble
+    # (e.g. a fact-check call that returns "Here's the corrected script…"
+    # before the dialogue), _strip_to_dialogue snaps back to the first
+    # SPEAKER: line. If no speaker line exists at all, fall back to the
+    # episode topic so we never publish raw model preamble.
+    script_for_preview = _strip_to_dialogue(episode.get("script", ""))
+    if not re.search(
+        r"^([A-Z][A-Z ]{1,40})(?:\s*\[[^\]]*\])?\s*:",
+        script_for_preview,
+        re.MULTILINE,
+    ):
+        logger.warning(
+            "update_rss: stripped script has no SPEAKER: line; "
+            "falling back to topic for description preview."
+        )
+        script_for_preview = episode.get("topic", "")
     preview = _xml_escape(
         re.sub(
             r"^([A-Z][A-Z ]{1,40})(?:\s*\[[^\]]*\])?\s*:\s*",
             "",
-            episode["script"][:500],
+            script_for_preview[:500],
             flags=re.MULTILINE,
         )
     )
@@ -3302,7 +3332,7 @@ def update_rss(
         chapters_tag = chapters_tag,
     )
 
-    feed_path = repo_root / "feed.xml"
+    feed_path = repo_root / feed_filename
     if feed_path.exists():
         content = feed_path.read_text(encoding="utf-8")
         if "xmlns:podcast=" not in content:
@@ -3315,21 +3345,24 @@ def update_rss(
         # (The atom:link tag is self-closing — </atom:link> never appears in the file.)
         content = content.replace("</channel>", new_item + "\n  </channel>", 1)
     else:
+        # Per-show channel metadata: feed_meta overrides win, otherwise the
+        # config defaults are used (open-topic show keeps its existing values).
         content = _RSS_TEMPLATE.format(
-            podcast_title       = _xml_escape(cfg["podcast_title"]),
+            podcast_title       = _xml_escape(feed_meta.get("podcast_title")       or cfg["podcast_title"]),
             base_url            = base_url,
-            podcast_description = _xml_escape(cfg["podcast_description"]),
-            podcast_language    = cfg["podcast_language"],
-            podcast_author      = _xml_escape(cfg["podcast_author"]),
-            podcast_category    = _xml_escape(cfg["podcast_category"]),
-            podcast_email       = _xml_escape(cfg["podcast_email"]),
-            podcast_image_url   = cfg.get("podcast_image", ""),
+            podcast_description = _xml_escape(feed_meta.get("podcast_description") or cfg["podcast_description"]),
+            podcast_language    = feed_meta.get("podcast_language")                or cfg["podcast_language"],
+            podcast_author      = _xml_escape(feed_meta.get("podcast_author")      or cfg["podcast_author"]),
+            podcast_category    = _xml_escape(feed_meta.get("podcast_category")    or cfg["podcast_category"]),
+            podcast_email       = _xml_escape(feed_meta.get("podcast_email")       or cfg["podcast_email"]),
+            podcast_image_url   = feed_meta.get("podcast_image")                   or cfg.get("podcast_image", ""),
             feed_url            = feed_url,
             items               = new_item,
         )
 
     feed_path.write_text(content, encoding="utf-8")
     logger.info(f"RSS feed updated → {feed_path}")
+    return feed_path
 
 
 def git_publish(
@@ -3338,10 +3371,17 @@ def git_publish(
     topic: str,
     extra_paths: list[Path] | None = None,
     title: str | None = None,
+    *,
+    feed_filename: str = "feed.xml",
 ) -> None:
+    """Commit + push the new audio file, the show's RSS feed, and any extras.
+
+    ``feed_filename`` selects which feed XML to stage (e.g. ``feed-mfm.xml``
+    for digest runs). Defaults to the open-topic show's ``feed.xml``.
+    """
     headline = (title or topic or "").strip()
     safe_topic = re.sub(r"[\r\n]+", " ", headline).strip()[:120] or "(untitled)"
-    add_paths = [str(audio_path), "feed.xml"] + [
+    add_paths = [str(audio_path), feed_filename] + [
         str(path) for path in (extra_paths or []) if Path(path).exists()
     ]
     for cmd in [
@@ -3512,12 +3552,13 @@ def _run_with_cfg(
                     "music": cfg.get("music_model"),
                 },
             )
+            feed_filename = (feed_meta or {}).get("feed_filename") or "feed.xml"
             manifest.data.setdefault("paths", {}).update(
                 {
                     "repo_root": str(repo_root),
                     "work_dir": str(work_dir),
                     "final_audio": str(final_mp3),
-                    "rss": str(repo_root / "feed.xml"),
+                    "rss": str(repo_root / feed_filename),
                 }
             )
             manifest.save()
@@ -3849,16 +3890,30 @@ def _run_with_cfg(
             current_stage = "rss"
             manifest.set_stage(current_stage)
             logger.info("[5/5] Updating RSS feed...")
-            update_rss(episode, final_mp3, cfg, repo_root)
+            feed_path = update_rss(
+                episode, final_mp3, cfg, repo_root, feed_meta=feed_meta
+            )
             base_url = f"https://{cfg['github_user']}.github.io/{cfg['github_repo']}"
             manifest.set_publish(
                 rss_updated=True,
-                rss_path=str(repo_root / "feed.xml"),
-                feed_url=f"{base_url}/feed.xml",
+                rss_path=str(feed_path),
+                feed_url=f"{base_url}/{feed_path.name}",
                 audio_url=f"{base_url}/{cfg['output_dir']}/{final_mp3.name}",
                 chapters_url=episode.get("chapters_url"),
                 companion_url=episode.get("companion_url"),
             )
+
+            # If feed_meta names a cover image that lives in the repo, include
+            # it in the git commit so per-show feeds always reference an asset
+            # that's actually been pushed.
+            publish_extras = list(companion_paths)
+            cover_local = (feed_meta or {}).get("cover_local_path")
+            if cover_local:
+                cover_path = Path(cover_local)
+                if not cover_path.is_absolute():
+                    cover_path = repo_root / cover_path
+                if cover_path.exists():
+                    publish_extras.append(cover_path)
 
             if not skip_git:
                 current_stage = "git"
@@ -3867,8 +3922,9 @@ def _run_with_cfg(
                     final_mp3,
                     repo_root,
                     topic,
-                    extra_paths=companion_paths,
+                    extra_paths=publish_extras,
                     title=episode.get("title"),
+                    feed_filename=feed_path.name,
                 )
                 manifest.set_publish(git_pushed=True)
             else:
@@ -3919,15 +3975,48 @@ def run(
     return _run_with_cfg(topic, cfg, repo_root)
 
 
+def _feed_meta_from_show(show: dict, cfg: dict) -> dict:
+    """Build the `feed_meta` payload for `update_rss` / `git_publish` from a show.
+
+    Channel-level overrides fall back to global cfg keys where unset so each
+    digest feed can be partially customized (e.g. just title + cover) without
+    re-stating everything. ``cover_local_path`` (derived from cover_image URL)
+    lets `_run_with_cfg` stage the JPG into the publish commit.
+    """
+    cover_url = str(show.get("cover_image") or "").strip()
+    cover_local = ""
+    if cover_url:
+        # Convention: cover_image URLs point at .../assets/cover-<slug>.jpg.
+        # Stage the matching repo-local file so the very first publish doesn't
+        # ship a feed pointing at a 404'd image.
+        cover_local = f"assets/{cover_url.rsplit('/', 1)[-1]}"
+    # iTunes <category> wants the top-level term; nested subcategory support
+    # would require template work. For "Science:Medicine" we keep "Science"
+    # and TODO the nested <itunes:category> tag for a follow-up.
+    category_raw = str(show.get("category") or cfg["podcast_category"])
+    category = category_raw.split(":", 1)[0]
+    return {
+        "feed_filename":       str(show.get("feed_filename") or "feed.xml"),
+        "podcast_title":       str(show.get("display_name") or cfg["podcast_title"]),
+        "podcast_description": str(show.get("description")  or cfg["podcast_description"]),
+        "podcast_author":      str(show.get("author")       or cfg["podcast_author"]),
+        "podcast_category":    category,
+        "podcast_image":       cover_url or cfg.get("podcast_image", ""),
+        "podcast_email":       str(show.get("email") or cfg["podcast_email"]),
+        "podcast_language":    str(show.get("language") or cfg["podcast_language"]),
+        "cover_local_path":    cover_local,
+    }
+
+
 def run_digest(show_id: str, repo_root: Path = Path(".")) -> dict:
     """Rank a digest show's recent papers and generate one episode end-to-end.
 
-    Phase 2: publishes to the default feed.xml. Phase 3 will add per-show feeds
-    via `feed_meta` and record the picked DOIs in the ledger.
+    Publishes into the show's own feed (feed-mfm.xml etc.) and records the
+    headline + rounds DOIs in the show's ledger so they're skipped next run.
     """
     import digest_ranker
     from digest_shows import get_show
-    from digest_ledger import load_ledger
+    from digest_ledger import load_ledger, record_episode
 
     repo_root = repo_root.resolve()
     cfg = load_config(repo_root)
@@ -3965,7 +4054,33 @@ def run_digest(show_id: str, repo_root: Path = Path(".")) -> dict:
         f"{show['display_name']} - week of {window_to}"
         if window_to else show["display_name"]
     )
-    return _run_with_cfg(topic, cfg, repo_root, digest_articles=ranked)
+    feed_meta = _feed_meta_from_show(show, cfg)
+    episode = _run_with_cfg(
+        topic, cfg, repo_root,
+        feed_meta=feed_meta,
+        digest_articles=ranked,
+    )
+
+    # Ledger write happens AFTER the pipeline returns successfully — never
+    # mark a paper covered if the build raised mid-way.
+    try:
+        episode_url = (episode or {}).get("audio_url") or ""
+        record_episode(
+            repo_root,
+            show_id,
+            headline=ranked.get("headline"),
+            rounds=ranked.get("rounds") or [],
+            episode_url=episode_url,
+            window=ranked.get("window") or {},
+        )
+        logger.info(
+            f"Ledger updated for {show_id}: 1 headline + "
+            f"{len(ranked.get('rounds') or [])} rounds papers."
+        )
+    except Exception as exc:  # noqa: BLE001 — never block on bookkeeping
+        logger.warning(f"Ledger write failed for {show_id}: {exc}")
+
+    return episode
 
 
 if __name__ == "__main__":

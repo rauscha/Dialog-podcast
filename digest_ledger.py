@@ -7,9 +7,9 @@ articles have already aired (``covered``, keyed by normalized DOI) plus a
 Exact DOI matching is the right dedup primitive for articles (unlike the fuzzy
 topic-similarity used for free-form episodes in personal_context).
 
-Phase 1 implements load / filter / atomic-save and the key-normalization
-helpers. ``record_episode`` (mutating the ledger after a successful publish)
-arrives in Phase 3 alongside multi-feed publishing.
+Phase 1 implemented load / filter / atomic-save and the key-normalization
+helpers. Phase 3 adds ``record_episode``, which mutates the ledger after a
+successful publish so future runs skip already-aired papers.
 """
 
 from __future__ import annotations
@@ -121,3 +121,57 @@ def filter_unseen(
         cand["_key"] = key
         (seen if key in covered else unseen).append(cand)
     return unseen, seen
+
+
+def _covered_entry(record: dict[str, Any], episode_url: str, aired_at: str) -> dict[str, Any]:
+    """Compact entry stored under ledger.covered[key] — no abstract text."""
+    return {
+        "title":       str(record.get("title") or "").strip(),
+        "publication": str(record.get("publication") or record.get("journal") or "").strip(),
+        "year":        record.get("year"),
+        "doi":         normalize_doi(record.get("doi") or ""),
+        "pmid":        str(record.get("pmid") or "").strip() or None,
+        "url":         str(record.get("url") or "").strip(),
+        "episode_url": episode_url,
+        "aired_at":    aired_at,
+    }
+
+
+def record_episode(
+    repo_root: Path,
+    show_id: str,
+    *,
+    headline: dict[str, Any] | None,
+    rounds: list[dict[str, Any]] | None = None,
+    episode_url: str = "",
+    window: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Mark headline + rounds papers as covered, then save the ledger atomically.
+
+    Returns the updated ledger (for callers that want to log what was recorded).
+    Soft-fails — anything missing a usable key is skipped with no exception so
+    a single bad record never blocks publish bookkeeping.
+    """
+    ledger = load_ledger(repo_root, show_id)
+    covered = dict(ledger.get("covered") or {})
+    aired_at = datetime.now(timezone.utc).isoformat()
+
+    recorded: list[str] = []
+    for record in [headline, *(rounds or [])]:
+        if not record or not isinstance(record, dict):
+            continue
+        key = candidate_key(record)
+        if not key or key == "unknown" or key in covered:
+            continue
+        covered[key] = _covered_entry(record, episode_url, aired_at)
+        recorded.append(key)
+
+    ledger["covered"] = covered
+    ledger["last_run"] = {
+        "aired_at":  aired_at,
+        "episode_url": episode_url,
+        "recorded_keys": recorded,
+        "window": window or {},
+    }
+    save_ledger(repo_root, show_id, ledger)
+    return ledger
