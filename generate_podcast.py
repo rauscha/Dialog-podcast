@@ -1594,13 +1594,28 @@ def _legacy_research_and_script(
     }
 
 
-def _quality_research_and_script(
+def _script_from_research_package(
     topic: str,
     cfg: dict,
     client: anthropic.Anthropic | None,
     repo_root: Path,
-    run_id: str = "",
+    run_id: str,
+    research_package: dict,
+    *,
+    web_factcheck: bool = True,
 ) -> dict:
+    """Shared downstream pipeline: research_package -> final performance script.
+
+    Used by both `_quality_research_and_script` (web-searched topics) and
+    `_digest_research_and_script` (curated article lists). Runs thesis ->
+    guest decision -> beat sheet -> sonic plan -> dialogue draft ->
+    anti-cliche -> fact-check (or fiction continuity) -> performance ->
+    host-memory / personal-context update.
+
+    web_factcheck=True keeps the live web_search tool on the fact-check pass;
+    set False to keep that pass tool-free (digests use this so the supplied
+    paraphrased findings stay the source of truth).
+    """
     target_words = int(cfg["target_minutes"]) * 130
     episode_type = normalize_episode_type(str(cfg.get("episode_type", "")))
     type_note = episode_type_context(episode_type)
@@ -1615,43 +1630,7 @@ def _quality_research_and_script(
     if cfg.get("use_sonic_footnotes", True):
         sonic_catalog, sonic_catalog_path = load_sonic_footnotes_catalog(repo_root, cfg)
 
-    logger.info(f"[1/5] Researching topic package: {topic!r}")
-    research_text = _anthropic_text(
-        client,
-        model=_model_for(cfg, "research_model", _RESEARCH_MODEL),
-        max_tokens=8192,
-        system=_RESEARCH_SYSTEM,
-        content=(
-            f"Research this topic thoroughly for an Asynchronous episode: {topic}\n\n"
-            f"{type_note}\n\n"
-            f"Personal context:\n{personal_context_text}\n\n"
-            "Return JSON only with these keys:\n"
-            "- topic\n"
-            "- readable_brief\n"
-            "- source_cards: array of {id,title,author,publication,year,url,why_it_matters}\n"
-            "- key_claims: array of {id,claim,confidence,source_ids}\n"
-            "- story_hooks\n"
-            "- counterintuitive_findings\n"
-            "- open_questions\n"
-            "- things_to_avoid\n\n"
-            "Use live web search. Be specific about dates, people, institutions, "
-            "and uncertainty. Do not write a script."
-        ),
-        tools=[{"type": "web_search_20250305", "name": "web_search"}],
-        temperature=0.2,
-        cfg=cfg,
-    )
-    research_package = _extract_json_object(research_text) or {
-        "topic": topic,
-        "readable_brief": research_text,
-        "source_cards": [],
-        "key_claims": [],
-        "story_hooks": [],
-        "counterintuitive_findings": [],
-        "open_questions": [],
-        "things_to_avoid": [],
-    }
-    research_brief = str(research_package.get("readable_brief") or research_text)
+    research_brief = str(research_package.get("readable_brief") or "")
     source_cards = research_package.get("source_cards", [])
     key_claims = research_package.get("key_claims", [])
     if not isinstance(source_cards, list):
@@ -1804,6 +1783,18 @@ def _quality_research_and_script(
         )
     else:
         logger.info("[3/5] Fact-checking and calibrating claims...")
+        fact_check_tools = (
+            [{"type": "web_search_20250305", "name": "web_search"}]
+            if web_factcheck
+            else None
+        )
+        fact_check_guidance = (
+            "Use the research package as the first reference, and web search "
+            "when anything important needs verification."
+            if web_factcheck
+            else "Use the research package as the source of truth — do NOT "
+                 "introduce facts that are not supported by the supplied package."
+        )
         fact_checked_script = _anthropic_text(
             client,
             model=_model_for(cfg, "fact_check_model", _FACT_CHECK_MODEL),
@@ -1814,13 +1805,11 @@ def _quality_research_and_script(
                 f"{type_note}\n\n"
                 f"Personal context:\n{personal_context_text}\n\n"
                 f"Guest plan:\n{json.dumps(guest_plan, indent=2)}\n\n"
-                "Use the research package as the first reference, and web search "
-                "when anything important needs verification. Correct only claims "
-                "that need correcting or softening.\n\n"
+                f"{fact_check_guidance} Correct only claims that need correcting or softening.\n\n"
                 f"Research package:\n{json.dumps(research_package, indent=2)[:26000]}\n\n"
                 f"Script:\n{natural_script}"
             ),
-            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            tools=fact_check_tools,
             temperature=0.2,
             cfg=cfg,
         )
@@ -1919,6 +1908,197 @@ def _quality_research_and_script(
     }
 
 
+def _quality_research_and_script(
+    topic: str,
+    cfg: dict,
+    client: anthropic.Anthropic | None,
+    repo_root: Path,
+    run_id: str = "",
+) -> dict:
+    """Standard entry point: open-ended web_search research -> shared pipeline."""
+    episode_type = normalize_episode_type(str(cfg.get("episode_type", "")))
+    type_note = episode_type_context(episode_type)
+    # Just-in-time personal context for the research prompt only;
+    # _script_from_research_package reloads its own copy for downstream passes.
+    _, _, _, personal_context_text = _personal_context_for_topic(repo_root, cfg, topic)
+
+    logger.info(f"[1/5] Researching topic package: {topic!r}")
+    research_text = _anthropic_text(
+        client,
+        model=_model_for(cfg, "research_model", _RESEARCH_MODEL),
+        max_tokens=8192,
+        system=_RESEARCH_SYSTEM,
+        content=(
+            f"Research this topic thoroughly for an Asynchronous episode: {topic}\n\n"
+            f"{type_note}\n\n"
+            f"Personal context:\n{personal_context_text}\n\n"
+            "Return JSON only with these keys:\n"
+            "- topic\n"
+            "- readable_brief\n"
+            "- source_cards: array of {id,title,author,publication,year,url,why_it_matters}\n"
+            "- key_claims: array of {id,claim,confidence,source_ids}\n"
+            "- story_hooks\n"
+            "- counterintuitive_findings\n"
+            "- open_questions\n"
+            "- things_to_avoid\n\n"
+            "Use live web search. Be specific about dates, people, institutions, "
+            "and uncertainty. Do not write a script."
+        ),
+        tools=[{"type": "web_search_20250305", "name": "web_search"}],
+        temperature=0.2,
+        cfg=cfg,
+    )
+    research_package = _extract_json_object(research_text) or {
+        "topic": topic,
+        "readable_brief": research_text,
+        "source_cards": [],
+        "key_claims": [],
+        "story_hooks": [],
+        "counterintuitive_findings": [],
+        "open_questions": [],
+        "things_to_avoid": [],
+    }
+    return _script_from_research_package(
+        topic, cfg, client, repo_root, run_id, research_package
+    )
+
+
+_DIGEST_RESEARCH_SYSTEM = """\
+You are the editorial producer for a peer-level weekly journal-club podcast.
+You have already been handed a ranked list of recently published articles
+(one headline + 3-5 quick-hit rounds), each with a short already-paraphrased
+finding line, journal, year, evidence tier, and DOI. You will NOT see the
+abstracts and must NEVER reproduce abstract text verbatim.
+
+Your job: assemble a clean research package the dialogue writer can use to
+draft a peer-to-peer rounds-style episode. Stay clinical and concrete.
+Paraphrase the supplied findings further if useful; never invent numbers or
+claims that are not in the supplied finding line.
+
+Return JSON only with these keys:
+- topic
+- readable_brief: 4-8 paragraphs. Open with why this week matters in the
+  field. Walk through the headline paper (design, what was measured, the
+  effect, key caveats, what it would change in practice). Then string the
+  rounds together with a real through-line — not a list. End with what to
+  watch and what is still unsettled.
+- source_cards: one entry per article in rank order (headline first, then
+  rounds), shape {id,title,author,publication,year,url,why_it_matters}.
+  Use the supplied bibliographic data verbatim; author may be left empty.
+- key_claims: array of {id,claim,confidence,source_ids}. One per article.
+  claim is the finding in your own words. confidence is "high" for RCT,
+  meta-analysis, or large multicenter; "medium" for solid observational;
+  "low" for preprints, small-N, single-center, or pilot work.
+- story_hooks: 2-4 angles a host could open or pivot on.
+- counterintuitive_findings: 0-3 surprises across the supplied papers.
+- open_questions: 2-4 honest unresolved questions in this niche.
+- things_to_avoid: hype, lay-explainer framing, defining basic specialist
+  terms, reading any abstract verbatim, overclaiming from small studies.
+
+Do not invent additional articles. Do not add citation counts. Return only
+the JSON object — no preamble, no closing remarks.
+"""
+
+
+def _digest_research_and_script(
+    topic: str,
+    cfg: dict,
+    client: anthropic.Anthropic | None,
+    repo_root: Path,
+    run_id: str = "",
+) -> dict:
+    """Digest entry point: ranked-article list -> research_package -> shared pipeline.
+
+    Uses the cloud research model with NO tools (copyright firewall — abstracts
+    never leave digest_ranker; only paraphrased findings + metadata propagate).
+    Delegates to _script_from_research_package with web_factcheck disabled so
+    the supplied paraphrases stay the source of truth.
+    """
+    articles = cfg.get("digest_articles") or {}
+    headline = articles.get("headline") or {}
+    rounds = list(articles.get("rounds") or [])
+    if not headline:
+        raise ValueError(
+            "Digest run requires cfg['digest_articles'] with a headline; got nothing."
+        )
+
+    audience = str(cfg.get("audience") or "A specialist physician in the show's field.")
+    show_id = str(cfg.get("show_id") or "")
+    window_meta = articles.get("window") or {}
+
+    def _card(article: dict) -> dict:
+        return {
+            "rank": article.get("rank"),
+            "role": article.get("role"),
+            "title": article.get("title", ""),
+            "journal": article.get("journal", ""),
+            "year": article.get("year"),
+            "doi": article.get("doi"),
+            "url": article.get("url", ""),
+            "quartile": article.get("quartile"),
+            "evidence": article.get("evidence"),
+            "importance": article.get("importance"),
+            "is_preprint": bool(article.get("is_preprint")),
+            "finding": article.get("finding", ""),
+            "why": article.get("why", ""),
+            "domain": article.get("domain"),
+        }
+
+    article_brief = {
+        "show_id": show_id,
+        "display_name": articles.get("display_name") or topic,
+        "audience": audience,
+        "window": window_meta,
+        "headline": _card(headline),
+        "rounds": [_card(r) for r in rounds],
+    }
+
+    logger.info(
+        f"[1/5] Building digest research package "
+        f"(headline + {len(rounds)} rounds, no web tools)..."
+    )
+    package_text = _anthropic_text(
+        client,
+        model=_model_for(cfg, "research_model", _RESEARCH_MODEL),
+        max_tokens=8192,
+        system=_DIGEST_RESEARCH_SYSTEM,
+        content=(
+            f"Show: {articles.get('display_name', topic)}\n"
+            f"Audience: {audience}\n"
+            f"Window covered: {window_meta.get('from','?')} to {window_meta.get('to','?')}\n\n"
+            "Ranked article list (paraphrased findings — work strictly from these):\n"
+            f"{json.dumps(article_brief, indent=2)[:24000]}"
+        ),
+        temperature=0.3,
+        cfg=cfg,
+    )
+
+    research_package = _extract_json_object(package_text) or {}
+    # Hard floor so downstream passes never trip on missing keys.
+    research_package.setdefault("topic", topic)
+    if not research_package.get("readable_brief"):
+        research_package["readable_brief"] = package_text
+    research_package.setdefault("source_cards", [])
+    research_package.setdefault("key_claims", [])
+    research_package.setdefault("story_hooks", [])
+    research_package.setdefault("counterintuitive_findings", [])
+    research_package.setdefault("open_questions", [])
+    research_package.setdefault(
+        "things_to_avoid",
+        [
+            "Reading abstracts verbatim",
+            "Lay-explainer framing or basic-term definitions",
+            "Overclaiming from small or preprint studies",
+        ],
+    )
+    research_package["digest_input"] = article_brief
+
+    return _script_from_research_package(
+        topic, cfg, client, repo_root, run_id, research_package,
+        web_factcheck=False,
+    )
+
+
 def research_and_script(
     topic: str,
     cfg: dict,
@@ -1926,6 +2106,8 @@ def research_and_script(
     repo_root: Path = Path("."),
     run_id: str = "",
 ) -> dict:
+    if cfg.get("digest_articles"):
+        return _digest_research_and_script(topic, cfg, client, repo_root, run_id=run_id)
     if cfg.get("script_quality_pipeline", True):
         return _quality_research_and_script(topic, cfg, client, repo_root, run_id=run_id)
     return _legacy_research_and_script(topic, cfg, client, repo_root, run_id=run_id)
@@ -3251,25 +3433,24 @@ def _ensure_intro_ident(cfg: dict, repo_root: Path) -> "Path | None":
 
 # ── Main run ───────────────────────────────────────────────────────────────────
 
-def run(
+def _run_with_cfg(
     topic: str,
-    repo_root: Path = Path("."),
-    episode_type: str | None = None,
-    guest_host_mode: str | None = None,
+    cfg: dict,
+    repo_root: Path,
+    *,
+    feed_meta: dict | None = None,
+    digest_articles: dict | None = None,
 ) -> dict:
-    repo_root = repo_root.resolve()
-    cfg = load_config(repo_root)
-    if episode_type:
-        cfg["episode_type"] = normalize_episode_type(episode_type)
-    if guest_host_mode:
-        mode = guest_host_mode.lower().strip()
-        if mode not in _VALID_GUEST_HOST_MODES:
-            raise ValueError(
-                f"Unsupported guest_host_mode {guest_host_mode!r}; "
-                f"expected one of {sorted(_VALID_GUEST_HOST_MODES)}"
-            )
-        cfg["guest_host_mode"] = mode
-        cfg["use_guest_hosts"] = mode != "off"
+    """Drive the audio pipeline with a fully-built cfg.
+
+    Shared body for `run()` (open-topic episodes) and `run_digest()` (digest
+    shows). `digest_articles`, when present, is stashed on cfg so the
+    research_and_script branch picks the digest path. `feed_meta` is a Phase 3
+    hook (per-show feed metadata); ignored for now — all episodes still publish
+    to the default feed.xml.
+    """
+    if digest_articles is not None:
+        cfg["digest_articles"] = digest_articles
     skip_git = _should_skip_git()
 
     slug = slugify_topic(topic)
@@ -3715,6 +3896,78 @@ def run(
     return episode
 
 
+def run(
+    topic: str,
+    repo_root: Path = Path("."),
+    episode_type: str | None = None,
+    guest_host_mode: str | None = None,
+) -> dict:
+    """Thin wrapper: load cfg, apply CLI overrides, then drive `_run_with_cfg`."""
+    repo_root = repo_root.resolve()
+    cfg = load_config(repo_root)
+    if episode_type:
+        cfg["episode_type"] = normalize_episode_type(episode_type)
+    if guest_host_mode:
+        mode = guest_host_mode.lower().strip()
+        if mode not in _VALID_GUEST_HOST_MODES:
+            raise ValueError(
+                f"Unsupported guest_host_mode {guest_host_mode!r}; "
+                f"expected one of {sorted(_VALID_GUEST_HOST_MODES)}"
+            )
+        cfg["guest_host_mode"] = mode
+        cfg["use_guest_hosts"] = mode != "off"
+    return _run_with_cfg(topic, cfg, repo_root)
+
+
+def run_digest(show_id: str, repo_root: Path = Path(".")) -> dict:
+    """Rank a digest show's recent papers and generate one episode end-to-end.
+
+    Phase 2: publishes to the default feed.xml. Phase 3 will add per-show feeds
+    via `feed_meta` and record the picked DOIs in the ledger.
+    """
+    import digest_ranker
+    from digest_shows import get_show
+    from digest_ledger import load_ledger
+
+    repo_root = repo_root.resolve()
+    cfg = load_config(repo_root)
+    show = get_show(repo_root, show_id)
+
+    cfg["episode_type"] = show["episode_type"]
+    cfg["target_minutes"] = int(show["target_minutes"])
+    cfg["show_id"] = show_id
+    cfg["audience"] = show.get("audience", "")
+
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not anthropic_key:
+        raise RuntimeError(
+            "ANTHROPIC_API_KEY is required to generate a digest episode "
+            "(both for ranking and for the script-build call)."
+        )
+    client = anthropic.Anthropic(api_key=anthropic_key)
+
+    logger.info(f"Ranking {show['display_name']} ({show_id})...")
+    ranked = digest_ranker.rank_show(
+        show,
+        load_ledger(repo_root, show_id),
+        client,
+        cfg=cfg,
+        repo_root=repo_root,
+    )
+    if not ranked.get("headline"):
+        raise RuntimeError(
+            f"Digest {show_id!r}: no candidates found this run "
+            f"(check journals / window / ledger). Aborting."
+        )
+
+    window_to = (ranked.get("window") or {}).get("to") or ""
+    topic = (
+        f"{show['display_name']} - week of {window_to}"
+        if window_to else show["display_name"]
+    )
+    return _run_with_cfg(topic, cfg, repo_root, digest_articles=ranked)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate an Asynchronous podcast episode.")
     parser.add_argument("topic", nargs="?", help="Episode topic")
@@ -3741,6 +3994,12 @@ if __name__ == "__main__":
         "--no-guest",
         action="store_true",
         help="Disable guest experts for this episode.",
+    )
+    parser.add_argument(
+        "--digest",
+        metavar="SHOW_ID",
+        default=None,
+        help="Generate one digest episode end-to-end for the given show (mfm, fetal, ai).",
     )
     parser.add_argument(
         "--digest-dry-run",
@@ -3780,6 +4039,16 @@ if __name__ == "__main__":
         except Exception:
             pass
         print(digest_ranker.format_dry_run_table(result))
+        sys.exit(0)
+
+    if args.digest:
+        # Phase 2: generate one real digest episode end-to-end.
+        from digest_shows import DigestConfigError
+        try:
+            run_digest(args.digest, repo_root=Path(args.repo))
+        except DigestConfigError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            sys.exit(2)
         sys.exit(0)
 
     topic = args.topic or input("Enter podcast topic: ").strip()
