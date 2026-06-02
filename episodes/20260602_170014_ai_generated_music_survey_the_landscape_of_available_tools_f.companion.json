@@ -1,0 +1,358 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Poet and the Voice"
+    },
+    {
+      "start_sec": 70.29,
+      "start_time": "1:10",
+      "title": "\u2014 What Changed: The Tool Tier Hardens"
+    },
+    {
+      "start_sec": 140.58,
+      "start_time": "2:21",
+      "title": "\u2014 Maren Enters: The Workbench"
+    },
+    {
+      "start_sec": 210.88,
+      "start_time": "3:31",
+      "title": "\u2014 The Formula Problem (Affectionate Disagreement)"
+    },
+    {
+      "start_sec": 281.17,
+      "start_time": "4:41",
+      "title": "\u2014 Voice Cloning Is a Different Act"
+    },
+    {
+      "start_sec": 351.46,
+      "start_time": "5:51",
+      "title": "\u2014 Who Matters: The Legal Bifurcation"
+    },
+    {
+      "start_sec": 421.75,
+      "start_time": "7:02",
+      "title": "\u2014 The Economics: 28% vs. 0.5%"
+    },
+    {
+      "start_sec": 492.04,
+      "start_time": "8:12",
+      "title": "\u2014 Competing Approaches: Breaking Rust vs. Xania Monet"
+    },
+    {
+      "start_sec": 562.33,
+      "start_time": "9:22",
+      "title": "\u2014 Risks: What Could Go Wrong and When"
+    },
+    {
+      "start_sec": 632.63,
+      "start_time": "10:33",
+      "title": "\u2014 Close: The Copyright Office's Answer Is Nobody"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f.companion.json",
+  "duration_sec": 747.91873,
+  "episode_type": "landscape",
+  "episode_type_label": "Scout The Landscape",
+  "follow_up_links": [
+    {
+      "reason": "Primary source for Suno's scale metrics and the Telisha Jones/Xania Monet record deal story",
+      "source": "TechCrunch",
+      "title": "AI music generator Suno hits 2M paid subscribers and $300M in annual recurring revenue",
+      "url": "https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/"
+    },
+    {
+      "reason": "Comprehensive timeline of settlements, chart entries, and Deezer's AI upload statistics",
+      "source": "Billboard",
+      "title": "The 10 Biggest AI Music Stories of 2025: Suno & Udio Settlements, AI on the Charts & More",
+      "url": "https://www.billboard.com/lists/biggest-ai-music-stories-2025-suno-udio-charts-more/"
+    },
+    {
+      "reason": "Detailed legal analysis of settlement terms, per-generation royalty rates, and pending fair-use hearing",
+      "source": "AI Vortex",
+      "title": "RIAA sued Suno and Udio \u2014 Attorney Guide (2026)",
+      "url": "https://www.aivortex.io/legal/ai-case-law/suno-udio-music-ai/"
+    },
+    {
+      "reason": "Primary source for Google's entry into AI music with Lyria 3 Pro and responsible training claims",
+      "source": "Google Blog",
+      "title": "Google Flow Music and Believe bring next-gen tools to artists",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/believe-flow-music-partnership/"
+    },
+    {
+      "reason": "Details on Stable Audio 3.0's open-weight release and licensed training data approach",
+      "source": "TechCrunch",
+      "title": "Stability AI releases a new audio model that can create 6-minute songs",
+      "url": "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/"
+    },
+    {
+      "reason": "Primary source for the first major AI artist record deal and industry reaction",
+      "source": "Billboard",
+      "title": "AI Music Artist Xania Monet Signs Multimillion-Dollar Record Deal",
+      "url": "https://www.billboard.com/pro/ai-music-artist-xania-monet-multimillion-dollar-record-deal/"
+    },
+    {
+      "reason": "Details on UMG-Udio settlement structure and planned joint platform",
+      "source": "Music Ally",
+      "title": "UMG settles Udio lawsuit; companies plan new AI-music service together",
+      "url": "https://musically.com/2025/10/30/umg-settles-udio-lawsuit-companies-plan-new-ai-music-service-together/"
+    },
+    {
+      "reason": "Technical deep-dive on Suno Studio's DAW features and MIDI export capabilities",
+      "source": "Sean Kim Blog",
+      "title": "Suno Studio Complete Guide: The World's First Generative Audio Workstation",
+      "url": "https://blog.imseankim.com/suno-studio-generative-daw-guide-2026/"
+    }
+  ],
+  "generated_at": "2026-06-02T22:17:06.865277+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim specific streaming revenue figures from her own work",
+        "Should not assert legal opinions about copyright ownership",
+        "Should not claim to know Telisha Jones personally or speak for her experience",
+        "Should not overstate how representative her workflow is \u2014 she is one practitioner, not the whole field"
+      ],
+      "credential_frame": "A composite of independent producers and 'music designers' who have publicly documented hybrid AI-human workflows \u2014 the imoliver archetype: someone who came up through bedroom production, not a conservatory, and started using AI tools out of necessity before they were fashionable",
+      "delivery_baseline": "Measured pace, slightly dry, speaks in concrete specifics rather than abstractions. Occasional short laugh when something is genuinely absurd. Does not over-explain.",
+      "display_name": "Maren",
+      "elevenlabs_voice_id": "aCChyB4P5WEomwRsOKRh",
+      "expertise": "The actual texture of a production workflow \u2014 what Suno Studio's 12-stem separation feels like to use, where AIVA's brass-crescendo formula problem shows up in practice, why voice cloning in Kits.ai is a different creative act than text-to-song generation, and what the gap between a Suno v5.5 output and a real bedroom-pop demo actually sounds like to someone who has ears trained on both",
+      "field": "music production and AI tool integration",
+      "label": "MAREN",
+      "personality": "Pragmatic and slightly impatient with both the hype and the moral panic. Uses tools because they work, not because they're interesting. Will say 'that's not how it actually works' without being condescending. Has genuine aesthetic opinions \u2014 she finds AIVA's climaxes boring in a specific, nameable way. Not a futurist. Not a luddite. Just someone who has spent a lot of hours in the workbench.",
+      "role_in_episode": "Enters after the tool-tier taxonomy is established to give it texture and friction. Demonstrates the workflow from prompt to distributable track \u2014 including the parts that break or disappoint. Complicates the 'AI replaces artist' frame by showing how much human decision-making still lives in the loop. Exits before the legal and economic sections, which belong to Caspar.",
+      "synthetic": true,
+      "tts_provider": "elevenlabs",
+      "voice": "nova"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "Suno has 2 million paid subscribers and generates $300 million in annual recurring revenue, with a $2.45 billion valuation",
+      "confidence": "high",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Suno generates 7 million songs daily\u2014an entire Spotify catalog worth of music every two weeks",
+      "confidence": "high",
+      "id": "C2",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Deezer reports 28% of daily uploads are fully AI-generated (50,000+ tracks/day), but these account for only 0.5% of actual streams",
+      "confidence": "high",
+      "id": "C3",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "UMG settled with Udio in October 2025, securing a per-generation royalty of $0.002-$0.005 with higher rates for commercially distributed outputs",
+      "confidence": "medium",
+      "id": "C4",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Warner Music settled with Suno in November 2025, including Suno's acquisition of Songkick and an opt-in licensing structure",
+      "confidence": "high",
+      "id": "C5",
+      "source_ids": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "claim": "Sony Music has not settled with either Suno or Udio; a pivotal fair-use ruling is expected in July 2026",
+      "confidence": "high",
+      "id": "C6",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Xania Monet, created by Mississippi poet Telisha Jones using Suno, signed a $3 million deal with Hallwood Media and was the first AI song to enter a Billboard radio airplay chart",
+      "confidence": "high",
+      "id": "C7",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "Google launched Flow Music on April 18, 2026, powered by Lyria 3 Pro, after acquiring ProducerAI in early 2026",
+      "confidence": "high",
+      "id": "C8",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "Stability AI released Stable Audio 3.0 on May 20, 2026, with open weights for small/medium models and training exclusively on licensed data",
+      "confidence": "high",
+      "id": "C9",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "claim": "Suno v5.5 (March 2026) added custom voice cloning, personalized model training, and 8+ minute studio-quality tracks",
+      "confidence": "high",
+      "id": "C10",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "Udio was founded by former Google DeepMind researchers including CEO David Ding, and uses a proprietary model called Allegro v1.5",
+      "confidence": "high",
+      "id": "C11",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "AIVA is the world's first AI officially recognized as a 'Composer' by SACEM (French music rights society)",
+      "confidence": "high",
+      "id": "C12",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "Weights.gg, the cloud platform for RVC voice models, shut down in March 2026 due to unsustainable infrastructure costs",
+      "confidence": "medium",
+      "id": "C13",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "ElevenLabs released ElevenMusic iOS app in April 2026, offering up to 7 songs/day free, after raising $500M at $11B valuation in February 2026",
+      "confidence": "high",
+      "id": "C14",
+      "source_ids": [
+        "S1"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "TechCrunch Staff",
+      "id": "S1",
+      "publication": "TechCrunch",
+      "title": "AI music generator Suno hits 2M paid subscribers and $300M in annual recurring revenue",
+      "url": "https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/",
+      "why_it_matters": "Primary source for Suno's scale metrics and the Telisha Jones/Xania Monet record deal story",
+      "year": "2026"
+    },
+    {
+      "author": "Billboard Staff",
+      "id": "S2",
+      "publication": "Billboard",
+      "title": "The 10 Biggest AI Music Stories of 2025: Suno & Udio Settlements, AI on the Charts & More",
+      "url": "https://www.billboard.com/lists/biggest-ai-music-stories-2025-suno-udio-charts-more/",
+      "why_it_matters": "Comprehensive timeline of settlements, chart entries, and Deezer's AI upload statistics",
+      "year": "2025"
+    },
+    {
+      "author": "AI Vortex Legal Team",
+      "id": "S3",
+      "publication": "AI Vortex",
+      "title": "RIAA sued Suno and Udio \u2014 Attorney Guide (2026)",
+      "url": "https://www.aivortex.io/legal/ai-case-law/suno-udio-music-ai/",
+      "why_it_matters": "Detailed legal analysis of settlement terms, per-generation royalty rates, and pending fair-use hearing",
+      "year": "2026"
+    },
+    {
+      "author": "Seth Forsgren",
+      "id": "S4",
+      "publication": "Google Blog",
+      "title": "Google Flow Music and Believe bring next-gen tools to artists",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/believe-flow-music-partnership/",
+      "why_it_matters": "Primary source for Google's entry into AI music with Lyria 3 Pro and responsible training claims",
+      "year": "2026"
+    },
+    {
+      "author": "Ivan Mehta",
+      "id": "S5",
+      "publication": "TechCrunch",
+      "title": "Stability AI releases a new audio model that can create 6-minute songs",
+      "url": "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/",
+      "why_it_matters": "Details on Stable Audio 3.0's open-weight release and licensed training data approach",
+      "year": "2026"
+    },
+    {
+      "author": "Billboard Pro Staff",
+      "id": "S6",
+      "publication": "Billboard",
+      "title": "AI Music Artist Xania Monet Signs Multimillion-Dollar Record Deal",
+      "url": "https://www.billboard.com/pro/ai-music-artist-xania-monet-multimillion-dollar-record-deal/",
+      "why_it_matters": "Primary source for the first major AI artist record deal and industry reaction",
+      "year": "2025"
+    },
+    {
+      "author": "Music Ally Staff",
+      "id": "S7",
+      "publication": "Music Ally",
+      "title": "UMG settles Udio lawsuit; companies plan new AI-music service together",
+      "url": "https://musically.com/2025/10/30/umg-settles-udio-lawsuit-companies-plan-new-ai-music-service-together/",
+      "why_it_matters": "Details on UMG-Udio settlement structure and planned joint platform",
+      "year": "2025"
+    },
+    {
+      "author": "Sean Kim",
+      "id": "S8",
+      "publication": "Sean Kim Blog",
+      "title": "Suno Studio Complete Guide: The World's First Generative Audio Workstation",
+      "url": "https://blog.imseankim.com/suno-studio-generative-daw-guide-2026/",
+      "why_it_matters": "Technical deep-dive on Suno Studio's DAW features and MIDI export capabilities",
+      "year": "2026"
+    }
+  ],
+  "sources": [
+    "TechCrunch Staff - TechCrunch - 2026 - AI music generator Suno hits 2M paid subscribers and $300M in annual recurring revenue (https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/)",
+    "Billboard Staff - Billboard - 2025 - The 10 Biggest AI Music Stories of 2025: Suno & Udio Settlements, AI on the Charts & More (https://www.billboard.com/lists/biggest-ai-music-stories-2025-suno-udio-charts-more/)",
+    "AI Vortex Legal Team - AI Vortex - 2026 - RIAA sued Suno and Udio \u2014 Attorney Guide (2026) (https://www.aivortex.io/legal/ai-case-law/suno-udio-music-ai/)",
+    "Seth Forsgren - Google Blog - 2026 - Google Flow Music and Believe bring next-gen tools to artists (https://blog.google/innovation-and-ai/models-and-research/google-labs/believe-flow-music-partnership/)",
+    "Ivan Mehta - TechCrunch - 2026 - Stability AI releases a new audio model that can create 6-minute songs (https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/)",
+    "Billboard Pro Staff - Billboard - 2025 - AI Music Artist Xania Monet Signs Multimillion-Dollar Record Deal (https://www.billboard.com/pro/ai-music-artist-xania-monet-multimillion-dollar-record-deal/)",
+    "Music Ally Staff - Music Ally - 2025 - UMG settles Udio lawsuit; companies plan new AI-music service together (https://musically.com/2025/10/30/umg-settles-udio-lawsuit-companies-plan-new-ai-music-service-together/)",
+    "Sean Kim - Sean Kim Blog - 2026 - Suno Studio Complete Guide: The World's First Generative Audio Workstation (https://blog.imseankim.com/suno-studio-generative-daw-guide-2026/)"
+  ],
+  "topic": "AI generated music, survey the landscape of available tools for creating AI generated music, from simple generative loops to pop hits tearing up the charts on Spotify that are actually AI generated. Walk through the suites of tools and workflows that are usually used to create these. This is less of a podcast about how right or wrong AI music is, and more of a scoping review of tools and techniques that are out there, and how they're being wielded.",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "yj30...Gsv9"
+    },
+    "MAREN": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "aCCh...OKRh"
+    }
+  },
+  "word_count": 2118
+}

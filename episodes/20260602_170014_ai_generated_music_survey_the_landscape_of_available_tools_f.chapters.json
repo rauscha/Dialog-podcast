@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Poet and the Voice"
+    },
+    {
+      "startTime": 70.29,
+      "title": "\u2014 What Changed: The Tool Tier Hardens"
+    },
+    {
+      "startTime": 140.58,
+      "title": "\u2014 Maren Enters: The Workbench"
+    },
+    {
+      "startTime": 210.88,
+      "title": "\u2014 The Formula Problem (Affectionate Disagreement)"
+    },
+    {
+      "startTime": 281.17,
+      "title": "\u2014 Voice Cloning Is a Different Act"
+    },
+    {
+      "startTime": 351.46,
+      "title": "\u2014 Who Matters: The Legal Bifurcation"
+    },
+    {
+      "startTime": 421.75,
+      "title": "\u2014 The Economics: 28% vs. 0.5%"
+    },
+    {
+      "startTime": 492.04,
+      "title": "\u2014 Competing Approaches: Breaking Rust vs. Xania Monet"
+    },
+    {
+      "startTime": 562.33,
+      "title": "\u2014 Risks: What Could Go Wrong and When"
+    },
+    {
+      "startTime": 632.63,
+      "title": "\u2014 Close: The Copyright Office's Answer Is Nobody"
+    }
+  ],
+  "version": "1.2.0"
+}
