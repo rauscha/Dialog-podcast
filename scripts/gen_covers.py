@@ -34,7 +34,10 @@ from pathlib import Path
 os.environ.setdefault("HF_HOME", r"D:\FLUX")
 
 import torch  # noqa: E402
-from diffusers import StableDiffusionXLPipeline  # noqa: E402
+from diffusers import (  # noqa: E402
+    StableDiffusionXLImg2ImgPipeline,
+    StableDiffusionXLPipeline,
+)
 from PIL import Image  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -44,12 +47,11 @@ ASSETS = REPO_ROOT / "assets"
 # tweak the prompt) to regenerate a different variation.
 SHOWS: dict[str, tuple[int, str]] = {
     "mfm": (
-        7,
-        "Editorial podcast cover art, abstract uterine artery Doppler "
-        "waveform rendered as elegant data visualization, deep navy and "
-        "warm cream palette, minimalist sans-serif composition space, "
-        "sophisticated medical-journal aesthetic, square format, "
-        "high contrast, no text",
+        42,
+        "Editorial podcast cover, two-panel medical monitor layout, top "
+        "panel flat minimalist silhouette of symmetric fetal brain, bottom "
+        "panel smooth rolling contraction wave curves, thin grid "
+        "background, deep navy and warm cream palette",
     ),
     "fetal": (
         11,
@@ -59,12 +61,18 @@ SHOWS: dict[str, tuple[int, str]] = {
         "aesthetic, minimalist composition, square format, high contrast, "
         "no text",
     ),
+    # NOTE: the deployed assets/cover-ai.jpg is externally sourced (GPT-image,
+    # 2026-06-01) — SDXL fought every "classic neural-net diagram" attempt
+    # across multiple seeds. Lines on the deployed cover were thickened via
+    # scripts/thicken_lines.py for thumbnail legibility. This prompt is kept
+    # as a last-known SDXL attempt for reference; rerunning `gen_covers.py ai`
+    # will NOT reproduce the deployed cover.
     "ai": (
-        13,
-        "Editorial podcast cover art, abstract MRI cross-sections arranged "
-        "as a grid with subtle attention-map overlays, mint green and "
-        "graphite palette, technical-elegant AI radiology aesthetic, "
-        "minimalist composition, square format, high contrast, no text",
+        42,
+        "Editorial podcast cover, classic abstract neural network diagram "
+        "with layered columns of circular nodes connected by thin lines, "
+        "mint green and graphite palette, technical AI radiology "
+        "aesthetic, minimalist composition",
     ),
 }
 
@@ -74,7 +82,9 @@ TARGET_SIZE = 3000  # Spotify-recommended podcast cover dimension.
 NEGATIVE_PROMPT = (
     "text, letters, words, typography, watermark, logo, signature, "
     "low quality, blurry, jpeg artifacts, cluttered, busy, ugly, "
-    "amateur, oversaturated, cartoon, illustration of person, faces, hands"
+    "amateur, oversaturated, cartoon, illustration of person, faces, hands, "
+    "sharp spikes, jagged peaks, narrow points, spiky waveform, "
+    "detailed gyri, anatomical wrinkles"
 )
 
 
@@ -91,6 +101,21 @@ def _load_pipe() -> StableDiffusionXLPipeline:
     # Stage modules onto GPU only when running — fits 16 GB VRAM with headroom.
     pipe.enable_model_cpu_offload()
     print(f"[gen_covers] pipeline ready in {time.time() - t0:.1f}s")
+    return pipe
+
+
+def _load_img2img_pipe() -> StableDiffusionXLImg2ImgPipeline:
+    print(f"[gen_covers] HF_HOME={os.environ['HF_HOME']}")
+    print(f"[gen_covers] loading {MODEL_ID} img2img (reuses cache)…")
+    t0 = time.time()
+    pipe = StableDiffusionXLImg2ImgPipeline.from_pretrained(
+        MODEL_ID,
+        torch_dtype=torch.float16,
+        variant="fp16",
+        use_safetensors=True,
+    )
+    pipe.enable_model_cpu_offload()
+    print(f"[gen_covers] img2img pipeline ready in {time.time() - t0:.1f}s")
     return pipe
 
 
@@ -117,8 +142,64 @@ def _gen_one(pipe: StableDiffusionXLPipeline, slug: str, seed: int, prompt: str)
     return out
 
 
+def _edit_one(
+    pipe: StableDiffusionXLImg2ImgPipeline,
+    slug: str,
+    seed: int,
+    prompt: str,
+    strength: float = 0.65,
+) -> Path:
+    """Img2img edit: use the existing cover-{slug}.jpg as the init image.
+
+    Preserves rough composition (color blocking, layout) while pushing the
+    content toward the new prompt. strength ~0.5 keeps original tight, ~0.8
+    becomes nearly a new generation. 0.65 is a moderate edit.
+    """
+    out = ASSETS / f"cover-{slug}.jpg"
+    if not out.exists():
+        raise FileNotFoundError(
+            f"no existing cover at {out}; run without --edit first to generate one"
+        )
+    init = Image.open(out).convert("RGB").resize(
+        (NATIVE_SIZE, NATIVE_SIZE), Image.LANCZOS
+    )
+    print(f"[gen_covers] {slug}: editing existing cover (seed={seed}, strength={strength})")
+    t0 = time.time()
+    generator = torch.Generator(device="cuda").manual_seed(seed)
+    image = pipe(
+        prompt=prompt,
+        negative_prompt=NEGATIVE_PROMPT,
+        image=init,
+        num_inference_steps=40,
+        guidance_scale=7.5,
+        strength=strength,
+        generator=generator,
+    ).images[0]
+    print(f"[gen_covers] {slug}: inference {time.time() - t0:.1f}s, upscaling…")
+    image = image.resize((TARGET_SIZE, TARGET_SIZE), Image.LANCZOS)
+    image.save(out, "JPEG", quality=92, optimize=True)
+    size_kb = out.stat().st_size // 1024
+    print(f"[gen_covers] {slug}: wrote {out.name} ({size_kb} KB)")
+    return out
+
+
 def main(argv: list[str]) -> int:
-    requested = argv[1:] or list(SHOWS.keys())
+    raw = argv[1:]
+    edit_mode = "--edit" in raw
+    strength = 0.65
+    requested: list[str] = []
+    i = 0
+    while i < len(raw):
+        tok = raw[i]
+        if tok == "--edit":
+            pass
+        elif tok == "--strength":
+            i += 1
+            strength = float(raw[i])
+        else:
+            requested.append(tok)
+        i += 1
+    requested = requested or list(SHOWS.keys())
     unknown = [s for s in requested if s not in SHOWS]
     if unknown:
         print(
@@ -126,10 +207,16 @@ def main(argv: list[str]) -> int:
             file=sys.stderr,
         )
         return 2
-    pipe = _load_pipe()
-    for slug in requested:
-        seed, prompt = SHOWS[slug]
-        _gen_one(pipe, slug, seed, prompt)
+    if edit_mode:
+        pipe = _load_img2img_pipe()
+        for slug in requested:
+            seed, prompt = SHOWS[slug]
+            _edit_one(pipe, slug, seed, prompt, strength=strength)
+    else:
+        pipe = _load_pipe()
+        for slug in requested:
+            seed, prompt = SHOWS[slug]
+            _gen_one(pipe, slug, seed, prompt)
     print("[gen_covers] done.")
     return 0
 
