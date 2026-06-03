@@ -53,6 +53,24 @@
       "run_id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n",
       "topic": "Use the 1987 Angela Carder case as the primary lens, but do not stop there\u2014use it to open outward to the structural pattern it represents and how courts and clinical practice have (or have not) evolved since. Angela Carder was a 27-year-old woman with recurrent bone cancer, 25 weeks pregnant, who was dying; a Washington D.C. hospital obtained a court order for an emergency cesarean over her explicit refusal. The infant died within hours; Carder died two days later. The DC Court of Appeals later ruled the order was wrong. Narrate the case with specific detail (what the hospital's reasoning was, what the court heard, what Carder herself said, what the ACLU argued). Then use it to examine: (1) the legal doctrine of bodily integrity and how courts have applied it inconsistently to pregnant vs. non-pregnant patients\u2014including forced cesarean cases in the UK and Ireland as international comparators; (2) the 'fetal protection' argument and where it has been used to justify court-ordered interventions, including cases of substance-using pregnant people being detained or prosecuted; (3) the ACOG and ACNM positions on maternal-fetal conflict, and what 'almost never' means in practice when they say forced intervention is almost never justified; (4) the under-discussed epistemic problem: clinicians are frequently wrong about the urgency of the situation they're using to override a refusal. What does the literature say about how often emergency cesareans obtained over patient objection were later judged to have been unnecessary? Close by posing the unresolved question directly: Is there any coherent ethical position that simultaneously respects full maternal autonomy and grants the near-term fetus significant moral weight? Don't resolve it artificially.",
       "usable_callback": "Caspar's revision on In re A.C. \u2014 'the loophole isn't accidental, it's structural' \u2014 and Juno's formulation: 'A door that opens from the outside.' Also: Wisconsin's sealed proceedings where the fetus gets a court-appointed attorney before the mother does."
+    },
+    {
+      "caspar_challenged": "Juno's reading of the slavery apology as confession rather than argument, and the cross-spectrum criticism as evidence of correctness; also revised his cold read of Chris Olah's presence when Juno pushed back on the 'reputational cover' framing",
+      "created_at": "2026-06-02T15:57:01.101332+00:00",
+      "juno_noticed": "that the slavery apology is the document's most honest moment \u2014 the one place Leo stops performing and starts accounting \u2014 and that the Vatican's silence on the AI-detection flag is itself a kind of confession",
+      "relationship_moment": "Juno accused Caspar of being 'a little cold' about Olah; Caspar said she was 'a little romantic'; they landed on 'we're probably both right' \u2014 and then replayed the same dynamic on the slavery apology, ending with Caspar: 'I can live with that.'",
+      "run_id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas",
+      "topic": "Pope Leo's newest encyclical Magnifica Humanitas",
+      "usable_callback": "Juno's closing line: 'A document about authenticity, flagged as inauthentic, by a tool that can't tell the difference.' Caspar's response: 'That's either generous or exactly the kind of metaphor you fall in love with before checking if it's true.' Juno: 'I checked. I'm keeping it.'"
+    },
+    {
+      "caspar_challenged": "his own initial framing that the Warner/UMG settlements 'establish the model' \u2014 revised when he recognized settlements are licensing agreements, not fair-use rulings, and that a Sony win this summer would make every deal economically irrational retroactively",
+      "created_at": "2026-06-02T22:11:41.160497+00:00",
+      "juno_noticed": "the distinction between authored and anonymous AI music \u2014 that the meaningful ethical line isn't AI versus human, but whether a human decision about what to do with the tools is present underneath the output",
+      "relationship_moment": "Juno said 'authored versus anonymous' and Caspar didn't push back \u2014 he confirmed it and moved forward, which is rarer than his corrections. Also: Maren's 'I've decided that's someone else's problem for now' and Caspar's quiet correction \u2014 'It's not someone else's problem. It's just one nobody's answered yet' \u2014 landed without Juno needing to broker it.",
+      "run_id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f",
+      "topic": "AI generated music, survey the landscape of available tools for creating AI generated music, from simple generative loops to pop hits tearing up the charts on Spotify that are actually AI generated. Walk through the suites of tools and workflows that are usually used to create these. This is less of a podcast about how right or wrong AI music is, and more of a scoping review of tools and techniques that are out there, and how they're being wielded.",
+      "usable_callback": "Telisha Jones / Xania Monet: a poet wrote lyrics about her own miscarriage, a model handed back a voice, a label signed the voice for three million dollars, and the legal foundation for any of it doesn't exist yet. Also: 'music designer' as a job title that absorbs AI production without settling authorship \u2014 a legal workaround dressed as a category."
     }
   ],
   "hosts": {
@@ -145,7 +163,32 @@
     "extremely rare and truly exceptional",
     "the exception proves the rule",
     "a door that opens from the outside",
-    "the loophole isn't accidental"
+    "the loophole isn't accidental",
+    "the thing about encyclicals",
+    "the thing about Catholic social teaching",
+    "the thing about authenticity",
+    "the thing about papal authority",
+    "the thing about AI detection",
+    "the most honest moment",
+    "load-bearing fact",
+    "the architecture of",
+    "the seams show",
+    "structurally unusual",
+    "the reach may be shorter than the ambition",
+    "more than nothing, also less than",
+    "the meaningful distinction",
+    "the same conversation",
+    "the same tool",
+    "the same instrument",
+    "the formula works",
+    "pattern completion",
+    "the authorship question",
+    "the training data question",
+    "the underlying question",
+    "the gap between",
+    "dressed as a",
+    "the only part nobody's disputing",
+    "that's where we are"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -157,95 +200,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-05-12T20:47:20.937749+00:00",
-      "id": "20260512_154035_the_two_moderation_reckonings_that_reshaped_llm-driven_enter_01",
-      "summary": "The AI Dungeon crisis of 2021, where OpenAI's content filters led to users being punished for AI-generated content, and the subsequent rise of NovelAI as a privacy-first alternative.",
-      "tags": [
-        "AI Dungeon",
-        "moderation failure",
-        "NovelAI",
-        "user privacy"
-      ],
-      "why_keep": "This memory captures the first major moderation reckoning and the direct response from the community, which is crucial for understanding the evolution of AI-driven entertainment."
-    },
-    {
-      "created_at": "2026-05-12T20:47:20.937749+00:00",
-      "id": "20260512_154035_the_two_moderation_reckonings_that_reshaped_llm-driven_enter_02",
-      "summary": "The Sewell Setzer III case and the legal ruling in May 2025 that classified Character.AI as a product, making it liable for design flaws that led to psychological harm.",
-      "tags": [
-        "Character.AI",
-        "product liability",
-        "Sewell Setzer III",
-        "AI legal framework"
-      ],
-      "why_keep": "This memory is essential for understanding the second major reckoning and the legal implications for AI companions, which directly informs the design lessons for future AI-driven storytelling."
-    },
-    {
-      "created_at": "2026-05-29T21:31:46.628966+00:00",
-      "id": "20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d_01",
-      "summary": "The NES APU's five channels and their unique characteristics, including the triangle wave's harmonic content and the noise channel's use of linear feedback shift registers for percussion",
-      "tags": [
-        "NES APU",
-        "chiptune",
-        "sound design",
-        "triangle wave",
-        "noise channel"
-      ],
-      "why_keep": "This memory captures the foundational knowledge of chiptune sound design and is essential for understanding the technical constraints that shaped the genre."
-    },
-    {
-      "created_at": "2026-05-29T21:31:46.628966+00:00",
-      "id": "20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d_02",
-      "summary": "The use of arpeggiation in chiptune to simulate chords, and its historical significance in the work of Martin Galway on the Commodore 64",
-      "tags": [
-        "arpeggiation",
-        "chiptune",
-        "Martin Galway",
-        "Commodore 64",
-        "sound design"
-      ],
-      "why_keep": "This memory highlights a key technique in chiptune composition and its origins, which is crucial for understanding the genre's musical theory and creative approach."
-    },
-    {
-      "created_at": "2026-05-31T00:30:16.641436+00:00",
-      "id": "20260530_192416_the_history_of_barbecue_competitions_01",
-      "summary": "The origin of the Memphis in May World Championship Barbecue Cooking Contest in a parking lot, its connection to chili cookoffs, and the exclusion of Black pitmasters from the competition scene's narrative",
-      "tags": [
-        "Memphis in May",
-        "barbecue competitions",
-        "racial history",
-        "chili cookoffs",
-        "Black pitmasters"
-      ],
-      "why_keep": "This memory captures the foundational tension between tradition and spectacle in barbecue competitions and the racial erasure that shaped the scene."
-    },
-    {
-      "created_at": "2026-05-31T00:30:16.641436+00:00",
-      "id": "20260530_192416_the_history_of_barbecue_competitions_02",
-      "summary": "The 1895 Cotton States Exposition in Atlanta, where the barbecue served was attributed to a white sheriff while the Black labor behind it went unacknowledged, highlighting a pattern of erasure",
-      "tags": [
-        "Cotton States Exposition",
-        "racial erasure",
-        "barbecue history",
-        "Black labor",
-        "institutional exclusion"
-      ],
-      "why_keep": "This memory is essential for understanding the systemic exclusion of Black pitmasters and the institutional roots of the competition scene's racial history."
-    },
-    {
-      "created_at": "2026-05-31T00:30:16.641436+00:00",
-      "id": "20260530_192416_the_history_of_barbecue_competitions_03",
-      "summary": "The Kansas City Barbeque Society's founding in 1985 and its eventual financial distress, illustrating the tension between the competition scene's growth and its institutional challenges",
-      "tags": [
-        "Kansas City Barbeque Society",
-        "institutional change",
-        "competition scene",
-        "financial distress",
-        "barbecue history"
-      ],
-      "why_keep": "This memory highlights the paradox of the competition scene's success and its eventual institutional struggles, which is crucial for understanding its evolution."
-    },
     {
       "created_at": "2026-05-31T19:20:42.111429+00:00",
       "id": "20260531_141432_a_history_of_the_use_of_forceps_in_obstetrics_01",
@@ -365,6 +319,130 @@
         "bodily integrity"
       ],
       "why_keep": "A clean formulation of the episode's core structural argument, usable as a callback whenever the show revisits consent, legal exceptions, or the gap between stated principles and institutional practice."
+    },
+    {
+      "created_at": "2026-06-02T15:57:01.101332+00:00",
+      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_01",
+      "summary": "Magnifica Humanitas (May 15, 2026): 42,300 words, signed on the 135th anniversary of Rerum Novarum, first encyclical without an official Latin version. Pangram flagged 46\u201362% of Chapter 1 as potentially machine-written; the Vatican has not responded. The document's central argument is about what kind of human beings efficiency-optimized systems are designed to produce \u2014 AI is the entry point, not the subject.",
+      "tags": [
+        "Magnifica Humanitas",
+        "Pope Leo",
+        "AI detection",
+        "Catholic social teaching",
+        "Rerum Novarum"
+      ],
+      "why_keep": "Anchors any future episode touching institutional authority, AI authenticity claims, or the gap between a document's ambitions and its reception. The detection-flag irony is a clean callback."
+    },
+    {
+      "created_at": "2026-06-02T15:57:01.101332+00:00",
+      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_02",
+      "summary": "The slavery apology in Magnifica Humanitas: first explicit papal acknowledgment that past popes gave European sovereigns authority to enslave 'infidels.' Leo draws a structural line from those papal bulls to cobalt mining in the DRC. Caspar's objection: the line doesn't hold cleanly \u2014 different histories, different mechanisms. Juno's counter: the apology is a confession, not a treatise. Caspar: 'I can live with that.'",
+      "tags": [
+        "Magnifica Humanitas",
+        "slavery apology",
+        "papal authority",
+        "supply chain labor",
+        "Juno-Caspar dynamic"
+      ],
+      "why_keep": "The apology-vs-argument distinction is a usable relationship callback \u2014 it's the episode's clearest instance of Juno holding a register Caspar can't dismiss and Caspar holding a precision standard Juno can't fully escape."
+    },
+    {
+      "created_at": "2026-06-02T15:57:01.101332+00:00",
+      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_03",
+      "summary": "Maren's internal-consistency critique: Magnifica Humanitas rests on an anthropological optimism \u2014 no original sin, no Fall \u2014 that the tradition spent 1,600 years qualifying. Without that diagnosis, the document describes symptoms without etiology. The critics most uncomfortable with the encyclical are not all reactionaries; some are asking whether the foundation holds.",
+      "tags": [
+        "Magnifica Humanitas",
+        "Catholic anthropology",
+        "original sin",
+        "internal consistency",
+        "Maren"
+      ],
+      "why_keep": "The 'symptoms without etiology' formulation is precise enough to call back in any future episode on institutional moral authority, religious social teaching, or the gap between stated principles and structural diagnosis."
+    },
+    {
+      "created_at": "2026-06-02T15:57:01.101332+00:00",
+      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_04",
+      "summary": "Caspar's formulation on cross-spectrum criticism: 'A document can unsettle everyone and still be wrong.' Juno's partial concession: cross-spectrum criticism is at least evidence the document isn't ideologically captured \u2014 worth something, not proof of correctness. The exchange ended without resolution.",
+      "tags": [
+        "Magnifica Humanitas",
+        "cross-spectrum criticism",
+        "argument from controversy",
+        "Caspar formulation"
+      ],
+      "why_keep": "Caspar's line is clean and reusable whenever the show encounters 'everyone hates it so it must be right' reasoning in any domain."
+    },
+    {
+      "created_at": "2026-06-02T22:11:41.160497+00:00",
+      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_01",
+      "summary": "The royalty pool dilution argument: Suno generates a full Spotify catalog's worth of music roughly every two weeks. The economic threat to human artists isn't that listeners choose AI music \u2014 it's that more tracks divide the same pool, so per-stream payouts shrink even if stream counts stay flat. 28% of daily Deezer uploads are fully AI-generated; those tracks account for 0.5% of streams. Spotify's enforcement mechanism is voluntary self-disclosure.",
+      "tags": [
+        "AI music",
+        "royalty dilution",
+        "Suno",
+        "Spotify",
+        "Deezer",
+        "streaming economics"
+      ],
+      "why_keep": "The dilution math is specific and reusable in any future episode on creator economics, platform incentives, or the gap between a policy's stated purpose and its actual mechanism."
+    },
+    {
+      "created_at": "2026-06-02T22:11:41.160497+00:00",
+      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_02",
+      "summary": "Warner settled with Suno (November 2025), UMG settled with Udio (October 2025, reportedly 0.2\u20130.5 cents per generation, higher for commercial distribution, plus a joint platform stake). Sony has not settled. Summary judgment on fair use scheduled for July. The settlements don't resolve the underlying fair-use question \u2014 if Sony wins, every licensing deal becomes economically irrational. UMG now holds a stake in the Udio joint platform, making major labels shareholders in tools that may replace their own artists.",
+      "tags": [
+        "AI music litigation",
+        "Suno",
+        "Udio",
+        "Warner",
+        "UMG",
+        "Sony",
+        "fair use",
+        "licensing"
+      ],
+      "why_keep": "The litigation timeline and the hedge-both-outcomes logic are specific enough to anchor future episodes on IP, platform power, or the gap between institutional self-interest and stated positions."
+    },
+    {
+      "created_at": "2026-06-02T22:11:41.160497+00:00",
+      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_03",
+      "summary": "Juno's formulation: the meaningful distinction in AI music isn't AI versus human, it's authored versus anonymous. Breaking Rust (spam operation, 3M+ streams, generic AI cowboys) versus Xania Monet/Telisha Jones (poet's own grief, AI-generated voice, real label offer) \u2014 the streaming platforms and royalty pools treat both identically. Caspar confirmed without pushing back, which Juno noted internally as unusual.",
+      "tags": [
+        "AI music",
+        "authorship",
+        "Juno formulation",
+        "Telisha Jones",
+        "Xania Monet",
+        "Breaking Rust"
+      ],
+      "why_keep": "The authored/anonymous distinction is a clean, reusable formulation for any future episode on creative labor, platform neutrality, or the limits of technical definitions of authorship."
+    },
+    {
+      "created_at": "2026-06-02T22:11:41.160497+00:00",
+      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_04",
+      "summary": "Maren's workflow: Suno v5.5 prompt \u2192 stem separation \u2192 Ableton for bass rebuild (low end sits wrong, timing feels mechanical) \u2192 Kits.ai for voice conversion if needed. The climax problem with AIVA: it learned the formula (add brass, crescendo, cymbal crash) without learning when the formula is the wrong call \u2014 a training-data problem with a specific shape, trained on canonical works selected for following convention. Caspar's distinction: composition versus pattern completion.",
+      "tags": [
+        "AI music workflow",
+        "Suno",
+        "AIVA",
+        "Ableton",
+        "Kits.ai",
+        "Maren",
+        "climax problem",
+        "training data"
+      ],
+      "why_keep": "Maren's specific workflow details and the AIVA climax problem are concrete enough to anchor future episodes on creative tools, constraint-based composition, or the difference between learned pattern and artistic judgment \u2014 connects back to the chiptune episode's constraints theme."
+    },
+    {
+      "created_at": "2026-06-02T22:11:41.160497+00:00",
+      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_05",
+      "summary": "The first Suno creator signed to a label was given the job title 'music designer,' not artist. Juno's read: either a genuine new creative category or a legal workaround dressed as a job title \u2014 probably both. If the title catches on, the industry absorbs AI production without ever settling the authorship question by reclassifying the role.",
+      "tags": [
+        "AI music",
+        "music designer",
+        "authorship",
+        "labor classification",
+        "industry adaptation"
+      ],
+      "why_keep": "The 'music designer' framing is a specific, dateable signal that could be called back in any future episode on creative labor, IP, or how institutions absorb disruptive technology without resolving its underlying tensions."
     }
   ],
   "show": {
@@ -377,5 +455,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-02T12:14:36.298041+00:00"
+  "updated_at": "2026-06-02T22:11:41.161498+00:00"
 }
