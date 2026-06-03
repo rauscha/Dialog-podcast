@@ -4239,6 +4239,101 @@ def run_digest(show_id: str, repo_root: Path = Path(".")) -> dict:
     return episode
 
 
+# ---------------------------------------------------------------------------
+# Phase 4 — weekday gating + multi-show scheduler
+# ---------------------------------------------------------------------------
+
+_WEEKDAY_MAP = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
+
+
+def _show_is_due(
+    show: dict,
+    ledger: dict,
+    *,
+    force: bool = False,
+    today=None,  # datetime | None — injected in tests
+) -> tuple:
+    """Return (is_due: bool, reason: str) for a digest show.
+
+    Rules (checked in order):
+    1. ``force=True`` → always due.
+    2. ``last_run.aired_at`` is today → already ran, skip.
+    3. Today is the show's scheduled weekday → due.
+    4. Today is one day *after* the scheduled weekday (catch-up window) → due.
+    5. Otherwise → not due.
+    """
+    from datetime import datetime as _dt, timezone as _tz
+
+    if force:
+        return True, "forced"
+
+    now = today if today is not None else _dt.now(_tz.utc)
+    today_date = now.date()
+    sched_wd_name = str((show.get("schedule") or {}).get("weekday") or "mon").lower()[:3]
+    scheduled_wd = _WEEKDAY_MAP.get(sched_wd_name, 0)
+    today_wd = today_date.weekday()  # Monday=0
+
+    # Already ran today?
+    last_run = ledger.get("last_run") or {}
+    last_aired = last_run.get("aired_at") or ""
+    if last_aired:
+        try:
+            last_date = _dt.fromisoformat(last_aired.replace("Z", "+00:00")).date()
+            if last_date >= today_date:
+                return False, f"already ran today ({last_date})"
+        except ValueError:
+            pass
+
+    days_since = (today_wd - scheduled_wd) % 7
+    if days_since == 0:
+        return True, "scheduled today"
+    if days_since == 1:
+        return True, "catch-up (missed yesterday)"
+    days_until = (scheduled_wd - today_wd) % 7
+    return False, f"not due until next {sched_wd_name} ({days_until} day(s) away)"
+
+
+def run_all_due_digests(repo_root=None, *, force: bool = False) -> dict:
+    """Run every digest show that is due today (or all shows when force=True).
+
+    Weekday gating uses each show's ``schedule.weekday`` key against today's
+    date (UTC), with a 1-day catch-up window for missed days.  Env vars
+    (SKIP_GIT, etc.) are inherited by child ``run_digest`` calls.
+
+    Returns ``{show_id: "ok" | "skipped: <reason>" | "error: <msg>"}`` for
+    every show; continues to the next show on any individual failure.
+    """
+    from digest_shows import load_shows, DigestConfigError
+    from digest_ledger import load_ledger
+
+    if repo_root is None:
+        repo_root = Path(".")
+    repo_root = Path(repo_root).resolve()
+
+    try:
+        shows = load_shows(repo_root)
+    except DigestConfigError as exc:
+        raise RuntimeError(f"Could not load shows config: {exc}") from exc
+
+    results = {}
+    for show_id, show in sorted(shows.items()):
+        ledger = load_ledger(repo_root, show_id)
+        is_due, reason = _show_is_due(show, ledger, force=force)
+        if not is_due:
+            logger.info("Skipping digest %r: %s", show_id, reason)
+            results[show_id] = f"skipped: {reason}"
+            continue
+        logger.info("Running digest %r: %s", show_id, reason)
+        try:
+            run_digest(show_id, repo_root=repo_root)
+            results[show_id] = "ok"
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Digest %r failed: %s", show_id, exc)
+            results[show_id] = f"error: {exc}"
+
+    return results
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate an Asynchronous podcast episode.")
     parser.add_argument("topic", nargs="?", help="Episode topic")
@@ -4277,6 +4372,21 @@ if __name__ == "__main__":
         metavar="SHOW_ID",
         default=None,
         help="Rank a digest show's recent articles and print the ranked table; generates no audio.",
+    )
+    parser.add_argument(
+        "--digest-all",
+        action="store_true",
+        default=False,
+        help=(
+            "Run all digest shows that are due today (weekday gating + 1-day catch-up). "
+            "Designed for daily Task Scheduler / cron use."
+        ),
+    )
+    parser.add_argument(
+        "--digest-force-all",
+        action="store_true",
+        default=False,
+        help="Run all digest shows unconditionally, bypassing weekday gating.",
     )
     args = parser.parse_args()
 
@@ -4321,6 +4431,21 @@ if __name__ == "__main__":
             print(f"error: {exc}", file=sys.stderr)
             sys.exit(2)
         sys.exit(0)
+
+    if args.digest_all or args.digest_force_all:
+        # Phase 4: run all shows that are due today (or all shows unconditionally).
+        from digest_shows import DigestConfigError
+        try:
+            results = run_all_due_digests(
+                Path(args.repo), force=args.digest_force_all
+            )
+        except (DigestConfigError, RuntimeError) as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            sys.exit(2)
+        any_error = any(v.startswith("error:") for v in results.values())
+        for sid, status in sorted(results.items()):
+            print(f"  {sid:8} {status}")
+        sys.exit(1 if any_error else 0)
 
     topic = args.topic or input("Enter podcast topic: ").strip()
     if not topic:

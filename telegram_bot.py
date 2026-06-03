@@ -553,6 +553,11 @@ _OWNER_HELP_TEXT = (
     "/generate landscape: <topic> - shorthand typed episode\n"
     "/series <topic> - plan a mini-course and queue it\n"
     "/types - list available episode types\n\n"
+    "Digest shows (MFM / Fetal / AI):\n"
+    "/digest - list shows and last-run dates\n"
+    "/digest <show_id> - run one show now (e.g. /digest mfm)\n"
+    "/digest all - run all shows now\n"
+    "/digest_preview <show_id> - show ranked papers without generating audio\n\n"
     "Queue and control:\n"
     "/queue <topic> - add a topic to the queue\n"
     "/queue - show queued topics\n"
@@ -1351,6 +1356,247 @@ async def _run_learning_path(
             _active_log = None
 
 
+async def _run_digest_subprocess(
+    update: Update,
+    *,
+    show_id: str | None = None,
+    force_all: bool = False,
+) -> None:
+    """Spawn generate_podcast.py in digest mode using the shared generation lock.
+
+    show_id=None + force_all=True → ``--digest-force-all`` (all shows in one run).
+    show_id="mfm"               → ``--digest mfm``          (one show, force).
+    """
+    global _active_episode_type, _active_log, _active_proc, _active_started_at, _active_topic
+
+    repo_root = _repo_root()
+
+    if _generation_lock.locked() or get_status(repo_root):
+        await _reply(
+            update,
+            "A generation is already running. Use /status to inspect it or /cancel to stop it.",
+        )
+        return
+
+    if show_id:
+        digest_args = ["--digest", show_id]
+        start_label = f"digest:{show_id}"
+        start_msg = f"Starting digest: {show_id}\n"
+    else:
+        digest_args = ["--digest-force-all"]
+        start_label = "digest:all"
+        start_msg = "Starting all digest shows (force, bypassing weekday gating).\n"
+
+    async with _generation_lock:
+        log_dir = repo_root / "logs"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_file = log_dir / f"{stamp}_{start_label.replace(':', '_')}.log"
+        latest_log = log_dir / "latest.log"
+
+        await _reply(
+            update,
+            start_msg + f"Log: {log_file}\nUse /status for progress or /cancel to stop it.",
+        )
+
+        env = os.environ.copy()
+        env.setdefault("PYTHONUTF8", "1")
+
+        returncode: int | None = None
+        try:
+            with open(log_file, "w", encoding="utf-8") as log_fh:
+                cmd = [
+                    sys.executable,
+                    "generate_podcast.py",
+                    *digest_args,
+                    "--repo",
+                    str(repo_root),
+                ]
+                _active_proc = await asyncio.create_subprocess_exec(
+                    *cmd,
+                    cwd=repo_root,
+                    stdout=log_fh,
+                    stderr=log_fh,
+                    env=env,
+                )
+                _active_topic = start_label
+                _active_episode_type = "digest"
+                _active_started_at = datetime.now()
+                _active_log = log_file
+
+                try:
+                    returncode = await asyncio.wait_for(
+                        _active_proc.wait(),
+                        timeout=GENERATION_TIMEOUT_SEC,
+                    )
+                except asyncio.TimeoutError:
+                    ok, message = cancel_active_job(repo_root)
+                    if not ok and _active_proc.returncode is None:
+                        with contextlib.suppress(ProcessLookupError):
+                            _active_proc.kill()
+                    await _reply(
+                        update,
+                        f"Digest timed out after {GENERATION_TIMEOUT_SEC}s. {message}",
+                    )
+                    return
+
+            with contextlib.suppress(OSError):
+                shutil.copy2(log_file, latest_log)
+
+            manifest = _latest_manifest(repo_root)
+            if returncode == 0:
+                await _reply(update, "Done.\n\n" + _format_manifest_summary(manifest))
+            else:
+                summary = _format_manifest_summary(manifest)
+                await _reply(
+                    update,
+                    f"Digest failed (exit {returncode}).\n\n{summary}\n\n"
+                    f"Last log lines:\n{_tail(log_file)}",
+                )
+        except Exception as exc:
+            logger.exception("Digest subprocess crashed")
+            await _reply(update, f"Digest command crashed: {exc!r}")
+        finally:
+            _active_proc = None
+            _active_topic = None
+            _active_episode_type = None
+            _active_started_at = None
+            _active_log = None
+
+
+async def digest_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """/digest — list shows + last-run; /digest <show_id> — run one; /digest all — run all."""
+    if not _is_authorized(update):
+        return
+
+    cmd_args = context.args or []
+    repo_root = _repo_root()
+
+    if not cmd_args:
+        # Status listing.
+        try:
+            from digest_shows import load_shows  # noqa: PLC0415
+            from digest_ledger import load_ledger  # noqa: PLC0415
+            shows = load_shows(repo_root)
+        except Exception as exc:  # noqa: BLE001
+            await _reply(update, f"Could not load digest shows: {exc}")
+            return
+
+        lines = ["Digest shows:\n"]
+        for sid, show in sorted(shows.items()):
+            from digest_ledger import load_ledger as _ll  # noqa: PLC0415
+            ledger = _ll(repo_root, sid)
+            last_run = ledger.get("last_run") or {}
+            last_aired = last_run.get("aired_at") or "never"
+            if last_aired != "never":
+                try:
+                    from datetime import timezone  # noqa: PLC0415
+                    last_dt = datetime.fromisoformat(last_aired.replace("Z", "+00:00"))
+                    last_aired = last_dt.strftime("%Y-%m-%d")
+                except ValueError:
+                    pass
+            sched = show.get("schedule") or {}
+            lines.append(
+                f"  {sid:6}  sched={sched.get('weekday', '?')}  last={last_aired}\n"
+                f"         {show['display_name']}"
+            )
+        lines.append("\n/digest <show_id>  — run one show now")
+        lines.append("/digest all        — run all shows now")
+        lines.append("/digest_preview <show_id>  — show ranked papers (no audio)")
+        await _reply(update, "\n".join(lines))
+        return
+
+    show_arg = cmd_args[0].lower().strip()
+
+    if show_arg == "all":
+        await _run_digest_subprocess(update, force_all=True)
+        return
+
+    # Single show.
+    try:
+        from digest_shows import load_shows  # noqa: PLC0415
+        shows = load_shows(repo_root)
+    except Exception as exc:  # noqa: BLE001
+        await _reply(update, f"Could not load shows: {exc}")
+        return
+
+    if show_arg not in shows:
+        valid = ", ".join(sorted(shows))
+        await _reply(update, f"Unknown show {show_arg!r}. Valid shows: {valid}")
+        return
+
+    await _run_digest_subprocess(update, show_id=show_arg)
+
+
+async def digest_preview_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """/digest_preview <show_id> — dry-run ranking only (no audio, no publish)."""
+    if not _is_authorized(update):
+        return
+
+    cmd_args = context.args or []
+    if not cmd_args:
+        await _reply(
+            update,
+            "Usage: /digest_preview <show_id>  (e.g. /digest_preview mfm)\n"
+            "Runs the paper-ranking step and shows the ranked table — no audio is generated.",
+        )
+        return
+
+    show_id = cmd_args[0].lower().strip()
+    repo_root = _repo_root()
+
+    try:
+        from digest_shows import load_shows  # noqa: PLC0415
+        shows = load_shows(repo_root)
+    except Exception as exc:  # noqa: BLE001
+        await _reply(update, f"Could not load shows: {exc}")
+        return
+
+    if show_id not in shows:
+        valid = ", ".join(sorted(shows))
+        await _reply(update, f"Unknown show {show_id!r}. Valid shows: {valid}")
+        return
+
+    await _reply(update, f"Running dry-run ranking for {show_id}…")
+
+    env = os.environ.copy()
+    env.setdefault("PYTHONUTF8", "1")
+
+    try:
+        proc = await asyncio.create_subprocess_exec(
+            sys.executable,
+            "generate_podcast.py",
+            "--digest-dry-run",
+            show_id,
+            "--repo",
+            str(repo_root),
+            cwd=repo_root,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env=env,
+        )
+        try:
+            stdout_b, stderr_b = await asyncio.wait_for(proc.communicate(), timeout=120)
+        except asyncio.TimeoutError:
+            proc.kill()
+            await _reply(update, "Dry-run ranking timed out after 120s.")
+            return
+
+        output = stdout_b.decode("utf-8", errors="replace")
+        if not output.strip():
+            output = stderr_b.decode("utf-8", errors="replace")
+
+        if proc.returncode != 0:
+            await _reply(update, f"Dry-run failed (exit {proc.returncode}):\n{output[-2000:]}")
+        else:
+            if len(output) > 3800:
+                output = "(truncated — showing tail)\n…\n" + output[-3600:]
+            await _reply(update, f"Ranking for {show_id}:\n\n{output}")
+    except Exception as exc:  # noqa: BLE001
+        logger.exception("digest_preview_cmd crashed")
+        await _reply(update, f"Dry-run preview crashed: {exc!r}")
+
+
 def _require_config() -> None:
     if not TELEGRAM_BOT_TOKEN:
         raise RuntimeError(
@@ -1393,6 +1639,8 @@ def main() -> None:
             app.add_handler(CommandHandler("tts", tts_cmd))
             app.add_handler(CommandHandler("cancel", cancel_cmd))
             app.add_handler(CommandHandler("doctor", doctor_cmd))
+            app.add_handler(CommandHandler("digest", digest_cmd))
+            app.add_handler(CommandHandler("digest_preview", digest_preview_cmd))
             app.add_handler(
                 CallbackQueryHandler(approval_callback, pattern=r"^(approve|deny):")
             )
