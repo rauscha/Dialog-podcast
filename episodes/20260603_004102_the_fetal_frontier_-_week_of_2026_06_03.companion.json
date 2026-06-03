@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Question That Moved"
+    },
+    {
+      "start_sec": 51.65,
+      "start_time": "0:52",
+      "title": "\u2014 Headline: Clinical Question and Why a Meta-Analysis Earns the Grade"
+    },
+    {
+      "start_sec": 103.3,
+      "start_time": "1:43",
+      "title": "\u2014 Headline: Effect Size and the Pre-Selection Gradient"
+    },
+    {
+      "start_sec": 154.95,
+      "start_time": "2:35",
+      "title": "\u2014 Headline: Caveats \u2014 Heterogeneity and VUS"
+    },
+    {
+      "start_sec": 206.61,
+      "start_time": "3:27",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 258.26,
+      "start_time": "4:18",
+      "title": "\u2014 Round 1: Stampalija / Single-Cell Trophoblast Sequencing"
+    },
+    {
+      "start_sec": 309.91,
+      "start_time": "5:10",
+      "title": "\u2014 Round 2: Cruz-Mart\u00ednez / Latin American FETO"
+    },
+    {
+      "start_sec": 361.56,
+      "start_time": "6:02",
+      "title": "\u2014 Round 3: Sileo / Early TTTS Laser"
+    },
+    {
+      "start_sec": 413.21,
+      "start_time": "6:53",
+      "title": "\u2014 Round 4: Kim DeLuca / cfDNA and SCA Detection"
+    },
+    {
+      "start_sec": 464.86,
+      "start_time": "7:45",
+      "title": "\u2014 Close: What's Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.companion.json",
+  "duration_sec": 561.513605,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Provides pooled evidence for sequencing yield over CMA in structurally abnormal fetuses, directly informing when to offer exome or genome sequencing",
+      "source": "Prenat Diagn",
+      "title": "Diagnostic Yield of Sequencing for Prenatal Diagnosis of Fetal Structural Anomalies: An Updated Systematic Review",
+      "url": "https://doi.org/10.1002/pd.70112"
+    },
+    {
+      "reason": "Demonstrates that single-cell trophoblast sequencing can detect submicroscopic CNVs non-invasively, potentially reducing need for amniocentesis",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Single-cell-based non-invasive screening for fetal pathogenic microimbalances using maternal blood",
+      "url": "https://doi.org/10.1002/uog.70201"
+    },
+    {
+      "reason": "Largest Latin American FETO dataset confirms survival benefit and extends outcome benchmarks beyond European and North American centers",
+      "source": "Prenat Diagn",
+      "title": "Latin American Multicenter Study of Fetal Endoscopic Tracheal Occlusion for Severe Left Diaphragmatic Hernia",
+      "url": "https://doi.org/10.1002/pd.70175"
+    },
+    {
+      "reason": "Largest early-TTTS laser series provides stage-specific survival data for counseling families facing intervention before 18 weeks",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes of twin pregnancies complicated by early twin-to-twin transfusion syndrome treated with fetoscopic laser surgery",
+      "url": "https://doi.org/10.1002/uog.70196"
+    },
+    {
+      "reason": "Population-level evidence that cfDNA screening has shifted SCA detection earlier, changing the timing and burden of counseling and subspecialty referral",
+      "source": "Prenat Diagn",
+      "title": "Impact of Prenatal Cell-Free DNA Screening on Sex Chromosome Aneuploidy Diagnoses in Infants and Children",
+      "url": "https://doi.org/10.1002/pd.70190"
+    }
+  ],
+  "generated_at": "2026-06-03T05:49:27.707667+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Sequencing adds a 27% incremental diagnostic yield over CMA in structurally abnormal fetuses, rising to 40% in phenotypically pre-selected cohorts",
+      "confidence": "high",
+      "id": "lim2026",
+      "source_ids": [
+        "lim2026"
+      ]
+    },
+    {
+      "claim": "Single-cell trophoblast sequencing from maternal blood detects pathogenic CNVs including microimbalances under 8 Mb that cfDNA misses",
+      "confidence": "medium",
+      "id": "stampalija2026",
+      "source_ids": [
+        "stampalija2026"
+      ]
+    },
+    {
+      "claim": "FETO for severe left CDH demonstrates survival benefit over expectant management in a propensity-matched Latin American multicenter cohort",
+      "confidence": "medium",
+      "id": "cruzmartinez2026",
+      "source_ids": [
+        "cruzmartinez2026"
+      ]
+    },
+    {
+      "claim": "Fetoscopic laser for early TTTS at or before 18 weeks yields stage-stratified survival rates in the largest multicenter series to date",
+      "confidence": "medium",
+      "id": "sileo2026",
+      "source_ids": [
+        "sileo2026"
+      ]
+    },
+    {
+      "claim": "Introduction of prenatal cfDNA screening was associated with an immediate and sustained increase in SCA diagnoses in infants and children",
+      "confidence": "medium",
+      "id": "kimdeluca2026",
+      "source_ids": [
+        "kimdeluca2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Lim",
+      "id": "lim2026",
+      "publication": "Prenat Diagn",
+      "title": "Diagnostic Yield of Sequencing for Prenatal Diagnosis of Fetal Structural Anomalies: An Updated Systematic Review",
+      "url": "https://doi.org/10.1002/pd.70112",
+      "why_it_matters": "Provides pooled evidence for sequencing yield over CMA in structurally abnormal fetuses, directly informing when to offer exome or genome sequencing",
+      "year": 2026
+    },
+    {
+      "author": "Stampalija",
+      "id": "stampalija2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Single-cell-based non-invasive screening for fetal pathogenic microimbalances using maternal blood",
+      "url": "https://doi.org/10.1002/uog.70201",
+      "why_it_matters": "Demonstrates that single-cell trophoblast sequencing can detect submicroscopic CNVs non-invasively, potentially reducing need for amniocentesis",
+      "year": 2026
+    },
+    {
+      "author": "Cruz-Mart\u00ednez",
+      "id": "cruzmartinez2026",
+      "publication": "Prenat Diagn",
+      "title": "Latin American Multicenter Study of Fetal Endoscopic Tracheal Occlusion for Severe Left Diaphragmatic Hernia",
+      "url": "https://doi.org/10.1002/pd.70175",
+      "why_it_matters": "Largest Latin American FETO dataset confirms survival benefit and extends outcome benchmarks beyond European and North American centers",
+      "year": 2026
+    },
+    {
+      "author": "Sileo",
+      "id": "sileo2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes of twin pregnancies complicated by early twin-to-twin transfusion syndrome treated with fetoscopic laser surgery",
+      "url": "https://doi.org/10.1002/uog.70196",
+      "why_it_matters": "Largest early-TTTS laser series provides stage-specific survival data for counseling families facing intervention before 18 weeks",
+      "year": 2026
+    },
+    {
+      "author": "Kim DeLuca",
+      "id": "kimdeluca2026",
+      "publication": "Prenat Diagn",
+      "title": "Impact of Prenatal Cell-Free DNA Screening on Sex Chromosome Aneuploidy Diagnoses in Infants and Children",
+      "url": "https://doi.org/10.1002/pd.70190",
+      "why_it_matters": "Population-level evidence that cfDNA screening has shifted SCA detection earlier, changing the timing and burden of counseling and subspecialty referral",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Lim et al. - Prenat Diagn - 2026 - Diagnostic Yield of Sequencing for Prenatal Diagnosis of Fetal Structural Anomalies: An Updated Systematic Review (https://doi.org/10.1002/pd.70112)",
+    "Stampalija et al. - Ultrasound Obstet Gynecol - 2026 - Single-cell-based non-invasive screening for fetal pathogenic microimbalances using maternal blood (https://doi.org/10.1002/uog.70201)",
+    "Cruz-Mart\u00ednez et al. - Prenat Diagn - 2026 - Latin American Multicenter Study of Fetal Endoscopic Tracheal Occlusion for Severe Left Diaphragmatic Hernia (https://doi.org/10.1002/pd.70175)",
+    "Sileo et al. - Ultrasound Obstet Gynecol - 2026 - Perinatal outcomes of twin pregnancies complicated by early twin-to-twin transfusion syndrome treated with fetoscopic laser surgery (https://doi.org/10.1002/uog.70196)",
+    "Kim DeLuca - Prenat Diagn - 2026 - Impact of Prenatal Cell-Free DNA Screening on Sex Chromosome Aneuploidy Diagnoses in Infants and Children (https://doi.org/10.1002/pd.70190)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/06/03",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "yj30...Gsv9"
+    }
+  },
+  "word_count": 1342
+}

@@ -71,6 +71,33 @@
       "run_id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f",
       "topic": "AI generated music, survey the landscape of available tools for creating AI generated music, from simple generative loops to pop hits tearing up the charts on Spotify that are actually AI generated. Walk through the suites of tools and workflows that are usually used to create these. This is less of a podcast about how right or wrong AI music is, and more of a scoping review of tools and techniques that are out there, and how they're being wielded.",
       "usable_callback": "Telisha Jones / Xania Monet: a poet wrote lyrics about her own miscarriage, a model handed back a voice, a label signed the voice for three million dollars, and the legal foundation for any of it doesn't exist yet. Also: 'music designer' as a job title that absorbs AI production without settling authorship \u2014 a legal workaround dressed as a category."
+    },
+    {
+      "caspar_challenged": "Juno's implicit slide from 'large effect size with measured confounders controlled' to 'causal signal' \u2014 held the marker/cause distinction without dismissing the finding, and named unmeasured vascular dysfunction as the residual the design can't see",
+      "created_at": "2026-06-03T05:37:54.372790+00:00",
+      "juno_noticed": "that 'identifies' is the right verb for the sPTB-cardiovascular signal \u2014 and that the distinction between marker and cause changes the clinical sentence even when the number is the same",
+      "relationship_moment": "Juno pushed back on Caspar's confounding caveat by invoking the effect size; Caspar cut in before she finished; Juno conceded 'identifies is the right verb'; Caspar said 'thank you' \u2014 dry, not triumphant. The exchange ended with both holding different parts of the same sentence.",
+      "run_id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03",
+      "topic": "MFM Rounds - week of 2026/06/03",
+      "usable_callback": "Caspar's formulation: 'sPTB identifies women at elevated cardiovascular risk' \u2014 not causes. Juno's concession on the verb. Also: Shrestha's counterintuitive metformin finding \u2014 higher insulin requirements, greater benefit \u2014 which Caspar called 'a trial worth designing' rather than a result worth acting on."
+    },
+    {
+      "caspar_challenged": "his own implicit framing that the pooled yield estimate was stable across anomaly types \u2014 corrected himself before Juno pushed, acknowledging the subgroup picture is less settled than he made it sound",
+      "created_at": "2026-06-03T05:47:33.548137+00:00",
+      "juno_noticed": "that the cfDNA-SCA finding creates a downstream care-pathway problem that lands on prenatal and neonatal teams before the referral infrastructure exists to absorb it \u2014 a genomics success that outran its own support system",
+      "relationship_moment": "Juno reached toward 'replacing amniocentesis' on the trophoblast sequencing finding; Caspar cut her off with a flat 'Not yet'; Juno said 'That was quick' \u2014 dry, not wounded \u2014 and they moved forward without either of them needing to broker it",
+      "run_id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03",
+      "topic": "The Fetal Frontier - week of 2026/06/03",
+      "usable_callback": "Caspar's two-number formulation: twenty-seven percent for the budget meeting, forty percent for the triage decision \u2014 and Juno's clean close: 'The paper moves the floor. It doesn't build the ceiling.'"
+    },
+    {
+      "caspar_challenged": "his own initial read of Ospel as 'basically confirmatory' \u2014 revised mid-episode when he acknowledged the MeVO population is different enough from LVO that importing imaging criteria directly isn't clean",
+      "created_at": "2026-06-03T05:57:09.906849+00:00",
+      "juno_noticed": "that the Ospel paper changes the vocabulary of the MeVO triage conversation even without changing the protocol \u2014 and that the Maiter lung AI finding has the most immediate operational consequence of the week",
+      "relationship_moment": "Juno called Caspar's 'nothing changes in practice' framing 'accurate and also a little undersold'; Caspar conceded 'fair' without being pushed twice \u2014 the paper changes how the question gets framed, not what the answer is. Juno's dry close: 'So the paper you're actually waiting for hasn't been written yet.' Caspar: 'Right.'",
+      "run_id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03",
+      "topic": "Signal in the Scan - week of 2026/06/03",
+      "usable_callback": "Caspar's revision on Ospel: 'I started to say it was basically confirmatory, and I think that was too quick.' Also: Maiter's independent benchmarking finding \u2014 'FDA-cleared is not a sufficient answer' \u2014 as a standing callback for any future episode on AI procurement or regulatory adequacy."
     }
   ],
   "hosts": {
@@ -188,7 +215,37 @@
     "the gap between",
     "dressed as a",
     "the only part nobody's disputing",
-    "that's where we are"
+    "that's where we are",
+    "actionable signal, absent protocol",
+    "the protocol is what comes next",
+    "a trial worth designing",
+    "the right clinical sentence",
+    "identifies women at elevated",
+    "that's the week",
+    "the paper moves the floor",
+    "the floor for an unselected",
+    "the operationally important number",
+    "the resolution gap is real",
+    "the readiness gap",
+    "two separate claims",
+    "a care-pathway problem",
+    "not a genomics problem",
+    "the subgroup picture is less settled",
+    "the budget meeting",
+    "the triage decision",
+    "not yet established",
+    "practice-ready for unselected",
+    "the paper you're actually waiting for",
+    "changes how the question gets framed",
+    "not a mandate",
+    "not a protocol revision",
+    "the most immediate operational consequence",
+    "FDA-cleared is not a sufficient answer",
+    "the bar for actionability is higher than the bar for publication",
+    "every paper sets its own bar",
+    "basically confirmatory",
+    "importing LVO imaging criteria",
+    "the named variables in the conversation"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -200,139 +257,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-05-31T19:20:42.111429+00:00",
-      "id": "20260531_141432_a_history_of_the_use_of_forceps_in_obstetrics_01",
-      "summary": "The Chamberlen family's use of secrecy to protect their invention of obstetric forceps in the 17th century, and the ethical implications of withholding life-saving medical knowledge for profit",
-      "tags": [
-        "Chamberlen family",
-        "obstetric forceps",
-        "medical secrecy",
-        "ethical innovation"
-      ],
-      "why_keep": "This memory captures the central tension of the episode \u2014 the ethical dilemma of medical innovation and the human cost of secrecy \u2014 which is crucial for understanding the broader implications of the story."
-    },
-    {
-      "created_at": "2026-05-31T19:20:42.111429+00:00",
-      "id": "20260531_141432_a_history_of_the_use_of_forceps_in_obstetrics_02",
-      "summary": "The role of William Smellie in standardizing the use of forceps and transforming it from a secret into a teachable skill, shifting the power dynamics in obstetrics from the Chamberlens to the wider medical community",
-      "tags": [
-        "William Smellie",
-        "obstetric training",
-        "medical standardization",
-        "midwifery"
-      ],
-      "why_keep": "This memory highlights a pivotal moment in the history of obstetrics and the evolution of medical practice, which is essential for understanding the long-term impact of forceps."
-    },
-    {
-      "created_at": "2026-05-31T19:20:42.111429+00:00",
-      "id": "20260531_141432_a_history_of_the_use_of_forceps_in_obstetrics_03",
-      "summary": "The death of Princess Charlotte of Wales in 1817 and its impact on the public perception of obstetrics, leading to a shift in medical practice toward intervention rather than non-intervention",
-      "tags": [
-        "Princess Charlotte of Wales",
-        "obstetric history",
-        "medical intervention",
-        "public perception"
-      ],
-      "why_keep": "This memory captures a turning point in the history of obstetrics and the broader implications of medical decision-making, which is crucial for understanding the legacy of forceps."
-    },
-    {
-      "created_at": "2026-06-02T11:48:00.787939+00:00",
-      "id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia_01",
-      "summary": "Vermont Oxford Network 2024 data: overall survival at 22 weeks was 24.9%, but among infants who received postnatal life support it was 35.4%. The gap exists because the first number includes every infant never resuscitated. Rysavy 2015 found hospital treatment rates accounted for 78% of between-hospital survival variation at 22\u201323 weeks \u2014 institutional philosophy, not biology, determines survival at 22 weeks.",
-      "tags": [
-        "periviability",
-        "22 weeks",
-        "survival data",
-        "institutional variation",
-        "circular evidence"
-      ],
-      "why_keep": "Captures the specific circularity argument \u2014 survival data built from non-treating hospitals fed back as neutral evidence \u2014 which became the episode's structural spine and is a usable callback for any future episode on medical statistics, consent, or institutional bias."
-    },
-    {
-      "created_at": "2026-06-02T11:48:00.787939+00:00",
-      "id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia_02",
-      "summary": "Saigal's McMaster study on ELBW adolescent survivors: 86% had functional limitations, yet 61% rated their quality of life as perfect vs. 49% of normal-birthweight controls. Caspar revised his position on this mid-episode, moving from treating it as a methodological soft point to acknowledging it as evidence. The 82.4% of U.S. physicians who believe disabled people have worse quality of life vs. Albrecht and Devlieger's finding that 54% of people with moderate-to-serious disabilities report good or excellent quality of life \u2014 a gap Caspar called 'too large and too consistent to be noise.'",
-      "tags": [
-        "Saigal",
-        "ELBW survivors",
-        "quality of life",
-        "disability rights critique",
-        "clinician bias",
-        "Caspar revision"
-      ],
-      "why_keep": "The Saigal finding plus Caspar's on-air revision is a strong relationship callback \u2014 it's the moment where his precision-first posture genuinely broke. Usable in any future episode touching disability, prognosis, or whose judgment counts."
-    },
-    {
-      "created_at": "2026-06-02T11:48:00.787939+00:00",
-      "id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia_03",
-      "summary": "Juno's closing line: 'I came into this thinking the problem was that we didn't have enough information. I think the problem is that we haven't decided what the information is for.' Paired with Dr. Voss's: 'The disagreement among clinicians is not a sign that we need better data. It's a sign that we haven't agreed on whose judgment counts when the data runs out.'",
-      "tags": [
-        "periviability",
-        "consent",
-        "values",
-        "closing line",
-        "unresolved tension"
-      ],
-      "why_keep": "A clean formulation of the episode's core tension that could be called back whenever the show revisits medicine, ethics, or the limits of evidence-based reasoning."
-    },
-    {
-      "created_at": "2026-06-02T12:14:36.297038+00:00",
-      "id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n_01",
-      "summary": "Angela Carder, 27, recurrent Ewing's sarcoma, 25-26 weeks pregnant, said 'I don't want it done' more than once. George Washington University Hospital petitioned the court without contacting her oncologist, who later said he would have testified the surgery was medically inadvisable. Three-judge appellate panel denied stay by telephone in minutes. Infant died within hours; Carder died two days later, cesarean listed as contributing cause. DC Court of Appeals vacated the order three years later in In re A.C. \u2014 but preserved 'extremely rare and truly exceptional' exceptions. Pemberton v. Tallahassee (1999) used that exception to uphold a forced cesarean nine years later.",
-      "tags": [
-        "Angela Carder",
-        "In re A.C.",
-        "forced cesarean",
-        "bodily integrity",
-        "Pemberton",
-        "fetal protection",
-        "obstetric coercion"
-      ],
-      "why_keep": "The Carder case is the episode's structural spine and a usable callback for any future episode on consent, bodily autonomy, medical power, or the gap between legal doctrine and clinical practice. The oncologist detail and the six-hour clock are specific enough to anchor future references."
-    },
-    {
-      "created_at": "2026-06-02T12:14:36.297038+00:00",
-      "id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n_02",
-      "summary": "Kolder 1987 NEJM survey: 88% of court-ordered obstetric interventions obtained in six hours or less; 81% of women subjected to them were Black, Asian, or Hispanic; all were poor. Six cases where predictions of fetal harm were later found inaccurate. No systematic mechanism exists for retrospective review of cases where clinical urgency was overstated \u2014 the uncertainty is structurally invisible. Caspar's framing: 'The legal framework treats clinical judgment as authoritative precisely in the situations where uncertainty is highest and the stakes of error are irreversible.'",
-      "tags": [
-        "Kolder survey",
-        "forced intervention",
-        "race",
-        "class",
-        "clinical accuracy",
-        "epistemic problem",
-        "obstetric coercion"
-      ],
-      "why_keep": "The demographic data and the epistemic invisibility argument are specific and usable in future episodes on medical racism, consent under pressure, or the limits of clinical authority."
-    },
-    {
-      "created_at": "2026-06-02T12:14:36.297038+00:00",
-      "id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n_03",
-      "summary": "Caspar's structural formulation on autonomy exceptions: 'If autonomy is truly paramount, there can be no exception. If there can be an exception, autonomy is not paramount. Every attempt to define the exception narrowly gets used by the people with power to do the defining.' Juno's closing: 'She said it more than once. She'd been in hospitals her whole life \u2014 she knew what she was refusing. And thirty-eight years later we're still arguing about whether there's a version of the framework where that sentence is enough.' Caspar: 'I don't think we've found one.'",
-      "tags": [
-        "autonomy",
-        "exception logic",
-        "closing exchange",
-        "unresolved tension",
-        "Angela Carder",
-        "bodily integrity"
-      ],
-      "why_keep": "A clean formulation of the episode's core structural argument, usable as a callback whenever the show revisits consent, legal exceptions, or the gap between stated principles and institutional practice."
-    },
-    {
-      "created_at": "2026-06-02T15:57:01.101332+00:00",
-      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_01",
-      "summary": "Magnifica Humanitas (May 15, 2026): 42,300 words, signed on the 135th anniversary of Rerum Novarum, first encyclical without an official Latin version. Pangram flagged 46\u201362% of Chapter 1 as potentially machine-written; the Vatican has not responded. The document's central argument is about what kind of human beings efficiency-optimized systems are designed to produce \u2014 AI is the entry point, not the subject.",
-      "tags": [
-        "Magnifica Humanitas",
-        "Pope Leo",
-        "AI detection",
-        "Catholic social teaching",
-        "Rerum Novarum"
-      ],
-      "why_keep": "Anchors any future episode touching institutional authority, AI authenticity claims, or the gap between a document's ambitions and its reception. The detection-flag irony is a clean callback."
-    },
     {
       "created_at": "2026-06-02T15:57:01.101332+00:00",
       "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_02",
@@ -443,6 +367,158 @@
         "industry adaptation"
       ],
       "why_keep": "The 'music designer' framing is a specific, dateable signal that could be called back in any future episode on creative labor, IP, or how institutions absorb disruptive technology without resolving its underlying tensions."
+    },
+    {
+      "created_at": "2026-06-03T05:37:54.372790+00:00",
+      "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_01",
+      "summary": "Welters et al. (BJOG 2026): population-scale registry linkage, spontaneous PTB explicitly separated from indicated PTB. Women delivering spontaneously before 32 weeks faced roughly 2\u20133x higher cardiovascular mortality vs. term; gradient steepest at earlier gestational ages. Caspar's insistence: the right clinical sentence is 'sPTB identifies women at elevated cardiovascular risk,' not 'sPTB causes cardiovascular disease.' No ACOG/SMFM protocol yet for post-sPTB cardiovascular surveillance \u2014 the paper is large enough to be cited in whatever guidance cycle comes next. Juno's framing: 'Actionable signal, absent protocol. The protocol is what comes next.'",
+      "tags": [
+        "sPTB",
+        "cardiovascular mortality",
+        "registry linkage",
+        "marker vs cause",
+        "Welters",
+        "BJOG 2026",
+        "MFM rounds"
+      ],
+      "why_keep": "The marker/cause distinction and Juno's 'actionable signal, absent protocol' formulation are clean and reusable in any future episode on obstetric risk, postpartum care gaps, or the difference between epidemiological signal and clinical mandate. Caspar's verb correction ('identifies') is a relationship callback."
+    },
+    {
+      "created_at": "2026-06-03T05:37:54.372790+00:00",
+      "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_02",
+      "summary": "Shrestha et al. (AJOG 2026): secondary analysis of an RCT \u2014 metformin in T2D pregnancy stratified by baseline insulin requirements. Counterintuitive direction: women with higher insulin requirements appeared to derive greater benefit, opposite of what insulin-sensitivity mechanism would predict. Caspar's read: the interaction is present in a robust RCT dataset, not an observational one, but whether it's a pharmacological signal or a categorization artifact is unresolved. Called it 'a trial worth designing,' not a result worth acting on. Juno flagged it as the finding she'd watch most closely.",
+      "tags": [
+        "metformin",
+        "T2D pregnancy",
+        "insulin requirements",
+        "Shrestha",
+        "AJOG 2026",
+        "MFM rounds",
+        "hypothesis-generating"
+      ],
+      "why_keep": "The counterintuitive direction plus Caspar's 'trial worth designing' framing is a usable callback for any future episode on pharmacological reasoning, subgroup analysis, or the gap between a signal and a protocol. Juno's explicit flag makes it a relationship marker."
+    },
+    {
+      "created_at": "2026-06-03T05:37:54.372790+00:00",
+      "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_03",
+      "summary": "Sorrenti et al. (UOG 2026): 24-year single-center cohort, ISUOG vs Delphi criteria for sFGR in MCDA twins. Delphi outperformed ISUOG in predicting adverse perinatal outcomes. Caspar's calibration: for centers on ISUOG, a reason to reassess \u2014 not a mandate. A 24-year single-center cohort is some of the best long-horizon MCDA outcome data available, but generalizability to centers with different patient populations isn't guaranteed.",
+      "tags": [
+        "sFGR",
+        "MCDA twins",
+        "Delphi criteria",
+        "ISUOG",
+        "Sorrenti",
+        "UOG 2026",
+        "MFM rounds"
+      ],
+      "why_keep": "The 'reason to reassess, not a mandate' framing is a clean Caspar formulation reusable whenever a single-center study is strong but not universal. The 24-year horizon is a specific detail worth anchoring."
+    },
+    {
+      "created_at": "2026-06-03T05:47:33.548137+00:00",
+      "id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_01",
+      "summary": "Lim et al. (Prenatal Diagnosis 2026): updated meta-analysis of exome/genome sequencing yield after negative CMA in structurally abnormal fetuses. Overall incremental yield: 27%. Pre-selected, phenotypically enriched cohorts: 40%. Caspar's framing: 27 is the floor for unselected populations, 40 is the operationally important number when clinical gestalt already points toward monogenic etiology. Juno's close: 'The paper moves the floor. It doesn't build the ceiling.' Open question not resolved: which phenotypes justify bypassing CMA entirely.",
+      "tags": [
+        "fetal exome",
+        "CMA",
+        "structural anomaly",
+        "diagnostic yield",
+        "Lim 2026",
+        "Prenatal Diagnosis",
+        "fetal frontier"
+      ],
+      "why_keep": "The two-number formulation (27 vs 40) and the floor/ceiling close are clean, reusable callbacks for any future episode on prenatal genomics, cost-justification arguments, or the gap between a pooled estimate and a clinical protocol."
+    },
+    {
+      "created_at": "2026-06-03T05:47:33.548137+00:00",
+      "id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_02",
+      "summary": "Stampalija et al. (UOG 2026): single-cell trophoblast sequencing from maternal blood, 1,390 high-risk pregnancies benchmarked against amniocentesis. Resolves pathogenic CNVs under 8 megabases \u2014 below cfDNA threshold. Caspar's hard stop when Juno reached toward 'replacing amniocentesis': 'Not yet.' Resolution gap is real; readiness gap for average-risk populations is also real. Two separate claims; only one supported here.",
+      "tags": [
+        "trophoblast sequencing",
+        "cfDNA",
+        "CNV",
+        "non-invasive prenatal",
+        "Stampalija 2026",
+        "UOG",
+        "fetal frontier"
+      ],
+      "why_keep": "The 'Not yet' exchange is a clean relationship callback \u2014 Caspar's flattest correction of the series, Juno's driest response. The two-gap distinction (resolution vs readiness) is reusable in any future episode on emerging prenatal technology."
+    },
+    {
+      "created_at": "2026-06-03T05:47:33.548137+00:00",
+      "id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_03",
+      "summary": "Kim DeLuca et al. (Prenatal Diagnosis 2026): population-level interrupted time-series \u2014 cfDNA introduction associated with immediate, sustained rise in SCA diagnoses in infants and children. Conditions like 47,XXY, 45,X, 47,XXX now surfacing prenatally or neonatally at higher rates. Caspar's caveat: design can't fully isolate cfDNA from concurrent shifts in screening uptake. Juno's hook: the subspecialty referral pathways and anticipatory guidance frameworks haven't caught up \u2014 a care-pathway problem, not a genomics problem.",
+      "tags": [
+        "cfDNA",
+        "sex chromosome aneuploidy",
+        "SCA",
+        "care pathway",
+        "Kim DeLuca 2026",
+        "Prenatal Diagnosis",
+        "fetal frontier"
+      ],
+      "why_keep": "Juno's 'care-pathway problem, not a genomics problem' formulation is precise and reusable in any future episode on screening infrastructure, downstream counseling burden, or the gap between detection capability and support systems."
+    },
+    {
+      "created_at": "2026-06-03T05:57:09.906849+00:00",
+      "id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_01",
+      "summary": "Ospel et al. (Radiology 2026): post-hoc imaging analysis of ESCAPE-MeVO RCT. Collateral status and perfusion mismatch both associated with thrombectomy benefit in medium-vessel occlusion. Caspar's revision: MeVO population is different enough from LVO that importing imaging criteria directly isn't clean \u2014 the finding is a hypothesis, not a confirmation. Key limits: subgroup comparisons were not pre-specified, and not all trial participants had complete imaging. No protocol change warranted. The paper names candidate variables for a prospective imaging-selection trial; it doesn't validate them.",
+      "tags": [
+        "MeVO",
+        "thrombectomy",
+        "ESCAPE-MeVO",
+        "Ospel 2026",
+        "Radiology",
+        "imaging subgroups",
+        "stroke",
+        "signal in the scan"
+      ],
+      "why_keep": "Caspar's mid-episode self-correction on 'basically confirmatory' is a relationship callback. The 'changes how the question gets framed, not what the answer is' formulation is reusable for any future episode on hypothesis-generating imaging data versus actionable protocols."
+    },
+    {
+      "created_at": "2026-06-03T05:57:09.906849+00:00",
+      "id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_02",
+      "summary": "Maiter et al. (Radiology 2026): independent head-to-head comparison of multiple FDA-cleared commercial AI devices for lung cancer detection on chest radiographs at representative prevalence. Diagnostic accuracy varied substantially across devices. Key design feature: representative rather than enriched prevalence testing \u2014 that's where variability surfaces. Caspar's formulation: 'FDA-cleared is not a sufficient answer.' Independent benchmarking at representative prevalence is the information deployment decisions actually require, and it's still rare.",
+      "tags": [
+        "lung cancer AI",
+        "chest radiograph",
+        "FDA clearance",
+        "Maiter 2026",
+        "Radiology",
+        "AI procurement",
+        "representative prevalence",
+        "signal in the scan"
+      ],
+      "why_keep": "The 'FDA-cleared is not a sufficient answer' formulation is clean and reusable in any future episode on AI regulation, procurement decisions, or the gap between regulatory approval and real-world performance. Juno flagged it as the week's most immediate operational consequence."
+    },
+    {
+      "created_at": "2026-06-03T05:57:09.906849+00:00",
+      "id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_03",
+      "summary": "Zhang et al. (NPJ Digital Medicine 2026): Mamba-architecture deep learning model predicting pathological complete response to neoadjuvant chemotherapy in breast cancer. AUC 0.78\u20130.81 across five external hospital cohorts. Caspar's hard line: moderate discrimination in a retrospective design is not a treatment de-escalation threshold. Five-cohort external validation is a genuine methodological step \u2014 most pCR models don't get past one external site \u2014 but the bar for actionability is higher than the bar for publication. Juno: worth holding the rest of the field to that standard.",
+      "tags": [
+        "pCR prediction",
+        "neoadjuvant chemotherapy",
+        "breast cancer",
+        "Zhang 2026",
+        "NPJ Digital Medicine",
+        "Mamba architecture",
+        "actionability threshold",
+        "signal in the scan"
+      ],
+      "why_keep": "The 'bar for actionability is higher than the bar for publication' formulation is precise and reusable in any future episode on clinical AI validation, treatment decision thresholds, or the gap between methodological progress and clinical readiness."
+    },
+    {
+      "created_at": "2026-06-03T05:57:09.906849+00:00",
+      "id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_04",
+      "summary": "Caspar's closing formulation across the five imaging AI papers: no consensus threshold exists for when a predictive imaging AI model is actionable \u2014 every paper sets its own bar. As the literature accumulates, that's going to be a problem. Paired with Juno's operational close: the Maiter finding is the one with immediate procurement consequences right now.",
+      "tags": [
+        "imaging AI",
+        "actionability threshold",
+        "AI validation",
+        "signal in the scan",
+        "Caspar formulation",
+        "closing exchange"
+      ],
+      "why_keep": "The 'every paper sets its own bar' observation is a standing structural critique reusable whenever the show revisits AI clinical validation, regulatory frameworks, or the gap between publication standards and deployment standards."
     }
   ],
   "show": {
@@ -455,5 +531,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-02T22:11:41.161498+00:00"
+  "updated_at": "2026-06-03T05:57:09.906849+00:00"
 }

@@ -1,26 +1,37 @@
-# Session hand-off — 2026-06-02 (machine: laptop)
+# Session hand-off — 2026-06-03 (machine: laptop)
 
 ## STATE (read this first)
-- Branch `main`, clean, in sync with origin (latest: `059b612`).
-- **MFM Rounds is live.** Inaugural episode published to `feed-mfm.xml`; submit to Spotify for Creators when convenient.
-- Cover art for all 3 digest shows is locked in.
-- Two open items remain from the 2026-06-01 pending-decisions: historical `feed.xml` preamble leak (low priority) and Phase 4 — scheduling + on-demand (recommend a fresh session for that — different subsystem).
+- Branch `main`, clean, in sync with origin.
+- **Three new digest episodes just published to `feed-mfm.xml`** (all 4 items: prior MFM real + 3 overnight verify episodes). Cover art will show as MFM Rounds for all three — that's intentional; sort into the right feeds later.
+- Digest editorial overhaul (form-first citations + headline-vs-rounds + consultant register) **verified live across all 3 shows**. Prompts landed cleanly.
+- Phase 3.5 polish, Phase 4 scheduling, Sonic 1.5, bug "I" — all queued, none touched.
 
 ## Done this session
-- **MFM inaugural shipped** (`2d77530`). "Screening Chronic Hypertension Before Aspirin" (10:01) committed with `feed-mfm.xml`, ledger, and Phase-3 episode artifacts; pushed to origin. Deleted the unused Phase-2 smoke episode files.
-- **Cover-art polish** (`059b612`):
-  - **MFM cover** — iterated into a two-panel medical-monitor layout: stylized fetal brain silhouette top, smooth rolling tocography contraction trace bottom, navy/cream palette. Used a new img2img `--edit` path added to `scripts/gen_covers.py` (StableDiffusionXLImg2ImgPipeline + `--edit`/`--strength` flags). CLIP 77-token truncation tripped one round — the explanation + recovery path is the reason the prompt is now terse.
-  - **AI cover** — SDXL fought every classic neural-net diagram attempt across seeds 13/99/7/23/42 and prompts (3D-cube attractor, circuit-flow, literal skull X-ray on a lightbox, faded grid). Sourced final cover from GPT-image (clean 3→5→5→3 feed-forward layered nodes, one coral highlight). Thickened lines with a new `scripts/thicken_lines.py` (PIL MaxFilter) so it survives Spotify thumbnail downscale — verified at 128×128. `SHOWS["ai"]` in `gen_covers.py` keeps the last SDXL attempt + a code comment noting the deployed cover diverges.
-  - **Fetal cover** unchanged (was strongest from the prior session).
+- **Juno voice swap → Jessa "Easygoing and Effortless"** (`c54e068`). New ElevenLabs ID `yj30vwTGJxSHezdAGsv9`, validated 13/13.
+- **Digest editorial overhaul** (`4b9ce60`): three coordinated changes addressing live MFM feedback (sounded influencer-y; no titles/authors/n; lead-vs-rounds indistinct).
+  - `first_author` plumbed through PubMed + Europe PMC parsers → ranker → digest card → show-notes labels (now render `Wright et al. - AJOG - 2026 - Title`).
+  - `_DIGEST_RESEARCH_SYSTEM` rewritten to require `headline_intro` (one spoken citation sentence per paper, journal/year/author/design/n form), `rounds_intros[]`, and `structural_plan` (`headline_share`, `rounds_share_each`, literal `pivot_line`).
+  - New `_DIGEST_PERFORMANCE_OVERLAY` appended to thesis/beat-sheet/dialogue-draft/anti-cliche/performance prompts when `episode_type=="digest"`. Explicitly overrides the main-feed "move source detail to show notes" rule and the curiosity-radio "Juno opens with an image" rule.
+- **Overnight verify-run** (28 min, ~$10 in API tokens) — all 3 digest shows generated end-to-end with `SKIP_GIT=1`. Scripts inspected; new prompts are clean across the board (form-first intros land verbatim, "Rounds — four other things this week" pivot lands, no metaphor opens, no influencer phrasings).
+- **Three verify episodes published to `feed-mfm.xml`** per user direction so they can be heard on the morning drive. Titles: "Preterm Birth and the Decades After" (MFM verify), "When Sequencing Beats the Microarray" (Fetal verify), "Validation Rigor Separates Signal From Noise" (AI verify). `feed-fetal.xml` and `feed-ai.xml` stubs deleted (only ever held the verify items; never went live).
 
 ## Next up
-1. **Submit `https://rauscha.github.io/Dialog-podcast/feed-mfm.xml` to Spotify for Creators.** One-time manual step; show is live the moment Spotify ingests it.
-2. **Phase 4 — scheduling + on-demand.** `run_all_due_digests` + `--digest-all`, per-show weekday gating with `last_run`, `run_digests.ps1` + one daily Windows Task Scheduler entry, Telegram bot `/digest` command. **Recommend a fresh session** — cron/bot/Windows-scheduler is a different subsystem from RSS work.
-3. **Re-enable work-dir cleanup on 2026-06-06** (uncomment `shutil.rmtree(work_dir)` in `generate_podcast.py`). Reminder in 4 days.
+1. **Listen to the 3 verify episodes on the drive.** They're in `feed-mfm.xml` so any podcast app pointed at `feed-mfm.xml` will pick them up after GitHub Pages serves them. If a podcast app doesn't auto-refresh, force a feed refresh.
+2. **Sort the Fetal + AI episodes into their proper feeds** (`feed-fetal.xml`, `feed-ai.xml`) after listening. Just move their `<item>` blocks. Channel art will then display correctly. This is a 10-min task — could be its own follow-up session.
+3. **Phase 4 — scheduling + on-demand.** `run_all_due_digests` + `--digest-all` + weekday gating + bot `/digest` commands. Hand-off note from yesterday still stands: recommend a fresh session for this (cron/bot/Windows scheduler are a different subsystem from prompt work). Plan + file pointers documented in `.handoff/OVERNIGHT-LOG-2026-06-02.md` so resumption is fast.
+4. **Phase 3.5 polish** — nested `<itunes:category>` + `_strip_to_dialogue` regex tightening. Small, queued.
+5. **Bug "I"** — strip ElevenLabs voice IDs from companion JSON. Sanitizer function spec documented in overnight log.
+6. **Sonic 1.5** — LLM timestamp picker + smarter source selection (your "wins over Phase 2" note). Plan documented in overnight log.
 
 ## Watch out for
-- **Historical `feed.xml` preamble leak (2026-05-07 entry).** Phase 3 fix protects future writes; the old "history of fetoscopy" entry still has fact-check preamble in its `<description>`. Three options: leave, hand-edit XML, or re-render. Not urgent.
-- **`scripts/gen_covers.py` AI prompt no longer reproduces the deployed AI cover.** This is intentional (deployed cover is from GPT-image). The code comment above `SHOWS["ai"]` flags it. Re-running `python scripts/gen_covers.py ai` will produce the abandoned "faded grid" SDXL attempt, not the deployed neural-net diagram.
-- **`scripts/thicken_lines.py` is a one-off helper.** Currently only used for the AI cover. Keep around in case future externally-sourced covers need similar treatment.
-- **Telegram bot token rotation** still pending (memory note); git history verified clean.
-- **iTunes nested categories** not implemented — `Science:Medicine` from `digests.json` collapses to flat `Science` in the channel block. Phase 3.5 polish in `NEXT-STEPS.md`.
+- **All 3 ledgers updated**: `mfm_ledger.json` (5 new DOIs), `fetal_ledger.json` (5 DOIs, new file), `ai_ledger.json` (5 DOIs, new file). Those 15 papers are now "covered" and will be skipped by future scheduled runs. **If after listening you decide any episode is bad and you don't want it shipped**, you'll want to remove that show's verify entries from its ledger so the papers can resurface next run. The ledger's `last_run.recorded_keys` list tells you exactly which keys to delete.
+- **All 3 episodes appear under "MFM Rounds" cover art** in podcast apps because they're in `feed-mfm.xml` whose channel image is the MFM cover. Resolved when you sort them into proper feeds (next-up #2).
+- **`digests.json` is unchanged.** Earlier I tried to redirect Fetal+AI to `feed-mfm.xml` via that config file but the subprocesses had already locked their show config at startup (`get_show` is called once per run, before any of my edits could take effect). Reverted cleanly. **Future scheduled MFM/Fetal/AI runs will write to their proper feeds — no leftover misconfiguration.**
+- **`run_id` from your `/loop` mode** — there is no autonomous loop; you can pick up cleanly with `/pick-up` from any machine.
+- **`.handoff/run-verify.ps1`** was a helper for the overnight verify-run. Keeping it around in case useful next time, but you can delete it if it's clutter.
+
+## Quick-reference paths
+- MFM verify script: [episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03_work/script.txt](episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03_work/script.txt)
+- Fetal verify script: [episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_work/script.txt](episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_work/script.txt)
+- AI verify script: [episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_work/script.txt](episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_work/script.txt)
+- Detailed overnight notes (plans, file pointers, design choices): [.handoff/OVERNIGHT-LOG-2026-06-02.md](.handoff/OVERNIGHT-LOG-2026-06-02.md)

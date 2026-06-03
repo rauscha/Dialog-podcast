@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Surveillance Gap"
+    },
+    {
+      "startTime": 51.86,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 103.72,
+      "title": "\u2014 Headline: Effect Size and the Gestational Age Gradient"
+    },
+    {
+      "startTime": 155.58,
+      "title": "\u2014 Headline: Confounding, Causation, and the Shared Risk Factor Problem"
+    },
+    {
+      "startTime": 207.44,
+      "title": "\u2014 Headline: Practice Impact and What Remains Unsettled"
+    },
+    {
+      "startTime": 259.3,
+      "title": "\u2014 Round 1: Nakaki / Fetal Brain MRI"
+    },
+    {
+      "startTime": 311.16,
+      "title": "\u2014 Round 2: Mari / TTTS Expert Synthesis"
+    },
+    {
+      "startTime": 363.02,
+      "title": "\u2014 Round 3: Shrestha / Metformin Effect Modification"
+    },
+    {
+      "startTime": 414.88,
+      "title": "\u2014 Round 4: Sorrenti / sFGR Diagnostic Criteria"
+    },
+    {
+      "startTime": 466.74,
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

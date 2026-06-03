@@ -1,0 +1,73 @@
+{
+  "backlog": [],
+  "covered": {
+    "10.1002/pd.70112": {
+      "aired_at": "2026-06-03T05:49:27.724668+00:00",
+      "doi": "10.1002/pd.70112",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+      "pmid": "41772942",
+      "publication": "Prenat Diagn",
+      "title": "Diagnostic Yield of Sequencing for Prenatal Diagnosis of Fetal Structural Anomalies: An Updated Systematic Review.",
+      "url": "https://doi.org/10.1002/pd.70112",
+      "year": 2026
+    },
+    "10.1002/pd.70175": {
+      "aired_at": "2026-06-03T05:49:27.724668+00:00",
+      "doi": "10.1002/pd.70175",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+      "pmid": "42202067",
+      "publication": "Prenat Diagn",
+      "title": "Latin American Multicenter Study of Fetal Endoscopic Tracheal Occlusion for Severe Left Diaphragmatic Hernia.",
+      "url": "https://doi.org/10.1002/pd.70175",
+      "year": 2026
+    },
+    "10.1002/pd.70190": {
+      "aired_at": "2026-06-03T05:49:27.724668+00:00",
+      "doi": "10.1002/pd.70190",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+      "pmid": "42226427",
+      "publication": "Prenat Diagn",
+      "title": "Impact of Prenatal Cell-Free DNA Screening on Sex Chromosome Aneuploidy Diagnoses in Infants and Children.",
+      "url": "https://doi.org/10.1002/pd.70190",
+      "year": 2026
+    },
+    "10.1002/uog.70196": {
+      "aired_at": "2026-06-03T05:49:27.724668+00:00",
+      "doi": "10.1002/uog.70196",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+      "pmid": "41906959",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes of twin pregnancies complicated by early twin-to-twin transfusion syndrome treated with fetoscopic laser surgery.",
+      "url": "https://doi.org/10.1002/uog.70196",
+      "year": 2026
+    },
+    "10.1002/uog.70201": {
+      "aired_at": "2026-06-03T05:49:27.724668+00:00",
+      "doi": "10.1002/uog.70201",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+      "pmid": "41883021",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Single-cell-based non-invasive screening for fetal pathogenic microimbalances using maternal blood: comparison with invasive prenatal diagnosis.",
+      "url": "https://doi.org/10.1002/uog.70201",
+      "year": 2026
+    }
+  },
+  "last_run": {
+    "aired_at": "2026-06-03T05:49:27.724668+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+    "recorded_keys": [
+      "10.1002/pd.70112",
+      "10.1002/uog.70201",
+      "10.1002/pd.70175",
+      "10.1002/uog.70196",
+      "10.1002/pd.70190"
+    ],
+    "window": {
+      "from": "2025/11/30",
+      "to": "2026/06/03"
+    }
+  },
+  "schema_version": 1,
+  "show_id": "fetal",
+  "updated_at": "2026-06-03T05:49:27.724668+00:00"
+}

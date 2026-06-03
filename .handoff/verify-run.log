@@ -1,0 +1,223 @@
+﻿=== VERIFY-RUN START 2026-06-03 00:30:11 ===
+--- mfm START 00:30:11 ---
+python : 00:30:52 [INFO] Ranking MFM Rounds (mfm)...
+At line:1 char:484
++ ... g -Encoding utf8; python generate_podcast.py --digest $s 2>&1 | Out-F ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (00:30:52 [INFO]...Rounds (mfm)...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+00:31:54 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:31:54 [INFO] [1/5] Building digest research package (headline + 4 rounds, no web tools)...
+00:32:40 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:32:41 [INFO] [2/5] Planning thesis and audience promise...
+00:33:14 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:33:14 [INFO] [2/5] Deciding whether to book a guest expert...
+00:33:21 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:33:21 [INFO] [2/5] Building beat sheet and host stance map...
+00:34:41 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:34:41 [INFO] [2/5] Considering sonic footnote flourishes...
+00:34:46 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:34:46 [INFO] [2/5] Drafting Juno/Caspar dialogue...
+00:35:43 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:35:43 [INFO] [2/5] Rewriting for naturalness and anti-cliche cleanup...
+00:36:26 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:36:26 [INFO] [3/5] Fact-checking and calibrating claims...
+00:36:47 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:36:47 [INFO] [3/5] Preparing final performance script...
+00:37:28 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:37:54 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:37:55 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:37:55 [INFO] Episode title: 'Preterm Birth and the Decades After'
+00:37:55 [INFO] [4/5] Generating episode audio...
+00:37:55 [INFO] [4/5] Generating audio via routed TTS providers: ['elevenlabs']
+00:38:51 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:38:51 [INFO] Music prompt (MusicGen): 'Curious warm intimate cinematic soundscape with gentle strings, subtle 
+piano, and ambient textures for thoughtful podcast storytelling.'
+00:38:51 [INFO] HTTP Request: HEAD https://huggingface.co/facebook/musicgen-small/resolve/main/state_dict.bin 
+"HTTP/1.1 302 Found"
+00:38:52 [INFO] T5 will be evaluated with autocast as float32
+
+Loading weights:   0%|          | 0/99 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 99/99 [00:00<00:00, 2091.05it/s]
+00:38:55 [INFO] HTTP Request: HEAD 
+https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin "HTTP/1.1 302 Found"
+C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: 
+FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+00:38:56 [INFO] New pattern, time steps: 600, sequence steps: 604
+00:39:10 [INFO] HTTP Request: HEAD https://huggingface.co/facebook/musicgen-small/resolve/main/state_dict.bin 
+"HTTP/1.1 302 Found"
+00:39:10 [INFO] T5 will be evaluated with autocast as float32
+
+Loading weights:   0%|          | 0/99 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 99/99 [00:00<00:00, 10995.26it/s]
+00:39:11 [INFO] HTTP Request: HEAD 
+https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin "HTTP/1.1 302 Found"
+C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: 
+FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+00:39:11 [INFO] New pattern, time steps: 600, sequence steps: 604
+00:39:23 [INFO] Intro music generated: 
+C:\Dialog-podcast\episodes\20260603_003154_mfm_rounds_-_week_of_2026_06_03_work\music\intro_music.mp3
+00:39:23 [INFO] Outro music generated: 
+C:\Dialog-podcast\episodes\20260603_003154_mfm_rounds_-_week_of_2026_06_03_work\music\outro_music.mp3
+00:39:23 [INFO] Wrapping episode with ident + intro/outro music...
+00:39:39 [INFO] [5/5] Updating RSS feed...
+00:39:39 [INFO] RSS feed updated \u2192 C:\Dialog-podcast\feed-mfm.xml
+00:39:39 [INFO] 
+Done!  Episode: 'MFM Rounds - week of 2026/06/03'  (1331 words, audio: 
+20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3)
+00:39:39 [INFO] Ledger updated for mfm: 1 headline + 4 rounds papers.
+--- mfm END exit=0 (568s) 00:39:40 ---
+--- fetal START 00:39:40 ---
+python : 00:39:51 [INFO] Ranking The Fetal Frontier (fetal)...
+At line:1 char:484
++ ... g -Encoding utf8; python generate_podcast.py --digest $s 2>&1 | Out-F ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (00:39:51 [INFO]...tier (fetal)...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+00:41:02 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:41:02 [INFO] [1/5] Building digest research package (headline + 4 rounds, no web tools)...
+00:41:58 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:41:58 [INFO] [2/5] Planning thesis and audience promise...
+00:42:35 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:42:35 [INFO] [2/5] Deciding whether to book a guest expert...
+00:42:41 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:42:41 [INFO] [2/5] Building beat sheet and host stance map...
+00:43:56 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:43:56 [INFO] [2/5] Considering sonic footnote flourishes...
+00:44:03 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:44:03 [INFO] [2/5] Drafting Juno/Caspar dialogue...
+00:44:58 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:44:58 [INFO] [2/5] Rewriting for naturalness and anti-cliche cleanup...
+00:45:42 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:45:42 [INFO] [3/5] Fact-checking and calibrating claims...
+00:46:27 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:46:27 [INFO] [3/5] Preparing final performance script...
+00:47:09 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:47:33 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:47:34 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:47:34 [INFO] Episode title: 'When Sequencing Beats the Microarray'
+00:47:34 [INFO] [4/5] Generating episode audio...
+00:47:34 [INFO] [4/5] Generating audio via routed TTS providers: ['elevenlabs']
+00:48:33 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:48:33 [INFO] Music prompt (MusicGen): 'Curious, warm, intimate cinematic soundscape exploring fetal development 
+with gentle wonder and soft orchestral textures.'
+00:48:34 [INFO] HTTP Request: HEAD https://huggingface.co/facebook/musicgen-small/resolve/main/state_dict.bin 
+"HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits 
+and faster downloads.
+00:48:34 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable 
+higher rate limits and faster downloads.
+00:48:34 [INFO] T5 will be evaluated with autocast as float32
+
+Loading weights:   0%|          | 0/99 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 99/99 [00:00<00:00, 8250.60it/s]
+00:48:35 [INFO] HTTP Request: HEAD 
+https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin "HTTP/1.1 302 Found"
+C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: 
+FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+00:48:36 [INFO] New pattern, time steps: 600, sequence steps: 604
+00:48:52 [INFO] HTTP Request: HEAD https://huggingface.co/facebook/musicgen-small/resolve/main/state_dict.bin 
+"HTTP/1.1 302 Found"
+00:48:52 [INFO] T5 will be evaluated with autocast as float32
+
+Loading weights:   0%|          | 0/99 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 99/99 [00:00<00:00, 7072.30it/s]
+00:48:53 [INFO] HTTP Request: HEAD 
+https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin "HTTP/1.1 302 Found"
+C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: 
+FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+00:48:53 [INFO] New pattern, time steps: 600, sequence steps: 604
+00:49:09 [INFO] Intro music generated: 
+C:\Dialog-podcast\episodes\20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_work\music\intro_music.mp3
+00:49:09 [INFO] Outro music generated: 
+C:\Dialog-podcast\episodes\20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_work\music\outro_music.mp3
+00:49:09 [INFO] Wrapping episode with ident + intro/outro music...
+00:49:27 [INFO] [5/5] Updating RSS feed...
+00:49:27 [INFO] RSS feed updated \u2192 C:\Dialog-podcast\feed-fetal.xml
+00:49:27 [INFO] 
+Done!  Episode: 'The Fetal Frontier - week of 2026/06/03'  (1342 words, audio: 
+20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3)
+00:49:27 [INFO] Ledger updated for fetal: 1 headline + 4 rounds papers.
+--- fetal END exit=0 (589s) 00:49:28 ---
+--- ai START 00:49:28 ---
+python : 00:49:42 [INFO] Ranking Signal in the Scan (ai)...
+At line:1 char:484
++ ... g -Encoding utf8; python generate_podcast.py --digest $s 2>&1 | Out-F ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (00:49:42 [INFO]...he Scan (ai)...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+00:50:46 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:50:46 [INFO] [1/5] Building digest research package (headline + 4 rounds, no web tools)...
+00:51:34 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:51:34 [INFO] [2/5] Planning thesis and audience promise...
+00:52:12 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:52:12 [INFO] [2/5] Deciding whether to book a guest expert...
+00:52:24 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:52:24 [INFO] [2/5] Building beat sheet and host stance map...
+00:53:40 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:53:40 [INFO] [2/5] Considering sonic footnote flourishes...
+00:53:46 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:53:46 [INFO] [2/5] Drafting Juno/Caspar dialogue...
+00:54:38 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:54:38 [INFO] [2/5] Rewriting for naturalness and anti-cliche cleanup...
+00:55:30 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:55:30 [INFO] [3/5] Fact-checking and calibrating claims...
+00:56:09 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:56:09 [INFO] [3/5] Preparing final performance script...
+00:56:45 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:57:09 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:57:10 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:57:10 [INFO] Episode title: 'Validation Rigor Separates Signal From Noise'
+00:57:10 [INFO] [4/5] Generating episode audio...
+00:57:10 [INFO] [4/5] Generating audio via routed TTS providers: ['elevenlabs']
+00:58:00 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+00:58:00 [INFO] Music prompt (MusicGen): 'Curious warm intimate cinematic soundscape with gentle synths, subtle 
+strings, and thoughtful piano textures for investigative podcast storytelling.'
+00:58:00 [INFO] HTTP Request: HEAD https://huggingface.co/facebook/musicgen-small/resolve/main/state_dict.bin 
+"HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits 
+and faster downloads.
+00:58:00 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable 
+higher rate limits and faster downloads.
+00:58:01 [INFO] T5 will be evaluated with autocast as float32
+
+Loading weights:   0%|          | 0/99 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 99/99 [00:00<00:00, 8996.95it/s]
+00:58:02 [INFO] HTTP Request: HEAD 
+https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin "HTTP/1.1 302 Found"
+C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: 
+FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+00:58:03 [INFO] New pattern, time steps: 600, sequence steps: 604
+00:58:17 [INFO] HTTP Request: HEAD https://huggingface.co/facebook/musicgen-small/resolve/main/state_dict.bin 
+"HTTP/1.1 302 Found"
+00:58:17 [INFO] T5 will be evaluated with autocast as float32
+
+Loading weights:   0%|          | 0/99 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 99/99 [00:00<00:00, 8249.29it/s]
+00:58:18 [INFO] HTTP Request: HEAD 
+https://huggingface.co/facebook/musicgen-small/resolve/main/compression_state_dict.bin "HTTP/1.1 302 Found"
+C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\utils\weight_norm.py:144: 
+FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+00:58:19 [INFO] New pattern, time steps: 600, sequence steps: 604
+00:58:33 [INFO] Intro music generated: 
+C:\Dialog-podcast\episodes\20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_work\music\intro_music.mp3
+00:58:33 [INFO] Outro music generated: 
+C:\Dialog-podcast\episodes\20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_work\music\outro_music.mp3
+00:58:33 [INFO] Wrapping episode with ident + intro/outro music...
+00:58:49 [INFO] [5/5] Updating RSS feed...
+00:58:49 [INFO] RSS feed updated \u2192 C:\Dialog-podcast\feed-ai.xml
+00:58:49 [INFO] 
+Done!  Episode: 'Signal in the Scan - week of 2026/06/03'  (1211 words, audio: 
+20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3)
+00:58:49 [INFO] Ledger updated for ai: 1 headline + 4 rounds papers.
+--- ai END exit=0 (562s) 00:58:50 ---
+=== VERIFY-RUN ALL DONE 2026-06-03 00:58:50 ===

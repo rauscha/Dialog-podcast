@@ -11,6 +11,26 @@
       "url": "https://doi.org/10.1002/uog.70212",
       "year": 2026
     },
+    "10.1002/uog.70214": {
+      "aired_at": "2026-06-03T05:39:39.237466+00:00",
+      "doi": "10.1002/uog.70214",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+      "pmid": "41999106",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Effects of Mediterranean diet and stress-reduction interventions during pregnancy on fetal brain development detected using magnetic resonance imaging.",
+      "url": "https://doi.org/10.1002/uog.70214",
+      "year": 2026
+    },
+    "10.1002/uog.70239": {
+      "aired_at": "2026-06-03T05:39:39.237466+00:00",
+      "doi": "10.1002/uog.70239",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+      "pmid": "42126513",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria.",
+      "url": "https://doi.org/10.1002/uog.70239",
+      "year": 2026
+    },
     "10.1002/uog.70244": {
       "aired_at": "2026-06-02T01:48:04.273743+00:00",
       "doi": "10.1002/uog.70244",
@@ -19,6 +39,26 @@
       "publication": "Ultrasound Obstet Gynecol",
       "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode.",
       "url": "https://doi.org/10.1002/uog.70244",
+      "year": 2026
+    },
+    "10.1016/j.ajog.2026.04.043": {
+      "aired_at": "2026-06-03T05:39:39.237466+00:00",
+      "doi": "10.1016/j.ajog.2026.04.043",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+      "pmid": "42105800",
+      "publication": "Am J Obstet Gynecol",
+      "title": "The effect of metformin on perinatal outcomes in pregnant women with type 2 diabetes differs by baseline insulin requirements.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.04.043",
+      "year": 2026
+    },
+    "10.1016/j.ajog.2026.05.021": {
+      "aired_at": "2026-06-03T05:39:39.237466+00:00",
+      "doi": "10.1016/j.ajog.2026.05.021",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+      "pmid": "42229559",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Twin-Twin Transfusion Syndrome and Related Monochorionic Disorders: Historical Perspectives, Current Controversies, and Evidence-Based Opportunities.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.05.021",
       "year": 2026
     },
     "10.1016/j.ajogmf.2026.101989": {
@@ -50,24 +90,34 @@
       "title": "Proteinuria in Preeclampsia and Long-Term Risk of Maternal Kidney and Cardiovascular Disease: A Population-Based Cohort Study.",
       "url": "https://doi.org/10.1111/1471-0528.70265",
       "year": 2026
+    },
+    "10.1111/1471-0528.70273": {
+      "aired_at": "2026-06-03T05:39:39.237466+00:00",
+      "doi": "10.1111/1471-0528.70273",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+      "pmid": "42225294",
+      "publication": "BJOG",
+      "title": "Spontaneous Preterm Birth and Subsequent Cardiovascular Mortality: Linked Registry Cohort Study.",
+      "url": "https://doi.org/10.1111/1471-0528.70273",
+      "year": 2026
     }
   },
   "last_run": {
-    "aired_at": "2026-06-02T01:48:04.273743+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260601_203813_mfm_rounds_-_week_of_2026_06_02.mp3",
+    "aired_at": "2026-06-03T05:39:39.237466+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
     "recorded_keys": [
-      "10.1002/uog.70212",
-      "10.1097/aog.0000000000006325",
-      "10.1111/1471-0528.70265",
-      "10.1016/j.ajogmf.2026.101989",
-      "10.1002/uog.70244"
+      "10.1111/1471-0528.70273",
+      "10.1002/uog.70214",
+      "10.1016/j.ajog.2026.05.021",
+      "10.1016/j.ajog.2026.04.043",
+      "10.1002/uog.70239"
     ],
     "window": {
-      "from": "2025/11/29",
-      "to": "2026/06/02"
+      "from": "2025/11/30",
+      "to": "2026/06/03"
     }
   },
   "schema_version": 1,
   "show_id": "mfm",
-  "updated_at": "2026-06-02T01:48:04.273743+00:00"
+  "updated_at": "2026-06-03T05:39:39.237466+00:00"
 }

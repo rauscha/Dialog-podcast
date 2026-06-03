@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week's Headline Changes"
+    },
+    {
+      "start_sec": 52.57,
+      "start_time": "0:53",
+      "title": "\u2014 Headline: Citation, Design, and Why the RCT Backbone Matters"
+    },
+    {
+      "start_sec": 105.14,
+      "start_time": "1:45",
+      "title": "\u2014 Headline: Effect Sizes and Subgroup Interactions"
+    },
+    {
+      "start_sec": 157.71,
+      "start_time": "2:38",
+      "title": "\u2014 Headline: Practice Impact and the Honest Caveat"
+    },
+    {
+      "start_sec": 210.28,
+      "start_time": "3:30",
+      "title": "\u2014 Round 1: Maiter, Lung Cancer AI Head-to-Head"
+    },
+    {
+      "start_sec": 262.85,
+      "start_time": "4:23",
+      "title": "\u2014 Round 2: Bahl, Breast Tomosynthesis Slab Reconstruction"
+    },
+    {
+      "start_sec": 315.42,
+      "start_time": "5:15",
+      "title": "\u2014 Round 3: Zhang, Mamba Architecture pCR Prediction"
+    },
+    {
+      "start_sec": 367.99,
+      "start_time": "6:08",
+      "title": "\u2014 Round 4: Liu, Radiomics for CMS4 Colorectal Subtyping"
+    },
+    {
+      "start_sec": 420.56,
+      "start_time": "7:01",
+      "title": "\u2014 Close: Open Questions and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.companion.json",
+  "duration_sec": 518.126485,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "RCT-anchored imaging subgroup analysis in MeVO stroke; informs thrombectomy patient selection",
+      "source": "Radiology",
+      "title": "Reperfusion Therapy in ESCAPE-MeVO Trial Participants: Imaging Characteristics and Clinical Outcomes",
+      "url": "https://doi.org/10.1148/radiol.251769"
+    },
+    {
+      "reason": "Independent benchmarking of commercial AI tools; directly informs deployment decisions",
+      "source": "Radiology",
+      "title": "Independent Head-to-Head Comparison of Commercial Artificial Intelligence Devices for Lung Cancer Detection on Chest Radiographs",
+      "url": "https://doi.org/10.1148/radiol.252205"
+    },
+    {
+      "reason": "Workflow optimization in breast imaging screening with maintained diagnostic performance",
+      "source": "Radiology",
+      "title": "Impact of AI-based Slab Reconstruction Technology on the Diagnostic Accuracy of Screening Digital Breast Tomosynthesis",
+      "url": "https://doi.org/10.1148/radiol.252685"
+    },
+    {
+      "reason": "Multicenter external validation of pCR prediction; relevant to neoadjuvant treatment planning",
+      "source": "NPJ Digital Medicine",
+      "title": "Deep learning prediction of pathological complete response in breast cancer using Mamba architecture",
+      "url": "https://doi.org/10.1038/s41746-026-02849-2"
+    },
+    {
+      "reason": "Preoperative molecular subtyping could inform surgical and systemic therapy planning",
+      "source": "Radiology",
+      "title": "Interpretable MRI-based Multiparametric Radiomics for Preoperative Prediction of CMS4 Colorectal Cancer",
+      "url": "https://doi.org/10.1148/radiol.251719"
+    }
+  ],
+  "generated_at": "2026-06-03T05:58:49.582898+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "CT/CTA/perfusion imaging characteristics may identify MeVO stroke subgroups with differential thrombectomy benefit, based on post-hoc analysis of RCT data.",
+      "confidence": "high",
+      "id": "ospel2026",
+      "source_ids": [
+        "ospel2026"
+      ]
+    },
+    {
+      "claim": "Commercial AI devices for lung cancer detection on chest radiographs show variable diagnostic accuracy when tested independently at representative prevalence.",
+      "confidence": "medium",
+      "id": "maiter2026",
+      "source_ids": [
+        "maiter2026"
+      ]
+    },
+    {
+      "claim": "AI-based slab reconstruction for digital breast tomosynthesis maintains non-inferior screening performance while reducing image volume.",
+      "confidence": "medium",
+      "id": "bahl2026",
+      "source_ids": [
+        "bahl2026"
+      ]
+    },
+    {
+      "claim": "A Mamba-architecture deep learning model predicts pathological complete response to neoadjuvant chemotherapy in breast cancer with AUCs of approximately 0.78\u20130.81 across five external cohorts.",
+      "confidence": "medium",
+      "id": "zhang2026",
+      "source_ids": [
+        "zhang2026"
+      ]
+    },
+    {
+      "claim": "MRI radiomics can predict CMS4 colorectal cancer subtype preoperatively, outperforming deep learning comparators in multicenter testing.",
+      "confidence": "medium",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Ospel",
+      "id": "ospel2026",
+      "publication": "Radiology",
+      "title": "Reperfusion Therapy in ESCAPE-MeVO Trial Participants: Imaging Characteristics and Clinical Outcomes",
+      "url": "https://doi.org/10.1148/radiol.251769",
+      "why_it_matters": "RCT-anchored imaging subgroup analysis in MeVO stroke; informs thrombectomy patient selection",
+      "year": 2026
+    },
+    {
+      "author": "Maiter",
+      "id": "maiter2026",
+      "publication": "Radiology",
+      "title": "Independent Head-to-Head Comparison of Commercial Artificial Intelligence Devices for Lung Cancer Detection on Chest Radiographs",
+      "url": "https://doi.org/10.1148/radiol.252205",
+      "why_it_matters": "Independent benchmarking of commercial AI tools; directly informs deployment decisions",
+      "year": 2026
+    },
+    {
+      "author": "Bahl",
+      "id": "bahl2026",
+      "publication": "Radiology",
+      "title": "Impact of AI-based Slab Reconstruction Technology on the Diagnostic Accuracy of Screening Digital Breast Tomosynthesis",
+      "url": "https://doi.org/10.1148/radiol.252685",
+      "why_it_matters": "Workflow optimization in breast imaging screening with maintained diagnostic performance",
+      "year": 2026
+    },
+    {
+      "author": "Zhang",
+      "id": "zhang2026",
+      "publication": "NPJ Digital Medicine",
+      "title": "Deep learning prediction of pathological complete response in breast cancer using Mamba architecture",
+      "url": "https://doi.org/10.1038/s41746-026-02849-2",
+      "why_it_matters": "Multicenter external validation of pCR prediction; relevant to neoadjuvant treatment planning",
+      "year": 2026
+    },
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "Radiology",
+      "title": "Interpretable MRI-based Multiparametric Radiomics for Preoperative Prediction of CMS4 Colorectal Cancer",
+      "url": "https://doi.org/10.1148/radiol.251719",
+      "why_it_matters": "Preoperative molecular subtyping could inform surgical and systemic therapy planning",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Ospel et al. - Radiology - 2026 - Reperfusion Therapy in ESCAPE-MeVO Trial Participants: Imaging Characteristics and Clinical Outcomes (https://doi.org/10.1148/radiol.251769)",
+    "Maiter et al. - Radiology - 2026 - Independent Head-to-Head Comparison of Commercial Artificial Intelligence Devices for Lung Cancer Detection on Chest Radiographs (https://doi.org/10.1148/radiol.252205)",
+    "Bahl et al. - Radiology - 2026 - Impact of AI-based Slab Reconstruction Technology on the Diagnostic Accuracy of Screening Digital Breast Tomosynthesis (https://doi.org/10.1148/radiol.252685)",
+    "Zhang et al. - NPJ Digital Medicine - 2026 - Deep learning prediction of pathological complete response in breast cancer using Mamba architecture (https://doi.org/10.1038/s41746-026-02849-2)",
+    "Liu et al. - Radiology - 2026 - Interpretable MRI-based Multiparametric Radiomics for Preoperative Prediction of CMS4 Colorectal Cancer (https://doi.org/10.1148/radiol.251719)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/06/03",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "yj30...Gsv9"
+    }
+  },
+  "word_count": 1211
+}

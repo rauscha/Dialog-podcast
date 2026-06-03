@@ -1,0 +1,73 @@
+{
+  "backlog": [],
+  "covered": {
+    "10.1038/s41746-026-02849-2": {
+      "aired_at": "2026-06-03T05:58:49.602904+00:00",
+      "doi": "10.1038/s41746-026-02849-2",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+      "pmid": "42230774",
+      "publication": "NPJ Digit Med",
+      "title": "Deep learning prediction of pathological complete response in breast cancer using Mamba architecture.",
+      "url": "https://doi.org/10.1038/s41746-026-02849-2",
+      "year": 2026
+    },
+    "10.1148/radiol.251719": {
+      "aired_at": "2026-06-03T05:58:49.602904+00:00",
+      "doi": "10.1148/radiol.251719",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+      "pmid": "42153825",
+      "publication": "Radiology",
+      "title": "Interpretable MRI-based Multiparametric Radiomics for Preoperative Prediction of CMS4 Colorectal Cancer.",
+      "url": "https://doi.org/10.1148/radiol.251719",
+      "year": 2026
+    },
+    "10.1148/radiol.251769": {
+      "aired_at": "2026-06-03T05:58:49.602904+00:00",
+      "doi": "10.1148/radiol.251769",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+      "pmid": "42188736",
+      "publication": "Radiology",
+      "title": "Reperfusion Therapy in ESCAPE-MeVO Trial Participants: Imaging Characteristics and Clinical Outcomes.",
+      "url": "https://doi.org/10.1148/radiol.251769",
+      "year": 2026
+    },
+    "10.1148/radiol.252205": {
+      "aired_at": "2026-06-03T05:58:49.602904+00:00",
+      "doi": "10.1148/radiol.252205",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+      "pmid": "42153831",
+      "publication": "Radiology",
+      "title": "Independent Head-to-Head Comparison of Commercial Artificial Intelligence Devices for Lung Cancer Detection on Chest Radiographs.",
+      "url": "https://doi.org/10.1148/radiol.252205",
+      "year": 2026
+    },
+    "10.1148/radiol.252685": {
+      "aired_at": "2026-06-03T05:58:49.602904+00:00",
+      "doi": "10.1148/radiol.252685",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+      "pmid": "42227862",
+      "publication": "Radiology",
+      "title": "Impact of AI-based Slab Reconstruction Technology on the Diagnostic Accuracy of Screening Digital Breast Tomosynthesis.",
+      "url": "https://doi.org/10.1148/radiol.252685",
+      "year": 2026
+    }
+  },
+  "last_run": {
+    "aired_at": "2026-06-03T05:58:49.602904+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+    "recorded_keys": [
+      "10.1148/radiol.251769",
+      "10.1148/radiol.252205",
+      "10.1148/radiol.252685",
+      "10.1038/s41746-026-02849-2",
+      "10.1148/radiol.251719"
+    ],
+    "window": {
+      "from": "2025/11/30",
+      "to": "2026/06/03"
+    }
+  },
+  "schema_version": 1,
+  "show_id": "ai",
+  "updated_at": "2026-06-03T05:58:49.602904+00:00"
+}

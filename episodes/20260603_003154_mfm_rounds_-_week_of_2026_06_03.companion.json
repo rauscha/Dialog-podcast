@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Surveillance Gap"
+    },
+    {
+      "start_sec": 51.86,
+      "start_time": "0:52",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 103.72,
+      "start_time": "1:44",
+      "title": "\u2014 Headline: Effect Size and the Gestational Age Gradient"
+    },
+    {
+      "start_sec": 155.58,
+      "start_time": "2:36",
+      "title": "\u2014 Headline: Confounding, Causation, and the Shared Risk Factor Problem"
+    },
+    {
+      "start_sec": 207.44,
+      "start_time": "3:27",
+      "title": "\u2014 Headline: Practice Impact and What Remains Unsettled"
+    },
+    {
+      "start_sec": 259.3,
+      "start_time": "4:19",
+      "title": "\u2014 Round 1: Nakaki / Fetal Brain MRI"
+    },
+    {
+      "start_sec": 311.16,
+      "start_time": "5:11",
+      "title": "\u2014 Round 2: Mari / TTTS Expert Synthesis"
+    },
+    {
+      "start_sec": 363.02,
+      "start_time": "6:03",
+      "title": "\u2014 Round 3: Shrestha / Metformin Effect Modification"
+    },
+    {
+      "start_sec": 414.88,
+      "start_time": "6:55",
+      "title": "\u2014 Round 4: Sorrenti / sFGR Diagnostic Criteria"
+    },
+    {
+      "start_sec": 466.74,
+      "start_time": "7:47",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.companion.json",
+  "duration_sec": 563.603039,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Large population cohort demonstrating 2-3x higher cardiovascular mortality after sPTB, supporting long-term CV surveillance",
+      "source": "BJOG",
+      "title": "Spontaneous Preterm Birth and Subsequent Cardiovascular Mortality: Linked Registry Cohort Study",
+      "url": "https://doi.org/10.1111/1471-0528.70273"
+    },
+    {
+      "reason": "RCT substudy showing detectable fetal brain MRI differences with lifestyle intervention, though small sample limits conclusions",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Effects of Mediterranean diet and stress-reduction interventions during pregnancy on fetal brain development detected using magnetic resonance imaging",
+      "url": "https://doi.org/10.1002/uog.70214"
+    },
+    {
+      "reason": "Authoritative synthesis of TTTS diagnostic variability, staging controversies, and laser therapy evidence",
+      "source": "Am J Obstet Gynecol",
+      "title": "Twin-Twin Transfusion Syndrome and Related Monochorionic Disorders: Historical Perspectives, Current Controversies, and Evidence-Based Opportunities",
+      "url": "https://doi.org/10.1016/j.ajog.2026.05.021"
+    },
+    {
+      "reason": "Secondary RCT analysis suggesting metformin benefit varies by insulin requirements, potentially guiding personalized T2D management",
+      "source": "Am J Obstet Gynecol",
+      "title": "The effect of metformin on perinatal outcomes in pregnant women with type 2 diabetes differs by baseline insulin requirements",
+      "url": "https://doi.org/10.1016/j.ajog.2026.04.043"
+    },
+    {
+      "reason": "24-year cohort showing Delphi sFGR criteria better predict adverse outcomes than ISUOG definition in MCDA twins",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria",
+      "url": "https://doi.org/10.1002/uog.70239"
+    }
+  ],
+  "generated_at": "2026-06-03T05:39:39.198467+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Women with spontaneous preterm birth, particularly before 32 weeks, have approximately 2-3 times higher cardiovascular mortality compared to those delivering at term",
+      "confidence": "medium",
+      "id": "claim_welters",
+      "source_ids": [
+        "welters2026"
+      ]
+    },
+    {
+      "claim": "Mediterranean diet or stress-reduction interventions during high-risk pregnancy produce detectable differences in fetal brain structure on late-gestation MRI",
+      "confidence": "medium",
+      "id": "claim_nakaki",
+      "source_ids": [
+        "nakaki2026"
+      ]
+    },
+    {
+      "claim": "TTTS and related monochorionic disorders remain characterized by diagnostic variability and staging controversies despite evolving laser therapy evidence",
+      "confidence": "medium",
+      "id": "claim_mari",
+      "source_ids": [
+        "mari2026"
+      ]
+    },
+    {
+      "claim": "Metformin's benefit in type 2 diabetes pregnancy may be modified by baseline insulin requirements, with higher-need women potentially deriving greater benefit",
+      "confidence": "medium",
+      "id": "claim_shrestha",
+      "source_ids": [
+        "shrestha2026"
+      ]
+    },
+    {
+      "claim": "Delphi consensus criteria for selective fetal growth restriction outperform traditional ISUOG criteria in predicting adverse perinatal outcomes in MCDA twins",
+      "confidence": "medium",
+      "id": "claim_sorrenti",
+      "source_ids": [
+        "sorrenti2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Welters",
+      "id": "welters2026",
+      "publication": "BJOG",
+      "title": "Spontaneous Preterm Birth and Subsequent Cardiovascular Mortality: Linked Registry Cohort Study",
+      "url": "https://doi.org/10.1111/1471-0528.70273",
+      "why_it_matters": "Large population cohort demonstrating 2-3x higher cardiovascular mortality after sPTB, supporting long-term CV surveillance",
+      "year": 2026
+    },
+    {
+      "author": "Nakaki",
+      "id": "nakaki2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Effects of Mediterranean diet and stress-reduction interventions during pregnancy on fetal brain development detected using magnetic resonance imaging",
+      "url": "https://doi.org/10.1002/uog.70214",
+      "why_it_matters": "RCT substudy showing detectable fetal brain MRI differences with lifestyle intervention, though small sample limits conclusions",
+      "year": 2026
+    },
+    {
+      "author": "Mari",
+      "id": "mari2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Twin-Twin Transfusion Syndrome and Related Monochorionic Disorders: Historical Perspectives, Current Controversies, and Evidence-Based Opportunities",
+      "url": "https://doi.org/10.1016/j.ajog.2026.05.021",
+      "why_it_matters": "Authoritative synthesis of TTTS diagnostic variability, staging controversies, and laser therapy evidence",
+      "year": 2026
+    },
+    {
+      "author": "Shrestha",
+      "id": "shrestha2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "The effect of metformin on perinatal outcomes in pregnant women with type 2 diabetes differs by baseline insulin requirements",
+      "url": "https://doi.org/10.1016/j.ajog.2026.04.043",
+      "why_it_matters": "Secondary RCT analysis suggesting metformin benefit varies by insulin requirements, potentially guiding personalized T2D management",
+      "year": 2026
+    },
+    {
+      "author": "Sorrenti",
+      "id": "sorrenti2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria",
+      "url": "https://doi.org/10.1002/uog.70239",
+      "why_it_matters": "24-year cohort showing Delphi sFGR criteria better predict adverse outcomes than ISUOG definition in MCDA twins",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Welters et al. - BJOG - 2026 - Spontaneous Preterm Birth and Subsequent Cardiovascular Mortality: Linked Registry Cohort Study (https://doi.org/10.1111/1471-0528.70273)",
+    "Nakaki et al. - Ultrasound Obstet Gynecol - 2026 - Effects of Mediterranean diet and stress-reduction interventions during pregnancy on fetal brain development detected using magnetic resonance imaging (https://doi.org/10.1002/uog.70214)",
+    "Mari et al. - Am J Obstet Gynecol - 2026 - Twin-Twin Transfusion Syndrome and Related Monochorionic Disorders: Historical Perspectives, Current Controversies, and Evidence-Based Opportunities (https://doi.org/10.1016/j.ajog.2026.05.021)",
+    "Shrestha et al. - Am J Obstet Gynecol - 2026 - The effect of metformin on perinatal outcomes in pregnant women with type 2 diabetes differs by baseline insulin requirements (https://doi.org/10.1016/j.ajog.2026.04.043)",
+    "Sorrenti et al. - Ultrasound Obstet Gynecol - 2026 - Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria (https://doi.org/10.1002/uog.70239)"
+  ],
+  "topic": "MFM Rounds - week of 2026/06/03",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "wbih...s0wq"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_id": "yj30...Gsv9"
+    }
+  },
+  "word_count": 1331
+}
