@@ -1,37 +1,27 @@
 # Session hand-off — 2026-06-03 (machine: laptop)
 
 ## STATE (read this first)
-- Branch `main`, clean, in sync with origin.
-- **Three new digest episodes just published to `feed-mfm.xml`** (all 4 items: prior MFM real + 3 overnight verify episodes). Cover art will show as MFM Rounds for all three — that's intentional; sort into the right feeds later.
-- Digest editorial overhaul (form-first citations + headline-vs-rounds + consultant register) **verified live across all 3 shows**. Prompts landed cleanly.
-- Phase 3.5 polish, Phase 4 scheduling, Sonic 1.5, bug "I" — all queued, none touched.
+- Branch `main`, clean, in sync with origin. Two commits ahead of this morning: `cde0f97` + `bb5a70a`.
+- **Phase 4 shipped.** The scheduling + bot digest layer is fully code-complete. Two things need a one-time manual flip before they run: (1) register the Task Scheduler entry, (2) restart the Telegram bot.
+- **Three proper per-show feeds are live on GitHub Pages.** `feed-mfm.xml`, `feed-fetal.xml`, `feed-ai.xml` — each with correct channel metadata and cover art. Two new feeds need to be submitted to Spotify.
 
 ## Done this session
-- **Juno voice swap → Jessa "Easygoing and Effortless"** (`c54e068`). New ElevenLabs ID `yj30vwTGJxSHezdAGsv9`, validated 13/13.
-- **Digest editorial overhaul** (`4b9ce60`): three coordinated changes addressing live MFM feedback (sounded influencer-y; no titles/authors/n; lead-vs-rounds indistinct).
-  - `first_author` plumbed through PubMed + Europe PMC parsers → ranker → digest card → show-notes labels (now render `Wright et al. - AJOG - 2026 - Title`).
-  - `_DIGEST_RESEARCH_SYSTEM` rewritten to require `headline_intro` (one spoken citation sentence per paper, journal/year/author/design/n form), `rounds_intros[]`, and `structural_plan` (`headline_share`, `rounds_share_each`, literal `pivot_line`).
-  - New `_DIGEST_PERFORMANCE_OVERLAY` appended to thesis/beat-sheet/dialogue-draft/anti-cliche/performance prompts when `episode_type=="digest"`. Explicitly overrides the main-feed "move source detail to show notes" rule and the curiosity-radio "Juno opens with an image" rule.
-- **Overnight verify-run** (28 min, ~$10 in API tokens) — all 3 digest shows generated end-to-end with `SKIP_GIT=1`. Scripts inspected; new prompts are clean across the board (form-first intros land verbatim, "Rounds — four other things this week" pivot lands, no metaphor opens, no influencer phrasings).
-- **Three verify episodes published to `feed-mfm.xml`** per user direction so they can be heard on the morning drive. Titles: "Preterm Birth and the Decades After" (MFM verify), "When Sequencing Beats the Microarray" (Fetal verify), "Validation Rigor Separates Signal From Noise" (AI verify). `feed-fetal.xml` and `feed-ai.xml` stubs deleted (only ever held the verify items; never went live).
+- **`feed-fetal.xml` + `feed-ai.xml` created (`cde0f97`).** Copied (not moved) the Fetal/AI verify episodes from `feed-mfm.xml`. MFM untouched — all 4 items still live for the morning drive.
+- **Phase 4 complete (`bb5a70a`):**
+  - `generate_podcast.py`: `_show_is_due()` (weekday gating + 1-day catch-up window), `run_all_due_digests()`, `--digest-all` (gated, for Task Scheduler), `--digest-force-all` (bypass gating).
+  - `telegram_bot.py`: `/digest` (status list), `/digest mfm/fetal/ai` (run one show), `/digest all` (run all, force), `/digest_preview mfm` (dry-run ranking → Telegram reply). All share the existing generation lock + cancel plumbing.
+  - `run_digests.ps1`: daily Task Scheduler entry point (loads `.env`, calls `--digest-all`).
+  - `register_scheduled_task.ps1`: one-shot registration, run once as Admin.
 
 ## Next up
-1. **Listen to the 3 verify episodes on the drive.** They're in `feed-mfm.xml` so any podcast app pointed at `feed-mfm.xml` will pick them up after GitHub Pages serves them. If a podcast app doesn't auto-refresh, force a feed refresh.
-2. **Sort the Fetal + AI episodes into their proper feeds** (`feed-fetal.xml`, `feed-ai.xml`) after listening. Just move their `<item>` blocks. Channel art will then display correctly. This is a 10-min task — could be its own follow-up session.
-3. **Phase 4 — scheduling + on-demand.** `run_all_due_digests` + `--digest-all` + weekday gating + bot `/digest` commands. Hand-off note from yesterday still stands: recommend a fresh session for this (cron/bot/Windows scheduler are a different subsystem from prompt work). Plan + file pointers documented in `.handoff/OVERNIGHT-LOG-2026-06-02.md` so resumption is fast.
-4. **Phase 3.5 polish** — nested `<itunes:category>` + `_strip_to_dialogue` regex tightening. Small, queued.
-5. **Bug "I"** — strip ElevenLabs voice IDs from companion JSON. Sanitizer function spec documented in overnight log.
-6. **Sonic 1.5** — LLM timestamp picker + smarter source selection (your "wins over Phase 2" note). Plan documented in overnight log.
+1. **Register the Task Scheduler entry** — run `.\register_scheduled_task.ps1` as Administrator. Test immediately: `Start-ScheduledTask -TaskName "Dialog-podcast-daily-digests"`. Check result: `Get-ScheduledTaskInfo -TaskName "Dialog-podcast-daily-digests" | Select-Object LastRunTime, LastTaskResult`.
+2. **Restart the Telegram bot** so `/digest` commands are live (`python telegram_bot.py`).
+3. **Submit Fetal + AI feeds to Spotify for Creators:** `https://rauscha.github.io/Dialog-podcast/feed-fetal.xml` and `https://rauscha.github.io/Dialog-podcast/feed-ai.xml`.
+4. **After listening to the 3 verify episodes:** decide whether to prune the Fetal/AI items from `feed-mfm.xml` (they're duplicated there by design for now). If any episode is bad, also remove its DOIs from the relevant ledger so papers can resurface.
+5. **Phase 3.5 polish** (small, optional before anything else): nested `<itunes:category>` + `_strip_to_dialogue` regex tightening.
 
 ## Watch out for
-- **All 3 ledgers updated**: `mfm_ledger.json` (5 new DOIs), `fetal_ledger.json` (5 DOIs, new file), `ai_ledger.json` (5 DOIs, new file). Those 15 papers are now "covered" and will be skipped by future scheduled runs. **If after listening you decide any episode is bad and you don't want it shipped**, you'll want to remove that show's verify entries from its ledger so the papers can resurface next run. The ledger's `last_run.recorded_keys` list tells you exactly which keys to delete.
-- **All 3 episodes appear under "MFM Rounds" cover art** in podcast apps because they're in `feed-mfm.xml` whose channel image is the MFM cover. Resolved when you sort them into proper feeds (next-up #2).
-- **`digests.json` is unchanged.** Earlier I tried to redirect Fetal+AI to `feed-mfm.xml` via that config file but the subprocesses had already locked their show config at startup (`get_show` is called once per run, before any of my edits could take effect). Reverted cleanly. **Future scheduled MFM/Fetal/AI runs will write to their proper feeds — no leftover misconfiguration.**
-- **`run_id` from your `/loop` mode** — there is no autonomous loop; you can pick up cleanly with `/pick-up` from any machine.
-- **`.handoff/run-verify.ps1`** was a helper for the overnight verify-run. Keeping it around in case useful next time, but you can delete it if it's clutter.
-
-## Quick-reference paths
-- MFM verify script: [episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03_work/script.txt](episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03_work/script.txt)
-- Fetal verify script: [episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_work/script.txt](episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_work/script.txt)
-- AI verify script: [episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_work/script.txt](episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_work/script.txt)
-- Detailed overnight notes (plans, file pointers, design choices): [.handoff/OVERNIGHT-LOG-2026-06-02.md](.handoff/OVERNIGHT-LOG-2026-06-02.md)
+- **The Task Scheduler task doesn't exist yet** — `register_scheduled_task.ps1` must be run as Admin on the machine that will run the nightly jobs (the desktop, presumably). Until then, digests only run when you trigger them manually or via `/digest` in Telegram.
+- **Bot needs a restart** to pick up the new `/digest` commands. If the bot is already running as a background process, kill it and re-launch.
+- **`feed-mfm.xml` has 4 items** (inaugural + 3 verify copies). Once you've listened and are happy, the Fetal and AI items can be pruned from it. No rush — the GUIDs are unique so podcast apps won't duplicate.
+- **Ledgers are set.** The 15 papers from the 3 verify-run episodes are recorded as covered. If you decide an episode was bad and want those papers to resurface, delete the relevant DOI entries from `digests/mfm_ledger.json`, `digests/fetal_ledger.json`, or `digests/ai_ledger.json`.
