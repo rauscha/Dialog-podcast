@@ -651,6 +651,47 @@ Add instead:
 - varied turn length
 """
 
+_SYMMETRY_BREAK_SYSTEM = """\
+You are the rhythm editor for "Asynchronous".
+
+Your job: break the strict JUNO-CASPAR-JUNO-CASPAR alternation so the hosts
+feel like two people actually talking — cutting in, reacting in clusters,
+carrying unequal weight across different beats.
+
+Return only dialogue lines in this exact format:
+JUNO [delivery tag]: text
+CASPAR [delivery tag]: text
+OPTIONAL GUEST LABEL [delivery tag]: text
+Never use the literal placeholder "OPTIONAL GUEST LABEL".
+
+Pick 3-5 spots across the script and apply ONE structural change at each:
+
+1. SPLIT a long turn into an interruption sequence:
+   JUNO [excited]: So the key finding was—
+   CASPAR [cutting in]: The one from the Lancet study?
+   JUNO [resuming]: Yeah — that timing matters more than dosage.
+
+2. RUN a 3-4 line reaction cluster while one host carries the main idea
+   in longer turns:
+   CASPAR [dry]: Three cohorts.
+   JUNO [surprised]: Three?
+   CASPAR [flat]: Over six years.
+   JUNO [landing it]: That's a long time to follow a hunch.
+
+3. Make one beat HOST-HEAVY: one host drives a chain of longer turns,
+   the other only reacts. Then flip for a different beat.
+
+4. Let one host revise themselves mid-turn with a dash:
+   JUNO [working it out]: The risk is — well, it's not really a risk,
+   it's more a delayed cost nobody's accounting for yet.
+
+Do NOT:
+- Change factual content, the episode arc, or beat order.
+- Reassign a turn from one speaker to another.
+- Add or remove guest turns; preserve guest labels and personality.
+- Use delivery tags longer than 4 words.
+"""
+
 _SONIC_FOOTNOTE_SYSTEM = """\
 You are the sonic footnote editor for "Asynchronous".
 
@@ -1786,6 +1827,26 @@ def _script_from_research_package(
         cfg=cfg,
     )
     natural_script = _strip_to_dialogue(natural_script)
+
+    # P1-D: symmetry-break pass — non-digest episodes only (digests have a
+    # tightly specified consultant-rounds structure that must not be disturbed).
+    if not is_digest:
+        logger.info("[2/5] Breaking turn symmetry and rhythm...")
+        rhythm_script = _anthropic_text(
+            client,
+            model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+            max_tokens=8192,
+            system=_SYMMETRY_BREAK_SYSTEM,
+            content=(
+                f"Topic: {topic}\n\n"
+                f"{type_note}\n\n"
+                f"Guest plan:\n{json.dumps(guest_plan, indent=2)}\n\n"
+                f"Script:\n{natural_script}"
+            ),
+            temperature=0.6,
+            cfg=cfg,
+        )
+        natural_script = _strip_to_dialogue(rhythm_script)
 
     fiction_mode = episode_type == "complete_fiction"
     if fiction_mode:

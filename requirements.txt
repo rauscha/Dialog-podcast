@@ -1,10 +1,43 @@
-anthropic>=0.40.0
-openai>=1.30.0
-requests>=2.31.0
-python-telegram-bot>=21.0
-flask>=3.0.0  # only used by archive/email-webhook/; safe to drop if you never revive it
-yt-dlp>=2024.1.0
-audiocraft>=1.3.0
-torch>=2.1.0
-torchaudio>=2.1.0
-scipy>=1.11.0
+# Dialog-podcast runtime dependencies
+# Pinned 2026-06-04. pip-audit clean after patching:
+#   aiohttp    3.14.0  (CVE-2026-34993, CVE-2026-47265)
+#   idna       3.18    (CVE-2026-45409)
+#   pillow     12.2.0  (PYSEC-2026-165, CVE-2026-40192/42309/42310/42311)
+#   urllib3    2.7.0   (PYSEC-2026-141, PYSEC-2026-142)
+#   setuptools 82.0.1  (PYSEC-2022-43012, PYSEC-2025-49, CVE-2024-6345)
+#     Note: torch 2.11.0+cu128 declares setuptools<82 but only as a build-time
+#     constraint; runtime is unaffected.
+# torch / torchaudio are CUDA builds from the PyTorch index (not PyPI);
+#   install separately: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+#   pip-audit skips them; installed as torch==2.11.0+cu128, torchaudio==2.11.0+cu128.
+
+# Core pipeline
+anthropic==0.100.0
+openai==2.36.0
+requests==2.33.1
+python-dotenv==1.2.2
+
+# Telegram bot
+python-telegram-bot==22.7
+aiohttp==3.14.0          # security-pinned (CVE-2026-34993 / CVE-2026-47265); transitive dep of PTB
+
+# Audio
+scipy==1.17.1
+numpy==2.4.4
+pydub==0.25.1
+
+# Cover-art
+pillow==12.2.0           # security-pinned (PYSEC-2026-165 etc.)
+
+# Clip extraction
+yt-dlp==2026.3.17
+
+# MusicGen (optional; comment out if audiocraft unavailable)
+audiocraft==1.3.0
+
+# Security-pinned transitive deps (parent package upgrades don't pull these automatically)
+idna==3.18               # CVE-2026-45409
+urllib3==2.7.0           # PYSEC-2026-141, PYSEC-2026-142
+
+# Archived — only used by archive/email-webhook/, not active code:
+# flask>=3.0.0

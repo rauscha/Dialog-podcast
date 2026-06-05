@@ -56,11 +56,11 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 ## P1 — remaining items (from deep review)
 
-- [ ] **D — Break Juno/Caspar turn symmetry.** Interruption/overlap pass in the dialogue step. One Sonnet call, prompt-only.
+- [x] **D — Break Juno/Caspar turn symmetry (2026-06-04).** `_SYMMETRY_BREAK_SYSTEM` prompt added; new Sonnet call (`_script_from_research_package`) runs between anti-cliche and fact-check. Picks 3-5 spots: interruption splits (em-dash), reaction clusters (3-4 short lines), host-heavy beats, mid-turn self-corrections. Skipped for digest episodes (consultant-rounds structure must not be disturbed).
 - [x] **E — Parallelize per-turn TTS (2026-06-04).** `ThreadPoolExecutor` (default 8 workers, configurable via `cfg["tts_max_workers"]`) wraps TTS synthesis + per-turn loudness normalization. Pre-pass assigns guest voice indexes sequentially; `executor.map` preserves order; per-turn exceptions are caught and logged rather than propagated.
 - [x] **F — `cache_control: ephemeral` (2026-06-04).** All system prompts wrapped in cached content blocks inside `_anthropic_text` (covers every named prompt automatically). Direct `client.messages.create` calls in `_legacy_research_and_script` also patched. Content-block caching for host-memory/research-brief skipped — no hit possible within a single episode run because each stage uses a different system prompt, so the cache prefix always differs. Primary wins: digest runs (3 shows share the same pipeline prompts; 2nd+3rd show hit cache for `_DIGEST_RESEARCH_SYSTEM` and all editing prompts).
 - [x] **G — Proactive Telegram completion notification (2026-06-04).** Completion message now leads with "Done in Xm Ys. <Topic>" and includes the direct GitHub Pages audio URL + episode duration before the full manifest summary. Same treatment for digest completions. Failed runs also show elapsed time.
-- [ ] **H — Pin `requirements.txt`, run `pip-audit`** (floating lower bounds today).
+- [x] **H — Pin `requirements.txt`, run `pip-audit` (2026-06-04).** requirements.txt rewritten with exact pinned versions. 5 packages patched: aiohttp 3.14.0, idna 3.18, pillow 12.2.0, urllib3 2.7.0, setuptools 82.0.1. pip-audit now reports "No known vulnerabilities found" (torch/torchaudio/torchvision CUDA builds skipped — not on PyPI; torch 2.11.0+cu128 is far newer than any flagged CVE range).
 - [ ] **J — $10/day Anthropic + OpenAI spend caps** (user-side billing consoles).
 
 ## P0/P0-B — closed
