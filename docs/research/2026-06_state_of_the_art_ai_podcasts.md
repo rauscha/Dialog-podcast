@@ -8,6 +8,13 @@ fact-check → per-turn `gpt-4o-mini-tts` → ffmpeg assembly + MusicGen/clips).
 This is a **scoping document**, not a work order. Nothing here has been implemented.
 The point is to lay out the landscape so we can later cherry-pick what's worth translating.
 
+> ## 🔴 P0 — NEXT TASK
+> **Create a walkthrough of next steps to implement these improvements.** This scoping
+> review is complete; the current top priority is turning Section 7's shortlist into a
+> concrete, ordered implementation walkthrough (what to change in `generate_podcast.py`,
+> `clip_mixer.py`, and `music_gen.py`, in what order, with acceptance criteria) so the
+> improvements can actually be built.
+
 **Confidence tags used below:** `[CONFIRMED]` (primary source / first-party docs /
 shipping code), `[REPORTED]` (credible secondary teardown, consistent across sources),
 `[INFERRED]` (well-reasoned but unconfirmed), `[VENDOR]` (self-reported marketing —
