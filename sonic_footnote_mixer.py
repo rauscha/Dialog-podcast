@@ -113,10 +113,19 @@ Return JSON only:
 Rules:
 - after_turn is 0-indexed.
 - Pick the placement that best matches the cue's `placement` and `beat` text.
-- One cue per turn boundary at most; if two cues collide, prefer the earlier
-  one in the plan.
-- If no good fit exists for a cue, omit it (silently drop).
-- Never place a cue after the final turn.
+- Prefer turns that:
+    - Complete a thought or short section before a topic shift.
+    - Immediately follow the turn where the relevant concept is named or demonstrated.
+    - Fall at a natural breathing point (end of a short exchange, after a punchline,
+      after a summary sentence).
+- Avoid mid-explanation turns: if a speaker is in the middle of an argument,
+  the cue should not interrupt. Wait until the argument concludes.
+- Space cues at least 3 turns apart. If two cues would be closer than 3 turns,
+  keep the earlier one and drop the later one (do not force a placement).
+- One cue per turn boundary at most; if two cues collide at the same turn,
+  keep the one earlier in the plan.
+- If no genuinely good fit exists for a cue, omit it (silently drop).
+- Never place a cue after the final turn (last valid is stated in the user message).
 """
 
 
@@ -215,6 +224,112 @@ def _place_cues(
     return placements
 
 
+_SOURCE_SELECTION_MODEL = "claude-haiku-4-5-20251001"
+
+_START_OFFSET_SYSTEM = """\
+You estimate the best start offset (in seconds) for extracting a short audio
+clip from a NASA recording.
+
+The goal: skip intro silence or generic preamble and land at the specific
+moment most relevant to the podcast cue (a countdown, ignition audio, wind
+recording, etc.).
+
+Return JSON only:
+{
+  "start_offset_sec": 12,
+  "rationale": "one short sentence"
+}
+
+If the metadata doesn't give you enough to make a confident estimate, return:
+{
+  "start_offset_sec": 5,
+  "rationale": "fallback — insufficient metadata"
+}
+
+Clamp your estimate to the range 0–120.
+"""
+
+
+def _select_best_nasa_result(items: list[dict], cue: dict) -> dict | None:
+    """Return the NASA result best matching the cue's semantic intent.
+
+    Uses keyword overlap between the cue text and the item title/description —
+    fast and deterministic, no LLM needed. Falls back to the first item.
+    """
+    if not items:
+        return None
+    if len(items) == 1:
+        return items[0]
+
+    cue_text = " ".join([
+        str(cue.get("beat") or ""),
+        str(cue.get("reason") or ""),
+        str(cue.get("placement") or ""),
+        str(cue.get("script_note") or ""),
+    ]).lower()
+    cue_words = set(w for w in cue_text.split() if len(w) > 3)
+
+    scored = []
+    for item in items:
+        data_block = (item.get("data") or [{}])[0]
+        if not isinstance(data_block, dict):
+            data_block = {}
+        item_text = " ".join([
+            str(data_block.get("title") or ""),
+            str(data_block.get("description") or "")[:300],
+        ]).lower()
+        item_words = set(item_text.split())
+        overlap = len(cue_words & item_words)
+        scored.append((overlap, item))
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return scored[0][1]
+
+
+def _estimate_start_offset(
+    item: dict,
+    cue: dict,
+    client: anthropic.Anthropic,
+) -> float:
+    """Ask Haiku to estimate the best start offset (seconds) for a NASA clip.
+
+    Gated on description richness — skips the LLM call when metadata is too
+    sparse to make a meaningful estimate.
+    """
+    data_block = (item.get("data") or [{}])[0]
+    if not isinstance(data_block, dict):
+        data_block = {}
+    title = str(data_block.get("title") or "").strip()
+    description = str(data_block.get("description") or "").strip()
+
+    # Skip LLM if description is sparse — no useful timing signal
+    if len(description) < 80:
+        return _DEFAULT_START_OFFSET_SEC
+
+    user_msg = (
+        f"NASA item title: {title!r}\n"
+        f"NASA item description:\n{description[:600]}\n\n"
+        f"Cue beat: {cue.get('beat', '')!r}\n"
+        f"Cue reason: {cue.get('reason', '')!r}\n\n"
+        "Estimate the best start_offset_sec."
+    )
+
+    try:
+        resp = client.messages.create(
+            model=_SOURCE_SELECTION_MODEL,
+            max_tokens=128,
+            system=_START_OFFSET_SYSTEM,
+            messages=[{"role": "user", "content": user_msg}],
+        )
+        raw = "\n".join(b.text for b in resp.content if hasattr(b, "text")).strip()
+        parsed = _extract_json_object(raw)
+        offset = float(parsed.get("start_offset_sec", _DEFAULT_START_OFFSET_SEC))
+        return max(0.0, min(120.0, offset))
+    except Exception as exc:
+        logger.warning("[footnote] Start-offset estimation failed: %s", exc)
+        return _DEFAULT_START_OFFSET_SEC
+
+
 # ── NASA backend ─────────────────────────────────────────────────────────────
 
 def _http_get_json(url: str) -> dict | None:
@@ -308,11 +423,18 @@ def _is_nasa_podcast_item(item: dict) -> bool:
     )
 
 
-def _resolve_nasa(cue: dict, catalog_item: dict) -> str | None:
-    """Search NASA, pick a result, return its audio URL (ffmpeg-fetchable)."""
+def _resolve_nasa(
+    cue: dict,
+    catalog_item: dict,
+) -> tuple[str, dict] | tuple[None, None]:
+    """Search NASA, pick the best-matching result, return (audio_url, nasa_item).
+
+    Returns (None, None) on failure. The nasa_item is the full search-result
+    dict so callers can extract metadata for start-offset estimation.
+    """
     query = str(catalog_item.get("suggested_search") or "").strip()
     if not query:
-        return None
+        return None, None
 
     items: list[dict] = []
     for candidate in _nasa_query_fallbacks(query):
@@ -323,9 +445,13 @@ def _resolve_nasa(cue: dict, catalog_item: dict) -> str | None:
             break
     if not items:
         logger.warning("[footnote] NASA search returned no non-podcast items for %r", query)
-        return None
+        return None, None
 
-    for item in items:
+    # Phase 1.5: rank results by keyword overlap with the cue before picking.
+    best_item = _select_best_nasa_result(items, cue)
+    ordered = [best_item] + [i for i in items if i is not best_item]
+
+    for item in ordered:
         collection_href = item.get("href")
         if not isinstance(collection_href, str):
             continue
@@ -334,15 +460,13 @@ def _resolve_nasa(cue: dict, catalog_item: dict) -> str | None:
             # NASA serves http:// in collection.json; upgrade to https for transit.
             if audio_url.startswith("http://"):
                 audio_url = "https://" + audio_url[len("http://"):]
-            return audio_url
-    return None
+            return audio_url, item
+    return None, None
 
 
 # ── Audio trim / fade ────────────────────────────────────────────────────────
 
-# Phase 1 heuristic: skip likely silence/intro at the very start of long NASA
-# files. Cue moment selection (finding the actual countdown within a 30-min
-# episode) is deferred to Phase 1.5.
+# Default start offset when LLM estimation is unavailable or not attempted.
 _DEFAULT_START_OFFSET_SEC = 5.0
 _FADE_SEC = 0.4
 
@@ -424,6 +548,7 @@ def _resolve_cue(
     catalog: dict,
     after_turn: int,
     work_dir: Path,
+    client: anthropic.Anthropic | None = None,
 ) -> ResolvedFootnote | None:
     catalog_id = str(cue.get("catalog_id") or "").strip()
     item = _catalog_item(catalog, catalog_id)
@@ -431,8 +556,9 @@ def _resolve_cue(
         return None
 
     source = str(item.get("source") or "").strip().lower()
+    nasa_item: dict | None = None
     if source == "nasa":
-        source_url = _resolve_nasa(cue, item)
+        source_url, nasa_item = _resolve_nasa(cue, item)
     else:
         # Phase 2-4: Wikimedia, Internet Archive, Freesound — not yet implemented.
         logger.warning(
@@ -445,9 +571,16 @@ def _resolve_cue(
     if not source_url:
         return None
 
+    # Phase 1.5: LLM start-offset estimation for NASA clips with rich metadata.
+    start_offset = (
+        _estimate_start_offset(nasa_item, cue, client)
+        if client is not None and nasa_item is not None
+        else _DEFAULT_START_OFFSET_SEC
+    )
+
     trimmed_path = work_dir / f"footnote_{catalog_id}.mp3"
     duration = float(cue.get("duration_sec", 5.0))
-    if not _trim_and_fade(source_url, trimmed_path, duration):
+    if not _trim_and_fade(source_url, trimmed_path, duration, start_offset_sec=start_offset):
         return None
 
     actual_duration = _audio_duration_sec(trimmed_path)
@@ -519,7 +652,7 @@ def prepare_footnotes(
                 catalog_id,
             )
             continue
-        footnote = _resolve_cue(cue, catalog, after_turn, work_dir)
+        footnote = _resolve_cue(cue, catalog, after_turn, work_dir, client=client)
         if footnote:
             resolved.append(footnote)
             logger.info(
