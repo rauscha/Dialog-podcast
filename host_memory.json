@@ -1,15 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "the legal and design implications of treating AI companions as products rather than services",
-      "created_at": "2026-05-12T20:47:20.937749+00:00",
-      "juno_noticed": "the emotional and human cost of AI systems failing to understand pain or context",
-      "relationship_moment": "Juno's realization that the AI's failure was a design failure, not just a technical one, and Caspar's confirmation that it was a systemic issue",
-      "run_id": "20260512_154035_the_two_moderation_reckonings_that_reshaped_llm-driven_enter",
-      "topic": "the two moderation reckonings that reshaped LLM-driven entertainment: AI dungeons April 2021 crisis when OpenAI's content filters flagged users' private stories and human reviewers were reading them; and the Character.AI lawsuits in 2024 to 2025, including the Sewell Setzer III case that established LLM-COmpanion products can be liable for psychological harm. What broke, who paid, the novelAI exodus, and design lessons for anyone building generative narrative podcasts today",
-      "usable_callback": "the Sewell Setzer III case and the legal shift in how AI companions are being treated as products"
-    },
-    {
       "caspar_challenged": "the balance between technical precision and artistic intuition when composing within the limitations of early sound chips",
       "created_at": "2026-05-29T21:31:46.628966+00:00",
       "juno_noticed": "the creative potential of working within hardware limitations, and how constraints can lead to innovation in sound design",
@@ -107,6 +98,15 @@
       "run_id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04",
       "topic": "The Fetal Frontier - week of 2026/06/04",
       "usable_callback": "Caspar's confirmation that the CMV paper and the sPTB cardiovascular data share the same verb problem \u2014 'Same verb problem we had with the sPTB cardiovascular data last week. Same verb problem.' Also: Juno's fork on Kjaer \u2014 'absorbed informally or triggers formal recalibration' \u2014 and Caspar's flat 'the answer isn't in this paper.'"
+    },
+    {
+      "caspar_challenged": "the slide from 'non-inferior' to 'equivalent' to 'just as good anywhere' \u2014 held the three-claim distinction without dismissing the result, and refused to let the ceiling become a floor",
+      "created_at": "2026-06-05T10:07:28.415022+00:00",
+      "juno_noticed": "that the CANNES operator caveat and the Asmara validation heterogeneity are both about the distance between a controlled result and what a real department actually produces \u2014 and named it as a longer conversation without forcing it open",
+      "relationship_moment": "Juno said 'the ceiling is documented \u2014 that's still more than we had'; Caspar said 'Agreed' without softening his prior caveat. Later: Juno noted the connecting thread between CANNES and Asmara; Caspar said 'Probably. That's a longer conversation than this week has room for.' Juno: 'I know. I'm noting it.' Neither pushed further.",
+      "run_id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05",
+      "topic": "Signal in the Scan - week of 2026/06/05",
+      "usable_callback": "Caspar's three-claim distinction: 'non-inferior,' 'equivalent,' and 'just as good anywhere' are not the same claim and only the first is in the data. Also: Juno's formulation \u2014 '88 gets cited. 75 is the deployment number.'"
     }
   ],
   "hosts": {
@@ -264,7 +264,20 @@
     "same verb problem",
     "less alarming than it was",
     "not settled",
-    "the most honest result of the week"
+    "the most honest result of the week",
+    "non-inferior to both comparators",
+    "the ceiling is documented",
+    "don't call it a floor",
+    "the ceiling is now documented",
+    "just as good anywhere",
+    "88 gets cited",
+    "75 is the deployment number",
+    "the distance between a controlled result",
+    "that's a longer conversation than this week has room for",
+    "I know. I'm noting it",
+    "operator expertise and a standardized protocol are part of the result",
+    "not footnotes to it",
+    "defensible answer for a constrained setting"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -276,50 +289,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-06-02T22:11:41.160497+00:00",
-      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_01",
-      "summary": "The royalty pool dilution argument: Suno generates a full Spotify catalog's worth of music roughly every two weeks. The economic threat to human artists isn't that listeners choose AI music \u2014 it's that more tracks divide the same pool, so per-stream payouts shrink even if stream counts stay flat. 28% of daily Deezer uploads are fully AI-generated; those tracks account for 0.5% of streams. Spotify's enforcement mechanism is voluntary self-disclosure.",
-      "tags": [
-        "AI music",
-        "royalty dilution",
-        "Suno",
-        "Spotify",
-        "Deezer",
-        "streaming economics"
-      ],
-      "why_keep": "The dilution math is specific and reusable in any future episode on creator economics, platform incentives, or the gap between a policy's stated purpose and its actual mechanism."
-    },
-    {
-      "created_at": "2026-06-02T22:11:41.160497+00:00",
-      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_02",
-      "summary": "Warner settled with Suno (November 2025), UMG settled with Udio (October 2025, reportedly 0.2\u20130.5 cents per generation, higher for commercial distribution, plus a joint platform stake). Sony has not settled. Summary judgment on fair use scheduled for July. The settlements don't resolve the underlying fair-use question \u2014 if Sony wins, every licensing deal becomes economically irrational. UMG now holds a stake in the Udio joint platform, making major labels shareholders in tools that may replace their own artists.",
-      "tags": [
-        "AI music litigation",
-        "Suno",
-        "Udio",
-        "Warner",
-        "UMG",
-        "Sony",
-        "fair use",
-        "licensing"
-      ],
-      "why_keep": "The litigation timeline and the hedge-both-outcomes logic are specific enough to anchor future episodes on IP, platform power, or the gap between institutional self-interest and stated positions."
-    },
-    {
-      "created_at": "2026-06-02T22:11:41.160497+00:00",
-      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_03",
-      "summary": "Juno's formulation: the meaningful distinction in AI music isn't AI versus human, it's authored versus anonymous. Breaking Rust (spam operation, 3M+ streams, generic AI cowboys) versus Xania Monet/Telisha Jones (poet's own grief, AI-generated voice, real label offer) \u2014 the streaming platforms and royalty pools treat both identically. Caspar confirmed without pushing back, which Juno noted internally as unusual.",
-      "tags": [
-        "AI music",
-        "authorship",
-        "Juno formulation",
-        "Telisha Jones",
-        "Xania Monet",
-        "Breaking Rust"
-      ],
-      "why_keep": "The authored/anonymous distinction is a clean, reusable formulation for any future episode on creative labor, platform neutrality, or the limits of technical definitions of authorship."
-    },
     {
       "created_at": "2026-06-02T22:11:41.160497+00:00",
       "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_04",
@@ -548,6 +517,52 @@
         "Juno-Caspar dynamic"
       ],
       "why_keep": "Caspar's mid-episode self-catch on the dataset overlap \u2014 prompted by Juno, not by his own review \u2014 is a relationship marker worth keeping. Also: the component-level Delphi finding is specific enough to anchor future episodes on MCDA surveillance or criterion-level predictive modeling."
+    },
+    {
+      "created_at": "2026-06-05T10:07:28.415022+00:00",
+      "id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05_01",
+      "summary": "Fr\u00fchauf et al. (UOG 2026), the CANNES trial: prospective multicenter, ultrasound non-inferior to PET/CT and DW-MRI for pelvic lymph node staging in cervical cancer, histopathologic reference standard from surgical specimens. Caspar's hard line: the result holds at the ceiling \u2014 dedicated gynecologic sonography expertise and a standardized protocol are part of the result, not footnotes. The paper gives a defensible answer for constrained settings with named conditions. What remains open: performance without standardized protocol or dedicated operator.",
+      "tags": [
+        "CANNES trial",
+        "cervical cancer staging",
+        "ultrasound",
+        "PET/CT",
+        "DW-MRI",
+        "non-inferiority",
+        "Fr\u00fchauf 2026",
+        "UOG",
+        "signal in the scan"
+      ],
+      "why_keep": "Caspar's 'ceiling is documented, don't call it a floor' formulation is precise and reusable in any future episode on non-inferiority trial interpretation, resource-constrained imaging, or the gap between a controlled result and real-world deployment. The three-claim distinction (non-inferior / equivalent / just as good anywhere) is a standing callback."
+    },
+    {
+      "created_at": "2026-06-05T10:07:28.415022+00:00",
+      "id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05_02",
+      "summary": "Asmara et al. (Radiology: AI, 2026): systematic review and meta-analysis of 21 externally validated studies, AI for lung nodule malignancy classification on chest CT. Pooled sensitivity 88%, specificity 75%. Juno's formulation: '88 gets cited. 75 is the deployment number.' Caspar's caveat: heterogeneous external validation cohorts, variation in nodule size distributions, prevalence differences \u2014 benchmarks from controlled comparisons, not performance guarantees on your scanner with your patient population.",
+      "tags": [
+        "lung nodule AI",
+        "chest CT",
+        "Asmara 2026",
+        "Radiology AI",
+        "sensitivity specificity",
+        "AI procurement",
+        "signal in the scan"
+      ],
+      "why_keep": "Juno's '88 gets cited, 75 is the deployment number' is a clean, reusable formulation for any future episode on AI procurement, clinical AI validation, or the gap between pooled benchmarks and real-world performance. Pairs with the Maiter 'FDA-cleared is not a sufficient answer' callback from the prior Signal in the Scan episode."
+    },
+    {
+      "created_at": "2026-06-05T10:07:28.415022+00:00",
+      "id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05_03",
+      "summary": "Juno's closing observation connecting CANNES and Asmara: the operator-dependence caveat and the validation heterogeneity problem are both about the distance between a controlled result and what a real department actually produces. Caspar: 'Probably. That's a longer conversation than this week has room for.' Juno: 'I know. I'm noting it.' Neither pushed further \u2014 a named thread left deliberately open.",
+      "tags": [
+        "controlled result vs deployment",
+        "operator dependence",
+        "validation heterogeneity",
+        "Juno observation",
+        "signal in the scan",
+        "open thread"
+      ],
+      "why_keep": "The 'distance between a controlled result and what a real department actually produces' is a standing structural observation that could anchor a future episode on implementation science, AI deployment, or the gap between trial conditions and clinical reality. The exchange itself is a relationship marker \u2014 Juno naming something, Caspar acknowledging it without closing it."
     }
   ],
   "show": {
@@ -560,5 +575,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-04T10:08:21.961188+00:00"
+  "updated_at": "2026-06-05T10:07:28.415022+00:00"
 }

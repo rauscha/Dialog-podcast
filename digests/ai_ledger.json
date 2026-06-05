@@ -1,6 +1,16 @@
 {
   "backlog": [],
   "covered": {
+    "10.1002/uog.70241": {
+      "aired_at": "2026-06-05T10:08:15.197448+00:00",
+      "doi": "10.1002/uog.70241",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+      "pmid": "42178785",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prospective comparison of diagnostic accuracy of ultrasound, PET/CT and DW-MRI for preoperative assessment of pelvic lymph nodes in cervical cancer patients: results of the CANNES trial.",
+      "url": "https://doi.org/10.1002/uog.70241",
+      "year": 2026
+    },
     "10.1038/s41746-026-02849-2": {
       "aired_at": "2026-06-03T05:58:49.602904+00:00",
       "doi": "10.1038/s41746-026-02849-2",
@@ -9,6 +19,16 @@
       "publication": "NPJ Digit Med",
       "title": "Deep learning prediction of pathological complete response in breast cancer using Mamba architecture.",
       "url": "https://doi.org/10.1038/s41746-026-02849-2",
+      "year": 2026
+    },
+    "10.1148/radiol.251394": {
+      "aired_at": "2026-06-05T10:08:15.197448+00:00",
+      "doi": "10.1148/radiol.251394",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+      "pmid": "42227858",
+      "publication": "Radiology",
+      "title": "Planimetric and Linear MRI Markers for Progressive Supranuclear Palsy Classification: A Large Multicohort International Study.",
+      "url": "https://doi.org/10.1148/radiol.251394",
       "year": 2026
     },
     "10.1148/radiol.251719": {
@@ -41,6 +61,16 @@
       "url": "https://doi.org/10.1148/radiol.252205",
       "year": 2026
     },
+    "10.1148/radiol.252250": {
+      "aired_at": "2026-06-05T10:08:15.197448+00:00",
+      "doi": "10.1148/radiol.252250",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+      "pmid": "42227866",
+      "publication": "Radiology",
+      "title": "AI-based Histologic Heterogeneity of Microvascular Obstruction at Cardiac MRI for Predicting MACEs: A Multicenter Study.",
+      "url": "https://doi.org/10.1148/radiol.252250",
+      "year": 2026
+    },
     "10.1148/radiol.252685": {
       "aired_at": "2026-06-03T05:58:49.602904+00:00",
       "doi": "10.1148/radiol.252685",
@@ -50,24 +80,44 @@
       "title": "Impact of AI-based Slab Reconstruction Technology on the Diagnostic Accuracy of Screening Digital Breast Tomosynthesis.",
       "url": "https://doi.org/10.1148/radiol.252685",
       "year": 2026
+    },
+    "10.1148/radiol.253143": {
+      "aired_at": "2026-06-05T10:08:15.197448+00:00",
+      "doi": "10.1148/radiol.253143",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+      "pmid": "42227857",
+      "publication": "Radiology",
+      "title": "Evaluating Accuracy of LI-RADS Nonradiation Treatment Response Algorithm v2024 and Ancillary Features at Hepatobiliary MRI versus CT.",
+      "url": "https://doi.org/10.1148/radiol.253143",
+      "year": 2026
+    },
+    "10.1148/ryai.250331": {
+      "aired_at": "2026-06-05T10:08:15.197448+00:00",
+      "doi": "10.1148/ryai.250331",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+      "pmid": "42233760",
+      "publication": "Radiol Artif Intell",
+      "title": "Externally Tested AI Models for Malignancy Classification of Lung Nodules at Chest CT: A Systematic Review and Meta-Analysis.",
+      "url": "https://doi.org/10.1148/ryai.250331",
+      "year": 2026
     }
   },
   "last_run": {
-    "aired_at": "2026-06-03T05:58:49.602904+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_005046_signal_in_the_scan_-_week_of_2026_06_03.mp3",
+    "aired_at": "2026-06-05T10:08:15.197448+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
     "recorded_keys": [
-      "10.1148/radiol.251769",
-      "10.1148/radiol.252205",
-      "10.1148/radiol.252685",
-      "10.1038/s41746-026-02849-2",
-      "10.1148/radiol.251719"
+      "10.1002/uog.70241",
+      "10.1148/ryai.250331",
+      "10.1148/radiol.252250",
+      "10.1148/radiol.251394",
+      "10.1148/radiol.253143"
     ],
     "window": {
-      "from": "2025/11/30",
-      "to": "2026/06/03"
+      "from": "2025/12/02",
+      "to": "2026/06/05"
     }
   },
   "schema_version": 1,
   "show_id": "ai",
-  "updated_at": "2026-06-03T05:58:49.602904+00:00"
+  "updated_at": "2026-06-05T10:08:15.197448+00:00"
 }
