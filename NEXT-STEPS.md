@@ -32,7 +32,7 @@ Provider decision made and shipped (`a806a2c` + this session): **ElevenLabs host
 
 - [x] **RSS `<description>` preamble leak — fixed in Phase 3 (2026-06-01).** `update_rss` now defensively calls `_strip_to_dialogue(episode["script"])` before slicing the 500-char preview, and falls back to the episode topic (with a warning log) if no SPEAKER line is found. The leaked entry in `feed.xml` from 2026-05-07 remains historical; future episodes are safe.
 - [ ] **Historical `feed.xml` preamble leak (2026-05-07 "history of fetoscopy" entry).** Low priority. Options: (a) leave it — old, listeners moved on; (b) hand-edit the `<item>`'s `<description>` + `<content:encoded>` CDATA (~10 min); (c) re-render the episode + replace. Decision deferred from 2026-06-01 pending list.
-- [ ] **I — Stop leaking partial ElevenLabs voice IDs** in the public companion JSON. Replace with a human label ("Juno — warm alto") in `_public_tts_route()`. Now live since the hosts run on ElevenLabs.
+- [x] **I — Stop leaking ElevenLabs voice IDs (2026-06-04).** `_public_tts_route(route, label=None)` now pops `voice_id` entirely and sets `voice_label = label or "[configured]"`. `_tts_routes_summary_for_script` passes the speaker label through. Companion JSON will show `{"voice_label": "JUNO"}` instead of any truncated ID. `_public_tts_route_for_bot` in `telegram_bot.py` is internal/owner-only (not committed to git) — left as-is.
 
 ## In-flight: P1-C — Sonic footnotes (cues)
 
@@ -58,8 +58,8 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 - [ ] **D — Break Juno/Caspar turn symmetry.** Interruption/overlap pass in the dialogue step. One Sonnet call, prompt-only.
 - [x] **E — Parallelize per-turn TTS (2026-06-04).** `ThreadPoolExecutor` (default 8 workers, configurable via `cfg["tts_max_workers"]`) wraps TTS synthesis + per-turn loudness normalization. Pre-pass assigns guest voice indexes sequentially; `executor.map` preserves order; per-turn exceptions are caught and logged rather than propagated.
-- [ ] **F — `cache_control: ephemeral`** on long static system prompts (four named prompts + research-brief block + host-memory bible). Anthropic SDK.
-- [ ] **G — Proactive Telegram completion notification** (single message with link + elapsed time).
+- [x] **F — `cache_control: ephemeral` (2026-06-04).** All system prompts wrapped in cached content blocks inside `_anthropic_text` (covers every named prompt automatically). Direct `client.messages.create` calls in `_legacy_research_and_script` also patched. Content-block caching for host-memory/research-brief skipped — no hit possible within a single episode run because each stage uses a different system prompt, so the cache prefix always differs. Primary wins: digest runs (3 shows share the same pipeline prompts; 2nd+3rd show hit cache for `_DIGEST_RESEARCH_SYSTEM` and all editing prompts).
+- [x] **G — Proactive Telegram completion notification (2026-06-04).** Completion message now leads with "Done in Xm Ys. <Topic>" and includes the direct GitHub Pages audio URL + episode duration before the full manifest summary. Same treatment for digest completions. Failed runs also show elapsed time.
 - [ ] **H — Pin `requirements.txt`, run `pip-audit`** (floating lower bounds today).
 - [ ] **J — $10/day Anthropic + OpenAI spend caps** (user-side billing consoles).
 

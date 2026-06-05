@@ -817,10 +817,18 @@ def _anthropic_text(
             f"ANTHROPIC_API_KEY is required for cloud model {model!r}. "
             "Use a local: or ollama: model for tool-free stages if you want to avoid it."
         )
+    # Wrap a plain string system prompt in a cached content block so repeated
+    # calls that reuse the same (large) prompt — e.g. digest runs across 3 shows —
+    # hit the Anthropic prompt cache and skip re-encoding those tokens.
+    system_payload: str | list = (
+        [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}]
+        if isinstance(system, str)
+        else system
+    )
     kwargs: dict = {
         "model": model,
         "max_tokens": max_tokens,
-        "system": system,
+        "system": system_payload,
         "messages": [{"role": "user", "content": content}],
     }
     if tools is not None:
@@ -1509,7 +1517,7 @@ def _legacy_research_and_script(
     research_resp = client.messages.create(
         model=_RESEARCH_MODEL,
         max_tokens=4096,
-        system=_RESEARCH_SYSTEM,
+        system=[{"type": "text", "text": _RESEARCH_SYSTEM, "cache_control": {"type": "ephemeral"}}],
         messages=[
             {
                 "role": "user",
@@ -1531,7 +1539,11 @@ def _legacy_research_and_script(
     dialogue_resp = client.messages.create(
         model=_DIALOGUE_MODEL,
         max_tokens=8192,
-        system=_DIALOGUE_SYSTEM.format(target_words=target_words),
+        system=[{
+            "type": "text",
+            "text": _DIALOGUE_SYSTEM.format(target_words=target_words),
+            "cache_control": {"type": "ephemeral"},
+        }],
         messages=[
             {
                 "role": "user",
@@ -2563,16 +2575,23 @@ def _tts_route_for_label(label: str, cfg: dict, guest_index: int = 0) -> dict:
     return _clean_tts_route(route)
 
 
-def _public_tts_route(route: dict) -> dict:
+def _public_tts_route(route: dict, label: str | None = None) -> dict:
+    """Build a sanitised copy of a TTS route dict safe to commit to a public repo.
+
+    Any voice_id is replaced by a human-readable ``voice_label`` so that provider
+    API identifiers are never written into the public companion JSON.
+    ``label`` should be the speaker label (e.g. "JUNO"); falls back to "[configured]".
+    """
     hidden = {"api_key", "headers", "command"}
     public = {
         key: value
         for key, value in route.items()
         if key not in hidden and not key.endswith("_env")
     }
-    if "voice_id" in public and public.get("provider") in {"elevenlabs", "cartesia"}:
-        voice_id = str(public["voice_id"])
-        public["voice_id"] = f"{voice_id[:4]}...{voice_id[-4:]}" if len(voice_id) > 10 else "set"
+    # Replace any voice_id with a human label — never expose provider IDs in committed files.
+    if "voice_id" in public:
+        public.pop("voice_id")
+        public["voice_label"] = label if label else "[configured]"
     return public
 
 
@@ -2580,14 +2599,14 @@ def _tts_routes_summary_for_script(script: str, cfg: dict) -> dict:
     turns = _parse_dialogue_turns(script, cfg)
     if not turns:
         route = _tts_route_for_label("JUNO", cfg)
-        return {"JUNO": _public_tts_route(route)}
+        return {"JUNO": _public_tts_route(route, label="JUNO")}
     guest_voice_indexes: dict[str, int] = {}
     summary: dict[str, dict] = {}
     for label, _tag, _text in turns:
         if _guest_for_label(label, cfg) and label not in guest_voice_indexes:
             guest_voice_indexes[label] = len(guest_voice_indexes)
         route = _tts_route_for_label(label, cfg, guest_voice_indexes.get(label, 0))
-        summary.setdefault(label, _public_tts_route(route))
+        summary.setdefault(label, _public_tts_route(route, label=label))
     return summary
 
 

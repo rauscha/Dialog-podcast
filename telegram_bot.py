@@ -1218,14 +1218,25 @@ async def _run_generation(
                 shutil.copy2(log_file, latest_log)
 
             manifest = _latest_manifest(repo_root)
+            elapsed = _format_elapsed(_active_started_at)
             if returncode == 0:
+                # Build a compact completion message: topic, link, duration, elapsed time.
+                summary = manifest.to_summary() if manifest else {}
+                topic_line = summary.get("title") or summary.get("topic") or "Episode"
+                audio_url = summary.get("audio_url") or ""
+                duration = _format_duration(summary.get("duration_sec"))
+                link_line = f"\nListen: {audio_url}" if audio_url else ""
                 queue_note = (
                     f"\nQueue has {len(_queue)} topic(s). Use /next to continue."
                     if _queue
                     else ""
                 )
                 await notify(
-                    "Done.\n\n" + _format_manifest_summary(manifest) + queue_note,
+                    f"Done in {elapsed}. {topic_line}\n"
+                    f"Duration: {duration}"
+                    f"{link_line}\n\n"
+                    + _format_manifest_summary(manifest)
+                    + queue_note,
                 )
             else:
                 summary = _format_manifest_summary(manifest)
@@ -1444,13 +1455,20 @@ async def _run_digest_subprocess(
                 shutil.copy2(log_file, latest_log)
 
             manifest = _latest_manifest(repo_root)
+            elapsed = _format_elapsed(_active_started_at)
             if returncode == 0:
-                await _reply(update, "Done.\n\n" + _format_manifest_summary(manifest))
-            else:
-                summary = _format_manifest_summary(manifest)
+                summary = manifest.to_summary() if manifest else {}
+                audio_url = summary.get("audio_url") or ""
+                link_line = f"\nListen: {audio_url}" if audio_url else ""
                 await _reply(
                     update,
-                    f"Digest failed (exit {returncode}).\n\n{summary}\n\n"
+                    f"Done in {elapsed}.{link_line}\n\n" + _format_manifest_summary(manifest),
+                )
+            else:
+                manifest_summary = _format_manifest_summary(manifest)
+                await _reply(
+                    update,
+                    f"Digest failed (exit {returncode}) after {elapsed}.\n\n{manifest_summary}\n\n"
                     f"Last log lines:\n{_tail(log_file)}",
                 )
         except Exception as exc:
