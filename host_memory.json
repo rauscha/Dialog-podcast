@@ -98,6 +98,15 @@
       "run_id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03",
       "topic": "Signal in the Scan - week of 2026/06/03",
       "usable_callback": "Caspar's revision on Ospel: 'I started to say it was basically confirmatory, and I think that was too quick.' Also: Maiter's independent benchmarking finding \u2014 'FDA-cleared is not a sufficient answer' \u2014 as a standing callback for any future episode on AI procurement or regulatory adequacy."
+    },
+    {
+      "caspar_challenged": "his own implicit framing that the Sorrenti paper was fresh \u2014 caught himself mid-walkthrough when Juno flagged the overlap with last week's MFM Rounds, acknowledged the dataset overlap, and redirected to what was actually new",
+      "created_at": "2026-06-04T10:08:21.960189+00:00",
+      "juno_noticed": "that the French CMV paper's argument is strong everywhere but the evidence is specifically French \u2014 and that those are different claims worth keeping separate",
+      "relationship_moment": "Juno flagged the Sorrenti repeat before Caspar finished his setup; Caspar said 'You're right to flag it' and self-corrected without defensiveness. Also: Juno's 'the argument is strong everywhere, but the evidence is specifically French' \u2014 Caspar confirmed it as two different claims without softening either one.",
+      "run_id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04",
+      "topic": "The Fetal Frontier - week of 2026/06/04",
+      "usable_callback": "Caspar's confirmation that the CMV paper and the sPTB cardiovascular data share the same verb problem \u2014 'Same verb problem we had with the sPTB cardiovascular data last week. Same verb problem.' Also: Juno's fork on Kjaer \u2014 'absorbed informally or triggers formal recalibration' \u2014 and Caspar's flat 'the answer isn't in this paper.'"
     }
   ],
   "hosts": {
@@ -245,7 +254,17 @@
     "every paper sets its own bar",
     "basically confirmatory",
     "importing LVO imaging criteria",
-    "the named variables in the conversation"
+    "the named variables in the conversation",
+    "the paper you bring to the protocol committee",
+    "the argument is strong everywhere",
+    "the evidence is specifically French",
+    "absorbed informally",
+    "triggers formal recalibration",
+    "the answer isn't in this paper",
+    "same verb problem",
+    "less alarming than it was",
+    "not settled",
+    "the most honest result of the week"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -257,44 +276,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-06-02T15:57:01.101332+00:00",
-      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_02",
-      "summary": "The slavery apology in Magnifica Humanitas: first explicit papal acknowledgment that past popes gave European sovereigns authority to enslave 'infidels.' Leo draws a structural line from those papal bulls to cobalt mining in the DRC. Caspar's objection: the line doesn't hold cleanly \u2014 different histories, different mechanisms. Juno's counter: the apology is a confession, not a treatise. Caspar: 'I can live with that.'",
-      "tags": [
-        "Magnifica Humanitas",
-        "slavery apology",
-        "papal authority",
-        "supply chain labor",
-        "Juno-Caspar dynamic"
-      ],
-      "why_keep": "The apology-vs-argument distinction is a usable relationship callback \u2014 it's the episode's clearest instance of Juno holding a register Caspar can't dismiss and Caspar holding a precision standard Juno can't fully escape."
-    },
-    {
-      "created_at": "2026-06-02T15:57:01.101332+00:00",
-      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_03",
-      "summary": "Maren's internal-consistency critique: Magnifica Humanitas rests on an anthropological optimism \u2014 no original sin, no Fall \u2014 that the tradition spent 1,600 years qualifying. Without that diagnosis, the document describes symptoms without etiology. The critics most uncomfortable with the encyclical are not all reactionaries; some are asking whether the foundation holds.",
-      "tags": [
-        "Magnifica Humanitas",
-        "Catholic anthropology",
-        "original sin",
-        "internal consistency",
-        "Maren"
-      ],
-      "why_keep": "The 'symptoms without etiology' formulation is precise enough to call back in any future episode on institutional moral authority, religious social teaching, or the gap between stated principles and structural diagnosis."
-    },
-    {
-      "created_at": "2026-06-02T15:57:01.101332+00:00",
-      "id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas_04",
-      "summary": "Caspar's formulation on cross-spectrum criticism: 'A document can unsettle everyone and still be wrong.' Juno's partial concession: cross-spectrum criticism is at least evidence the document isn't ideologically captured \u2014 worth something, not proof of correctness. The exchange ended without resolution.",
-      "tags": [
-        "Magnifica Humanitas",
-        "cross-spectrum criticism",
-        "argument from controversy",
-        "Caspar formulation"
-      ],
-      "why_keep": "Caspar's line is clean and reusable whenever the show encounters 'everyone hates it so it must be right' reasoning in any domain."
-    },
     {
       "created_at": "2026-06-02T22:11:41.160497+00:00",
       "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_01",
@@ -519,6 +500,54 @@
         "closing exchange"
       ],
       "why_keep": "The 'every paper sets its own bar' observation is a standing structural critique reusable whenever the show revisits AI clinical validation, regulatory frameworks, or the gap between publication standards and deployment standards."
+    },
+    {
+      "created_at": "2026-06-04T10:08:21.960189+00:00",
+      "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_01",
+      "summary": "Coste-Mazeau et al. (UOG 2026): seven-year national French CMV cohort, 2017\u20132023. Valacyclovir prescribing rose substantially after the 2020 RCT; vertical transmission rates declined across the cohort period. Caspar's hard line: observational design can't isolate valacyclovir from concurrent shifts in screening awareness and case ascertainment. The paper supports 'the RCT signal is present at population scale' \u2014 not 'valacyclovir caused the decline.' Juno's formulation: 'the paper you bring to the protocol committee' \u2014 Caspar's qualifier: only if your system resembles the French one. Juno's concession: 'The paper moves the argument. Doesn't end it for every jurisdiction.'",
+      "tags": [
+        "CMV",
+        "valacyclovir",
+        "vertical transmission",
+        "Coste-Mazeau 2026",
+        "UOG",
+        "population cohort",
+        "fetal frontier",
+        "same verb problem"
+      ],
+      "why_keep": "The 'argument is strong everywhere, evidence is specifically French' exchange is a clean relationship callback and a reusable formulation for any future episode on RCT-to-population translation, health system generalizability, or the gap between a strong argument and jurisdiction-specific evidence."
+    },
+    {
+      "created_at": "2026-06-04T10:08:21.960189+00:00",
+      "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_02",
+      "summary": "Kjaer et al. (UOG 2026): multicenter prospective cohort \u2014 FMF first-trimester preeclampsia screening algorithm performance stratified by conception mode. Frozen embryo transfer and oocyte donation specifically show performance gaps; spontaneous conception and fresh IVF do not diverge the same way. Biological argument: frozen ET and oocyte donation alter implantation biology and maternal vascular response. Whether the correction is a cutoff adjustment, additional biomarker, or heightened clinical suspicion is not answered in this paper. Juno named the fork: absorbed informally by centers mentally flagging frozen ET patients, or triggers formal algorithm recalibration. Caspar: 'the answer isn't in this paper.'",
+      "tags": [
+        "FMF algorithm",
+        "preeclampsia screening",
+        "frozen embryo transfer",
+        "oocyte donation",
+        "Kjaer 2026",
+        "UOG",
+        "fetal frontier",
+        "recalibration"
+      ],
+      "why_keep": "The informal-absorption-versus-formal-recalibration fork is a precise, reusable formulation for any future episode on screening algorithm updates, ART-specific risk, or the gap between a published finding and a protocol change."
+    },
+    {
+      "created_at": "2026-06-04T10:08:21.960189+00:00",
+      "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_03",
+      "summary": "Juno flagged mid-episode that the Sorrenti MCDA/sFGR paper appeared to overlap with last week's MFM Rounds coverage. Caspar caught himself mid-walkthrough, confirmed the dataset overlap, and redirected to what was actually new: the granular ROC analysis identifying which specific Delphi criteria components \u2014 EFW discordance thresholds and Doppler abnormality components \u2014 drive the predictive advantage over ISUOG. The finding holds; the new contribution is the component-level granularity.",
+      "tags": [
+        "Sorrenti",
+        "MCDA twins",
+        "sFGR",
+        "Delphi criteria",
+        "ISUOG",
+        "fetal frontier",
+        "self-correction",
+        "Juno-Caspar dynamic"
+      ],
+      "why_keep": "Caspar's mid-episode self-catch on the dataset overlap \u2014 prompted by Juno, not by his own review \u2014 is a relationship marker worth keeping. Also: the component-level Delphi finding is specific enough to anchor future episodes on MCDA surveillance or criterion-level predictive modeling."
     }
   ],
   "show": {
@@ -531,5 +560,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-03T05:57:09.906849+00:00"
+  "updated_at": "2026-06-04T10:08:21.961188+00:00"
 }
