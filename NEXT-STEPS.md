@@ -40,7 +40,7 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 - [x] **Phase 1** — NASA backend + skeleton + splice wiring. Committed `4664f29`.
 - [x] **Phase 1 cue episode + verdict (2026-05-31).** Cue was a complete miss (4 s of unrelated NASA podcast intro). Guest voice barely distinguishable but beats made sense. The bigger issue (stilted OpenAI voices) is now fixed.
-- [ ] **Phase 1.5** — LLM timestamp picker + smarter source selection; stop grabbing semantically-unrelated audio on fallback. Wins over Phase 2.
+- [x] **Phase 1.5 (2026-06-05).** Better `_PLACEMENT_SYSTEM` prompt (natural breathing points, 3-turn min gap). `_select_best_nasa_result()` keyword scoring. `_estimate_start_offset()` Haiku call for LLM timestamp picking (gated on description richness).
 - [ ] **Phase 2** — Wikimedia Commons backend (MediaWiki API + `extmetadata` license parsing). Covers `commons_morse_code`, `commons_metronome`, `commons_tuning_fork`.
 - [ ] **Phase 3** — Internet Archive backend (`advancedsearch.php` + `licenseurl`/`rights`). Covers `internet_archive_public_domain`.
 - [ ] **Phase 4** — Freesound backend (needs `FREESOUND_API_KEY`). Covers `freesound_cc0_field_recording`.
@@ -49,7 +49,7 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 - [x] **Surface dropped cues (2026-06-04).** `sonic_footnote_mixer.py` now logs `logger.warning` at every drop point: unimplemented backend (Phase 2-4), LLM placement miss, and source download failure. Summary line at end of `prepare_footnotes`: "N/M planned cues were dropped (see warnings above)." All bare `print` statements converted to proper `logger` calls.
 - [x] **Fix NASA fallback source quality (2026-06-04).** Two guards added: (1) `_nasa_query_fallbacks` now stops at 2-word minimum — single-word fallbacks like "apollo" matched podcast episodes. (2) `_is_nasa_podcast_item()` filters out any search result whose title/description matches a podcast-episode pattern before scoring. NASA no longer returns podcast clips on degenerate fallbacks.
-- [ ] **Consolidate turn enumeration (step zero).** Cue *planning* (`_place_cues` → `_enumerate_turns` in `sonic_footnote_mixer.py`) and cue *splicing* (`_tts_two_host` → `_parse_dialogue_turns` in `generate_podcast.py`) count turns with two different functions and can disagree (off-by-one placement). Collapse to one shared enumeration first.
+- [x] **Consolidate turn enumeration (2026-06-05).** `_enumerate_turns` now accepts `known_speakers`; `prepare_footnotes` builds the set from cfg so placement and splicing count identical turns.
 - [ ] **Restraint / interruption budget.** Cap cues per episode, enforce a minimum gap, bias toward genuine section breaks. Fewer, better.
 - [ ] **Transition flow.** Tune fades + per-segment level-matching at cue↔dialogue seams.
 - [ ] **Dry-run timeline.** Print the planned episode turn-by-turn with `[CUE]` markers before any TTS/network — cheap placement iteration. (The digest dry-run is a sibling pattern worth mirroring here.)
@@ -90,7 +90,7 @@ Pull from here when P1 is closer to done.
 
 ## Flourishes (deep review §5 — when you have an evening)
 
-- **Closing callback** — last 60 s references a prior episode via `host_memory.json`. Highest leverage per effort.
+- [x] **Closing callback (2026-06-05).** `_select_and_write_callback()` shipped. Sonnet picks from last 5 `usable_callback` entries, writes 2-4 turn closing exchange. Non-digest only. **Untested on a real run — listen to the tail of the next episode.**
 - **Reading-room companion** — per-episode annotated reading list under a "Going Deeper" tab. (The digest source cards are a natural fit here.)
 - **Generative chapter art** — one small abstract illustration per chapter (~$0.02/ep via FLUX-schnell).
 

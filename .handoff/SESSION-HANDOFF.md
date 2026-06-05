@@ -1,54 +1,33 @@
-# Session hand-off — 2026-06-05 (machine: desktop)
+# Session hand-off — 2026-06-05 (overnight build)
 
 ## STATE (read this first)
 
 - Branch: `main`, clean, synced with `origin/main` ✅
-- One worktree only (the main one) — nothing stranded.
+- One worktree only — nothing stranded.
 
-Everything in P1 is done except P1-J (spend caps, user action on billing
-consoles). The quick-wins batch is also complete. The scheduler fired the
-Signal in the Scan digest this morning and the run data is committed.
-**Next meaningful work: closing callback** (Flourish — last ~60 s of each
-episode references a prior episode via host_memory.json).
+Overnight build is complete. Three features shipped:
+1. **Turn enumeration consolidation** — cue placement and TTS splicing now count turns identically.
+2. **Closing callback** — non-digest episodes now end with a ~60-second segment referencing a past episode.
+3. **Sonic footnotes Phase 1.5** — better placement, smarter NASA source selection, LLM start-offset estimation.
 
-## Done this session
+**Both new features (callback + Phase 1.5) are untested on a real run.** Generating one episode and listening to the tail is the suggested first action.
 
-- **P1-D** (commit 126886f) — Turn symmetry break: `_SYMMETRY_BREAK_SYSTEM`
-  Sonnet pass sits between anti-cliche and fact-check; injects 3-5
-  interruptions/clusters/host-heavy beats per episode. Skipped for digests.
-- **P1-H** (commit 126886f) — Security pins + pip-audit: `requirements.txt`
-  fully pinned; patched aiohttp 3.14.0, idna 3.18, pillow 12.2.0, urllib3
-  2.7.0, setuptools 82.0.1. `pip-audit --local` → "No known vulnerabilities."
-- **Quick-wins batch** (commit 2141266):
-  - Surface dropped cues: `sonic_footnote_mixer.py` now logs warnings at
-    every silent-drop point (unimplemented backend, LLM placement miss,
-    download failure) + summary "N/M cues dropped" line.
-  - NASA fallback fix: 2-word query minimum + `_is_nasa_podcast_item()`
-    filter so podcast episodes can't be selected as cues.
-  - CLI topic cap: `generate_podcast.py` rejects topics > 500 chars.
-  - Git commit sanitization: control chars stripped from `safe_topic`.
-  - Two items confirmed already-done: ffprobe timeout, email-webhook README.
-- **Scheduled run** (commit 8492dc9) — Signal in the Scan fired ~05:01 UTC,
-  5 DOIs recorded in ai_ledger.json; host_memory updated.
+## Done overnight
+
+- **Turn consolidation** (commit `8ad0e31`) — `_enumerate_turns` now filters to known speakers via a `known_speakers` param; `prepare_footnotes` builds the set from cfg.
+- **Closing callback** (commit `8ad0e31`) — `_select_and_write_callback()` added; Sonnet picks from last 5 `usable_callback` entries and writes a closing exchange. Non-digest only.
+- **Phase 1.5** (commit `14a3cce`) — improved `_PLACEMENT_SYSTEM` prompt, `_select_best_nasa_result()` keyword scoring, `_estimate_start_offset()` Haiku call.
+
+Full details in `.handoff/OVERNIGHT-LOG-2026-06-05.md`.
 
 ## Next up
 
-1. **Closing callback** (highest leverage / evening project) — final ~60 s
-   references a prior episode. `host_memory.json` has `usable_callback` fields
-   ready; needs a new prompt pass + wiring into `_script_from_research_package`.
-   See NEXT-STEPS.md § Flourishes.
-2. **Sonic footnotes Phase 1.5** — LLM timestamp picker. Prerequisite first:
-   consolidate the two different turn-enumeration functions so cue placement
-   and cue splicing agree on turn counts (see NEXT-STEPS.md § Cue quality).
-3. **P1-J** — $10/day Anthropic + OpenAI spend caps. User action on billing
-   consoles; nothing to code.
+1. **Test run** — generate one episode; listen to the closing ~90 seconds for the callback. Does it feel natural?
+2. **Sonic footnotes Phase 2** — Wikimedia Commons backend.
+3. **P1-J** — $10/day spend caps on Anthropic + OpenAI billing consoles (user-side).
 
 ## Watch out for
 
-- `setuptools 82.0.1` is installed; `torch 2.11.0+cu128` declares
-  `setuptools < 82` as a build-time (not runtime) constraint. Safe for now.
-  If torch/audiocraft ever breaks mysteriously, try `pip install setuptools==79`.
-- P1-D adds one Sonnet call per non-digest episode (7 LLM calls total vs 6).
-  Watch per-episode cost as episode lengths grow.
-- MFM digest is Mon, Fetal is Wed, AI/Signal is Thu — all three Spotify feeds
-  submitted. Next manual TODO: listen to recent episodes for quality check.
+- The closing callback is appended *before* the performance pass — if Sonnet returns a segment that's too long or weirdly formatted, `_strip_to_dialogue` will clean it, but the performance pass is the safety net.
+- `_estimate_start_offset` is gated on description ≥ 80 chars. Most short NASA targeted clips will just use the 5 s fallback — that's correct behavior.
+- Digest episodes still get the old pipeline (no callback, no symmetry-break). If you ever want callbacks on digests, that's a one-line config flag away.
