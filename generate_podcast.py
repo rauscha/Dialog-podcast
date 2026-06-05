@@ -23,6 +23,7 @@ import subprocess
 import sys
 import tempfile
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -856,7 +857,7 @@ def _strip_to_dialogue(script: str) -> str:
     script = re.sub(r"\[CORRECTION:[^\]]*\]", "", script)
     script = _strip_corrections_appendix(script)
     first_turn = re.search(
-        r"^([A-Z][A-Z ]{1,40})(?:\s*\[[^\]]*\])?\s*:",
+        r"^([A-Z][A-Z]{0,40})(?:\s*\[[^\]]*\])?\s*:",
         script,
         re.MULTILINE,
     )
@@ -3159,29 +3160,53 @@ def _tts_two_host(
         )
 
     work_dir.mkdir(parents=True, exist_ok=True)
-    turn_files: list = []
-    turn_indices: list[int] = []
-    guest_voice_indexes: dict[str, int] = {}
 
-    for i, (label, emotion_tag, text) in enumerate(turns):
+    # Pre-pass: assign guest voice indexes in turn order (order-sensitive).
+    guest_voice_indexes: dict[str, int] = {}
+    for _i, (label, _tag, text) in enumerate(turns):
         if not text.strip():
             continue
         if _guest_for_label(label, cfg) and label not in guest_voice_indexes:
             guest_voice_indexes[label] = len(guest_voice_indexes)
+
+    # Build ordered work items with pre-resolved routes and turn paths.
+    work_items = []
+    for i, (label, emotion_tag, text) in enumerate(turns):
+        if not text.strip():
+            continue
         route = _tts_route_for_label(label, cfg, guest_voice_indexes.get(label, 0))
         instructions = _build_tts_instructions(emotion_tag, label, cfg)
         turn_path = work_dir / f"turn_{i:04d}_{_speaker_file_stem(label)}.mp3"
-        generated_path = tts_engines.synthesize_tts(
-            text=text,
-            output_path=turn_path,
-            route=route,
-            cfg=cfg,
-            instructions=instructions,
-        )
-        if generated_path.exists():
-            _normalize_turn_loudness(generated_path, cfg, work_dir)
-            turn_files.append(generated_path)
-            turn_indices.append(i)
+        work_items.append((i, label, route, instructions, text, turn_path))
+
+    def _synthesize_one(item: tuple):
+        idx, lbl, route, instructions, text, turn_path = item
+        try:
+            generated_path = tts_engines.synthesize_tts(
+                text=text,
+                output_path=turn_path,
+                route=route,
+                cfg=cfg,
+                instructions=instructions,
+            )
+            if generated_path.exists():
+                _normalize_turn_loudness(generated_path, cfg, work_dir)
+                return (idx, generated_path)
+        except Exception as exc:
+            logger.warning("TTS synthesis failed for turn %d (%s): %s", idx, lbl, exc)
+        return (idx, None)
+
+    # Synthesize all turns in parallel; cap workers to avoid provider rate-limit hits.
+    # Set cfg["tts_max_workers"] to override (default 8).
+    n_workers = min(int(cfg.get("tts_max_workers", 8)), len(work_items))
+    logger.info("Synthesizing %d turns in parallel (max_workers=%d)", len(work_items), n_workers)
+    with ThreadPoolExecutor(max_workers=n_workers) as executor:
+        raw_results = list(executor.map(_synthesize_one, work_items))
+
+    # executor.map preserves input order; sort is a defensive safety net.
+    raw_results.sort(key=lambda r: r[0])
+    turn_files: list = [path for _, path in raw_results if path is not None]
+    turn_indices: list[int] = [i for i, path in raw_results if path is not None]
 
     if not turn_files:
         raise RuntimeError("No turn audio files were generated")
@@ -3282,6 +3307,28 @@ def _prepend_append_audio(
 
 # ── RSS ────────────────────────────────────────────────────────────────────────
 
+
+def _itunes_category_xml(category_raw: str) -> str:
+    """Return the correct <itunes:category> element for flat or nested categories.
+
+    Apple Podcasts expects nested subcategories as a child element, e.g.:
+        <itunes:category text="Science">
+          <itunes:category text="Medicine"/>
+        </itunes:category>
+    Pass "Science" for a flat tag, "Science:Medicine" for a nested one.
+    """
+    parts = category_raw.split(":", 1)
+    top = _xml_escape(parts[0].strip())
+    if len(parts) == 2 and parts[1].strip():
+        sub = _xml_escape(parts[1].strip())
+        return (
+            f'<itunes:category text="{top}">\n'
+            f'      <itunes:category text="{sub}"/>\n'
+            f'    </itunes:category>'
+        )
+    return f'<itunes:category text="{top}"/>'
+
+
 _RSS_TEMPLATE = """\
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -3295,7 +3342,7 @@ _RSS_TEMPLATE = """\
     <description>{podcast_description}</description>
     <language>{podcast_language}</language>
     <itunes:author>{podcast_author}</itunes:author>
-    <itunes:category text="{podcast_category}"/>
+    {podcast_category_xml}
     <itunes:explicit>false</itunes:explicit>
     <itunes:owner>
       <itunes:name>{podcast_author}</itunes:name>
@@ -3431,7 +3478,7 @@ def update_rss(
     # episode topic so we never publish raw model preamble.
     script_for_preview = _strip_to_dialogue(episode.get("script", ""))
     if not re.search(
-        r"^([A-Z][A-Z ]{1,40})(?:\s*\[[^\]]*\])?\s*:",
+        r"^([A-Z][A-Z]{0,40})(?:\s*\[[^\]]*\])?\s*:",
         script_for_preview,
         re.MULTILINE,
     ):
@@ -3509,7 +3556,9 @@ def update_rss(
             podcast_description = _xml_escape(feed_meta.get("podcast_description") or cfg["podcast_description"]),
             podcast_language    = feed_meta.get("podcast_language")                or cfg["podcast_language"],
             podcast_author      = _xml_escape(feed_meta.get("podcast_author")      or cfg["podcast_author"]),
-            podcast_category    = _xml_escape(feed_meta.get("podcast_category")    or cfg["podcast_category"]),
+            podcast_category_xml = _itunes_category_xml(
+                feed_meta.get("podcast_category") or cfg["podcast_category"]
+            ),
             podcast_email       = _xml_escape(feed_meta.get("podcast_email")       or cfg["podcast_email"]),
             podcast_image_url   = feed_meta.get("podcast_image")                   or cfg.get("podcast_image", ""),
             feed_url            = feed_url,
@@ -4093,10 +4142,8 @@ def _run_with_cfg(
             manifest.fail(current_stage, exc)
         raise
     finally:
-        # TODO 2026-06-06: re-enable to stop bloating disk; kept off for first-month debug window.
-        # if work_dir.exists():
-        #     shutil.rmtree(work_dir, ignore_errors=True)
-        pass
+        if work_dir.exists():
+            shutil.rmtree(work_dir, ignore_errors=True)
 
     if episode is None:
         raise RuntimeError("Episode generation ended before an episode was produced")
@@ -4146,17 +4193,15 @@ def _feed_meta_from_show(show: dict, cfg: dict) -> dict:
         # Stage the matching repo-local file so the very first publish doesn't
         # ship a feed pointing at a 404'd image.
         cover_local = f"assets/{cover_url.rsplit('/', 1)[-1]}"
-    # iTunes <category> wants the top-level term; nested subcategory support
-    # would require template work. For "Science:Medicine" we keep "Science"
-    # and TODO the nested <itunes:category> tag for a follow-up.
+    # Pass the full "Science:Medicine" string; _itunes_category_xml renders the
+    # correct nested <itunes:category> element when update_rss builds a new feed.
     category_raw = str(show.get("category") or cfg["podcast_category"])
-    category = category_raw.split(":", 1)[0]
     return {
         "feed_filename":       str(show.get("feed_filename") or "feed.xml"),
         "podcast_title":       str(show.get("display_name") or cfg["podcast_title"]),
         "podcast_description": str(show.get("description")  or cfg["podcast_description"]),
         "podcast_author":      str(show.get("author")       or cfg["podcast_author"]),
-        "podcast_category":    category,
+        "podcast_category":    category_raw,
         "podcast_image":       cover_url or cfg.get("podcast_image", ""),
         "podcast_email":       str(show.get("email") or cfg["podcast_email"]),
         "podcast_language":    str(show.get("language") or cfg["podcast_language"]),

@@ -17,7 +17,7 @@ Plan approved + **Phase 1 shipped** this session. Full plan: `C:\Users\andre\.cl
 - [x] **Phase 4 — scheduling + on-demand (2026-06-03, `bb5a70a`).** `_show_is_due()` (weekday gating + 1-day catch-up), `run_all_due_digests()`, `--digest-all` + `--digest-force-all` CLI flags. Bot: `/digest` (status list), `/digest <show_id>` (run one), `/digest all` (run all), `/digest_preview <show_id>` (dry-run ranking). `run_digests.ps1` (Task Scheduler entry point) + `register_scheduled_task.ps1` (one-shot task registration, run as Admin).
 - [x] **Activate the Task Scheduler entry (2026-06-03).** `register_scheduled_task.ps1` run as Admin; Telegram bot restarted — `/digest` commands live.
 - [x] **Submit Fetal + AI feeds to Spotify for Creators (2026-06-03).** `feed-fetal.xml` and `feed-ai.xml` submitted.
-- [ ] **Phase 3.5 — small polish.** Nested `<itunes:category>` (e.g. Science→Medicine) instead of flat top-level; tighten `_strip_to_dialogue` regex to disallow spaces in speaker labels (defense in depth). Cover regen is **done** for this round (see above).
+- [x] **Phase 3.5 — small polish (2026-06-04).** Nested `<itunes:category>` (Science→Medicine) added via `_itunes_category_xml()` helper; existing 3 digest feeds patched in-place; `_strip_to_dialogue` regex tightened to disallow spaces in speaker labels (`[A-Z]{0,40}` vs former `[A-Z ]{1,40}`). Work-dir cleanup re-enabled (was deferred to 2026-06-06; applied early).
 - **Tuning knobs surfaced in Phase 1** (optional; revisit while doing Phase 2):
   - Ranking is **LLM-dominant on fresh papers** (Altmetric is empty <6 wk old, so its weight renormalizes onto the LLM). Invest in the LLM prompt over weight-fiddling. Weights: LLM .46 / Altmetric .24 / quartile .18 / evidence .12.
   - `DISCOVER_LIMIT=80` sorted by date ⇒ effectively "freshest ~80," not the full 6 months (fine for a weekly run). Raise if you want to rank deeper.
@@ -57,7 +57,7 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 ## P1 — remaining items (from deep review)
 
 - [ ] **D — Break Juno/Caspar turn symmetry.** Interruption/overlap pass in the dialogue step. One Sonnet call, prompt-only.
-- [ ] **E — Parallelize per-turn TTS.** `ThreadPoolExecutor` around the per-turn TTS loop. Biggest wall-clock win in the deep review. (Clip downloads moot while clips are off.)
+- [x] **E — Parallelize per-turn TTS (2026-06-04).** `ThreadPoolExecutor` (default 8 workers, configurable via `cfg["tts_max_workers"]`) wraps TTS synthesis + per-turn loudness normalization. Pre-pass assigns guest voice indexes sequentially; `executor.map` preserves order; per-turn exceptions are caught and logged rather than propagated.
 - [ ] **F — `cache_control: ephemeral`** on long static system prompts (four named prompts + research-brief block + host-memory bible). Anthropic SDK.
 - [ ] **G — Proactive Telegram completion notification** (single message with link + elapsed time).
 - [ ] **H — Pin `requirements.txt`, run `pip-audit`** (floating lower bounds today).
@@ -70,7 +70,7 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 ## Hygiene / recurring
 
-- [ ] **Re-enable work-dir cleanup on 2026-06-06.** Uncomment `shutil.rmtree(work_dir)` in `generate_podcast.py`.
+- [x] **Re-enable work-dir cleanup (2026-06-04).** Uncommented `shutil.rmtree(work_dir)` — applied 2 days ahead of the planned 2026-06-06 date.
 - [ ] **Telegram token rotation** (BotFather `/revoke @AsynchronousPodBot`). Not urgent; git clean.
 - [ ] **On laptop checkout**: add `NCBI_EMAIL` (and optional `NCBI_API_KEY`) to `.env` for digests; `ELEVENLABS_API_KEY` + `CARTESIA_API_KEY` needed for audio (Fish key no longer used); `bash scripts/install-hooks.sh` for the per-clone pre-commit secret hook.
 

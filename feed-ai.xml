@@ -10,7 +10,9 @@
     <description>A weekly peer-level digest of the most important new research on AI in medicine, focused on obstetrics and gynecology and on medical imaging, with Juno and Caspar.</description>
     <language>en</language>
     <itunes:author>Juno &amp; Caspar</itunes:author>
-    <itunes:category text="Science"/>
+    <itunes:category text="Science">
+      <itunes:category text="Medicine"/>
+    </itunes:category>
     <itunes:explicit>false</itunes:explicit>
     <itunes:owner>
       <itunes:name>Juno &amp; Caspar</itunes:name>
