@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changed This Week"
+    },
+    {
+      "start_sec": 1.5,
+      "start_time": "0:02",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 3.0,
+      "start_time": "0:03",
+      "title": "\u2014 Headline: Effect and Numbers"
+    },
+    {
+      "start_sec": 4.5,
+      "start_time": "0:04",
+      "title": "\u2014 Headline: The Operator-Dependence Caveat (Affectionate Disagreement)"
+    },
+    {
+      "start_sec": 6.0,
+      "start_time": "0:06",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 7.5,
+      "start_time": "0:08",
+      "title": "\u2014 Round 1: Asmara (Lung Nodule AI Benchmarks)"
+    },
+    {
+      "start_sec": 9.0,
+      "start_time": "0:09",
+      "title": "\u2014 Round 2: Chen (Cardiac MRI, MVO, MACE Prediction)"
+    },
+    {
+      "start_sec": 10.5,
+      "start_time": "0:10",
+      "title": "\u2014 Round 3: Quattrone (PSP Midbrain Index)"
+    },
+    {
+      "start_sec": 12.0,
+      "start_time": "0:12",
+      "title": "\u2014 Round 4: Shin (LI-RADS v2024)"
+    },
+    {
+      "start_sec": 13.5,
+      "start_time": "0:14",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.companion.json",
+  "duration_sec": 36.75907,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First prospective multicenter trial demonstrating ultrasound non-inferiority to PET/CT and DW-MRI for pelvic node staging in cervical cancer \u2014 directly informs resource allocation and staging protocols",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Prospective comparison of diagnostic accuracy of ultrasound, PET/CT and DW-MRI for preoperative assessment of pelvic lymph nodes in cervical cancer patients: results of the CANNES trial",
+      "url": "https://doi.org/10.1002/uog.70241"
+    },
+    {
+      "reason": "Provides pooled external validation benchmarks for AI lung nodule classifiers \u2014 essential for understanding real-world performance expectations",
+      "source": "Radiol Artif Intell",
+      "title": "Externally Tested AI Models for Malignancy Classification of Lung Nodules at Chest CT: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1148/ryai.250331"
+    },
+    {
+      "reason": "Demonstrates AI radiomic features from automated MVO segmentation can outperform manual quantification for MACE prediction \u2014 early signal for prognostic AI in cardiac imaging",
+      "source": "Radiology",
+      "title": "AI-based Histologic Heterogeneity of Microvascular Obstruction at Cardiac MRI for Predicting MACEs: A Multicenter Study",
+      "url": "https://doi.org/10.1148/radiol.252250"
+    },
+    {
+      "reason": "Validates a simple dual-line midbrain index across 2,111 participants for PSP differentiation \u2014 methodologic model for imaging biomarker development",
+      "source": "Radiology",
+      "title": "Planimetric and Linear MRI Markers for Progressive Supranuclear Palsy Classification: A Large Multicohort International Study",
+      "url": "https://doi.org/10.1148/radiol.251394"
+    },
+    {
+      "reason": "Confirms updated LI-RADS TRA v2024 with ancillary features improves HCC viability assessment \u2014 relevant for structured reporting algorithm evolution",
+      "source": "Radiology",
+      "title": "Evaluating Accuracy of LI-RADS Nonradiation Treatment Response Algorithm v2024 and Ancillary Features at Hepatobiliary MRI versus CT",
+      "url": "https://doi.org/10.1148/radiol.253143"
+    }
+  ],
+  "generated_at": "2026-06-05T10:08:12.604059+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Ultrasound is non-inferior to PET/CT and DW-MRI for preoperative pelvic lymph node staging in cervical cancer when performed by experienced operators in a standardized protocol",
+      "confidence": "high",
+      "id": "fruhauf2026",
+      "source_ids": [
+        "fruhauf2026"
+      ]
+    },
+    {
+      "claim": "Externally validated AI models for lung nodule malignancy classification achieve pooled sensitivity of 88% and specificity of 75% across heterogeneous study populations",
+      "confidence": "medium",
+      "id": "asmara2026",
+      "source_ids": [
+        "asmara2026"
+      ]
+    },
+    {
+      "claim": "AI-derived radiomic heterogeneity scores from automated MVO segmentation on cardiac MRI predict MACEs after STEMI better than manual MVO quantification alone",
+      "confidence": "low",
+      "id": "chen2026",
+      "source_ids": [
+        "chen2026"
+      ]
+    },
+    {
+      "claim": "A dual-line midbrain MRI index outperforms existing planimetric measures for differentiating PSP from other parkinsonian syndromes",
+      "confidence": "high",
+      "id": "quattrone2026",
+      "source_ids": [
+        "quattrone2026"
+      ]
+    },
+    {
+      "claim": "LI-RADS treatment response algorithm version 2024 with ancillary features on hepatobiliary-phase MRI improves HCC viability assessment compared to prior versions and CT",
+      "confidence": "medium",
+      "id": "shin2026",
+      "source_ids": [
+        "shin2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Fr\u00fchauf",
+      "id": "fruhauf2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prospective comparison of diagnostic accuracy of ultrasound, PET/CT and DW-MRI for preoperative assessment of pelvic lymph nodes in cervical cancer patients: results of the CANNES trial",
+      "url": "https://doi.org/10.1002/uog.70241",
+      "why_it_matters": "First prospective multicenter trial demonstrating ultrasound non-inferiority to PET/CT and DW-MRI for pelvic node staging in cervical cancer \u2014 directly informs resource allocation and staging protocols",
+      "year": 2026
+    },
+    {
+      "author": "Asmara",
+      "id": "asmara2026",
+      "publication": "Radiol Artif Intell",
+      "title": "Externally Tested AI Models for Malignancy Classification of Lung Nodules at Chest CT: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1148/ryai.250331",
+      "why_it_matters": "Provides pooled external validation benchmarks for AI lung nodule classifiers \u2014 essential for understanding real-world performance expectations",
+      "year": 2026
+    },
+    {
+      "author": "Chen",
+      "id": "chen2026",
+      "publication": "Radiology",
+      "title": "AI-based Histologic Heterogeneity of Microvascular Obstruction at Cardiac MRI for Predicting MACEs: A Multicenter Study",
+      "url": "https://doi.org/10.1148/radiol.252250",
+      "why_it_matters": "Demonstrates AI radiomic features from automated MVO segmentation can outperform manual quantification for MACE prediction \u2014 early signal for prognostic AI in cardiac imaging",
+      "year": 2026
+    },
+    {
+      "author": "Quattrone",
+      "id": "quattrone2026",
+      "publication": "Radiology",
+      "title": "Planimetric and Linear MRI Markers for Progressive Supranuclear Palsy Classification: A Large Multicohort International Study",
+      "url": "https://doi.org/10.1148/radiol.251394",
+      "why_it_matters": "Validates a simple dual-line midbrain index across 2,111 participants for PSP differentiation \u2014 methodologic model for imaging biomarker development",
+      "year": 2026
+    },
+    {
+      "author": "Shin",
+      "id": "shin2026",
+      "publication": "Radiology",
+      "title": "Evaluating Accuracy of LI-RADS Nonradiation Treatment Response Algorithm v2024 and Ancillary Features at Hepatobiliary MRI versus CT",
+      "url": "https://doi.org/10.1148/radiol.253143",
+      "why_it_matters": "Confirms updated LI-RADS TRA v2024 with ancillary features improves HCC viability assessment \u2014 relevant for structured reporting algorithm evolution",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Fr\u00fchauf et al. - Ultrasound Obstet Gynecol - 2026 - Prospective comparison of diagnostic accuracy of ultrasound, PET/CT and DW-MRI for preoperative assessment of pelvic lymph nodes in cervical cancer patients: results of the CANNES trial (https://doi.org/10.1002/uog.70241)",
+    "Asmara et al. - Radiol Artif Intell - 2026 - Externally Tested AI Models for Malignancy Classification of Lung Nodules at Chest CT: A Systematic Review and Meta-Analysis (https://doi.org/10.1148/ryai.250331)",
+    "Chen et al. - Radiology - 2026 - AI-based Histologic Heterogeneity of Microvascular Obstruction at Cardiac MRI for Predicting MACEs: A Multicenter Study (https://doi.org/10.1148/radiol.252250)",
+    "Quattrone et al. - Radiology - 2026 - Planimetric and Linear MRI Markers for Progressive Supranuclear Palsy Classification: A Large Multicohort International Study (https://doi.org/10.1148/radiol.251394)",
+    "Shin et al. - Radiology - 2026 - Evaluating Accuracy of LI-RADS Nonradiation Treatment Response Algorithm v2024 and Ancillary Features at Hepatobiliary MRI versus CT (https://doi.org/10.1148/radiol.253143)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/06/05",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1115
+}

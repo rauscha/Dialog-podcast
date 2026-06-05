@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What Changed This Week"
+    },
+    {
+      "startTime": 1.5,
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "startTime": 3.0,
+      "title": "\u2014 Headline: Effect and Numbers"
+    },
+    {
+      "startTime": 4.5,
+      "title": "\u2014 Headline: The Operator-Dependence Caveat (Affectionate Disagreement)"
+    },
+    {
+      "startTime": 6.0,
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "startTime": 7.5,
+      "title": "\u2014 Round 1: Asmara (Lung Nodule AI Benchmarks)"
+    },
+    {
+      "startTime": 9.0,
+      "title": "\u2014 Round 2: Chen (Cardiac MRI, MVO, MACE Prediction)"
+    },
+    {
+      "startTime": 10.5,
+      "title": "\u2014 Round 3: Quattrone (PSP Midbrain Index)"
+    },
+    {
+      "startTime": 12.0,
+      "title": "\u2014 Round 4: Shin (LI-RADS v2024)"
+    },
+    {
+      "startTime": 13.5,
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
