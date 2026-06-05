@@ -50,11 +50,17 @@ class ResolvedFootnote:
 
 # ── Turn parsing (mirrors generate_podcast._parse_dialogue_turns) ─────────────
 
-def _enumerate_turns(script: str) -> list[tuple[int, str, str]]:
+def _enumerate_turns(
+    script: str,
+    known_speakers: set[str] | None = None,
+) -> list[tuple[int, str, str]]:
     """Return [(turn_index, speaker_label, text), ...].
 
     turn_index is the position in the parsed turn list (0-indexed). Empty-text
     turns are dropped, matching the TTS pipeline.
+
+    When known_speakers is provided, turns with unrecognised labels are skipped
+    so the count matches generate_podcast._parse_dialogue_turns exactly.
     """
     turns: list[tuple[int, str, str]] = []
     current_label: str | None = None
@@ -70,7 +76,12 @@ def _enumerate_turns(script: str) -> list[tuple[int, str, str]]:
         m = _TURN_RE.match(line)
         if m:
             flush()
-            current_label = m.group(1).strip().upper()
+            label = m.group(1).strip().upper()
+            if known_speakers is not None and label not in known_speakers:
+                current_label = None
+                current_lines = []
+                continue
+            current_label = label
             rest = m.group(3).strip()
             current_lines = [rest] if rest else []
         elif current_label is not None:
@@ -135,13 +146,14 @@ def _place_cues(
     script: str,
     plan: dict,
     client: anthropic.Anthropic,
+    known_speakers: set[str] | None = None,
 ) -> dict[str, int]:
     """Ask Sonnet which turn each cue should follow. Returns {catalog_id: after_turn}."""
     cues = plan.get("cues", []) or []
     if not cues:
         return {}
 
-    turns = _enumerate_turns(script)
+    turns = _enumerate_turns(script, known_speakers)
     if len(turns) < 2:
         return {}
 
@@ -479,7 +491,19 @@ def prepare_footnotes(
             logger.warning("[footnote] ANTHROPIC_API_KEY not set; cannot place cues")
             return []
 
-    placements = _place_cues(script, plan, client)
+    # Build known-speaker set from cfg — mirrors generate_podcast._known_speaker_labels
+    # so _enumerate_turns counts turns the same way _parse_dialogue_turns does.
+    host_a = str(cfg.get("host_a_name") or "Juno").upper()
+    host_b = str(cfg.get("host_b_name") or "Caspar").upper()
+    known_speakers: set[str] = {host_a, host_b, "JUNO", "CASPAR"}
+    for g in cfg.get("active_guest_hosts") or []:
+        if isinstance(g, dict):
+            if g.get("label"):
+                known_speakers.add(str(g["label"]).upper())
+            if g.get("display_name"):
+                known_speakers.add(str(g["display_name"]).upper())
+
+    placements = _place_cues(script, plan, client, known_speakers)
     if not placements:
         return []
 

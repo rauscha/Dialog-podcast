@@ -759,6 +759,44 @@ Rules:
 - Do not append notes, continuity comments, source lists, or section headers.
 """
 
+_CLOSING_CALLBACK_SYSTEM = """\
+You add a closing callback to a podcast script for "Asynchronous".
+
+A callback is a brief, natural moment where Juno or Caspar connects something from the
+current episode to a specific memorable detail from a prior episode. It should feel like a
+genuine association — not a promotional call-back or a polished bow on a gift.
+
+You receive:
+- The current episode topic and thesis
+- The last ~500 characters of the fact-checked script (so you know what was just said)
+- Up to 5 recent episode callbacks, each labelled with an index, the prior topic, and
+  a memorable detail or formulation from that episode
+
+Task:
+1. Pick the callback whose detail most naturally connects to the current episode's ideas or
+   final exchange. If none genuinely fits, return {"selected_callback_index": null,
+   "closing_segment": null}.
+2. Write a closing exchange of 2-4 turns (~120-150 words total). Requirements:
+   - Opens with JUNO or CASPAR noticing the connection — naturally, not "by the way"
+   - Relaxed, end-of-conversation tone — not a summary or encore
+   - Feel like two hosts with shared history (they recall past episodes casually)
+   - Does NOT introduce new factual claims or start a new topic
+   - Flows naturally from what was just said in the script tail
+   - Each line: SPEAKER [emotion tag]: text
+
+Return JSON only:
+{
+  "selected_callback_index": 2,
+  "closing_segment": "JUNO [warm, drifting]: text\nCASPAR [dry]: text"
+}
+
+Or, if no callback fits:
+{
+  "selected_callback_index": null,
+  "closing_segment": null
+}
+"""
+
 _PERFORMANCE_SYSTEM = """\
 You are the final performance editor for a conversational TTS podcast script.
 
@@ -1652,6 +1690,68 @@ def _legacy_research_and_script(
     }
 
 
+def _select_and_write_callback(
+    topic: str,
+    thesis: str,
+    script_tail: str,
+    memory: dict,
+    client: anthropic.Anthropic | None,
+    cfg: dict,
+) -> str | None:
+    """Pick a past-episode callback and write a 120-150 word closing exchange.
+
+    Selects the most thematically resonant entry from the last 5 usable_callback
+    items in episode_history, then writes a 2-4 turn JUNO/CASPAR closing segment.
+    Returns None when no good fit exists or client is unavailable.
+    """
+    if client is None:
+        return None
+
+    history = [
+        e for e in (memory.get("episode_history") or [])
+        if isinstance(e, dict) and e.get("usable_callback")
+    ]
+    if not history:
+        return None
+
+    candidates = history[-5:]
+    candidate_lines = []
+    for i, e in enumerate(candidates):
+        prior_topic = str(e.get("topic") or "")[:120]
+        callback_text = str(e.get("usable_callback") or "")
+        candidate_lines.append(
+            f"[{i}] Prior topic: {prior_topic!r}\n    Callback detail: {callback_text}"
+        )
+
+    content = (
+        f"Current episode topic: {topic}\n\n"
+        f"Current episode thesis:\n{thesis}\n\n"
+        f"End of script (last ~500 chars):\n{script_tail[-500:]}\n\n"
+        f"Recent episode callbacks:\n" + "\n".join(candidate_lines)
+    )
+
+    try:
+        raw = _anthropic_text(
+            client,
+            model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+            max_tokens=600,
+            system=_CLOSING_CALLBACK_SYSTEM,
+            content=content,
+            temperature=0.65,
+            cfg=cfg,
+        )
+    except Exception as exc:
+        logger.warning("[callback] Closing callback pass failed: %s", exc)
+        return None
+
+    data = _extract_json_object(raw) if raw else {}
+    segment = data.get("closing_segment")
+    if not segment or not isinstance(segment, str):
+        return None
+    cleaned = _strip_to_dialogue(segment.strip())
+    return cleaned if cleaned else None
+
+
 def _script_from_research_package(
     topic: str,
     cfg: dict,
@@ -1902,6 +2002,20 @@ def _script_from_research_package(
         )
     fact_checked_script = _strip_to_dialogue(fact_checked_script)
 
+    # Closing callback — non-digest only (digest consultant-rounds structure must not change).
+    if not is_digest:
+        logger.info("[3/5] Weaving closing callback from episode history...")
+        callback_segment = _select_and_write_callback(
+            topic=topic,
+            thesis=thesis,
+            script_tail=fact_checked_script,
+            memory=memory,
+            client=client,
+            cfg=cfg,
+        )
+        if callback_segment:
+            fact_checked_script = fact_checked_script.rstrip() + "\n\n" + callback_segment
+
     logger.info("[3/5] Preparing final performance script...")
     performance_script = _anthropic_text(
         client,
@@ -1984,6 +2098,7 @@ def _script_from_research_package(
             "dialogue_draft",
             "anti_cliche_rewrite",
             "fiction_continuity" if fiction_mode else "fact_check",
+            *(["closing_callback"] if not is_digest else []),
             "performance_script",
             "host_memory_update",
         ],
