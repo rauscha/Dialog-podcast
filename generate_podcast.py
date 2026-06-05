@@ -132,6 +132,7 @@ DEFAULTS: dict = {
     "cartesia_bit_rate":    192000,
     "cartesia_speed":       1.0,
     "cartesia_language":    "en",
+    "tts_max_fail_ratio":   0.2,
     "target_minutes":       15,
     "output_dir":           "episodes",
     "episode_type":         "deep_dive",
@@ -3403,8 +3404,21 @@ def _tts_two_host(
     turn_files: list = [path for _, path in raw_results if path is not None]
     turn_indices: list[int] = [i for i, path in raw_results if path is not None]
 
-    if not turn_files:
-        raise RuntimeError("No turn audio files were generated")
+    # Fail loud on widespread TTS failure. Per-turn exceptions are swallowed above
+    # (so a single bad turn never sinks an episode), but if too many turns fail we
+    # must abort rather than publish a near-silent episode — the usual culprit is a
+    # provider auth/quota wall (e.g. ElevenLabs returns 401 once the monthly
+    # character limit is hit), which fails every turn at once.
+    total_turns = len(work_items)
+    failed_turns = total_turns - len(turn_files)
+    max_fail_ratio = float(cfg.get("tts_max_fail_ratio", 0.2))
+    if total_turns and (failed_turns / total_turns) > max_fail_ratio:
+        raise RuntimeError(
+            f"TTS synthesis failed for {failed_turns}/{total_turns} turns "
+            f"({failed_turns / total_turns:.0%} > {max_fail_ratio:.0%} allowed); "
+            "aborting before publish. Check TTS provider credentials/quota "
+            "(e.g. ElevenLabs character limit) — see the per-turn warnings above."
+        )
 
     if footnotes:
         footnotes_by_after: dict[int, list] = {}

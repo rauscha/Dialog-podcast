@@ -30,6 +30,7 @@ Provider decision made and shipped (`a806a2c` + this session): **ElevenLabs host
 
 ## Bugs found (address opportunistically)
 
+- [x] **Silent total-TTS-failure → voiceless episode published (2026-06-05).** A test run hit the ElevenLabs character-quota wall (131k/131k → every turn 401'd); per-turn exception catching (feature E) swallowed all 82 failures, the pipeline reported "Done! exit 0," and a 28-second ident+music-only episode was written into `feed.xml`. Fixed: `_tts_two_host` now computes the turn failure ratio and raises (aborting before the `[5/5]` publish step, non-zero exit) when it exceeds `cfg["tts_max_fail_ratio"]` (default 0.2). Added `tts_max_fail_ratio` to `DEFAULTS`. **Verified by inspection + compile; live end-to-end confirmation pending the next real run (will now correctly abort under a quota wall).**
 - [x] **RSS `<description>` preamble leak — fixed in Phase 3 (2026-06-01).** `update_rss` now defensively calls `_strip_to_dialogue(episode["script"])` before slicing the 500-char preview, and falls back to the episode topic (with a warning log) if no SPEAKER line is found. The leaked entry in `feed.xml` from 2026-05-07 remains historical; future episodes are safe.
 - [ ] **Historical `feed.xml` preamble leak (2026-05-07 "history of fetoscopy" entry).** Low priority. Options: (a) leave it — old, listeners moved on; (b) hand-edit the `<item>`'s `<description>` + `<content:encoded>` CDATA (~10 min); (c) re-render the episode + replace. Decision deferred from 2026-06-01 pending list.
 - [x] **I — Stop leaking ElevenLabs voice IDs (2026-06-04).** `_public_tts_route(route, label=None)` now pops `voice_id` entirely and sets `voice_label = label or "[configured]"`. `_tts_routes_summary_for_script` passes the speaker label through. Companion JSON will show `{"voice_label": "JUNO"}` instead of any truncated ID. `_public_tts_route_for_bot` in `telegram_bot.py` is internal/owner-only (not committed to git) — left as-is.
@@ -90,7 +91,7 @@ Pull from here when P1 is closer to done.
 
 ## Flourishes (deep review §5 — when you have an evening)
 
-- [x] **Closing callback (2026-06-05).** `_select_and_write_callback()` shipped. Sonnet picks from last 5 `usable_callback` entries, writes 2-4 turn closing exchange. Non-digest only. **Untested on a real run — listen to the tail of the next episode.**
+- [x] **Closing callback (2026-06-05).** `_select_and_write_callback()` shipped. Sonnet picks from last 5 `usable_callback` entries, writes 2-4 turn closing exchange. Non-digest only. **Test run attempted 2026-06-05 but BLOCKED on ElevenLabs quota (131k/131k → all TTS 401'd); no audio to listen to. The callback-weaving step itself ran without error (`[3/5] Weaving closing callback from episode history...`). Re-run the bioluminescence test once ElevenLabs quota is topped up, then listen to the tail.** Phase 1.5 sonic-footnote cues are in the same boat — that run's only planned cue was a Freesound source (Phase 4, unimplemented), so it dropped; a re-run needs a topic that draws a NASA-backed cue to actually exercise placement.
 - **Reading-room companion** — per-episode annotated reading list under a "Going Deeper" tab. (The digest source cards are a natural fit here.)
 - **Generative chapter art** — one small abstract illustration per chapter (~$0.02/ep via FLUX-schnell).
 
