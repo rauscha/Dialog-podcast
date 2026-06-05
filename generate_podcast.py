@@ -3665,7 +3665,9 @@ def git_publish(
     for digest runs). Defaults to the open-topic show's ``feed.xml``.
     """
     headline = (title or topic or "").strip()
-    safe_topic = re.sub(r"[\r\n]+", " ", headline).strip()[:120] or "(untitled)"
+    safe_topic = re.sub(r"[\r\n]+", " ", headline)
+    safe_topic = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", safe_topic)  # strip control chars
+    safe_topic = re.sub(r"\s+", " ", safe_topic).strip()[:120] or "(untitled)"
     add_paths = [str(audio_path), feed_filename] + [
         str(path) for path in (extra_paths or []) if Path(path).exists()
     ]
@@ -4574,6 +4576,13 @@ if __name__ == "__main__":
 
     topic = args.topic or input("Enter podcast topic: ").strip()
     if not topic:
+        sys.exit(1)
+    _CLI_MAX_TOPIC_LEN = 500  # mirrors Telegram bot MAX_TOPIC_LEN
+    if len(topic) > _CLI_MAX_TOPIC_LEN:
+        print(
+            f"error: topic too long ({len(topic)} chars, max {_CLI_MAX_TOPIC_LEN})",
+            file=sys.stderr,
+        )
         sys.exit(1)
     guest_mode = args.guest_mode
     if args.guest:

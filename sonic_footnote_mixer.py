@@ -15,6 +15,7 @@ dispatcher can fall through and the cue is silently dropped.
 from __future__ import annotations
 
 import json
+import logging
 import re
 import subprocess
 import urllib.parse
@@ -24,6 +25,7 @@ from pathlib import Path
 
 import anthropic
 
+logger = logging.getLogger(__name__)
 
 _PLACEMENT_MODEL = "claude-sonnet-4-6"
 
@@ -176,7 +178,7 @@ def _place_cues(
             messages=[{"role": "user", "content": user_msg}],
         )
     except anthropic.APIError as exc:
-        print(f"   [footnote] Placement pass failed: {exc}")
+        logger.warning("[footnote] Placement pass failed: %s", exc)
         return {}
 
     raw = "\n".join(b.text for b in resp.content if hasattr(b, "text")).strip()
@@ -209,7 +211,7 @@ def _http_get_json(url: str) -> dict | None:
         with urllib.request.urlopen(req, timeout=_HTTP_TIMEOUT_SEC) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, OSError) as exc:
-        print(f"   [footnote] HTTP GET failed for {url}: {exc}")
+        logger.warning("[footnote] HTTP GET failed for %s: %s", url, exc)
         return None
 
 
@@ -219,6 +221,9 @@ def _search_nasa_audio(query: str, max_results: int = 5) -> list[dict]:
     if not payload:
         return []
     items = payload.get("collection", {}).get("items", []) or []
+    # Filter out podcast episodes — they contain long intro/outro sections
+    # rather than the primary audio asset we need (countdown, wind recording, etc.)
+    items = [i for i in items if not _is_nasa_podcast_item(i)]
     return items[:max_results]
 
 
@@ -241,14 +246,17 @@ def _pick_nasa_audio_url(collection_url: str) -> str | None:
 def _nasa_query_fallbacks(query: str) -> list[str]:
     """Progressive shortening — NASA's API rejects longer compound queries.
 
-    e.g. "NASA Mars wind audio" -> [full, "NASA Mars wind", "NASA Mars", "Mars"].
+    e.g. "NASA Mars wind audio" -> [full, "NASA Mars wind", "NASA Mars"].
     Drops trailing words first; also strips a leading "NASA" if present after
     other shortenings, since that prefix sometimes over-narrows results.
+
+    Minimum 2 words: single-word queries are too broad and tend to match
+    podcast episodes rather than primary audio assets.
     """
     words = [w for w in query.split() if w]
     seen: set[str] = set()
     variants: list[str] = []
-    while words:
+    while len(words) >= 2:            # ← 2-word minimum — stops degenerate hits
         candidate = " ".join(words)
         if candidate not in seen:
             seen.add(candidate)
@@ -259,10 +267,33 @@ def _nasa_query_fallbacks(query: str) -> list[str]:
     for v in variants:
         if v.lower().startswith("nasa ") and v[5:].strip():
             tail = v[5:].strip()
-            if tail not in seen:
+            if tail not in seen and len(tail.split()) >= 2:
                 seen.add(tail)
                 extras.append(tail)
     return variants + extras
+
+
+# Words that indicate a NASA item is a podcast episode rather than a
+# primary audio asset (countdown audio, environmental recording, etc.).
+_PODCAST_TITLE_RE = re.compile(
+    r"\bpodcast\b|\bepisode\s*\d|\bep\.\s*\d|\bhoustonwearegoingback\b"
+    r"|\bnasa explorers\b|\bshort sharp science\b",
+    re.IGNORECASE,
+)
+
+
+def _is_nasa_podcast_item(item: dict) -> bool:
+    """Return True if the NASA search result looks like a podcast episode."""
+    data = item.get("data") or []
+    if not data or not isinstance(data, list):
+        return False
+    first = data[0] if isinstance(data[0], dict) else {}
+    title = str(first.get("title") or "")
+    description = str(first.get("description") or "")
+    return bool(
+        _PODCAST_TITLE_RE.search(title)
+        or _PODCAST_TITLE_RE.search(description[:300])
+    )
 
 
 def _resolve_nasa(cue: dict, catalog_item: dict) -> str | None:
@@ -276,10 +307,10 @@ def _resolve_nasa(cue: dict, catalog_item: dict) -> str | None:
         items = _search_nasa_audio(candidate)
         if items:
             if candidate != query:
-                print(f"   [footnote] NASA fallback query hit: {candidate!r}")
+                logger.info("[footnote] NASA fallback query hit: %r", candidate)
             break
     if not items:
-        print(f"   [footnote] NASA search returned no items for {query!r}")
+        logger.warning("[footnote] NASA search returned no non-podcast items for %r", query)
         return None
 
     for item in items:
@@ -336,10 +367,10 @@ def _trim_and_fade(
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
     except subprocess.TimeoutExpired:
-        print(f"   [footnote] ffmpeg trim timed out for {output_path.name}")
+        logger.warning("[footnote] ffmpeg trim timed out for %s", output_path.name)
         return False
     if result.returncode != 0 or not output_path.exists():
-        print(f"   [footnote] ffmpeg trim failed: {result.stderr[:200]}")
+        logger.warning("[footnote] ffmpeg trim failed: %s", result.stderr[:200])
         return False
     return True
 
@@ -392,6 +423,11 @@ def _resolve_cue(
         source_url = _resolve_nasa(cue, item)
     else:
         # Phase 2-4: Wikimedia, Internet Archive, Freesound — not yet implemented.
+        logger.warning(
+            "[footnote] Cue %r skipped — backend %r not yet implemented "
+            "(Phase 2-4 work required).",
+            catalog_id, source,
+        )
         return None
 
     if not source_url:
@@ -440,7 +476,7 @@ def prepare_footnotes(
             import os
             client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
         except KeyError:
-            print("   [footnote] ANTHROPIC_API_KEY not set; cannot place cues")
+            logger.warning("[footnote] ANTHROPIC_API_KEY not set; cannot place cues")
             return []
 
     placements = _place_cues(script, plan, client)
@@ -454,14 +490,31 @@ def prepare_footnotes(
         catalog_id = str(cue.get("catalog_id") or "").strip()
         after_turn = placements.get(catalog_id)
         if after_turn is None:
+            logger.warning(
+                "[footnote] Cue %r was not placed by the LLM pass — dropped.",
+                catalog_id,
+            )
             continue
         footnote = _resolve_cue(cue, catalog, after_turn, work_dir)
         if footnote:
             resolved.append(footnote)
-            print(
-                f"   [footnote] Resolved {catalog_id} -> {footnote.audio_path.name} "
-                f"({footnote.duration_sec:.1f}s, after turn {after_turn})"
+            logger.info(
+                "[footnote] Resolved %s -> %s (%.1fs, after turn %d)",
+                catalog_id, footnote.audio_path.name,
+                footnote.duration_sec, after_turn,
+            )
+        else:
+            logger.warning(
+                "[footnote] Cue %r resolved to no audio (source unavailable or download failed).",
+                catalog_id,
             )
 
+    n_planned = len([c for c in cues if isinstance(c, dict)])
+    n_resolved = len(resolved)
+    if n_planned > n_resolved:
+        logger.warning(
+            "[footnote] %d/%d planned cues were dropped (see warnings above).",
+            n_planned - n_resolved, n_planned,
+        )
     resolved.sort(key=lambda f: f.after_turn)
     return resolved

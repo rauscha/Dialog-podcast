@@ -47,8 +47,8 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 ## Cue quality & editorial polish
 
-- [ ] **Surface dropped cues.** A planned cue whose backend isn't built (e.g. `commons_morse_code`) currently vanishes silently. Log a warning + record the skip in the manifest. Cheap; do regardless of the Phase 1.5 call.
-- [ ] **Fix NASA fallback source quality.** `nasa_apollo_countdown` fell back to a keyword query and pulled a random NASA *podcast* clip. Honor catalog semantics or **fail closed to silence** instead of grabbing unrelated audio.
+- [x] **Surface dropped cues (2026-06-04).** `sonic_footnote_mixer.py` now logs `logger.warning` at every drop point: unimplemented backend (Phase 2-4), LLM placement miss, and source download failure. Summary line at end of `prepare_footnotes`: "N/M planned cues were dropped (see warnings above)." All bare `print` statements converted to proper `logger` calls.
+- [x] **Fix NASA fallback source quality (2026-06-04).** Two guards added: (1) `_nasa_query_fallbacks` now stops at 2-word minimum — single-word fallbacks like "apollo" matched podcast episodes. (2) `_is_nasa_podcast_item()` filters out any search result whose title/description matches a podcast-episode pattern before scoring. NASA no longer returns podcast clips on degenerate fallbacks.
 - [ ] **Consolidate turn enumeration (step zero).** Cue *planning* (`_place_cues` → `_enumerate_turns` in `sonic_footnote_mixer.py`) and cue *splicing* (`_tts_two_host` → `_parse_dialogue_turns` in `generate_podcast.py`) count turns with two different functions and can disagree (off-by-one placement). Collapse to one shared enumeration first.
 - [ ] **Restraint / interruption budget.** Cap cues per episode, enforce a minimum gap, bias toward genuine section breaks. Fewer, better.
 - [ ] **Transition flow.** Tune fades + per-segment level-matching at cue↔dialogue seams.
@@ -78,10 +78,10 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 
 Pull from here when P1 is closer to done.
 - Per-user rate limit in the Telegram bot.
-- Topic sanitization for git commit messages (static template, not f-string).
-- Delete or guard the archived email-webhook code.
-- ffprobe timeout in `clip_mixer.py:273` (one-line fix).
-- CLI topic-length cap matching the bot's `MAX_TOPIC_LEN=500`.
+- [x] Git commit topic sanitization (2026-06-04) — strips control chars; see above.
+- ~~Delete or guard archived email-webhook code~~ — README already comprehensive; no change.
+- ~~ffprobe timeout `clip_mixer.py:273`~~ — already had `timeout=30`; no change needed.
+- [x] CLI topic-length cap (2026-06-04) — rejects topics >500 chars; see above.
 - Verify MusicGen model is cached between intro and outro.
 - `/queue` ETA display in the bot.
 - Website loading state during initial `fetch(feedUrl)`.
