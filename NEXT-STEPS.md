@@ -2,6 +2,21 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
+## 🔴 P0 — Throttle digests to WEEKLY, not daily (cost control, 2026-06-06)
+
+**Intent:** stop spending money generating digest episodes every day. Want the digest machinery to run **weekly only**. (User reports it feeling like "3 extra podcasts every day.")
+
+Current setup (for whoever picks this up):
+- Task Scheduler fires `run_digests.ps1` **daily at 05:00** — trigger is `New-ScheduledTaskTrigger -Daily` in `register_scheduled_task.ps1` (~line 33).
+- `run_digests.ps1` calls `python generate_podcast.py --digest-all`, which applies **per-show weekday gating** via `_show_is_due()` (`generate_podcast.py` ~L4505). Shows are configured in `digests.json`: MFM=`mon`, Fetal=`wed`, Signal=`fri` (each with a **1-day catch-up window**, rules 3–4 in `_show_is_due`).
+- So *by design* it's ≤1 show/day (≈one episode most weekdays), **not** 3/day. The "3/day" symptom likely came from the multi-day ElevenLabs quota outage: shows that failed to publish kept their `last_run.aired_at` stale and re-qualified as due/catch-up once quota returned. **Verify this before changing logic.**
+
+**Decision to make before implementing** (changes the fix):
+- (a) **One digest morning per week** — consolidate all 3 shows onto a single weekday (set all `schedule.weekday` the same in `digests.json`) and/or switch the trigger to `-Weekly -DaysOfWeek <day>`. One run, 3 episodes, once a week.
+- (b) **Keep shows spread but truly weekly** — leave mon/wed/fri but make sure each fires only once per week (tighten/disable the catch-up so a stale-ledger backlog can't stack). Still ≈3 episodes/week, just on different mornings.
+
+**Likely changes:** `register_scheduled_task.ps1` trigger (`-Daily` → `-Weekly`), possibly `digests.json` weekdays, and an audit of `_show_is_due` catch-up behavior after a failed-run backlog. Re-run `register_scheduled_task.ps1` as Admin to apply the new trigger. **Sanity-check with `--digest-dry-run`/`--digest` (SKIP_GIT) so no real episodes are spent while testing.**
+
 ## In-flight: State-of-the-art quality upgrades (2026-06-05)
 
 Scoping review (`docs/research/2026-06_state_of_the_art_ai_podcasts.md`) → implementation walkthrough (`docs/research/2026-06_implementation_walkthrough.md`, authored 2026-06-05). The walkthrough turns the review's Section 7 shortlist into 5 ordered, code-grounded phases (A audio-engineering → B timing/speech realism → C editorial → D beat-gate architecture → E shared-context TTS), each with acceptance criteria. A code audit found several items already built (per-turn two-pass loudnorm, persona bible, rewriter passes), so the plan targets *deltas*.
