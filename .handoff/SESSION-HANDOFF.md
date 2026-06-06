@@ -13,6 +13,11 @@ successfully this morning), so audio generation works again.
 
 ## Done this session
 
+- **Added a P0: throttle digests to weekly** (`1f4d420`, `02f88d7`). Cost-control — don't want
+  daily digest spend. **Decided:** keep the Mon/Wed/Fri spread but make each show fire only
+  once/week (no stacking). Root cause is almost certainly the 1-day catch-up in `_show_is_due()`
+  (`generate_podcast.py` ~L4505) re-firing a stale-ledger backlog after the quota outage — NOT
+  the daily scheduler. Full task + chosen implementation path at the top of NEXT-STEPS.
 - **Fixed a silent-failure bug** (`39c0eeb`). A test run hit the ElevenLabs character-quota wall
   → every TTS turn 401'd, but per-turn exception catching let the pipeline report "Done! exit 0"
   and write a 28-second voiceless episode into `feed.xml`. `_tts_two_host` now raises (non-zero
@@ -29,13 +34,17 @@ successfully this morning), so audio generation works again.
 
 ## Next up
 
-1. **Build Phase A of the walkthrough — audio-engineering finish.** Pure ffmpeg, low risk,
+1. **P0 — throttle digests to weekly** (cost leak, burning money daily until fixed). Tighten the
+   catch-up in `_show_is_due()` so each show fires ≤once/7 days; confirm the backlog-stacking root
+   cause from the ledgers first; test with `--digest-dry-run` + the injectable `today=` param. Full
+   plan at the top of NEXT-STEPS. **Do this first — it's the only item actively costing money.**
+2. **Build Phase A of the walkthrough — audio-engineering finish.** Pure ffmpeg, low risk,
    instantly audible, and *not blocked by anything*. A1 two-pass final master + retarget
    −14 LUFS/−1.0 dBTP; A2 de-esser; A3 concat crossfades; A4 per-clip loudnorm in `clip_mixer.py`.
-   Verify with `ffprobe`/`loudnorm summary` + the `audio-scope` skill. **Recommended first sprint.**
-2. **Then Phase B1** — thread prior-turn emotion into TTS instructions (`_build_tts_instructions`).
+   Verify with `ffprobe`/`loudnorm summary` + the `audio-scope` skill. **Recommended first build sprint.**
+3. **Then Phase B1** — thread prior-turn emotion into TTS instructions (`_build_tts_instructions`).
    ~30-min quick win.
-3. **Still owed: verify the untested overnight features** (closing callback + sonic-footnote
+4. **Still owed: verify the untested overnight features** (closing callback + sonic-footnote
    Phase 1.5). Quota's back, so a real run is now possible — but pick a topic that draws a
    **NASA-backed** cue (space/physics), since a Freesound-only cue will drop (Phase 4 unimpl).
 
