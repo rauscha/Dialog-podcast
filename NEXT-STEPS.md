@@ -2,7 +2,29 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
-## 🔴 P0 — Throttle digests to WEEKLY, not daily (cost control, 2026-06-06)
+## ✅ P0 — Throttle digests to WEEKLY — DONE (2026-06-06)
+
+**Shipped:** added a weekly throttle to `_show_is_due()` (`generate_podcast.py`). New module
+constant `_DIGEST_MIN_DAYS_BETWEEN_RUNS = 6`; a show is not-due if `last_run.aired_at` is within
+the last 6 days (subsumes the old "already ran today" guard, compared on dates to dodge clock
+drift). Kept the Mon/Wed/Fri spread and the 1-day catch-up window — the throttle just stops the
+catch-up from *re-firing on top of* a successful weekday run.
+
+**Root cause confirmed (was the suspected catch-up stacking):** the catch-up window made every
+show due on two consecutive days (weekday + the day after), and the only dedup was "already ran
+*today*" — so a show fired on its weekday, then *again* the next morning (`last_date` = yesterday
+< today → not blocked). Every show doubled. Ledger evidence: AI (sched Fri) last aired Sat
+2026-06-06 — caught up a day late after Friday's quota outage, exactly the catch-up path.
+
+**Verified:** unit-style across normal-week / missed-weekday / already-ran-today / self-heal
+scenarios via the injectable `today=` param, and against the real on-disk ledgers (all 3 correctly
+not-due today). `py_compile` clean. Minor self-healing note: MFM's last run was an off-schedule
+Wed verify-run, so its next fire lands Tue 2026-06-09 (catch-up) then returns to Mondays — still
+once/week.
+
+---
+
+<details><summary>Original P0 task (kept for reference)</summary>
 
 **Intent:** stop spending money generating digest episodes every day. Want the digest machinery to run **weekly only**. (User reports it feeling like "3 extra podcasts every day.")
 
@@ -19,6 +41,8 @@ Current setup (for whoever picks this up):
 - First **confirm the root cause**: inspect each show's `last_run.aired_at` in the ledgers (`digests/*_ledger.json`) vs. the actual extra episodes, to verify it was catch-up stacking and not something else.
 
 **Sanity-check** with `--digest-dry-run <show>` and `_show_is_due` unit-style checks (it takes an injectable `today=` param, ~L4510) so no real episodes are spent while testing. Don't forget the bot's `/digest` on-demand path still works for manual one-offs.
+
+</details>
 
 ## In-flight: State-of-the-art quality upgrades (2026-06-05)
 

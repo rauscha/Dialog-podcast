@@ -4501,6 +4501,13 @@ def run_digest(show_id: str, repo_root: Path = Path(".")) -> dict:
 
 _WEEKDAY_MAP = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
 
+# Each digest show fires at most once per this many days. Guards against the
+# catch-up window (rule 4 below) re-firing a backlog when a show's ledger goes
+# stale after a missed/failed stretch (e.g. an ElevenLabs quota outage). 6 (not
+# 7) so a show that caught up a day late can still return to its scheduled
+# weekday the following week without locking onto the catch-up day.
+_DIGEST_MIN_DAYS_BETWEEN_RUNS = 6
+
 
 def _show_is_due(
     show: dict,
@@ -4513,7 +4520,8 @@ def _show_is_due(
 
     Rules (checked in order):
     1. ``force=True`` → always due.
-    2. ``last_run.aired_at`` is today → already ran, skip.
+    2. ``last_run.aired_at`` is within the last ``_DIGEST_MIN_DAYS_BETWEEN_RUNS``
+       days → weekly throttle, skip (also covers the "already ran today" case).
     3. Today is the show's scheduled weekday → due.
     4. Today is one day *after* the scheduled weekday (catch-up window) → due.
     5. Otherwise → not due.
@@ -4529,14 +4537,21 @@ def _show_is_due(
     scheduled_wd = _WEEKDAY_MAP.get(sched_wd_name, 0)
     today_wd = today_date.weekday()  # Monday=0
 
-    # Already ran today?
+    # Weekly throttle: never fire more than once per ~week. Compared on dates
+    # (not datetimes) so a same-weekday run a full week later isn't blocked by a
+    # few hours' clock drift. Subsumes the old "already ran today" guard (a run
+    # today or in the future yields days_since_last < the threshold).
     last_run = ledger.get("last_run") or {}
     last_aired = last_run.get("aired_at") or ""
     if last_aired:
         try:
             last_date = _dt.fromisoformat(last_aired.replace("Z", "+00:00")).date()
-            if last_date >= today_date:
-                return False, f"already ran today ({last_date})"
+            days_since_last = (today_date - last_date).days
+            if days_since_last < _DIGEST_MIN_DAYS_BETWEEN_RUNS:
+                return False, (
+                    f"ran {days_since_last}d ago "
+                    f"(weekly throttle: min {_DIGEST_MIN_DAYS_BETWEEN_RUNS}d)"
+                )
         except ValueError:
             pass
 
