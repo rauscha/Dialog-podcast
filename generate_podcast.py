@@ -29,6 +29,7 @@ from pathlib import Path
 
 import anthropic
 
+import audio_utils
 import llm_engines
 import tts_engines
 from episode_manifest import EpisodeManifest, slugify_topic
@@ -178,11 +179,20 @@ DEFAULTS: dict = {
     "audio_bitrate":        "192k",
     "audio_sample_rate":    44100,
     "audio_channels":       2,
-    "audio_loudness_i":     -16.0,
-    "audio_true_peak":      -1.5,
+    # Streaming-standard loudness (Spotify/YouTube). Apple-faithful -16/-1.5 stays
+    # available via config override. Per-turn, final master, and inserted clips all
+    # target this same value so the program is internally balanced.
+    "audio_loudness_i":     -14.0,
+    "audio_true_peak":      -1.0,
     "audio_lra":            11.0,
     "audio_highpass_hz":    60,
     "audio_lowpass_hz":     18000,
+    "audio_master_two_pass": True,   # final master: two-pass linear loudnorm (else single-pass blind)
+    "audio_deesser":        True,    # tame sibilance before loudnorm in the master chain
+    "audio_deesser_freq":   6500,    # de-ess centre frequency (Hz); converted to normalized internally
+    "audio_deesser_intensity": 0.40, # ffmpeg deesser i= (0..1); ~0.4 cuts sibilant peaks ~-5dB w/o dulling the body
+    "concat_crossfade_ms":  10,      # micro-crossfade between speech segments at concat joins
+    "music_crossfade_sec":  2.5,     # longer crossfade for music<->speech bookend transitions
     "music_prompt_model":   "claude-haiku-4-5-20251001",
     "title_model":          "claude-haiku-4-5-20251001",
     "music_model":          "facebook/musicgen-small",
@@ -202,6 +212,8 @@ _BOOL_CONFIG_KEYS = {
     "use_audio_mastering",
     "guest_cross_provider",
     "normalize_turn_loudness",
+    "audio_master_two_pass",
+    "audio_deesser",
     "local_llm_think",
     "altmetric_enabled",
 }
@@ -222,6 +234,8 @@ _INT_CONFIG_KEYS = {
     "audio_channels",
     "audio_highpass_hz",
     "audio_lowpass_hz",
+    "audio_deesser_freq",
+    "concat_crossfade_ms",
     "cartesia_sample_rate",
     "cartesia_bit_rate",
 }
@@ -231,6 +245,8 @@ _FLOAT_CONFIG_KEYS = {
     "audio_loudness_i",
     "audio_true_peak",
     "audio_lra",
+    "audio_deesser_intensity",
+    "music_crossfade_sec",
     "elevenlabs_stability",
     "elevenlabs_similarity_boost",
     "cartesia_speed",
@@ -2935,98 +2951,69 @@ def _ffmpeg_concat_configured(parts: list, output: Path, cfg: dict) -> None:
     )
 
 
-def _parse_loudnorm_json(stderr: str) -> dict | None:
-    """Pull the measurement JSON that ffmpeg's loudnorm prints to stderr."""
-    try:
-        end = stderr.rindex("}")
-        start = stderr.rindex("{", 0, end)
-        data = json.loads(stderr[start : end + 1])
-    except (ValueError, json.JSONDecodeError):
-        return None
-    keys = ("input_i", "input_tp", "input_lra", "input_thresh", "target_offset")
-    if not all(key in data for key in keys):
-        return None
-    return {key: data[key] for key in keys}
-
-
 def _normalize_turn_loudness(path: Path, cfg: dict, work_dir: Path) -> None:
     """Loudness-match one rendered turn in place so cross-provider voices align.
 
     ElevenLabs hosts and ElevenLabs/Cartesia guests can be mastered to different
     reference levels by their providers. The final program master sets overall
-    loudness but cannot fix per-speaker balance, so each turn is leveled to a
-    common target before concat. Two-pass linear loudnorm (measure -> linear
-    gain) preserves natural dynamics and respects true-peak; if measurement is
-    unavailable we fall back to single-pass, and any failure leaves the turn
-    untouched. Never aborts the episode over a normalization hiccup.
+    loudness but cannot fix per-speaker balance, so each turn is leveled to the
+    common program target before concat. Delegates to the shared two-pass helper
+    (measure -> linear gain), which preserves natural dynamics, skips near-silent
+    turns untouched, and never raises — a normalization hiccup must not abort the
+    episode. (``work_dir`` is retained for signature stability; the helper writes
+    its temp file beside the target.)
     """
     if not cfg.get("normalize_turn_loudness", True):
         return
     path = Path(path)
     if not path.exists():
         return
+    audio_utils.two_pass_loudnorm(
+        path, path,
+        target_i=float(cfg.get("audio_loudness_i", -14.0)),
+        target_tp=float(cfg.get("audio_true_peak", -1.0)),
+        target_lra=float(cfg.get("audio_lra", 11.0)),
+        sample_rate=int(cfg.get("audio_sample_rate", 44100)),
+        channels=int(cfg.get("audio_channels", 2)),
+        bitrate=_audio_bitrate_value(cfg),
+        encode_timeout=180,
+    )
 
-    target_i = float(cfg.get("audio_loudness_i", -16.0))
-    target_tp = float(cfg.get("audio_true_peak", -1.5))
-    target_lra = float(cfg.get("audio_lra", 11.0))
+
+def _master_chain_pre_filters(cfg: dict) -> list[str]:
+    """Build the master EQ/de-ess chain that runs *before* loudnorm.
+
+    Order: highpass -> lowpass -> deesser. The de-esser (A2) tames sibilance in
+    the ~5-9 kHz band before the loudnorm gain stage so harsh "s"/"sh" energy
+    isn't normalized up along with everything else.
+    """
     sample_rate = int(cfg.get("audio_sample_rate", 44100))
-    channels = int(cfg.get("audio_channels", 2))
-    base = f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}"
-
-    measured: dict | None = None
-    try:
-        probe = subprocess.run(
-            [
-                "ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
-                "-af", base + ":print_format=json", "-f", "null", "-",
-            ],
-            capture_output=True, text=True, timeout=120,
+    highpass = int(cfg.get("audio_highpass_hz", 60))
+    lowpass = int(cfg.get("audio_lowpass_hz", 18000))
+    pre: list[str] = []
+    if highpass > 0:
+        pre.append(f"highpass=f={highpass}")
+    if lowpass > 0:
+        pre.append(f"lowpass=f={lowpass}")
+    if cfg.get("audio_deesser", True):
+        pre.append(
+            audio_utils.deesser_filter(
+                float(cfg.get("audio_deesser_freq", 6500)),
+                sample_rate,
+                float(cfg.get("audio_deesser_intensity", 0.12)),
+            )
         )
-        measured = _parse_loudnorm_json(probe.stderr)
-    except (subprocess.SubprocessError, OSError):
-        measured = None
-
-    if measured is not None:
-        try:
-            input_i = float(measured["input_i"])
-        except (TypeError, ValueError):
-            input_i = float("-inf")
-        if not (input_i > -70.0):
-            return  # near-silent / unmeasurable: leave the turn as recorded
-        af = (
-            f"{base}:measured_I={measured['input_i']}"
-            f":measured_TP={measured['input_tp']}"
-            f":measured_LRA={measured['input_lra']}"
-            f":measured_thresh={measured['input_thresh']}"
-            f":offset={measured['target_offset']}"
-            ":linear=true:print_format=summary"
-        )
-    else:
-        af = base + ":print_format=summary"
-
-    normalized = work_dir / f"{path.stem}_norm{path.suffix}"
-    try:
-        result = subprocess.run(
-            [
-                "ffmpeg", "-y", "-i", str(path), "-af", af,
-                "-ar", str(sample_rate), "-ac", str(channels),
-                "-c:a", "libmp3lame", "-b:a", _audio_bitrate_value(cfg),
-                str(normalized),
-            ],
-            capture_output=True, text=True, timeout=180,
-        )
-        if result.returncode == 0 and normalized.exists() and normalized.stat().st_size > 0:
-            normalized.replace(path)
-        else:
-            logger.debug("Turn loudness normalize skipped (ffmpeg rc=%s)", result.returncode)
-            normalized.unlink(missing_ok=True)
-    except (subprocess.SubprocessError, OSError) as exc:
-        logger.debug("Turn loudness normalize error: %s", exc)
-        normalized.unlink(missing_ok=True)
+    return pre
 
 
 def _master_audio(input_path: Path, output_path: Path, cfg: dict, work_dir: Path) -> dict:
-    """Apply final podcast mastering and encode the publishable MP3."""
+    """Apply final podcast mastering and encode the publishable MP3.
+
+    Chain: highpass -> lowpass -> deesser (A2) -> loudnorm. Loudnorm is two-pass
+    + linear (A1) when ``audio_master_two_pass`` is set, falling back to a single
+    blind pass if measurement fails or the option is disabled. The program target
+    defaults to streaming-standard -14 LUFS / -1.0 dBTP.
+    """
     if not cfg.get("use_audio_mastering", True):
         if input_path.resolve() != output_path.resolve():
             shutil.copy2(input_path, output_path)
@@ -3035,59 +3022,67 @@ def _master_audio(input_path: Path, output_path: Path, cfg: dict, work_dir: Path
     if not input_path.exists():
         raise FileNotFoundError(f"Audio file not found for mastering: {input_path}")
 
-    highpass = int(cfg.get("audio_highpass_hz", 60))
-    lowpass = int(cfg.get("audio_lowpass_hz", 18000))
-    filters: list[str] = []
-    if highpass > 0:
-        filters.append(f"highpass=f={highpass}")
-    if lowpass > 0:
-        filters.append(f"lowpass=f={lowpass}")
-    filters.append(
-        "loudnorm="
-        f"I={float(cfg.get('audio_loudness_i', -16.0))}:"
-        f"TP={float(cfg.get('audio_true_peak', -1.5))}:"
-        f"LRA={float(cfg.get('audio_lra', 11.0))}:"
-        "print_format=summary"
-    )
+    sample_rate = int(cfg.get("audio_sample_rate", 44100))
+    channels = int(cfg.get("audio_channels", 2))
+    target_i = float(cfg.get("audio_loudness_i", -14.0))
+    target_tp = float(cfg.get("audio_true_peak", -1.0))
+    target_lra = float(cfg.get("audio_lra", 11.0))
+    bitrate = _audio_bitrate_value(cfg)
+    pre_filters = _master_chain_pre_filters(cfg)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    master_path = output_path
-    if input_path.resolve() == output_path.resolve():
-        master_path = work_dir / f"{output_path.stem}_mastered{output_path.suffix}"
+    want_two_pass = bool(cfg.get("audio_master_two_pass", True))
+    mode = "single_pass"
 
-    cmd = [
-        "ffmpeg",
-        "-y",
-        "-i",
-        str(input_path),
-        "-vn",
-        "-af",
-        ",".join(filters),
-        "-ar",
-        str(int(cfg.get("audio_sample_rate", 44100))),
-        "-ac",
-        str(int(cfg.get("audio_channels", 2))),
-        "-c:a",
-        "libmp3lame",
-        "-b:a",
-        _audio_bitrate_value(cfg),
-        str(master_path),
+    if want_two_pass:
+        ln = audio_utils.two_pass_loudnorm(
+            input_path, output_path,
+            target_i=target_i, target_tp=target_tp, target_lra=target_lra,
+            sample_rate=sample_rate, channels=channels, bitrate=bitrate,
+            pre_filters=pre_filters,
+        )
+        if ln["ok"]:
+            mode = ln["mode"]
+        else:
+            # Measurement skipped/failed: fall through to a single blind pass so
+            # we still always emit a master (or raise on a genuine ffmpeg error).
+            logger.debug("Master two-pass loudnorm not applied (%s); single-pass fallback", ln["mode"])
+            want_two_pass = False
+
+    if not want_two_pass:
+        af = ",".join(
+            pre_filters
+            + [f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}:print_format=summary"]
+        )
+        master_path = output_path
+        if input_path.resolve() == output_path.resolve():
+            master_path = work_dir / f"{output_path.stem}_mastered{output_path.suffix}"
+        cmd = [
+            "ffmpeg", "-y", "-i", str(input_path), "-vn", "-af", af,
+            "-ar", str(sample_rate), "-ac", str(channels),
+            "-c:a", "libmp3lame", "-b:a", bitrate, str(master_path),
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
+        if result.returncode != 0:
+            raise RuntimeError(f"ffmpeg audio mastering failed: {result.stderr[:800]}")
+        if master_path != output_path:
+            master_path.replace(output_path)
+        mode = "single_pass"
+
+    filters = pre_filters + [
+        f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}"
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
-    if result.returncode != 0:
-        raise RuntimeError(f"ffmpeg audio mastering failed: {result.stderr[:800]}")
-    if master_path != output_path:
-        master_path.replace(output_path)
-
     return {
         "enabled": True,
         "filters": filters,
-        "bitrate": _audio_bitrate_value(cfg),
-        "sample_rate": int(cfg.get("audio_sample_rate", 44100)),
-        "channels": int(cfg.get("audio_channels", 2)),
-        "loudness_i": float(cfg.get("audio_loudness_i", -16.0)),
-        "true_peak": float(cfg.get("audio_true_peak", -1.5)),
-        "lra": float(cfg.get("audio_lra", 11.0)),
+        "loudnorm_mode": mode,
+        "deesser": bool(cfg.get("audio_deesser", True)),
+        "bitrate": bitrate,
+        "sample_rate": sample_rate,
+        "channels": channels,
+        "loudness_i": target_i,
+        "true_peak": target_tp,
+        "lra": target_lra,
     }
 
 
