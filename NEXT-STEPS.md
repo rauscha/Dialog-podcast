@@ -11,11 +11,14 @@ Current setup (for whoever picks this up):
 - `run_digests.ps1` calls `python generate_podcast.py --digest-all`, which applies **per-show weekday gating** via `_show_is_due()` (`generate_podcast.py` ~L4505). Shows are configured in `digests.json`: MFM=`mon`, Fetal=`wed`, Signal=`fri` (each with a **1-day catch-up window**, rules 3–4 in `_show_is_due`).
 - So *by design* it's ≤1 show/day (≈one episode most weekdays), **not** 3/day. The "3/day" symptom likely came from the multi-day ElevenLabs quota outage: shows that failed to publish kept their `last_run.aired_at` stale and re-qualified as due/catch-up once quota returned. **Verify this before changing logic.**
 
-**Decision to make before implementing** (changes the fix):
-- (a) **One digest morning per week** — consolidate all 3 shows onto a single weekday (set all `schedule.weekday` the same in `digests.json`) and/or switch the trigger to `-Weekly -DaysOfWeek <day>`. One run, 3 episodes, once a week.
-- (b) **Keep shows spread but truly weekly** — leave mon/wed/fri but make sure each fires only once per week (tighten/disable the catch-up so a stale-ledger backlog can't stack). Still ≈3 episodes/week, just on different mornings.
+**DECIDED (2026-06-06): keep the Mon/Wed/Fri spread, but make each show fire only ONCE per week** — so ≈3 episodes/week on different mornings, never stacking. *Not* consolidating onto one day.
 
-**Likely changes:** `register_scheduled_task.ps1` trigger (`-Daily` → `-Weekly`), possibly `digests.json` weekdays, and an audit of `_show_is_due` catch-up behavior after a failed-run backlog. Re-run `register_scheduled_task.ps1` as Admin to apply the new trigger. **Sanity-check with `--digest-dry-run`/`--digest` (SKIP_GIT) so no real episodes are spent while testing.**
+**Implementation (chosen path):**
+- Keep `digests.json` weekdays as-is (MFM=mon, Fetal=wed, Signal=fri) and keep the daily Task Scheduler trigger (the daily wake is how each show hits its own weekday) — so `register_scheduled_task.ps1` likely needs **no change**.
+- The fix is in **`_show_is_due()`** (`generate_podcast.py` ~L4505): the **1-day catch-up window (rule 4) is what lets a stale-ledger backlog re-fire** after a failed-run stretch (e.g. the ElevenLabs quota outage). Tighten it so a show runs at most once per 7-day window: e.g. add a guard that returns not-due if `last_run.aired_at` is within the last ~6 days, regardless of weekday/catch-up — or drop the catch-up entirely if missing a week is acceptable.
+- First **confirm the root cause**: inspect each show's `last_run.aired_at` in the ledgers (`digests/*_ledger.json`) vs. the actual extra episodes, to verify it was catch-up stacking and not something else.
+
+**Sanity-check** with `--digest-dry-run <show>` and `_show_is_due` unit-style checks (it takes an injectable `today=` param, ~L4510) so no real episodes are spent while testing. Don't forget the bot's `/digest` on-demand path still works for manual one-offs.
 
 ## In-flight: State-of-the-art quality upgrades (2026-06-05)
 
