@@ -1,15 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "the balance between technical precision and artistic intuition when composing within the limitations of early sound chips",
-      "created_at": "2026-05-29T21:31:46.628966+00:00",
-      "juno_noticed": "the creative potential of working within hardware limitations, and how constraints can lead to innovation in sound design",
-      "relationship_moment": "Juno's realization that chiptune is about creativity within constraints, and Caspar's confirmation that this is a recurring theme in both sound design and music theory",
-      "run_id": "20260529_162448_how_do_i_build_a_classic_chiptune_sound_first_from_a_sound_d",
-      "topic": "how do I build a classic chiptune sound, first from a sound design perspective, then from a music theory perspective, this should be an example-heavy episode",
-      "usable_callback": "the use of arpeggiation as a technique to simulate chords in chiptune, and its historical roots in Martin Galway's work on the Commodore 64"
-    },
-    {
       "caspar_challenged": "the commercialization and institutionalization of barbecue competitions, and the question of whether they can honor their roots while evolving",
       "created_at": "2026-05-31T00:30:16.641436+00:00",
       "juno_noticed": "the erasure of Black pitmasters in the origin story of barbecue competitions and the tension between tradition and spectacle",
@@ -107,6 +98,15 @@
       "run_id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05",
       "topic": "Signal in the Scan - week of 2026/06/05",
       "usable_callback": "Caspar's three-claim distinction: 'non-inferior,' 'equivalent,' and 'just as good anywhere' are not the same claim and only the first is in the data. Also: Juno's formulation \u2014 '88 gets cited. 75 is the deployment number.'"
+    },
+    {
+      "caspar_challenged": "",
+      "created_at": "2026-06-06T10:08:15.846574+00:00",
+      "juno_noticed": "",
+      "relationship_moment": "",
+      "run_id": "20260606_050146_signal_in_the_scan_-_week_of_2026_06_06",
+      "topic": "Signal in the Scan - week of 2026/06/06",
+      "usable_callback": ""
     }
   ],
   "hosts": {
@@ -575,5 +575,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-05T10:07:28.415022+00:00"
+  "updated_at": "2026-06-06T10:08:15.847576+00:00"
 }

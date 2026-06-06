@@ -11,6 +11,36 @@
       "url": "https://doi.org/10.1002/uog.70241",
       "year": 2026
     },
+    "10.1016/j.landig.2026.100986": {
+      "aired_at": "2026-06-06T10:09:21.689235+00:00",
+      "doi": "10.1016/j.landig.2026.100986",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
+      "pmid": "42248714",
+      "publication": "Lancet Digit Health",
+      "title": "Deep learning for H&E-based meningioma molecular classification and outcome prediction: a retrospective cohort study.",
+      "url": "https://doi.org/10.1016/j.landig.2026.100986",
+      "year": 2026
+    },
+    "10.1038/s41746-026-02826-9": {
+      "aired_at": "2026-06-06T10:09:21.689235+00:00",
+      "doi": "10.1038/s41746-026-02826-9",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
+      "pmid": "42230902",
+      "publication": "NPJ Digit Med",
+      "title": "A large-scale vision foundation model for musculoskeletal radiographs.",
+      "url": "https://doi.org/10.1038/s41746-026-02826-9",
+      "year": 2026
+    },
+    "10.1038/s41746-026-02831-y": {
+      "aired_at": "2026-06-06T10:09:21.689235+00:00",
+      "doi": "10.1038/s41746-026-02831-y",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
+      "pmid": "42249085",
+      "publication": "NPJ Digit Med",
+      "title": "Enhancing foundation model transfer for prostate cancer detection with patch-level contrastive learning.",
+      "url": "https://doi.org/10.1038/s41746-026-02831-y",
+      "year": 2026
+    },
     "10.1038/s41746-026-02849-2": {
       "aired_at": "2026-06-03T05:58:49.602904+00:00",
       "doi": "10.1038/s41746-026-02849-2",
@@ -21,6 +51,16 @@
       "url": "https://doi.org/10.1038/s41746-026-02849-2",
       "year": 2026
     },
+    "10.1038/s41746-026-02855-4": {
+      "aired_at": "2026-06-06T10:09:21.689235+00:00",
+      "doi": "10.1038/s41746-026-02855-4",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
+      "pmid": "42243528",
+      "publication": "NPJ Digit Med",
+      "title": "Fully automated system predicts osteoporotic vertebral fracture across institutions using lumbar MRI paraspinal muscle signatures.",
+      "url": "https://doi.org/10.1038/s41746-026-02855-4",
+      "year": 2026
+    },
     "10.1148/radiol.251394": {
       "aired_at": "2026-06-05T10:08:15.197448+00:00",
       "doi": "10.1148/radiol.251394",
@@ -29,6 +69,16 @@
       "publication": "Radiology",
       "title": "Planimetric and Linear MRI Markers for Progressive Supranuclear Palsy Classification: A Large Multicohort International Study.",
       "url": "https://doi.org/10.1148/radiol.251394",
+      "year": 2026
+    },
+    "10.1148/radiol.251658": {
+      "aired_at": "2026-06-06T10:09:21.689235+00:00",
+      "doi": "10.1148/radiol.251658",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
+      "pmid": "42227864",
+      "publication": "Radiology",
+      "title": "One-year Follow-up after US-guided Transperineal Focal Laser Ablation of Localized Prostate Cancer: Worldwide Registry Study.",
+      "url": "https://doi.org/10.1148/radiol.251658",
       "year": 2026
     },
     "10.1148/radiol.251719": {
@@ -103,21 +153,21 @@
     }
   },
   "last_run": {
-    "aired_at": "2026-06-05T10:08:15.197448+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260605_050139_signal_in_the_scan_-_week_of_2026_06_05.mp3",
+    "aired_at": "2026-06-06T10:09:21.689235+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
     "recorded_keys": [
-      "10.1002/uog.70241",
-      "10.1148/ryai.250331",
-      "10.1148/radiol.252250",
-      "10.1148/radiol.251394",
-      "10.1148/radiol.253143"
+      "10.1038/s41746-026-02831-y",
+      "10.1016/j.landig.2026.100986",
+      "10.1148/radiol.251658",
+      "10.1038/s41746-026-02826-9",
+      "10.1038/s41746-026-02855-4"
     ],
     "window": {
-      "from": "2025/12/02",
-      "to": "2026/06/05"
+      "from": "2025/12/03",
+      "to": "2026/06/06"
     }
   },
   "schema_version": 1,
   "show_id": "ai",
-  "updated_at": "2026-06-05T10:08:15.197448+00:00"
+  "updated_at": "2026-06-06T10:09:21.689235+00:00"
 }
