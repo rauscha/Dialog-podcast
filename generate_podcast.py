@@ -2941,13 +2941,146 @@ def _interleave_silence(parts: list[Path], silence_path: Path | None) -> list[Pa
     return interleaved
 
 
-def _ffmpeg_concat_configured(parts: list, output: Path, cfg: dict) -> None:
+def _probe_dur(path: Path) -> float:
+    """Best-effort segment duration in seconds (0.0 if unknown)."""
+    try:
+        r = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=nw=1:nk=1", str(path)],
+            capture_output=True, text=True, timeout=30,
+        )
+        return float(r.stdout.strip())
+    except (subprocess.SubprocessError, OSError, ValueError):
+        return 0.0
+
+
+def _crossfade_concat(
+    parts: list,
+    output: Path,
+    join_durations: list,
+    *,
+    sample_rate: int = 44100,
+    channels: int = 2,
+    bitrate: str = "192k",
+    curve: str = "tri",
+    timeout: int = 900,
+) -> None:
+    """Concatenate audio with an ``acrossfade`` at every join (A3).
+
+    ``join_durations[i]`` is the desired crossfade (seconds) between
+    ``parts[i]`` and ``parts[i+1]``; each is clamped to <45% of the shorter
+    neighbor so the fade can never exceed (or swallow) a short segment such as
+    the intro ident. ``acrossfade`` *overlaps* clips, so total duration shrinks
+    by the sum of the realized crossfades — any caller that also inserts gaps
+    (Phase B2) must account for this and not double-apply.
+
+    Inputs are passed relative to their common parent with ffmpeg's cwd set
+    there, and the filter graph goes through a temp script file, so the argv
+    stays well under the Windows ~32k limit even for hundreds of segments.
+    """
+    existing = [Path(p) for p in parts if Path(p).exists()]
+    if not existing:
+        raise ValueError("No audio segments to concatenate")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    if len(existing) == 1:
+        shutil.copy2(existing[0], output)
+        return
+
+    durs = [_probe_dur(p) for p in existing]
+    clamped: list[float] = []
+    for i in range(len(existing) - 1):
+        d = float(join_durations[i]) if i < len(join_durations) else float(join_durations[-1])
+        neigh = min(durs[i], durs[i + 1]) if durs[i] > 0 and durs[i + 1] > 0 else 0.0
+        if neigh > 0:
+            d = min(d, 0.45 * neigh)
+        clamped.append(max(0.001, d))
+
+    abs_parts = [p.resolve() for p in existing]
+    try:
+        base = Path(os.path.commonpath([str(p.parent) for p in abs_parts]))
+    except ValueError:
+        base = abs_parts[0].parent
+    rel = [os.path.relpath(p, base) for p in abs_parts]
+
+    inputs: list[str] = []
+    for r in rel:
+        inputs += ["-i", r]
+    fc_parts: list[str] = []
+    label = "[0:a]"
+    for i in range(1, len(existing)):
+        outl = f"[a{i}]"
+        fc_parts.append(
+            f"{label}[{i}:a]acrossfade=d={clamped[i-1]:.4f}:c1={curve}:c2={curve}{outl}"
+        )
+        label = outl
+    fc = ";".join(fc_parts)
+
+    with tempfile.NamedTemporaryFile(
+        mode="w", suffix=".txt", delete=False, encoding="utf-8"
+    ) as sf:
+        sf.write(fc)
+        script_path = Path(sf.name)
+    try:
+        cmd = [
+            "ffmpeg", "-y", "-hide_banner", *inputs,
+            "-filter_complex_script", str(script_path),
+            "-map", label,
+            "-ar", str(int(sample_rate)), "-ac", str(int(channels)),
+            "-c:a", "libmp3lame", "-b:a", str(bitrate),
+            str(output.resolve()),
+        ]
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=timeout, cwd=str(base)
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"ffmpeg crossfade concat failed: {result.stderr[:500]}")
+    finally:
+        script_path.unlink(missing_ok=True)
+
+
+def _ffmpeg_concat_configured(
+    parts: list,
+    output: Path,
+    cfg: dict,
+    *,
+    join_durations: list | None = None,
+    curve: str = "tri",
+) -> None:
+    """Concatenate configured-format segments, with micro-crossfades (A3).
+
+    Defaults to a ``concat_crossfade_ms`` (10 ms) crossfade at every join to kill
+    click/pop at seams; pass ``join_durations`` (per-join seconds) for the
+    music<->speech bookends, which want a longer fade. Falls back to a hard
+    concat if crossfading is disabled, there's nothing to fade, or the crossfade
+    pass errors — assembly must never fail over a fade.
+    """
+    sample_rate = int(cfg.get("audio_sample_rate", 44100))
+    channels = int(cfg.get("audio_channels", 2))
+    bitrate = _audio_bitrate_value(cfg)
+    existing = [Path(p) for p in parts if Path(p).exists()]
+
+    xfade_ms = int(cfg.get("concat_crossfade_ms", 10))
+    if join_durations is None and xfade_ms > 0:
+        join_durations = [xfade_ms / 1000.0] * max(0, len(existing) - 1)
+
+    if (
+        join_durations is not None
+        and len(existing) > 1
+        and any(d > 0 for d in join_durations)
+    ):
+        try:
+            _crossfade_concat(
+                existing, output, join_durations,
+                sample_rate=sample_rate, channels=channels,
+                bitrate=bitrate, curve=curve,
+            )
+            return
+        except (RuntimeError, ValueError, subprocess.SubprocessError, OSError) as exc:
+            logger.warning("Crossfade concat failed (%s); falling back to hard concat", exc)
+
     _ffmpeg_concat(
-        parts,
-        output,
-        bitrate=_audio_bitrate_value(cfg),
-        sample_rate=int(cfg.get("audio_sample_rate", 44100)),
-        channels=int(cfg.get("audio_channels", 2)),
+        existing, output,
+        bitrate=bitrate, sample_rate=sample_rate, channels=channels,
     )
 
 
@@ -4230,7 +4363,14 @@ def _run_with_cfg(
                     if ident_path and ident_path.exists():
                         segments.append(ident_path)
                     segments += [intro_path, audio_path, outro_path]
-                    _ffmpeg_concat_configured(segments, final_mp3, cfg)
+                    # Longer, equal-power crossfades for the music<->speech
+                    # bookends (A3); each join clamps to the shorter segment.
+                    music_xf = float(cfg.get("music_crossfade_sec", 2.5))
+                    _ffmpeg_concat_configured(
+                        segments, final_mp3, cfg,
+                        join_durations=[music_xf] * (len(segments) - 1),
+                        curve="qsin",
+                    )
                     manifest.data.setdefault("paths", {}).update(
                         {
                             "music_intro": str(intro_path),
