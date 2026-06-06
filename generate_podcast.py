@@ -4172,6 +4172,7 @@ def _run_with_cfg(
                         final_output=raw_audio,
                         skip_failed=True,
                         two_host_tts_fn=tts_fn,
+                        clip_loudnorm_i=float(cfg.get("audio_loudness_i", -14.0)),
                     )
                 except Exception as exc:
                     logger.warning(

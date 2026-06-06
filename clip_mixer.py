@@ -14,6 +14,8 @@ import tempfile
 
 import anthropic
 
+import audio_utils
+
 _ALLOWED_VIDEO_HOSTS = {
     "youtube.com", "www.youtube.com", "m.youtube.com",
     "music.youtube.com", "youtu.be",
@@ -178,7 +180,7 @@ def _parse_timestamp(ts: str) -> float:
         return 30.0
 
 
-def extract_clip(cue: ClipCue, work_dir: Path):
+def extract_clip(cue: ClipCue, work_dir: Path, loudnorm_i: float = -14.0):
     print(f"   [clip] Searching for: {cue.search_query!r}")
     videos = search_youtube(cue.search_query, max_results=8)
     if not videos:
@@ -251,6 +253,18 @@ def extract_clip(cue: ClipCue, work_dir: Path):
     if result.returncode != 0 or not out_path.exists():
         print(f"   [clip] ffmpeg trim failed for {cue.cue_id}: {result.stderr[:200]}")
         return None
+
+    # A4: loudness-match the clip to the program target so a loud or quiet source
+    # doesn't jump out of the dialogue bed. Two-pass linear keeps the clip's own
+    # dynamics; never raises, so a normalization miss leaves the trimmed clip as-is.
+    ln = audio_utils.two_pass_loudnorm(
+        out_path, out_path,
+        target_i=float(loudnorm_i), target_tp=-1.0, target_lra=11.0,
+        sample_rate=44100, channels=2, bitrate="192k",
+        encode_timeout=120,
+    )
+    if not ln["ok"]:
+        print(f"   [clip] loudness match skipped for {cue.cue_id} ({ln['mode']})")
 
     actual_dur  = _get_audio_duration(out_path)
     attribution = f'Clip from: "{video_title}" — {channel}, {year}'
@@ -390,6 +404,7 @@ def process_clips(
     final_output: Path,
     skip_failed: bool = True,
     two_host_tts_fn=None,
+    clip_loudnorm_i: float = -14.0,
 ) -> tuple:
     """Annotate script with clip cues, extract clips, and assemble final audio.
 
@@ -412,7 +427,7 @@ def process_clips(
 
     try:
         for cue in cues:
-            clip = extract_clip(cue, clips_tmp)
+            clip = extract_clip(cue, clips_tmp, loudnorm_i=clip_loudnorm_i)
             if clip:
                 # Copy to stable location, then remove from download dir — avoids
                 # cross-directory rename issues and Windows handle contention
