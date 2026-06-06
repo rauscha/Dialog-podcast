@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Annotation Problem, Named"
+    },
+    {
+      "startTime": 48.61,
+      "title": "\u2014 Headline: Citation, Design, and the Choice That Earns the Evidence Grade"
+    },
+    {
+      "startTime": 97.22,
+      "title": "\u2014 Headline: Numbers, Heterogeneity, and What \"Six Cohorts\" Does and Doesn't Prove"
+    },
+    {
+      "startTime": 145.83,
+      "title": "\u2014 Headline: Practice Impact \u2014 Honest About \"Nothing Yet\""
+    },
+    {
+      "startTime": 194.44,
+      "title": "\u2014 Pivot and Round 1: Landry, Meningioma H&E Classification"
+    },
+    {
+      "startTime": 243.05,
+      "title": "\u2014 Round 2: de Bie, Focal Laser Ablation Registry"
+    },
+    {
+      "startTime": 291.66,
+      "title": "\u2014 Round 3: Kim, SKELEX Foundation Model"
+    },
+    {
+      "startTime": 340.27,
+      "title": "\u2014 Round 4: Zhang, Paraspinal Muscle Fracture Prediction"
+    },
+    {
+      "startTime": 388.88,
+      "title": "\u2014 Close: What to Watch, What's Unsettled, Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}
