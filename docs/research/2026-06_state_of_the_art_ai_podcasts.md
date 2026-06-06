@@ -8,12 +8,14 @@ fact-check → per-turn `gpt-4o-mini-tts` → ffmpeg assembly + MusicGen/clips).
 This is a **scoping document**, not a work order. Nothing here has been implemented.
 The point is to lay out the landscape so we can later cherry-pick what's worth translating.
 
-> ## 🔴 P0 — NEXT TASK
-> **Create a walkthrough of next steps to implement these improvements.** This scoping
-> review is complete; the current top priority is turning Section 7's shortlist into a
-> concrete, ordered implementation walkthrough (what to change in `generate_podcast.py`,
-> `clip_mixer.py`, and `music_gen.py`, in what order, with acceptance criteria) so the
-> improvements can actually be built.
+> ## ✅ Walkthrough done → now build Phase A
+> **The implementation walkthrough exists: [`2026-06_implementation_walkthrough.md`](./2026-06_implementation_walkthrough.md)**
+> (authored 2026-06-05). It maps Section 7's shortlist to concrete, code-grounded tasks across
+> `generate_podcast.py` / `clip_mixer.py` / `music_gen.py`, ordered in five phases (A audio →
+> B timing/speech → C editorial → D architecture → E shared-context TTS), each with acceptance
+> criteria. A code audit found several shortlist items already partly/fully built (per-turn
+> loudnorm, persona bible, rewriter passes) — the walkthrough targets the *deltas*.
+> **Current top priority: implement Phase A (audio-engineering finish).**
 
 **Confidence tags used below:** `[CONFIRMED]` (primary source / first-party docs /
 shipping code), `[REPORTED]` (credible secondary teardown, consistent across sources),

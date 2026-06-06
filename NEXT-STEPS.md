@@ -2,6 +2,17 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
+## In-flight: State-of-the-art quality upgrades (2026-06-05)
+
+Scoping review (`docs/research/2026-06_state_of_the_art_ai_podcasts.md`) → implementation walkthrough (`docs/research/2026-06_implementation_walkthrough.md`, authored 2026-06-05). The walkthrough turns the review's Section 7 shortlist into 5 ordered, code-grounded phases (A audio-engineering → B timing/speech realism → C editorial → D beat-gate architecture → E shared-context TTS), each with acceptance criteria. A code audit found several items already built (per-turn two-pass loudnorm, persona bible, rewriter passes), so the plan targets *deltas*.
+
+- [x] **Walkthrough authored (2026-06-05).** Section 7 → ordered build plan.
+- [ ] **Phase A — audio-engineering finish (NEXT).** A1 two-pass final master + retarget −14 LUFS/−1.0 dBTP; A2 de-esser in `_master_audio`; A3 micro-crossfades at concat joins; A4 per-clip loudnorm in `clip_mixer.py`; A5 (optional) 48k internal. Pure ffmpeg, low risk, verify with `audio-scope` + `loudnorm summary`. **Biggest quality-per-hour; recommended first sprint.**
+- [ ] **Phase B** — emotion threading (B1, quick win) → edge-trim + variable gaps (B2) → disfluency/backchannel pass (B3) → overlaid backchannels (B4, stretch).
+- [ ] **Phase C** — anti-slop critic + gate (C1); persona vocabulary + enforced disagreement (C2, small).
+- [ ] **Phase D** — beat-gate + checkpoint/resume (D1); Q&A-round generation (D2); regenerate-until-grounded fact-check (D3).
+- [ ] **Phase E** — shared-context dialogue TTS (ElevenLabs v3 Text-to-Dialogue, or Dia/Higgs/MoonCast on the 4080). Big lever, behind a flag; prototype Dia as a spike first.
+
 ## In-flight: Asynchronous Rounds — weekly journal digests (NEW top priority, 2026-05-31)
 
 Plan approved + **Phase 1 shipped** this session. Full plan: `C:\Users\andre\.claude\plans\idempotent-strolling-riddle.md`. Three weekly auto-generated digest shows for the commute — **MFM Rounds**, **The Fetal Frontier**, **Signal in the Scan** — same Juno/Caspar hosts, 3 separate RSS feeds. Citation-free ranking (LLM importance + age-normalized Altmetric + journal quartile + evidence level), rolling ~6-month window, per-show DOI ledger to gate already-covered papers.
