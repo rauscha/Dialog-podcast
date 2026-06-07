@@ -1,0 +1,362 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260607_095803_the_future_of_interplanetary_spaceflight_current_plans_to_la.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Bolt"
+    },
+    {
+      "start_sec": 56.35,
+      "start_time": "0:56",
+      "title": "\u2014 The Puzzle: Ambition at Scale"
+    },
+    {
+      "start_sec": 112.7,
+      "start_time": "1:53",
+      "title": "\u2014 The 60-Launch Problem"
+    },
+    {
+      "start_sec": 169.05,
+      "start_time": "2:49",
+      "title": "\u2014 Guest Entry: Dr. Vale Reframes the Problem"
+    },
+    {
+      "start_sec": 225.4,
+      "start_time": "3:45",
+      "title": "\u2014 The Radiation Ceiling"
+    },
+    {
+      "start_sec": 281.75,
+      "start_time": "4:42",
+      "title": "\u2014 Dr. Vale Exits"
+    },
+    {
+      "start_sec": 338.1,
+      "start_time": "5:38",
+      "title": "\u2014 The Future That Got Cancelled (Affectionate Disagreement)"
+    },
+    {
+      "start_sec": 394.45,
+      "start_time": "6:34",
+      "title": "\u2014 The Explosion That Removed the Backup"
+    },
+    {
+      "start_sec": 450.79,
+      "start_time": "7:31",
+      "title": "\u2014 China, Patience, and the Systematic Approach"
+    },
+    {
+      "start_sec": 507.14,
+      "start_time": "8:27",
+      "title": "\u2014 The Factory That Has to Work Before Anyone Can Come Home"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260607_095803_the_future_of_interplanetary_spaceflight_current_plans_to_la.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260607_095803_the_future_of_interplanetary_spaceflight_current_plans_to_la.companion.json",
+  "duration_sec": 608.493311,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "Most current consolidated timeline of Artemis missions, including the February 2026 restructuring that pushed the first lunar landing from Artemis III to Artemis IV (early 2028), and the March 2026 cancellation of Lunar Gateway.",
+      "source": "Wikipedia",
+      "title": "Artemis Program Wikipedia Entry (continuously updated)",
+      "url": "https://en.wikipedia.org/wiki/Artemis_program"
+    },
+    {
+      "reason": "Documents Elon Musk's May 2025 presentation with specific launch targets: 5 uncrewed Starships in 2026/27 window (50% chance of making it), scaling to 20 missions in 2028/29, 100 in 2030/31, and 500 by 2033.",
+      "source": "Wikipedia",
+      "title": "SpaceX Mars Colonization Program",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program"
+    },
+    {
+      "reason": "Foundational paper on Mars radiation risk. Predicts central estimates for radiation-induced mortality could exceed 5% with upper 95% CI near 10% for a Mars mission. NASA's standard limits astronaut exposures to 3% REID.",
+      "source": "PLOS ONE",
+      "title": "How Safe Is Safe Enough? Radiation Risk for a Human Mission to Mars",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0074988"
+    },
+    {
+      "reason": "Technical analysis showing 90-day Mars transit is feasible with chemical propulsion via orbital refueling. Requires ~45 Starship launches per mission. Faster transit reduces radiation exposure and bone loss.",
+      "source": "Nature Scientific Reports",
+      "title": "3 Months Transit Time to Mars for Human Missions Using SpaceX Starship",
+      "url": "https://www.nature.com/articles/s41598-025-00565-7"
+    },
+    {
+      "reason": "Documents the counterintuitive cancellation of nuclear thermal propulsion R&D because SpaceX made chemical rockets cheap enough to undercut the investment case. DARPA Deputy Director cited 'declining return on investment.'",
+      "source": "SpaceNews",
+      "title": "DARPA Cancels DRACO Nuclear Propulsion Project",
+      "url": "https://spacenews.com/darpa-says-decreasing-launch-costs-new-analysis-led-it-to-cancel-draco-nuclear-propulsion-project/"
+    },
+    {
+      "reason": "Critical analysis of Orion heat shield problems. Documents that 3 of 4 separation bolts melted through on Artemis I, and NASA's OIG identified three potentially crew-killing failure modes. Former astronaut Charles Camarda estimated 1-in-20 chance of disaster.",
+      "source": "Idle Words",
+      "title": "Artemis II Is Not Safe to Fly",
+      "url": "https://idlewords.com/2026/03/artemis_ii_is_not_safe_to_fly.htm"
+    },
+    {
+      "reason": "Expert analysis of SpaceX Mars architecture. Quotes Donald Rapp (JPL consultant): 'Starship needs 1,200 tons of propellant, and you've got a tanker that takes 100 tons at a time'\u2014meaning 12 tanker launches per Mars-bound ship, 60 total for the 2026 window.",
+      "source": "Aerospace America (AIAA)",
+      "title": "A Closer Look at SpaceX's Mars Plan",
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/"
+    },
+    {
+      "reason": "Documents the May 28, 2026 New Glenn explosion that destroyed Blue Origin's only operational orbital pad, potentially eliminating NASA's backup lunar lander option just days after NASA awarded Blue Origin $627 million for Moon Base 1.",
+      "source": "The Manila Times",
+      "title": "Blue Origin Explosion Disrupts NASA's Lunar Ambitions",
+      "url": "https://www.manilatimes.net/2026/06/04/business/science-technology/blue-origin-explosion-disrupts-nasas-lunar-ambitions/2359894"
+    }
+  ],
+  "generated_at": "2026-06-07T15:11:13.299106+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim specific institutional affiliation or name real NASA programs as their own work",
+        "Should not predict whether Mars missions will succeed or fail \u2014 only characterize the state of the unsolved problems",
+        "Should not overstate the bystander effect findings beyond what the 2017 literature supports",
+        "Should not present ISRU as impossible \u2014 only as undemonstrated at the required scale with the required energy source",
+        "Should not speak to SpaceX internal engineering decisions as if they have insider knowledge"
+      ],
+      "cartesia_voice_id": "25d7abcb-4d6d-4aca-adce-8a1c85620c8b",
+      "credential_frame": "A composite of planetary mission planners, human factors researchers, and ISRU systems engineers who have worked on Mars Design Reference Missions and analog habitat studies \u2014 someone who has spent years building the architecture and now lives with what the architecture assumes",
+      "delivery_baseline": "Measured pace, slight pauses before key distinctions, never raises volume for emphasis \u2014 lets the weight of the claim do the work",
+      "display_name": "Dr. Vale",
+      "expertise": "The specific interaction between radiation biology, ISRU energy budgets, and mission return architecture \u2014 the three problems that don't respond to more hardware or more money. Can explain why the bystander effect changes the cancer risk math, why 20\u201350 MWh per ton of propellant almost certainly requires nuclear power that doesn't exist on Mars yet, and why the 22-minute delay is categorically different from every other problem on the list.",
+      "field": "human spaceflight mission architecture and crew survivability",
+      "label": "DR VALE",
+      "personality": "Precise but not cold \u2014 someone who chose this field because they believed in it and now finds themselves in the uncomfortable position of being the person in the room who keeps saying 'that assumption hasn't been validated.' Not a pessimist. More like a structural engineer who loves bridges and keeps noticing the load calculations don't close. Occasionally catches themselves being more candid than they intended.",
+      "role_in_episode": "Enters after the 60-launch problem is established, when Caspar pushes on whether orbital refueling is the real linchpin or just the most visible one. Dr. Vale reframes: refueling is an engineering problem with a plausible solution path; ISRU and radiation are different in kind, not degree. Sharpens the complication beat by giving the hosts a taxonomy they didn't have \u2014 solvable, unsolved, and unsolvable-with-current-physics. Exits before the synthesis so Juno and Caspar can arrive at the ending on their own terms.",
+      "synthetic": true,
+      "tts_provider": "cartesia",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "Artemis II flew April 1-11, 2026, marking the first humans beyond low Earth orbit since Apollo 17 in 1972. The crew (Reid Wiseman, Victor Glover, Christina Koch, Jeremy Hansen) completed a lunar flyby reaching 406,770 km from Earth.",
+      "confidence": "HIGH",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "The first crewed lunar landing under Artemis is now targeted for Artemis IV in early 2028, not Artemis III. Artemis III (late 2027) was redesignated to an Earth-orbit docking test with the Human Landing Systems.",
+      "confidence": "HIGH",
+      "id": "C2",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Lunar Gateway was cancelled in March 2026 when NASA shifted focus to a surface base instead of an orbital station.",
+      "confidence": "HIGH",
+      "id": "C3",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "SpaceX plans to launch 5 uncrewed Starships to Mars in the 2026/27 window, with Elon Musk estimating a 50% chance of being ready in time. If successful, crewed flights could begin as early as 2029, though 2031 is more likely.",
+      "confidence": "MEDIUM-HIGH",
+      "id": "C4",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Orbital refueling\u2014the linchpin of both lunar and Mars Starship missions\u2014has never been demonstrated between two spacecraft. A full-scale transfer demonstration between two Starships is planned for 2026.",
+      "confidence": "HIGH",
+      "id": "C5",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "Each Mars-bound Starship requires approximately 12 tanker launches to refuel in orbit. The 5 Starships planned for 2026 would require 60 tanker launches\u2014an unprecedented stress test of ground infrastructure.",
+      "confidence": "HIGH",
+      "id": "C6",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "NASA's radiation standard limits astronaut exposures to a 3% risk of exposure-induced death (REID). Models predict a Mars mission could exceed 5% central estimate with upper 95% CI near 10%\u2014potentially exceeding NASA's own limits.",
+      "confidence": "HIGH",
+      "id": "C7",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "A 2017 study found that cosmic ray damage extends to 'bystander' cells near damaged cells, effectively doubling cancer risk estimates for Mars missions compared to conventional models.",
+      "confidence": "HIGH",
+      "id": "C8",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "The DRACO nuclear thermal propulsion program was cancelled in 2025 because declining launch costs (driven by SpaceX) undermined the investment case. NASA's FY2026 budget zeroed out all nuclear propulsion funding.",
+      "confidence": "HIGH",
+      "id": "C9",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "claim": "Orion's heat shield suffered unexpected erosion at more than 100 locations during Artemis I reentry. Three of four separation bolts melted through. NASA modified the Artemis II reentry trajectory rather than replacing the heat shield.",
+      "confidence": "HIGH",
+      "id": "C10",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "Blue Origin's New Glenn rocket exploded during a static fire test on May 28, 2026, destroying the rocket and severely damaging Launch Complex 36\u2014Blue Origin's only operational orbital pad. This occurred two days after NASA awarded Blue Origin $627 million for Moon Base 1 missions.",
+      "confidence": "HIGH",
+      "id": "C11",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "China is targeting a crewed Mars mission around 2050, with robotic Mars sample return (Tianwen-3) planned for 2028-2031 and a crewed lunar landing targeted for 2029.",
+      "confidence": "MEDIUM-HIGH",
+      "id": "C12",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "In-situ resource utilization (ISRU) for propellant production on Mars has never been demonstrated at scale. The Sabatier process to produce methane requires approximately 20-50 MWh per ton of propellant\u2014necessitating nuclear power for reliability.",
+      "confidence": "HIGH",
+      "id": "C13",
+      "source_ids": [
+        "S4",
+        "S7"
+      ]
+    },
+    {
+      "claim": "Communication delays between Earth and Mars range up to 22 minutes one-way. During solar conjunction (every 26 months), there is a two-week communications blackout when the Sun is between Earth and Mars.",
+      "confidence": "HIGH",
+      "id": "C14",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Wikipedia contributors",
+      "id": "S1",
+      "publication": "Wikipedia",
+      "title": "Artemis Program Wikipedia Entry (continuously updated)",
+      "url": "https://en.wikipedia.org/wiki/Artemis_program",
+      "why_it_matters": "Most current consolidated timeline of Artemis missions, including the February 2026 restructuring that pushed the first lunar landing from Artemis III to Artemis IV (early 2028), and the March 2026 cancellation of Lunar Gateway.",
+      "year": "2026"
+    },
+    {
+      "author": "Wikipedia contributors",
+      "id": "S2",
+      "publication": "Wikipedia",
+      "title": "SpaceX Mars Colonization Program",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "why_it_matters": "Documents Elon Musk's May 2025 presentation with specific launch targets: 5 uncrewed Starships in 2026/27 window (50% chance of making it), scaling to 20 missions in 2028/29, 100 in 2030/31, and 500 by 2033.",
+      "year": "2026"
+    },
+    {
+      "author": "Cucinotta FA, Kim MH, Chappell LJ",
+      "id": "S3",
+      "publication": "PLOS ONE",
+      "title": "How Safe Is Safe Enough? Radiation Risk for a Human Mission to Mars",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0074988",
+      "why_it_matters": "Foundational paper on Mars radiation risk. Predicts central estimates for radiation-induced mortality could exceed 5% with upper 95% CI near 10% for a Mars mission. NASA's standard limits astronaut exposures to 3% REID.",
+      "year": "2013"
+    },
+    {
+      "author": "Scientific Reports authors",
+      "id": "S4",
+      "publication": "Nature Scientific Reports",
+      "title": "3 Months Transit Time to Mars for Human Missions Using SpaceX Starship",
+      "url": "https://www.nature.com/articles/s41598-025-00565-7",
+      "why_it_matters": "Technical analysis showing 90-day Mars transit is feasible with chemical propulsion via orbital refueling. Requires ~45 Starship launches per mission. Faster transit reduces radiation exposure and bone loss.",
+      "year": "2025"
+    },
+    {
+      "author": "Jeff Foust",
+      "id": "S5",
+      "publication": "SpaceNews",
+      "title": "DARPA Cancels DRACO Nuclear Propulsion Project",
+      "url": "https://spacenews.com/darpa-says-decreasing-launch-costs-new-analysis-led-it-to-cancel-draco-nuclear-propulsion-project/",
+      "why_it_matters": "Documents the counterintuitive cancellation of nuclear thermal propulsion R&D because SpaceX made chemical rockets cheap enough to undercut the investment case. DARPA Deputy Director cited 'declining return on investment.'",
+      "year": "2025"
+    },
+    {
+      "author": "Maciej Ceg\u0142owski",
+      "id": "S6",
+      "publication": "Idle Words",
+      "title": "Artemis II Is Not Safe to Fly",
+      "url": "https://idlewords.com/2026/03/artemis_ii_is_not_safe_to_fly.htm",
+      "why_it_matters": "Critical analysis of Orion heat shield problems. Documents that 3 of 4 separation bolts melted through on Artemis I, and NASA's OIG identified three potentially crew-killing failure modes. Former astronaut Charles Camarda estimated 1-in-20 chance of disaster.",
+      "year": "2026"
+    },
+    {
+      "author": "Aerospace America staff",
+      "id": "S7",
+      "publication": "Aerospace America (AIAA)",
+      "title": "A Closer Look at SpaceX's Mars Plan",
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "why_it_matters": "Expert analysis of SpaceX Mars architecture. Quotes Donald Rapp (JPL consultant): 'Starship needs 1,200 tons of propellant, and you've got a tanker that takes 100 tons at a time'\u2014meaning 12 tanker launches per Mars-bound ship, 60 total for the 2026 window.",
+      "year": "2025"
+    },
+    {
+      "author": "Manila Times staff",
+      "id": "S8",
+      "publication": "The Manila Times",
+      "title": "Blue Origin Explosion Disrupts NASA's Lunar Ambitions",
+      "url": "https://www.manilatimes.net/2026/06/04/business/science-technology/blue-origin-explosion-disrupts-nasas-lunar-ambitions/2359894",
+      "why_it_matters": "Documents the May 28, 2026 New Glenn explosion that destroyed Blue Origin's only operational orbital pad, potentially eliminating NASA's backup lunar lander option just days after NASA awarded Blue Origin $627 million for Moon Base 1.",
+      "year": "2026"
+    }
+  ],
+  "sources": [
+    "Wikipedia contributors - Wikipedia - 2026 - Artemis Program Wikipedia Entry (continuously updated) (https://en.wikipedia.org/wiki/Artemis_program)",
+    "Wikipedia contributors - Wikipedia - 2026 - SpaceX Mars Colonization Program (https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program)",
+    "Cucinotta FA, Kim MH, Chappell LJ - PLOS ONE - 2013 - How Safe Is Safe Enough? Radiation Risk for a Human Mission to Mars (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0074988)",
+    "Scientific Reports authors - Nature Scientific Reports - 2025 - 3 Months Transit Time to Mars for Human Missions Using SpaceX Starship (https://www.nature.com/articles/s41598-025-00565-7)",
+    "Jeff Foust - SpaceNews - 2025 - DARPA Cancels DRACO Nuclear Propulsion Project (https://spacenews.com/darpa-says-decreasing-launch-costs-new-analysis-led-it-to-cancel-draco-nuclear-propulsion-project/)",
+    "Maciej Ceg\u0142owski - Idle Words - 2026 - Artemis II Is Not Safe to Fly (https://idlewords.com/2026/03/artemis_ii_is_not_safe_to_fly.htm)",
+    "Aerospace America staff - Aerospace America (AIAA) - 2025 - A Closer Look at SpaceX's Mars Plan (https://aerospaceamerica.aiaa.org/aiaa-spacex/)",
+    "Manila Times staff - The Manila Times - 2026 - Blue Origin Explosion Disrupts NASA's Lunar Ambitions (https://www.manilatimes.net/2026/06/04/business/science-technology/blue-origin-explosion-disrupts-nasas-lunar-ambitions/2359894)"
+  ],
+  "topic": "the future of interplanetary spaceflight: current plans to land humans on the Moon and Mars, the real timelines, the unsolved problems, and the pie-in-the-sky moonshot ideas",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "DR VALE": {
+      "bit_rate": 192000,
+      "language": "en",
+      "model": "sonic-3.5",
+      "provider": "cartesia",
+      "sample_rate": 44100,
+      "speed": 1.0,
+      "version": "2026-03-01",
+      "voice_label": "DR VALE"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1668
+}
