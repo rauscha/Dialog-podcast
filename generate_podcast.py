@@ -2845,19 +2845,36 @@ def _emotion_default_for_label(label: str, cfg: dict) -> str:
     return "measured, thoughtful"
 
 
-def _build_tts_instructions(emotion_tag: str, label: str, cfg: dict) -> str:
+def _build_tts_instructions(
+    emotion_tag: str,
+    label: str,
+    cfg: dict,
+    prev_emotion_tag: str = "",
+) -> str:
     tag = emotion_tag if emotion_tag else _emotion_default_for_label(label, cfg)
+    # Thread the prior turn's emotion so prosody flows across the cut instead of
+    # hard-resetting to neutral on every line. Only when the previous turn carried
+    # a genuine (explicit) tag that differs from this line's — a default baseline
+    # carries no real signal, and identical tags need no transition cue.
+    transition = ""
+    prev = prev_emotion_tag.strip()
+    if prev and prev.lower() != tag.strip().lower():
+        transition = (
+            f" The previous line was delivered with: {prev}. Let this line emerge "
+            "from that moment rather than resetting — carry the conversation's energy "
+            "and shift into your own tone naturally."
+        )
     guest = _guest_for_label(label, cfg)
     if guest:
         return (
             f"You are voicing {guest.get('display_name', label)}, a synthetic guest "
             f"expert in {guest.get('field', 'the topic')}. "
             f"Personality: {guest.get('personality', 'specific, conversational, careful')}. "
-            f"Deliver this line with: {tag}. Speak naturally in the interview, "
+            f"Deliver this line with: {tag}.{transition} Speak naturally in the interview, "
             "with authority but without sounding like a lecture."
         )
     return (
-        f"Deliver this line with: {tag}. "
+        f"Deliver this line with: {tag}.{transition} "
         "Speak naturally, as if in genuine conversation."
     )
 
@@ -3494,14 +3511,21 @@ def _tts_two_host(
             guest_voice_indexes[label] = len(guest_voice_indexes)
 
     # Build ordered work items with pre-resolved routes and turn paths.
+    # `prev_emotion` carries the last *rendered* (non-empty) turn's tag forward so
+    # _build_tts_instructions can thread prosody across the cut. Computed here, in
+    # order, before the thread pool — the instructions are baked into each work item.
     work_items = []
+    prev_emotion = ""
     for i, (label, emotion_tag, text) in enumerate(turns):
         if not text.strip():
             continue
         route = _tts_route_for_label(label, cfg, guest_voice_indexes.get(label, 0))
-        instructions = _build_tts_instructions(emotion_tag, label, cfg)
+        instructions = _build_tts_instructions(
+            emotion_tag, label, cfg, prev_emotion_tag=prev_emotion
+        )
         turn_path = work_dir / f"turn_{i:04d}_{_speaker_file_stem(label)}.mp3"
         work_items.append((i, label, route, instructions, text, turn_path))
+        prev_emotion = emotion_tag
 
     def _synthesize_one(item: tuple):
         idx, lbl, route, instructions, text, turn_path = item
