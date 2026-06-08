@@ -1,0 +1,327 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Webpage That Didn't Change"
+    },
+    {
+      "start_sec": 53.3,
+      "start_time": "0:53",
+      "title": "\u2014 The Puzzle: May 27, 2026"
+    },
+    {
+      "start_sec": 106.6,
+      "start_time": "1:47",
+      "title": "\u2014 The Evidence Trail: What Memory Actually Costs Now (with Maren)"
+    },
+    {
+      "start_sec": 159.89,
+      "start_time": "2:40",
+      "title": "\u2014 The Evidence Trail: What Survived (and What It Costs)"
+    },
+    {
+      "start_sec": 213.19,
+      "start_time": "3:33",
+      "title": "\u2014 The Complication: Intel's Gambit (and Why Caspar Is Skeptical)"
+    },
+    {
+      "start_sec": 266.49,
+      "start_time": "4:26",
+      "title": "\u2014 The Complication: Valve's Retreat That Might Be a Strategy"
+    },
+    {
+      "start_sec": 319.79,
+      "start_time": "5:20",
+      "title": "\u2014 Synthesis: What the $399 Handheld Actually Was"
+    },
+    {
+      "start_sec": 373.08,
+      "start_time": "6:13",
+      "title": "\u2014 Synthesis: The Two Markets That Don't Have Names Yet"
+    },
+    {
+      "start_sec": 426.38,
+      "start_time": "7:06",
+      "title": "\u2014 Reflective Ending: The Platform That Outlasted the Price"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin.companion.json",
+  "duration_sec": 524.68034,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "Documents the pivotal moment when Valve's budget-friendly positioning collapsed\u2014a $240-$300 price increase on unchanged hardware, directly attributed to memory costs",
+      "source": "Tom's Hardware",
+      "title": "Valve hikes Steam Deck OLED prices \u2014 512GB is now $789, while 1TB climbs to $949",
+      "url": "https://www.tomshardware.com/video-games/handheld-gaming/valve-hikes-steam-deck-oled-prices-512gb-is-now-usd789-while-1tb-climbs-to-usd949"
+    },
+    {
+      "reason": "Confirms Valve programmer Pierre-Loup Griffais's statement that they're 'hard at work' on Steam Deck 2 but waiting for a 'demarcated' performance leap\u2014not 20-50% gains, but generational. Potential 2028 timeline.",
+      "source": "NerdZap",
+      "title": "Steam Deck 2 Confirmed: Valve Eyes 2028 for Next-Gen Leap",
+      "url": "https://nerdzap.com/news/steam-deck-2-confirmed-2028-release-rumours/"
+    },
+    {
+      "reason": "The definitive explainer on the RAM crisis: AI data centers now consume 70% of high-end chips, DDR5 32GB kits tripled from $100-200 to $350+, shortage projected through Q4 2027 or possibly 2030",
+      "source": "Kinja",
+      "title": "Why Handheld Gaming PCs Are So Expensive in 2026",
+      "url": "https://kinja.com/pc-hardware/why-handheld-gaming-pcs-are-so-expensive"
+    },
+    {
+      "reason": "First official announcement of Intel Arc G3 Extreme in a handheld\u201414 cores, 12 Xe3 GPU cores, XeSS 3 multi-frame generation. Represents Intel's serious push into AMD-dominated handheld space.",
+      "source": "MSI Newsroom",
+      "title": "MSI Unveils Claw 8 EX AI+ and New AI Laptops at COMPUTEX 2026",
+      "url": "https://www.msi.com/news/detail/MSI-Debuts-Claw-8-EX-AI--Handheld-with-Intel--Arc-G3-Extreme-and-Titan-18-HX-Dragon-Edition-Draco-Epic-at-COMPUTEX-2026-148880"
+    },
+    {
+      "reason": "Acer's first Predator-branded handheld, launching October 2026. Features first metal cooling fan in a handheld (Predator AeroBlade), 80Wh battery, dual Thunderbolt 4 ports.",
+      "source": "Acer Newsroom",
+      "title": "Acer Expands Gaming Portfolio With Predator Atlas 8 Handheld Powered by Intel",
+      "url": "https://news.acer.com/acer-expands-gaming-portfolio-with-predator-atlas-8-handheld-powered-by-intel"
+    },
+    {
+      "reason": "Documents Lenovo's premium play: 8.8-inch OLED, 144Hz VRR, Ryzen Z2 Extreme, up to 32GB RAM, detachable controllers with FPS mouse mode. SteamOS version represents Valve's ecosystem expanding beyond its own hardware.",
+      "source": "VideoCardz",
+      "title": "Lenovo Legion Go 2 with SteamOS launches in June, priced at $1199",
+      "url": "https://videocardz.com/newz/lenovo-legion-go-2-with-steamos-launches-in-june-priced-at-1199"
+    },
+    {
+      "reason": "The strategic pivot: Valve officially supporting SteamOS on competitor hardware, removing technical barriers and positioning SteamOS as a universal platform for portable gaming",
+      "source": "Ubergizmo",
+      "title": "SteamOS 3.9 Brings Official Support For ASUS ROG Ally, Lenovo Legion Go, And AMD Handhelds",
+      "url": "https://www.ubergizmo.com/2026/04/steamos-3-9-support-amd-handhelds/"
+    },
+    {
+      "reason": "First handheld to officially launch with Arc G3 Extreme. 3-in-1 design (handheld/tablet/laptop), 8.8-inch OLED, 85Wh battery\u2014largest in consumer handheld space. Indiegogo launch mid-to-late June 2026.",
+      "source": "Notebookcheck",
+      "title": "OneXPlayer 3 launching globally in June 2026 with Intel Arc G3 Extreme and 144 Hz OLED display",
+      "url": "https://www.notebookcheck.net/OneXPlayer-3-launching-globally-in-June-2026-with-Intel-Arc-G3-Extreme-and-144-Hz-OLED-display.1308639.0.html"
+    }
+  ],
+  "generated_at": "2026-06-08T21:24:20.995718+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not predict exact DRAM prices or specific recovery timelines with false precision",
+        "Should not characterize any specific manufacturer's business decisions as intentional harm",
+        "Should not claim insider knowledge of fab construction plans beyond what is publicly reported",
+        "Should not frame AI infrastructure investment as categorically bad for consumers"
+      ],
+      "cartesia_voice_id": "49743b08-0f5d-4741-839c-b12933853780",
+      "credential_frame": "A composite of independent analysts who track DRAM and NAND pricing cycles for institutional clients \u2014 the kind of person who gets quoted in trade press but doesn't work for any of the manufacturers",
+      "delivery_baseline": "Measured pace, slight edge of precision \u2014 like someone who has explained this three times this week and is choosing words carefully because the last person got it wrong",
+      "display_name": "Maren",
+      "expertise": "Can explain why this shortage is structurally different from COVID-era disruptions, what HBM capacity allocation actually means for consumer DRAM supply, and why no fab currently under construction changes the consumer picture before 2028 at the earliest",
+      "field": "semiconductor supply chain and memory market analysis",
+      "label": "MAREN",
+      "personality": "Precise and a little impatient with soft framings \u2014 she'll correct 'shortage' to 'reallocation' without being asked, and she finds the gaming industry's surprise at this situation mildly exasperating. Not cold, but she doesn't perform warmth either. She'll give Juno credit when the instinct is right and tell Caspar when his skepticism is aimed at the wrong target.",
+      "role_in_episode": "Enters after the cold open establishes the price shock and before the hosts can settle into a 'this will probably sort itself out' rhythm. She closes the door on easy optimism, hands the hosts the structural argument, and exits before the SteamOS pivot \u2014 leaving Juno and Caspar to work out what it means without her",
+      "synthetic": true,
+      "tts_provider": "cartesia",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "Valve raised Steam Deck OLED prices by $240-$300 on May 27, 2026, pushing the 512GB model from $549 to $789 and the 1TB from $649 to $949\u2014a 43-46% increase on unchanged hardware",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Valve programmer Pierre-Loup Griffais confirmed Steam Deck 2 is in development but stated they're 'not interested in 20, 30, or even 50% more performance'\u2014they want a generational leap. Industry reports suggest a potential 2028 launch window.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "AI data centers now consume 70% of high-end DRAM production. Samsung, SK Hynix, and Micron pivoted memory chip production to AI infrastructure, causing DDR5 32GB kits to triple from $100-200 to $350+. Memory shortages projected through at least Q4 2027, with some executives saying 2030.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "The handheld gaming PC market fell from 2.87 million units shipped in 2023 to 1.49 million in 2024, before the worst of the shortage hit",
+      "confidence": "Medium-High",
+      "id": "C4",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Intel's Arc G3 Extreme processor (Panther Lake) features 14 CPU cores and 12 Xe3 GPU cores, with XeSS 3 multi-frame generation support. It's Intel's first chip specifically optimized for handheld gaming.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S4",
+        "S5"
+      ]
+    },
+    {
+      "claim": "MSI Claw 8 EX AI+ launches June 23, 2026 with a reported $1,500 MSRP. Acer Predator Atlas 8 launches October 2026 with pricing expected around $1,200+. OneXPlayer 3 launches via Indiegogo mid-to-late June 2026.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "S4",
+        "S5",
+        "S8"
+      ]
+    },
+    {
+      "claim": "Lenovo Legion Go 2 top-spec model (32GB RAM, 2TB) originally cost $1,479.99 but spiked to $2,849.99 amid the RAM crisis\u2014a 92% price hike. The Legion Go S with SteamOS is now discontinued and temporarily unavailable.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "SteamOS 3.9 brought official support for AMD-powered third-party handhelds including ASUS ROG Ally and Lenovo Legion Go, marking Valve's expansion beyond its own hardware",
+      "confidence": "High",
+      "id": "C8",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "The Lenovo Legion Go S with SteamOS ($649) is currently considered the best value handheld gaming PC\u2014it's the only third-party handheld to run SteamOS natively",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S6",
+        "S7"
+      ]
+    },
+    {
+      "claim": "AyaNeo suspended preorders for its Next 2 handheld ($2,299-$4,299) because storage prices increased 'several times higher' after Chinese New Year, making the product 'no longer sustainable' at current selling prices",
+      "confidence": "High",
+      "id": "C10",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Andrew E. Freedman",
+      "id": "S1",
+      "publication": "Tom's Hardware",
+      "title": "Valve hikes Steam Deck OLED prices \u2014 512GB is now $789, while 1TB climbs to $949",
+      "url": "https://www.tomshardware.com/video-games/handheld-gaming/valve-hikes-steam-deck-oled-prices-512gb-is-now-usd789-while-1tb-climbs-to-usd949",
+      "why_it_matters": "Documents the pivotal moment when Valve's budget-friendly positioning collapsed\u2014a $240-$300 price increase on unchanged hardware, directly attributed to memory costs",
+      "year": "2026"
+    },
+    {
+      "author": "Staff",
+      "id": "S2",
+      "publication": "NerdZap",
+      "title": "Steam Deck 2 Confirmed: Valve Eyes 2028 for Next-Gen Leap",
+      "url": "https://nerdzap.com/news/steam-deck-2-confirmed-2028-release-rumours/",
+      "why_it_matters": "Confirms Valve programmer Pierre-Loup Griffais's statement that they're 'hard at work' on Steam Deck 2 but waiting for a 'demarcated' performance leap\u2014not 20-50% gains, but generational. Potential 2028 timeline.",
+      "year": "2026"
+    },
+    {
+      "author": "Staff",
+      "id": "S3",
+      "publication": "Kinja",
+      "title": "Why Handheld Gaming PCs Are So Expensive in 2026",
+      "url": "https://kinja.com/pc-hardware/why-handheld-gaming-pcs-are-so-expensive",
+      "why_it_matters": "The definitive explainer on the RAM crisis: AI data centers now consume 70% of high-end chips, DDR5 32GB kits tripled from $100-200 to $350+, shortage projected through Q4 2027 or possibly 2030",
+      "year": "2026"
+    },
+    {
+      "author": "MSI Official",
+      "id": "S4",
+      "publication": "MSI Newsroom",
+      "title": "MSI Unveils Claw 8 EX AI+ and New AI Laptops at COMPUTEX 2026",
+      "url": "https://www.msi.com/news/detail/MSI-Debuts-Claw-8-EX-AI--Handheld-with-Intel--Arc-G3-Extreme-and-Titan-18-HX-Dragon-Edition-Draco-Epic-at-COMPUTEX-2026-148880",
+      "why_it_matters": "First official announcement of Intel Arc G3 Extreme in a handheld\u201414 cores, 12 Xe3 GPU cores, XeSS 3 multi-frame generation. Represents Intel's serious push into AMD-dominated handheld space.",
+      "year": "2026"
+    },
+    {
+      "author": "Acer Official",
+      "id": "S5",
+      "publication": "Acer Newsroom",
+      "title": "Acer Expands Gaming Portfolio With Predator Atlas 8 Handheld Powered by Intel",
+      "url": "https://news.acer.com/acer-expands-gaming-portfolio-with-predator-atlas-8-handheld-powered-by-intel",
+      "why_it_matters": "Acer's first Predator-branded handheld, launching October 2026. Features first metal cooling fan in a handheld (Predator AeroBlade), 80Wh battery, dual Thunderbolt 4 ports.",
+      "year": "2026"
+    },
+    {
+      "author": "Staff",
+      "id": "S6",
+      "publication": "VideoCardz",
+      "title": "Lenovo Legion Go 2 with SteamOS launches in June, priced at $1199",
+      "url": "https://videocardz.com/newz/lenovo-legion-go-2-with-steamos-launches-in-june-priced-at-1199",
+      "why_it_matters": "Documents Lenovo's premium play: 8.8-inch OLED, 144Hz VRR, Ryzen Z2 Extreme, up to 32GB RAM, detachable controllers with FPS mouse mode. SteamOS version represents Valve's ecosystem expanding beyond its own hardware.",
+      "year": "2026"
+    },
+    {
+      "author": "Staff",
+      "id": "S7",
+      "publication": "Ubergizmo",
+      "title": "SteamOS 3.9 Brings Official Support For ASUS ROG Ally, Lenovo Legion Go, And AMD Handhelds",
+      "url": "https://www.ubergizmo.com/2026/04/steamos-3-9-support-amd-handhelds/",
+      "why_it_matters": "The strategic pivot: Valve officially supporting SteamOS on competitor hardware, removing technical barriers and positioning SteamOS as a universal platform for portable gaming",
+      "year": "2026"
+    },
+    {
+      "author": "Alex Alderson",
+      "id": "S8",
+      "publication": "Notebookcheck",
+      "title": "OneXPlayer 3 launching globally in June 2026 with Intel Arc G3 Extreme and 144 Hz OLED display",
+      "url": "https://www.notebookcheck.net/OneXPlayer-3-launching-globally-in-June-2026-with-Intel-Arc-G3-Extreme-and-144-Hz-OLED-display.1308639.0.html",
+      "why_it_matters": "First handheld to officially launch with Arc G3 Extreme. 3-in-1 design (handheld/tablet/laptop), 8.8-inch OLED, 85Wh battery\u2014largest in consumer handheld space. Indiegogo launch mid-to-late June 2026.",
+      "year": "2026"
+    }
+  ],
+  "sources": [
+    "Andrew E. Freedman - Tom's Hardware - 2026 - Valve hikes Steam Deck OLED prices \u2014 512GB is now $789, while 1TB climbs to $949 (https://www.tomshardware.com/video-games/handheld-gaming/valve-hikes-steam-deck-oled-prices-512gb-is-now-usd789-while-1tb-climbs-to-usd949)",
+    "Staff et al. - NerdZap - 2026 - Steam Deck 2 Confirmed: Valve Eyes 2028 for Next-Gen Leap (https://nerdzap.com/news/steam-deck-2-confirmed-2028-release-rumours/)",
+    "Staff et al. - Kinja - 2026 - Why Handheld Gaming PCs Are So Expensive in 2026 (https://kinja.com/pc-hardware/why-handheld-gaming-pcs-are-so-expensive)",
+    "MSI Official - MSI Newsroom - 2026 - MSI Unveils Claw 8 EX AI+ and New AI Laptops at COMPUTEX 2026 (https://www.msi.com/news/detail/MSI-Debuts-Claw-8-EX-AI--Handheld-with-Intel--Arc-G3-Extreme-and-Titan-18-HX-Dragon-Edition-Draco-Epic-at-COMPUTEX-2026-148880)",
+    "Acer Official - Acer Newsroom - 2026 - Acer Expands Gaming Portfolio With Predator Atlas 8 Handheld Powered by Intel (https://news.acer.com/acer-expands-gaming-portfolio-with-predator-atlas-8-handheld-powered-by-intel)",
+    "Staff et al. - VideoCardz - 2026 - Lenovo Legion Go 2 with SteamOS launches in June, priced at $1199 (https://videocardz.com/newz/lenovo-legion-go-2-with-steamos-launches-in-june-priced-at-1199)",
+    "Staff et al. - Ubergizmo - 2026 - SteamOS 3.9 Brings Official Support For ASUS ROG Ally, Lenovo Legion Go, And AMD Handhelds (https://www.ubergizmo.com/2026/04/steamos-3-9-support-amd-handhelds/)",
+    "Alex Alderson - Notebookcheck - 2026 - OneXPlayer 3 launching globally in June 2026 with Intel Arc G3 Extreme and 144 Hz OLED display (https://www.notebookcheck.net/OneXPlayer-3-launching-globally-in-June-2026-with-Intel-Arc-G3-Extreme-and-144-Hz-OLED-display.1308639.0.html)"
+  ],
+  "topic": "The landscape of handheld gaming PCs in 2026: the current lineup and what manufacturers are bringing next",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    },
+    "MAREN": {
+      "bit_rate": 192000,
+      "language": "en",
+      "model": "sonic-3.5",
+      "provider": "cartesia",
+      "sample_rate": 44100,
+      "speed": 1.0,
+      "version": "2026-03-01",
+      "voice_label": "MAREN"
+    }
+  },
+  "word_count": 1602
+}

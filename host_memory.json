@@ -1,15 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "the balance between medical innovation and the ethical implications of secrecy in the 17th century",
-      "created_at": "2026-05-31T19:20:42.111429+00:00",
-      "juno_noticed": "the human cost of withholding medical knowledge and the ethical questions surrounding who controls medical innovation",
-      "relationship_moment": "Juno's realization that the Chamberlens' secrecy had real-world consequences, and Caspar's acknowledgment that the decision was a product of its time, not just a moral failing",
-      "run_id": "20260531_141432_a_history_of_the_use_of_forceps_in_obstetrics",
-      "topic": "A history of the use of forceps in obstetrics",
-      "usable_callback": "the story of Princess Charlotte of Wales and how her death shifted the medical community toward intervention in childbirth"
-    },
-    {
       "caspar_challenged": "his own assumption that methodological precision could contain the survivor quality-of-life findings; he revised mid-episode when the Saigal data and the disability survey gap proved too large to dismiss",
       "created_at": "2026-06-02T11:48:00.787939+00:00",
       "juno_noticed": "that the survival statistics at 22 weeks are partly built from hospitals that never tried \u2014 a policy choice baked into the evidence base, fed back as neutral data",
@@ -107,6 +98,15 @@
       "run_id": "20260607_095803_the_future_of_interplanetary_spaceflight_current_plans_to_la",
       "topic": "the future of interplanetary spaceflight: current plans to land humans on the Moon and Mars, the real timelines, the unsolved problems, and the pie-in-the-sky moonshot ideas",
       "usable_callback": ""
+    },
+    {
+      "caspar_challenged": "his own framing of the LCD Steam Deck discontinuation as a 'product cycle' \u2014 caught by Juno, revised without defensiveness to 'market exit'; also resisted Juno's reading of SteamOS expansion as deliberate strategy, holding that 'least bad option' fits the same facts",
+      "created_at": "2026-06-08T21:21:57.871212+00:00",
+      "juno_noticed": "that the $399 Steam Deck wasn't a category finding its footing but a specific three-year window \u2014 a temporary alignment of memory prices, AMD efficiency, and Valve's willingness to sell near cost \u2014 and that its discontinuation was a market exit, not a product cycle",
+      "relationship_moment": "Juno pushed back on 'product cycle' \u2014 not unkind, but firm; Caspar paused and said 'You're right. That's not a product cycle. That's a market exit.' Then at the close: Juno said 'I'm keeping both' (strategy and stuck); Caspar didn't correct it.",
+      "run_id": "20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin",
+      "topic": "The landscape of handheld gaming PCs in 2026: the current lineup and what manufacturers are bringing next",
+      "usable_callback": "Maren's formulation: 'Shortage implies a temporary gap. What you have is a permanent repricing.' Also: 'The platform outlasted the price point' \u2014 and Juno's window framing: February 2022 to December 2025, closed because the components got bid away by someone who'd pay more."
     }
   ],
   "hosts": {
@@ -277,7 +277,17 @@
     "I know. I'm noting it",
     "operator expertise and a standardized protocol are part of the result",
     "not footnotes to it",
-    "defensible answer for a constrained setting"
+    "defensible answer for a constrained setting",
+    "the platform outlasted the price point",
+    "you can't un-demonstrate that",
+    "shortage implies a temporary gap",
+    "purpose-built and proven aren't the same claim",
+    "the floor moved",
+    "that's either a strategy or a very good description of being stuck",
+    "waiting for a chip that isn't built",
+    "the middle didn't hold",
+    "the window closed",
+    "I'm keeping both"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -289,65 +299,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-06-02T22:11:41.160497+00:00",
-      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_04",
-      "summary": "Maren's workflow: Suno v5.5 prompt \u2192 stem separation \u2192 Ableton for bass rebuild (low end sits wrong, timing feels mechanical) \u2192 Kits.ai for voice conversion if needed. The climax problem with AIVA: it learned the formula (add brass, crescendo, cymbal crash) without learning when the formula is the wrong call \u2014 a training-data problem with a specific shape, trained on canonical works selected for following convention. Caspar's distinction: composition versus pattern completion.",
-      "tags": [
-        "AI music workflow",
-        "Suno",
-        "AIVA",
-        "Ableton",
-        "Kits.ai",
-        "Maren",
-        "climax problem",
-        "training data"
-      ],
-      "why_keep": "Maren's specific workflow details and the AIVA climax problem are concrete enough to anchor future episodes on creative tools, constraint-based composition, or the difference between learned pattern and artistic judgment \u2014 connects back to the chiptune episode's constraints theme."
-    },
-    {
-      "created_at": "2026-06-02T22:11:41.160497+00:00",
-      "id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f_05",
-      "summary": "The first Suno creator signed to a label was given the job title 'music designer,' not artist. Juno's read: either a genuine new creative category or a legal workaround dressed as a job title \u2014 probably both. If the title catches on, the industry absorbs AI production without ever settling the authorship question by reclassifying the role.",
-      "tags": [
-        "AI music",
-        "music designer",
-        "authorship",
-        "labor classification",
-        "industry adaptation"
-      ],
-      "why_keep": "The 'music designer' framing is a specific, dateable signal that could be called back in any future episode on creative labor, IP, or how institutions absorb disruptive technology without resolving its underlying tensions."
-    },
-    {
-      "created_at": "2026-06-03T05:37:54.372790+00:00",
-      "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_01",
-      "summary": "Welters et al. (BJOG 2026): population-scale registry linkage, spontaneous PTB explicitly separated from indicated PTB. Women delivering spontaneously before 32 weeks faced roughly 2\u20133x higher cardiovascular mortality vs. term; gradient steepest at earlier gestational ages. Caspar's insistence: the right clinical sentence is 'sPTB identifies women at elevated cardiovascular risk,' not 'sPTB causes cardiovascular disease.' No ACOG/SMFM protocol yet for post-sPTB cardiovascular surveillance \u2014 the paper is large enough to be cited in whatever guidance cycle comes next. Juno's framing: 'Actionable signal, absent protocol. The protocol is what comes next.'",
-      "tags": [
-        "sPTB",
-        "cardiovascular mortality",
-        "registry linkage",
-        "marker vs cause",
-        "Welters",
-        "BJOG 2026",
-        "MFM rounds"
-      ],
-      "why_keep": "The marker/cause distinction and Juno's 'actionable signal, absent protocol' formulation are clean and reusable in any future episode on obstetric risk, postpartum care gaps, or the difference between epidemiological signal and clinical mandate. Caspar's verb correction ('identifies') is a relationship callback."
-    },
-    {
-      "created_at": "2026-06-03T05:37:54.372790+00:00",
-      "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_02",
-      "summary": "Shrestha et al. (AJOG 2026): secondary analysis of an RCT \u2014 metformin in T2D pregnancy stratified by baseline insulin requirements. Counterintuitive direction: women with higher insulin requirements appeared to derive greater benefit, opposite of what insulin-sensitivity mechanism would predict. Caspar's read: the interaction is present in a robust RCT dataset, not an observational one, but whether it's a pharmacological signal or a categorization artifact is unresolved. Called it 'a trial worth designing,' not a result worth acting on. Juno flagged it as the finding she'd watch most closely.",
-      "tags": [
-        "metformin",
-        "T2D pregnancy",
-        "insulin requirements",
-        "Shrestha",
-        "AJOG 2026",
-        "MFM rounds",
-        "hypothesis-generating"
-      ],
-      "why_keep": "The counterintuitive direction plus Caspar's 'trial worth designing' framing is a usable callback for any future episode on pharmacological reasoning, subgroup analysis, or the gap between a signal and a protocol. Juno's explicit flag makes it a relationship marker."
-    },
     {
       "created_at": "2026-06-03T05:37:54.372790+00:00",
       "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_03",
@@ -563,6 +514,62 @@
         "open thread"
       ],
       "why_keep": "The 'distance between a controlled result and what a real department actually produces' is a standing structural observation that could anchor a future episode on implementation science, AI deployment, or the gap between trial conditions and clinical reality. The exchange itself is a relationship marker \u2014 Juno naming something, Caspar acknowledging it without closing it."
+    },
+    {
+      "created_at": "2026-06-08T21:21:57.871212+00:00",
+      "id": "20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin_01",
+      "summary": "Maren's distinction: the DRAM situation in handheld gaming is not a shortage but a reallocation. HBM for AI servers yields more revenue per wafer than consumer DRAM by a significant margin \u2014 and once that margin is demonstrated to every major manufacturer simultaneously, you can't un-demonstrate it. DDR5 32GB kits roughly tripled over 18 months. The fabs under construction are designed for enterprise memory. Even in a softer cycle, the floor moved because manufacturers now have a reference point for what AI infrastructure will pay.",
+      "tags": [
+        "DRAM pricing",
+        "HBM",
+        "AI memory reallocation",
+        "Maren",
+        "handheld gaming economics",
+        "permanent repricing"
+      ],
+      "why_keep": "Maren's 'shortage vs. reallocation' distinction is precise and reusable in any future episode on hardware economics, AI infrastructure costs, or consumer tech pricing. The 'you can't un-demonstrate that' formulation is a clean callback."
+    },
+    {
+      "created_at": "2026-06-08T21:21:57.871212+00:00",
+      "id": "20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin_02",
+      "summary": "The $399 Steam Deck window: February 2022 to December 2025. LCD model discontinued without replacement. Juno's framing \u2014 a specific alignment of memory prices, AMD efficiency at that node, and Valve willing to sell near cost \u2014 that closed when components got bid away by buyers who'd pay more. Caspar's revision: not a product cycle, a market exit. The device sold. People loved it. The economics that opened the window changed.",
+      "tags": [
+        "Steam Deck",
+        "LCD discontinuation",
+        "market exit",
+        "handheld gaming",
+        "Juno framing",
+        "Caspar revision"
+      ],
+      "why_keep": "The window framing and the product-cycle-vs-market-exit distinction are a relationship callback (Caspar caught and corrected by Juno) and a reusable formulation for any future episode on consumer hardware economics or platform accessibility."
+    },
+    {
+      "created_at": "2026-06-08T21:21:57.871212+00:00",
+      "id": "20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin_03",
+      "summary": "SteamOS 3.9 (April 2026): official support for ROG Ally, Legion Go, AMD handhelds broadly. Legion Go S shipped with SteamOS from the factory. Valve's ecosystem now larger than Valve's hardware by a significant margin. Valve couldn't price competitively, has no successor until ~2028, and responded by giving the OS to whoever would take it. Whether that's strategy or least-bad option: Caspar held both fit the same facts. Juno: 'I'm keeping both.'",
+      "tags": [
+        "SteamOS",
+        "Valve",
+        "Legion Go S",
+        "platform strategy",
+        "handheld gaming",
+        "ecosystem vs hardware"
+      ],
+      "why_keep": "The 'strategy or stuck' close is a clean relationship marker and a reusable formulation for any future episode on platform economics, open ecosystems, or companies that outlast their own hardware."
+    },
+    {
+      "created_at": "2026-06-08T21:21:57.871212+00:00",
+      "id": "20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin_04",
+      "summary": "Intel Arc G3 Extreme entering handhelds for the first time: MSI Claw 8 EX AI+ (June 23), Acer Predator Atlas 8 (October), OneXPlayer 3 \u2014 all Arc G3, all ~$1,500. Caspar's hard line: 'purpose-built' and 'proven' are not the same claim, and only one is in the spec sheet. Meteor Lake precedent (poor battery, driver instability, game compatibility issues). Caspar's concession: it gives AMD a reason to compete on something other than incumbency, regardless of whether Arc G3 delivers.",
+      "tags": [
+        "Intel Arc G3",
+        "MSI Claw",
+        "Acer Predator Atlas",
+        "handheld gaming",
+        "AMD competition",
+        "Caspar caveat"
+      ],
+      "why_keep": "The 'purpose-built vs. proven' distinction is a clean, reusable Caspar formulation. The Meteor Lake callback is a specific anchor for any future episode revisiting Intel's handheld ambitions."
     }
   ],
   "show": {
@@ -575,5 +582,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-07T15:09:26.953465+00:00"
+  "updated_at": "2026-06-08T21:21:57.872213+00:00"
 }

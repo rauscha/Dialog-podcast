@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Webpage That Didn't Change"
+    },
+    {
+      "startTime": 53.3,
+      "title": "\u2014 The Puzzle: May 27, 2026"
+    },
+    {
+      "startTime": 106.6,
+      "title": "\u2014 The Evidence Trail: What Memory Actually Costs Now (with Maren)"
+    },
+    {
+      "startTime": 159.89,
+      "title": "\u2014 The Evidence Trail: What Survived (and What It Costs)"
+    },
+    {
+      "startTime": 213.19,
+      "title": "\u2014 The Complication: Intel's Gambit (and Why Caspar Is Skeptical)"
+    },
+    {
+      "startTime": 266.49,
+      "title": "\u2014 The Complication: Valve's Retreat That Might Be a Strategy"
+    },
+    {
+      "startTime": 319.79,
+      "title": "\u2014 Synthesis: What the $399 Handheld Actually Was"
+    },
+    {
+      "startTime": 373.08,
+      "title": "\u2014 Synthesis: The Two Markets That Don't Have Names Yet"
+    },
+    {
+      "startTime": 426.38,
+      "title": "\u2014 Reflective Ending: The Platform That Outlasted the Price"
+    }
+  ],
+  "version": "1.2.0"
+}
