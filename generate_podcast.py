@@ -173,7 +173,21 @@ DEFAULTS: dict = {
     "tts_command_cwd":      "",
     "tts_command_timeout_sec": 600,
     "use_emotive_tts":      True,
-    "turn_silence_ms":      180,
+    "turn_silence_ms":      180,    # base inter-turn gap; variable gaps flex around it (B2)
+    # Phase B2 — speech timing. Edge-trim each turn's TTS-baked head/tail silence so
+    # the inserted gap is the *perceived* gap, then flex that gap by conversational
+    # context instead of a flat 180ms everywhere. A3's 10ms concat crossfade stays a
+    # pure click-killer — the gap is the single spacing ruler, no double-apply.
+    "turn_edge_trim":          True,   # trim leading/trailing near-silence from each turn
+    "turn_edge_keep_ms":       40,     # silence pad to preserve at each edge (don't clip onsets)
+    "turn_edge_trim_threshold_db": -50, # below this peak level counts as trimmable silence
+    "turn_variable_gaps":      True,   # flex inter-turn gap by dialogue context (else flat base)
+    "turn_gap_latch_ms":       70,     # interruption/dash latch or lowercase continuation — near-overlap
+    "turn_gap_same_speaker_ms": 120,   # one host keeps going — keep the thought flowing
+    "turn_gap_reaction_ms":    110,    # short non-question next line — snappy back-channel
+    "turn_gap_beat_ms":        300,    # a long point that ends a sentence — let it land
+    "turn_reaction_max_chars": 24,     # next line at/under this many chars counts as a reaction
+    "turn_beat_min_chars":     320,    # prior line at/over this many chars can earn a landing beat
     "use_audio_mastering":  True,
     "normalize_turn_loudness": True,
     "audio_bitrate":        "192k",
@@ -212,6 +226,8 @@ _BOOL_CONFIG_KEYS = {
     "use_audio_mastering",
     "guest_cross_provider",
     "normalize_turn_loudness",
+    "turn_edge_trim",
+    "turn_variable_gaps",
     "audio_master_two_pass",
     "audio_deesser",
     "local_llm_think",
@@ -228,6 +244,14 @@ _INT_CONFIG_KEYS = {
     "local_llm_timeout_sec",
     "local_llm_num_ctx",
     "turn_silence_ms",
+    "turn_edge_keep_ms",
+    "turn_edge_trim_threshold_db",
+    "turn_gap_latch_ms",
+    "turn_gap_same_speaker_ms",
+    "turn_gap_reaction_ms",
+    "turn_gap_beat_ms",
+    "turn_reaction_max_chars",
+    "turn_beat_min_chars",
     "tts_request_timeout_sec",
     "tts_command_timeout_sec",
     "audio_sample_rate",
@@ -2958,6 +2982,85 @@ def _interleave_silence(parts: list[Path], silence_path: Path | None) -> list[Pa
     return interleaved
 
 
+def _edge_trim_silence(path: Path, cfg: dict) -> None:
+    """Trim leading/trailing near-silence from one rendered turn, in place (B2).
+
+    TTS engines pad each utterance with a variable amount of head/tail silence.
+    Left in, that padding makes the real inter-turn gap unpredictable and defeats
+    the variable spacing below — so we strip it down to a small preserved pad
+    (``turn_edge_keep_ms``) that keeps onsets and breaths from being clipped.
+
+    Best-effort: any ffmpeg failure (e.g. an option an older build rejects) leaves
+    the original file untouched rather than sinking the turn.
+    """
+    if not cfg.get("turn_edge_trim", True):
+        return
+    thr = cfg.get("turn_edge_trim_threshold_db", -50)
+    keep = max(0.0, float(cfg.get("turn_edge_keep_ms", 40)) / 1000.0)
+    sr = int(cfg.get("audio_sample_rate", 44100))
+    ch = int(cfg.get("audio_channels", 2))
+    # Trim leading silence, reverse, trim what is now the (former trailing) edge,
+    # reverse back. peak detection is conservative — it won't mistake quiet speech
+    # for silence the way RMS can.
+    one = (
+        f"silenceremove=start_periods=1:start_threshold={thr}dB:"
+        f"start_silence={keep:.3f}:detection=peak"
+    )
+    sf = f"{one},areverse,{one},areverse"
+    tmp = path.with_name(path.stem + "_trim" + path.suffix)
+    cmd = [
+        "ffmpeg", "-y", "-hide_banner", "-i", str(path), "-af", sf,
+        "-ar", str(sr), "-ac", str(ch),
+        "-c:a", "libmp3lame", "-b:a", _audio_bitrate_value(cfg), str(tmp),
+    ]
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+        if r.returncode == 0 and tmp.exists() and tmp.stat().st_size > 0:
+            os.replace(tmp, path)
+        else:
+            if r.returncode != 0:
+                logger.warning(
+                    "Edge-trim failed for %s (ffmpeg rc=%d); leaving untrimmed",
+                    path.name, r.returncode,
+                )
+            tmp.unlink(missing_ok=True)
+    except (subprocess.SubprocessError, OSError) as exc:
+        logger.warning("Edge-trim errored for %s (%s); leaving untrimmed", path.name, exc)
+        tmp.unlink(missing_ok=True)
+
+
+def _inter_turn_gap_ms(rendered_meta: list, k: int, cfg: dict) -> int:
+    """Gap (ms) to place after rendered turn ``k`` (boundary k → k+1), by context.
+
+    ``rendered_meta`` is an ordered ``[(label, text), ...]`` of the turns that
+    actually rendered. Falls back to the flat base gap when variable gaps are off
+    or no signal fires. Signals are checked tightest-first so an interruption
+    always wins over a would-be landing beat.
+    """
+    base = int(cfg.get("turn_silence_ms", 180))
+    if not cfg.get("turn_variable_gaps", True) or k + 1 >= len(rendered_meta):
+        return base
+    lbl_a, txt_a = rendered_meta[k]
+    lbl_b, txt_b = rendered_meta[k + 1]
+    a = (txt_a or "").strip()
+    b = (txt_b or "").strip()
+    head = b[:1]
+    # 1. Latch / interruption: prior trails off on a dash, or the next line opens
+    #    mid-thought (lowercase) — deliver near-overlapped.
+    if a.endswith(("—", "--", "–")) or (head.isalpha() and head.islower()):
+        return int(cfg.get("turn_gap_latch_ms", 70))
+    # 2. Same-speaker continuation: one host keeps going — keep the thought flowing.
+    if lbl_a == lbl_b:
+        return int(cfg.get("turn_gap_same_speaker_ms", 120))
+    # 3. Quick reaction / back-channel: a short next line that isn't a question.
+    if len(b) <= int(cfg.get("turn_reaction_max_chars", 24)) and not b.endswith("?"):
+        return int(cfg.get("turn_gap_reaction_ms", 110))
+    # 4. Landing beat: a substantial point that ends a sentence — let it breathe.
+    if len(a) >= int(cfg.get("turn_beat_min_chars", 320)) and a.endswith((".", "?", "!", "…")):
+        return int(cfg.get("turn_gap_beat_ms", 300))
+    return base
+
+
 def _probe_dur(path: Path) -> float:
     """Best-effort segment duration in seconds (0.0 if unknown)."""
     try:
@@ -3539,6 +3642,7 @@ def _tts_two_host(
             )
             if generated_path.exists():
                 _normalize_turn_loudness(generated_path, cfg, work_dir)
+                _edge_trim_silence(generated_path, cfg)
                 return (idx, generated_path)
         except Exception as exc:
             logger.warning("TTS synthesis failed for turn %d (%s): %s", idx, lbl, exc)
@@ -3572,36 +3676,62 @@ def _tts_two_host(
             "(e.g. ElevenLabs character limit) — see the per-turn warnings above."
         )
 
-    if footnotes:
-        footnotes_by_after: dict[int, list] = {}
-        for fn in footnotes:
-            footnotes_by_after.setdefault(int(fn.after_turn), []).append(fn)
-        spliced: list = []
-        for file_path, turn_idx in zip(turn_files, turn_indices):
-            spliced.append(file_path)
-            for fn in footnotes_by_after.get(turn_idx, []):
-                if Path(fn.audio_path).exists():
-                    spliced.append(Path(fn.audio_path))
-        turn_files = spliced
-
     output_path = output_path.with_suffix(".mp3")
-    silence_path: Path | None = None
-    silence_ms = int(cfg.get("turn_silence_ms", 180))
-    if silence_ms > 0 and len(turn_files) > 1:
-        silence_path = _make_silence(work_dir / "_turn_silence", silence_ms, cfg)
-    _ffmpeg_concat_configured(
-        _interleave_silence(turn_files, silence_path),
-        output_path,
-        cfg,
-    )
 
-    footnote_paths = {Path(fn.audio_path) for fn in (footnotes or [])}
+    # Rendered-turn metadata (label, text) aligned to turn_files order, for gap decisions.
+    rendered_meta = [(turns[ti][0], turns[ti][2]) for ti in turn_indices]
+
+    footnotes_by_after: dict[int, list] = {}
+    for fn in (footnotes or []):
+        footnotes_by_after.setdefault(int(fn.after_turn), []).append(fn)
+
+    # Flat ordered sequence of (path, rendered_k). rendered_k indexes rendered_meta;
+    # it is None for a spliced footnote, whose boundaries fall back to the base gap.
+    flat: list[tuple[Path, int | None]] = []
+    for k, (file_path, turn_idx) in enumerate(zip(turn_files, turn_indices)):
+        flat.append((file_path, k))
+        for fn in footnotes_by_after.get(turn_idx, []):
+            if Path(fn.audio_path).exists():
+                flat.append((Path(fn.audio_path), None))
+
+    base_ms = int(cfg.get("turn_silence_ms", 180))
+    silence_cache: dict[int, Path] = {}
+
+    def _gap_segment(ms: int) -> Path | None:
+        ms = max(0, int(ms))
+        if ms <= 0:
+            return None
+        if ms not in silence_cache:
+            silence_cache[ms] = _make_silence(work_dir / f"_gap_{ms}", ms, cfg)
+        return silence_cache[ms]
+
+    # Interleave variable-length gaps. A3's micro-crossfade still fires at every join
+    # to kill seam clicks; the gap segment is the single spacing ruler (no double-apply).
+    if base_ms > 0 and len(flat) > 1:
+        assembled: list[Path] = []
+        for idx, (path, k) in enumerate(flat):
+            if idx:
+                prev_k = flat[idx - 1][1]
+                gap_ms = (
+                    _inter_turn_gap_ms(rendered_meta, prev_k, cfg)
+                    if prev_k is not None and k is not None
+                    else base_ms  # footnote-adjacent boundary
+                )
+                seg = _gap_segment(gap_ms)
+                if seg is not None:
+                    assembled.append(seg)
+            assembled.append(path)
+    else:
+        assembled = [path for path, _ in flat]
+
+    _ffmpeg_concat_configured(assembled, output_path, cfg)
+
+    # Delete the per-turn mp3s and cached gap segments; footnote files are left in the
+    # work dir for archiving (they were never added to turn_files).
     for p in turn_files:
-        if p in footnote_paths:
-            continue  # keep footnote files so they can be archived in the work dir
         p.unlink(missing_ok=True)
-    if silence_path:
-        silence_path.unlink(missing_ok=True)
+    for seg in silence_cache.values():
+        seg.unlink(missing_ok=True)
 
     return output_path
 
