@@ -88,13 +88,20 @@ Provider decision made and shipped (`a806a2c` + this session): **ElevenLabs host
 - [ ] **Historical `feed.xml` preamble leak (2026-05-07 "history of fetoscopy" entry).** Low priority. Options: (a) leave it — old, listeners moved on; (b) hand-edit the `<item>`'s `<description>` + `<content:encoded>` CDATA (~10 min); (c) re-render the episode + replace. Decision deferred from 2026-06-01 pending list.
 - [x] **I — Stop leaking ElevenLabs voice IDs (2026-06-04).** `_public_tts_route(route, label=None)` now pops `voice_id` entirely and sets `voice_label = label or "[configured]"`. `_tts_routes_summary_for_script` passes the speaker label through. Companion JSON will show `{"voice_label": "JUNO"}` instead of any truncated ID. `_public_tts_route_for_bot` in `telegram_bot.py` is internal/owner-only (not committed to git) — left as-is.
 
-## In-flight: P1-C — Sonic footnotes (cues)
+## In-flight: P1-C — Sonic footnotes (cues) — ⛔ GATED OFF 2026-06-07
 
-User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases below. (Voice quality, which had jumped ahead of this, is now resolved.)
+**`use_sonic_footnotes=false` in `config.json` as of 2026-06-07.** First real cue render ("The Last Problems Before Mars", `nasa_mars_wind` after turn 31) was judged **garbage by ear** — quiet, irrelevant, unheralded, mushy. Feature is disabled by default until the redesign below lands. Re-enable only after a live render passes a listen.
+
+**Live-render diagnosis (2026-06-07) — root causes, code-confirmed:**
+- **BUG A (loudness — the big one).** `_trim_and_fade` (`sonic_footnote_mixer.py`) is the *only* audio source in the pipeline that never gets loudness-normalized — per-turn TTS, YouTube clips (A4), and the final master all loudnorm; footnotes don't. The master applies *constant linear gain* to the whole file, so it cannot rescue a quiet clip sitting next to loud speech. → "can't hear it / poorly normalized." **Fix:** run `audio_utils.two_pass_loudnorm` on the trimmed footnote, threading `audio_loudness_i` (mirror clip_mixer A4).
+- **BUG B (no guaranteed herald).** Nothing verifies the placement turn actually references the sound — the only link is a `script_note` *suggestion* to the dialogue model. When the model doesn't write a "listen to this…" beat, the clip is an orphan. **Fix:** verify the placement turn references the cue (or inject a herald line), else drop.
+- **BUG C (no relevance floor).** `_select_best_nasa_result` returns "best of whatever came back" with **zero minimum-overlap floor** — a 0-match result still returns item #1. Query degraded `NASA Mars wind audio`→`NASA Mars` and shipped a generic clip called "wind." Catalog policy literally says *"Silence is preferred over decoration"* — not enforced. **Fix:** require a minimum keyword-overlap score; drop the cue (ship silence) below it.
+- **BUG D (stacked fades / no framing).** Clip gets a 0.4s self-fade + 180ms silence gap + 10ms concat crossfade — three rulers, no ducking, no consistent spacing. Reads as accident, not production beat. **Fix:** single arrangement ruler; consider a host-line duck or consistent pre/post pad.
 
 - [x] **Phase 1** — NASA backend + skeleton + splice wiring. Committed `4664f29`.
 - [x] **Phase 1 cue episode + verdict (2026-05-31).** Cue was a complete miss (4 s of unrelated NASA podcast intro). Guest voice barely distinguishable but beats made sense. The bigger issue (stilted OpenAI voices) is now fixed.
 - [x] **Phase 1.5 (2026-06-05).** Better `_PLACEMENT_SYSTEM` prompt (natural breathing points, 3-turn min gap). `_select_best_nasa_result()` keyword scoring. `_estimate_start_offset()` Haiku call for LLM timestamp picking (gated on description richness).
+- [x] **Phase 1.5 live verdict (2026-06-07): FAILED by ear → feature gated off.** See diagnosis block above (BUGs A–D). Redesign tracked under "Cue quality & editorial polish."
 - [ ] **Phase 2** — Wikimedia Commons backend (MediaWiki API + `extmetadata` license parsing). Covers `commons_morse_code`, `commons_metronome`, `commons_tuning_fork`.
 - [ ] **Phase 3** — Internet Archive backend (`advancedsearch.php` + `licenseurl`/`rights`). Covers `internet_archive_public_domain`.
 - [ ] **Phase 4** — Freesound backend (needs `FREESOUND_API_KEY`). Covers `freesound_cc0_field_recording`.
@@ -104,8 +111,11 @@ User chose "full ship" 2026-05-30. NASA backend (Phase 1) in; remaining phases b
 - [x] **Surface dropped cues (2026-06-04).** `sonic_footnote_mixer.py` now logs `logger.warning` at every drop point: unimplemented backend (Phase 2-4), LLM placement miss, and source download failure. Summary line at end of `prepare_footnotes`: "N/M planned cues were dropped (see warnings above)." All bare `print` statements converted to proper `logger` calls.
 - [x] **Fix NASA fallback source quality (2026-06-04).** Two guards added: (1) `_nasa_query_fallbacks` now stops at 2-word minimum — single-word fallbacks like "apollo" matched podcast episodes. (2) `_is_nasa_podcast_item()` filters out any search result whose title/description matches a podcast-episode pattern before scoring. NASA no longer returns podcast clips on degenerate fallbacks.
 - [x] **Consolidate turn enumeration (2026-06-05).** `_enumerate_turns` now accepts `known_speakers`; `prepare_footnotes` builds the set from cfg so placement and splicing count identical turns.
+- [ ] **BUG A — loudnorm the footnote (do first; unblocks re-enable).** `two_pass_loudnorm` the trimmed clip to `audio_loudness_i` in `sonic_footnote_mixer._trim_and_fade` (or right after). Mirror clip_mixer A4. Single clearest win.
+- [ ] **BUG C — relevance floor.** Minimum keyword-overlap threshold in `_select_best_nasa_result`; below it, drop the cue (ship silence per catalog policy).
+- [ ] **BUG B — guaranteed herald.** Verify the placement turn references the sound, or inject a herald line; else drop. Without this, even a perfect clip is an orphan.
+- [ ] **BUG D — single arrangement ruler.** Collapse the 0.4s self-fade + 180ms gap + 10ms crossfade stack; consider a host-line duck or consistent pre/post pad. **Coordinate with A3 crossfade + B2 edge-trim — don't double-apply overlap.**
 - [ ] **Restraint / interruption budget.** Cap cues per episode, enforce a minimum gap, bias toward genuine section breaks. Fewer, better.
-- [ ] **Transition flow.** Tune fades + per-segment level-matching at cue↔dialogue seams.
 - [ ] **Dry-run timeline.** Print the planned episode turn-by-turn with `[CUE]` markers before any TTS/network — cheap placement iteration. (The digest dry-run is a sibling pattern worth mirroring here.)
 
 ## P1 — remaining items (from deep review)

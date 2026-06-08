@@ -57,7 +57,7 @@
   "learning_path_model": "claude-sonnet-4-6",
   "use_clips": false,
   "use_music": true,
-  "use_sonic_footnotes": true,
+  "use_sonic_footnotes": false,
   "sonic_footnotes_catalog": "sonic_footnotes.json",
   "use_guest_hosts": true,
   "guest_host_mode": "auto",
