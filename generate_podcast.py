@@ -188,6 +188,11 @@ DEFAULTS: dict = {
     "turn_gap_beat_ms":        300,    # a long point that ends a sentence — let it land
     "turn_reaction_max_chars": 24,     # next line at/under this many chars counts as a reaction
     "turn_beat_min_chars":     320,    # prior line at/over this many chars can earn a landing beat
+    # Phase B3 — speech realism. After symmetry-break and before fact-check, a sparse
+    # pass adds soft disfluencies (um/uh before hard words: filler->pause->connector) and
+    # short backchannel turns ("mm-hmm") for the listening host. Capped at ~1 per 6 turns.
+    # Non-digest only (consultant-rounds register stays clean). Off => identical script.
+    "use_disfluency_pass":     True,
     "use_audio_mastering":  True,
     "normalize_turn_loudness": True,
     "audio_bitrate":        "192k",
@@ -228,6 +233,7 @@ _BOOL_CONFIG_KEYS = {
     "normalize_turn_loudness",
     "turn_edge_trim",
     "turn_variable_gaps",
+    "use_disfluency_pass",
     "audio_master_two_pass",
     "audio_deesser",
     "local_llm_think",
@@ -730,6 +736,59 @@ Do NOT:
 - Change factual content, the episode arc, or beat order.
 - Reassign a turn from one speaker to another.
 - Add or remove guest turns; preserve guest labels and personality.
+- Use delivery tags longer than 4 words.
+"""
+
+_DISFLUENCY_SYSTEM = """\
+You are the speech-realism editor for "Asynchronous".
+
+Two synthetic hosts (Juno and Caspar) are about to be read aloud by a TTS engine.
+Right now every line is too clean — fully formed, evenly fluent, no hesitation.
+Real people stumble a little before the words that matter and murmur tiny
+acknowledgements while the other person talks. Add a SPARSE, surgical layer of
+that, and nothing more.
+
+Return only dialogue lines in this exact format:
+JUNO [delivery tag]: text
+CASPAR [delivery tag]: text
+OPTIONAL GUEST LABEL [delivery tag]: text
+Never use the literal placeholder "OPTIONAL GUEST LABEL".
+
+You may add exactly TWO kinds of thing:
+
+1. A SOFT DISFLUENCY before a genuinely hard or important word — a hesitation
+   that buys the speaker a beat of thought. The shape is always
+   FILLER -> PAUSE -> CONNECTOR -> the real point:
+     CASPAR [thinking]: The mechanism is — um, so, it's basically a feedback loop.
+   Rules for these:
+   - Only an "um", "uh", or a brief false start ("The risk is— the real risk is").
+   - Place it BEFORE the complex/important word, never mid-stride after it, and
+     never on a short or throwaway line.
+   - Use a dash or comma so the TTS actually pauses; then a connector
+     ("so", "I mean", "well") into the real content.
+   - The sentence's meaning and facts stay identical.
+
+2. A BACKCHANNEL turn for the LISTENING host — its own short line, inserted
+   while the other host is carrying a longer idea:
+     JUNO [quietly]: Mm-hmm.
+     JUNO [warm]: Right.
+     CASPAR [curious]: Oh — interesting.
+   Rules for these:
+   - It is a brand-new short turn by the OTHER speaker, not an edit to an
+     existing line. Two or three words at most.
+   - Drop it between two turns of the host who is doing the talking, at a spot
+     where a real listener would murmur agreement — not on every handoff.
+
+DENSITY — this is the whole game. Overdoing it sounds MORE fake, not less.
+- At most ONE added disfluency or backchannel per ~6 turns of script.
+- A short script gets two or three total; never a tic on every line.
+- When in doubt, leave the line clean.
+
+Do NOT:
+- Change factual content, the episode arc, or beat order.
+- Reassign a turn from one speaker to another, or alter guest labels/personality.
+- Add filler to a line that is already short, punchy, or a reaction.
+- Stack two fillers in one line, or repeat the same filler word back-to-back.
 - Use delivery tags longer than 4 words.
 """
 
@@ -1988,6 +2047,28 @@ def _script_from_research_package(
             cfg=cfg,
         )
         natural_script = _strip_to_dialogue(rhythm_script)
+
+    # P1-B3: disfluency / backchannel pass — non-digest only (consultant-rounds
+    # register stays clean). Sparse soft disfluencies before hard words and short
+    # backchannel turns for the listening host. Runs before fact-check so any
+    # wording corrections still apply to the final lines. Flag-gated; off ⇒ no-op.
+    if not is_digest and cfg.get("use_disfluency_pass", True):
+        logger.info("[2/5] Adding speech disfluencies and backchannels...")
+        disfluent_script = _anthropic_text(
+            client,
+            model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+            max_tokens=8192,
+            system=_DISFLUENCY_SYSTEM,
+            content=(
+                f"Topic: {topic}\n\n"
+                f"{type_note}\n\n"
+                f"Guest plan:\n{json.dumps(guest_plan, indent=2)}\n\n"
+                f"Script:\n{natural_script}"
+            ),
+            temperature=0.5,
+            cfg=cfg,
+        )
+        natural_script = _strip_to_dialogue(disfluent_script)
 
     fiction_mode = episode_type == "complete_fiction"
     if fiction_mode:
