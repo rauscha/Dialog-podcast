@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 COLD OPEN: What Changed This Week"
+    },
+    {
+      "start_sec": 50.85,
+      "start_time": "0:51",
+      "title": "\u2014 HEADLINE: Design and Population"
+    },
+    {
+      "start_sec": 101.7,
+      "start_time": "1:42",
+      "title": "\u2014 HEADLINE: Effect Size and the Causation Problem"
+    },
+    {
+      "start_sec": 152.55,
+      "start_time": "2:33",
+      "title": "\u2014 HEADLINE: Practice Impact and the Prior Coverage Note"
+    },
+    {
+      "start_sec": 203.4,
+      "start_time": "3:23",
+      "title": "\u2014 ROUND 1: Keller \u2014 Resolved Early FGR and Neonatal Morbidity"
+    },
+    {
+      "start_sec": 254.25,
+      "start_time": "4:14",
+      "title": "\u2014 ROUND 2: Hannoun \u2014 Anti-HLA Antibodies and FGR"
+    },
+    {
+      "start_sec": 305.1,
+      "start_time": "5:05",
+      "title": "\u2014 ROUND 3: Kabiri \u2014 Late Short Cervix and Progesterone (Affectionate Disagreement)"
+    },
+    {
+      "start_sec": 355.95,
+      "start_time": "5:56",
+      "title": "\u2014 ROUND 4: Ambia \u2014 Breakthrough Eclampsia on Magnesium"
+    },
+    {
+      "start_sec": 406.79,
+      "start_time": "6:47",
+      "title": "\u2014 CLOSE: What to Watch, What's Still Open"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.companion.json",
+  "duration_sec": 502.643696,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First large-scale national validation that valacyclovir reduces vertical CMV transmission outside trial conditions",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023)",
+      "url": "https://doi.org/10.1002/uog.70223"
+    },
+    {
+      "reason": "Challenges the assumption that growth normalization after early FGR confers normal neonatal outcomes",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Neonatal morbidity following resolution of fetal growth restriction diagnosed at second-trimester anatomy ultrasound",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102020"
+    },
+    {
+      "reason": "Provides mechanistic insight into immune-mediated unexplained FGR with population-level data",
+      "source": "Am J Obstet Gynecol",
+      "title": "Anti-HLA Antibodies and Risk of Fetal Growth Restriction",
+      "url": "https://doi.org/10.1016/j.ajog.2026.05.019"
+    },
+    {
+      "reason": "Directly addresses a common clinical dilemma with sobering signal about late-window progesterone efficacy",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Vaginal progesterone and risk of preterm birth in asymptomatic women with short cervix diagnosed after 24 weeks of gestation",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102012"
+    },
+    {
+      "reason": "Characterizes a clinically important failure-mode population and associated morbidity",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Eclampsia despite magnesium sulfate prophylaxis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102022"
+    }
+  ],
+  "generated_at": "2026-06-09T10:08:54.432176+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Widespread valacyclovir uptake in France after 2020 was associated with substantial reduction in vertical CMV transmission at the national level over 7 years",
+      "confidence": "high",
+      "id": "coste-mazeau-2026",
+      "source_ids": [
+        "coste-mazeau-2026"
+      ]
+    },
+    {
+      "claim": "Fetal growth restriction diagnosed at anatomy scan that subsequently normalizes still carries elevated severe neonatal morbidity compared to consistently normal-growth pregnancies",
+      "confidence": "medium",
+      "id": "keller-2026",
+      "source_ids": [
+        "keller-2026"
+      ]
+    },
+    {
+      "claim": "Elevated maternal anti-HLA antibodies are associated with increased risk of fetal growth restriction, suggesting an immune-mediated mechanism",
+      "confidence": "medium",
+      "id": "hannoun-2026",
+      "source_ids": [
+        "hannoun-2026"
+      ]
+    },
+    {
+      "claim": "Vaginal progesterone for short cervix first identified after 24 weeks may not reduce spontaneous preterm birth",
+      "confidence": "medium",
+      "id": "kabiri-2026",
+      "source_ids": [
+        "kabiri-2026"
+      ]
+    },
+    {
+      "claim": "Breakthrough eclampsia despite magnesium sulfate prophylaxis occurs and carries significant maternal and perinatal morbidity",
+      "confidence": "low",
+      "id": "ambia-2026",
+      "source_ids": [
+        "ambia-2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Coste-Mazeau",
+      "id": "coste-mazeau-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023)",
+      "url": "https://doi.org/10.1002/uog.70223",
+      "why_it_matters": "First large-scale national validation that valacyclovir reduces vertical CMV transmission outside trial conditions",
+      "year": 2026
+    },
+    {
+      "author": "Keller",
+      "id": "keller-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Neonatal morbidity following resolution of fetal growth restriction diagnosed at second-trimester anatomy ultrasound",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102020",
+      "why_it_matters": "Challenges the assumption that growth normalization after early FGR confers normal neonatal outcomes",
+      "year": 2026
+    },
+    {
+      "author": "Hannoun",
+      "id": "hannoun-2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Anti-HLA Antibodies and Risk of Fetal Growth Restriction",
+      "url": "https://doi.org/10.1016/j.ajog.2026.05.019",
+      "why_it_matters": "Provides mechanistic insight into immune-mediated unexplained FGR with population-level data",
+      "year": 2026
+    },
+    {
+      "author": "Kabiri",
+      "id": "kabiri-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Vaginal progesterone and risk of preterm birth in asymptomatic women with short cervix diagnosed after 24 weeks of gestation",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102012",
+      "why_it_matters": "Directly addresses a common clinical dilemma with sobering signal about late-window progesterone efficacy",
+      "year": 2026
+    },
+    {
+      "author": "Ambia",
+      "id": "ambia-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Eclampsia despite magnesium sulfate prophylaxis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102022",
+      "why_it_matters": "Characterizes a clinically important failure-mode population and associated morbidity",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Coste-Mazeau et al. - Ultrasound Obstet Gynecol - 2026 - Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023) (https://doi.org/10.1002/uog.70223)",
+    "Keller et al. - Am J Obstet Gynecol MFM - 2026 - Neonatal morbidity following resolution of fetal growth restriction diagnosed at second-trimester anatomy ultrasound (https://doi.org/10.1016/j.ajogmf.2026.102020)",
+    "Hannoun et al. - Am J Obstet Gynecol - 2026 - Anti-HLA Antibodies and Risk of Fetal Growth Restriction (https://doi.org/10.1016/j.ajog.2026.05.019)",
+    "Kabiri et al. - Am J Obstet Gynecol MFM - 2026 - Vaginal progesterone and risk of preterm birth in asymptomatic women with short cervix diagnosed after 24 weeks of gestation (https://doi.org/10.1016/j.ajogmf.2026.102012)",
+    "Ambia et al. - Am J Obstet Gynecol MFM - 2026 - Eclampsia despite magnesium sulfate prophylaxis (https://doi.org/10.1016/j.ajogmf.2026.102022)"
+  ],
+  "topic": "MFM Rounds - week of 2026/06/09",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1247
+}

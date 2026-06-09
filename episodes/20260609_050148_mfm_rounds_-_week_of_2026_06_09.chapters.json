@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 COLD OPEN: What Changed This Week"
+    },
+    {
+      "startTime": 50.85,
+      "title": "\u2014 HEADLINE: Design and Population"
+    },
+    {
+      "startTime": 101.7,
+      "title": "\u2014 HEADLINE: Effect Size and the Causation Problem"
+    },
+    {
+      "startTime": 152.55,
+      "title": "\u2014 HEADLINE: Practice Impact and the Prior Coverage Note"
+    },
+    {
+      "startTime": 203.4,
+      "title": "\u2014 ROUND 1: Keller \u2014 Resolved Early FGR and Neonatal Morbidity"
+    },
+    {
+      "startTime": 254.25,
+      "title": "\u2014 ROUND 2: Hannoun \u2014 Anti-HLA Antibodies and FGR"
+    },
+    {
+      "startTime": 305.1,
+      "title": "\u2014 ROUND 3: Kabiri \u2014 Late Short Cervix and Progesterone (Affectionate Disagreement)"
+    },
+    {
+      "startTime": 355.95,
+      "title": "\u2014 ROUND 4: Ambia \u2014 Breakthrough Eclampsia on Magnesium"
+    },
+    {
+      "startTime": 406.79,
+      "title": "\u2014 CLOSE: What to Watch, What's Still Open"
+    }
+  ],
+  "version": "1.2.0"
+}
