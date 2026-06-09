@@ -193,6 +193,15 @@ DEFAULTS: dict = {
     # short backchannel turns ("mm-hmm") for the listening host. Capped at ~1 per 6 turns.
     # Non-digest only (consultant-rounds register stays clean). Off => identical script.
     "use_disfluency_pass":     True,
+    # Phase B4 (stretch) — overlaid backchannels. The short reaction turns B3 writes
+    # for the *listening* host ("mm-hmm", "right") are mixed onto the TAIL of the
+    # talking host's line — ducked, starting `lead_ms` before it ends — instead of
+    # played sequentially, so the agreement physically overlaps the way real talk does.
+    # OFF by default: higher-risk mixing, enable only after a live render is heard.
+    "use_overlaid_backchannels": False,
+    "backchannel_max_chars":   20,    # a reaction turn at/under this length can overlay
+    "backchannel_duck_db":     8,     # how far under the main voice the backchannel sits
+    "backchannel_lead_ms":     120,   # backchannel starts this many ms before the base ends
     "use_audio_mastering":  True,
     "normalize_turn_loudness": True,
     "audio_bitrate":        "192k",
@@ -234,6 +243,7 @@ _BOOL_CONFIG_KEYS = {
     "turn_edge_trim",
     "turn_variable_gaps",
     "use_disfluency_pass",
+    "use_overlaid_backchannels",
     "audio_master_two_pass",
     "audio_deesser",
     "local_llm_think",
@@ -258,6 +268,9 @@ _INT_CONFIG_KEYS = {
     "turn_gap_beat_ms",
     "turn_reaction_max_chars",
     "turn_beat_min_chars",
+    "backchannel_max_chars",
+    "backchannel_duck_db",
+    "backchannel_lead_ms",
     "tts_request_timeout_sec",
     "tts_command_timeout_sec",
     "audio_sample_rate",
@@ -3155,6 +3168,78 @@ def _probe_dur(path: Path) -> float:
         return 0.0
 
 
+def _is_backchannel_turn(rendered_meta: list, k: int, cfg: dict) -> bool:
+    """True if rendered turn ``k`` is a short reaction the *other* host murmurs
+    while the previous speaker is still carrying the idea — the B4 overlay
+    candidate. Requires a different speaker than the prior turn, a tight length
+    cap, and a non-question (a question expects a real beat/answer, not overlap).
+    """
+    if k <= 0 or k >= len(rendered_meta):
+        return False
+    lbl_prev, _ = rendered_meta[k - 1]
+    lbl_cur, txt_cur = rendered_meta[k]
+    if lbl_cur == lbl_prev:
+        return False
+    b = (txt_cur or "").strip()
+    if not b or b.endswith("?"):
+        return False
+    return len(b) <= int(cfg.get("backchannel_max_chars", 20))
+
+
+def _overlay_backchannel(
+    base_path: Path, bc_path: Path, out_path: Path, cfg: dict
+) -> Path | None:
+    """Mix a short backchannel onto the *tail* of ``base_path`` instead of playing
+    it sequentially: duck it ~`backchannel_duck_db`, delay it to start
+    `backchannel_lead_ms` before the base ends, sum with the base, and limit the
+    result so the brief overlap can't clip. Returns the mixed file, or None on any
+    failure (caller falls back to sequential concat — overlay is never load-bearing).
+    """
+    base_dur = _probe_dur(base_path)
+    bc_dur = _probe_dur(bc_path)
+    if base_dur <= 0 or bc_dur <= 0:
+        return None
+    lead_ms = max(0, int(cfg.get("backchannel_lead_ms", 120)))
+    duck_db = abs(float(cfg.get("backchannel_duck_db", 8)))
+    delay_ms = max(0, int(round(base_dur * 1000)) - lead_ms)
+    sample_rate = int(cfg.get("audio_sample_rate", 44100))
+    channels = int(cfg.get("audio_channels", 2))
+    delay_arg = "|".join([str(delay_ms)] * max(1, channels))
+    # Duck + delay the backchannel, sum without amix's auto-normalization (which
+    # would halve the main voice), then limit ~-1 dBFS as clip insurance — the final
+    # master re-loudnorms the whole program afterward regardless.
+    filtergraph = (
+        f"[1:a]volume=-{duck_db:g}dB,adelay={delay_arg}[bc];"
+        f"[0:a][bc]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0[m];"
+        f"[m]alimiter=limit=0.89[out]"
+    )
+    out_path = out_path.with_suffix(".mp3")
+    cmd = [
+        "ffmpeg", "-y",
+        "-i", str(base_path),
+        "-i", str(bc_path),
+        "-filter_complex", filtergraph,
+        "-map", "[out]",
+        "-ar", str(sample_rate),
+        "-ac", str(channels),
+        "-c:a", "libmp3lame",
+        "-b:a", _audio_bitrate_value(cfg),
+        str(out_path),
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+    except (subprocess.SubprocessError, OSError) as exc:
+        logger.warning("Backchannel overlay failed (%s); using sequential turn", exc)
+        return None
+    if result.returncode != 0 or not out_path.exists():
+        logger.warning(
+            "Backchannel overlay ffmpeg error; using sequential turn: %s",
+            result.stderr[:300],
+        )
+        return None
+    return out_path
+
+
 def _crossfade_concat(
     parts: list,
     output: Path,
@@ -3775,6 +3860,39 @@ def _tts_two_host(
             if Path(fn.audio_path).exists():
                 flat.append((Path(fn.audio_path), None))
 
+    # Phase B4 (stretch, default off): fold a short backchannel turn onto the *tail*
+    # of the prior (other-host) turn as a ducked overlay instead of a sequential
+    # segment, so the agreement physically overlaps. Best-effort and non-load-bearing
+    # — any overlay failure leaves that turn sequential. Only the immediately-prior
+    # *real* turn (k not None) is a fold target, and never one already carrying an
+    # overlay, so a resuming turn after the murmur can't be stacked onto the same base.
+    # (Minor: the gap after an overlaid turn is classified vs the consumed backchannel,
+    # not the resume — a sub-perceptual 110ms reaction gap, within B2's existing band.)
+    overlay_tmps: list[Path] = []
+    if cfg.get("use_overlaid_backchannels", False) and len(flat) > 1:
+        folded: list[tuple[Path, int | None]] = []
+        folded_overlaid: list[bool] = []
+        for path, k in flat:
+            if (
+                k is not None
+                and folded
+                and folded[-1][1] is not None
+                and not folded_overlaid[-1]
+                and _is_backchannel_turn(rendered_meta, k, cfg)
+            ):
+                base_path, base_k = folded[-1]
+                mixed = _overlay_backchannel(
+                    base_path, path, work_dir / f"_bc_{base_k:04d}", cfg
+                )
+                if mixed is not None:
+                    folded[-1] = (mixed, base_k)
+                    folded_overlaid[-1] = True
+                    overlay_tmps.append(mixed)
+                    continue
+            folded.append((path, k))
+            folded_overlaid.append(False)
+        flat = folded
+
     base_ms = int(cfg.get("turn_silence_ms", 180))
     silence_cache: dict[int, Path] = {}
 
@@ -3813,6 +3931,8 @@ def _tts_two_host(
         p.unlink(missing_ok=True)
     for seg in silence_cache.values():
         seg.unlink(missing_ok=True)
+    for t in overlay_tmps:
+        t.unlink(missing_ok=True)
 
     return output_path
 
