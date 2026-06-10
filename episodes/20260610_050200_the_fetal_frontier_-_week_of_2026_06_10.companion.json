@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changed"
+    },
+    {
+      "start_sec": 47.34,
+      "start_time": "0:47",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 94.68,
+      "start_time": "1:35",
+      "title": "\u2014 Headline: Effect, Numbers, and the Transmission Signal"
+    },
+    {
+      "start_sec": 142.02,
+      "start_time": "2:22",
+      "title": "\u2014 Headline: Practice Impact and the Screening Policy Question"
+    },
+    {
+      "start_sec": 189.36,
+      "start_time": "3:09",
+      "title": "\u2014 Round 1: Kjaer / FMF PE Algorithm by Conception Mode"
+    },
+    {
+      "start_sec": 236.71,
+      "start_time": "3:57",
+      "title": "\u2014 Round 2: Sorrenti / ISUOG vs. Delphi in MCDA sFGR"
+    },
+    {
+      "start_sec": 284.05,
+      "start_time": "4:44",
+      "title": "\u2014 Round 3: Schenone / IUT for Tumor-Related Fetal Anemia"
+    },
+    {
+      "start_sec": 331.39,
+      "start_time": "5:31",
+      "title": "\u2014 Round 4: Cai / Rhabdomyoma, MRI + Trio-WES, TSC Prediction"
+    },
+    {
+      "start_sec": 378.73,
+      "start_time": "6:19",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.companion.json",
+  "duration_sec": 471.070884,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First national-scale evidence that the 2020 valacyclovir RCT translated into real-world practice change and reduced vertical CMV transmission",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023)",
+      "url": "https://doi.org/10.1002/uog.70223"
+    },
+    {
+      "reason": "Demonstrates that FMF PE screening algorithm performance varies by ART type, signaling need for mode-specific recalibration",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode",
+      "url": "https://doi.org/10.1002/uog.70244"
+    },
+    {
+      "reason": "Head-to-head comparison of sFGR criteria in MCDA twins clarifies prognostic differences and classification discordance",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria",
+      "url": "https://doi.org/10.1002/uog.70239"
+    },
+    {
+      "reason": "Best available synthesis of IUT outcomes for tumor-related fetal anemia, guiding counseling for a rare indication",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review",
+      "url": "https://doi.org/10.1002/uog.70234"
+    },
+    {
+      "reason": "Multimodal approach (MRI plus trio-WES) improves prenatal TSC prediction in fetuses with cardiac rhabdomyoma",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal diagnosis of cardiac rhabdomyoma: implications for predicting tuberous sclerosis complex and guiding perinatal management",
+      "url": "https://doi.org/10.1002/uog.70240"
+    }
+  ],
+  "generated_at": "2026-06-10T10:09:02.274336+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Valacyclovir adoption in France after the 2020 RCT led to increased screening uptake and reduced vertical CMV transmission rates at the national level",
+      "confidence": "high",
+      "id": "claim-cmv-france",
+      "source_ids": [
+        "coste-mazeau-2026"
+      ]
+    },
+    {
+      "claim": "FMF first-trimester preeclampsia screening algorithm performance differs by conception mode, with frozen embryo transfer and donor-egg ART showing distinct risk profiles",
+      "confidence": "high",
+      "id": "claim-pe-art",
+      "source_ids": [
+        "kjaer-2026"
+      ]
+    },
+    {
+      "claim": "ISUOG and Delphi criteria for selective FGR in MCDA twins identify overlapping but not identical populations and differ in prognostic performance",
+      "confidence": "high",
+      "id": "claim-sfgr-criteria",
+      "source_ids": [
+        "sorrenti-2026"
+      ]
+    },
+    {
+      "claim": "Intrauterine transfusion for fetal anemia from fetal or placental tumors is feasible with characterized but heterogeneous outcomes",
+      "confidence": "high",
+      "id": "claim-iut-tumor",
+      "source_ids": [
+        "schenone-2026"
+      ]
+    },
+    {
+      "claim": "Combining fetal MRI and trio-WES improves prenatal TSC prediction in fetuses with cardiac rhabdomyoma; tumor number and distribution correlate with diagnosis",
+      "confidence": "medium",
+      "id": "claim-rhabdomyoma-tsc",
+      "source_ids": [
+        "cai-2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Coste-Mazeau",
+      "id": "coste-mazeau-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023)",
+      "url": "https://doi.org/10.1002/uog.70223",
+      "why_it_matters": "First national-scale evidence that the 2020 valacyclovir RCT translated into real-world practice change and reduced vertical CMV transmission",
+      "year": 2026
+    },
+    {
+      "author": "Kjaer",
+      "id": "kjaer-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode",
+      "url": "https://doi.org/10.1002/uog.70244",
+      "why_it_matters": "Demonstrates that FMF PE screening algorithm performance varies by ART type, signaling need for mode-specific recalibration",
+      "year": 2026
+    },
+    {
+      "author": "Sorrenti",
+      "id": "sorrenti-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria",
+      "url": "https://doi.org/10.1002/uog.70239",
+      "why_it_matters": "Head-to-head comparison of sFGR criteria in MCDA twins clarifies prognostic differences and classification discordance",
+      "year": 2026
+    },
+    {
+      "author": "Schenone",
+      "id": "schenone-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review",
+      "url": "https://doi.org/10.1002/uog.70234",
+      "why_it_matters": "Best available synthesis of IUT outcomes for tumor-related fetal anemia, guiding counseling for a rare indication",
+      "year": 2026
+    },
+    {
+      "author": "Cai",
+      "id": "cai-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal diagnosis of cardiac rhabdomyoma: implications for predicting tuberous sclerosis complex and guiding perinatal management",
+      "url": "https://doi.org/10.1002/uog.70240",
+      "why_it_matters": "Multimodal approach (MRI plus trio-WES) improves prenatal TSC prediction in fetuses with cardiac rhabdomyoma",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Coste-Mazeau et al. - Ultrasound Obstet Gynecol - 2026 - Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023) (https://doi.org/10.1002/uog.70223)",
+    "Kjaer et al. - Ultrasound Obstet Gynecol - 2026 - Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode (https://doi.org/10.1002/uog.70244)",
+    "Sorrenti et al. - Ultrasound Obstet Gynecol - 2026 - Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria (https://doi.org/10.1002/uog.70239)",
+    "Schenone et al. - Ultrasound Obstet Gynecol - 2026 - Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review (https://doi.org/10.1002/uog.70234)",
+    "Cai et al. - Ultrasound Obstet Gynecol - 2026 - Prenatal diagnosis of cardiac rhabdomyoma: implications for predicting tuberous sclerosis complex and guiding perinatal management (https://doi.org/10.1002/uog.70240)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/06/10",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1138
+}

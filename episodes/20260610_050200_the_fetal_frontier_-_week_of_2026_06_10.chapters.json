@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What Changed"
+    },
+    {
+      "startTime": 47.34,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 94.68,
+      "title": "\u2014 Headline: Effect, Numbers, and the Transmission Signal"
+    },
+    {
+      "startTime": 142.02,
+      "title": "\u2014 Headline: Practice Impact and the Screening Policy Question"
+    },
+    {
+      "startTime": 189.36,
+      "title": "\u2014 Round 1: Kjaer / FMF PE Algorithm by Conception Mode"
+    },
+    {
+      "startTime": 236.71,
+      "title": "\u2014 Round 2: Sorrenti / ISUOG vs. Delphi in MCDA sFGR"
+    },
+    {
+      "startTime": 284.05,
+      "title": "\u2014 Round 3: Schenone / IUT for Tumor-Related Fetal Anemia"
+    },
+    {
+      "startTime": 331.39,
+      "title": "\u2014 Round 4: Cai / Rhabdomyoma, MRI + Trio-WES, TSC Prediction"
+    },
+    {
+      "startTime": 378.73,
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
