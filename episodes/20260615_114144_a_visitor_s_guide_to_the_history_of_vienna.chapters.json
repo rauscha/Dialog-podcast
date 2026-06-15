@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Stoic at the Edge"
+    },
+    {
+      "startTime": 67.5,
+      "title": "\u2014 The Puzzle: Why Vienna?"
+    },
+    {
+      "startTime": 135.0,
+      "title": "\u2014 1683: The Walls and What Came After"
+    },
+    {
+      "startTime": 202.5,
+      "title": "\u2014 The Ringstrasse: A City in Borrowed Costumes"
+    },
+    {
+      "startTime": 270.0,
+      "title": "\u2014 Fin-de-Si\u00e8cle: The Inward Turn"
+    },
+    {
+      "startTime": 337.49,
+      "title": "\u2014 Red Vienna: The Experiment"
+    },
+    {
+      "startTime": 404.99,
+      "title": "\u2014 Heldenplatz: The Anschluss and the Victim Myth"
+    },
+    {
+      "startTime": 472.49,
+      "title": "\u2014 The Jewish Counterfactual"
+    },
+    {
+      "startTime": 539.99,
+      "title": "\u2014 The City That Remains"
+    },
+    {
+      "startTime": 607.49,
+      "title": "\u2014 Reflective Ending: The Unanswerable Question"
+    }
+  ],
+  "version": "1.2.0"
+}

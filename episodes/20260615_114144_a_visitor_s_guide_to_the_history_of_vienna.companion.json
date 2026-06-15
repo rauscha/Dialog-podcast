@@ -1,0 +1,327 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_114144_a_visitor_s_guide_to_the_history_of_vienna.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Stoic at the Edge"
+    },
+    {
+      "start_sec": 67.5,
+      "start_time": "1:07",
+      "title": "\u2014 The Puzzle: Why Vienna?"
+    },
+    {
+      "start_sec": 135.0,
+      "start_time": "2:15",
+      "title": "\u2014 1683: The Walls and What Came After"
+    },
+    {
+      "start_sec": 202.5,
+      "start_time": "3:22",
+      "title": "\u2014 The Ringstrasse: A City in Borrowed Costumes"
+    },
+    {
+      "start_sec": 270.0,
+      "start_time": "4:30",
+      "title": "\u2014 Fin-de-Si\u00e8cle: The Inward Turn"
+    },
+    {
+      "start_sec": 337.49,
+      "start_time": "5:37",
+      "title": "\u2014 Red Vienna: The Experiment"
+    },
+    {
+      "start_sec": 404.99,
+      "start_time": "6:45",
+      "title": "\u2014 Heldenplatz: The Anschluss and the Victim Myth"
+    },
+    {
+      "start_sec": 472.49,
+      "start_time": "7:52",
+      "title": "\u2014 The Jewish Counterfactual"
+    },
+    {
+      "start_sec": 539.99,
+      "start_time": "9:00",
+      "title": "\u2014 The City That Remains"
+    },
+    {
+      "start_sec": 607.49,
+      "start_time": "10:07",
+      "title": "\u2014 Reflective Ending: The Unanswerable Question"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_114144_a_visitor_s_guide_to_the_history_of_vienna.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_114144_a_visitor_s_guide_to_the_history_of_vienna.companion.json",
+  "duration_sec": 719.988005,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "Pulitzer Prize-winning (1981) foundational text arguing that Vienna's modernist breakthroughs emerged from the failure of Austrian liberalism. Schorske's thesis\u2014that political defeat drove intellectuals toward psychology and aesthetics\u2014remains the dominant framework for understanding Vienna 1900. Essential for the 'complication' beat: culture as retreat, not triumph.",
+      "source": "Alfred A. Knopf",
+      "title": "Fin-de-Si\u00e8cle Vienna: Politics and Culture",
+      "url": "https://en.wikipedia.org/wiki/Fin-de-si%C3%A8cle_Vienna"
+    },
+    {
+      "reason": "Scholarly treatment of the Habsburg Empire's emergence as a military and cultural power, with specific attention to the Ottoman conflicts. Chapter 3 covers the 1683 siege and its aftermath. Useful for grounding the 1683 turning point in broader imperial context.",
+      "source": "Cambridge University Press",
+      "title": "The Habsburg Monarchy, 1618-1815",
+      "url": "https://www.ebsco.com/research-starters/history/defeat-ottomans-vienna"
+    },
+    {
+      "reason": "Brief interpretive overview by a leading Austrian scholar questioning how significant the 1683 siege really was, and for whom. Useful for complicating the standard narrative that treats the siege as an unambiguous turning point.",
+      "source": "History Today",
+      "title": "1683: The Siege of Vienna",
+      "url": "https://www.historytoday.com/archive/1683-siege-vienna"
+    },
+    {
+      "reason": "Official Habsburg heritage site with detailed primary-source-based accounts of the Ringstrasse construction, the Hofburg's 640-year evolution, and the dynasty's relationship to Vienna. Includes specific dates, decrees, and architectural details.",
+      "source": "habsburger.net",
+      "title": "Die Welt der Habsburger (The World of the Habsburgs)",
+      "url": "https://www.habsburger.net/en/events/ringstrasse-era-1857-1914"
+    },
+    {
+      "reason": "Authoritative account of Vienna's Jewish community before and during the Holocaust, including the establishment of Eichmann's Central Office for Jewish Emigration in Vienna\u2014the 'Viennese model' that became the template for Nazi persecution elsewhere. Essential for the episode's darkest chapter.",
+      "source": "Holocaust Encyclopedia",
+      "title": "Vienna (Holocaust Encyclopedia)",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/vienna"
+    },
+    {
+      "reason": "Official UNESCO documentation of why Viennese coffeehouse culture was inscribed as intangible heritage. Key quote: coffeehouses are places 'in which time and space are consumed, but only the coffee is listed on the bill.' Connects physical spaces to intellectual history.",
+      "source": "UNESCO National Inventory",
+      "title": "Viennese Coffee House Culture (Intangible Cultural Heritage)",
+      "url": "https://www.unesco.at/en/culture/intangible-cultural-heritage/national-inventory/news-1/article/viennese-coffee-house-culture"
+    },
+    {
+      "reason": "Accessible overview of Red Vienna's social housing program (1919-1934) as a comprehensive urban project, not just housing. Useful for showing Vienna's capacity for reinvention after imperial collapse\u2014and for the tragic ending when fascism destroyed the experiment.",
+      "source": "Jacobin",
+      "title": "Remembering Red Vienna",
+      "url": "https://jacobin.com/2017/02/red-vienna-austria-housing-urban-planning"
+    },
+    {
+      "reason": "Comprehensive reference covering Vienna from Vindobona through the present, with specific details on Marcus Aurelius's death in 180 CE, population figures, and key dates. Useful for fact-checking and establishing the longue dur\u00e9e.",
+      "source": "Britannica",
+      "title": "Vienna - Imperial Capital, Habsburgs, Baroque",
+      "url": "https://www.britannica.com/place/Vienna/History"
+    }
+  ],
+  "generated_at": "2026-06-15T17:00:15.267845+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim specific archival findings or unpublished research",
+        "Should not characterize any living historian's views as settled or definitive",
+        "Should not offer a verdict on whether the Schorske thesis is right or wrong \u2014 only on where the evidence is thinner than the argument",
+        "Should not speak for the experience of Vienna's Jewish community as an insider"
+      ],
+      "credential_frame": "A composite voice drawing on the tradition of scholars who work at the intersection of city form, political collapse, and cultural production \u2014 someone who has spent years reading Schorske against his critics and teaching fin-de-si\u00e8cle Vienna to students who keep asking whether the thesis is too convenient",
+      "delivery_baseline": "Measured pace with occasional acceleration when she's working something out in real time; does not perform authority; lets incomplete sentences stand",
+      "display_name": "Marta Velden",
+      "elevenlabs_voice_id": "w2CTE3MYza6FgBnETYNT",
+      "expertise": "The precise mechanics of Schorske's causal claim and where it strains; the distinction between crisis as engine and crisis as accelerant of pre-existing infrastructure; the specific weight of the Jewish intellectual community as connective tissue rather than ornament; why the counterfactual is not a rhetorical flourish but an actual historical problem",
+      "field": "urban intellectual history and the sociology of cultural crisis",
+      "label": "MARTA",
+      "personality": "Careful, a little impatient with elegance that outruns evidence, genuinely moved by the material in ways she doesn't always manage to conceal \u2014 she'll push back on Juno's romanticism not because she doesn't feel it but because she's learned to distrust the feeling; she pauses before the hard sentences rather than after them",
+      "role_in_episode": "Enters after the Ringstrasse beat to complicate the Schorske thesis before Juno has fully committed to it; stays through the Red Vienna section to hold the tension between the housing legacy and the political destruction; is present and largely quiet during the Holocaust reckoning, offering one precise observation about the Jewish counterfactual and then not filling the silence",
+      "synthetic": true,
+      "tts_provider": "elevenlabs",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "Emperor Marcus Aurelius died in Vindobona (Roman Vienna) on March 17, 180 AD, during the Marcomannic Wars against Germanic tribes. The Roman settlement had grown to approximately 15,000-30,000 inhabitants.",
+      "confidence": "high",
+      "id": "claim_1",
+      "source_ids": [
+        "britannica_vienna",
+        "habsburger_net"
+      ]
+    },
+    {
+      "claim": "The 1683 Ottoman siege of Vienna lasted from July 17 to September 12, with approximately 150,000 Ottoman troops besieging the city. The relief force of around 70,000, led by Polish King John III Sobieski, defeated the Ottomans in what is often called the largest cavalry charge in history.",
+      "confidence": "high",
+      "id": "claim_2",
+      "source_ids": [
+        "leitsch_1983",
+        "ingrao_2000"
+      ]
+    },
+    {
+      "claim": "On December 20, 1857, Emperor Franz Joseph signed the decree ordering demolition of Vienna's medieval city walls. The Ringstrasse\u201457 meters wide and 5.3 kilometers long\u2014was officially inaugurated on May 1, 1865, though construction continued for over 50 years.",
+      "confidence": "high",
+      "id": "claim_3",
+      "source_ids": [
+        "habsburger_net"
+      ]
+    },
+    {
+      "claim": "The Congress of Vienna (September 1814 - June 1815), chaired by Austrian statesman Klemens von Metternich, was the first international summit organized specifically to secure lasting peace between European powers. It established the Concert of Europe system.",
+      "confidence": "high",
+      "id": "claim_4",
+      "source_ids": [
+        "britannica_vienna"
+      ]
+    },
+    {
+      "claim": "By 1900, Vienna had approximately 600 coffeehouses. The culture was so distinctive that UNESCO inscribed 'Viennese Coffee House Culture' as Intangible Cultural Heritage in 2011.",
+      "confidence": "high",
+      "id": "claim_5",
+      "source_ids": [
+        "unesco_coffeehouse"
+      ]
+    },
+    {
+      "claim": "In January 1938, approximately 190,000 Jews lived in Austria, with the vast majority in Vienna. By May 1945, one-third were dead. 65,459 Austrian Jews were murdered in the Holocaust.",
+      "confidence": "high",
+      "id": "claim_6",
+      "source_ids": [
+        "ushmm_vienna"
+      ]
+    },
+    {
+      "claim": "Between 1923 and 1934, Red Vienna built 61,175 apartments in 348 housing blocks plus 5,227 apartments in 42 terraced developments. 400 architecture offices participated. The Karl-Marx-Hof alone contains 1,272 apartments.",
+      "confidence": "high",
+      "id": "claim_7",
+      "source_ids": [
+        "jacobin_red_vienna"
+      ]
+    },
+    {
+      "claim": "Schorske's thesis: Austrian liberalism's defeat by the 1880s\u2014by Christian, anti-Semitic, socialist, and nationalist mass movements\u2014had 'profound psychological repercussions' that drove intellectuals toward aestheticism and psychology, producing Vienna's modernist breakthroughs.",
+      "confidence": "high",
+      "id": "claim_8",
+      "source_ids": [
+        "schorske_1979"
+      ]
+    },
+    {
+      "claim": "German troops entered Austria on March 12, 1938. Hitler spoke to a massive crowd at Vienna's Heldenplatz on March 15. Within two weeks of the Anschluss, more than 200 Viennese Jews committed suicide.",
+      "confidence": "high",
+      "id": "claim_9",
+      "source_ids": [
+        "ushmm_vienna"
+      ]
+    },
+    {
+      "claim": "Today, 60% of Vienna's residents live in co-ops, government-owned, or subsidized housing built around the nucleus of the 1920s Red Vienna system. The city maintains approximately 420,000 non-market rental housing units.",
+      "confidence": "medium-high",
+      "id": "claim_10",
+      "source_ids": [
+        "jacobin_red_vienna"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Carl E. Schorske",
+      "id": "schorske_1979",
+      "publication": "Alfred A. Knopf",
+      "title": "Fin-de-Si\u00e8cle Vienna: Politics and Culture",
+      "url": "https://en.wikipedia.org/wiki/Fin-de-si%C3%A8cle_Vienna",
+      "why_it_matters": "Pulitzer Prize-winning (1981) foundational text arguing that Vienna's modernist breakthroughs emerged from the failure of Austrian liberalism. Schorske's thesis\u2014that political defeat drove intellectuals toward psychology and aesthetics\u2014remains the dominant framework for understanding Vienna 1900. Essential for the 'complication' beat: culture as retreat, not triumph.",
+      "year": "1979"
+    },
+    {
+      "author": "Charles W. Ingrao",
+      "id": "ingrao_2000",
+      "publication": "Cambridge University Press",
+      "title": "The Habsburg Monarchy, 1618-1815",
+      "url": "https://www.ebsco.com/research-starters/history/defeat-ottomans-vienna",
+      "why_it_matters": "Scholarly treatment of the Habsburg Empire's emergence as a military and cultural power, with specific attention to the Ottoman conflicts. Chapter 3 covers the 1683 siege and its aftermath. Useful for grounding the 1683 turning point in broader imperial context.",
+      "year": "2000 (2nd ed.)"
+    },
+    {
+      "author": "Walter Leitsch",
+      "id": "leitsch_1983",
+      "publication": "History Today",
+      "title": "1683: The Siege of Vienna",
+      "url": "https://www.historytoday.com/archive/1683-siege-vienna",
+      "why_it_matters": "Brief interpretive overview by a leading Austrian scholar questioning how significant the 1683 siege really was, and for whom. Useful for complicating the standard narrative that treats the siege as an unambiguous turning point.",
+      "year": "1983"
+    },
+    {
+      "author": "Schloss Sch\u00f6nbrunn Kultur- und Betriebsges.m.b.H.",
+      "id": "habsburger_net",
+      "publication": "habsburger.net",
+      "title": "Die Welt der Habsburger (The World of the Habsburgs)",
+      "url": "https://www.habsburger.net/en/events/ringstrasse-era-1857-1914",
+      "why_it_matters": "Official Habsburg heritage site with detailed primary-source-based accounts of the Ringstrasse construction, the Hofburg's 640-year evolution, and the dynasty's relationship to Vienna. Includes specific dates, decrees, and architectural details.",
+      "year": "Ongoing"
+    },
+    {
+      "author": "United States Holocaust Memorial Museum",
+      "id": "ushmm_vienna",
+      "publication": "Holocaust Encyclopedia",
+      "title": "Vienna (Holocaust Encyclopedia)",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/vienna",
+      "why_it_matters": "Authoritative account of Vienna's Jewish community before and during the Holocaust, including the establishment of Eichmann's Central Office for Jewish Emigration in Vienna\u2014the 'Viennese model' that became the template for Nazi persecution elsewhere. Essential for the episode's darkest chapter.",
+      "year": "Ongoing"
+    },
+    {
+      "author": "Austrian UNESCO Commission",
+      "id": "unesco_coffeehouse",
+      "publication": "UNESCO National Inventory",
+      "title": "Viennese Coffee House Culture (Intangible Cultural Heritage)",
+      "url": "https://www.unesco.at/en/culture/intangible-cultural-heritage/national-inventory/news-1/article/viennese-coffee-house-culture",
+      "why_it_matters": "Official UNESCO documentation of why Viennese coffeehouse culture was inscribed as intangible heritage. Key quote: coffeehouses are places 'in which time and space are consumed, but only the coffee is listed on the bill.' Connects physical spaces to intellectual history.",
+      "year": "2011"
+    },
+    {
+      "author": "E. A. Halevi",
+      "id": "jacobin_red_vienna",
+      "publication": "Jacobin",
+      "title": "Remembering Red Vienna",
+      "url": "https://jacobin.com/2017/02/red-vienna-austria-housing-urban-planning",
+      "why_it_matters": "Accessible overview of Red Vienna's social housing program (1919-1934) as a comprehensive urban project, not just housing. Useful for showing Vienna's capacity for reinvention after imperial collapse\u2014and for the tragic ending when fascism destroyed the experiment.",
+      "year": "2017"
+    },
+    {
+      "author": "Encyclopaedia Britannica",
+      "id": "britannica_vienna",
+      "publication": "Britannica",
+      "title": "Vienna - Imperial Capital, Habsburgs, Baroque",
+      "url": "https://www.britannica.com/place/Vienna/History",
+      "why_it_matters": "Comprehensive reference covering Vienna from Vindobona through the present, with specific details on Marcus Aurelius's death in 180 CE, population figures, and key dates. Useful for fact-checking and establishing the longue dur\u00e9e.",
+      "year": "2026 (updated)"
+    }
+  ],
+  "sources": [
+    "Carl E. Schorske - Alfred A. Knopf - 1979 - Fin-de-Si\u00e8cle Vienna: Politics and Culture (https://en.wikipedia.org/wiki/Fin-de-si%C3%A8cle_Vienna)",
+    "Charles W. Ingrao - Cambridge University Press - 2000 (2nd ed.) - The Habsburg Monarchy, 1618-1815 (https://www.ebsco.com/research-starters/history/defeat-ottomans-vienna)",
+    "Walter Leitsch - History Today - 1983 - 1683: The Siege of Vienna (https://www.historytoday.com/archive/1683-siege-vienna)",
+    "Schloss Sch\u00f6nbrunn Kultur- und Betriebsges.m.b.H. - habsburger.net - Ongoing - Die Welt der Habsburger (The World of the Habsburgs) (https://www.habsburger.net/en/events/ringstrasse-era-1857-1914)",
+    "United States Holocaust Memorial Museum - Holocaust Encyclopedia - Ongoing - Vienna (Holocaust Encyclopedia) (https://encyclopedia.ushmm.org/content/en/article/vienna)",
+    "Austrian UNESCO Commission - UNESCO National Inventory - 2011 - Viennese Coffee House Culture (Intangible Cultural Heritage) (https://www.unesco.at/en/culture/intangible-cultural-heritage/national-inventory/news-1/article/viennese-coffee-house-culture)",
+    "E. A. Halevi - Jacobin - 2017 - Remembering Red Vienna (https://jacobin.com/2017/02/red-vienna-austria-housing-urban-planning)",
+    "Encyclopaedia Britannica - Britannica - 2026 (updated) - Vienna - Imperial Capital, Habsburgs, Baroque (https://www.britannica.com/place/Vienna/History)"
+  ],
+  "topic": "A visitor's guide to the history of Vienna",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    },
+    "MARTA": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "MARTA"
+    }
+  },
+  "word_count": 2011
+}
