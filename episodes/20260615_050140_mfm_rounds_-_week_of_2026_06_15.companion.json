@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Problem"
+    },
+    {
+      "start_sec": 38.3,
+      "start_time": "0:38",
+      "title": "\u2014 Headline: Design and Clinical Question"
+    },
+    {
+      "start_sec": 76.59,
+      "start_time": "1:17",
+      "title": "\u2014 Headline: Effect Size and the Heterogeneity Problem"
+    },
+    {
+      "start_sec": 114.89,
+      "start_time": "1:55",
+      "title": "\u2014 Headline: Practice Impact and What Tertiary Centers Can Do Now"
+    },
+    {
+      "start_sec": 153.18,
+      "start_time": "2:33",
+      "title": "\u2014 Pivot and Round 1: Baucom, Twin Chorionicity and Maternal Morbidity"
+    },
+    {
+      "start_sec": 191.48,
+      "start_time": "3:11",
+      "title": "\u2014 Round 2: Houri, Preeclampsia Phenotyping"
+    },
+    {
+      "start_sec": 229.77,
+      "start_time": "3:50",
+      "title": "\u2014 Round 3: Miodownik, Placental Syndromes and Long-Term Risk"
+    },
+    {
+      "start_sec": 268.07,
+      "start_time": "4:28",
+      "title": "\u2014 Round 4: Huynh, Vasa Previa Hospitalization Guidelines"
+    },
+    {
+      "start_sec": 306.36,
+      "start_time": "5:06",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.companion.json",
+  "duration_sec": 389.655601,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Meta-analysis of RCTs showing hemodynamics-guided antihypertensive management reduces composite adverse outcomes versus BP-threshold-only care \u2014 potentially practice-changing for HDP treatment",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Hemodynamics-guided treatment of hypertensive disorders of pregnancy: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70250"
+    },
+    {
+      "reason": "Large national database quantifying substantially higher severe maternal morbidity in MCDA and MCMA twins versus dichorionic or singleton gestations",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Severe maternal morbidity and obstetrical outcomes by twin chorionicity and amnionicity",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101993"
+    },
+    {
+      "reason": "Identifies three clinically distinct preeclampsia phenotypes with different severity, angiogenic profiles, and delivery timing \u2014 hypothesis-generating for individualized management",
+      "source": "BJOG",
+      "title": "Phenotyping Preeclampsia Using Unsupervised Machine Learning: A Prospective Cohort Study",
+      "url": "https://doi.org/10.1111/1471-0528.70262"
+    },
+    {
+      "reason": "Synthesizes evidence that placental syndromes predict long-term cardiovascular, renal, and metabolic risk \u2014 actionable for postpartum counseling and surveillance",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Expert Review: Pregnancy Placental Syndromes and the Effects on Long-Term Health",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102008"
+    },
+    {
+      "reason": "Reveals inconsistent international guidelines on antenatal hospitalization for vasa previa, clarifying that current practice rests on weak evidence",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Hospitalization for Vasa Previa: a Review of National Guidelines",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102017"
+    }
+  ],
+  "generated_at": "2026-06-15T10:08:20.358427+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Hemodynamics-guided antihypertensive management in hypertensive disorders of pregnancy reduces composite adverse maternal and perinatal outcomes compared to blood-pressure-threshold-only standard care.",
+      "confidence": "high",
+      "id": "claim_novelli",
+      "source_ids": [
+        "novelli_2026"
+      ]
+    },
+    {
+      "claim": "Monochorionic-diamniotic and monochorionic-monoamniotic twin gestations carry substantially higher severe maternal morbidity than dichorionic twins or singleton pregnancies.",
+      "confidence": "medium",
+      "id": "claim_baucom",
+      "source_ids": [
+        "baucom_2026"
+      ]
+    },
+    {
+      "claim": "Unsupervised machine learning can identify three clinically distinct preeclampsia phenotypes that differ in severity, angiogenic profile, and delivery timing.",
+      "confidence": "medium",
+      "id": "claim_houri",
+      "source_ids": [
+        "houri_2026"
+      ]
+    },
+    {
+      "claim": "Pregnancy placental syndromes serve as early indicators of long-term cardiovascular, renal, and metabolic risk, warranting postpartum surveillance.",
+      "confidence": "medium",
+      "id": "claim_miodownik",
+      "source_ids": [
+        "miodownik_2026"
+      ]
+    },
+    {
+      "claim": "International guidelines on antenatal hospitalization for vasa previa are inconsistent and based on weak evidentiary foundations.",
+      "confidence": "high",
+      "id": "claim_huynh",
+      "source_ids": [
+        "huynh_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Novelli",
+      "id": "novelli_2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Hemodynamics-guided treatment of hypertensive disorders of pregnancy: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70250",
+      "why_it_matters": "Meta-analysis of RCTs showing hemodynamics-guided antihypertensive management reduces composite adverse outcomes versus BP-threshold-only care \u2014 potentially practice-changing for HDP treatment",
+      "year": 2026
+    },
+    {
+      "author": "Baucom",
+      "id": "baucom_2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Severe maternal morbidity and obstetrical outcomes by twin chorionicity and amnionicity",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101993",
+      "why_it_matters": "Large national database quantifying substantially higher severe maternal morbidity in MCDA and MCMA twins versus dichorionic or singleton gestations",
+      "year": 2026
+    },
+    {
+      "author": "Houri",
+      "id": "houri_2026",
+      "publication": "BJOG",
+      "title": "Phenotyping Preeclampsia Using Unsupervised Machine Learning: A Prospective Cohort Study",
+      "url": "https://doi.org/10.1111/1471-0528.70262",
+      "why_it_matters": "Identifies three clinically distinct preeclampsia phenotypes with different severity, angiogenic profiles, and delivery timing \u2014 hypothesis-generating for individualized management",
+      "year": 2026
+    },
+    {
+      "author": "Miodownik",
+      "id": "miodownik_2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Expert Review: Pregnancy Placental Syndromes and the Effects on Long-Term Health",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102008",
+      "why_it_matters": "Synthesizes evidence that placental syndromes predict long-term cardiovascular, renal, and metabolic risk \u2014 actionable for postpartum counseling and surveillance",
+      "year": 2026
+    },
+    {
+      "author": "Huynh",
+      "id": "huynh_2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Hospitalization for Vasa Previa: a Review of National Guidelines",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102017",
+      "why_it_matters": "Reveals inconsistent international guidelines on antenatal hospitalization for vasa previa, clarifying that current practice rests on weak evidence",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Novelli et al. - Ultrasound Obstet Gynecol - 2026 - Hemodynamics-guided treatment of hypertensive disorders of pregnancy: systematic review and meta-analysis (https://doi.org/10.1002/uog.70250)",
+    "Baucom et al. - Am J Obstet Gynecol MFM - 2026 - Severe maternal morbidity and obstetrical outcomes by twin chorionicity and amnionicity (https://doi.org/10.1016/j.ajogmf.2026.101993)",
+    "Houri et al. - BJOG - 2026 - Phenotyping Preeclampsia Using Unsupervised Machine Learning: A Prospective Cohort Study (https://doi.org/10.1111/1471-0528.70262)",
+    "Miodownik et al. - Am J Obstet Gynecol MFM - 2026 - Expert Review: Pregnancy Placental Syndromes and the Effects on Long-Term Health (https://doi.org/10.1016/j.ajogmf.2026.102008)",
+    "Huynh et al. - Am J Obstet Gynecol MFM - 2026 - Hospitalization for Vasa Previa: a Review of National Guidelines (https://doi.org/10.1016/j.ajogmf.2026.102017)"
+  ],
+  "topic": "MFM Rounds - week of 2026/06/15",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 900
+}
