@@ -86,6 +86,7 @@
   "tts_command_cwd": "",
   "tts_command_timeout_sec": 600,
   "use_emotive_tts": true,
+  "use_overlaid_backchannels": true,
   "turn_silence_ms": 180,
   "use_audio_mastering": true,
   "normalize_turn_loudness": true,
