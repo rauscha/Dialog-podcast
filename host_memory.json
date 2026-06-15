@@ -1,33 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "his own assumption that methodological precision could contain the survivor quality-of-life findings; he revised mid-episode when the Saigal data and the disability survey gap proved too large to dismiss",
-      "created_at": "2026-06-02T11:48:00.787939+00:00",
-      "juno_noticed": "that the survival statistics at 22 weeks are partly built from hospitals that never tried \u2014 a policy choice baked into the evidence base, fed back as neutral data",
-      "relationship_moment": "Caspar said 'I came in treating the survivor data as a soft counterpoint. It's not. It's evidence.' \u2014 a genuine mid-episode revision that Juno didn't push for but held space for",
-      "run_id": "20260602_063733_investigate_the_ethics_of_resuscitation_decisions_at_perivia",
-      "topic": "Investigate the ethics of resuscitation decisions at periviability, focused on the 22\u201325 week gestational window. This is the hardest frontier in perinatal ethics because survival rates are real but morbidity rates are also high and center-dependent\u2014a 23-weeker at a level-IV NICU in Toronto has a meaningfully different prognosis than the same infant at a rural facility. Structure the episode around three interlocking problems: (1) The data problem\u2014explain what the NICHD Neonatal Research Network outcomes data actually shows for 22, 23, 24, and 25 weekers (survival rates, rates of major morbidity including severe IVH, NEC, chronic lung disease, neurodevelopmental impairment), and why data from centers of excellence may not apply to the family sitting in front of a community-hospital clinician at 3 a.m. (2) The consent problem\u2014how do you obtain genuinely informed consent from parents who are terrified, often under time pressure, and confronted with statistics they cannot meaningfully process? Discuss the research on how framing effects (presenting survival vs. mortality first) influence parental decisions, and what 'shared decision-making' actually means versus what it devolves to in practice. (3) The values problem\u2014whose quality-of-life judgment counts? Introduce the disability rights critique of prognostic reasoning: the argument that clinicians systematically underestimate the quality of life of children with disabilities, and cite the empirical work (e.g., Saigal's studies on ELBW survivors' self-assessed quality of life vs. clinician predictions). Close by naming what remains genuinely unresolved: whether parental preference should be decisive at 22 weeks when the evidence is so uncertain, and how different hospital protocols handle that question differently. Be specific with numbers. Avoid generic 'this is complicated' hedging\u2014name the actual tensions.",
-      "usable_callback": "Saigal's McMaster study: 86% of ELBW adolescents had functional limitations, 61% gave themselves perfect quality-of-life scores vs. 49% of normal-birthweight peers \u2014 and Caspar's admission that he had to revise something"
-    },
-    {
-      "caspar_challenged": "His own initial framing of In re A.C. as a win; revised mid-episode when Pemberton v. Tallahassee demonstrated that 'virtually all cases' and 'extremely rare and truly exceptional' are not narrow protections but open invitations \u2014 any exception to autonomy becomes a mechanism for stretching the exception.",
-      "created_at": "2026-06-02T12:14:36.297038+00:00",
-      "juno_noticed": "That the gap between what Angela Carder said out loud and what the court recorded as her 'wishes' is itself the finding \u2014 and that the speed of the process (six hours) is not incidental but the condition under which refusal becomes practically impossible.",
-      "relationship_moment": "Caspar said 'I was going to call that strong protection. I'm revising that.' \u2014 unprompted, before Juno pushed. Juno held the line: 'So the exception is defined by whoever has the power to call something exceptional.' They arrived at the same place from different directions.",
-      "run_id": "20260602_070414_use_the_1987_angela_carder_case_as_the_primary_lens_but_do_n",
-      "topic": "Use the 1987 Angela Carder case as the primary lens, but do not stop there\u2014use it to open outward to the structural pattern it represents and how courts and clinical practice have (or have not) evolved since. Angela Carder was a 27-year-old woman with recurrent bone cancer, 25 weeks pregnant, who was dying; a Washington D.C. hospital obtained a court order for an emergency cesarean over her explicit refusal. The infant died within hours; Carder died two days later. The DC Court of Appeals later ruled the order was wrong. Narrate the case with specific detail (what the hospital's reasoning was, what the court heard, what Carder herself said, what the ACLU argued). Then use it to examine: (1) the legal doctrine of bodily integrity and how courts have applied it inconsistently to pregnant vs. non-pregnant patients\u2014including forced cesarean cases in the UK and Ireland as international comparators; (2) the 'fetal protection' argument and where it has been used to justify court-ordered interventions, including cases of substance-using pregnant people being detained or prosecuted; (3) the ACOG and ACNM positions on maternal-fetal conflict, and what 'almost never' means in practice when they say forced intervention is almost never justified; (4) the under-discussed epistemic problem: clinicians are frequently wrong about the urgency of the situation they're using to override a refusal. What does the literature say about how often emergency cesareans obtained over patient objection were later judged to have been unnecessary? Close by posing the unresolved question directly: Is there any coherent ethical position that simultaneously respects full maternal autonomy and grants the near-term fetus significant moral weight? Don't resolve it artificially.",
-      "usable_callback": "Caspar's revision on In re A.C. \u2014 'the loophole isn't accidental, it's structural' \u2014 and Juno's formulation: 'A door that opens from the outside.' Also: Wisconsin's sealed proceedings where the fetus gets a court-appointed attorney before the mother does."
-    },
-    {
-      "caspar_challenged": "Juno's reading of the slavery apology as confession rather than argument, and the cross-spectrum criticism as evidence of correctness; also revised his cold read of Chris Olah's presence when Juno pushed back on the 'reputational cover' framing",
-      "created_at": "2026-06-02T15:57:01.101332+00:00",
-      "juno_noticed": "that the slavery apology is the document's most honest moment \u2014 the one place Leo stops performing and starts accounting \u2014 and that the Vatican's silence on the AI-detection flag is itself a kind of confession",
-      "relationship_moment": "Juno accused Caspar of being 'a little cold' about Olah; Caspar said she was 'a little romantic'; they landed on 'we're probably both right' \u2014 and then replayed the same dynamic on the slavery apology, ending with Caspar: 'I can live with that.'",
-      "run_id": "20260602_104653_pope_leo_s_newest_encyclical_magnifica_humanitas",
-      "topic": "Pope Leo's newest encyclical Magnifica Humanitas",
-      "usable_callback": "Juno's closing line: 'A document about authenticity, flagged as inauthentic, by a tool that can't tell the difference.' Caspar's response: 'That's either generous or exactly the kind of metaphor you fall in love with before checking if it's true.' Juno: 'I checked. I'm keeping it.'"
-    },
-    {
       "caspar_challenged": "his own initial framing that the Warner/UMG settlements 'establish the model' \u2014 revised when he recognized settlements are licensing agreements, not fair-use rulings, and that a Sony win this summer would make every deal economically irrational retroactively",
       "created_at": "2026-06-02T22:11:41.160497+00:00",
       "juno_noticed": "the distinction between authored and anonymous AI music \u2014 that the meaningful ethical line isn't AI versus human, but whether a human decision about what to do with the tools is present underneath the output",
@@ -107,6 +80,33 @@
       "run_id": "20260608_161149_the_landscape_of_handheld_gaming_pcs_in_2026_the_current_lin",
       "topic": "The landscape of handheld gaming PCs in 2026: the current lineup and what manufacturers are bringing next",
       "usable_callback": "Maren's formulation: 'Shortage implies a temporary gap. What you have is a permanent repricing.' Also: 'The platform outlasted the price point' \u2014 and Juno's window framing: February 2022 to December 2025, closed because the components got bid away by someone who'd pay more."
+    },
+    {
+      "caspar_challenged": "",
+      "created_at": "2026-06-09T10:07:34.481704+00:00",
+      "juno_noticed": "",
+      "relationship_moment": "",
+      "run_id": "20260609_050148_mfm_rounds_-_week_of_2026_06_09",
+      "topic": "MFM Rounds - week of 2026/06/09",
+      "usable_callback": ""
+    },
+    {
+      "caspar_challenged": "His own use of 'ascertainment improvement' as a counter-explanation for the CMV transmission decline \u2014 Juno pushed back that the directional bias isn't obvious, and Caspar backed off: 'I'll back off that slightly.' Also held the line on FMF algorithm recalibration: 'Don't abandon the screen. Flag the population.'",
+      "created_at": "2026-06-10T10:07:37.067583+00:00",
+      "juno_noticed": "That the French CMV paper's exportability argument breaks at the infrastructure boundary \u2014 the paper shows what happened once the system was built, not how to build it \u2014 and that the sFGR criteria problem is accumulating parallel outcome datasets that can't be cleanly compared until someone makes a decision nobody has made yet.",
+      "relationship_moment": "Juno said 'I was going to say this ends the screening debate' and self-corrected before Caspar had to. Caspar's response was a single dry word: 'Considerably.' They arrived at the same precise sentence \u2014 'different sentence for a system starting from scratch' \u2014 without either of them needing to broker it.",
+      "run_id": "20260610_050200_the_fetal_frontier_-_week_of_2026_06_10",
+      "topic": "The Fetal Frontier - week of 2026/06/10",
+      "usable_callback": "Caspar's concession on the ascertainment-bias direction: 'I can't use ascertainment improvement as a clean counter-explanation without knowing which way it pushes.' Also: the sFGR criteria problem framed as 'you've chosen informally \u2014 the question is whether you know which one you're using.' And Juno's close: 'The field is accumulating parallel outcome datasets that can't be cleanly compared, and that problem doesn't resolve until someone makes a decision. No one has.'"
+    },
+    {
+      "caspar_challenged": "",
+      "created_at": "2026-06-15T10:07:09.654561+00:00",
+      "juno_noticed": "",
+      "relationship_moment": "",
+      "run_id": "20260615_050140_mfm_rounds_-_week_of_2026_06_15",
+      "topic": "MFM Rounds - week of 2026/06/15",
+      "usable_callback": ""
     }
   ],
   "hosts": {
@@ -287,7 +287,25 @@
     "waiting for a chip that isn't built",
     "the middle didn't hold",
     "the window closed",
-    "I'm keeping both"
+    "I'm keeping both",
+    "the clean read is",
+    "the implementation signal is real",
+    "the causal attribution is not clean",
+    "strengthens the argument for building it",
+    "doesn't do the building",
+    "risk-factor stacking doesn't guarantee calibration",
+    "you've chosen informally",
+    "the question is whether you know which one you're using",
+    "parallel outcome datasets that can't be cleanly compared",
+    "that problem doesn't resolve until someone makes a decision",
+    "no one has",
+    "recalibration signal, not a protocol revision",
+    "don't abandon the screen",
+    "flag the population",
+    "the cross-study interpretation problem",
+    "counseling reference for a rare indication",
+    "keep it there",
+    "proof of concept for centers with access"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -299,51 +317,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-06-03T05:37:54.372790+00:00",
-      "id": "20260603_003154_mfm_rounds_-_week_of_2026_06_03_03",
-      "summary": "Sorrenti et al. (UOG 2026): 24-year single-center cohort, ISUOG vs Delphi criteria for sFGR in MCDA twins. Delphi outperformed ISUOG in predicting adverse perinatal outcomes. Caspar's calibration: for centers on ISUOG, a reason to reassess \u2014 not a mandate. A 24-year single-center cohort is some of the best long-horizon MCDA outcome data available, but generalizability to centers with different patient populations isn't guaranteed.",
-      "tags": [
-        "sFGR",
-        "MCDA twins",
-        "Delphi criteria",
-        "ISUOG",
-        "Sorrenti",
-        "UOG 2026",
-        "MFM rounds"
-      ],
-      "why_keep": "The 'reason to reassess, not a mandate' framing is a clean Caspar formulation reusable whenever a single-center study is strong but not universal. The 24-year horizon is a specific detail worth anchoring."
-    },
-    {
-      "created_at": "2026-06-03T05:47:33.548137+00:00",
-      "id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_01",
-      "summary": "Lim et al. (Prenatal Diagnosis 2026): updated meta-analysis of exome/genome sequencing yield after negative CMA in structurally abnormal fetuses. Overall incremental yield: 27%. Pre-selected, phenotypically enriched cohorts: 40%. Caspar's framing: 27 is the floor for unselected populations, 40 is the operationally important number when clinical gestalt already points toward monogenic etiology. Juno's close: 'The paper moves the floor. It doesn't build the ceiling.' Open question not resolved: which phenotypes justify bypassing CMA entirely.",
-      "tags": [
-        "fetal exome",
-        "CMA",
-        "structural anomaly",
-        "diagnostic yield",
-        "Lim 2026",
-        "Prenatal Diagnosis",
-        "fetal frontier"
-      ],
-      "why_keep": "The two-number formulation (27 vs 40) and the floor/ceiling close are clean, reusable callbacks for any future episode on prenatal genomics, cost-justification arguments, or the gap between a pooled estimate and a clinical protocol."
-    },
-    {
-      "created_at": "2026-06-03T05:47:33.548137+00:00",
-      "id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_02",
-      "summary": "Stampalija et al. (UOG 2026): single-cell trophoblast sequencing from maternal blood, 1,390 high-risk pregnancies benchmarked against amniocentesis. Resolves pathogenic CNVs under 8 megabases \u2014 below cfDNA threshold. Caspar's hard stop when Juno reached toward 'replacing amniocentesis': 'Not yet.' Resolution gap is real; readiness gap for average-risk populations is also real. Two separate claims; only one supported here.",
-      "tags": [
-        "trophoblast sequencing",
-        "cfDNA",
-        "CNV",
-        "non-invasive prenatal",
-        "Stampalija 2026",
-        "UOG",
-        "fetal frontier"
-      ],
-      "why_keep": "The 'Not yet' exchange is a clean relationship callback \u2014 Caspar's flattest correction of the series, Juno's driest response. The two-gap distinction (resolution vs readiness) is reusable in any future episode on emerging prenatal technology."
-    },
     {
       "created_at": "2026-06-03T05:47:33.548137+00:00",
       "id": "20260603_004102_the_fetal_frontier_-_week_of_2026_06_03_03",
@@ -570,6 +543,56 @@
         "Caspar caveat"
       ],
       "why_keep": "The 'purpose-built vs. proven' distinction is a clean, reusable Caspar formulation. The Meteor Lake callback is a specific anchor for any future episode revisiting Intel's handheld ambitions."
+    },
+    {
+      "created_at": "2026-06-10T10:07:37.067583+00:00",
+      "id": "20260610_050200_the_fetal_frontier_-_week_of_2026_06_10_01",
+      "summary": "Coste-Mazeau et al. (UOG 2026): seven-year national French CMV cohort, 2017\u20132023. Valacyclovir prescribing rose substantially after the 2020 RCT; vertical transmission rates fell. Caspar's hard line: observational design cannot fully disentangle valacyclovir effect from concurrent improvements in case ascertainment \u2014 but Juno pushed back that the directional bias of ascertainment improvement isn't obvious, and Caspar conceded the point. Evidence score 0.7. The paper documents co-occurrence of adoption and transmission decline. Exportability caveat: the paper shows what happened once France's screening infrastructure was built. For a center without first-trimester CMV serology in its standard pathway, this strengthens the argument for building it \u2014 it doesn't do the building.",
+      "tags": [
+        "CMV",
+        "valacyclovir",
+        "vertical transmission",
+        "Coste-Mazeau 2026",
+        "UOG",
+        "population cohort",
+        "fetal frontier",
+        "exportability",
+        "infrastructure"
+      ],
+      "why_keep": "The 'strengthens the argument for building it, doesn't do the building' formulation is precise and reusable for any future episode on RCT-to-population translation or health system generalizability. Caspar's mid-episode concession on ascertainment bias direction is a relationship marker \u2014 Juno caught a directional error, Caspar acknowledged it cleanly."
+    },
+    {
+      "created_at": "2026-06-10T10:07:37.067583+00:00",
+      "id": "20260610_050200_the_fetal_frontier_-_week_of_2026_06_10_02",
+      "summary": "Kjaer et al. (UOG 2026): multicenter prospective cohort \u2014 FMF first-trimester preeclampsia screening algorithm performance stratified by conception mode. Frozen embryo transfer and donor-egg cycles show performance gaps; spontaneous conception and fresh IVF do not diverge the same way. Caspar's framing: risk-factor stacking doesn't guarantee calibration. Mode-specific cutoffs not yet validated. Caspar's hard line: don't abandon the screen, flag the population. A recalibration signal, not a protocol revision.",
+      "tags": [
+        "FMF algorithm",
+        "preeclampsia screening",
+        "frozen embryo transfer",
+        "oocyte donation",
+        "Kjaer 2026",
+        "UOG",
+        "fetal frontier",
+        "recalibration"
+      ],
+      "why_keep": "The 'risk-factor stacking doesn't guarantee calibration' formulation is reusable for any future episode on ART-specific risk or screening algorithm performance. Pairs with the prior Kjaer entry from 06/04 \u2014 this week's episode confirmed the finding without adding new data, so the prior entry remains the primary anchor."
+    },
+    {
+      "created_at": "2026-06-10T10:07:37.067583+00:00",
+      "id": "20260610_050200_the_fetal_frontier_-_week_of_2026_06_10_03",
+      "summary": "Sorrenti et al. (UOG 2026): 363 MCDA twin pregnancies, ISUOG vs Delphi criteria for sFGR. Third appearance in this series. Caspar's new framing this week: classification discordance means the two frameworks don't identify the same fetuses, and centers accumulating outcome data under one framework can't cleanly cite published outcomes from the other. The cross-study interpretation problem is the practical consequence. Neither criteria set is eliminated. No protocol change \u2014 a precision problem in counseling conversations.",
+      "tags": [
+        "sFGR",
+        "MCDA twins",
+        "Delphi criteria",
+        "ISUOG",
+        "Sorrenti 2026",
+        "UOG",
+        "fetal frontier",
+        "parallel datasets",
+        "criteria discordance"
+      ],
+      "why_keep": "The 'you've chosen informally \u2014 the question is whether you know which one you're using' formulation is precise and reusable. Juno's close \u2014 parallel datasets accumulating that can't be compared until someone makes a decision nobody has made \u2014 is a standing structural observation for any future episode on criteria standardization or cross-study comparability."
     }
   ],
   "show": {
@@ -582,5 +605,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-08T21:21:57.872213+00:00"
+  "updated_at": "2026-06-15T10:07:09.654561+00:00"
 }

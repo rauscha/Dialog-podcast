@@ -21,6 +21,16 @@
       "url": "https://doi.org/10.1002/uog.70214",
       "year": 2026
     },
+    "10.1002/uog.70223": {
+      "aired_at": "2026-06-09T10:08:58.219469+00:00",
+      "doi": "10.1002/uog.70223",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.mp3",
+      "pmid": "42076947",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023).",
+      "url": "https://doi.org/10.1002/uog.70223",
+      "year": 2026
+    },
     "10.1002/uog.70239": {
       "aired_at": "2026-06-03T05:39:39.237466+00:00",
       "doi": "10.1002/uog.70239",
@@ -41,6 +51,16 @@
       "url": "https://doi.org/10.1002/uog.70244",
       "year": 2026
     },
+    "10.1002/uog.70250": {
+      "aired_at": "2026-06-15T10:08:24.490227+00:00",
+      "doi": "10.1002/uog.70250",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+      "pmid": "42277996",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Hemodynamics-guided treatment of hypertensive disorders of pregnancy: systematic review and meta-analysis.",
+      "url": "https://doi.org/10.1002/uog.70250",
+      "year": 2026
+    },
     "10.1016/j.ajog.2026.04.043": {
       "aired_at": "2026-06-03T05:39:39.237466+00:00",
       "doi": "10.1016/j.ajog.2026.04.043",
@@ -49,6 +69,16 @@
       "publication": "Am J Obstet Gynecol",
       "title": "The effect of metformin on perinatal outcomes in pregnant women with type 2 diabetes differs by baseline insulin requirements.",
       "url": "https://doi.org/10.1016/j.ajog.2026.04.043",
+      "year": 2026
+    },
+    "10.1016/j.ajog.2026.05.019": {
+      "aired_at": "2026-06-09T10:08:58.219469+00:00",
+      "doi": "10.1016/j.ajog.2026.05.019",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.mp3",
+      "pmid": "42217663",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Anti-HLA Antibodies and Risk of Fetal Growth Restriction.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.05.019",
       "year": 2026
     },
     "10.1016/j.ajog.2026.05.021": {
@@ -71,6 +101,66 @@
       "url": "https://doi.org/10.1016/j.ajogmf.2026.101989",
       "year": 2026
     },
+    "10.1016/j.ajogmf.2026.101993": {
+      "aired_at": "2026-06-15T10:08:24.490227+00:00",
+      "doi": "10.1016/j.ajogmf.2026.101993",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+      "pmid": "42150693",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Severe maternal morbidity and obstetrical outcomes by twin chorionicity and amnionicity.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101993",
+      "year": 2026
+    },
+    "10.1016/j.ajogmf.2026.102008": {
+      "aired_at": "2026-06-15T10:08:24.490227+00:00",
+      "doi": "10.1016/j.ajogmf.2026.102008",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+      "pmid": "42264330",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Expert Review: Pregnancy Placental Syndromes and the Effects on Long-Term Health.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102008",
+      "year": 2026
+    },
+    "10.1016/j.ajogmf.2026.102012": {
+      "aired_at": "2026-06-09T10:08:58.219469+00:00",
+      "doi": "10.1016/j.ajogmf.2026.102012",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.mp3",
+      "pmid": "42250879",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Vaginal progesterone and risk of preterm birth in asymptomatic women with short cervix diagnosed after 24 weeks of gestation.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102012",
+      "year": 2026
+    },
+    "10.1016/j.ajogmf.2026.102017": {
+      "aired_at": "2026-06-15T10:08:24.490227+00:00",
+      "doi": "10.1016/j.ajogmf.2026.102017",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+      "pmid": "42276274",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Hospitalization for Vasa Previa: a Review of National Guidelines.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102017",
+      "year": 2026
+    },
+    "10.1016/j.ajogmf.2026.102020": {
+      "aired_at": "2026-06-09T10:08:58.219469+00:00",
+      "doi": "10.1016/j.ajogmf.2026.102020",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.mp3",
+      "pmid": "42248518",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Neonatal morbidity following resolution of fetal growth restriction diagnosed at second-trimester anatomy ultrasound.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102020",
+      "year": 2026
+    },
+    "10.1016/j.ajogmf.2026.102022": {
+      "aired_at": "2026-06-09T10:08:58.219469+00:00",
+      "doi": "10.1016/j.ajogmf.2026.102022",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260609_050148_mfm_rounds_-_week_of_2026_06_09.mp3",
+      "pmid": "42248513",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Eclampsia despite magnesium sulfate prophylaxis.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102022",
+      "year": 2026
+    },
     "10.1097/aog.0000000000006325": {
       "aired_at": "2026-06-02T01:48:04.273743+00:00",
       "doi": "10.1097/aog.0000000000006325",
@@ -79,6 +169,16 @@
       "publication": "Obstet Gynecol",
       "title": "Gestational Weight Gain and Pregnancy Outcomes After Semaglutide Exposure.",
       "url": "https://doi.org/10.1097/aog.0000000000006325",
+      "year": 2026
+    },
+    "10.1111/1471-0528.70262": {
+      "aired_at": "2026-06-15T10:08:24.490227+00:00",
+      "doi": "10.1111/1471-0528.70262",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+      "pmid": "42136148",
+      "publication": "BJOG",
+      "title": "Phenotyping Preeclampsia Using Unsupervised Machine Learning: A Prospective Cohort Study.",
+      "url": "https://doi.org/10.1111/1471-0528.70262",
       "year": 2026
     },
     "10.1111/1471-0528.70265": {
@@ -103,21 +203,21 @@
     }
   },
   "last_run": {
-    "aired_at": "2026-06-03T05:39:39.237466+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_003154_mfm_rounds_-_week_of_2026_06_03.mp3",
+    "aired_at": "2026-06-15T10:08:24.490227+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
     "recorded_keys": [
-      "10.1111/1471-0528.70273",
-      "10.1002/uog.70214",
-      "10.1016/j.ajog.2026.05.021",
-      "10.1016/j.ajog.2026.04.043",
-      "10.1002/uog.70239"
+      "10.1002/uog.70250",
+      "10.1016/j.ajogmf.2026.101993",
+      "10.1111/1471-0528.70262",
+      "10.1016/j.ajogmf.2026.102008",
+      "10.1016/j.ajogmf.2026.102017"
     ],
     "window": {
-      "from": "2025/11/30",
-      "to": "2026/06/03"
+      "from": "2025/12/12",
+      "to": "2026/06/15"
     }
   },
   "schema_version": 1,
   "show_id": "mfm",
-  "updated_at": "2026-06-03T05:39:39.237466+00:00"
+  "updated_at": "2026-06-15T10:08:24.490227+00:00"
 }

@@ -50,24 +50,74 @@
       "title": "Single-cell-based non-invasive screening for fetal pathogenic microimbalances using maternal blood: comparison with invasive prenatal diagnosis.",
       "url": "https://doi.org/10.1002/uog.70201",
       "year": 2026
+    },
+    "10.1002/uog.70223": {
+      "aired_at": "2026-06-10T10:09:07.260400+00:00",
+      "doi": "10.1002/uog.70223",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+      "pmid": "42076947",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Changing trends in prenatal screening and treatment of cytomegalovirus infection in France: 7-year national cohort study (2017-2023).",
+      "url": "https://doi.org/10.1002/uog.70223",
+      "year": 2026
+    },
+    "10.1002/uog.70234": {
+      "aired_at": "2026-06-10T10:09:07.260400+00:00",
+      "doi": "10.1002/uog.70234",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+      "pmid": "42070963",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review.",
+      "url": "https://doi.org/10.1002/uog.70234",
+      "year": 2026
+    },
+    "10.1002/uog.70239": {
+      "aired_at": "2026-06-10T10:09:07.260400+00:00",
+      "doi": "10.1002/uog.70239",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+      "pmid": "42126513",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcome of monochorionic twin pregnancy complicated by selective fetal growth restriction: ISUOG vs Delphi diagnostic criteria.",
+      "url": "https://doi.org/10.1002/uog.70239",
+      "year": 2026
+    },
+    "10.1002/uog.70240": {
+      "aired_at": "2026-06-10T10:09:07.260400+00:00",
+      "doi": "10.1002/uog.70240",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+      "pmid": "42249814",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal diagnosis of cardiac rhabdomyoma: implications for predicting tuberous sclerosis complex and guiding perinatal management.",
+      "url": "https://doi.org/10.1002/uog.70240",
+      "year": 2026
+    },
+    "10.1002/uog.70244": {
+      "aired_at": "2026-06-10T10:09:07.260400+00:00",
+      "doi": "10.1002/uog.70244",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+      "pmid": "42177627",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Predictive performance of Fetal Medicine Foundation first-trimester screening algorithm for pre-eclampsia according to conception mode.",
+      "url": "https://doi.org/10.1002/uog.70244",
+      "year": 2026
     }
   },
   "last_run": {
-    "aired_at": "2026-06-03T05:49:27.724668+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260603_004102_the_fetal_frontier_-_week_of_2026_06_03.mp3",
+    "aired_at": "2026-06-10T10:09:07.260400+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
     "recorded_keys": [
-      "10.1002/pd.70112",
-      "10.1002/uog.70201",
-      "10.1002/pd.70175",
-      "10.1002/uog.70196",
-      "10.1002/pd.70190"
+      "10.1002/uog.70223",
+      "10.1002/uog.70244",
+      "10.1002/uog.70239",
+      "10.1002/uog.70234",
+      "10.1002/uog.70240"
     ],
     "window": {
-      "from": "2025/11/30",
-      "to": "2026/06/03"
+      "from": "2025/12/07",
+      "to": "2026/06/10"
     }
   },
   "schema_version": 1,
   "show_id": "fetal",
-  "updated_at": "2026-06-03T05:49:27.724668+00:00"
+  "updated_at": "2026-06-10T10:09:07.260400+00:00"
 }
