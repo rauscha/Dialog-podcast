@@ -1,15 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "his own initial framing that the Warner/UMG settlements 'establish the model' \u2014 revised when he recognized settlements are licensing agreements, not fair-use rulings, and that a Sony win this summer would make every deal economically irrational retroactively",
-      "created_at": "2026-06-02T22:11:41.160497+00:00",
-      "juno_noticed": "the distinction between authored and anonymous AI music \u2014 that the meaningful ethical line isn't AI versus human, but whether a human decision about what to do with the tools is present underneath the output",
-      "relationship_moment": "Juno said 'authored versus anonymous' and Caspar didn't push back \u2014 he confirmed it and moved forward, which is rarer than his corrections. Also: Maren's 'I've decided that's someone else's problem for now' and Caspar's quiet correction \u2014 'It's not someone else's problem. It's just one nobody's answered yet' \u2014 landed without Juno needing to broker it.",
-      "run_id": "20260602_170014_ai_generated_music_survey_the_landscape_of_available_tools_f",
-      "topic": "AI generated music, survey the landscape of available tools for creating AI generated music, from simple generative loops to pop hits tearing up the charts on Spotify that are actually AI generated. Walk through the suites of tools and workflows that are usually used to create these. This is less of a podcast about how right or wrong AI music is, and more of a scoping review of tools and techniques that are out there, and how they're being wielded.",
-      "usable_callback": "Telisha Jones / Xania Monet: a poet wrote lyrics about her own miscarriage, a model handed back a voice, a label signed the voice for three million dollars, and the legal foundation for any of it doesn't exist yet. Also: 'music designer' as a job title that absorbs AI production without settling authorship \u2014 a legal workaround dressed as a category."
-    },
-    {
       "caspar_challenged": "Juno's implicit slide from 'large effect size with measured confounders controlled' to 'causal signal' \u2014 held the marker/cause distinction without dismissing the finding, and named unmeasured vascular dysfunction as the residual the design can't see",
       "created_at": "2026-06-03T05:37:54.372790+00:00",
       "juno_noticed": "that 'identifies' is the right verb for the sPTB-cardiovascular signal \u2014 and that the distinction between marker and cause changes the clinical sentence even when the number is the same",
@@ -106,6 +97,15 @@
       "relationship_moment": "",
       "run_id": "20260615_050140_mfm_rounds_-_week_of_2026_06_15",
       "topic": "MFM Rounds - week of 2026/06/15",
+      "usable_callback": ""
+    },
+    {
+      "caspar_challenged": "",
+      "created_at": "2026-06-15T16:53:58.146711+00:00",
+      "juno_noticed": "",
+      "relationship_moment": "",
+      "run_id": "20260615_114144_a_visitor_s_guide_to_the_history_of_vienna",
+      "topic": "A visitor's guide to the history of Vienna",
       "usable_callback": ""
     }
   ],
@@ -605,5 +605,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-15T10:07:09.654561+00:00"
+  "updated_at": "2026-06-15T16:53:58.146711+00:00"
 }
