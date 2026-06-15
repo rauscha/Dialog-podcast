@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Hook: The Binoculars"
+    },
+    {
+      "startTime": 61.45,
+      "title": "\u2014 The Map: What's Inside a Lens"
+    },
+    {
+      "startTime": 122.89,
+      "title": "\u2014 The Six Problems (Aberrations)"
+    },
+    {
+      "startTime": 184.34,
+      "title": "\u2014 The First Fix: Chromatic Aberration and the Achromatic Doublet"
+    },
+    {
+      "startTime": 245.79,
+      "title": "\u2014 Two Design Philosophies: Tessar vs. Sonnar"
+    },
+    {
+      "startTime": 307.23,
+      "title": "\u2014 The Coating Revolution"
+    },
+    {
+      "startTime": 368.68,
+      "title": "\u2014 The Shape Fix: Aspherical Elements"
+    },
+    {
+      "startTime": 430.12,
+      "title": "\u2014 The Counterintuitive Part: Simplicity Has Value"
+    },
+    {
+      "startTime": 491.57,
+      "title": "\u2014 The Software Question"
+    },
+    {
+      "startTime": 553.02,
+      "title": "\u2014 The Character Question"
+    }
+  ],
+  "version": "1.2.0"
+}
