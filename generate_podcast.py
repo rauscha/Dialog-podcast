@@ -4844,6 +4844,13 @@ def _run_with_cfg(
             manifest.fail(current_stage, exc)
         raise
     finally:
+        if manifest is not None:
+            try:
+                manifest.persist_durable(repo_root / cfg["output_dir"])
+            except Exception:
+                logger.warning(
+                    "Could not persist durable manifest copy", exc_info=True
+                )
         if work_dir.exists():
             shutil.rmtree(work_dir, ignore_errors=True)
 

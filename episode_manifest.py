@@ -192,6 +192,46 @@ class EpisodeManifest:
         self.add_event("cancelled", {"previous_stage": previous_stage})
         self.save()
 
+    def durable_path(self, output_dir: Path) -> Path:
+        """Stable location for this manifest that survives work-dir cleanup.
+
+        Sibling to the published audio when known (``<audio_stem>.manifest.json``),
+        otherwise keyed by run id under the output dir.
+        """
+        audio_path = (self.data.get("audio") or {}).get("path")
+        if audio_path:
+            stem = Path(audio_path).stem
+        else:
+            run_id = self.data.get("run_id") or "episode"
+            slug = self.data.get("slug") or "episode"
+            stem = f"{run_id}_{slug}"
+        return output_dir / f"{stem}.manifest.json"
+
+    def persist_durable(self, output_dir: Path) -> Path:
+        """Copy this manifest to its durable location and return the path.
+
+        The per-run ``_work`` dir (and the manifest inside it) is deleted on a
+        successful run, so any "latest manifest" lookup would otherwise fall back
+        to a stale survivor from an earlier run. This keeps a copy that outlives
+        cleanup so consumers report on the run that just finished.
+        """
+        dest = self.durable_path(output_dir)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        payload = json.dumps(_jsonable(self.data), indent=2, sort_keys=True)
+        with tempfile.NamedTemporaryFile(
+            "w",
+            encoding="utf-8",
+            dir=dest.parent,
+            delete=False,
+            prefix=f".{dest.name}.",
+            suffix=".tmp",
+        ) as tmp:
+            tmp.write(payload)
+            tmp.write("\n")
+            tmp_path = Path(tmp.name)
+        tmp_path.replace(dest)
+        return dest
+
     def to_summary(self) -> dict[str, Any]:
         return {
             "run_id": self.data.get("run_id"),
@@ -222,8 +262,13 @@ def find_latest_manifest(
     episodes_dir = repo_root / output_dir
     if not episodes_dir.exists():
         return None
+    # Durable sidecars (written before work-dir cleanup) first, then in-flight
+    # work-dir manifests as a fallback for runs still in progress.
     manifests = sorted(
-        episodes_dir.glob(f"*_work/{MANIFEST_NAME}"),
+        [
+            *episodes_dir.glob("*.manifest.json"),
+            *episodes_dir.glob(f"*_work/{MANIFEST_NAME}"),
+        ],
         key=lambda p: p.stat().st_mtime,
         reverse=True,
     )
