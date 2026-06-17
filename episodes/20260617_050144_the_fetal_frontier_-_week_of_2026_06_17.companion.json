@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changed This Week"
+    },
+    {
+      "start_sec": 47.5,
+      "start_time": "0:47",
+      "title": "\u2014 Headline: Why Single-Arm Is the Right Design Here"
+    },
+    {
+      "start_sec": 95.0,
+      "start_time": "1:35",
+      "title": "\u2014 Headline: Effect Sizes and What They Mean Clinically"
+    },
+    {
+      "start_sec": 142.5,
+      "start_time": "2:22",
+      "title": "\u2014 Headline: Practice Impact and the Affectionate Disagreement"
+    },
+    {
+      "start_sec": 190.0,
+      "start_time": "3:10",
+      "title": "\u2014 Round 1: Vergote / Open MMC Anesthesia"
+    },
+    {
+      "start_sec": 237.5,
+      "start_time": "3:57",
+      "title": "\u2014 Round 2: Volpe / Early Conotruncal Diagnosis"
+    },
+    {
+      "start_sec": 285.0,
+      "start_time": "4:45",
+      "title": "\u2014 Round 3: Giambona / Celocentesis Validation"
+    },
+    {
+      "start_sec": 332.5,
+      "start_time": "5:32",
+      "title": "\u2014 Round 4: Hadi / Ventricular Border Irregularities"
+    },
+    {
+      "start_sec": 380.0,
+      "start_time": "6:20",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.companion.json",
+  "duration_sec": 472.496984,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First pooled evidence quantifying the cerebrovascular and pulmonary hemodynamic response to maternal hyperoxygenation in fetal CHD",
+      "source": "Prenatal Diagnosis",
+      "title": "Effects of Maternal Hyperoxygenation on Fetal Hemodynamics Assessed by Ultrasound and Fetal Echocardiography in Congenital Heart Disease: A Systematic Review and Single Arm Meta-Analysis",
+      "url": "https://doi.org/10.1002/pd.70143"
+    },
+    {
+      "reason": "Prospective reassurance that vasopressor-supported general anesthesia does not compromise uteroplacental Doppler parameters during open fetal surgery",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Impact of general anesthesia with vasopressor support on uteroplacental perfusion during fetal spina bifida repair",
+      "url": "https://doi.org/10.1002/uog.70237"
+    },
+    {
+      "reason": "Documents that nearly a third of early conotruncal diagnoses evolve morphologically, with early biometry potentially predicting progression",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal Diagnosis of Conotruncal Anomalies Before 16 Weeks: Longitudinal Evolution, Genetic Findings and Early Prognostic Markers",
+      "url": "https://doi.org/10.1002/pd.70179"
+    },
+    {
+      "reason": "Largest validation of celocentesis, demonstrating high technical success and diagnostic accuracy for very early monogenic disease testing",
+      "source": "Prenatal Diagnosis",
+      "title": "Celocentesis for Prenatal Diagnosis of Rare Monogenic Diseases: Development, Validation, and Clinical Outcome on 876 Cases",
+      "url": "https://doi.org/10.1002/pd.70184"
+    },
+    {
+      "reason": "Proposes a classification system for an underrecognized neurosonographic finding with significant genetic and infectious associations",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Morphological patterns of fetal lateral ventricular border irregularities: descriptive study",
+      "url": "https://doi.org/10.1002/uog.70217"
+    }
+  ],
+  "generated_at": "2026-06-17T10:08:41.666709+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Maternal hyperoxygenation reduces fetal MCA pulsatility index Z-score and increases pulmonary VTI in CHD fetuses, indicating cerebrovascular and pulmonary hemodynamic responsiveness",
+      "confidence": "high",
+      "id": "martin_2026",
+      "source_ids": [
+        "martin_2026"
+      ]
+    },
+    {
+      "claim": "General anesthesia with vasopressor support during open fetal myelomeningocele repair preserves uteroplacental Doppler parameters",
+      "confidence": "medium",
+      "id": "vergote_2026",
+      "source_ids": [
+        "vergote_2026"
+      ]
+    },
+    {
+      "claim": "Nearly 30 percent of conotruncal anomalies diagnosed before 16 weeks undergo morphological progression, and early great-artery biometry may predict which cases will progress",
+      "confidence": "medium",
+      "id": "volpe_2026",
+      "source_ids": [
+        "volpe_2026"
+      ]
+    },
+    {
+      "claim": "Celocentesis at 7 to 9 weeks achieves 98 percent technical success with 100 percent sensitivity and specificity for monogenic disease diagnosis",
+      "confidence": "medium",
+      "id": "giambona_2026",
+      "source_ids": [
+        "giambona_2026"
+      ]
+    },
+    {
+      "claim": "Four distinct morphological patterns of fetal lateral ventricular border irregularities can be identified, with half of cases terminated and genetic or infectious etiologies characterized",
+      "confidence": "medium",
+      "id": "hadi_2026",
+      "source_ids": [
+        "hadi_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Martin",
+      "id": "martin_2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Effects of Maternal Hyperoxygenation on Fetal Hemodynamics Assessed by Ultrasound and Fetal Echocardiography in Congenital Heart Disease: A Systematic Review and Single Arm Meta-Analysis",
+      "url": "https://doi.org/10.1002/pd.70143",
+      "why_it_matters": "First pooled evidence quantifying the cerebrovascular and pulmonary hemodynamic response to maternal hyperoxygenation in fetal CHD",
+      "year": 2026
+    },
+    {
+      "author": "Vergote",
+      "id": "vergote_2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Impact of general anesthesia with vasopressor support on uteroplacental perfusion during fetal spina bifida repair",
+      "url": "https://doi.org/10.1002/uog.70237",
+      "why_it_matters": "Prospective reassurance that vasopressor-supported general anesthesia does not compromise uteroplacental Doppler parameters during open fetal surgery",
+      "year": 2026
+    },
+    {
+      "author": "Volpe",
+      "id": "volpe_2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal Diagnosis of Conotruncal Anomalies Before 16 Weeks: Longitudinal Evolution, Genetic Findings and Early Prognostic Markers",
+      "url": "https://doi.org/10.1002/pd.70179",
+      "why_it_matters": "Documents that nearly a third of early conotruncal diagnoses evolve morphologically, with early biometry potentially predicting progression",
+      "year": 2026
+    },
+    {
+      "author": "Giambona",
+      "id": "giambona_2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Celocentesis for Prenatal Diagnosis of Rare Monogenic Diseases: Development, Validation, and Clinical Outcome on 876 Cases",
+      "url": "https://doi.org/10.1002/pd.70184",
+      "why_it_matters": "Largest validation of celocentesis, demonstrating high technical success and diagnostic accuracy for very early monogenic disease testing",
+      "year": 2026
+    },
+    {
+      "author": "Hadi",
+      "id": "hadi_2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Morphological patterns of fetal lateral ventricular border irregularities: descriptive study",
+      "url": "https://doi.org/10.1002/uog.70217",
+      "why_it_matters": "Proposes a classification system for an underrecognized neurosonographic finding with significant genetic and infectious associations",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Martin et al. - Prenatal Diagnosis - 2026 - Effects of Maternal Hyperoxygenation on Fetal Hemodynamics Assessed by Ultrasound and Fetal Echocardiography in Congenital Heart Disease: A Systematic Review and Single Arm Meta-Analysis (https://doi.org/10.1002/pd.70143)",
+    "Vergote et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Impact of general anesthesia with vasopressor support on uteroplacental perfusion during fetal spina bifida repair (https://doi.org/10.1002/uog.70237)",
+    "Volpe et al. - Prenatal Diagnosis - 2026 - Prenatal Diagnosis of Conotruncal Anomalies Before 16 Weeks: Longitudinal Evolution, Genetic Findings and Early Prognostic Markers (https://doi.org/10.1002/pd.70179)",
+    "Giambona et al. - Prenatal Diagnosis - 2026 - Celocentesis for Prenatal Diagnosis of Rare Monogenic Diseases: Development, Validation, and Clinical Outcome on 876 Cases (https://doi.org/10.1002/pd.70184)",
+    "Hadi et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Morphological patterns of fetal lateral ventricular border irregularities: descriptive study (https://doi.org/10.1002/uog.70217)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/06/17",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1159
+}
