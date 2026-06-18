@@ -252,16 +252,33 @@ Clamp your estimate to the range 0–120.
 """
 
 
-def _select_best_nasa_result(items: list[dict], cue: dict) -> dict | None:
-    """Return the NASA result best matching the cue's semantic intent.
+# Generic / boilerplate terms that don't establish topical relevance. The first
+# failed cue render shipped a clip that matched only on agency/medium boilerplate
+# after the query degraded from "NASA Mars wind audio" to "NASA Mars" — so these
+# are excluded from the overlap score and the relevance floor counts only topical
+# words (the actual subject of the sound).
+_GENERIC_CUE_WORDS = frozenset({
+    "nasa", "audio", "sound", "sounds", "sonic", "recording", "recordings",
+    "clip", "clips", "space", "listen", "here", "this", "that", "with", "from",
+    "into", "your", "playback", "footnote", "track",
+})
 
-    Uses keyword overlap between the cue text and the item title/description —
-    fast and deterministic, no LLM needed. Falls back to the first item.
+
+def _rank_nasa_results(
+    items: list[dict], cue: dict, min_overlap: int = 1,
+) -> list[dict]:
+    """Rank NASA results by topical keyword overlap, keeping only those at or
+    above the relevance floor (highest first).
+
+    BUG C fix: the old `_select_best_nasa_result` returned the best of whatever
+    came back even at zero overlap, so a degraded query shipped a generic clip.
+    The catalog policy is "silence preferred over decoration" — a result must
+    clear a minimum topical-overlap floor or it is dropped. Generic boilerplate
+    ("nasa", "audio", "sound") does not count, so matching only on those is not
+    enough to clear the floor.
     """
     if not items:
-        return None
-    if len(items) == 1:
-        return items[0]
+        return []
 
     cue_text = " ".join([
         str(cue.get("beat") or ""),
@@ -269,9 +286,16 @@ def _select_best_nasa_result(items: list[dict], cue: dict) -> dict | None:
         str(cue.get("placement") or ""),
         str(cue.get("script_note") or ""),
     ]).lower()
-    cue_words = set(w for w in cue_text.split() if len(w) > 3)
+    cue_words = {w for w in cue_text.split() if len(w) > 3} - _GENERIC_CUE_WORDS
+    if not cue_words:
+        # No topical signal to match on — can't establish relevance; ship silence.
+        logger.warning(
+            "[footnote] Cue has no topical keywords to match a NASA result — "
+            "dropping (silence preferred over decoration)."
+        )
+        return []
 
-    scored = []
+    scored: list[tuple[int, dict]] = []
     for item in items:
         data_block = (item.get("data") or [{}])[0]
         if not isinstance(data_block, dict):
@@ -282,10 +306,11 @@ def _select_best_nasa_result(items: list[dict], cue: dict) -> dict | None:
         ]).lower()
         item_words = set(item_text.split())
         overlap = len(cue_words & item_words)
-        scored.append((overlap, item))
+        if overlap >= min_overlap:
+            scored.append((overlap, item))
 
     scored.sort(key=lambda x: x[0], reverse=True)
-    return scored[0][1]
+    return [item for _, item in scored]
 
 
 def _estimate_start_offset(
@@ -428,6 +453,7 @@ def _is_nasa_podcast_item(item: dict) -> bool:
 def _resolve_nasa(
     cue: dict,
     catalog_item: dict,
+    min_overlap: int = 1,
 ) -> tuple[str, dict] | tuple[None, None]:
     """Search NASA, pick the best-matching result, return (audio_url, nasa_item).
 
@@ -449,9 +475,17 @@ def _resolve_nasa(
         logger.warning("[footnote] NASA search returned no non-podcast items for %r", query)
         return None, None
 
-    # Phase 1.5: rank results by keyword overlap with the cue before picking.
-    best_item = _select_best_nasa_result(items, cue)
-    ordered = [best_item] + [i for i in items if i is not best_item]
+    # BUG C: keep only results that clear the relevance floor (ranked best-first).
+    # Below the floor we ship silence rather than a decorative mismatch; the URL
+    # fallback below only walks other results that *also* cleared the floor.
+    ordered = _rank_nasa_results(items, cue, min_overlap=min_overlap)
+    if not ordered:
+        logger.warning(
+            "[footnote] No NASA result cleared the relevance floor (min_overlap=%d) "
+            "for %r — dropping (silence preferred over decoration).",
+            min_overlap, query,
+        )
+        return None, None
 
     for item in ordered:
         collection_href = item.get("href")
@@ -552,6 +586,7 @@ def _resolve_cue(
     work_dir: Path,
     client: anthropic.Anthropic | None = None,
     loudnorm_i: float = -14.0,
+    min_overlap: int = 1,
 ) -> ResolvedFootnote | None:
     catalog_id = str(cue.get("catalog_id") or "").strip()
     item = _catalog_item(catalog, catalog_id)
@@ -561,7 +596,7 @@ def _resolve_cue(
     source = str(item.get("source") or "").strip().lower()
     nasa_item: dict | None = None
     if source == "nasa":
-        source_url, nasa_item = _resolve_nasa(cue, item)
+        source_url, nasa_item = _resolve_nasa(cue, item, min_overlap=min_overlap)
     else:
         # Phase 2-4: Wikimedia, Internet Archive, Freesound — not yet implemented.
         logger.warning(
@@ -662,6 +697,7 @@ def prepare_footnotes(
         return []
 
     loudnorm_i = float(cfg.get("audio_loudness_i", -14.0))
+    min_overlap = max(1, int(cfg.get("sonic_footnote_min_overlap", 1)))
     resolved: list[ResolvedFootnote] = []
     for cue in cues:
         if not isinstance(cue, dict):
@@ -675,7 +711,8 @@ def prepare_footnotes(
             )
             continue
         footnote = _resolve_cue(
-            cue, catalog, after_turn, work_dir, client=client, loudnorm_i=loudnorm_i,
+            cue, catalog, after_turn, work_dir, client=client,
+            loudnorm_i=loudnorm_i, min_overlap=min_overlap,
         )
         if footnote:
             resolved.append(footnote)
