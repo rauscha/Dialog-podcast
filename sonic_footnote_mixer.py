@@ -25,6 +25,8 @@ from pathlib import Path
 
 import anthropic
 
+import audio_utils
+
 logger = logging.getLogger(__name__)
 
 _PLACEMENT_MODEL = "claude-sonnet-4-6"
@@ -549,6 +551,7 @@ def _resolve_cue(
     after_turn: int,
     work_dir: Path,
     client: anthropic.Anthropic | None = None,
+    loudnorm_i: float = -14.0,
 ) -> ResolvedFootnote | None:
     catalog_id = str(cue.get("catalog_id") or "").strip()
     item = _catalog_item(catalog, catalog_id)
@@ -582,6 +585,24 @@ def _resolve_cue(
     duration = float(cue.get("duration_sec", 5.0))
     if not _trim_and_fade(source_url, trimmed_path, duration, start_offset_sec=start_offset):
         return None
+
+    # BUG A fix: loudness-match the footnote to the program target. This is the
+    # only audio source in the pipeline that previously skipped loudnorm — per-turn
+    # TTS, YouTube clips (A4), and the final master all level, footnotes didn't, so
+    # a quiet NASA clip sat far under the dialogue and the final master's constant
+    # linear gain couldn't rescue it. Two-pass linear keeps the clip's own dynamics
+    # and the fade shape; never raises, so a miss leaves the trimmed clip as-is.
+    ln = audio_utils.two_pass_loudnorm(
+        trimmed_path, trimmed_path,
+        target_i=float(loudnorm_i), target_tp=-1.0, target_lra=11.0,
+        sample_rate=44100, channels=2, bitrate="192k",
+        encode_timeout=120,
+    )
+    if not ln.get("ok"):
+        logger.warning(
+            "[footnote] loudnorm did not apply (%s) for %s — using trimmed clip as-is.",
+            ln.get("mode"), trimmed_path.name,
+        )
 
     actual_duration = _audio_duration_sec(trimmed_path)
 
@@ -640,6 +661,7 @@ def prepare_footnotes(
     if not placements:
         return []
 
+    loudnorm_i = float(cfg.get("audio_loudness_i", -14.0))
     resolved: list[ResolvedFootnote] = []
     for cue in cues:
         if not isinstance(cue, dict):
@@ -652,7 +674,9 @@ def prepare_footnotes(
                 catalog_id,
             )
             continue
-        footnote = _resolve_cue(cue, catalog, after_turn, work_dir, client=client)
+        footnote = _resolve_cue(
+            cue, catalog, after_turn, work_dir, client=client, loudnorm_i=loudnorm_i,
+        )
         if footnote:
             resolved.append(footnote)
             logger.info(
