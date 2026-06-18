@@ -110,6 +110,11 @@ PODCAST_REPO_PATH = os.environ.get("PODCAST_REPO_PATH", str(Path(__file__).paren
 MAX_TOPIC_LEN = _parse_int_env("MAX_TOPIC_LEN", 500)
 GENERATION_TIMEOUT_SEC = _parse_int_env("GENERATION_TIMEOUT_SEC", 7200)
 MAX_PENDING_PER_GUEST = _parse_int_env("MAX_PENDING_PER_GUEST", 3)
+# Per-user generation rate limit (sliding window). Set BOT_RATE_LIMIT_COUNT=0 to disable.
+RATE_LIMIT_COUNT = _parse_int_env("BOT_RATE_LIMIT_COUNT", 6)
+RATE_LIMIT_WINDOW_SEC = _parse_int_env("BOT_RATE_LIMIT_WINDOW_SEC", 3600)
+# Per-episode wall-clock estimate used for queue ETA before any run has been timed.
+DEFAULT_GEN_SECONDS = _parse_int_env("BOT_DEFAULT_GEN_SECONDS", 900)
 
 _generation_lock = asyncio.Lock()
 _queue: list[dict[str, str]] = []
@@ -118,6 +123,11 @@ _active_topic: str | None = None
 _active_episode_type: str | None = None
 _active_started_at: datetime | None = None
 _active_log: Path | None = None
+# Rolling wall-clock of recent successful runs -> queue ETA; per-user request
+# timestamps -> rate limiting. Both reset on restart (in-memory, by design).
+_recent_gen_seconds: list[float] = []
+_MAX_RECENT_GENS = 8
+_user_request_times: dict[int, list[float]] = {}
 
 # In-memory pending guest approvals. Lost on bot restart, which is acceptable
 # given low volume — owner can ask the guest to resubmit if it matters.
@@ -299,6 +309,45 @@ def _format_duration(seconds: Any) -> str:
     if hours:
         return f"{hours}:{minutes:02d}:{sec:02d}"
     return f"{minutes}:{sec:02d}"
+
+
+def _record_gen_seconds(started_at: datetime | None) -> None:
+    """Record a successful run's wall-clock for the queue ETA average."""
+    if started_at is None:
+        return
+    secs = (datetime.now() - started_at).total_seconds()
+    if secs > 0:
+        _recent_gen_seconds.append(secs)
+        del _recent_gen_seconds[:-_MAX_RECENT_GENS]
+
+
+def _estimate_gen_seconds() -> float:
+    """Average wall-clock of recent runs, or the configured default if none yet."""
+    if _recent_gen_seconds:
+        return sum(_recent_gen_seconds) / len(_recent_gen_seconds)
+    return float(DEFAULT_GEN_SECONDS)
+
+
+def _rate_limit_check(update: Update) -> str | None:
+    """Return an error string if the user is over the per-user rate limit (without
+    counting the request); otherwise record the request and return None. Disabled
+    when BOT_RATE_LIMIT_COUNT <= 0."""
+    if RATE_LIMIT_COUNT <= 0 or update.effective_user is None:
+        return None
+    uid = update.effective_user.id
+    now = datetime.now().timestamp()
+    recent = [t for t in _user_request_times.get(uid, []) if now - t < RATE_LIMIT_WINDOW_SEC]
+    if len(recent) >= RATE_LIMIT_COUNT:
+        _user_request_times[uid] = recent  # prune even on rejection
+        wait = RATE_LIMIT_WINDOW_SEC - (now - min(recent))
+        return (
+            f"Rate limit reached ({RATE_LIMIT_COUNT} requests per "
+            f"{_format_duration(RATE_LIMIT_WINDOW_SEC)}). Try again in "
+            f"~{_format_duration(wait)}."
+        )
+    recent.append(now)
+    _user_request_times[uid] = recent
+    return None
 
 
 def _format_manifest_summary(manifest: EpisodeManifest | None) -> str:
@@ -610,6 +659,10 @@ async def generate_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     if error:
         await _reply(update, error)
         return
+    limited = _rate_limit_check(update)
+    if limited:
+        await _reply(update, limited)
+        return
     await _run_generation(update, topic, episode_type, guest_mode=guest_mode)
 
 
@@ -827,7 +880,14 @@ async def queue_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             f"{item['topic']}"
             for idx, item in enumerate(_queue)
         ]
-        await _reply(update, "Queued topics:\n" + "\n".join(lines))
+        per = _estimate_gen_seconds()
+        basis = "recent avg" if _recent_gen_seconds else "default est"
+        eta_note = (
+            f"\nEst. ~{_format_duration(per)} per episode ({basis}); "
+            f"~{_format_duration(per * len(_queue))} total if run back-to-back. "
+            f"Each advances when you run /next."
+        )
+        await _reply(update, "Queued topics:\n" + "\n".join(lines) + "\n" + eta_note)
         return
 
     error = _validate_topic(topic)
@@ -835,6 +895,10 @@ async def queue_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         error = error.replace("/generate", "/queue")
     if error:
         await _reply(update, error)
+        return
+    limited = _rate_limit_check(update)
+    if limited:
+        await _reply(update, limited)
         return
     item = {"topic": topic, "episode_type": episode_type}
     if guest_mode:
@@ -890,6 +954,12 @@ async def status_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
             )
             lines.append(f"Type: {active_label}")
         lines.append(f"Elapsed: {_format_elapsed(_active_started_at)}")
+        if _active_started_at is not None:
+            remaining = _estimate_gen_seconds() - (datetime.now() - _active_started_at).total_seconds()
+            lines.append(
+                f"Est. remaining: ~{_format_duration(remaining)}"
+                if remaining > 5 else "Est. remaining: finishing up"
+            )
         if _active_log:
             lines.append(f"Log: {_active_log}")
     else:
@@ -1220,6 +1290,8 @@ async def _run_generation(
             manifest = _latest_manifest(repo_root)
             elapsed = _format_elapsed(_active_started_at)
             if returncode == 0:
+                # Feed this run's wall-clock into the rolling queue-ETA average.
+                _record_gen_seconds(_active_started_at)
                 # Build a compact completion message: topic, link, duration, elapsed time.
                 summary = manifest.to_summary() if manifest else {}
                 topic_line = summary.get("title") or summary.get("topic") or "Episode"
