@@ -30,6 +30,25 @@ except ImportError:
 # Fastest available Claude model; prompt generation is a 10-word task.
 _HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
+# Process-lifetime cache of loaded MusicGen models, keyed by model_name. audiocraft's
+# get_pretrained reloads the weights on every call, so without this the intro and the
+# outro each trigger a full model load (≈the same wait twice per episode). Each episode
+# runs in its own subprocess, so the cache is freed when the process exits — no leak
+# across episodes.
+_MODEL_CACHE: dict = {}
+
+
+def _get_musicgen_model(model_name: str):
+    """Load a MusicGen model once and reuse it for later calls in the same run."""
+    model = _MODEL_CACHE.get(model_name)
+    if model is None:
+        logger.info("Loading MusicGen model %s (first use this run)", model_name)
+        model = MusicGen.get_pretrained(model_name)
+        _MODEL_CACHE[model_name] = model
+    else:
+        logger.info("Reusing cached MusicGen model %s", model_name)
+    return model
+
 
 def generate_music(
     prompt: str,
@@ -41,10 +60,10 @@ def generate_music(
 ) -> Path:
     """Generate music from a text prompt, apply fades, and save as MP3.
 
-    audiocraft caches the model after the first get_pretrained call,
-    so repeated calls on the same model_name are fast.
+    The MusicGen model is cached for the process lifetime (see _get_musicgen_model),
+    so the intro and outro calls in one episode share a single weight load.
     """
-    model = MusicGen.get_pretrained(model_name)
+    model = _get_musicgen_model(model_name)
     model.set_generation_params(duration=duration_sec)
 
     wav = model.generate([prompt])  # shape: [batch=1, channels, samples]
