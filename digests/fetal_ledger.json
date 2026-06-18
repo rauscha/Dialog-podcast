@@ -11,6 +11,16 @@
       "url": "https://doi.org/10.1002/pd.70112",
       "year": 2026
     },
+    "10.1002/pd.70143": {
+      "aired_at": "2026-06-17T10:08:45.842971+00:00",
+      "doi": "10.1002/pd.70143",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
+      "pmid": "41940760",
+      "publication": "Prenat Diagn",
+      "title": "Effects of Maternal Hyperoxygenation on Fetal Hemodynamics Assessed by Ultrasound and Fetal Echocardiography in Congenital Heart Disease: A Systematic Review and Single Arm Meta-Analysis.",
+      "url": "https://doi.org/10.1002/pd.70143",
+      "year": 2026
+    },
     "10.1002/pd.70175": {
       "aired_at": "2026-06-03T05:49:27.724668+00:00",
       "doi": "10.1002/pd.70175",
@@ -19,6 +29,26 @@
       "publication": "Prenat Diagn",
       "title": "Latin American Multicenter Study of Fetal Endoscopic Tracheal Occlusion for Severe Left Diaphragmatic Hernia.",
       "url": "https://doi.org/10.1002/pd.70175",
+      "year": 2026
+    },
+    "10.1002/pd.70179": {
+      "aired_at": "2026-06-17T10:08:45.842971+00:00",
+      "doi": "10.1002/pd.70179",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
+      "pmid": "42141370",
+      "publication": "Prenat Diagn",
+      "title": "Prenatal Diagnosis of Conotruncal Anomalies Before 16\u00a0Weeks: Longitudinal Evolution, Genetic Findings and Early Prognostic Markers.",
+      "url": "https://doi.org/10.1002/pd.70179",
+      "year": 2026
+    },
+    "10.1002/pd.70184": {
+      "aired_at": "2026-06-17T10:08:45.842971+00:00",
+      "doi": "10.1002/pd.70184",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
+      "pmid": "42175792",
+      "publication": "Prenat Diagn",
+      "title": "Celocentesis for Prenatal Diagnosis of Rare Monogenic Diseases: Development, Validation, and Clinical Outcome on 876 Cases.",
+      "url": "https://doi.org/10.1002/pd.70184",
       "year": 2026
     },
     "10.1002/pd.70190": {
@@ -51,6 +81,16 @@
       "url": "https://doi.org/10.1002/uog.70201",
       "year": 2026
     },
+    "10.1002/uog.70217": {
+      "aired_at": "2026-06-17T10:08:45.842971+00:00",
+      "doi": "10.1002/uog.70217",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
+      "pmid": "41987549",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Morphological patterns of fetal lateral ventricular border irregularities: descriptive study.",
+      "url": "https://doi.org/10.1002/uog.70217",
+      "year": 2026
+    },
     "10.1002/uog.70223": {
       "aired_at": "2026-06-10T10:09:07.260400+00:00",
       "doi": "10.1002/uog.70223",
@@ -69,6 +109,16 @@
       "publication": "Ultrasound Obstet Gynecol",
       "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review.",
       "url": "https://doi.org/10.1002/uog.70234",
+      "year": 2026
+    },
+    "10.1002/uog.70237": {
+      "aired_at": "2026-06-17T10:08:45.842971+00:00",
+      "doi": "10.1002/uog.70237",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
+      "pmid": "42113685",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Impact of general anesthesia with vasopressor support on uteroplacental perfusion during fetal spina bifida repair.",
+      "url": "https://doi.org/10.1002/uog.70237",
       "year": 2026
     },
     "10.1002/uog.70239": {
@@ -103,21 +153,21 @@
     }
   },
   "last_run": {
-    "aired_at": "2026-06-10T10:09:07.260400+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260610_050200_the_fetal_frontier_-_week_of_2026_06_10.mp3",
+    "aired_at": "2026-06-17T10:08:45.842971+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260617_050144_the_fetal_frontier_-_week_of_2026_06_17.mp3",
     "recorded_keys": [
-      "10.1002/uog.70223",
-      "10.1002/uog.70244",
-      "10.1002/uog.70239",
-      "10.1002/uog.70234",
-      "10.1002/uog.70240"
+      "10.1002/pd.70143",
+      "10.1002/uog.70237",
+      "10.1002/pd.70179",
+      "10.1002/pd.70184",
+      "10.1002/uog.70217"
     ],
     "window": {
-      "from": "2025/12/07",
-      "to": "2026/06/10"
+      "from": "2025/12/14",
+      "to": "2026/06/17"
     }
   },
   "schema_version": 1,
   "show_id": "fetal",
-  "updated_at": "2026-06-10T10:09:07.260400+00:00"
+  "updated_at": "2026-06-17T10:08:45.843971+00:00"
 }
