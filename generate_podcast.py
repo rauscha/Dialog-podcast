@@ -145,6 +145,13 @@ DEFAULTS: dict = {
     "use_music":            True,
     "use_sonic_footnotes":  True,
     "sonic_footnotes_catalog": "sonic_footnotes.json",
+    # Sonic-footnote quality gates (redesign 2026-06-15). A cue is dropped unless
+    # a real source clears the relevance floor (C) and the placement turn heralds
+    # the sound (B); the spliced clip is framed by one deliberate pad (D) instead
+    # of the incidental inter-turn gap. "Silence is preferred over decoration."
+    "sonic_footnote_min_overlap":   1,    # min topical keyword overlap to use a source (C)
+    "sonic_footnote_require_herald": True, # placement turn must reference the sound (B)
+    "sonic_footnote_pad_ms":        350,  # deliberate symmetric frame around the cue (D)
     "use_guest_hosts":      True,
     "guest_host_mode":      "auto",
     "guest_host_max":       1,
@@ -3894,6 +3901,11 @@ def _tts_two_host(
         flat = folded
 
     base_ms = int(cfg.get("turn_silence_ms", 180))
+    # BUG D: a spliced footnote is framed by one deliberate, symmetric pad so it
+    # reads as a production beat, not the incidental inter-turn gap. This is the
+    # single arrangement ruler around the cue — the clip's own 0.4s fade shapes its
+    # entry/exit and A3's 10ms crossfade only kills seam clicks (neither is spacing).
+    footnote_pad_ms = max(0, int(cfg.get("sonic_footnote_pad_ms", 350)))
     silence_cache: dict[int, Path] = {}
 
     def _gap_segment(ms: int) -> Path | None:
@@ -3911,11 +3923,11 @@ def _tts_two_host(
         for idx, (path, k) in enumerate(flat):
             if idx:
                 prev_k = flat[idx - 1][1]
-                gap_ms = (
-                    _inter_turn_gap_ms(rendered_meta, prev_k, cfg)
-                    if prev_k is not None and k is not None
-                    else base_ms  # footnote-adjacent boundary
-                )
+                if prev_k is not None and k is not None:
+                    gap_ms = _inter_turn_gap_ms(rendered_meta, prev_k, cfg)
+                else:
+                    # footnote-adjacent boundary (entry or exit) — deliberate frame
+                    gap_ms = footnote_pad_ms
                 seg = _gap_segment(gap_ms)
                 if seg is not None:
                     assembled.append(seg)
