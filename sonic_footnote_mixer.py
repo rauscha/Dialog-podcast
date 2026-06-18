@@ -530,6 +530,173 @@ def _resolve_nasa(
     return None, None
 
 
+# ── Wikimedia Commons backend (Phase 2) ──────────────────────────────────────
+
+_WIKIMEDIA_API_URL = "https://commons.wikimedia.org/w/api.php"
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+
+# Acceptable license families: public domain and the permissive CC tiers. NC
+# (non-commercial) and ND (no-derivatives) are rejected even if "cc by" matches,
+# since the episode is published and the clip is trimmed (a derivative).
+_WIKIMEDIA_OK_LICENSE_RE = re.compile(
+    r"(cc0|public domain|pd-|cc[\s-]?by(?:[\s-]?sa)?)", re.IGNORECASE
+)
+_WIKIMEDIA_BAD_LICENSE_RE = re.compile(r"(\bnc\b|\bnd\b|non[\s-]?commercial|no[\s-]?deriv)", re.IGNORECASE)
+
+
+def _strip_html(s: str) -> str:
+    return _HTML_TAG_RE.sub("", s or "").strip()
+
+
+def _extmeta_value(extmeta: dict, key: str) -> str:
+    block = extmeta.get(key)
+    if isinstance(block, dict):
+        return str(block.get("value") or "")
+    return ""
+
+
+def _wikimedia_license_ok(extmeta: dict) -> bool:
+    blob = " ".join([
+        _extmeta_value(extmeta, "LicenseShortName"),
+        _extmeta_value(extmeta, "License"),
+        _extmeta_value(extmeta, "UsageTerms"),
+    ]).strip()
+    if not blob:
+        return False
+    if _WIKIMEDIA_BAD_LICENSE_RE.search(blob):
+        return False
+    return bool(_WIKIMEDIA_OK_LICENSE_RE.search(blob))
+
+
+def _search_wikimedia_audio(query: str, max_results: int = 15) -> list[dict]:
+    """Search Commons for audio files; return normalized records (url + license)."""
+    params = urllib.parse.urlencode({
+        "action": "query",
+        "format": "json",
+        "generator": "search",
+        "gsrsearch": query,
+        "gsrnamespace": "6",        # File:
+        "gsrlimit": str(max_results),
+        "prop": "imageinfo",
+        "iiprop": "url|mime|mediatype|extmetadata|size",
+    })
+    payload = _http_get_json(f"{_WIKIMEDIA_API_URL}?{params}")
+    if not payload:
+        return []
+    pages = (payload.get("query") or {}).get("pages") or {}
+    results: list[dict] = []
+    for page in pages.values():
+        info = (page.get("imageinfo") or [{}])[0]
+        if not isinstance(info, dict):
+            continue
+        mediatype = str(info.get("mediatype") or "").upper()
+        mime = str(info.get("mime") or "").lower()
+        if mediatype != "AUDIO" and not mime.startswith("audio"):
+            continue
+        url = info.get("url")
+        if not isinstance(url, str) or not url:
+            continue
+        extmeta = info.get("extmetadata") or {}
+        results.append({
+            "title": str(page.get("title") or ""),
+            "url": url,
+            "descriptionurl": str(info.get("descriptionurl") or ""),
+            "mime": mime,
+            "extmeta": extmeta,
+            "license_short": _extmeta_value(extmeta, "LicenseShortName"),
+            "artist": _strip_html(_extmeta_value(extmeta, "Artist")),
+            "categories": _strip_html(_extmeta_value(extmeta, "Categories")),
+            "description": _strip_html(_extmeta_value(extmeta, "ImageDescription"))[:300],
+        })
+    return results
+
+
+def _rank_wikimedia_results(
+    results: list[dict], cue: dict, catalog_item: dict, min_overlap: int = 1,
+) -> list[dict]:
+    """Rank license-clean Commons audio by topical overlap (best-first).
+
+    The catalog item is the topic anchor (e.g. "metronome"), so we match the file's
+    title + categories + description against the catalog label/topics plus the cue's
+    own keywords. Below the floor we ship silence (same policy as the NASA backend).
+    """
+    vocab: set[str] = set()
+    vocab.update(w for w in str(catalog_item.get("label") or "").lower().split() if len(w) > 3)
+    for topic in catalog_item.get("topics") or []:
+        vocab.update(w for w in str(topic).lower().split() if len(w) > 3)
+    cue_text = " ".join(
+        str(cue.get(k) or "") for k in ("beat", "reason", "placement", "script_note")
+    ).lower()
+    vocab.update(w for w in cue_text.split() if len(w) > 3)
+    vocab -= _GENERIC_CUE_WORDS
+    if not vocab:
+        return list(results)
+
+    scored: list[tuple[int, dict]] = []
+    for r in results:
+        text = " ".join([r["title"], r["categories"], r["description"]]).lower()
+        words = set(re.sub(r"[^\w\s]", " ", text).split())
+        overlap = len(vocab & words)
+        if overlap >= min_overlap:
+            scored.append((overlap, r))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [r for _, r in scored]
+
+
+def _wikimedia_attribution(catalog_item: dict, wiki_item: dict) -> str:
+    label = str(catalog_item.get("label") or catalog_item.get("id") or "").strip()
+    parts = [
+        label,
+        str(wiki_item.get("artist") or "").strip(),
+        str(wiki_item.get("license_short") or "").strip(),
+        str(wiki_item.get("descriptionurl") or "").strip(),
+    ]
+    return " - ".join(p for p in parts if p)
+
+
+def _resolve_wikimedia(
+    cue: dict,
+    catalog_item: dict,
+    min_overlap: int = 1,
+) -> tuple[str, dict] | tuple[None, None]:
+    """Search Commons, license-filter, rank by relevance, return (audio_url, wiki_item)."""
+    raw_query = str(catalog_item.get("suggested_search") or "").strip()
+    if not raw_query:
+        return None, None
+    # Strip the redundant platform name and license tokens — we already search
+    # Commons and license-filter separately, so these only dilute precision.
+    query = re.sub(
+        r"(?i)\b(wikimedia commons|cc[\s-]?by(?:[\s-]?sa)?|cc0|public domain)\b",
+        " ", raw_query,
+    )
+    query = re.sub(r"\s+", " ", query).strip() or raw_query
+
+    results = _search_wikimedia_audio(query)
+    if not results:
+        logger.warning("[footnote] Commons search returned no audio for %r", query)
+        return None, None
+
+    clean = [r for r in results if _wikimedia_license_ok(r["extmeta"])]
+    if not clean:
+        logger.warning(
+            "[footnote] Commons returned audio for %r but none with a usable "
+            "(PD/CC0/CC-BY) license — dropping.", query,
+        )
+        return None, None
+
+    ranked = _rank_wikimedia_results(clean, cue, catalog_item, min_overlap=min_overlap)
+    if not ranked:
+        logger.warning(
+            "[footnote] No Commons result cleared the relevance floor (min_overlap=%d) "
+            "for %r — dropping (silence preferred over decoration).",
+            min_overlap, query,
+        )
+        return None, None
+
+    best = ranked[0]
+    return best["url"], best
+
+
 # ── Audio trim / fade ────────────────────────────────────────────────────────
 
 # Default start offset when LLM estimation is unavailable or not attempted.
@@ -625,13 +792,16 @@ def _resolve_cue(
 
     source = str(item.get("source") or "").strip().lower()
     nasa_item: dict | None = None
+    wiki_item: dict | None = None
     if source == "nasa":
         source_url, nasa_item = _resolve_nasa(cue, item, min_overlap=min_overlap)
+    elif "wikimedia" in source or "commons" in source:
+        source_url, wiki_item = _resolve_wikimedia(cue, item, min_overlap=min_overlap)
     else:
-        # Phase 2-4: Wikimedia, Internet Archive, Freesound — not yet implemented.
+        # Phase 3-4: Internet Archive, Freesound — not yet implemented.
         logger.warning(
             "[footnote] Cue %r skipped — backend %r not yet implemented "
-            "(Phase 2-4 work required).",
+            "(Phase 3-4 work required).",
             catalog_id, source,
         )
         return None
@@ -639,12 +809,15 @@ def _resolve_cue(
     if not source_url:
         return None
 
-    # Phase 1.5: LLM start-offset estimation for NASA clips with rich metadata.
-    start_offset = (
-        _estimate_start_offset(nasa_item, cue, client)
-        if client is not None and nasa_item is not None
-        else _DEFAULT_START_OFFSET_SEC
-    )
+    # Start offset: LLM estimation for NASA clips with rich metadata (Phase 1.5);
+    # from-the-top for Commons SFX (short files — a 5s default offset could land
+    # past the end); otherwise the default.
+    if client is not None and nasa_item is not None:
+        start_offset = _estimate_start_offset(nasa_item, cue, client)
+    elif wiki_item is not None:
+        start_offset = 0.0
+    else:
+        start_offset = _DEFAULT_START_OFFSET_SEC
 
     trimmed_path = work_dir / f"footnote_{catalog_id}.mp3"
     duration = float(cue.get("duration_sec", 5.0))
@@ -671,12 +844,20 @@ def _resolve_cue(
 
     actual_duration = _audio_duration_sec(trimmed_path)
 
+    if wiki_item is not None:
+        attribution = _wikimedia_attribution(item, wiki_item)
+        # Commons attribution should point at the File: page, not the raw media URL.
+        display_url = str(wiki_item.get("descriptionurl") or source_url)
+    else:
+        attribution = _attribution_for(item, source_url)
+        display_url = source_url
+
     return ResolvedFootnote(
         catalog_id=catalog_id,
         audio_path=trimmed_path,
         duration_sec=actual_duration,
-        attribution=_attribution_for(item, source_url),
-        source_url=source_url,
+        attribution=attribution,
+        source_url=display_url,
         after_turn=after_turn,
     )
 
