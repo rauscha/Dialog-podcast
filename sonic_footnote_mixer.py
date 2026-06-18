@@ -313,6 +313,36 @@ def _rank_nasa_results(
     return [item for _, item in scored]
 
 
+# A spliced clip needs a verbal "here comes a sound" so it lands as a deliberate
+# beat, not an orphan (BUG B). We accept a herald in the placement turn itself or
+# the turn immediately after the splice point.
+_HERALD_RE = re.compile(
+    r"\b("
+    r"listen|have a listen|take a listen|a listen|"
+    r"hear|you can hear|you'?ll hear|we can hear|"
+    r"sounds? like|like this|this is what|"
+    r"here it is|here'?s|roll the|cue the|play (?:it|this|that)|"
+    r"that sound|this sound|the sound of|it sounded"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def _cue_is_heralded(turns: list[tuple[int, str, str]], after_turn: int) -> bool:
+    """True if the placement turn or the turn right after it verbally sets up a
+    sound, so the spliced clip reads as a deliberate beat rather than an orphan.
+
+    BUG B fix: nothing previously verified the placement turn actually referenced
+    the cue — the only link was a `script_note` *suggestion* to the dialogue model.
+    When the model didn't write a "listen to this…" beat, the clip was orphaned.
+    """
+    text_by_idx = {idx: text for idx, _, text in turns}
+    for idx in (after_turn, after_turn + 1):
+        if _HERALD_RE.search(text_by_idx.get(idx, "")):
+            return True
+    return False
+
+
 def _estimate_start_offset(
     item: dict,
     cue: dict,
@@ -698,6 +728,8 @@ def prepare_footnotes(
 
     loudnorm_i = float(cfg.get("audio_loudness_i", -14.0))
     min_overlap = max(1, int(cfg.get("sonic_footnote_min_overlap", 1)))
+    require_herald = bool(cfg.get("sonic_footnote_require_herald", True))
+    herald_turns = _enumerate_turns(script, known_speakers) if require_herald else []
     resolved: list[ResolvedFootnote] = []
     for cue in cues:
         if not isinstance(cue, dict):
@@ -708,6 +740,14 @@ def prepare_footnotes(
             logger.warning(
                 "[footnote] Cue %r was not placed by the LLM pass — dropped.",
                 catalog_id,
+            )
+            continue
+        if require_herald and not _cue_is_heralded(herald_turns, after_turn):
+            logger.warning(
+                "[footnote] Cue %r placed after turn %d but neither that turn nor "
+                "the next references the sound — dropping (un-heralded clip is an "
+                "orphan). Set sonic_footnote_require_herald=false to allow anyway.",
+                catalog_id, after_turn,
             )
             continue
         footnote = _resolve_cue(
