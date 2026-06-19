@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Benchmark Shift"
+    },
+    {
+      "start_sec": 57.47,
+      "start_time": "0:57",
+      "title": "\u2014 Headline: Clinical Question and Study Design"
+    },
+    {
+      "start_sec": 114.95,
+      "start_time": "1:55",
+      "title": "\u2014 Headline: Effect Size and What Parity Means"
+    },
+    {
+      "start_sec": 172.42,
+      "start_time": "2:52",
+      "title": "\u2014 Headline: Practice Impact and Honest Limits"
+    },
+    {
+      "start_sec": 229.89,
+      "start_time": "3:50",
+      "title": "\u2014 Round 1: HCC Contrast Agent Equivalence (Heo)"
+    },
+    {
+      "start_sec": 287.36,
+      "start_time": "4:47",
+      "title": "\u2014 Round 2: Pancreatic Cancer Detection on CT (Yamaguchi)"
+    },
+    {
+      "start_sec": 344.84,
+      "start_time": "5:45",
+      "title": "\u2014 Round 3: Air Pollution and Coronary Risk, Sex-Specific (Castillo)"
+    },
+    {
+      "start_sec": 402.31,
+      "start_time": "6:42",
+      "title": "\u2014 Round 4: Net Water Uptake for Thrombectomy Selection (Lakhani)"
+    },
+    {
+      "start_sec": 459.78,
+      "start_time": "7:40",
+      "title": "\u2014 Close: What to Watch, What's Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.companion.json",
+  "duration_sec": 562.254376,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First large external validation showing multimodal AI matches MDT consensus across five preoperative ovarian cancer classification tasks \u2014 a credible benchmark for clinical translation in gyn-onc.",
+      "source": "NPJ Digital Medicine",
+      "title": "Integrating ultrasound-CT-MR for preoperative multi-task prediction in ovarian cancer: achieving diagnostic parity with multidisciplinary team consensus",
+      "url": "https://doi.org/10.1038/s41746-026-02875-0"
+    },
+    {
+      "reason": "Demonstrates equivalent accuracy between ECA-MRI and HBA-MRI for post-treatment HCC assessment, informing protocol flexibility in surveillance imaging.",
+      "source": "Radiology",
+      "title": "Diagnostic Accuracy of Extracellular versus Hepatobiliary Contrast-enhanced MRI in LI-RADS Nonradiation Treatment Response Algorithm Version 2024",
+      "url": "https://doi.org/10.1148/radiol.253854"
+    },
+    {
+      "reason": "Multiinstitutional DL model detects pancreatic cancer on both NCCT and CECT with physician-level performance, opening doors for opportunistic screening.",
+      "source": "Radiology",
+      "title": "Deep Learning Detection of Direct and Indirect Imaging Findings Associated with Pancreatic Cancer at Contrast-enhanced and Noncontrast CT",
+      "url": "https://doi.org/10.1148/radiol.253122"
+    },
+    {
+      "reason": "Large cohort data linking PM2.5 and NO2 to coronary plaque burden with sex-specific patterns \u2014 relevant for cardiovascular risk counseling.",
+      "source": "Radiology",
+      "title": "Sex-Specific Associations between Long-term Air Pollution Exposure and Coronary Atherosclerosis at Cardiac CT",
+      "url": "https://doi.org/10.1148/radiol.252086"
+    },
+    {
+      "reason": "Net water uptake emerges as a superior imaging biomarker for thrombectomy patient selection, potentially reducing futile interventions.",
+      "source": "Radiology",
+      "title": "Ischemic Lesion Net Water Uptake Outperforms ASPECTS and CBF Less Than 30% in Predicting Futile Recanalization after Mechanical Thrombectomy",
+      "url": "https://doi.org/10.1148/radiol.252487"
+    }
+  ],
+  "generated_at": "2026-06-19T10:09:18.363380+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Multimodal AI integrating ultrasound, CT, and MRI achieves diagnostic parity with multidisciplinary team consensus for preoperative ovarian cancer classification across five clinical tasks in external validation.",
+      "confidence": "medium",
+      "id": "claim_yu",
+      "source_ids": [
+        "yu_2026"
+      ]
+    },
+    {
+      "claim": "Extracellular agent MRI and hepatobiliary agent MRI show comparable accuracy for LI-RADS treatment response assessment in HCC after locoregional therapy.",
+      "confidence": "high",
+      "id": "claim_heo",
+      "source_ids": [
+        "heo_2026"
+      ]
+    },
+    {
+      "claim": "A multiinstitutional deep learning model detects direct and indirect pancreatic cancer findings on both contrast-enhanced and non-contrast CT at or above physician-level performance.",
+      "confidence": "medium",
+      "id": "claim_yamaguchi",
+      "source_ids": [
+        "yamaguchi_2026"
+      ]
+    },
+    {
+      "claim": "Long-term PM2.5 and NO2 exposure is associated with coronary plaque burden and obstructive CAD at cardiac CT, with sex-specific differences in effect magnitude.",
+      "confidence": "high",
+      "id": "claim_castillo",
+      "source_ids": [
+        "castillo_2026"
+      ]
+    },
+    {
+      "claim": "CT-derived net water uptake in ischemic lesions predicts futile recanalization after mechanical thrombectomy more accurately than ASPECTS or CBF-less-than-30-percent thresholds.",
+      "confidence": "medium",
+      "id": "claim_lakhani",
+      "source_ids": [
+        "lakhani_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Yu",
+      "id": "yu_2026",
+      "publication": "NPJ Digital Medicine",
+      "title": "Integrating ultrasound-CT-MR for preoperative multi-task prediction in ovarian cancer: achieving diagnostic parity with multidisciplinary team consensus",
+      "url": "https://doi.org/10.1038/s41746-026-02875-0",
+      "why_it_matters": "First large external validation showing multimodal AI matches MDT consensus across five preoperative ovarian cancer classification tasks \u2014 a credible benchmark for clinical translation in gyn-onc.",
+      "year": 2026
+    },
+    {
+      "author": "Heo",
+      "id": "heo_2026",
+      "publication": "Radiology",
+      "title": "Diagnostic Accuracy of Extracellular versus Hepatobiliary Contrast-enhanced MRI in LI-RADS Nonradiation Treatment Response Algorithm Version 2024",
+      "url": "https://doi.org/10.1148/radiol.253854",
+      "why_it_matters": "Demonstrates equivalent accuracy between ECA-MRI and HBA-MRI for post-treatment HCC assessment, informing protocol flexibility in surveillance imaging.",
+      "year": 2026
+    },
+    {
+      "author": "Yamaguchi",
+      "id": "yamaguchi_2026",
+      "publication": "Radiology",
+      "title": "Deep Learning Detection of Direct and Indirect Imaging Findings Associated with Pancreatic Cancer at Contrast-enhanced and Noncontrast CT",
+      "url": "https://doi.org/10.1148/radiol.253122",
+      "why_it_matters": "Multiinstitutional DL model detects pancreatic cancer on both NCCT and CECT with physician-level performance, opening doors for opportunistic screening.",
+      "year": 2026
+    },
+    {
+      "author": "Castillo",
+      "id": "castillo_2026",
+      "publication": "Radiology",
+      "title": "Sex-Specific Associations between Long-term Air Pollution Exposure and Coronary Atherosclerosis at Cardiac CT",
+      "url": "https://doi.org/10.1148/radiol.252086",
+      "why_it_matters": "Large cohort data linking PM2.5 and NO2 to coronary plaque burden with sex-specific patterns \u2014 relevant for cardiovascular risk counseling.",
+      "year": 2026
+    },
+    {
+      "author": "Lakhani",
+      "id": "lakhani_2026",
+      "publication": "Radiology",
+      "title": "Ischemic Lesion Net Water Uptake Outperforms ASPECTS and CBF Less Than 30% in Predicting Futile Recanalization after Mechanical Thrombectomy",
+      "url": "https://doi.org/10.1148/radiol.252487",
+      "why_it_matters": "Net water uptake emerges as a superior imaging biomarker for thrombectomy patient selection, potentially reducing futile interventions.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Yu et al. - NPJ Digital Medicine - 2026 - Integrating ultrasound-CT-MR for preoperative multi-task prediction in ovarian cancer: achieving diagnostic parity with multidisciplinary team consensus (https://doi.org/10.1038/s41746-026-02875-0)",
+    "Heo et al. - Radiology - 2026 - Diagnostic Accuracy of Extracellular versus Hepatobiliary Contrast-enhanced MRI in LI-RADS Nonradiation Treatment Response Algorithm Version 2024 (https://doi.org/10.1148/radiol.253854)",
+    "Yamaguchi et al. - Radiology - 2026 - Deep Learning Detection of Direct and Indirect Imaging Findings Associated with Pancreatic Cancer at Contrast-enhanced and Noncontrast CT (https://doi.org/10.1148/radiol.253122)",
+    "Castillo et al. - Radiology - 2026 - Sex-Specific Associations between Long-term Air Pollution Exposure and Coronary Atherosclerosis at Cardiac CT (https://doi.org/10.1148/radiol.252086)",
+    "Lakhani et al. - Radiology - 2026 - Ischemic Lesion Net Water Uptake Outperforms ASPECTS and CBF Less Than 30% in Predicting Futile Recanalization after Mechanical Thrombectomy (https://doi.org/10.1148/radiol.252487)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/06/19",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1393
+}
