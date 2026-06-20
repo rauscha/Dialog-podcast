@@ -2,68 +2,68 @@
 
 ## STATE (read this first)
 - Branch: `main`, clean and **pushed** (synced — desktop can pull immediately).
-- This was a **design session** for the C0 prompt surgery. Outcome: a full,
-  research-grounded redesign spec is on disk and committed —
-  **`docs/superpowers/specs/2026-06-20-narration-first-pipeline-design.md`** — **read that next, it's the payload.**
-- **The big correction:** the diagnosis doc was wrong that "there's no beat-sheet step."
-  The pipeline already implements nearly the entire script chain (thesis → beat-sheet →
-  guest-plan → draft → anti-cliché → symmetry → disfluency → fact-check → callback →
-  performance). The failure is **mis-aimed prompts + a missing substance gate**, not
-  missing stages. So the work is RE-AIM, not rebuild.
-- **Decision made:** salvage the existing chain (it's field-validated), take the fuller
-  swing (Option B). Do NOT rebuild from zero. The digest shows are the in-house proof
-  that the same plumbing produces followable output when given a structural spine.
+- This was a **planning session** that turned the C0 redesign spec into an executable
+  implementation plan. The payload is on disk:
+  **`docs/superpowers/plans/2026-06-20-narration-first-pipeline.md`** — **read that next.**
+  It's a 13-task TDD plan; with the spec, it's a complete durable handoff (a fresh
+  session needs only those two files).
+- The 4 open questions in spec §10 are **RESOLVED** and baked into both the spec and the
+  plan. No decisions are pending for C0.
 - Two `audio-scope-*` dirs remain untracked **on purpose** — never commit them.
 
 ## Done this session
-- **Landscape review** (deep-research workflow, 22 sources, 25 claims adversarially
-  verified). Key confirmed findings: multi-stage chains are the field standard (our arch
-  is sound); the narration-vs-banter fix is upstream grounding constraints in the prompt
-  (MoonCast/NotebookLM); **compliance ≠ substance** (PodBench: 96.6 instruction-following
-  vs 63.3 content quality — a style chain can pass every stage and stay hollow); engagement
-  lives in the script weighted to substance (45) > narrative (30) > naturalness (25), so our
-  disfluency/symmetry investment polishes the cheapest dimension. Full report archived in
-  the session transcript (workflow `wf_b6ea3cf7-312`).
-- **Wrote the design spec** (committed `3f6b028`). Narration-first redesign: keep ~70%,
-  re-aim 3 prompts (thesis/beat-sheet/draft for establish-before-adjudicate + define-every-name +
-  one-scene-per-segment), add 3 stages — **Story Spine** (first-class artifact, generalizes the
-  digest's `structural_plan`), **Synthetic First Listener** comprehension gate, **audio round-trip** QA.
-- **The novel idea — the Synthetic First Listener ("rewindless ear").** Every field evaluator
-  judges the script *with the source in hand*, so it can never feel lost — structurally blind to
-  newcomer confusion. We exploit information asymmetry: feed a naive-layperson agent the script
-  one turn at a time, no look-ahead, no research; it emits a per-turn comprehension trace (where a
-  name was undefined, where it lost the thread, where it checked out). Plus an expert ear for
-  hollowness, plus a narration-vs-banter ratio metric.
-- **User's key refinement (the heart of §6.5):** when the trace flags a gap, the repair step
-  CHOOSES — rewrite the line inline, OR have the **listener-surrogate host directly ask the carrier
-  to clarify**, turning the fake listener's confusion into real on-show back-and-forth. Balance
-  rules prevent "what's that?/it's X" Q&A slop.
+- **Answered spec §10's 4 open questions** and recorded them in the spec (§10 + the
+  in-body sections that referenced them, so the doc is internally consistent):
+  - Q1 `open_loops` / curiosity-gap → **DEFER** (keep nullable schema slot, don't produce/consume yet).
+  - Q2 naive listener → **ITERATIVE turn-by-turn** (feed turns 1..n only; no-look-ahead
+    guaranteed *structurally*, not by a prompt instruction the model could violate).
+  - Q3 audio round-trip → **REPORT-ONLY** (post-render health check; a gate would force costly re-renders).
+  - Q4 draft temperature → **LOWER 0.75 → 0.6 via config** (`dialogue_draft_temperature`), gate as backstop.
+- **Wrote the implementation plan** (`writing-plans`, committed `1872367`). 13 ordered TDD
+  tasks. Two structural decisions worth knowing:
+  - **Story Spine inserts BEFORE the beat-sheet** (a code-survey subagent initially
+    suggested after; the spec is authoritative — the beat-sheet must *consume* the spine).
+  - **All quantitative logic factored into PURE functions** (narration ratio, repair-move
+    selection, density cap, loop termination, schema validation) so it gets real pytest
+    unit tests with a hand-rolled fake Anthropic client. The repo had **zero** test infra;
+    Task 1 stands up `pytest.ini` + `tests/conftest.py`. LLM stages get mocked-client
+    plumbing tests + a manual smoke/fidelity check (the only honest way to TDD a live-API pipeline).
+- Surveyed the real pipeline code (via an Explore subagent) so every task references exact
+  function names, signatures, and insertion line numbers in `generate_podcast.py`.
 
 ## Next up
-1. **🔴 Answer the 4 open questions in spec §10** (curiosity-gap open_loops now or later?;
-   naive listener single-call vs iterative loop?; audio round-trip report-only vs gate?;
-   lower draft temp from 0.75?). My leanings are in §10's parenthetical and in the session.
-   These gate the implementation plan.
-2. **Then: `writing-plans`** to turn the spec into an ordered implementation plan.
-   **Recommend a FRESH session** — this one is heavy (large reads + research report + spec).
-   The spec on disk is the durable handoff; a fresh session needs only it.
-3. Implement in spec order of leverage: Story Spine → re-aim upstream prompts →
-   Synthetic Listener gate + repair loop → demote tic passes → audio round-trip.
-4. Regression target: re-run the pipeline on the Vienna topic; naive trace must clear the
-   §4 success criteria (zero unresolved breaks in first 3 min, ≤2 across the episode).
+1. **Execute the plan** — `docs/superpowers/plans/2026-06-20-narration-first-pipeline.md`.
+   **Subagent-driven execution recommended** (fresh subagent per task + review between).
+   **Recommend a FRESH session** to execute — this one is heavy (pick-up + full spec read +
+   code survey + plan authoring).
+2. Task order is leverage-first: 1 config+harness+draft-temp → 2 turn parser → 3 Story Spine
+   → 4-6 re-aim thesis/beat-sheet/draft → 7-9 naive/expert/repair loop → 10 wire the gate →
+   11 audio round-trip → 12 digest non-crash → 13 §8 fidelity go/no-go + Vienna regression.
+3. **Run the verification steps on the DESKTOP:** Tasks 4, 11, 13 need a live Anthropic API
+   key, and Task 11's audio round-trip wants the GPU/whisper path. The laptop can do the
+   pure-logic tasks (1-3, 5-10 unit tests) but the smoke renders + fidelity check want the desktop.
 
 ## Watch out for
-- **Spec §10 open questions are unanswered** — don't start writing-plans until they're decided;
-  several implementation choices depend on them.
-- **Don't add more tic passes** (disfluency/symmetry/backchannel) — research says that's the
-  lowest-weighted dimension (25 pts). They get DEMOTED (run after the gate), not extended.
-- **Digests:** user OK'd breaking them ("I can rebuild"). Plan converges both feeds on the
-  Story Spine. Don't contort to preserve the digest overlay if it fights the spine.
-- **Synthetic-listener fidelity is the go/no-go** (spec §8): before trusting the gate, confirm it
-  *reports* the known Vienna breaks and *passes* a working digest. If it can't tell them apart,
-  fix the asymmetry instruction first.
-- **`config.json` overrides DEFAULTS** — new flags (`use_story_spine`, `use_synthetic_listener`,
-  `narration_ratio_threshold`, etc.) must be checked there if they "aren't taking."
-- Standing TODO (unchanged): rotate the leaked `@AsynchronousPodBot` Telegram token via BotFather
-  `/revoke` when next at the home machine; git history verified clean.
+- **Task 13 is the go/no-go.** Before trusting the gate, the fidelity harness must *report*
+  the known Vienna breaks AND *pass* a working digest transcript. If it can't tell them
+  apart, fix the asymmetry instruction in `_SYNTHETIC_LISTENER_SYSTEM` (Task 7) before
+  relying on the gate. Don't skip this.
+- **Cost/latency of the iterative naive ear:** one LLM call per turn (~78 turns) × up to
+  2 repair rounds ≈ a few hundred calls per episode. Acceptable by design ("Asynchronous"),
+  but the plan adds `synthetic_listener_max_turns` (0 = no cap) and `max_repair_rounds` (2)
+  knobs — tune them after seeing the real cost on the first Vienna render.
+- **Two plan steps defer to live-file inspection** (Task 10 return-shape of
+  `_script_from_research_package`; Task 11 the master-mp3 variable name) — each gives an
+  exact grep + the adaptation rule. These are bounded, not placeholders; just confirm the
+  variable names when you get there.
+- **`config.json` overrides DEFAULTS** — the new flags (`use_story_spine`,
+  `use_synthetic_listener`, `narration_ratio_threshold`, `dialogue_draft_temperature`, etc.)
+  must be checked there if they "aren't taking."
+- **Flags-off must stay byte-identical** — a hard acceptance gate on every wiring task
+  (10, 11) and verified in Task 13 Step 5.
+- **Older pending items still open** (not C0): `.handoff/PENDING-DECISIONS.md` — re-enable
+  sonic footnotes (needs an ear-check render) + wire `anti_slop.py` (gate vs warn). Lower
+  priority than C0.
+- Standing TODO (unchanged): rotate the leaked `@AsynchronousPodBot` Telegram token via
+  BotFather `/revoke` when next at the home machine; git history verified clean.
 - Two audio-scope dirs untracked on purpose — never commit.
