@@ -140,7 +140,7 @@ The novel core. Rationale: every existing field evaluator judges the script *hol
 - Agent persona: "a smart, curious layperson who knows nothing about this topic — on a commute, cannot rewind."
 - It is given **only the script, fed one turn at a time**, and is **forbidden the research package and any look-ahead.**
 - After each turn it updates a running state and emits, per turn: `understood` (what's now clear), `holding_question` (open question it's carrying), `confusion` (what just lost it, e.g. an undefined name), `engaged` (still-with-it boolean + one-line why).
-- Implementation: a single LLM call that simulates the sequential read with an explicit "you may not use knowledge you were not given in prior turns" instruction, OR an iterative turn-by-turn loop if single-call fidelity is poor. (Decide during implementation; start with the cheaper single-call simulation and validate it actually reports confusion.)
+- Implementation (**RESOLVED §10.2: iterative turn-by-turn loop**): the agent is fed the script one turn at a time and only ever sees turns `1..n` when emitting its state for turn `n` — no-look-ahead is guaranteed by construction, not by an instruction it could violate. The §8 fidelity check validates the gate reports real confusion. (Single-call simulation was considered and dropped.)
 
 **Expert-listener protocol (Extension 2):**
 - Persona: a domain expert. Catches *hollowness* and error ("this reacts to material it never delivered," "this is name-dropping, not content").
@@ -197,7 +197,7 @@ After TTS render, transcribe the actual audio with the existing `scripts/transcr
 
 ## 7. Config flags (additions)
 
-`use_story_spine` (default on), `use_synthetic_listener` (on), `synthetic_listener_max_repair_rounds` (2), `narration_ratio_threshold` (0.6), `clarification_density_turns` (8), `use_expert_listener` (on), `use_audio_roundtrip` (on, report-only). All overridable via `config.json` (note: config overrides DEFAULTS — see CLAUDE.md).
+`use_story_spine` (default on), `use_synthetic_listener` (on), `synthetic_listener_max_repair_rounds` (2), `narration_ratio_threshold` (0.6), `clarification_density_turns` (8), `use_expert_listener` (on), `use_audio_roundtrip` (on, report-only), `dialogue_draft_temperature` (0.6 — **RESOLVED §10.4**, lowered from 0.75; config-tunable for A/B). All overridable via `config.json` (note: config overrides DEFAULTS — see CLAUDE.md).
 
 ## 8. Testing / acceptance
 
@@ -214,9 +214,20 @@ After TTS render, transcribe the actual audio with the existing `scripts/transcr
 - **Cost/latency blow-up** → acceptable by design; still cap repair rounds and dual-persona calls.
 - **Digest regression** → accepted risk per user; converge on spine.
 
-## 10. Open questions for reviewer
+## 10. Open questions for reviewer — RESOLVED 2026-06-20
 
-1. `open_loops` / curiosity-gap tracking in the spine — include now, or defer to a follow-up?
-2. Naive listener: start with the cheap single-call simulation, or go straight to the iterative turn-by-turn loop for fidelity?
-3. Audio round-trip: report-only forever, or graduate to a pre-publish gate once trusted?
-4. Draft temperature: lower it from 0.75, or leave and let the gate catch drift?
+1. `open_loops` / curiosity-gap tracking in the spine — **DEFER.** Keep the JSON slot
+   (nullable, unenforced); do not produce or consume it on the first pass. Adding it later
+   is non-breaking. Rationale: keep the first implementation lean; the load-bearing
+   instruments are the spine, the naive gate, and the narration ratio.
+2. Naive listener — **ITERATIVE from the start.** Feed the script one turn at a time
+   (turns 1..n only); no-look-ahead is guaranteed *structurally*, not by an instruction the
+   model can quietly violate. Justified by the project's cost-tolerance ("Asynchronous").
+   The §8 fidelity check still runs as a correctness test of the gate, not as an
+   escalation trigger. (Single-call simulation is dropped, not deferred.)
+3. Audio round-trip — **REPORT-ONLY now.** Ship as a post-render health check; structure
+   the output so graduation to a pre-publish gate is possible later. A gate here would force
+   costly re-renders, and TTS mispronunciations are better fixed at the pronunciation layer.
+4. Draft temperature — **LOWER to ~0.6 via config.** Directly reduces the free-association
+   that drives the commentary-track failure; config-driven so Vienna can be A/B-rendered at
+   both temps and reverted in one line. The gate remains the backstop for residual drift.
