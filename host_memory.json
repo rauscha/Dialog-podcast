@@ -1,15 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "his own initial read of Ospel as 'basically confirmatory' \u2014 revised mid-episode when he acknowledged the MeVO population is different enough from LVO that importing imaging criteria directly isn't clean",
-      "created_at": "2026-06-03T05:57:09.906849+00:00",
-      "juno_noticed": "that the Ospel paper changes the vocabulary of the MeVO triage conversation even without changing the protocol \u2014 and that the Maiter lung AI finding has the most immediate operational consequence of the week",
-      "relationship_moment": "Juno called Caspar's 'nothing changes in practice' framing 'accurate and also a little undersold'; Caspar conceded 'fair' without being pushed twice \u2014 the paper changes how the question gets framed, not what the answer is. Juno's dry close: 'So the paper you're actually waiting for hasn't been written yet.' Caspar: 'Right.'",
-      "run_id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03",
-      "topic": "Signal in the Scan - week of 2026/06/03",
-      "usable_callback": "Caspar's revision on Ospel: 'I started to say it was basically confirmatory, and I think that was too quick.' Also: Maiter's independent benchmarking finding \u2014 'FDA-cleared is not a sufficient answer' \u2014 as a standing callback for any future episode on AI procurement or regulatory adequacy."
-    },
-    {
       "caspar_challenged": "his own implicit framing that the Sorrenti paper was fresh \u2014 caught himself mid-walkthrough when Juno flagged the overlap with last week's MFM Rounds, acknowledged the dataset overlap, and redirected to what was actually new",
       "created_at": "2026-06-04T10:08:21.960189+00:00",
       "juno_noticed": "that the French CMV paper's argument is strong everywhere but the evidence is specifically French \u2014 and that those are different claims worth keeping separate",
@@ -107,6 +98,15 @@
       "run_id": "20260617_050144_the_fetal_frontier_-_week_of_2026_06_17",
       "topic": "The Fetal Frontier - week of 2026/06/17",
       "usable_callback": ""
+    },
+    {
+      "caspar_challenged": "his own initial read that the parity result was clean \u2014 caught mid-episode when Juno pressed on whether the AI's error distribution overlaps with the MDT's or diverges from it; conceded 'I don't think I can say that' and named the gap explicitly",
+      "created_at": "2026-06-19T10:07:58.569813+00:00",
+      "juno_noticed": "that the Yu et al. five-task structure means the AI is being asked to do the full preoperative workup conversation, not a single classification exercise \u2014 and that the thrombectomy paper sits differently from the other four because it's about withholding a pathway that already exists, not building a new one",
+      "relationship_moment": "Juno pushed 'the ceiling is documented, and that's more than we had'; Caspar said 'Agreed. It's just not a floor.' Juno: 'No. Not a floor.' Neither softened. Also: Caspar's mid-episode self-correction on the parity claim \u2014 prompted by Juno's precision question, not by his own review \u2014 landed without defensiveness.",
+      "run_id": "20260619_050143_signal_in_the_scan_-_week_of_2026_06_19",
+      "topic": "Signal in the Scan - week of 2026/06/19",
+      "usable_callback": "Caspar's error-distribution caveat: 'Clean on the metric they chose. Not necessarily clean on the underlying error structure.' Also: Juno's thrombectomy asymmetry framing \u2014 'Every other paper this week is about adding something. This one is about withholding.' And the close: 'Three open questions, none of them small.' / 'Good week for show notes.'"
     }
   ],
   "hosts": {
@@ -315,7 +315,26 @@
     "both halves went to the same guy",
     "the lens has a best aperture",
     "the coating changed what designs were even buildable",
-    "that's the right place to leave it"
+    "that's the right place to leave it",
+    "the ceiling is documented, and that's more than we had",
+    "clean on the metric they chose",
+    "not necessarily clean on the underlying error structure",
+    "every other paper this week is about adding something",
+    "this one is about withholding",
+    "three open questions, none of them small",
+    "good week for show notes",
+    "parity with MDT is meaningful",
+    "it's not parity with histopathologic truth",
+    "the five-task structure",
+    "the full preoperative workup conversation",
+    "anchoring is a real risk",
+    "the next hurdle",
+    "the non-contrast performance is the piece worth pausing on",
+    "the opportunistic screening question",
+    "the sex-specific effect",
+    "the asymmetry shapes how you set the threshold",
+    "the paper makes the case that current metrics aren't sufficient",
+    "it doesn't tell you what to replace them with"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -327,52 +346,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-06-03T05:57:09.906849+00:00",
-      "id": "20260603_005046_signal_in_the_scan_-_week_of_2026_06_03_04",
-      "summary": "Caspar's closing formulation across the five imaging AI papers: no consensus threshold exists for when a predictive imaging AI model is actionable \u2014 every paper sets its own bar. As the literature accumulates, that's going to be a problem. Paired with Juno's operational close: the Maiter finding is the one with immediate procurement consequences right now.",
-      "tags": [
-        "imaging AI",
-        "actionability threshold",
-        "AI validation",
-        "signal in the scan",
-        "Caspar formulation",
-        "closing exchange"
-      ],
-      "why_keep": "The 'every paper sets its own bar' observation is a standing structural critique reusable whenever the show revisits AI clinical validation, regulatory frameworks, or the gap between publication standards and deployment standards."
-    },
-    {
-      "created_at": "2026-06-04T10:08:21.960189+00:00",
-      "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_01",
-      "summary": "Coste-Mazeau et al. (UOG 2026): seven-year national French CMV cohort, 2017\u20132023. Valacyclovir prescribing rose substantially after the 2020 RCT; vertical transmission rates declined across the cohort period. Caspar's hard line: observational design can't isolate valacyclovir from concurrent shifts in screening awareness and case ascertainment. The paper supports 'the RCT signal is present at population scale' \u2014 not 'valacyclovir caused the decline.' Juno's formulation: 'the paper you bring to the protocol committee' \u2014 Caspar's qualifier: only if your system resembles the French one. Juno's concession: 'The paper moves the argument. Doesn't end it for every jurisdiction.'",
-      "tags": [
-        "CMV",
-        "valacyclovir",
-        "vertical transmission",
-        "Coste-Mazeau 2026",
-        "UOG",
-        "population cohort",
-        "fetal frontier",
-        "same verb problem"
-      ],
-      "why_keep": "The 'argument is strong everywhere, evidence is specifically French' exchange is a clean relationship callback and a reusable formulation for any future episode on RCT-to-population translation, health system generalizability, or the gap between a strong argument and jurisdiction-specific evidence."
-    },
-    {
-      "created_at": "2026-06-04T10:08:21.960189+00:00",
-      "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_02",
-      "summary": "Kjaer et al. (UOG 2026): multicenter prospective cohort \u2014 FMF first-trimester preeclampsia screening algorithm performance stratified by conception mode. Frozen embryo transfer and oocyte donation specifically show performance gaps; spontaneous conception and fresh IVF do not diverge the same way. Biological argument: frozen ET and oocyte donation alter implantation biology and maternal vascular response. Whether the correction is a cutoff adjustment, additional biomarker, or heightened clinical suspicion is not answered in this paper. Juno named the fork: absorbed informally by centers mentally flagging frozen ET patients, or triggers formal algorithm recalibration. Caspar: 'the answer isn't in this paper.'",
-      "tags": [
-        "FMF algorithm",
-        "preeclampsia screening",
-        "frozen embryo transfer",
-        "oocyte donation",
-        "Kjaer 2026",
-        "UOG",
-        "fetal frontier",
-        "recalibration"
-      ],
-      "why_keep": "The informal-absorption-versus-formal-recalibration fork is a precise, reusable formulation for any future episode on screening algorithm updates, ART-specific risk, or the gap between a published finding and a protocol change."
-    },
     {
       "created_at": "2026-06-04T10:08:21.960189+00:00",
       "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_03",
@@ -593,6 +566,55 @@
         "camera lens design"
       ],
       "why_keep": "Specific historical anecdote with a clean punchline \u2014 reusable as a callback in any future episode on intellectual property, secrecy in engineering, or the gap between invention and credit."
+    },
+    {
+      "created_at": "2026-06-19T10:07:58.569813+00:00",
+      "id": "20260619_050143_signal_in_the_scan_-_week_of_2026_06_19_01",
+      "summary": "Yu et al. (NPJ Digital Medicine, 2026): multicenter external validation, multimodal AI (ultrasound + CT + MRI fusion) for preoperative ovarian cancer classification across five tasks \u2014 benign/malignant, histologic subtype, staging, resectability, high-grade serous identification. MDT consensus used as reference standard. Parity across all five tasks in external validation. Evidence score 0.4, importance score 0.82. Caspar's hard caveat: the paper doesn't characterize whether the AI's errors overlap with the MDT's errors or diverge \u2014 same overall accuracy, potentially different failure distribution. That gap is real. Juno's framing: the ceiling is documented, not a floor. Caspar: agreed.",
+      "tags": [
+        "ovarian cancer",
+        "multimodal AI",
+        "MDT consensus",
+        "Yu 2026",
+        "NPJ Digital Medicine",
+        "signal in the scan",
+        "error distribution",
+        "preoperative staging"
+      ],
+      "why_keep": "Caspar's mid-episode self-correction on the parity claim is a relationship marker. The 'same accuracy, different error distribution' caveat is precise and reusable in any future episode on AI clinical validation, MDT workflow, or the gap between a metric and what it actually means for deployment."
+    },
+    {
+      "created_at": "2026-06-19T10:07:58.569813+00:00",
+      "id": "20260619_050143_signal_in_the_scan_-_week_of_2026_06_19_02",
+      "summary": "Lakhani et al. (Radiology, 2026): multicenter retrospective analysis \u2014 CT-derived net water uptake outperforms ASPECTS and CBF-less-than-30% for predicting futile recanalization after mechanical thrombectomy in LVO stroke. Juno's framing: every other paper this week is about adding a tool; this one is about withholding a pathway that already exists. The asymmetry of false positives (procedural risk, lost time) versus false negatives (futile intervention in a narrow window) shapes how the threshold gets set \u2014 and that's a harder bedside conversation. Caspar's caveat: retrospective, thresholds not in guidelines, interaction with existing ASPECTS cutoffs still open.",
+      "tags": [
+        "thrombectomy",
+        "futile recanalization",
+        "net water uptake",
+        "ASPECTS",
+        "LVO stroke",
+        "Lakhani 2026",
+        "Radiology",
+        "signal in the scan",
+        "withholding"
+      ],
+      "why_keep": "Juno's 'adding vs. withholding' distinction is precise and reusable in any future episode on clinical decision thresholds, triage tools, or the asymmetry of intervention versus restraint. The asymmetry framing is a standing callback."
+    },
+    {
+      "created_at": "2026-06-19T10:07:58.569813+00:00",
+      "id": "20260619_050143_signal_in_the_scan_-_week_of_2026_06_19_03",
+      "summary": "Yamaguchi et al. (Radiology, 2026): multiinstitutional deep learning model detecting direct and indirect pancreatic cancer findings on both contrast-enhanced and non-contrast CT, matching or exceeding physician performance on both. Caspar's counterintuitive note: indirect signs (duct dilation, parenchymal atrophy) are detectable without contrast when the model is trained to look for them. Evidence score 0.4. Caspar held the opportunistic screening question open explicitly: validation in patients who had CT for another indication hasn't been done; promising model, open deployment question. Whether this accelerates overdiagnosis before the downstream pathway is built is the version worth watching.",
+      "tags": [
+        "pancreatic cancer",
+        "deep learning",
+        "non-contrast CT",
+        "opportunistic screening",
+        "Yamaguchi 2026",
+        "Radiology",
+        "signal in the scan",
+        "overdiagnosis"
+      ],
+      "why_keep": "The opportunistic screening question \u2014 does this accelerate overdiagnosis before anyone builds the downstream pathway? \u2014 is a standing open thread named explicitly by Caspar. Reusable in any future episode on AI screening, incidental findings, or the gap between model performance and deployment readiness."
     }
   ],
   "show": {
@@ -605,5 +627,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-17T10:07:23.513594+00:00"
+  "updated_at": "2026-06-19T10:07:58.569813+00:00"
 }

@@ -61,6 +61,16 @@
       "url": "https://doi.org/10.1038/s41746-026-02855-4",
       "year": 2026
     },
+    "10.1038/s41746-026-02875-0": {
+      "aired_at": "2026-06-19T10:09:22.185827+00:00",
+      "doi": "10.1038/s41746-026-02875-0",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
+      "pmid": "42298142",
+      "publication": "NPJ Digit Med",
+      "title": "Integrating ultrasound-CT-MR for preoperative multi-task prediction in ovarian cancer: achieving diagnostic parity with multidisciplinary team consensus.",
+      "url": "https://doi.org/10.1038/s41746-026-02875-0",
+      "year": 2026
+    },
     "10.1148/radiol.251394": {
       "aired_at": "2026-06-05T10:08:15.197448+00:00",
       "doi": "10.1148/radiol.251394",
@@ -101,6 +111,16 @@
       "url": "https://doi.org/10.1148/radiol.251769",
       "year": 2026
     },
+    "10.1148/radiol.252086": {
+      "aired_at": "2026-06-19T10:09:22.185827+00:00",
+      "doi": "10.1148/radiol.252086",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
+      "pmid": "42262238",
+      "publication": "Radiology",
+      "title": "Sex-Specific Associations between Long-term Air Pollution Exposure and Coronary Atherosclerosis at Cardiac CT.",
+      "url": "https://doi.org/10.1148/radiol.252086",
+      "year": 2026
+    },
     "10.1148/radiol.252205": {
       "aired_at": "2026-06-03T05:58:49.602904+00:00",
       "doi": "10.1148/radiol.252205",
@@ -121,6 +141,16 @@
       "url": "https://doi.org/10.1148/radiol.252250",
       "year": 2026
     },
+    "10.1148/radiol.252487": {
+      "aired_at": "2026-06-19T10:09:22.185827+00:00",
+      "doi": "10.1148/radiol.252487",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
+      "pmid": "42301013",
+      "publication": "Radiology",
+      "title": "Ischemic Lesion Net Water Uptake Outperforms ASPECTS and CBF Less Than 30% in Predicting Futile Recanalization after Mechanical Thrombectomy.",
+      "url": "https://doi.org/10.1148/radiol.252487",
+      "year": 2026
+    },
     "10.1148/radiol.252685": {
       "aired_at": "2026-06-03T05:58:49.602904+00:00",
       "doi": "10.1148/radiol.252685",
@@ -131,6 +161,16 @@
       "url": "https://doi.org/10.1148/radiol.252685",
       "year": 2026
     },
+    "10.1148/radiol.253122": {
+      "aired_at": "2026-06-19T10:09:22.185827+00:00",
+      "doi": "10.1148/radiol.253122",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
+      "pmid": "42301012",
+      "publication": "Radiology",
+      "title": "Deep Learning Detection of Direct and Indirect Imaging Findings Associated with Pancreatic Cancer at Contrast-enhanced and Noncontrast CT.",
+      "url": "https://doi.org/10.1148/radiol.253122",
+      "year": 2026
+    },
     "10.1148/radiol.253143": {
       "aired_at": "2026-06-05T10:08:15.197448+00:00",
       "doi": "10.1148/radiol.253143",
@@ -139,6 +179,16 @@
       "publication": "Radiology",
       "title": "Evaluating Accuracy of LI-RADS Nonradiation Treatment Response Algorithm v2024 and Ancillary Features at Hepatobiliary MRI versus CT.",
       "url": "https://doi.org/10.1148/radiol.253143",
+      "year": 2026
+    },
+    "10.1148/radiol.253854": {
+      "aired_at": "2026-06-19T10:09:22.185827+00:00",
+      "doi": "10.1148/radiol.253854",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
+      "pmid": "42262242",
+      "publication": "Radiology",
+      "title": "Diagnostic Accuracy of Extracellular versus Hepatobiliary Contrast-enhanced MRI in LI-RADS Nonradiation Treatment Response Algorithm Version 2024.",
+      "url": "https://doi.org/10.1148/radiol.253854",
       "year": 2026
     },
     "10.1148/ryai.250331": {
@@ -153,21 +203,21 @@
     }
   },
   "last_run": {
-    "aired_at": "2026-06-06T10:09:21.689235+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260606_050146_signal_in_the_scan_-_week_of_2026_06_06.mp3",
+    "aired_at": "2026-06-19T10:09:22.185827+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260619_050143_signal_in_the_scan_-_week_of_2026_06_19.mp3",
     "recorded_keys": [
-      "10.1038/s41746-026-02831-y",
-      "10.1016/j.landig.2026.100986",
-      "10.1148/radiol.251658",
-      "10.1038/s41746-026-02826-9",
-      "10.1038/s41746-026-02855-4"
+      "10.1038/s41746-026-02875-0",
+      "10.1148/radiol.253854",
+      "10.1148/radiol.253122",
+      "10.1148/radiol.252086",
+      "10.1148/radiol.252487"
     ],
     "window": {
-      "from": "2025/12/03",
-      "to": "2026/06/06"
+      "from": "2025/12/16",
+      "to": "2026/06/19"
     }
   },
   "schema_version": 1,
   "show_id": "ai",
-  "updated_at": "2026-06-06T10:09:21.689235+00:00"
+  "updated_at": "2026-06-19T10:09:22.185827+00:00"
 }
