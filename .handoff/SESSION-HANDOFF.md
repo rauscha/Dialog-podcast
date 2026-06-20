@@ -2,28 +2,68 @@
 
 ## STATE (read this first)
 - Branch: `main`, clean and **pushed** (synced — desktop can pull immediately).
-- This was a **diagnosis + editorial session**, not a build session. The big outcome: we figured out *why* episodes feel like an unfollowable mishmash (user's wife stopped listening to the Vienna ep). Full writeup committed at `.handoff/EDITORIAL-DIAGNOSIS-vienna.md` — **read that next**, it's the payload.
-- One small feature also shipped: episodes now save a durable `.script.txt` next to the audio (survives work-dir cleanup, syncs across machines) so future scripts can be reviewed without re-transcribing.
+- This was a **design session** for the C0 prompt surgery. Outcome: a full,
+  research-grounded redesign spec is on disk and committed —
+  **`docs/superpowers/specs/2026-06-20-narration-first-pipeline-design.md`** — **read that next, it's the payload.**
+- **The big correction:** the diagnosis doc was wrong that "there's no beat-sheet step."
+  The pipeline already implements nearly the entire script chain (thesis → beat-sheet →
+  guest-plan → draft → anti-cliché → symmetry → disfluency → fact-check → callback →
+  performance). The failure is **mis-aimed prompts + a missing substance gate**, not
+  missing stages. So the work is RE-AIM, not rebuild.
+- **Decision made:** salvage the existing chain (it's field-validated), take the fuller
+  swing (Option B). Do NOT rebuild from zero. The digest shows are the in-house proof
+  that the same plumbing produces followable output when given a structural spine.
 - Two `audio-scope-*` dirs remain untracked **on purpose** — never commit them.
 
 ## Done this session
-- **Editorial diagnosis of the Vienna episode** (`.handoff/EDITORIAL-DIAGNOSIS-vienna.md`). Root cause in one line: *scripts are a director's-commentary track for a documentary that was never made* — they argue ABOUT Vienna's history without ever telling it. Names dropped not rendered; "not X, that's Y" is the script's whole epistemics (punchline, no setup); tonal whiplash (Holocaust → coffee aphorism). The guest was the *best* part (only continuous content) → reopens the earlier "guests rare" plan.
-- **Durable script sidecar** (`generate_podcast.py`, `_write_companion_artifacts`): writes `<audio>.script.txt` and publishes it with the other sidecars. Compiles clean.
-- **`scripts/transcribe_episode.py`** — standalone faster-whisper transcriber to recover scripts of already-published episodes. Used it to recover the Vienna transcript (also committed).
-- Persisted bot-run state (digest ledger + host memory).
-- Memory written: `editorial_root_cause` (+ MEMORY.md index line).
+- **Landscape review** (deep-research workflow, 22 sources, 25 claims adversarially
+  verified). Key confirmed findings: multi-stage chains are the field standard (our arch
+  is sound); the narration-vs-banter fix is upstream grounding constraints in the prompt
+  (MoonCast/NotebookLM); **compliance ≠ substance** (PodBench: 96.6 instruction-following
+  vs 63.3 content quality — a style chain can pass every stage and stay hollow); engagement
+  lives in the script weighted to substance (45) > narrative (30) > naturalness (25), so our
+  disfluency/symmetry investment polishes the cheapest dimension. Full report archived in
+  the session transcript (workflow `wf_b6ea3cf7-312`).
+- **Wrote the design spec** (committed `3f6b028`). Narration-first redesign: keep ~70%,
+  re-aim 3 prompts (thesis/beat-sheet/draft for establish-before-adjudicate + define-every-name +
+  one-scene-per-segment), add 3 stages — **Story Spine** (first-class artifact, generalizes the
+  digest's `structural_plan`), **Synthetic First Listener** comprehension gate, **audio round-trip** QA.
+- **The novel idea — the Synthetic First Listener ("rewindless ear").** Every field evaluator
+  judges the script *with the source in hand*, so it can never feel lost — structurally blind to
+  newcomer confusion. We exploit information asymmetry: feed a naive-layperson agent the script
+  one turn at a time, no look-ahead, no research; it emits a per-turn comprehension trace (where a
+  name was undefined, where it lost the thread, where it checked out). Plus an expert ear for
+  hollowness, plus a narration-vs-banter ratio metric.
+- **User's key refinement (the heart of §6.5):** when the trace flags a gap, the repair step
+  CHOOSES — rewrite the line inline, OR have the **listener-surrogate host directly ask the carrier
+  to clarify**, turning the fake listener's confusion into real on-show back-and-forth. Balance
+  rules prevent "what's that?/it's X" Q&A slop.
 
 ## Next up
-1. **🔴 C0 — structural prompt fix** (NEXT-STEPS.md, Phase C). Highest leverage. Pull the research + dialogue system prompts out of `generate_podcast.py`, read what's driving banter-about-facts, then add (a) an outline/beat-sheet step and (b) the constraint *establish before you adjudicate; one concrete scene per segment; define every name you invoke.* **Start this on a FRESH session** — it's prompt surgery and this session is loaded.
-2. Only AFTER #1: reopen "guests rare" (the real fix is hosts carrying narrative, not fewer guests).
-3. Only AFTER #1: extend `anti_slop.py` for the "not X, that's Y" antithesis family.
-4. Carried from 2026-06-17 (still open, lower priority now): listen to the Vienna B1–B4 render; ear-check render to re-enable sonic footnotes (PENDING-DECISIONS #1); decide how to wire the anti-slop linter (PENDING-DECISIONS #2).
+1. **🔴 Answer the 4 open questions in spec §10** (curiosity-gap open_loops now or later?;
+   naive listener single-call vs iterative loop?; audio round-trip report-only vs gate?;
+   lower draft temp from 0.75?). My leanings are in §10's parenthetical and in the session.
+   These gate the implementation plan.
+2. **Then: `writing-plans`** to turn the spec into an ordered implementation plan.
+   **Recommend a FRESH session** — this one is heavy (large reads + research report + spec).
+   The spec on disk is the durable handoff; a fresh session needs only it.
+3. Implement in spec order of leverage: Story Spine → re-aim upstream prompts →
+   Synthetic Listener gate + repair loop → demote tic passes → audio round-trip.
+4. Regression target: re-run the pipeline on the Vienna topic; naive trace must clear the
+   §4 success criteria (zero unresolved breaks in first 3 min, ≤2 across the episode).
 
 ## Watch out for
-- **Don't start by editing the guest planner or the anti-slop linter** — that's polishing a mishmash. The structure fix (C0) comes first and makes the rest cleanup.
-- The `.script.txt` sidecar is **published/committed**, i.e. publicly reachable (just a transcript of already-public audio). User hasn't objected, but if he wants scripts local-only, pull `script_path` out of the returned list in `_write_companion_artifacts` and out of the publish set.
-- The "every-N-episodes review trigger" the user asked about earlier was **not built** — we pivoted to the diagnosis. Pick it up if wanted, but C0 matters more.
-- Whisper loop artifacts in the Vienna transcript (04:03, 10:02, 01:42) are TTS-transcription junk, not the real audio — ignore when reading.
-- **`config.json` overrides DEFAULTS** — if an audio/footnote knob "isn't taking," check `config.json` first.
-- **Two audio-scope dirs are untracked on purpose** — never commit them.
-- Standing TODO (unchanged): rotate the leaked `@AsynchronousPodBot` Telegram token via BotFather `/revoke` when next at the home machine; git history verified clean.
+- **Spec §10 open questions are unanswered** — don't start writing-plans until they're decided;
+  several implementation choices depend on them.
+- **Don't add more tic passes** (disfluency/symmetry/backchannel) — research says that's the
+  lowest-weighted dimension (25 pts). They get DEMOTED (run after the gate), not extended.
+- **Digests:** user OK'd breaking them ("I can rebuild"). Plan converges both feeds on the
+  Story Spine. Don't contort to preserve the digest overlay if it fights the spine.
+- **Synthetic-listener fidelity is the go/no-go** (spec §8): before trusting the gate, confirm it
+  *reports* the known Vienna breaks and *passes* a working digest. If it can't tell them apart,
+  fix the asymmetry instruction first.
+- **`config.json` overrides DEFAULTS** — new flags (`use_story_spine`, `use_synthetic_listener`,
+  `narration_ratio_threshold`, etc.) must be checked there if they "aren't taking."
+- Standing TODO (unchanged): rotate the leaked `@AsynchronousPodBot` Telegram token via BotFather
+  `/revoke` when next at the home machine; git history verified clean.
+- Two audio-scope dirs untracked on purpose — never commit.
