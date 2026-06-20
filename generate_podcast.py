@@ -3724,14 +3724,22 @@ def _write_companion_artifacts(
     }
     _write_json(companion_path, companion)
 
+    # Durable copy of the final spoken script, next to the audio. The work-dir
+    # script.txt is deleted by cleanup, so this sidecar is what survives for the
+    # periodic editorial review (flow / AI-tell passes). Published alongside the
+    # other sidecars so it syncs across machines.
+    script_path = audio_path.with_suffix(".script.txt")
+    script_path.write_text(episode.get("script", "") or "", encoding="utf-8")
+
     episode["audio_url"] = audio_url
     episode["chapters"] = chapters
     episode["chapters_url"] = chapters_url
     episode["chapters_path"] = str(chapters_path)
     episode["companion_url"] = companion_url
     episode["companion_path"] = str(companion_path)
+    episode["script_sidecar_path"] = str(script_path)
     episode["follow_up_links"] = follow_up_links
-    return [chapters_path, companion_path]
+    return [chapters_path, companion_path, script_path]
 
 
 def _tts_openai_voice(
