@@ -26,3 +26,26 @@ def test_split_turns_skips_non_dialogue():
 def test_join_turns_round_trips():
     turns = gp._split_turns(SCRIPT)
     assert gp._join_turns(turns) == SCRIPT
+
+
+def test_split_turns_lossless_with_indentation():
+    # A script where one turn line has leading whitespace; the round-trip must be exact.
+    indented = (
+        "JUNO [warm]: First line.\n"
+        "  CASPAR [curious]: indented line.\n"
+        "JUNO [thoughtful]: Last line."
+    )
+    turns = gp._split_turns(indented)
+    # Semantic fields are derived from the stripped match — no leading spaces in text.
+    assert turns[1]["speaker"] == "CASPAR"
+    assert turns[1]["text"] == "indented line."
+    assert turns[1]["emotion"] == "curious"
+    # raw preserves the original unstripped line for lossless reassembly.
+    assert turns[1]["raw"] == "  CASPAR [curious]: indented line."
+    # Full round-trip must be exact.
+    assert gp._join_turns(gp._split_turns(indented)) == indented
+
+
+def test_split_turns_empty_and_none():
+    assert gp._split_turns("") == []
+    assert gp._split_turns(None) == []

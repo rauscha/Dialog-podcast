@@ -1107,9 +1107,10 @@ def _split_turns(script: str) -> list[dict]:
     """Parse a dialogue script into structured turns. Non-dialogue lines skipped."""
     turns: list[dict] = []
     for line in (script or "").splitlines():
-        if not line.strip():
+        stripped = line.strip()
+        if not stripped:
             continue
-        m = _TURN_LINE_RE.match(line.strip())
+        m = _TURN_LINE_RE.match(stripped)
         if not m:
             continue
         speaker, emotion, text = m.group(1), (m.group(2) or "").strip(), m.group(3).strip()
@@ -1118,7 +1119,7 @@ def _split_turns(script: str) -> list[dict]:
             "speaker": speaker,
             "emotion": emotion,
             "text": text,
-            "raw": line.strip(),
+            "raw": line,
         })
     return turns
 
