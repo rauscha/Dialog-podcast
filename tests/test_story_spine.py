@@ -72,3 +72,14 @@ def test_build_story_spine_invalid_json_returns_none(fake_client):
     cfg = dict(gp.DEFAULTS)
     spine = gp._build_story_spine("x", cfg, fake_client, "t", "g", {"readable_brief": "b"})
     assert spine is None
+
+
+def test_build_story_spine_skips_digest_without_calling_llm(fake_client):
+    # Digest episodes carry their own structural_plan; the spine must NOT run,
+    # and must short-circuit BEFORE any LLM call. fake_client has no queued
+    # responses, so any LLM call would raise — asserting calls == [] proves the
+    # digest gate fired before the client was touched.
+    cfg = {**gp.DEFAULTS, "episode_type": "digest"}
+    spine = gp._build_story_spine("x", cfg, fake_client, "t", "g", {"readable_brief": "b"})
+    assert spine is None
+    assert fake_client.calls == []

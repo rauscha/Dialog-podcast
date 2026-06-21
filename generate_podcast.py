@@ -2084,6 +2084,9 @@ def _build_story_spine(topic, cfg, client, thesis, guest_plan, research_package)
     """Produce the Story Spine artifact. Returns None if disabled or invalid."""
     if not cfg.get("use_story_spine", True):
         return None
+    if str(cfg.get("episode_type", "")).strip().lower() == "digest":
+        logger.info("[story-spine] digest episode — skipping spine (digest uses its structural_plan)")
+        return None
     brief = research_package.get("readable_brief", "") if isinstance(research_package, dict) else ""
     content = (
         f"TOPIC: {topic}\n\n"
