@@ -241,7 +241,7 @@ DEFAULTS: dict = {
     "synthetic_listener_max_repair_rounds": 2,
     "clarification_density_turns": 8,
     "synthetic_listener_max_turns": 0,   # 0 = no cap; >0 truncates the naive read for cost
-    "narration_ratio_threshold": 0.6,
+    "narration_ratio_threshold": 0.35,   # calibrated 2026-06-21: good digests measured 0.31-0.54; 0.6 over-triggered repair on good content
     "dialogue_draft_temperature": 0.6,   # spec §10.4 — lowered from 0.75
 }
 

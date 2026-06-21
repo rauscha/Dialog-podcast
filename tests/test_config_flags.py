@@ -10,7 +10,7 @@ def test_new_flags_have_defaults():
     assert d["synthetic_listener_max_repair_rounds"] == 2
     assert d["clarification_density_turns"] == 8
     assert d["synthetic_listener_max_turns"] == 0
-    assert d["narration_ratio_threshold"] == 0.6
+    assert d["narration_ratio_threshold"] == 0.35  # recalibrated 2026-06-21 from 0.6
     assert d["dialogue_draft_temperature"] == 0.6
 
 
