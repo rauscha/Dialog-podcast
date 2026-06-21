@@ -59,3 +59,20 @@ def test_run_naive_listener_aggregates_and_is_asymmetric(fake_client):
     sent = turn1_call["messages"][0]["content"]
     assert "exactly" not in sent  # turn 2's words never leaked into turn 1
     assert "Vienna" in sent        # but the prior turn did
+
+
+def test_run_expert_listener_parses(fake_client):
+    fake_client.queue(json.dumps({
+        "hollow_spots": [{"turn": 9, "detail": "six names listed, none rendered"}],
+        "errors": [],
+    }))
+    cfg = dict(gp.DEFAULTS)
+    out = gp._run_expert_listener("JUNO [x]: words", cfg, fake_client)
+    assert out["hollow_spots"][0]["turn"] == 9
+    assert out["errors"] == []
+
+
+def test_run_expert_listener_disabled():
+    cfg = {**gp.DEFAULTS, "use_expert_listener": False}
+    out = gp._run_expert_listener("JUNO [x]: words", cfg, None)
+    assert out == {"hollow_spots": [], "errors": []}

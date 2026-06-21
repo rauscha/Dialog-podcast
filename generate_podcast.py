@@ -1029,6 +1029,19 @@ For the new line, return ONLY a JSON object:
 }
 No prose outside the JSON."""
 
+_EXPERT_LISTENER_SYSTEM = """\
+You are a domain expert reviewing a podcast script for HOLLOWNESS and ERROR. You know \
+the field. Find places where the hosts REACT TO or ARGUE ABOUT material the script \
+never actually delivered, where names are dropped but not rendered into content, and \
+any factual errors.
+
+Return ONLY JSON:
+{
+  "hollow_spots": [{"turn": <int>, "detail": "what's hollow"}],
+  "errors": [{"turn": <int>, "detail": "the factual problem"}]
+}
+Turn numbers are 0-based line indices among the dialogue lines. No prose outside JSON."""
+
 _PERFORMANCE_SYSTEM = """\
 You are the final performance editor for a conversational TTS podcast script.
 
@@ -2154,6 +2167,25 @@ def _run_naive_listener(script: str, cfg: dict, client) -> dict:
             "per_turn": per_turn,
         },
         "narration_vs_banter": _compute_narration_ratio(per_turn, threshold),
+    }
+
+
+def _run_expert_listener(script: str, cfg: dict, client) -> dict:
+    if not cfg.get("use_expert_listener", True):
+        return {"hollow_spots": [], "errors": []}
+    raw = _anthropic_text(
+        client,
+        model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+        system=_EXPERT_LISTENER_SYSTEM,
+        content=script,
+        max_tokens=2048,
+        temperature=0.2,
+        cfg=cfg,
+    )
+    out = _extract_json_object(raw) or {}
+    return {
+        "hollow_spots": out.get("hollow_spots") or [],
+        "errors": out.get("errors") or [],
     }
 
 
