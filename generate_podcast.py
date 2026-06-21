@@ -233,6 +233,16 @@ DEFAULTS: dict = {
     "music_model":          "facebook/musicgen-small",
     "music_duration_sec":   12,
     "music_fade_sec":       2,
+    # ── Narration-first pipeline (2026-06-20 spec) ──────────────────
+    "use_story_spine": True,
+    "use_synthetic_listener": True,
+    "use_expert_listener": True,
+    "use_audio_roundtrip": True,
+    "synthetic_listener_max_repair_rounds": 2,
+    "clarification_density_turns": 8,
+    "synthetic_listener_max_turns": 0,   # 0 = no cap; >0 truncates the naive read for cost
+    "narration_ratio_threshold": 0.6,
+    "dialogue_draft_temperature": 0.6,   # spec §10.4 — lowered from 0.75
 }
 
 _BOOL_CONFIG_KEYS = {
@@ -255,6 +265,10 @@ _BOOL_CONFIG_KEYS = {
     "audio_deesser",
     "local_llm_think",
     "altmetric_enabled",
+    "use_story_spine",
+    "use_synthetic_listener",
+    "use_expert_listener",
+    "use_audio_roundtrip",
 }
 _INT_CONFIG_KEYS = {
     "target_minutes",
@@ -288,6 +302,9 @@ _INT_CONFIG_KEYS = {
     "concat_crossfade_ms",
     "cartesia_sample_rate",
     "cartesia_bit_rate",
+    "synthetic_listener_max_repair_rounds",
+    "clarification_density_turns",
+    "synthetic_listener_max_turns",
 }
 _FLOAT_CONFIG_KEYS = {
     "music_fade_sec",
@@ -300,6 +317,8 @@ _FLOAT_CONFIG_KEYS = {
     "elevenlabs_stability",
     "elevenlabs_similarity_boost",
     "cartesia_speed",
+    "narration_ratio_threshold",
+    "dialogue_draft_temperature",
 }
 _JSON_CONFIG_KEYS = {
     "tts_default_route",
@@ -2020,7 +2039,7 @@ def _script_from_research_package(
             f"Research package:\n{json.dumps(research_package, indent=2)[:26000]}"
             f"{digest_overlay}"
         ),
-        temperature=0.75,
+        temperature=float(cfg.get("dialogue_draft_temperature", 0.6)),
         cfg=cfg,
     )
     draft_script = _strip_to_dialogue(draft_script)
