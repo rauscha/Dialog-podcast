@@ -4858,8 +4858,8 @@ def _audio_roundtrip_check(audio_path, cfg, client) -> dict:
     except Exception as exc:
         logger.warning("[audio-roundtrip] transcriber unavailable: %s", exc)
         return {"ran": False, "transcript_path": None, "breaks": [], "ratio": None}
-    out_txt = str(Path(audio_path).with_suffix(".transcript.txt"))
     try:
+        out_txt = str(Path(audio_path).with_suffix(".transcript.txt"))
         rc = _transcribe(["transcribe_episode", str(audio_path), out_txt])
         if rc != 0:
             logger.warning("[audio-roundtrip] transcription returned %s", rc)
