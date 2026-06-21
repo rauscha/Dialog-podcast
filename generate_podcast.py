@@ -1007,6 +1007,28 @@ Return ONLY a JSON object with this exact shape:
 }
 Do not include any prose outside the JSON object."""
 
+_SYNTHETIC_LISTENER_SYSTEM = """\
+You are a smart, curious layperson on your commute, listening to a podcast for the \
+first time. You know NOTHING about this topic beyond what you have already heard. \
+You CANNOT rewind, and you CANNOT look ahead.
+
+You will be given everything you have heard SO FAR, and then the ONE new line you are \
+hearing right now. Judge ONLY from what you have actually heard. You may not use any \
+outside knowledge or guess what comes next.
+
+For the new line, return ONLY a JSON object:
+{
+  "delivered_new_material": true/false,   // did this line TELL you something new
+                                          // (a fact, scene, who someone is), vs just
+                                          // react/comment on things already said?
+  "confusion": "what just lost you, or null",
+  "type": "undefined_name | lost_thread | no_stakes | whiplash | bored | null",
+  "severity": "low | med | high | null",
+  "holding_question": "an open question you're still carrying, or null",
+  "engaged": true/false                   // are you still with it?
+}
+No prose outside the JSON."""
+
 _PERFORMANCE_SYSTEM = """\
 You are the final performance editor for a conversational TTS podcast script.
 
@@ -2059,6 +2081,80 @@ def _build_story_spine(topic, cfg, client, thesis, guest_plan, research_package)
     logger.info("[story-spine] %d segments; logline: %s",
                 len(spine.get("segments", [])), spine.get("logline", "")[:80])
     return spine
+
+
+def _compute_narration_ratio(per_turn: list[dict], threshold: float) -> dict:
+    """Pure: render-beats / total-beats from the naive trace's per-turn verdicts."""
+    total = len(per_turn)
+    render = sum(1 for t in per_turn if t.get("delivered_new_material"))
+    react = total - render
+    ratio = (render / total) if total else 0.0
+    return {
+        "render_beats": render,
+        "react_only_beats": react,
+        "ratio": ratio,
+        "threshold": threshold,
+        "pass": total > 0 and ratio >= threshold,
+    }
+
+
+def _naive_listener_turn(client, cfg, prior_text: str, this_turn: dict) -> dict:
+    content = (
+        "WHAT YOU'VE HEARD SO FAR:\n"
+        + (prior_text if prior_text else "(nothing yet — this is the very first line)")
+        + "\n\nTHE NEW LINE YOU'RE HEARING NOW:\n"
+        + this_turn["raw"]
+    )
+    raw = _anthropic_text(
+        client,
+        model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+        system=_SYNTHETIC_LISTENER_SYSTEM,
+        content=content,
+        max_tokens=512,
+        temperature=0.2,
+        cfg=cfg,
+    )
+    verdict = _extract_json_object(raw) or {}
+    verdict["turn"] = this_turn["index"]
+    # Normalise null-ish strings to None.
+    for k in ("confusion", "type", "severity", "holding_question"):
+        if str(verdict.get(k)).strip().lower() in ("", "null", "none"):
+            verdict[k] = None
+    verdict["delivered_new_material"] = bool(verdict.get("delivered_new_material"))
+    verdict["engaged"] = bool(verdict.get("engaged", True))
+    return verdict
+
+
+def _run_naive_listener(script: str, cfg: dict, client) -> dict:
+    """Iterative, no-look-ahead naive read. Returns the comprehension trace."""
+    turns = _split_turns(script)
+    cap = int(cfg.get("synthetic_listener_max_turns", 0) or 0)
+    if cap > 0:
+        turns = turns[:cap]
+    per_turn: list[dict] = []
+    breaks: list[dict] = []
+    first_bounce = None
+    prior_lines: list[str] = []
+    for t in turns:
+        v = _naive_listener_turn(client, cfg, "\n".join(prior_lines), t)
+        per_turn.append(v)
+        if v.get("confusion"):
+            brk = {"turn": v["turn"], "type": v.get("type"),
+                   "detail": v["confusion"], "severity": v.get("severity") or "low"}
+            breaks.append(brk)
+        if first_bounce is None and v.get("engaged") is False:
+            first_bounce = v["turn"]
+        prior_lines.append(t["raw"])
+    threshold = float(cfg.get("narration_ratio_threshold", 0.6))
+    return {
+        "naive": {
+            "breaks": breaks,
+            "followed_overall": first_bounce is None,
+            "first_bounce_turn": first_bounce,
+            "per_turn": per_turn,
+        },
+        "narration_vs_banter": _compute_narration_ratio(per_turn, threshold),
+    }
 
 
 def _script_from_research_package(
