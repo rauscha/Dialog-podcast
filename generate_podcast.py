@@ -2099,7 +2099,10 @@ def _build_story_spine(topic, cfg, client, thesis, guest_plan, research_package)
         model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
         system=_STORY_SPINE_SYSTEM,
         content=content,
-        max_tokens=4096,
+        # A full 7-segment spine runs ~3.6k tokens; 4096 truncated it on rich
+        # inputs (Vienna render 2026-06-21), yielding unparseable JSON and a
+        # silent fallback. 8192 (matches the draft budget) leaves real headroom.
+        max_tokens=8192,
         temperature=0.5,
         cfg=cfg,
     )
