@@ -937,6 +937,43 @@ Or, if no callback fits:
 }
 """
 
+_STORY_SPINE_SYSTEM = """\
+You are the story architect for the podcast "Asynchronous." Before any dialogue \
+exists, lay out the STORY the episode will tell — not the argument it will make. \
+The hosts will be forced to follow this spine exactly.
+
+Hard rules:
+- Each segment must have ONE concrete anchor the listener is SHOWN — a scene, a \
+person doing something, a place, an object. Not a topic, not a thesis.
+- Establish before you adjudicate. Stakes and facts come first; the hosts' \
+angle/disagreement is marked as coming AFTER the material lands.
+- Every proper noun a smart layperson wouldn't know goes in names_to_define with a \
+one-line gloss.
+- Assume the listener knows nothing and cannot rewind. If a segment can't be \
+followed cold, it is wrong.
+- Assign a carrier (the host who TELLS this segment) and a surrogate (the host who \
+asks the newcomer's questions here). Rotate them across segments so neither host is \
+stuck in one role.
+
+Return ONLY a JSON object with this exact shape:
+{
+  "logline": "one sentence: the story this episode tells",
+  "newcomer_promise": "what a listener who knew nothing can follow/retell after",
+  "segments": [
+    {
+      "id": "S1",
+      "anchor": "the ONE concrete scene/person/place/object shown here",
+      "stakes": "why this matters, in plain terms, before any cleverness",
+      "names_to_define": [{"name": "X", "one_line": "gloss"}],
+      "comprehension_target": "what the listener must understand by segment end",
+      "host_angle": "the reaction/tension, explicitly AFTER the material lands",
+      "carrier": "JUNO or CASPAR",
+      "surrogate": "the other host"
+    }
+  ]
+}
+Do not include any prose outside the JSON object."""
+
 _PERFORMANCE_SYSTEM = """\
 You are the final performance editor for a conversational TTS podcast script.
 
@@ -1928,6 +1965,69 @@ def _select_and_write_callback(
     return cleaned if cleaned else None
 
 
+_STORY_SPINE_SEGMENT_FIELDS = (
+    "id", "anchor", "stakes", "comprehension_target",
+    "host_angle", "carrier", "surrogate",
+)
+
+
+def _validate_story_spine(obj: dict) -> tuple[bool, list[str]]:
+    """Pure structural validation of a Story Spine. open_loops is optional."""
+    errors: list[str] = []
+    if not isinstance(obj, dict):
+        return False, ["spine is not an object"]
+    for key in ("logline", "newcomer_promise"):
+        if not isinstance(obj.get(key), str) or not obj.get(key, "").strip():
+            errors.append(f"missing or empty top-level field: {key}")
+    segments = obj.get("segments")
+    if not isinstance(segments, list) or not segments:
+        errors.append("segments must be a non-empty list")
+        return (not errors), errors
+    for i, seg in enumerate(segments):
+        if not isinstance(seg, dict):
+            errors.append(f"segment {i} is not an object")
+            continue
+        for field in _STORY_SPINE_SEGMENT_FIELDS:
+            if not str(seg.get(field, "")).strip():
+                errors.append(f"segment {i} ({seg.get('id', '?')}): missing field {field}")
+        if not isinstance(seg.get("names_to_define", []), list):
+            errors.append(f"segment {i}: names_to_define must be a list")
+    return (not errors), errors
+
+
+def _build_story_spine(topic, cfg, client, thesis, guest_plan, research_package) -> dict | None:
+    """Produce the Story Spine artifact. Returns None if disabled or invalid."""
+    if not cfg.get("use_story_spine", True):
+        return None
+    brief = research_package.get("readable_brief", "") if isinstance(research_package, dict) else ""
+    content = (
+        f"TOPIC: {topic}\n\n"
+        f"EDITORIAL MEMO (thesis):\n{thesis}\n\n"
+        f"GUEST PLAN:\n{guest_plan}\n\n"
+        f"RESEARCH BRIEF:\n{brief}\n"
+    )
+    raw = _anthropic_text(
+        client,
+        model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+        system=_STORY_SPINE_SYSTEM,
+        content=content,
+        max_tokens=4096,
+        temperature=0.5,
+        cfg=cfg,
+    )
+    spine = _extract_json_object(raw)
+    if spine is None:
+        logger.warning("[story-spine] no JSON parsed; proceeding without a spine")
+        return None
+    ok, errors = _validate_story_spine(spine)
+    if not ok:
+        logger.warning("[story-spine] invalid spine, proceeding without: %s", "; ".join(errors[:5]))
+        return None
+    logger.info("[story-spine] %d segments; logline: %s",
+                len(spine.get("segments", [])), spine.get("logline", "")[:80])
+    return spine
+
+
 def _script_from_research_package(
     topic: str,
     cfg: dict,
@@ -2007,6 +2107,10 @@ def _script_from_research_package(
     )
     guest_hosts = guest_plan.get("guests", []) if guest_plan.get("decision") == "use" else []
     speaker_cfg = {**cfg, "active_guest_hosts": guest_hosts}
+
+    story_spine = _build_story_spine(topic, cfg, client, thesis, guest_plan, research_package)
+    spine_text = json.dumps(story_spine, ensure_ascii=False, indent=2) if story_spine else ""
+    # spine_text consumed by beat-sheet/draft (Tasks 5-6)
 
     logger.info("[2/5] Building beat sheet and host stance map...")
     beat_sheet = _anthropic_text(
