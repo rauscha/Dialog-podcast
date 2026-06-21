@@ -2472,6 +2472,12 @@ def _script_from_research_package(
     )
     draft_script = _strip_to_dialogue(draft_script)
 
+    listener_trace = {}
+    if cfg.get("use_synthetic_listener", True) and not is_digest:
+        logger.info("[gate] Synthetic First Listener -- comprehension pass...")
+        draft_script, listener_trace = _run_repair_loop(draft_script, cfg, client)
+        draft_script = _strip_to_dialogue(draft_script)
+
     logger.info("[2/5] Rewriting for naturalness and anti-cliche cleanup...")
     natural_script = _anthropic_text(
         client,
@@ -2671,6 +2677,7 @@ def _script_from_research_package(
         "sonic_footnote_attributions": sonic_footnote_credits,
         "sonic_footnotes_catalog_path": str(sonic_catalog_path) if sonic_catalog_path else "",
         "draft_script": draft_script,
+        "listener_trace": listener_trace,
         "natural_script": natural_script,
         "fact_checked_script": fact_checked_script,
         "script": final_script,
