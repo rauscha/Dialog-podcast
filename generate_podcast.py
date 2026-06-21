@@ -709,6 +709,22 @@ Character rules:
 - Guest voices are synthetic/composite expert personas. They should sound like specific people
   with boundaries and quirks, but must not impersonate real people or claim real affiliations.
 
+Grounding rules (non-negotiable):
+- OPEN by introducing the topic: a listener must never wonder "what am I even
+  listening to?"
+- Explain every term, name, and abbreviation a non-expert wouldn't know, in line,
+  the first time it appears.
+- Establish before you adjudicate: deliver the scene and the stakes BEFORE any host
+  reacts, judges, or disagrees.
+- One concrete scene per segment — show it, don't reference it.
+
+Host jobs (from the Story Spine, per segment):
+- The CARRIER delivers the material — the scene, the people, what happened, the stakes.
+- The SURROGATE is the listener's proxy: asks the exact questions a curious newcomer
+  would, forcing the carrier to answer with CONTENT, not quips.
+- Keep Juno (associative/artistic) and Caspar (grounded/skeptical) personalities, but
+  the JOB above outranks personality. Cleverness is seasoning after the material lands.
+
 Writing rules:
 - Start with a concrete scene, object, person, or sensory image in the first 60 seconds.
 - Follow the beat sheet, but do not announce sections or headers.
@@ -2182,7 +2198,8 @@ def _script_from_research_package(
         max_tokens=8192,
         system=_DIALOGUE_DRAFT_SYSTEM.format(target_words=target_words),
         content=(
-            f"Topic: {topic}\n\n"
+            (f"STORY SPINE (authoritative — Carrier tells / Surrogate asks, one scene per segment):\n{spine_text}\n\n" if spine_text else "")
+            + f"Topic: {topic}\n\n"
             f"{type_note}\n\n"
             f"Host memory:\n{host_memory_text}\n\n"
             f"Personal context:\n{personal_context_text}\n\n"
