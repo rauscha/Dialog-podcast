@@ -2178,7 +2178,7 @@ def _run_naive_listener(script: str, cfg: dict, client) -> dict:
         if first_bounce is None and v.get("engaged") is False:
             first_bounce = v["turn"]
         prior_lines.append(t["raw"])
-    threshold = float(cfg.get("narration_ratio_threshold", 0.6))
+    threshold = float(cfg.get("narration_ratio_threshold", 0.35))
     return {
         "naive": {
             "breaks": breaks,
@@ -2293,16 +2293,22 @@ def _run_repair_loop(script: str, cfg: dict, client) -> tuple[str, dict]:
             break
         turns = _split_turns(current)
         clarify_used: list[int] = []
-        # Highest severity first so the worst breaks get the richer repair budget.
+        # Pass 1 — choose moves highest-severity first so the clarify density cap
+        # accumulates worst-first (unchanged selection semantics).
         order = {"high": 0, "med": 1, "low": 2}
+        decisions: list[tuple[dict, str]] = []
         for brk in sorted(actionable, key=lambda b: order.get((b.get("severity") or "low").lower(), 3)):
             move = _select_repair_move(brk, clarify_used, cfg)
             if move == "clarify":
                 clarify_used.append(int(brk.get("turn", 0)))
-            turns = _apply_repair(turns, brk, move, cfg, client)
+            decisions.append((brk, move))
         # Expert hollow spots always deepen via rewrite.
         for hs in expert["hollow_spots"]:
-            turns = _apply_repair(turns, {**hs, "type": "lost_thread", "severity": "high"}, "rewrite", cfg, client)
+            decisions.append(({**hs, "type": "lost_thread", "severity": "high"}, "rewrite"))
+        # Pass 2 — apply highest-turn-first so a clarify splice never shifts the
+        # index of a not-yet-applied (lower-turn) target (fixes intra-round drift).
+        for brk, move in sorted(decisions, key=lambda d: int(d[0].get("turn", 0)), reverse=True):
+            turns = _apply_repair(turns, brk, move, cfg, client)
         current = _join_turns(turns)
         rounds += 1
         trace = _run_naive_listener(current, cfg, client)
