@@ -251,6 +251,7 @@ _BOOL_CONFIG_KEYS = {
     "use_emotive_tts",
     "script_quality_pipeline",
     "use_sonic_footnotes",
+    "sonic_footnote_require_herald",
     "use_guest_hosts",
     "use_personal_context",
     "personal_context_sync_manifests",
