@@ -1042,6 +1042,23 @@ Return ONLY JSON:
 }
 Turn numbers are 0-based line indices among the dialogue lines. No prose outside JSON."""
 
+_REWRITE_GLOSS_SYSTEM = """\
+You repair ONE line of a podcast script so a first-time listener isn't lost. You will \
+get the line and the confusion it caused. Fold a short, natural gloss (<= 8 words) into \
+the line — define the name or fill the small gap — WITHOUT adding a new line and without \
+turning it into a question. Keep the speaker, the emotion tag, and the voice. Return \
+ONLY the single rewritten line in the exact format  SPEAKER [emotion]: text"""
+
+
+_CLARIFY_INSERT_SYSTEM = """\
+A first-time listener got lost at a meaty point and a curious newcomer would genuinely \
+want this drawn out. Write a SHORT two-line exchange that turns that confusion into real \
+on-show back-and-forth: first the SURROGATE host asks the exact newcomer question, then \
+the CARRIER host answers with actual content (the stakes/the scene), not a quip. Use the \
+two speaker names given. Do NOT do "what's that?/it's X" trivia. Return ONLY the two \
+lines, each in the format  SPEAKER [emotion]: text"""
+
+
 _PERFORMANCE_SYSTEM = """\
 You are the final performance editor for a conversational TTS podcast script.
 
@@ -2187,6 +2204,113 @@ def _run_expert_listener(script: str, cfg: dict, client) -> dict:
         "hollow_spots": out.get("hollow_spots") or [],
         "errors": out.get("errors") or [],
     }
+
+
+# ── Repair loop (narration-first pipeline §6.5) ─────────────────────────────
+
+_MEATY_TYPES = {"no_stakes", "lost_thread"}
+
+
+def _select_repair_move(break_item: dict, clarify_used_turns: list[int], cfg: dict) -> str:
+    """Pure logic — no LLM. Returns 'rewrite', 'clarify', or 'skip'."""
+    severity = (break_item.get("severity") or "low").lower()
+    btype = (break_item.get("type") or "").lower()
+    if severity == "low":
+        return "skip"
+    if btype in _MEATY_TYPES and severity in ("med", "high"):
+        density = int(cfg.get("clarification_density_turns", 8))
+        turn = int(break_item.get("turn", 0))
+        too_close = any(abs(turn - u) < density for u in clarify_used_turns)
+        return "rewrite" if too_close else "clarify"
+    # undefined_name, whiplash, bored, or anything else med/high → inline gloss.
+    return "rewrite"
+
+
+def _renumber_turns(turns: list[dict]) -> list[dict]:
+    return [dict(t, index=i) for i, t in enumerate(turns)]
+
+
+def _apply_repair(turns: list[dict], break_item: dict, move: str, cfg: dict, client) -> list[dict]:
+    """Return a new turns list with the chosen repair applied. Best-effort:
+    on any failure, returns the turns unchanged."""
+    idx = int(break_item.get("turn", -1))
+    target = next((t for t in turns if t["index"] == idx), None)
+    if target is None or move == "skip":
+        return turns
+    try:
+        if move == "rewrite":
+            new_line = _anthropic_text(
+                client, model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+                system=_REWRITE_GLOSS_SYSTEM,
+                content=f"LINE:\n{target['raw']}\n\nCONFUSION:\n{break_item.get('detail','')}",
+                max_tokens=300, temperature=0.4, cfg=cfg,
+            ).strip()
+            parsed = _split_turns(new_line)
+            if parsed:
+                return [dict(t, raw=parsed[0]["raw"], text=parsed[0]["text"]) if t["index"] == idx else t
+                        for t in turns]
+            return turns
+        # move == "clarify": insert two lines AFTER the break turn.
+        carrier = target["speaker"]
+        surrogate = "CASPAR" if carrier == "JUNO" else "JUNO"
+        two = _anthropic_text(
+            client, model=_model_for(cfg, "dialogue_model", _DIALOGUE_MODEL),
+            system=_CLARIFY_INSERT_SYSTEM,
+            content=(f"SURROGATE = {surrogate}\nCARRIER = {carrier}\n\n"
+                     f"LINE THAT LOST THEM:\n{target['raw']}\n\n"
+                     f"CONFUSION:\n{break_item.get('detail','')}"),
+            max_tokens=400, temperature=0.5, cfg=cfg,
+        )
+        inserted = _split_turns(two)
+        if not inserted:
+            return turns
+        # Splice the inserted lines in right after the break turn, then renumber.
+        cut = turns.index(target) + 1
+        new_turns = turns[:cut] + inserted + turns[cut:]
+        return _renumber_turns(new_turns)
+    except Exception as exc:  # best-effort, never load-bearing
+        logger.warning("[repair] move=%s failed at turn %s: %s", move, idx, exc)
+        return turns
+
+
+def _run_repair_loop(script: str, cfg: dict, client) -> tuple[str, dict]:
+    """Gate → repair → re-gate until pass or max rounds. Surface-don't-block on residual."""
+    if not cfg.get("use_synthetic_listener", True):
+        return script, {}
+    max_rounds = int(cfg.get("synthetic_listener_max_repair_rounds", 2))
+    current = script
+    trace = _run_naive_listener(current, cfg, client)
+    expert = _run_expert_listener(current, cfg, client)
+    rounds = 0
+    while rounds < max_rounds:
+        naive = trace["naive"]
+        ratio_ok = trace["narration_vs_banter"]["pass"]
+        actionable = [b for b in naive["breaks"] if (b.get("severity") or "low").lower() != "low"]
+        if not actionable and ratio_ok and not expert["hollow_spots"]:
+            break
+        turns = _split_turns(current)
+        clarify_used: list[int] = []
+        # Highest severity first so the worst breaks get the richer repair budget.
+        order = {"high": 0, "med": 1, "low": 2}
+        for brk in sorted(actionable, key=lambda b: order.get((b.get("severity") or "low").lower(), 3)):
+            move = _select_repair_move(brk, clarify_used, cfg)
+            if move == "clarify":
+                clarify_used.append(int(brk.get("turn", 0)))
+            turns = _apply_repair(turns, brk, move, cfg, client)
+        # Expert hollow spots always deepen via rewrite.
+        for hs in expert["hollow_spots"]:
+            turns = _apply_repair(turns, {**hs, "type": "lost_thread", "severity": "high"}, "rewrite", cfg, client)
+        current = _join_turns(turns)
+        rounds += 1
+        trace = _run_naive_listener(current, cfg, client)
+        expert = _run_expert_listener(current, cfg, client)
+    if not trace.get("narration_vs_banter", {}).get("pass", False) or \
+       any((b.get("severity") or "low").lower() == "high" for b in trace["naive"]["breaks"]):
+        logger.warning("[repair] residual comprehension issues after %d rounds — "
+                       "publishing but surfacing trace: ratio=%.2f, high-sev breaks=%d",
+                       rounds, trace["narration_vs_banter"].get("ratio", 0.0),
+                       sum(1 for b in trace["naive"]["breaks"] if (b.get("severity") or "").lower() == "high"))
+    return current, trace
 
 
 def _script_from_research_package(
