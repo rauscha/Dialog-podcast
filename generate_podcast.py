@@ -4870,17 +4870,21 @@ def _audio_roundtrip_check(audio_path, cfg, client) -> dict:
         return {"ran": False, "transcript_path": None, "breaks": [], "ratio": None}
     # The transcript is timestamped prose, not SPEAKER-tagged; wrap each line as a turn
     # so the naive ear can read it sequentially.
-    pseudo = "\n".join(f"NARRATOR [neutral]: {ln.strip()}"
-                       for ln in transcript.splitlines() if ln.strip())
-    trace = _run_naive_listener(pseudo, cfg, client)
-    breaks = trace["naive"]["breaks"]
-    ratio = trace["narration_vs_banter"]["ratio"]
-    high = [b for b in breaks if (b.get("severity") or "").lower() == "high"]
-    logger.info("[audio-roundtrip] REPORT — %d breaks (%d HIGH), narration ratio %.2f. "
-                "Report-only; not gating publish.", len(breaks), len(high), ratio)
-    for b in high:
-        logger.info("[audio-roundtrip]   [HIGH] turn %s: %s", b.get("turn"), b.get("detail"))
-    return {"ran": True, "transcript_path": out_txt, "breaks": breaks, "ratio": ratio}
+    try:
+        pseudo = "\n".join(f"NARRATOR [neutral]: {ln.strip()}"
+                           for ln in transcript.splitlines() if ln.strip())
+        trace = _run_naive_listener(pseudo, cfg, client)
+        breaks = trace["naive"]["breaks"]
+        ratio = trace["narration_vs_banter"]["ratio"]
+        high = [b for b in breaks if (b.get("severity") or "").lower() == "high"]
+        logger.info("[audio-roundtrip] REPORT — %d breaks (%d HIGH), narration ratio %.2f. "
+                    "Report-only; not gating publish.", len(breaks), len(high), ratio)
+        for b in high:
+            logger.info("[audio-roundtrip]   [HIGH] turn %s: %s", b.get("turn"), b.get("detail"))
+        return {"ran": True, "transcript_path": out_txt, "breaks": breaks, "ratio": ratio}
+    except Exception as exc:
+        logger.warning("[audio-roundtrip] naive read failed: %s", exc)
+        return {"ran": False, "transcript_path": out_txt, "breaks": [], "ratio": None}
 
 
 # ── Main run ───────────────────────────────────────────────────────────────────
