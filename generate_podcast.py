@@ -630,19 +630,25 @@ Make the memo specific to the topic and the source material. Avoid generic stake
 _BEAT_SHEET_SYSTEM = """\
 You are building the episode map before dialogue is written.
 
-Create 8-12 beats. Each beat must include:
+Create 8-12 beats. Each beat corresponds to ONE Story Spine segment, in order. For each beat:
+1. Lead with the concrete ANCHOR — the scene/person/place/object the listener is shown.
+2. State the STAKES in plain terms next.
+3. Define every name in the segment's names_to_define, in line.
+4. The HOST ANGLE (reaction, tension, or disagreement) is the LAST thing in the beat,
+   and only after the material above has landed.
+
+Build an arc, not a list. Do NOT manufacture disagreement; the hosts' job is to make
+the listener understand, with opinion as seasoning at the end of a beat.
+
+Each beat must also include:
 - Beat id, purpose, and rough length
-- Concrete scene, object, person, place, or question anchoring the beat
-- What Juno believes or feels at the start of the beat
-- What Caspar challenges, complicates, or admits
 - Key claims or sources used
 - Turning point by the end of the beat
 - Transition into the next beat
 
 Rules:
-- Build an arc, not a list of facts.
-- Include one affectionate disagreement.
-- Let at least one host be wrong briefly and recover.
+- If a Story Spine is provided it is authoritative (one beat per segment, in order).
+  If the spine block is empty, fall back to building beats directly from the thesis and brief.
 - Avoid symmetrical "Juno wonders, Caspar explains" repetition.
 - Move most source detail to show notes; spoken source mentions need story value.
 Return Markdown only.
@@ -2130,7 +2136,8 @@ def _script_from_research_package(
         max_tokens=4096,
         system=_BEAT_SHEET_SYSTEM,
         content=(
-            f"Topic: {topic}\n\n"
+            (f"STORY SPINE (authoritative — one beat per segment, in order):\n{spine_text}\n\n" if spine_text else "")
+            + f"Topic: {topic}\n\n"
             f"{type_note}\n\n"
             f"Target words: {target_words}\n\n"
             f"Host memory:\n{host_memory_text}\n\n"
