@@ -613,6 +613,17 @@ Return plain Markdown with these sections only:
 - Cold Open Options
 - Risks And Things To Avoid
 
+Your memo MUST end with these two labeled sections:
+
+Exposition Order: an ordered list of what the listener must be TOLD before what —
+the facts, names, and scenes that have to land first so nothing later is confusing.
+
+Newcomer Promise: one sentence stating what a listener who knew NOTHING about this
+topic will be able to retell a friend after the episode.
+
+Frame the memo to serve TELLING THIS STORY clearly, not winning an argument. The
+hosts' opinions are seasoning that comes after the material lands, never the spine.
+
 Make the memo specific to the topic and the source material. Avoid generic stakes.
 """
 
