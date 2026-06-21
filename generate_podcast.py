@@ -1093,6 +1093,41 @@ def _strip_to_dialogue(script: str) -> str:
     return script.strip()
 
 
+# _TURN_LINE_RE / _split_turns / _join_turns are a second, intentionally distinct
+# parser from _parse_dialogue_turns. That function requires cfg, filters to known
+# speaker labels, and accumulates multi-line turns — designed for TTS assembly.
+# These functions are cfg-free, line-level, and keep an exact `raw` field so that
+# _join_turns(_split_turns(script)) == script losslessly. Required contract for the
+# synthetic-listener (Task 7, feeds one turn at a time) and repair loop (Task 9,
+# inserts/edits/renumbers turns) which need round-trip fidelity without cfg.
+_TURN_LINE_RE = re.compile(r"^([A-Z][A-Z0-9_]{0,39})\s*(?:\[([^\]]*)\])?\s*:\s*(.*)$")
+
+
+def _split_turns(script: str) -> list[dict]:
+    """Parse a dialogue script into structured turns. Non-dialogue lines skipped."""
+    turns: list[dict] = []
+    for line in (script or "").splitlines():
+        if not line.strip():
+            continue
+        m = _TURN_LINE_RE.match(line.strip())
+        if not m:
+            continue
+        speaker, emotion, text = m.group(1), (m.group(2) or "").strip(), m.group(3).strip()
+        turns.append({
+            "index": len(turns),
+            "speaker": speaker,
+            "emotion": emotion,
+            "text": text,
+            "raw": line.strip(),
+        })
+    return turns
+
+
+def _join_turns(turns: list[dict]) -> str:
+    """Inverse of _split_turns; reassembles using each turn's raw line."""
+    return "\n".join(t["raw"] for t in turns)
+
+
 def _memory_path(repo_root: Path, cfg: dict) -> Path:
     raw = Path(str(cfg.get("host_memory_path") or "host_memory.json"))
     return raw if raw.is_absolute() else repo_root / raw
