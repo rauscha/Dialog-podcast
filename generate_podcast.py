@@ -4844,6 +4844,45 @@ def _ensure_intro_ident(cfg: dict, repo_root: Path) -> "Path | None":
         return None
 
 
+# ── Audio round-trip QA ────────────────────────────────────────────────────────
+
+def _audio_roundtrip_check(audio_path, cfg, client) -> dict:
+    """Transcribe the rendered master mp3, run the naive listener on it, and log a
+    report.  Report-only and best-effort: never raises; returns a result dict in
+    all cases.
+    """
+    if not cfg.get("use_audio_roundtrip", True):
+        return {"ran": False, "transcript_path": None, "breaks": [], "ratio": None}
+    try:
+        from scripts.transcribe_episode import main as _transcribe
+    except Exception as exc:
+        logger.warning("[audio-roundtrip] transcriber unavailable: %s", exc)
+        return {"ran": False, "transcript_path": None, "breaks": [], "ratio": None}
+    out_txt = str(Path(audio_path).with_suffix(".transcript.txt"))
+    try:
+        rc = _transcribe(["transcribe_episode", str(audio_path), out_txt])
+        if rc != 0:
+            logger.warning("[audio-roundtrip] transcription returned %s", rc)
+            return {"ran": False, "transcript_path": None, "breaks": [], "ratio": None}
+        transcript = Path(out_txt).read_text(encoding="utf-8", errors="replace")
+    except Exception as exc:
+        logger.warning("[audio-roundtrip] failed: %s", exc)
+        return {"ran": False, "transcript_path": None, "breaks": [], "ratio": None}
+    # The transcript is timestamped prose, not SPEAKER-tagged; wrap each line as a turn
+    # so the naive ear can read it sequentially.
+    pseudo = "\n".join(f"NARRATOR [neutral]: {ln.strip()}"
+                       for ln in transcript.splitlines() if ln.strip())
+    trace = _run_naive_listener(pseudo, cfg, client)
+    breaks = trace["naive"]["breaks"]
+    ratio = trace["narration_vs_banter"]["ratio"]
+    high = [b for b in breaks if (b.get("severity") or "").lower() == "high"]
+    logger.info("[audio-roundtrip] REPORT — %d breaks (%d HIGH), narration ratio %.2f. "
+                "Report-only; not gating publish.", len(breaks), len(high), ratio)
+    for b in high:
+        logger.info("[audio-roundtrip]   [HIGH] turn %s: %s", b.get("turn"), b.get("detail"))
+    return {"ran": True, "transcript_path": out_txt, "breaks": breaks, "ratio": ratio}
+
+
 # ── Main run ───────────────────────────────────────────────────────────────────
 
 def _run_with_cfg(
@@ -5267,6 +5306,9 @@ def _run_with_cfg(
             manifest.data["chapters"] = episode.get("chapters", [])
             manifest.data["follow_up_links"] = episode.get("follow_up_links", [])
             manifest.save()
+
+            if cfg.get("use_audio_roundtrip", True):
+                _audio_roundtrip_check(final_mp3, cfg, client)
 
             current_stage = "rss"
             manifest.set_stage(current_stage)
