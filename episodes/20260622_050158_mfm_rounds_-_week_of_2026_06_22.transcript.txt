@@ -1,0 +1,131 @@
+[00:00] Asynchronous, a podcast about ideas with Juno and Casper.
+[00:11] RSV-PRIF has been recommended at 32 to 36 weeks since 2023.
+[00:16] That window was set partly in response to a preterm birth signal in the Renoir prelicensure trial,
+[00:22] a signal that didn't replicate consistently across all prelicensure data,
+[00:26] but was real enough that ACIP acted on it.
+[00:29] Post-licensure obstetric safety at scale has been uncharacterized.
+[00:33] That changes this week.
+[00:34] Four outcomes, two years of counseling on incomplete data.
+[00:39] From Obstetrics and Gynecology, 2026.
+[00:42] De Silva and colleagues, a target trial emulation across eight health systems,
+[00:46] RSV vaccination in pregnancy, and adverse obstetric outcomes.
+[00:50] Target trial emulation constructs a pseudo-randomized comparison from observational data.
+[00:56] Vaccinated pregnancies matched against unvaccinated on key confounders.
+[01:00] It's the right architecture here because a prospective post-licensure RCT
+[01:04] is a key factor in the process.
+[01:04] And you need real-world scale for rare outcomes.
+[01:09] Eight health systems buys you the power for stillbirth.
+[01:12] The four primary endpoints, preterm birth, stillbirth, small for gestational age,
+[01:18] hypertensive disorders of pregnancy.
+[01:20] The outcomes driving the worried patient conversation since licensure.
+[01:23] And the results.
+[01:24] No significant increase in any of them.
+[01:27] Vaccination in the 32 to 36-week window was not associated with preterm birth,
+[01:32] stillbirth, SGA, or hypertensive disorders.
+[01:34] The number of patients in the 32 to 36-week window was not associated with preterm birth,
+[01:37] stillbirth, SGA, or hypertensive disorders.
+[01:38] The number of patients in the 32 to 36-week window was not associated with preterm birth,
+[01:38] stillbirth, SGA, or hypertensive disorders.
+[01:38] The number of patients in the 32 to 36-week window was not associated with preterm birth,
+[01:38] stillbirth, SGA, or hypertensive disorders.
+[01:38] Four separate null results.
+[01:40] Not one null result dressed as a safety profile.
+[01:42] Reassuring is the right word.
+[01:44] What it doesn't close is healthy vaccine-y bias.
+[01:49] People who receive a recommended vaccine are systematically different from those who don't.
+[01:54] More engaged with prenatal care, fewer comorbidities.
+[01:58] You can't fully adjust that away.
+[01:59] Is that bias plausibly large enough to matter here?
+[02:02] For healthy vaccine-y bias, to explain this,
+[02:04] it would need to operate consistently across all four outcomes simultaneously, in every site.
+[02:11] Preterm birth and stillbirth don't share the same causal pathway,
+[02:15] a bias that uniformly masks adverse signals across both, across eight systems.
+[02:21] That's a harder argument than it sounds.
+[02:23] I don't think it's the most parsimonious read of a null result this broad,
+[02:27] but I want to name it rather than wave at it.
+[02:30] So the counseling sentence actually changes.
+[02:32] Before this week,
+[02:33] the pre-licensure data are reassuring and the post-licensure data are limited.
+[02:39] After this week,
+[02:40] the largest real-world data set we have shows no signal across the outcomes we were most worried about.
+[02:46] Those are different sentences, and you can use the second one now.
+[02:49] The paper doesn't touch infant neurodevelopmental outcomes,
+[02:53] in utero exposure,
+[02:54] longer-term pediatric follow-up.
+[02:57] Separate question, not answered here.
+[03:00] The obstetric safety question is characterized.
+[03:02] The pediatric,
+[03:03] the obstetric question is not.
+[03:05] Keep that distinction in the room.
+[03:07] Rounds were four other things this week.
+[03:09] From Obstetrics and Gynecology,
+[03:11] 2026.
+[03:12] Larea and colleagues,
+[03:14] a randomized non-inferiority trial.
+[03:17] Six-hour versus 18-hour intrauterine balloon tamponade for postpartum hemorrhage.
+[03:21] Six-hour dwell time was non-inferior to 18 hours for quantitative blood loss
+[03:26] after vaginal delivery PPH.
+[03:28] First RCT to directly test a question most units have been answering by habit.
+[03:33] Non-inferiority,
+[03:33] trials live and die on the margin.
+[03:36] The specific margin and confidence intervals are what you want in front of you before a protocol conversation,
+[03:42] not just the headline.
+[03:44] And the trial enrolled vaginal deliveries.
+[03:48] Whether the finding holds across hemorrhage severity is the version worth watching before anyone revises a policy.
+[03:55] Most units inherited 18 hours from somewhere.
+[03:58] Now there's a number to push back on,
+[04:00] and it runs toward patient comfort and workflow.
+[04:03] From Ultrasound in Obstetrics and Gynecology, 2026,
+[04:07] Chenone and colleagues, a systematic review.
+[04:10] Intrauterine transfusion outcomes for fetal anemia from fetal or placental tumors.
+[04:15] Pooled perinatal outcomes from IUT in this rare indication.
+[04:19] Fetal anemia secondary to fetal or placental tumor,
+[04:22] rather than alloimmunization or parvovirus.
+[04:25] Variable outcomes across the aggregated case series.
+[04:28] The evidence quality is constrained by what exists.
+[04:31] This systematic review of small case series.
+[04:35] You're not getting a pooled effect size you can quote with confidence.
+[04:38] You're getting the best available characterization of a condition most centers encounter rarely.
+[04:43] For centers managing these cases, this is the counseling reference.
+[04:47] Doesn't change the procedure.
+[04:49] Gives you a more defensible conversation about outcomes.
+[04:52] From BJOG, 2026.
+[04:54] Prasad and colleagues, a conceptual commentary.
+[04:57] Rethinking preeclampsia phenotypes beyond binary classification.
+[05:00] The article.
+[05:02] The argument is that early versus late onset or with versus without severe features
+[05:07] may not capture clinically meaningful disease heterogeneity
+[05:11] and that phenotype based classification could align better with underlying pathophysiology and treatment response.
+[05:17] No new data.
+[05:18] Evidence score 0.4.
+[05:21] Framework piece.
+[05:22] Whether it moves anything depends on whether subsequent validation work turns the phenotypes into something actionable,
+[05:28] which this paper doesn't do.
+[05:30] Worth reading.
+[05:31] If you're in.
+[05:31] The call development or designing a study, not a practice change today from obstetrics and gynecology, 2026.
+[05:39] You and colleagues, a secondary analysis of the PCOS to trial pre pregnancy, insulin resistance and fertility outcomes in polycystic ovarian syndrome.
+[05:49] Higher pre pregnancy.
+[05:50] Homa.
+[05:50] I are independently predicted lower ovulation rates, lower clinical pregnancy rates and lower live birth rates in PCOS to enrollees multi center.
+[06:00] RCT.
+[06:01] Derivation.
+[06:01] Holds after adjustment.
+[06:03] Secondary analysis of a trial designed for a different primary question.
+[06:07] The association is credible, but Homa ER is a predictor here, not a proven treatment target.
+[06:13] Whether preconception intervention on insulin resistance actually shifts the fertility outcome is a different study and it hasn't been done.
+[06:21] PCOS preconception counseling tends to center on ovulation induction and cycle regularity.
+[06:27] This adds a quantified argument for assessing insulin resistance before conception.
+[06:32] Not as metabolic background, but as a stratifier for how hard the fertility course is likely to be.
+[06:37] Two things still open.
+[06:39] First, infant neurodevelopmental outcomes from in utero RSV, pre exposure to Silva closes the obstetric safety question.
+[06:47] The pediatric follow up is not published.
+[06:50] Second, the balloon tamponade non inferiority margin outside the vaginal delivery population.
+[06:56] Larea is the trial the field needed, but whether it holds across hemorrhage severity.
+[07:01] Determine.
+[07:01] Determines whether protocol revision is warranted or premature.
+[07:05] Prasad and Yuen are pointing at the same structural problem from different angles.
+[07:09] Decisions made against classifications and risk markers that probably aren't granular enough.
+[07:15] Neither paper resolves that.
+[07:17] Both name it more precisely than we had before.
+[07:19] De Silva, Larea, Shenoni, Prasad, Yuen, Dwize in the show notes.

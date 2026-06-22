@@ -31,6 +31,16 @@
       "url": "https://doi.org/10.1002/uog.70223",
       "year": 2026
     },
+    "10.1002/uog.70234": {
+      "aired_at": "2026-06-22T10:16:54.080749+00:00",
+      "doi": "10.1002/uog.70234",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
+      "pmid": "42070963",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review.",
+      "url": "https://doi.org/10.1002/uog.70234",
+      "year": 2026
+    },
     "10.1002/uog.70239": {
       "aired_at": "2026-06-03T05:39:39.237466+00:00",
       "doi": "10.1002/uog.70239",
@@ -161,6 +171,26 @@
       "url": "https://doi.org/10.1016/j.ajogmf.2026.102022",
       "year": 2026
     },
+    "10.1097/aog.0000000000006295": {
+      "aired_at": "2026-06-22T10:16:54.080749+00:00",
+      "doi": "10.1097/aog.0000000000006295",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
+      "pmid": "42096713",
+      "publication": "Obstet Gynecol",
+      "title": "Intrauterine Balloon Tamponade Duration for Postpartum Hemorrhage: A Randomized Controlled Trial.",
+      "url": "https://doi.org/10.1097/aog.0000000000006295",
+      "year": 2026
+    },
+    "10.1097/aog.0000000000006318": {
+      "aired_at": "2026-06-22T10:16:54.080749+00:00",
+      "doi": "10.1097/aog.0000000000006318",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
+      "pmid": "42166772",
+      "publication": "Obstet Gynecol",
+      "title": "Prepregnancy Insulin Resistance and Fertility and Pregnancy Outcomes in Women With Polycystic Ovarian Syndrome.",
+      "url": "https://doi.org/10.1097/aog.0000000000006318",
+      "year": 2026
+    },
     "10.1097/aog.0000000000006325": {
       "aired_at": "2026-06-02T01:48:04.273743+00:00",
       "doi": "10.1097/aog.0000000000006325",
@@ -169,6 +199,16 @@
       "publication": "Obstet Gynecol",
       "title": "Gestational Weight Gain and Pregnancy Outcomes After Semaglutide Exposure.",
       "url": "https://doi.org/10.1097/aog.0000000000006325",
+      "year": 2026
+    },
+    "10.1097/aog.0000000000006354": {
+      "aired_at": "2026-06-22T10:16:54.080749+00:00",
+      "doi": "10.1097/aog.0000000000006354",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
+      "pmid": "42314184",
+      "publication": "Obstet Gynecol",
+      "title": "Association of Respiratory Syncytial Virus Vaccination During Pregnancy With Adverse Obstetric and Neonatal Outcomes.",
+      "url": "https://doi.org/10.1097/aog.0000000000006354",
       "year": 2026
     },
     "10.1111/1471-0528.70262": {
@@ -200,24 +240,34 @@
       "title": "Spontaneous Preterm Birth and Subsequent Cardiovascular Mortality: Linked Registry Cohort Study.",
       "url": "https://doi.org/10.1111/1471-0528.70273",
       "year": 2026
+    },
+    "10.1111/1471-0528.70289": {
+      "aired_at": "2026-06-22T10:16:54.080749+00:00",
+      "doi": "10.1111/1471-0528.70289",
+      "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
+      "pmid": "42324238",
+      "publication": "BJOG",
+      "title": "Pre-Eclampsia Beyond the Binary: Rethinking Phenotypes for Clinical Use.",
+      "url": "https://doi.org/10.1111/1471-0528.70289",
+      "year": 2026
     }
   },
   "last_run": {
-    "aired_at": "2026-06-15T10:08:24.490227+00:00",
-    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260615_050140_mfm_rounds_-_week_of_2026_06_15.mp3",
+    "aired_at": "2026-06-22T10:16:54.080749+00:00",
+    "episode_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
     "recorded_keys": [
-      "10.1002/uog.70250",
-      "10.1016/j.ajogmf.2026.101993",
-      "10.1111/1471-0528.70262",
-      "10.1016/j.ajogmf.2026.102008",
-      "10.1016/j.ajogmf.2026.102017"
+      "10.1097/aog.0000000000006354",
+      "10.1097/aog.0000000000006295",
+      "10.1002/uog.70234",
+      "10.1111/1471-0528.70289",
+      "10.1097/aog.0000000000006318"
     ],
     "window": {
-      "from": "2025/12/12",
-      "to": "2026/06/15"
+      "from": "2025/12/19",
+      "to": "2026/06/22"
     }
   },
   "schema_version": 1,
   "show_id": "mfm",
-  "updated_at": "2026-06-15T10:08:24.490227+00:00"
+  "updated_at": "2026-06-22T10:16:54.080749+00:00"
 }
