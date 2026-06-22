@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open"
+    },
+    {
+      "startTime": 40.8,
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "startTime": 81.61,
+      "title": "\u2014 Headline: The Result"
+    },
+    {
+      "startTime": 122.41,
+      "title": "\u2014 Headline: Limitations and Practice Impact"
+    },
+    {
+      "startTime": 163.21,
+      "title": "\u2014 Pivot"
+    },
+    {
+      "startTime": 204.01,
+      "title": "\u2014 Round 1: Larrea (Balloon Tamponade Duration)"
+    },
+    {
+      "startTime": 244.82,
+      "title": "\u2014 Round 2: Schenone (IUT for Tumor-Related Fetal Anemia)"
+    },
+    {
+      "startTime": 285.62,
+      "title": "\u2014 Round 3: Prasad (Preeclampsia Phenotyping)"
+    },
+    {
+      "startTime": 326.42,
+      "title": "\u2014 Round 4: Yun (HOMA-IR and PCOS Fertility Outcomes)"
+    },
+    {
+      "startTime": 367.22,
+      "title": "\u2014 Close: What to Watch / Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

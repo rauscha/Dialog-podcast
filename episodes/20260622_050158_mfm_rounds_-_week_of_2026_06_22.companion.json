@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open"
+    },
+    {
+      "start_sec": 40.8,
+      "start_time": "0:41",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 81.61,
+      "start_time": "1:22",
+      "title": "\u2014 Headline: The Result"
+    },
+    {
+      "start_sec": 122.41,
+      "start_time": "2:02",
+      "title": "\u2014 Headline: Limitations and Practice Impact"
+    },
+    {
+      "start_sec": 163.21,
+      "start_time": "2:43",
+      "title": "\u2014 Pivot"
+    },
+    {
+      "start_sec": 204.01,
+      "start_time": "3:24",
+      "title": "\u2014 Round 1: Larrea (Balloon Tamponade Duration)"
+    },
+    {
+      "start_sec": 244.82,
+      "start_time": "4:05",
+      "title": "\u2014 Round 2: Schenone (IUT for Tumor-Related Fetal Anemia)"
+    },
+    {
+      "start_sec": 285.62,
+      "start_time": "4:46",
+      "title": "\u2014 Round 3: Prasad (Preeclampsia Phenotyping)"
+    },
+    {
+      "start_sec": 326.42,
+      "start_time": "5:26",
+      "title": "\u2014 Round 4: Yun (HOMA-IR and PCOS Fertility Outcomes)"
+    },
+    {
+      "start_sec": 367.22,
+      "start_time": "6:07",
+      "title": "\u2014 Close: What to Watch / Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260622_050158_mfm_rounds_-_week_of_2026_06_22.companion.json",
+  "duration_sec": 453.026077,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Largest post-licensure safety study of RSVpreF in pregnancy; no signal for PTB, stillbirth, SGA, or HDP at recommended gestational window",
+      "source": "Obstet Gynecol",
+      "title": "Association of Respiratory Syncytial Virus Vaccination During Pregnancy With Adverse Obstetric and Neonatal Outcomes",
+      "url": "https://doi.org/10.1097/aog.0000000000006354"
+    },
+    {
+      "reason": "First RCT comparing balloon tamponade durations; may shorten standard dwell time if noninferiority confirmed",
+      "source": "Obstet Gynecol",
+      "title": "Intrauterine Balloon Tamponade Duration for Postpartum Hemorrhage: A Randomized Controlled Trial",
+      "url": "https://doi.org/10.1097/aog.0000000000006295"
+    },
+    {
+      "reason": "Aggregates rare-condition outcome data for IUT in tumor-related fetal anemia; useful for counseling despite limited case numbers",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review",
+      "url": "https://doi.org/10.1002/uog.70234"
+    },
+    {
+      "reason": "Conceptual framework for preeclampsia phenotyping; may shape future research and guideline development",
+      "source": "BJOG",
+      "title": "Pre-Eclampsia Beyond the Binary: Rethinking Phenotypes for Clinical Use",
+      "url": "https://doi.org/10.1111/1471-0528.70289"
+    },
+    {
+      "reason": "HOMA-IR as preconception predictor of fertility outcomes in PCOS; actionable for risk stratification",
+      "source": "Obstet Gynecol",
+      "title": "Prepregnancy Insulin Resistance and Fertility and Pregnancy Outcomes in Women With Polycystic Ovarian Syndrome",
+      "url": "https://doi.org/10.1097/aog.0000000000006318"
+    }
+  ],
+  "generated_at": "2026-06-22T10:08:47.270112+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "RSVpreF vaccination at 32\u201336 weeks gestation is not associated with increased preterm birth, stillbirth, small-for-gestational-age, or hypertensive disorders of pregnancy",
+      "confidence": "high",
+      "id": "claim_desilva",
+      "source_ids": [
+        "desilva2026"
+      ]
+    },
+    {
+      "claim": "Six-hour intrauterine balloon tamponade duration may be noninferior to eighteen-hour duration for postpartum hemorrhage after vaginal delivery",
+      "confidence": "high",
+      "id": "claim_larrea",
+      "source_ids": [
+        "larrea2026"
+      ]
+    },
+    {
+      "claim": "Intrauterine transfusion for fetal anemia from fetal or placental tumors has variable perinatal outcomes based on limited case series data",
+      "confidence": "low",
+      "id": "claim_schenone",
+      "source_ids": [
+        "schenone2026"
+      ]
+    },
+    {
+      "claim": "Preeclampsia may be better understood through phenotype-based classification rather than binary categorization",
+      "confidence": "low",
+      "id": "claim_prasad",
+      "source_ids": [
+        "prasad2026"
+      ]
+    },
+    {
+      "claim": "Higher prepregnancy insulin resistance independently predicts lower ovulation, clinical pregnancy, and live-birth rates in women with PCOS",
+      "confidence": "medium",
+      "id": "claim_yun",
+      "source_ids": [
+        "yun2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "DeSilva",
+      "id": "desilva2026",
+      "publication": "Obstet Gynecol",
+      "title": "Association of Respiratory Syncytial Virus Vaccination During Pregnancy With Adverse Obstetric and Neonatal Outcomes",
+      "url": "https://doi.org/10.1097/aog.0000000000006354",
+      "why_it_matters": "Largest post-licensure safety study of RSVpreF in pregnancy; no signal for PTB, stillbirth, SGA, or HDP at recommended gestational window",
+      "year": 2026
+    },
+    {
+      "author": "Larrea",
+      "id": "larrea2026",
+      "publication": "Obstet Gynecol",
+      "title": "Intrauterine Balloon Tamponade Duration for Postpartum Hemorrhage: A Randomized Controlled Trial",
+      "url": "https://doi.org/10.1097/aog.0000000000006295",
+      "why_it_matters": "First RCT comparing balloon tamponade durations; may shorten standard dwell time if noninferiority confirmed",
+      "year": 2026
+    },
+    {
+      "author": "Schenone",
+      "id": "schenone2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review",
+      "url": "https://doi.org/10.1002/uog.70234",
+      "why_it_matters": "Aggregates rare-condition outcome data for IUT in tumor-related fetal anemia; useful for counseling despite limited case numbers",
+      "year": 2026
+    },
+    {
+      "author": "Prasad",
+      "id": "prasad2026",
+      "publication": "BJOG",
+      "title": "Pre-Eclampsia Beyond the Binary: Rethinking Phenotypes for Clinical Use",
+      "url": "https://doi.org/10.1111/1471-0528.70289",
+      "why_it_matters": "Conceptual framework for preeclampsia phenotyping; may shape future research and guideline development",
+      "year": 2026
+    },
+    {
+      "author": "Yun",
+      "id": "yun2026",
+      "publication": "Obstet Gynecol",
+      "title": "Prepregnancy Insulin Resistance and Fertility and Pregnancy Outcomes in Women With Polycystic Ovarian Syndrome",
+      "url": "https://doi.org/10.1097/aog.0000000000006318",
+      "why_it_matters": "HOMA-IR as preconception predictor of fertility outcomes in PCOS; actionable for risk stratification",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "DeSilva et al. - Obstet Gynecol - 2026 - Association of Respiratory Syncytial Virus Vaccination During Pregnancy With Adverse Obstetric and Neonatal Outcomes (https://doi.org/10.1097/aog.0000000000006354)",
+    "Larrea et al. - Obstet Gynecol - 2026 - Intrauterine Balloon Tamponade Duration for Postpartum Hemorrhage: A Randomized Controlled Trial (https://doi.org/10.1097/aog.0000000000006295)",
+    "Schenone et al. - Ultrasound Obstet Gynecol - 2026 - Perinatal outcomes following intrauterine transfusion for fetal anemia secondary to fetal or placental tumor: systematic review (https://doi.org/10.1002/uog.70234)",
+    "Prasad et al. - BJOG - 2026 - Pre-Eclampsia Beyond the Binary: Rethinking Phenotypes for Clinical Use (https://doi.org/10.1111/1471-0528.70289)",
+    "Yun et al. - Obstet Gynecol - 2026 - Prepregnancy Insulin Resistance and Fertility and Pregnancy Outcomes in Women With Polycystic Ovarian Syndrome (https://doi.org/10.1097/aog.0000000000006318)"
+  ],
+  "topic": "MFM Rounds - week of 2026/06/22",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1105
+}
