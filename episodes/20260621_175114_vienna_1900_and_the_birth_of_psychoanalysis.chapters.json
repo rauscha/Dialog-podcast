@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Empty Room"
+    },
+    {
+      "startTime": 75.4,
+      "title": "\u2014 The City and the Promise"
+    },
+    {
+      "startTime": 150.8,
+      "title": "\u2014 Lueger and the Collapse of the Rational World"
+    },
+    {
+      "startTime": 226.19,
+      "title": "\u2014 Three Responses to the Same Crisis"
+    },
+    {
+      "startTime": 301.59,
+      "title": "\u2014 The Father's Death and the Self-Analysis"
+    },
+    {
+      "startTime": 376.99,
+      "title": "\u2014 The Book Nobody Bought / The Evidence Trail"
+    },
+    {
+      "startTime": 452.39,
+      "title": "\u2014 Anna O. and the Founding Myth"
+    },
+    {
+      "startTime": 527.78,
+      "title": "\u2014 Bertha Pappenheim's Second Life (Complication)"
+    },
+    {
+      "startTime": 603.18,
+      "title": "\u2014 What Freud Was Before He Was Freud / The Charcot Embarrassment"
+    },
+    {
+      "startTime": 678.58,
+      "title": "\u2014 The Wednesday Society and the Movement That Built Itself Slowly"
+    }
+  ],
+  "version": "1.2.0"
+}

@@ -1,0 +1,299 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260621_175114_vienna_1900_and_the_birth_of_psychoanalysis.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Empty Room"
+    },
+    {
+      "start_sec": 75.4,
+      "start_time": "1:15",
+      "title": "\u2014 The City and the Promise"
+    },
+    {
+      "start_sec": 150.8,
+      "start_time": "2:31",
+      "title": "\u2014 Lueger and the Collapse of the Rational World"
+    },
+    {
+      "start_sec": 226.19,
+      "start_time": "3:46",
+      "title": "\u2014 Three Responses to the Same Crisis"
+    },
+    {
+      "start_sec": 301.59,
+      "start_time": "5:02",
+      "title": "\u2014 The Father's Death and the Self-Analysis"
+    },
+    {
+      "start_sec": 376.99,
+      "start_time": "6:17",
+      "title": "\u2014 The Book Nobody Bought / The Evidence Trail"
+    },
+    {
+      "start_sec": 452.39,
+      "start_time": "7:32",
+      "title": "\u2014 Anna O. and the Founding Myth"
+    },
+    {
+      "start_sec": 527.78,
+      "start_time": "8:48",
+      "title": "\u2014 Bertha Pappenheim's Second Life (Complication)"
+    },
+    {
+      "start_sec": 603.18,
+      "start_time": "10:03",
+      "title": "\u2014 What Freud Was Before He Was Freud / The Charcot Embarrassment"
+    },
+    {
+      "start_sec": 678.58,
+      "start_time": "11:19",
+      "title": "\u2014 The Wednesday Society and the Movement That Built Itself Slowly"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260621_175114_vienna_1900_and_the_birth_of_psychoanalysis.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260621_175114_vienna_1900_and_the_birth_of_psychoanalysis.companion.json",
+  "duration_sec": 798.977937,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "The foundational scholarly work arguing that Vienna's political crisis\u2014the collapse of liberalism\u2014drove intellectuals inward, creating modernism. Schorske frames Freud's psychology as a 'multi-faceted revolt against his father and the custodians of the academy.' Essential for understanding psychoanalysis as a product of political disillusionment, not just scientific inquiry.",
+      "source": "Vintage Books (Pulitzer Prize Winner)",
+      "title": "Fin-de-Si\u00e8cle Vienna: Politics and Culture",
+      "url": "https://www.amazon.com/Fin-Siecle-Vienna-Politics-Culture/dp/0394744780"
+    },
+    {
+      "reason": "The proto-psychoanalytic text featuring the Anna O. case (Bertha Pappenheim). Demonstrates the transition from hypnosis to the 'talking cure' and the break between Breuer and Freud over the sexual etiology of neurosis. The founding document that shows psychoanalysis emerging from clinical failure and disagreement.",
+      "source": "Franz Deuticke",
+      "title": "Studies on Hysteria",
+      "url": "https://en.wikipedia.org/wiki/Studies_on_Hysteria"
+    },
+    {
+      "reason": "Freud's masterwork, which he later described as 'a portion of my own self-analysis, my reaction to my father's death.' Published in an edition of 600 copies that didn't sell out for eight years. The book that launched psychoanalysis was initially a commercial failure\u2014a key tension for the episode.",
+      "source": "Franz Deuticke Press",
+      "title": "The Interpretation of Dreams",
+      "url": "https://en.wikipedia.org/wiki/The_Interpretation_of_Dreams"
+    },
+    {
+      "reason": "Documents how Lueger's election as Vienna's antisemitic mayor in 1897 marked the triumph of populist politics over liberalism. Provides essential context for understanding the hostile environment in which Freud worked and why his professorship was delayed.",
+      "source": "Wayne State University Press",
+      "title": "Karl Lueger: Mayor of Fin de Si\u00e8cle Vienna",
+      "url": "https://books.google.com/books/about/Karl_Lueger.html?id=uoSeLKLa6pIC"
+    },
+    {
+      "reason": "Ellenberger's critical review of the Anna O. case revealed that Pappenheim was not 'cured' as Breuer claimed\u2014she required further hospitalization. This complicates the founding myth of psychoanalysis and raises questions about the reliability of early case histories.",
+      "source": "Basic Books",
+      "title": "The Discovery of the Unconscious: The History and Evolution of Dynamic Psychiatry",
+      "url": "https://www.encyclopedia.com/psychology/dictionaries-thesauruses-pictures-and-press-releases/pappenheim-bertha-1859-1936"
+    },
+    {
+      "reason": "The most rigorous philosophical critique of psychoanalysis's scientific status. Gr\u00fcnbaum argues that Freud's clinical evidence is contaminated by suggestion. Essential for the 'complication' section\u2014the ongoing debate about whether psychoanalysis is science or hermeneutics.",
+      "source": "University of California Press",
+      "title": "The Foundations of Psychoanalysis: A Philosophical Critique",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5459228/"
+    },
+    {
+      "reason": "The museum at Berggasse 19 deliberately preserves the empty space where Freud's couch once stood (now in London) as a reference to his forced exile. The museum's approach\u2014refusing to recreate a 'World of Yesterday'\u2014offers a model for how to tell this story without nostalgia.",
+      "source": "Sigmund Freud Museum",
+      "title": "Sigmund Freud Museum Vienna (Official Site)",
+      "url": "https://www.freud-museum.at/en/"
+    },
+    {
+      "reason": "Documents Vienna's complicated relationship with Freud's legacy\u2014the city that expelled him now claims him as 'Austria's most frequently cited researcher.' Useful for the reflective ending about how we remember difficult histories.",
+      "source": "IWM Post",
+      "title": "Remembering Freud in Vienna: From Exile to Pop Icon",
+      "url": "https://www.iwm.at/publication/iwmpost-article/remembering-freud-in-vienna-from-exile-to-pop-icon"
+    }
+  ],
+  "generated_at": "2026-06-21T23:15:31.765388+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "The Interpretation of Dreams was published in an edition of 600 copies that did not sell out for eight years, despite Freud later calling it 'the most valuable of all the discoveries it has been my good fortune to make.'",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Freud's father Jacob died on October 23, 1896, triggering a period of self-analysis that Freud later described as his reaction to 'the most important event, the most poignant loss, of a man's life.' This self-analysis directly produced The Interpretation of Dreams.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Karl Lueger was elected Vienna's mayor five times before Emperor Franz Joseph finally confirmed him in 1897, making him the first mayor in Western Europe elected on an explicitly antisemitic platform.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "The Vienna Secession was founded on April 3, 1897\u2014the same year Lueger became mayor\u2014with Gustav Klimt as its first president. Both movements represented breaks from the liberal establishment, but in opposite directions.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Freud was awarded the title of associate professor (professor extraordinarius) only in February 1902, after years of delay. The title carried prestige but no salary or teaching duties. He received a full professorship only in 1919.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "claim": "The Wednesday Psychological Society began meeting at Berggasse 19 in autumn 1902 with just five members: Freud, Wilhelm Stekel, Alfred Adler, Max Kahane, and Rudolf Reitler. By 1906 it had grown to 17 members and was renamed the Vienna Psychoanalytic Society in 1908.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Bertha Pappenheim ('Anna O.'), the patient whose case launched psychoanalysis, was not cured by Breuer's treatment\u2014she required further hospitalization. She later became a prominent Jewish feminist and social worker who founded the League of Jewish Women in 1904 and was skeptical of psychoanalysis.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S2",
+        "S5"
+      ]
+    },
+    {
+      "claim": "Freud lived and worked at Berggasse 19 for 47 years (1891-1938) until forced to flee after the Nazi annexation. The Vienna Psychoanalytic Society was dissolved one day after the Anschluss; all but two of its 68 members fled abroad.",
+      "confidence": "High",
+      "id": "C8",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "When Freud returned from studying with Charcot in Paris and lectured on male hysteria in Vienna, he was met with ridicule. The Viennese medical establishment still held that hysteria was caused by a 'wandering womb' and thus impossible in men.",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Karl Popper's 1934 critique identified psychoanalysis as unfalsifiable pseudoscience, a characterization that shaped academic psychology's rejection of Freud for decades. However, recent scholarship argues Popper misunderstood Freud's methodology.",
+      "confidence": "Medium-High",
+      "id": "C10",
+      "source_ids": [
+        "S6"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Carl E. Schorske",
+      "id": "S1",
+      "publication": "Vintage Books (Pulitzer Prize Winner)",
+      "title": "Fin-de-Si\u00e8cle Vienna: Politics and Culture",
+      "url": "https://www.amazon.com/Fin-Siecle-Vienna-Politics-Culture/dp/0394744780",
+      "why_it_matters": "The foundational scholarly work arguing that Vienna's political crisis\u2014the collapse of liberalism\u2014drove intellectuals inward, creating modernism. Schorske frames Freud's psychology as a 'multi-faceted revolt against his father and the custodians of the academy.' Essential for understanding psychoanalysis as a product of political disillusionment, not just scientific inquiry.",
+      "year": "1980"
+    },
+    {
+      "author": "Josef Breuer and Sigmund Freud",
+      "id": "S2",
+      "publication": "Franz Deuticke",
+      "title": "Studies on Hysteria",
+      "url": "https://en.wikipedia.org/wiki/Studies_on_Hysteria",
+      "why_it_matters": "The proto-psychoanalytic text featuring the Anna O. case (Bertha Pappenheim). Demonstrates the transition from hypnosis to the 'talking cure' and the break between Breuer and Freud over the sexual etiology of neurosis. The founding document that shows psychoanalysis emerging from clinical failure and disagreement.",
+      "year": "1895"
+    },
+    {
+      "author": "Sigmund Freud",
+      "id": "S3",
+      "publication": "Franz Deuticke Press",
+      "title": "The Interpretation of Dreams",
+      "url": "https://en.wikipedia.org/wiki/The_Interpretation_of_Dreams",
+      "why_it_matters": "Freud's masterwork, which he later described as 'a portion of my own self-analysis, my reaction to my father's death.' Published in an edition of 600 copies that didn't sell out for eight years. The book that launched psychoanalysis was initially a commercial failure\u2014a key tension for the episode.",
+      "year": "1900"
+    },
+    {
+      "author": "Richard S. Geehr",
+      "id": "S4",
+      "publication": "Wayne State University Press",
+      "title": "Karl Lueger: Mayor of Fin de Si\u00e8cle Vienna",
+      "url": "https://books.google.com/books/about/Karl_Lueger.html?id=uoSeLKLa6pIC",
+      "why_it_matters": "Documents how Lueger's election as Vienna's antisemitic mayor in 1897 marked the triumph of populist politics over liberalism. Provides essential context for understanding the hostile environment in which Freud worked and why his professorship was delayed.",
+      "year": "1990"
+    },
+    {
+      "author": "Henri F. Ellenberger",
+      "id": "S5",
+      "publication": "Basic Books",
+      "title": "The Discovery of the Unconscious: The History and Evolution of Dynamic Psychiatry",
+      "url": "https://www.encyclopedia.com/psychology/dictionaries-thesauruses-pictures-and-press-releases/pappenheim-bertha-1859-1936",
+      "why_it_matters": "Ellenberger's critical review of the Anna O. case revealed that Pappenheim was not 'cured' as Breuer claimed\u2014she required further hospitalization. This complicates the founding myth of psychoanalysis and raises questions about the reliability of early case histories.",
+      "year": "1970"
+    },
+    {
+      "author": "Adolf Gr\u00fcnbaum",
+      "id": "S6",
+      "publication": "University of California Press",
+      "title": "The Foundations of Psychoanalysis: A Philosophical Critique",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5459228/",
+      "why_it_matters": "The most rigorous philosophical critique of psychoanalysis's scientific status. Gr\u00fcnbaum argues that Freud's clinical evidence is contaminated by suggestion. Essential for the 'complication' section\u2014the ongoing debate about whether psychoanalysis is science or hermeneutics.",
+      "year": "1984"
+    },
+    {
+      "author": "Sigmund Freud Museum / Monika Pessler (Director)",
+      "id": "S7",
+      "publication": "Sigmund Freud Museum",
+      "title": "Sigmund Freud Museum Vienna (Official Site)",
+      "url": "https://www.freud-museum.at/en/",
+      "why_it_matters": "The museum at Berggasse 19 deliberately preserves the empty space where Freud's couch once stood (now in London) as a reference to his forced exile. The museum's approach\u2014refusing to recreate a 'World of Yesterday'\u2014offers a model for how to tell this story without nostalgia.",
+      "year": "2020 (renovated)"
+    },
+    {
+      "author": "Institute for Human Sciences (IWM)",
+      "id": "S8",
+      "publication": "IWM Post",
+      "title": "Remembering Freud in Vienna: From Exile to Pop Icon",
+      "url": "https://www.iwm.at/publication/iwmpost-article/remembering-freud-in-vienna-from-exile-to-pop-icon",
+      "why_it_matters": "Documents Vienna's complicated relationship with Freud's legacy\u2014the city that expelled him now claims him as 'Austria's most frequently cited researcher.' Useful for the reflective ending about how we remember difficult histories.",
+      "year": "2023"
+    }
+  ],
+  "sources": [
+    "Carl E. Schorske - Vintage Books (Pulitzer Prize Winner) - 1980 - Fin-de-Si\u00e8cle Vienna: Politics and Culture (https://www.amazon.com/Fin-Siecle-Vienna-Politics-Culture/dp/0394744780)",
+    "Josef Breuer and Sigmund Freud - Franz Deuticke - 1895 - Studies on Hysteria (https://en.wikipedia.org/wiki/Studies_on_Hysteria)",
+    "Sigmund Freud - Franz Deuticke Press - 1900 - The Interpretation of Dreams (https://en.wikipedia.org/wiki/The_Interpretation_of_Dreams)",
+    "Richard S. Geehr - Wayne State University Press - 1990 - Karl Lueger: Mayor of Fin de Si\u00e8cle Vienna (https://books.google.com/books/about/Karl_Lueger.html?id=uoSeLKLa6pIC)",
+    "Henri F. Ellenberger - Basic Books - 1970 - The Discovery of the Unconscious: The History and Evolution of Dynamic Psychiatry (https://www.encyclopedia.com/psychology/dictionaries-thesauruses-pictures-and-press-releases/pappenheim-bertha-1859-1936)",
+    "Adolf Gr\u00fcnbaum - University of California Press - 1984 - The Foundations of Psychoanalysis: A Philosophical Critique (https://pmc.ncbi.nlm.nih.gov/articles/PMC5459228/)",
+    "Sigmund Freud Museum / Monika Pessler (Director) - Sigmund Freud Museum - 2020 (renovated) - Sigmund Freud Museum Vienna (Official Site) (https://www.freud-museum.at/en/)",
+    "Institute for Human Sciences (IWM) - IWM Post - 2023 - Remembering Freud in Vienna: From Exile to Pop Icon (https://www.iwm.at/publication/iwmpost-article/remembering-freud-in-vienna-from-exile-to-pop-icon)"
+  ],
+  "topic": "Vienna 1900 and the birth of psychoanalysis",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 2192
+}

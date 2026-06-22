@@ -1,24 +1,6 @@
 {
   "episode_history": [
     {
-      "caspar_challenged": "his own implicit framing that the Sorrenti paper was fresh \u2014 caught himself mid-walkthrough when Juno flagged the overlap with last week's MFM Rounds, acknowledged the dataset overlap, and redirected to what was actually new",
-      "created_at": "2026-06-04T10:08:21.960189+00:00",
-      "juno_noticed": "that the French CMV paper's argument is strong everywhere but the evidence is specifically French \u2014 and that those are different claims worth keeping separate",
-      "relationship_moment": "Juno flagged the Sorrenti repeat before Caspar finished his setup; Caspar said 'You're right to flag it' and self-corrected without defensiveness. Also: Juno's 'the argument is strong everywhere, but the evidence is specifically French' \u2014 Caspar confirmed it as two different claims without softening either one.",
-      "run_id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04",
-      "topic": "The Fetal Frontier - week of 2026/06/04",
-      "usable_callback": "Caspar's confirmation that the CMV paper and the sPTB cardiovascular data share the same verb problem \u2014 'Same verb problem we had with the sPTB cardiovascular data last week. Same verb problem.' Also: Juno's fork on Kjaer \u2014 'absorbed informally or triggers formal recalibration' \u2014 and Caspar's flat 'the answer isn't in this paper.'"
-    },
-    {
-      "caspar_challenged": "the slide from 'non-inferior' to 'equivalent' to 'just as good anywhere' \u2014 held the three-claim distinction without dismissing the result, and refused to let the ceiling become a floor",
-      "created_at": "2026-06-05T10:07:28.415022+00:00",
-      "juno_noticed": "that the CANNES operator caveat and the Asmara validation heterogeneity are both about the distance between a controlled result and what a real department actually produces \u2014 and named it as a longer conversation without forcing it open",
-      "relationship_moment": "Juno said 'the ceiling is documented \u2014 that's still more than we had'; Caspar said 'Agreed' without softening his prior caveat. Later: Juno noted the connecting thread between CANNES and Asmara; Caspar said 'Probably. That's a longer conversation than this week has room for.' Juno: 'I know. I'm noting it.' Neither pushed further.",
-      "run_id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05",
-      "topic": "Signal in the Scan - week of 2026/06/05",
-      "usable_callback": "Caspar's three-claim distinction: 'non-inferior,' 'equivalent,' and 'just as good anywhere' are not the same claim and only the first is in the data. Also: Juno's formulation \u2014 '88 gets cited. 75 is the deployment number.'"
-    },
-    {
       "caspar_challenged": "",
       "created_at": "2026-06-06T10:08:15.846574+00:00",
       "juno_noticed": "",
@@ -107,6 +89,24 @@
       "run_id": "20260619_050143_signal_in_the_scan_-_week_of_2026_06_19",
       "topic": "Signal in the Scan - week of 2026/06/19",
       "usable_callback": "Caspar's error-distribution caveat: 'Clean on the metric they chose. Not necessarily clean on the underlying error structure.' Also: Juno's thrombectomy asymmetry framing \u2014 'Every other paper this week is about adding something. This one is about withholding.' And the close: 'Three open questions, none of them small.' / 'Good week for show notes.'"
+    },
+    {
+      "caspar_challenged": "",
+      "created_at": "2026-06-21T23:14:24.699806+00:00",
+      "juno_noticed": "",
+      "relationship_moment": "",
+      "run_id": "20260621_175114_vienna_1900_and_the_birth_of_psychoanalysis",
+      "topic": "Vienna 1900 and the birth of psychoanalysis",
+      "usable_callback": ""
+    },
+    {
+      "caspar_challenged": "his own implicit framing that healthy-vaccinee bias is a standard caveat to wave at \u2014 stopped himself and worked out why it's a harder argument than usual here: a bias that uniformly masks adverse signals across four outcomes with different causal pathways, across eight systems simultaneously, is not the most parsimonious read of a null result this broad",
+      "created_at": "2026-06-22T10:07:30.205979+00:00",
+      "juno_noticed": "that Prasad and Yun are pointing at the same structural problem from different angles \u2014 decisions made against classifications and risk markers that probably aren't granular enough \u2014 and named the connection without forcing either paper to carry more than it does",
+      "relationship_moment": "Juno pressed 'Is that bias plausibly large enough to matter here?' and Caspar didn't deflect \u2014 he worked it out in real time, named the specific reason the bias argument is harder than it sounds, and landed on 'I want to name it rather than wave at it.' Juno didn't push further. At the close, Juno added the Prasad-Yun structural observation without prompting; Caspar had already moved to sign-off and let it stand.",
+      "run_id": "20260622_050158_mfm_rounds_-_week_of_2026_06_22",
+      "topic": "MFM Rounds - week of 2026/06/22",
+      "usable_callback": "Caspar's before/after counseling sentence distinction: 'the prelicensure data are reassuring and the post-licensure data are limited' versus 'the largest real-world dataset we have shows no signal across the outcomes we were most worried about' \u2014 those are different sentences and you can use the second one now. Also: 'The obstetric safety question is characterized. The pediatric question is not. Keep that distinction in the room.'"
     }
   ],
   "hosts": {
@@ -334,7 +334,21 @@
     "the sex-specific effect",
     "the asymmetry shapes how you set the threshold",
     "the paper makes the case that current metrics aren't sufficient",
-    "it doesn't tell you what to replace them with"
+    "it doesn't tell you what to replace them with",
+    "four separate null results",
+    "not one null result dressed as a safety profile",
+    "the counseling sentence actually changes",
+    "those are different sentences and you can use the second one now",
+    "the obstetric safety question is characterized",
+    "the pediatric question is not",
+    "keep that distinction in the room",
+    "I want to name it rather than wave at it",
+    "most units inherited eighteen hours from somewhere",
+    "the counseling reference",
+    "doesn't change the procedure",
+    "pointing at the same structural problem from different angles",
+    "neither paper resolves that",
+    "both name it more precisely than we had before"
   ],
   "relationship": {
     "chemistry": "Juno pulls Caspar toward meaning; Caspar pulls Juno toward evidence. They like each other enough to disagree without flattening the disagreement.",
@@ -346,39 +360,6 @@
   },
   "schema_version": 1,
   "shared_memories": [
-    {
-      "created_at": "2026-06-04T10:08:21.960189+00:00",
-      "id": "20260604_050147_the_fetal_frontier_-_week_of_2026_06_04_03",
-      "summary": "Juno flagged mid-episode that the Sorrenti MCDA/sFGR paper appeared to overlap with last week's MFM Rounds coverage. Caspar caught himself mid-walkthrough, confirmed the dataset overlap, and redirected to what was actually new: the granular ROC analysis identifying which specific Delphi criteria components \u2014 EFW discordance thresholds and Doppler abnormality components \u2014 drive the predictive advantage over ISUOG. The finding holds; the new contribution is the component-level granularity.",
-      "tags": [
-        "Sorrenti",
-        "MCDA twins",
-        "sFGR",
-        "Delphi criteria",
-        "ISUOG",
-        "fetal frontier",
-        "self-correction",
-        "Juno-Caspar dynamic"
-      ],
-      "why_keep": "Caspar's mid-episode self-catch on the dataset overlap \u2014 prompted by Juno, not by his own review \u2014 is a relationship marker worth keeping. Also: the component-level Delphi finding is specific enough to anchor future episodes on MCDA surveillance or criterion-level predictive modeling."
-    },
-    {
-      "created_at": "2026-06-05T10:07:28.415022+00:00",
-      "id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05_01",
-      "summary": "Fr\u00fchauf et al. (UOG 2026), the CANNES trial: prospective multicenter, ultrasound non-inferior to PET/CT and DW-MRI for pelvic lymph node staging in cervical cancer, histopathologic reference standard from surgical specimens. Caspar's hard line: the result holds at the ceiling \u2014 dedicated gynecologic sonography expertise and a standardized protocol are part of the result, not footnotes. The paper gives a defensible answer for constrained settings with named conditions. What remains open: performance without standardized protocol or dedicated operator.",
-      "tags": [
-        "CANNES trial",
-        "cervical cancer staging",
-        "ultrasound",
-        "PET/CT",
-        "DW-MRI",
-        "non-inferiority",
-        "Fr\u00fchauf 2026",
-        "UOG",
-        "signal in the scan"
-      ],
-      "why_keep": "Caspar's 'ceiling is documented, don't call it a floor' formulation is precise and reusable in any future episode on non-inferiority trial interpretation, resource-constrained imaging, or the gap between a controlled result and real-world deployment. The three-claim distinction (non-inferior / equivalent / just as good anywhere) is a standing callback."
-    },
     {
       "created_at": "2026-06-05T10:07:28.415022+00:00",
       "id": "20260605_050139_signal_in_the_scan_-_week_of_2026_06_05_02",
@@ -615,6 +596,36 @@
         "overdiagnosis"
       ],
       "why_keep": "The opportunistic screening question \u2014 does this accelerate overdiagnosis before anyone builds the downstream pathway? \u2014 is a standing open thread named explicitly by Caspar. Reusable in any future episode on AI screening, incidental findings, or the gap between model performance and deployment readiness."
+    },
+    {
+      "created_at": "2026-06-22T10:07:30.205979+00:00",
+      "id": "20260622_050158_mfm_rounds_-_week_of_2026_06_22_01",
+      "summary": "DeSilva et al. (Obstetrics & Gynecology, 2026): target trial emulation across eight health systems \u2014 RSVpreF vaccination at 32\u201336 weeks, four primary endpoints (preterm birth, stillbirth, SGA, hypertensive disorders). No significant increase in any. Caspar's hard line: healthy-vaccinee bias can't be fully adjusted away, but for it to explain this result it would need to operate consistently across all four outcomes \u2014 which don't share causal pathways \u2014 across eight sites simultaneously. That's a harder argument than it sounds. The counseling sentence changes: 'largest real-world dataset we have shows no signal across the outcomes we were most worried about.' What remains open: infant neurodevelopmental outcomes from in-utero exposure.",
+      "tags": [
+        "RSVpreF",
+        "pregnancy vaccination",
+        "obstetric safety",
+        "target trial emulation",
+        "DeSilva 2026",
+        "MFM rounds",
+        "counseling sentence"
+      ],
+      "why_keep": "Caspar's before/after counseling sentence distinction is precise and immediately reusable in any future episode on vaccine safety in pregnancy, post-licensure surveillance, or the gap between prelicensure signals and real-world characterization. The healthy-vaccinee bias working-out is a relationship marker \u2014 Juno pressed, Caspar reasoned through it rather than deflecting."
+    },
+    {
+      "created_at": "2026-06-22T10:07:30.205979+00:00",
+      "id": "20260622_050158_mfm_rounds_-_week_of_2026_06_22_02",
+      "summary": "Juno's closing observation connecting Prasad (preeclampsia phenotype reclassification) and Yun (HOMA-IR as fertility stratifier in PCOS): both papers are pointing at the same structural problem from different angles \u2014 decisions made against classifications and risk markers that probably aren't granular enough. Neither paper resolves it. Both name it more precisely than before.",
+      "tags": [
+        "preeclampsia phenotype",
+        "PCOS",
+        "insulin resistance",
+        "classification granularity",
+        "Juno observation",
+        "MFM rounds",
+        "open thread"
+      ],
+      "why_keep": "The 'same structural problem from different angles' framing is a standing Juno move \u2014 connecting papers across a week's rounds without forcing either to carry more than it does. Reusable as a callback in any future episode on phenotype-based classification, risk stratification, or the gap between available markers and clinical heterogeneity."
     }
   ],
   "show": {
@@ -627,5 +638,5 @@
       "The hosts may be wrong briefly, revise themselves, and leave some tension unresolved."
     ]
   },
-  "updated_at": "2026-06-19T10:07:58.569813+00:00"
+  "updated_at": "2026-06-22T10:07:30.205979+00:00"
 }
