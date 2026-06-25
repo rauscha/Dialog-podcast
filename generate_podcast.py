@@ -2683,6 +2683,7 @@ def _script_from_research_package(
         "key_claims": key_claims,
         "episode_thesis": thesis,
         "beat_sheet": beat_sheet,
+        "story_spine": story_spine,
         "guest_plan": guest_plan,
         "guest_hosts": guest_hosts,
         "sonic_footnote_plan": sonic_footnote_plan,
@@ -4168,6 +4169,22 @@ def _write_listener_trace_sidecar(
     return trace_path
 
 
+def _write_story_spine_sidecar(
+    audio_path: Path, story_spine: dict | None
+) -> Path | None:
+    """Persist the Story Spine as a JSON sidecar next to the audio. Like the
+    listener-trace sidecar, the spine is otherwise only logged (just a logline +
+    segment count), so the work-dir cleanup leaves no record of which backbone
+    drove an episode; this durable copy lets the fidelity review audit it after
+    the fact and syncs across machines. Empty/absent spines write nothing.
+    Returns the sidecar path if written, else None."""
+    if not story_spine:
+        return None
+    spine_path = Path(audio_path).with_suffix(".story_spine.json")
+    _write_json(spine_path, story_spine)
+    return spine_path
+
+
 def _write_companion_artifacts(
     episode: dict,
     audio_path: Path,
@@ -4217,6 +4234,10 @@ def _write_companion_artifacts(
     # output) next to the audio. Only logged otherwise, so the work-dir cleanup
     # would lose it; persisted here for the fidelity review and cross-machine sync.
     trace_path = _write_listener_trace_sidecar(audio_path, episode.get("listener_trace"))
+    # Same rationale for the Story Spine (the narrative backbone the episode was
+    # built from): only logged (logline + segment count), so cleanup leaves no
+    # record of which spine drove an episode — persist it for the same audit.
+    spine_path = _write_story_spine_sidecar(audio_path, episode.get("story_spine"))
 
     episode["audio_url"] = audio_url
     episode["chapters"] = chapters
@@ -4227,10 +4248,14 @@ def _write_companion_artifacts(
     episode["script_sidecar_path"] = str(script_path)
     if trace_path is not None:
         episode["listener_trace_sidecar_path"] = str(trace_path)
+    if spine_path is not None:
+        episode["story_spine_sidecar_path"] = str(spine_path)
     episode["follow_up_links"] = follow_up_links
     extras = [chapters_path, companion_path, script_path]
     if trace_path is not None:
         extras.append(trace_path)
+    if spine_path is not None:
+        extras.append(spine_path)
     return extras
 
 

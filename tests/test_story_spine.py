@@ -83,3 +83,22 @@ def test_build_story_spine_skips_digest_without_calling_llm(fake_client):
     spine = gp._build_story_spine("x", cfg, fake_client, "t", "g", {"readable_brief": "b"})
     assert spine is None
     assert fake_client.calls == []
+
+
+def test_write_story_spine_sidecar(tmp_path):
+    # The spine is otherwise only logged, so the now-active work-dir cleanup
+    # leaves no record of what backbone drove an episode. The sidecar persists it
+    # next to the audio (mirroring the .script.txt / .listener_trace.json pattern).
+    audio = tmp_path / "20260624_202201_some_episode.mp3"
+    out = gp._write_story_spine_sidecar(audio, GOOD_SPINE)
+
+    assert out == tmp_path / "20260624_202201_some_episode.story_spine.json"
+    assert out.exists()
+    assert json.loads(out.read_text(encoding="utf-8")) == GOOD_SPINE
+
+
+def test_write_story_spine_sidecar_empty_writes_nothing(tmp_path):
+    audio = tmp_path / "ep.mp3"
+    assert gp._write_story_spine_sidecar(audio, None) is None
+    assert gp._write_story_spine_sidecar(audio, {}) is None
+    assert not (tmp_path / "ep.story_spine.json").exists()
