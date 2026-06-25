@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260625_050146_the_fetal_frontier_-_week_of_2026_06_25.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Surveillance Gap"
+    },
+    {
+      "start_sec": 44.36,
+      "start_time": "0:44",
+      "title": "\u2014 Headline: Clinical Question and Design"
+    },
+    {
+      "start_sec": 88.73,
+      "start_time": "1:29",
+      "title": "\u2014 Headline: The Temporal Arc"
+    },
+    {
+      "start_sec": 133.09,
+      "start_time": "2:13",
+      "title": "\u2014 Headline: Practice Implications and Counseling Language"
+    },
+    {
+      "start_sec": 177.45,
+      "start_time": "2:57",
+      "title": "\u2014 Round 1: Panels vs. Exomes (Swanson)"
+    },
+    {
+      "start_sec": 221.82,
+      "start_time": "3:42",
+      "title": "\u2014 Round 2: Maternal Sirolimus for Fetal KHE (Fraissenon)"
+    },
+    {
+      "start_sec": 266.18,
+      "start_time": "4:26",
+      "title": "\u2014 Round 3: FETTUS in the Fetal Lamb (Van den Eede)"
+    },
+    {
+      "start_sec": 310.55,
+      "start_time": "5:11",
+      "title": "\u2014 Round 4: Genetic Yield in Isolated Severe Early-Onset FGR (Mossayebi)"
+    },
+    {
+      "start_sec": 354.91,
+      "start_time": "5:55",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260625_050146_the_fetal_frontier_-_week_of_2026_06_25.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260625_050146_the_fetal_frontier_-_week_of_2026_06_25.companion.json",
+  "duration_sec": 444.272698,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Defines the temporal arc of brain injury after FLA, informing surveillance protocols and family counseling",
+      "source": "Prenat Diagn",
+      "title": "Fetal Brain Abnormalities Following Laser Surgery for Twin-to-Twin Transfusion Syndrome: Imaging Patterns and Evolution",
+      "url": "https://doi.org/10.1002/pd.70202"
+    },
+    {
+      "reason": "Guides sequencing strategy choice \u2014 panels capture most variants, ES adds value for complex phenotypes",
+      "source": "Prenat Diagn",
+      "title": "Gene Panel Versus Whole Exome Sequencing for Fetal Anomalies",
+      "url": "https://doi.org/10.1002/pd.70118"
+    },
+    {
+      "reason": "First reported fetal therapy with maternal sirolimus for this rare vascular tumor",
+      "source": "Prenat Diagn",
+      "title": "Prenatal Diagnosis and Management of Kaposiform Hemangioendothelioma With Kasabach-Merritt Phenomenon: Imaging Features and First Experience With Maternal Sirolimus Therapy",
+      "url": "https://doi.org/10.1002/pd.70180"
+    },
+    {
+      "reason": "Proof of concept for in-utero embolization of a malformation with otherwise poor postnatal outcomes",
+      "source": "Prenat Diagn",
+      "title": "Novel Fetal Embolization Technique via Transcardiac Transarterial Ultrasound- and Fluoroscopy-Guided Endovascular Surgery for Vein of Galen Malformation: Preclinical Study in the Fetal Lamb",
+      "url": "https://doi.org/10.1002/pd.70157"
+    },
+    {
+      "reason": "Tempers expectations for genetic diagnosis in isolated severe early-onset FGR",
+      "source": "Prenat Diagn",
+      "title": "Severe Early-Onset Fetal Growth Restriction: The Yield of Antenatal and Postnatal Genetic Testing",
+      "url": "https://doi.org/10.1002/pd.70182"
+    }
+  ],
+  "generated_at": "2026-06-25T10:08:43.563764+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Severe brain injury after FLA for TTTS evolves from early periventricular hemorrhagic infarction to late cerebral volume loss and polymicrogyria",
+      "confidence": "medium",
+      "id": "kunpalin2026",
+      "source_ids": [
+        "kunpalin2026"
+      ]
+    },
+    {
+      "claim": "Gene panels would capture approximately 88 percent of pathogenic variants identified by exome sequencing for fetal anomalies, with ES adding most value in multisystem and cardiac/CNS cases",
+      "confidence": "high",
+      "id": "swanson2026",
+      "source_ids": [
+        "swanson2026"
+      ]
+    },
+    {
+      "claim": "Maternal sirolimus is a feasible prenatal therapy for fetal kaposiform hemangioendothelioma with Kasabach-Merritt phenomenon",
+      "confidence": "low",
+      "id": "fraissenon2026",
+      "source_ids": [
+        "fraissenon2026"
+      ]
+    },
+    {
+      "claim": "Transcardiac transarterial embolization for vein of Galen malformation is technically feasible in a fetal lamb model",
+      "confidence": "low",
+      "id": "vandeneede2026",
+      "source_ids": [
+        "vandeneede2026"
+      ]
+    },
+    {
+      "claim": "CMA diagnostic yield is approximately 5 percent in isolated severe early-onset FGR, with minimal added yield from exome or genome sequencing",
+      "confidence": "medium",
+      "id": "mossayebi2026",
+      "source_ids": [
+        "mossayebi2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Kunpalin",
+      "id": "kunpalin2026",
+      "publication": "Prenat Diagn",
+      "title": "Fetal Brain Abnormalities Following Laser Surgery for Twin-to-Twin Transfusion Syndrome: Imaging Patterns and Evolution",
+      "url": "https://doi.org/10.1002/pd.70202",
+      "why_it_matters": "Defines the temporal arc of brain injury after FLA, informing surveillance protocols and family counseling",
+      "year": 2026
+    },
+    {
+      "author": "Swanson",
+      "id": "swanson2026",
+      "publication": "Prenat Diagn",
+      "title": "Gene Panel Versus Whole Exome Sequencing for Fetal Anomalies",
+      "url": "https://doi.org/10.1002/pd.70118",
+      "why_it_matters": "Guides sequencing strategy choice \u2014 panels capture most variants, ES adds value for complex phenotypes",
+      "year": 2026
+    },
+    {
+      "author": "Fraissenon",
+      "id": "fraissenon2026",
+      "publication": "Prenat Diagn",
+      "title": "Prenatal Diagnosis and Management of Kaposiform Hemangioendothelioma With Kasabach-Merritt Phenomenon: Imaging Features and First Experience With Maternal Sirolimus Therapy",
+      "url": "https://doi.org/10.1002/pd.70180",
+      "why_it_matters": "First reported fetal therapy with maternal sirolimus for this rare vascular tumor",
+      "year": 2026
+    },
+    {
+      "author": "Van den Eede",
+      "id": "vandeneede2026",
+      "publication": "Prenat Diagn",
+      "title": "Novel Fetal Embolization Technique via Transcardiac Transarterial Ultrasound- and Fluoroscopy-Guided Endovascular Surgery for Vein of Galen Malformation: Preclinical Study in the Fetal Lamb",
+      "url": "https://doi.org/10.1002/pd.70157",
+      "why_it_matters": "Proof of concept for in-utero embolization of a malformation with otherwise poor postnatal outcomes",
+      "year": 2026
+    },
+    {
+      "author": "Mossayebi",
+      "id": "mossayebi2026",
+      "publication": "Prenat Diagn",
+      "title": "Severe Early-Onset Fetal Growth Restriction: The Yield of Antenatal and Postnatal Genetic Testing",
+      "url": "https://doi.org/10.1002/pd.70182",
+      "why_it_matters": "Tempers expectations for genetic diagnosis in isolated severe early-onset FGR",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Kunpalin et al. - Prenat Diagn - 2026 - Fetal Brain Abnormalities Following Laser Surgery for Twin-to-Twin Transfusion Syndrome: Imaging Patterns and Evolution (https://doi.org/10.1002/pd.70202)",
+    "Swanson et al. - Prenat Diagn - 2026 - Gene Panel Versus Whole Exome Sequencing for Fetal Anomalies (https://doi.org/10.1002/pd.70118)",
+    "Fraissenon et al. - Prenat Diagn - 2026 - Prenatal Diagnosis and Management of Kaposiform Hemangioendothelioma With Kasabach-Merritt Phenomenon: Imaging Features and First Experience With Maternal Sirolimus Therapy (https://doi.org/10.1002/pd.70180)",
+    "Van den Eede - Prenat Diagn - 2026 - Novel Fetal Embolization Technique via Transcardiac Transarterial Ultrasound- and Fluoroscopy-Guided Endovascular Surgery for Vein of Galen Malformation: Preclinical Study in the Fetal Lamb (https://doi.org/10.1002/pd.70157)",
+    "Mossayebi et al. - Prenat Diagn - 2026 - Severe Early-Onset Fetal Growth Restriction: The Yield of Antenatal and Postnatal Genetic Testing (https://doi.org/10.1002/pd.70182)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/06/25",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1087
+}
