@@ -1,0 +1,309 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260624_202201_the_progression_of_major_ai_methods_from_the_2010s_to_today.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 The Two Numbers"
+    },
+    {
+      "start_sec": 93.43,
+      "start_time": "1:33",
+      "title": "\u2014 The Feature Engineer's Job"
+    },
+    {
+      "start_sec": 186.86,
+      "start_time": "3:07",
+      "title": "\u2014 Vapnik's Line"
+    },
+    {
+      "start_sec": 280.28,
+      "start_time": "4:40",
+      "title": "\u2014 A Forest of Votes"
+    },
+    {
+      "start_sec": 373.71,
+      "start_time": "6:14",
+      "title": "\u2014 Pixels In, Digits Out"
+    },
+    {
+      "start_sec": 467.14,
+      "start_time": "7:47",
+      "title": "\u2014 The Convergence"
+    },
+    {
+      "start_sec": 560.57,
+      "start_time": "9:21",
+      "title": "\u2014 The Field Splits"
+    },
+    {
+      "start_sec": 654.0,
+      "start_time": "10:54",
+      "title": "\u2014 The Forgetting Problem"
+    },
+    {
+      "start_sec": 747.42,
+      "start_time": "12:27",
+      "title": "\u2014 All at Once"
+    },
+    {
+      "start_sec": 840.85,
+      "start_time": "14:01",
+      "title": "\u2014 Predict the Next Word"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260624_202201_the_progression_of_major_ai_methods_from_the_2010s_to_today.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260624_202201_the_progression_of_major_ai_methods_from_the_2010s_to_today.companion.json",
+  "duration_sec": 979.279433,
+  "episode_type": "overview",
+  "episode_type_label": "Broad Overview",
+  "follow_up_links": [
+    {
+      "reason": "The foundational paper introducing the modern soft-margin SVM. Vapnik's work at AT&T Bell Labs established SVMs as the dominant classification method of the 1990s-2000s, particularly for high-dimensional data like text and genomics. Essential for explaining the pre-deep-learning paradigm.",
+      "source": "Machine Learning Journal",
+      "title": "Support-Vector Networks",
+      "url": "https://dl.acm.org/doi/10.1023/A:1022627411411"
+    },
+    {
+      "reason": "Breiman's seminal paper from UC Berkeley introduced Random Forests as an ensemble method combining bagging with random feature selection. Now one of the most cited ML papers ever (~112,000 citations). Represents the 'classical ML' approach that remains widely used for tabular data.",
+      "source": "Machine Learning Journal",
+      "title": "Random Forests",
+      "url": "https://link.springer.com/article/10.1023/A:1010933404324"
+    },
+    {
+      "reason": "The 'big bang' of modern deep learning. AlexNet won ImageNet 2012 with a 15.3% error rate vs. 26.2% for the runner-up\u2014a 10.9 percentage point margin that shocked the field. Triggered the industry-wide pivot to deep learning.",
+      "source": "NeurIPS",
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)",
+      "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+    },
+    {
+      "reason": "Introduced the Transformer architecture, which replaced recurrence with self-attention. This paper is the direct ancestor of GPT, BERT, and all modern LLMs. The title became a meme, but the architecture became the foundation of the current AI era.",
+      "source": "NeurIPS",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "reason": "Google's BERT demonstrated that pre-training on massive text corpora, then fine-tuning, could achieve state-of-the-art on diverse NLP tasks. By 2020, BERT was processing almost every English query on Google Search. Established the pre-train/fine-tune paradigm.",
+      "source": "NAACL",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "url": "https://arxiv.org/abs/1810.04805"
+    },
+    {
+      "reason": "LeCun's work at Bell Labs introduced the first practical CNN (later called LeNet). This paper showed that neural networks could learn features directly from raw pixels\u2014a radical departure from hand-engineered features. The conceptual ancestor of all modern computer vision.",
+      "source": "Neural Computation",
+      "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+      "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf"
+    },
+    {
+      "reason": "XGBoost became the dominant algorithm for Kaggle competitions and structured/tabular data. Represents the pinnacle of gradient boosting methods. Important for showing that 'classical' ML continued advancing even as deep learning rose.",
+      "source": "ACM SIGKDD",
+      "title": "XGBoost: A Scalable Tree Boosting System",
+      "url": "https://arxiv.org/abs/1603.02754"
+    },
+    {
+      "reason": "Breiman's influential essay contrasting 'data modeling' (traditional statistics) with 'algorithmic modeling' (machine learning). Useful for framing the philosophical shift that deep learning represents\u2014from interpretable models to prediction-first approaches.",
+      "source": "Statistical Science",
+      "title": "Statistical Modeling: The Two Cultures",
+      "url": "https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.full"
+    }
+  ],
+  "generated_at": "2026-06-25T01:58:00.569624+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "SVMs were invented by Vladimir Vapnik, with the original optimal hyperplane algorithm dating to 1963 in the Soviet Union. The modern soft-margin version was published by Corinna Cortes and Vapnik in 1995 while at AT&T Bell Labs.",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "SVMs work by finding the hyperplane that maximizes the margin between classes. The 'kernel trick' allows them to handle non-linear data by implicitly mapping to higher-dimensional spaces where linear separation becomes possible.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "Random Forests were introduced by Leo Breiman at UC Berkeley in 2001. He had previously introduced bagging in 1996; Random Forests added random feature selection at each split to reduce correlation between trees.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Random Forests combine multiple decision trees trained on bootstrapped samples, with each tree using a random subset of features. The ensemble averages predictions, reducing overfitting while maintaining accuracy.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Yann LeCun introduced the first practical CNN in 1989 at Bell Labs, applying backpropagation to handwritten zip code recognition. This was the first demonstration that neural networks could learn features directly from raw image pixels.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "In the 2010 and 2011 ImageNet competitions, traditional ML methods like SVMs were winning. Starting in 2012, CNNs dominated\u2014AlexNet achieved a 15.3% top-5 error rate versus 26.2% for the second-place entry.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "AlexNet was developed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton at the University of Toronto. Its success triggered an industry-wide pivot to deep learning, with Google, Facebook, and others racing to adopt neural networks.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "The Transformer architecture was introduced by Vaswani et al. at Google in 2017. It replaced recurrence with self-attention mechanisms, allowing each token to attend to every other token in a sequence.",
+      "confidence": "High",
+      "id": "C8",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "BERT was introduced by Google in October 2018. By December 2019, it had been adopted for over 70 languages on Google Search. By October 2020, almost every English query was processed by a BERT model.",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "claim": "Traditional ML models typically use thousands to millions of parameters. LLMs use billions to trillions of parameters\u2014GPT-4 is estimated at around 1 trillion parameters, roughly 3,000 times larger than BERT's original 340 million.",
+      "confidence": "Medium-High (GPT-4 parameter count is estimated, not officially confirmed)",
+      "id": "C10",
+      "source_ids": []
+    },
+    {
+      "claim": "The key architectural difference: traditional ML requires manual feature engineering (humans decide what patterns to look for), while deep learning learns features automatically from raw data. LLMs extend this by learning from raw text at massive scale using self-supervised learning.",
+      "confidence": "High",
+      "id": "C11",
+      "source_ids": []
+    },
+    {
+      "claim": "XGBoost was introduced by Tianqi Chen and Carlos Guestrin in 2016. It became the dominant algorithm for Kaggle competitions on structured data, frequently outperforming deep neural networks on tabular datasets.",
+      "confidence": "High",
+      "id": "C12",
+      "source_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Corinna Cortes and Vladimir Vapnik",
+      "id": "S1",
+      "publication": "Machine Learning Journal",
+      "title": "Support-Vector Networks",
+      "url": "https://dl.acm.org/doi/10.1023/A:1022627411411",
+      "why_it_matters": "The foundational paper introducing the modern soft-margin SVM. Vapnik's work at AT&T Bell Labs established SVMs as the dominant classification method of the 1990s-2000s, particularly for high-dimensional data like text and genomics. Essential for explaining the pre-deep-learning paradigm.",
+      "year": "1995"
+    },
+    {
+      "author": "Leo Breiman",
+      "id": "S2",
+      "publication": "Machine Learning Journal",
+      "title": "Random Forests",
+      "url": "https://link.springer.com/article/10.1023/A:1010933404324",
+      "why_it_matters": "Breiman's seminal paper from UC Berkeley introduced Random Forests as an ensemble method combining bagging with random feature selection. Now one of the most cited ML papers ever (~112,000 citations). Represents the 'classical ML' approach that remains widely used for tabular data.",
+      "year": "2001"
+    },
+    {
+      "author": "Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton",
+      "id": "S3",
+      "publication": "NeurIPS",
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)",
+      "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "why_it_matters": "The 'big bang' of modern deep learning. AlexNet won ImageNet 2012 with a 15.3% error rate vs. 26.2% for the runner-up\u2014a 10.9 percentage point margin that shocked the field. Triggered the industry-wide pivot to deep learning.",
+      "year": "2012"
+    },
+    {
+      "author": "Ashish Vaswani et al.",
+      "id": "S4",
+      "publication": "NeurIPS",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "why_it_matters": "Introduced the Transformer architecture, which replaced recurrence with self-attention. This paper is the direct ancestor of GPT, BERT, and all modern LLMs. The title became a meme, but the architecture became the foundation of the current AI era.",
+      "year": "2017"
+    },
+    {
+      "author": "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova",
+      "id": "S5",
+      "publication": "NAACL",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "why_it_matters": "Google's BERT demonstrated that pre-training on massive text corpora, then fine-tuning, could achieve state-of-the-art on diverse NLP tasks. By 2020, BERT was processing almost every English query on Google Search. Established the pre-train/fine-tune paradigm.",
+      "year": "2018/2019"
+    },
+    {
+      "author": "Yann LeCun et al.",
+      "id": "S6",
+      "publication": "Neural Computation",
+      "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+      "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf",
+      "why_it_matters": "LeCun's work at Bell Labs introduced the first practical CNN (later called LeNet). This paper showed that neural networks could learn features directly from raw pixels\u2014a radical departure from hand-engineered features. The conceptual ancestor of all modern computer vision.",
+      "year": "1989"
+    },
+    {
+      "author": "Tianqi Chen and Carlos Guestrin",
+      "id": "S7",
+      "publication": "ACM SIGKDD",
+      "title": "XGBoost: A Scalable Tree Boosting System",
+      "url": "https://arxiv.org/abs/1603.02754",
+      "why_it_matters": "XGBoost became the dominant algorithm for Kaggle competitions and structured/tabular data. Represents the pinnacle of gradient boosting methods. Important for showing that 'classical' ML continued advancing even as deep learning rose.",
+      "year": "2016"
+    },
+    {
+      "author": "Leo Breiman",
+      "id": "S8",
+      "publication": "Statistical Science",
+      "title": "Statistical Modeling: The Two Cultures",
+      "url": "https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.full",
+      "why_it_matters": "Breiman's influential essay contrasting 'data modeling' (traditional statistics) with 'algorithmic modeling' (machine learning). Useful for framing the philosophical shift that deep learning represents\u2014from interpretable models to prediction-first approaches.",
+      "year": "2001"
+    }
+  ],
+  "sources": [
+    "Corinna Cortes and Vladimir Vapnik - Machine Learning Journal - 1995 - Support-Vector Networks (https://dl.acm.org/doi/10.1023/A:1022627411411)",
+    "Leo Breiman - Machine Learning Journal - 2001 - Random Forests (https://link.springer.com/article/10.1023/A:1010933404324)",
+    "Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton - NeurIPS - 2012 - ImageNet Classification with Deep Convolutional Neural Networks (AlexNet) (https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html)",
+    "Ashish Vaswani et al. - NeurIPS - 2017 - Attention Is All You Need (https://arxiv.org/abs/1706.03762)",
+    "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova - NAACL - 2018/2019 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (https://arxiv.org/abs/1810.04805)",
+    "Yann LeCun et al. - Neural Computation - 1989 - Backpropagation Applied to Handwritten Zip Code Recognition (http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf)",
+    "Tianqi Chen and Carlos Guestrin - ACM SIGKDD - 2016 - XGBoost: A Scalable Tree Boosting System (https://arxiv.org/abs/1603.02754)",
+    "Leo Breiman - Statistical Science - 2001 - Statistical Modeling: The Two Cultures (https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.full)"
+  ],
+  "topic": "The progression of major AI methods from the 2010s to today - CNNs, Random forest, SVMs, etc. What these each mean, what they're particularly good for, and how they differ from today's LLMs in design and usage",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 2724
+}

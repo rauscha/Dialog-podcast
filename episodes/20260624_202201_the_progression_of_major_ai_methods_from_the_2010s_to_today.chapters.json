@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 The Two Numbers"
+    },
+    {
+      "startTime": 93.43,
+      "title": "\u2014 The Feature Engineer's Job"
+    },
+    {
+      "startTime": 186.86,
+      "title": "\u2014 Vapnik's Line"
+    },
+    {
+      "startTime": 280.28,
+      "title": "\u2014 A Forest of Votes"
+    },
+    {
+      "startTime": 373.71,
+      "title": "\u2014 Pixels In, Digits Out"
+    },
+    {
+      "startTime": 467.14,
+      "title": "\u2014 The Convergence"
+    },
+    {
+      "startTime": 560.57,
+      "title": "\u2014 The Field Splits"
+    },
+    {
+      "startTime": 654.0,
+      "title": "\u2014 The Forgetting Problem"
+    },
+    {
+      "startTime": 747.42,
+      "title": "\u2014 All at Once"
+    },
+    {
+      "startTime": 840.85,
+      "title": "\u2014 Predict the Next Word"
+    }
+  ],
+  "version": "1.2.0"
+}
