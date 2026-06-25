@@ -4152,6 +4152,22 @@ def _write_json(path: Path, payload: dict | list) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _write_listener_trace_sidecar(
+    audio_path: Path, listener_trace: dict | None
+) -> Path | None:
+    """Persist the Synthetic First Listener trace as a JSON sidecar next to the
+    audio. The trace is otherwise only logged, so the (now-active) work-dir
+    cleanup loses it; this durable copy lets the fidelity review inspect
+    comprehension-gate output after the fact and syncs across machines alongside
+    the other sidecars. Empty/absent traces write nothing. Returns the sidecar
+    path if written, else None."""
+    if not listener_trace:
+        return None
+    trace_path = Path(audio_path).with_suffix(".listener_trace.json")
+    _write_json(trace_path, listener_trace)
+    return trace_path
+
+
 def _write_companion_artifacts(
     episode: dict,
     audio_path: Path,
@@ -4197,6 +4213,11 @@ def _write_companion_artifacts(
     script_path = audio_path.with_suffix(".script.txt")
     script_path.write_text(episode.get("script", "") or "", encoding="utf-8")
 
+    # Durable copy of the Synthetic First Listener trace (comprehension-gate
+    # output) next to the audio. Only logged otherwise, so the work-dir cleanup
+    # would lose it; persisted here for the fidelity review and cross-machine sync.
+    trace_path = _write_listener_trace_sidecar(audio_path, episode.get("listener_trace"))
+
     episode["audio_url"] = audio_url
     episode["chapters"] = chapters
     episode["chapters_url"] = chapters_url
@@ -4204,8 +4225,13 @@ def _write_companion_artifacts(
     episode["companion_url"] = companion_url
     episode["companion_path"] = str(companion_path)
     episode["script_sidecar_path"] = str(script_path)
+    if trace_path is not None:
+        episode["listener_trace_sidecar_path"] = str(trace_path)
     episode["follow_up_links"] = follow_up_links
-    return [chapters_path, companion_path, script_path]
+    extras = [chapters_path, companion_path, script_path]
+    if trace_path is not None:
+        extras.append(trace_path)
+    return extras
 
 
 def _tts_openai_voice(
