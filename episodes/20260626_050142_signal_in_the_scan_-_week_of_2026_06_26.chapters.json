@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Annotation Problem"
+    },
+    {
+      "startTime": 51.27,
+      "title": "\u2014 Headline: Clinical Question and Design"
+    },
+    {
+      "startTime": 102.53,
+      "title": "\u2014 Headline: Effect, Caveat, and Practice Impact"
+    },
+    {
+      "startTime": 153.8,
+      "title": "\u2014 Pivot"
+    },
+    {
+      "startTime": 205.07,
+      "title": "\u2014 Round 1: Lehman / Longitudinal AI Mammography Risk"
+    },
+    {
+      "startTime": 256.33,
+      "title": "\u2014 Round 2: Peeters / LUNA25 Lung Nodule Challenge"
+    },
+    {
+      "startTime": 307.6,
+      "title": "\u2014 Round 3: Ma / MR Lymphangiography Venous Suppression"
+    },
+    {
+      "startTime": 358.87,
+      "title": "\u2014 Round 4: Shu / Shortcut Learning in Chest Radiograph AI"
+    },
+    {
+      "startTime": 410.13,
+      "title": "\u2014 Close: What's Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

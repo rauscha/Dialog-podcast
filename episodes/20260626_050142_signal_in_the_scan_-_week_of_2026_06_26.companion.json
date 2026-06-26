@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260626_050142_signal_in_the_scan_-_week_of_2026_06_26.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Annotation Problem"
+    },
+    {
+      "start_sec": 51.27,
+      "start_time": "0:51",
+      "title": "\u2014 Headline: Clinical Question and Design"
+    },
+    {
+      "start_sec": 102.53,
+      "start_time": "1:43",
+      "title": "\u2014 Headline: Effect, Caveat, and Practice Impact"
+    },
+    {
+      "start_sec": 153.8,
+      "start_time": "2:34",
+      "title": "\u2014 Pivot"
+    },
+    {
+      "start_sec": 205.07,
+      "start_time": "3:25",
+      "title": "\u2014 Round 1: Lehman / Longitudinal AI Mammography Risk"
+    },
+    {
+      "start_sec": 256.33,
+      "start_time": "4:16",
+      "title": "\u2014 Round 2: Peeters / LUNA25 Lung Nodule Challenge"
+    },
+    {
+      "start_sec": 307.6,
+      "start_time": "5:08",
+      "title": "\u2014 Round 3: Ma / MR Lymphangiography Venous Suppression"
+    },
+    {
+      "start_sec": 358.87,
+      "start_time": "5:59",
+      "title": "\u2014 Round 4: Shu / Shortcut Learning in Chest Radiograph AI"
+    },
+    {
+      "start_sec": 410.13,
+      "start_time": "6:50",
+      "title": "\u2014 Close: What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260626_050142_signal_in_the_scan_-_week_of_2026_06_26.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260626_050142_signal_in_the_scan_-_week_of_2026_06_26.companion.json",
+  "duration_sec": 506.400431,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Demonstrates annotation-free 3D fibroid segmentation with cross-center generalization, potentially reducing manual contouring burden in surgical planning workflows.",
+      "source": "NPJ Digital Medicine",
+      "title": "Reconstruction from multi-planar MRI with foundation models for uterine fibroid analysis",
+      "url": "https://doi.org/10.1038/s41746-026-02780-6"
+    },
+    {
+      "reason": "Shows AI mammography risk scores rise before cancer diagnosis in a large cohort, supporting dynamic rather than static risk stratification.",
+      "source": "Radiology",
+      "title": "Longitudinal Analysis of Changes in Deep Learning Image-based Breast Cancer Risk Scores over Time",
+      "url": "https://doi.org/10.1148/radiol.253023"
+    },
+    {
+      "reason": "Establishes that top AI systems match or exceed radiologist performance for indeterminate lung nodule risk on a standardized external benchmark.",
+      "source": "Radiology Artificial Intelligence",
+      "title": "Benchmarking of AI and Radiologists for Indeterminate Lung Nodule Malignancy Risk Estimation on Screening CT: The LUNA25 Challenge",
+      "url": "https://doi.org/10.1148/ryai.260179"
+    },
+    {
+      "reason": "Improves diagnostic clarity in MR lymphangiography for lymphedema, relevant to post-surgical and post-radiation imaging in oncology.",
+      "source": "Radiology",
+      "title": "MR Lymphangiography for Diagnosis of Lower Extremity Lymphedema: Suppressing Venous Signal Interference Using Deep Learning",
+      "url": "https://doi.org/10.1148/radiol.251225"
+    },
+    {
+      "reason": "Reveals that DL models exploit exposure parameters as shortcuts, a deployment-critical bias finding for any chest radiograph AI.",
+      "source": "Radiology Artificial Intelligence",
+      "title": "Impact of Exposure Parameters on Deep Learning Models in Chest Radiography and Implications for Deployment",
+      "url": "https://doi.org/10.1148/ryai.250731"
+    }
+  ],
+  "generated_at": "2026-06-26T10:09:21.587799+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A foundation-model framework can perform 3D uterine fibroid segmentation from routine multi-planar MRI without manual annotation and generalizes across centers.",
+      "confidence": "medium",
+      "id": "wang2026",
+      "source_ids": [
+        "wang2026"
+      ]
+    },
+    {
+      "claim": "AI-derived mammography risk scores increase longitudinally in women who develop breast cancer, diverging from cancer-free trajectories.",
+      "confidence": "high",
+      "id": "lehman2026",
+      "source_ids": [
+        "lehman2026"
+      ]
+    },
+    {
+      "claim": "The best AI system in the LUNA25 challenge matched or exceeded radiologist performance for malignancy risk estimation in 5\u201315 mm lung nodules.",
+      "confidence": "medium",
+      "id": "peeters2026",
+      "source_ids": [
+        "peeters2026"
+      ]
+    },
+    {
+      "claim": "Deep learning venous-signal suppression improves diagnostic clarity in MR lymphangiography for lower extremity lymphedema.",
+      "confidence": "high",
+      "id": "ma2026",
+      "source_ids": [
+        "ma2026"
+      ]
+    },
+    {
+      "claim": "Chest X-ray DL models exploit radiographic exposure parameters as shortcuts, producing measurable performance bias across institutions.",
+      "confidence": "medium",
+      "id": "shu2026",
+      "source_ids": [
+        "shu2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Wang",
+      "id": "wang2026",
+      "publication": "NPJ Digital Medicine",
+      "title": "Reconstruction from multi-planar MRI with foundation models for uterine fibroid analysis",
+      "url": "https://doi.org/10.1038/s41746-026-02780-6",
+      "why_it_matters": "Demonstrates annotation-free 3D fibroid segmentation with cross-center generalization, potentially reducing manual contouring burden in surgical planning workflows.",
+      "year": 2026
+    },
+    {
+      "author": "Lehman",
+      "id": "lehman2026",
+      "publication": "Radiology",
+      "title": "Longitudinal Analysis of Changes in Deep Learning Image-based Breast Cancer Risk Scores over Time",
+      "url": "https://doi.org/10.1148/radiol.253023",
+      "why_it_matters": "Shows AI mammography risk scores rise before cancer diagnosis in a large cohort, supporting dynamic rather than static risk stratification.",
+      "year": 2026
+    },
+    {
+      "author": "Peeters",
+      "id": "peeters2026",
+      "publication": "Radiology Artificial Intelligence",
+      "title": "Benchmarking of AI and Radiologists for Indeterminate Lung Nodule Malignancy Risk Estimation on Screening CT: The LUNA25 Challenge",
+      "url": "https://doi.org/10.1148/ryai.260179",
+      "why_it_matters": "Establishes that top AI systems match or exceed radiologist performance for indeterminate lung nodule risk on a standardized external benchmark.",
+      "year": 2026
+    },
+    {
+      "author": "Ma",
+      "id": "ma2026",
+      "publication": "Radiology",
+      "title": "MR Lymphangiography for Diagnosis of Lower Extremity Lymphedema: Suppressing Venous Signal Interference Using Deep Learning",
+      "url": "https://doi.org/10.1148/radiol.251225",
+      "why_it_matters": "Improves diagnostic clarity in MR lymphangiography for lymphedema, relevant to post-surgical and post-radiation imaging in oncology.",
+      "year": 2026
+    },
+    {
+      "author": "Shu",
+      "id": "shu2026",
+      "publication": "Radiology Artificial Intelligence",
+      "title": "Impact of Exposure Parameters on Deep Learning Models in Chest Radiography and Implications for Deployment",
+      "url": "https://doi.org/10.1148/ryai.250731",
+      "why_it_matters": "Reveals that DL models exploit exposure parameters as shortcuts, a deployment-critical bias finding for any chest radiograph AI.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Wang et al. - NPJ Digital Medicine - 2026 - Reconstruction from multi-planar MRI with foundation models for uterine fibroid analysis (https://doi.org/10.1038/s41746-026-02780-6)",
+    "Lehman et al. - Radiology - 2026 - Longitudinal Analysis of Changes in Deep Learning Image-based Breast Cancer Risk Scores over Time (https://doi.org/10.1148/radiol.253023)",
+    "Peeters et al. - Radiology Artificial Intelligence - 2026 - Benchmarking of AI and Radiologists for Indeterminate Lung Nodule Malignancy Risk Estimation on Screening CT: The LUNA25 Challenge (https://doi.org/10.1148/ryai.260179)",
+    "Ma et al. - Radiology - 2026 - MR Lymphangiography for Diagnosis of Lower Extremity Lymphedema: Suppressing Venous Signal Interference Using Deep Learning (https://doi.org/10.1148/radiol.251225)",
+    "Shu et al. - Radiology Artificial Intelligence - 2026 - Impact of Exposure Parameters on Deep Learning Models in Chest Radiography and Implications for Deployment (https://doi.org/10.1148/ryai.250731)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/06/26",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1219
+}
