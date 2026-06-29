@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260629_050238_mfm_rounds_-_week_of_2026_06_29.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Question"
+    },
+    {
+      "start_sec": 47.29,
+      "start_time": "0:47",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 94.58,
+      "start_time": "1:35",
+      "title": "\u2014 Headline: Effect Size and What It Means"
+    },
+    {
+      "start_sec": 141.87,
+      "start_time": "2:22",
+      "title": "\u2014 Headline: Caveat and Practice Impact"
+    },
+    {
+      "start_sec": 189.16,
+      "start_time": "3:09",
+      "title": "\u2014 Round 1: Rondagh \u2014 Monochorionic Twins and Anastomosis Burden"
+    },
+    {
+      "start_sec": 236.45,
+      "start_time": "3:56",
+      "title": "\u2014 Round 2: Champion \u2014 AC Extremes in Pregestational Diabetes"
+    },
+    {
+      "start_sec": 283.75,
+      "start_time": "4:44",
+      "title": "\u2014 Round 3: Mei-Dan \u2014 Spontaneous PTB as Cardiovascular Risk Marker"
+    },
+    {
+      "start_sec": 331.04,
+      "start_time": "5:31",
+      "title": "\u2014 Round 4: Tersigni \u2014 Pre-Cerclage Amniocentesis"
+    },
+    {
+      "start_sec": 378.33,
+      "start_time": "6:18",
+      "title": "\u2014 Close: What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260629_050238_mfm_rounds_-_week_of_2026_06_29.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260629_050238_mfm_rounds_-_week_of_2026_06_29.companion.json",
+  "duration_sec": 470.618617,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Establishes that prior stillbirth independently elevates recurrence risk, directly informing surveillance intensity and preconception counseling",
+      "source": "Am J Obstet Gynecol",
+      "title": "Prior Stillbirth is Associated with Increased Risk of Subsequent Stillbirth",
+      "url": "https://doi.org/10.1016/j.ajog.2026.06.010"
+    },
+    {
+      "reason": "Quantifies the relationship between anastomosis patterns and survivor brain injury, guiding post-demise counseling and imaging timing",
+      "source": "Am J Obstet Gynecol",
+      "title": "The Role of Placental Anastomoses in Severe Brain Injury After Fetal Demise in Monochorionic Twins",
+      "url": "https://doi.org/10.1016/j.ajog.2026.06.016"
+    },
+    {
+      "reason": "Defines clinical utility of AC extremes in pregestational diabetes for identifying fetuses at elevated perinatal risk",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Fetal abdominal circumference and adverse perinatal outcomes in pregnant individuals with pregestational diabetes",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102042"
+    },
+    {
+      "reason": "Supports incorporating spontaneous PTB history into long-term maternal cardiovascular risk assessment",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Preterm birth as a risk factor for future maternal cardiovascular morbidity",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102019"
+    },
+    {
+      "reason": "Proposes a framework to distinguish mechanical from inflammatory cervical insufficiency before cerclage placement",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Amniocentesis before cerclage in asymptomatic women with mid-trimester short cervix: time to consider?",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102014"
+    }
+  ],
+  "generated_at": "2026-06-29T10:09:56.912701+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "History of stillbirth independently elevates the risk of recurrent stillbirth in subsequent pregnancies after adjusting for known confounders",
+      "confidence": "medium",
+      "id": "claim_henricks",
+      "source_ids": [
+        "henricks2026"
+      ]
+    },
+    {
+      "claim": "In monochorionic twins with single fetal demise, the number and diameter of arterio-arterial and veno-venous anastomoses correlate with severe brain injury in the surviving twin",
+      "confidence": "medium",
+      "id": "claim_rondagh",
+      "source_ids": [
+        "rondagh2026"
+      ]
+    },
+    {
+      "claim": "Both small and large fetal abdominal circumference percentiles associate with composite perinatal morbidity in pregnancies complicated by pregestational diabetes",
+      "confidence": "low",
+      "id": "claim_champion",
+      "source_ids": [
+        "champion2026"
+      ]
+    },
+    {
+      "claim": "Spontaneous preterm birth is an independent risk factor for future maternal cardiovascular morbidity and should be incorporated into long-term risk counseling",
+      "confidence": "medium",
+      "id": "claim_meidan",
+      "source_ids": [
+        "meidan2026"
+      ]
+    },
+    {
+      "claim": "Pre-cerclage amniocentesis may help distinguish mechanical from inflammatory cervical insufficiency and optimize cerclage candidacy in asymptomatic short cervix",
+      "confidence": "low",
+      "id": "claim_tersigni",
+      "source_ids": [
+        "tersigni2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Henricks",
+      "id": "henricks2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Prior Stillbirth is Associated with Increased Risk of Subsequent Stillbirth",
+      "url": "https://doi.org/10.1016/j.ajog.2026.06.010",
+      "why_it_matters": "Establishes that prior stillbirth independently elevates recurrence risk, directly informing surveillance intensity and preconception counseling",
+      "year": 2026
+    },
+    {
+      "author": "Rondagh",
+      "id": "rondagh2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "The Role of Placental Anastomoses in Severe Brain Injury After Fetal Demise in Monochorionic Twins",
+      "url": "https://doi.org/10.1016/j.ajog.2026.06.016",
+      "why_it_matters": "Quantifies the relationship between anastomosis patterns and survivor brain injury, guiding post-demise counseling and imaging timing",
+      "year": 2026
+    },
+    {
+      "author": "Champion",
+      "id": "champion2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Fetal abdominal circumference and adverse perinatal outcomes in pregnant individuals with pregestational diabetes",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102042",
+      "why_it_matters": "Defines clinical utility of AC extremes in pregestational diabetes for identifying fetuses at elevated perinatal risk",
+      "year": 2026
+    },
+    {
+      "author": "Mei-Dan",
+      "id": "meidan2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Preterm birth as a risk factor for future maternal cardiovascular morbidity",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102019",
+      "why_it_matters": "Supports incorporating spontaneous PTB history into long-term maternal cardiovascular risk assessment",
+      "year": 2026
+    },
+    {
+      "author": "Tersigni",
+      "id": "tersigni2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Amniocentesis before cerclage in asymptomatic women with mid-trimester short cervix: time to consider?",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102014",
+      "why_it_matters": "Proposes a framework to distinguish mechanical from inflammatory cervical insufficiency before cerclage placement",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Henricks et al. - Am J Obstet Gynecol - 2026 - Prior Stillbirth is Associated with Increased Risk of Subsequent Stillbirth (https://doi.org/10.1016/j.ajog.2026.06.010)",
+    "Rondagh et al. - Am J Obstet Gynecol - 2026 - The Role of Placental Anastomoses in Severe Brain Injury After Fetal Demise in Monochorionic Twins (https://doi.org/10.1016/j.ajog.2026.06.016)",
+    "Champion et al. - Am J Obstet Gynecol MFM - 2026 - Fetal abdominal circumference and adverse perinatal outcomes in pregnant individuals with pregestational diabetes (https://doi.org/10.1016/j.ajogmf.2026.102042)",
+    "Mei-Dan et al. - Am J Obstet Gynecol MFM - 2026 - Preterm birth as a risk factor for future maternal cardiovascular morbidity (https://doi.org/10.1016/j.ajogmf.2026.102019)",
+    "Tersigni et al. - Am J Obstet Gynecol MFM - 2026 - Amniocentesis before cerclage in asymptomatic women with mid-trimester short cervix: time to consider? (https://doi.org/10.1016/j.ajogmf.2026.102014)"
+  ],
+  "topic": "MFM Rounds - week of 2026/06/29",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1108
+}

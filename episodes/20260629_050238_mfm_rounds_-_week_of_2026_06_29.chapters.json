@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Clinical Question"
+    },
+    {
+      "startTime": 47.29,
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "startTime": 94.58,
+      "title": "\u2014 Headline: Effect Size and What It Means"
+    },
+    {
+      "startTime": 141.87,
+      "title": "\u2014 Headline: Caveat and Practice Impact"
+    },
+    {
+      "startTime": 189.16,
+      "title": "\u2014 Round 1: Rondagh \u2014 Monochorionic Twins and Anastomosis Burden"
+    },
+    {
+      "startTime": 236.45,
+      "title": "\u2014 Round 2: Champion \u2014 AC Extremes in Pregestational Diabetes"
+    },
+    {
+      "startTime": 283.75,
+      "title": "\u2014 Round 3: Mei-Dan \u2014 Spontaneous PTB as Cardiovascular Risk Marker"
+    },
+    {
+      "startTime": 331.04,
+      "title": "\u2014 Round 4: Tersigni \u2014 Pre-Cerclage Amniocentesis"
+    },
+    {
+      "startTime": 378.33,
+      "title": "\u2014 Close: What Remains Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
