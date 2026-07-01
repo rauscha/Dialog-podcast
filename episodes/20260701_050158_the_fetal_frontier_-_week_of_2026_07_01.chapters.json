@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Number That Changes the Consent Conversation"
+    },
+    {
+      "startTime": 47.54,
+      "title": "\u2014 Headline: Study Design and Population"
+    },
+    {
+      "startTime": 95.07,
+      "title": "\u2014 Headline: The Three Numbers"
+    },
+    {
+      "startTime": 142.61,
+      "title": "\u2014 Headline: Hydrops as Risk Amplifier and the Consent Implication"
+    },
+    {
+      "startTime": 190.15,
+      "title": "\u2014 Pivot + Round 1: cfDNA-SGD and Imaging Integration (Araji)"
+    },
+    {
+      "startTime": 237.68,
+      "title": "\u2014 Round 2: Structural Variation Sequencing for Partial Duplications (Qin)"
+    },
+    {
+      "startTime": 285.22,
+      "title": "\u2014 Round 3: PUV Diagnosis Timing and the Severity Confound (Pecorelli)"
+    },
+    {
+      "startTime": 332.75,
+      "title": "\u2014 Round 4: Doppler Reference Chart Heterogeneity (Vayenas)"
+    },
+    {
+      "startTime": 380.29,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}

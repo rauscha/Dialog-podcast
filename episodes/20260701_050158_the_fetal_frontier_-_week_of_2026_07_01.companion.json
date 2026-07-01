@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260701_050158_the_fetal_frontier_-_week_of_2026_07_01.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Number That Changes the Consent Conversation"
+    },
+    {
+      "start_sec": 47.54,
+      "start_time": "0:48",
+      "title": "\u2014 Headline: Study Design and Population"
+    },
+    {
+      "start_sec": 95.07,
+      "start_time": "1:35",
+      "title": "\u2014 Headline: The Three Numbers"
+    },
+    {
+      "start_sec": 142.61,
+      "start_time": "2:23",
+      "title": "\u2014 Headline: Hydrops as Risk Amplifier and the Consent Implication"
+    },
+    {
+      "start_sec": 190.15,
+      "start_time": "3:10",
+      "title": "\u2014 Pivot + Round 1: cfDNA-SGD and Imaging Integration (Araji)"
+    },
+    {
+      "start_sec": 237.68,
+      "start_time": "3:58",
+      "title": "\u2014 Round 2: Structural Variation Sequencing for Partial Duplications (Qin)"
+    },
+    {
+      "start_sec": 285.22,
+      "start_time": "4:45",
+      "title": "\u2014 Round 3: PUV Diagnosis Timing and the Severity Confound (Pecorelli)"
+    },
+    {
+      "start_sec": 332.75,
+      "start_time": "5:33",
+      "title": "\u2014 Round 4: Doppler Reference Chart Heterogeneity (Vayenas)"
+    },
+    {
+      "start_sec": 380.29,
+      "start_time": "6:20",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260701_050158_the_fetal_frontier_-_week_of_2026_07_01.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260701_050158_the_fetal_frontier_-_week_of_2026_07_01.companion.json",
+  "duration_sec": 472.826689,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Quantifies real-world IUT complication rates during parvovirus epidemic, with 10% ICH and survival halved when complications occur \u2014 essential for pre-procedure counseling",
+      "source": "Prenatal Diagnosis",
+      "title": "Intrauterine Transfusions in Fetuses Affected by Parvovirus B19: Complications, Challenges and Outcomes",
+      "url": "https://doi.org/10.1002/pd.70107"
+    },
+    {
+      "reason": "Provides practical framework for integrating cfDNA single-gene screening with multimodal imaging to improve result interpretation",
+      "source": "Prenatal Diagnosis",
+      "title": "Enhancing Prenatal Genetic Evaluation Through the Combination of Single-Gene Non-Invasive Prenatal Screening and Prenatal Imaging",
+      "url": "https://doi.org/10.1002/pd.70204"
+    },
+    {
+      "reason": "Demonstrates SV-seq can resolve partial duplication architecture and reclassify VUS, improving prenatal prognostication",
+      "source": "Prenatal Diagnosis",
+      "title": "Structural Variation Sequencing of 26 Amniotic Fluid Samples With Partial Gene Duplications and Postnatal Follow-Up of the Fetuses",
+      "url": "https://doi.org/10.1002/pd.70209"
+    },
+    {
+      "reason": "Links earlier PUV detection to worse renal outcomes, informing counseling and intervention timing discussions",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal Diagnosis of Posterior Urethral Valves: Timing of Diagnosis and Mid-Term Renal Function When Second and Third Trimester Ultrasounds Are Systematically Performed",
+      "url": "https://doi.org/10.1002/pd.70155"
+    },
+    {
+      "reason": "Shows reference chart choice substantially affects FGR prediction accuracy \u2014 prompts units to audit their Doppler standards",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Optimal umbilical artery Doppler chart for predicting placenta-mediated fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70222"
+    }
+  ],
+  "generated_at": "2026-07-01T10:08:57.478664+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Intrauterine transfusion for parvovirus B19 fetal anemia carries an 18% complication rate with 10% intracranial hemorrhage; survival is halved when complications occur, and hydrops amplifies risk.",
+      "confidence": "medium",
+      "id": "claim_ozbakir",
+      "source_ids": [
+        "ozbakir2026"
+      ]
+    },
+    {
+      "claim": "Integrating cell-free DNA single-gene disorder screening with systematic prenatal imaging improves clinical interpretation for 25 dominant conditions.",
+      "confidence": "low",
+      "id": "claim_araji",
+      "source_ids": [
+        "araji2026"
+      ]
+    },
+    {
+      "claim": "Structural variation sequencing resolved partial gene duplication architecture in all tested amniotic fluid samples, enabling VUS reclassification and improved prognostication.",
+      "confidence": "medium",
+      "id": "claim_qin",
+      "source_ids": [
+        "qin2026"
+      ]
+    },
+    {
+      "claim": "Second-trimester diagnosis of posterior urethral valves is associated with significantly worse mid-term renal function compared to third-trimester detection.",
+      "confidence": "medium",
+      "id": "claim_pecorelli",
+      "source_ids": [
+        "pecorelli2026"
+      ]
+    },
+    {
+      "claim": "The choice of umbilical artery Doppler PI reference chart substantially affects predictive accuracy for placenta-mediated fetal growth restriction outcomes.",
+      "confidence": "medium",
+      "id": "claim_vayenas",
+      "source_ids": [
+        "vayenas2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "\u00d6zbakir",
+      "id": "ozbakir2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Intrauterine Transfusions in Fetuses Affected by Parvovirus B19: Complications, Challenges and Outcomes",
+      "url": "https://doi.org/10.1002/pd.70107",
+      "why_it_matters": "Quantifies real-world IUT complication rates during parvovirus epidemic, with 10% ICH and survival halved when complications occur \u2014 essential for pre-procedure counseling",
+      "year": 2026
+    },
+    {
+      "author": "Araji",
+      "id": "araji2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Enhancing Prenatal Genetic Evaluation Through the Combination of Single-Gene Non-Invasive Prenatal Screening and Prenatal Imaging",
+      "url": "https://doi.org/10.1002/pd.70204",
+      "why_it_matters": "Provides practical framework for integrating cfDNA single-gene screening with multimodal imaging to improve result interpretation",
+      "year": 2026
+    },
+    {
+      "author": "Qin",
+      "id": "qin2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Structural Variation Sequencing of 26 Amniotic Fluid Samples With Partial Gene Duplications and Postnatal Follow-Up of the Fetuses",
+      "url": "https://doi.org/10.1002/pd.70209",
+      "why_it_matters": "Demonstrates SV-seq can resolve partial duplication architecture and reclassify VUS, improving prenatal prognostication",
+      "year": 2026
+    },
+    {
+      "author": "Pecorelli",
+      "id": "pecorelli2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal Diagnosis of Posterior Urethral Valves: Timing of Diagnosis and Mid-Term Renal Function When Second and Third Trimester Ultrasounds Are Systematically Performed",
+      "url": "https://doi.org/10.1002/pd.70155",
+      "why_it_matters": "Links earlier PUV detection to worse renal outcomes, informing counseling and intervention timing discussions",
+      "year": 2026
+    },
+    {
+      "author": "Vayenas",
+      "id": "vayenas2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Optimal umbilical artery Doppler chart for predicting placenta-mediated fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70222",
+      "why_it_matters": "Shows reference chart choice substantially affects FGR prediction accuracy \u2014 prompts units to audit their Doppler standards",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "\u00d6zbakir et al. - Prenatal Diagnosis - 2026 - Intrauterine Transfusions in Fetuses Affected by Parvovirus B19: Complications, Challenges and Outcomes (https://doi.org/10.1002/pd.70107)",
+    "Araji et al. - Prenatal Diagnosis - 2026 - Enhancing Prenatal Genetic Evaluation Through the Combination of Single-Gene Non-Invasive Prenatal Screening and Prenatal Imaging (https://doi.org/10.1002/pd.70204)",
+    "Qin et al. - Prenatal Diagnosis - 2026 - Structural Variation Sequencing of 26 Amniotic Fluid Samples With Partial Gene Duplications and Postnatal Follow-Up of the Fetuses (https://doi.org/10.1002/pd.70209)",
+    "Pecorelli et al. - Prenatal Diagnosis - 2026 - Prenatal Diagnosis of Posterior Urethral Valves: Timing of Diagnosis and Mid-Term Renal Function When Second and Third Trimester Ultrasounds Are Systematically Performed (https://doi.org/10.1002/pd.70155)",
+    "Vayenas et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Optimal umbilical artery Doppler chart for predicting placenta-mediated fetal growth restriction (https://doi.org/10.1002/uog.70222)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/07/01",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1098
+}
