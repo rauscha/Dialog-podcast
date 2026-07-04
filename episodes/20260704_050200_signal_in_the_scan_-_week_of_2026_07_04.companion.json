@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260704_050200_signal_in_the_scan_-_week_of_2026_07_04.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Structural Problem"
+    },
+    {
+      "start_sec": 50.55,
+      "start_time": "0:51",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 101.09,
+      "start_time": "1:41",
+      "title": "\u2014 Headline: The Finding and the Definitional Caveat"
+    },
+    {
+      "start_sec": 151.64,
+      "start_time": "2:32",
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "start_sec": 202.19,
+      "start_time": "3:22",
+      "title": "\u2014 Pivot and Round 1: Kitaguchi (AI Surgical Overlay)"
+    },
+    {
+      "start_sec": 252.74,
+      "start_time": "4:13",
+      "title": "\u2014 Round 2: Abiodun-Ojo (PSMA-11 vs Fluciclovine)"
+    },
+    {
+      "start_sec": 303.28,
+      "start_time": "5:03",
+      "title": "\u2014 Round 3: Ranieri Guimaraes (SCOT-HEART Body Composition)"
+    },
+    {
+      "start_sec": 353.83,
+      "start_time": "5:54",
+      "title": "\u2014 Round 4: Shin (H&E Neoadjuvant Response Prediction)"
+    },
+    {
+      "start_sec": 404.38,
+      "start_time": "6:44",
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260704_050200_signal_in_the_scan_-_week_of_2026_07_04.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260704_050200_signal_in_the_scan_-_week_of_2026_07_04.companion.json",
+  "duration_sec": 499.926916,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Demonstrates that FIGO 2023 molecular criteria reduce MRI-pathology concordance, forcing a rethink of preoperative imaging workflows in endometrial cancer.",
+      "source": "Radiology",
+      "title": "Pelvic MRI in Endometrial Cancer Staging: A Retrospective Evaluation of the Impact of FIGO 2023",
+      "url": "https://doi.org/10.1148/radiol.252037"
+    },
+    {
+      "reason": "Shows AI overlay can meaningfully improve intraoperative anatomical identification, with implications for reducing surgical complications in pelvic oncology.",
+      "source": "NPJ Digit Med",
+      "title": "Enhancing anatomical recognition by surgeons during pelvic lymph node dissection using artificial intelligence",
+      "url": "https://doi.org/10.1038/s41746-026-02936-4"
+    },
+    {
+      "reason": "RCT-derived evidence that PSMA-11 PET/CT changes salvage RT planning more than fluciclovine, informing tracer selection in recurrent prostate cancer.",
+      "source": "Radiology",
+      "title": "18F-Fluciclovine or 68Ga-PSMA-11 PET/CT-guided Salvage Radiotherapy Changes in Postprostatectomy Biochemical Recurrence: Secondary Analysis of the EMPIRE-2 Trial",
+      "url": "https://doi.org/10.1148/radiol.251874"
+    },
+    {
+      "reason": "Demonstrates that ML-extracted body composition from routine coronary CTA adds independent prognostic value for hard cardiovascular endpoints over 10 years.",
+      "source": "Radiology",
+      "title": "Machine Learning Multiorgan Analysis of Coronary CT Angiography Body Composition, Myocardial Infarction, and Mortality in the SCOT-HEART Trial",
+      "url": "https://doi.org/10.1148/radiol.251821"
+    },
+    {
+      "reason": "Synthesizes the state of AI for neoadjuvant response prediction, highlighting promising accuracy but critical gaps in external validation and standardization.",
+      "source": "NPJ Digit Med",
+      "title": "Predicting response to neoadjuvant therapy using artificial intelligence on digitized histopathology slides: a systematic review",
+      "url": "https://doi.org/10.1038/s41746-026-02947-1"
+    }
+  ],
+  "generated_at": "2026-07-04T10:09:14.204768+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "FIGO 2023 staging criteria reduce MRI-pathology concordance in endometrial cancer because molecular subtype information is inaccessible to preoperative imaging.",
+      "confidence": "medium",
+      "id": "claim_avesani",
+      "source_ids": [
+        "avesani2026"
+      ]
+    },
+    {
+      "claim": "AI-generated anatomical overlays during pelvic lymph node dissection significantly improve surgeons' sensitivity and specificity for identifying critical structures.",
+      "confidence": "medium",
+      "id": "claim_kitaguchi",
+      "source_ids": [
+        "kitaguchi2026"
+      ]
+    },
+    {
+      "claim": "PSMA-11 PET/CT leads to more frequent alterations in salvage radiotherapy planning than fluciclovine PET/CT in post-prostatectomy biochemical recurrence.",
+      "confidence": "high",
+      "id": "claim_abiodunojo",
+      "source_ids": [
+        "abiodunojo2026"
+      ]
+    },
+    {
+      "claim": "Machine learning-derived body composition metrics from coronary CTA independently predict 10-year mortality and myocardial infarction.",
+      "confidence": "medium",
+      "id": "claim_ranieri",
+      "source_ids": [
+        "ranieri2026"
+      ]
+    },
+    {
+      "claim": "AI models applied to H&E biopsy slides can predict neoadjuvant therapy response with AUCs of 0.70\u20130.90, but external validation and methodological standardization remain inadequate.",
+      "confidence": "medium",
+      "id": "claim_shin",
+      "source_ids": [
+        "shin2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Avesani",
+      "id": "avesani2026",
+      "publication": "Radiology",
+      "title": "Pelvic MRI in Endometrial Cancer Staging: A Retrospective Evaluation of the Impact of FIGO 2023",
+      "url": "https://doi.org/10.1148/radiol.252037",
+      "why_it_matters": "Demonstrates that FIGO 2023 molecular criteria reduce MRI-pathology concordance, forcing a rethink of preoperative imaging workflows in endometrial cancer.",
+      "year": 2026
+    },
+    {
+      "author": "Kitaguchi",
+      "id": "kitaguchi2026",
+      "publication": "NPJ Digit Med",
+      "title": "Enhancing anatomical recognition by surgeons during pelvic lymph node dissection using artificial intelligence",
+      "url": "https://doi.org/10.1038/s41746-026-02936-4",
+      "why_it_matters": "Shows AI overlay can meaningfully improve intraoperative anatomical identification, with implications for reducing surgical complications in pelvic oncology.",
+      "year": 2026
+    },
+    {
+      "author": "Abiodun-Ojo",
+      "id": "abiodunojo2026",
+      "publication": "Radiology",
+      "title": "18F-Fluciclovine or 68Ga-PSMA-11 PET/CT-guided Salvage Radiotherapy Changes in Postprostatectomy Biochemical Recurrence: Secondary Analysis of the EMPIRE-2 Trial",
+      "url": "https://doi.org/10.1148/radiol.251874",
+      "why_it_matters": "RCT-derived evidence that PSMA-11 PET/CT changes salvage RT planning more than fluciclovine, informing tracer selection in recurrent prostate cancer.",
+      "year": 2026
+    },
+    {
+      "author": "Ranieri Guimaraes",
+      "id": "ranieri2026",
+      "publication": "Radiology",
+      "title": "Machine Learning Multiorgan Analysis of Coronary CT Angiography Body Composition, Myocardial Infarction, and Mortality in the SCOT-HEART Trial",
+      "url": "https://doi.org/10.1148/radiol.251821",
+      "why_it_matters": "Demonstrates that ML-extracted body composition from routine coronary CTA adds independent prognostic value for hard cardiovascular endpoints over 10 years.",
+      "year": 2026
+    },
+    {
+      "author": "Shin",
+      "id": "shin2026",
+      "publication": "NPJ Digit Med",
+      "title": "Predicting response to neoadjuvant therapy using artificial intelligence on digitized histopathology slides: a systematic review",
+      "url": "https://doi.org/10.1038/s41746-026-02947-1",
+      "why_it_matters": "Synthesizes the state of AI for neoadjuvant response prediction, highlighting promising accuracy but critical gaps in external validation and standardization.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Avesani et al. - Radiology - 2026 - Pelvic MRI in Endometrial Cancer Staging: A Retrospective Evaluation of the Impact of FIGO 2023 (https://doi.org/10.1148/radiol.252037)",
+    "Kitaguchi et al. - NPJ Digit Med - 2026 - Enhancing anatomical recognition by surgeons during pelvic lymph node dissection using artificial intelligence (https://doi.org/10.1038/s41746-026-02936-4)",
+    "Abiodun-Ojo et al. - Radiology - 2026 - 18F-Fluciclovine or 68Ga-PSMA-11 PET/CT-guided Salvage Radiotherapy Changes in Postprostatectomy Biochemical Recurrence: Secondary Analysis of the EMPIRE-2 Trial (https://doi.org/10.1148/radiol.251874)",
+    "Ranieri Guimaraes - Radiology - 2026 - Machine Learning Multiorgan Analysis of Coronary CT Angiography Body Composition, Myocardial Infarction, and Mortality in the SCOT-HEART Trial (https://doi.org/10.1148/radiol.251821)",
+    "Shin et al. - NPJ Digit Med - 2026 - Predicting response to neoadjuvant therapy using artificial intelligence on digitized histopathology slides: a systematic review (https://doi.org/10.1038/s41746-026-02947-1)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/07/04",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1151
+}

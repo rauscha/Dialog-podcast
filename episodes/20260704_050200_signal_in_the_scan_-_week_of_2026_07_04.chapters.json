@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Structural Problem"
+    },
+    {
+      "startTime": 50.55,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 101.09,
+      "title": "\u2014 Headline: The Finding and the Definitional Caveat"
+    },
+    {
+      "startTime": 151.64,
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "startTime": 202.19,
+      "title": "\u2014 Pivot and Round 1: Kitaguchi (AI Surgical Overlay)"
+    },
+    {
+      "startTime": 252.74,
+      "title": "\u2014 Round 2: Abiodun-Ojo (PSMA-11 vs Fluciclovine)"
+    },
+    {
+      "startTime": 303.28,
+      "title": "\u2014 Round 3: Ranieri Guimaraes (SCOT-HEART Body Composition)"
+    },
+    {
+      "startTime": 353.83,
+      "title": "\u2014 Round 4: Shin (H&E Neoadjuvant Response Prediction)"
+    },
+    {
+      "startTime": 404.38,
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
