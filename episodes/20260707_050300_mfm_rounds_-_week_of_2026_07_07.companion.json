@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260707_050300_mfm_rounds_-_week_of_2026_07_07.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Counseling Sentence That Changed"
+    },
+    {
+      "start_sec": 44.09,
+      "start_time": "0:44",
+      "title": "\u2014 Headline: Study Identity and Design Rationale"
+    },
+    {
+      "start_sec": 88.17,
+      "start_time": "1:28",
+      "title": "\u2014 Headline: The Finding and What the Numbers Actually Say"
+    },
+    {
+      "start_sec": 132.26,
+      "start_time": "2:12",
+      "title": "\u2014 Headline: Practice Impact and the Fetal Outcome Gap"
+    },
+    {
+      "start_sec": 176.35,
+      "start_time": "2:56",
+      "title": "\u2014 Pivot + Round 1: Spinillo CP Umbrella Review"
+    },
+    {
+      "start_sec": 220.43,
+      "start_time": "3:40",
+      "title": "\u2014 Round 2: Boelig Cerclage Meta-Analysis"
+    },
+    {
+      "start_sec": 264.52,
+      "start_time": "4:25",
+      "title": "\u2014 Round 3: Ani Cost-Effectiveness Analysis"
+    },
+    {
+      "start_sec": 308.61,
+      "start_time": "5:09",
+      "title": "\u2014 Round 4: Moon-Grady Fetal Cardiac Intervention in Hydrops"
+    },
+    {
+      "start_sec": 352.69,
+      "start_time": "5:53",
+      "title": "\u2014 Close: What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260707_050300_mfm_rounds_-_week_of_2026_07_07.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260707_050300_mfm_rounds_-_week_of_2026_07_07.companion.json",
+  "duration_sec": 441.779909,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First large-scale meta-analysis addressing maternal safety of GLP-1 RAs in pregnancy; directly relevant to preconception counseling as prescribing expands",
+      "source": "Obstet Gynecol",
+      "title": "Glucagon-Like Peptide-1 Receptor Agonists and Risk of Adverse Maternal Pregnancy Outcomes: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006363"
+    },
+    {
+      "reason": "Comprehensive synthesis of 43 CP risk factors with evidence grading; useful reference for structured counseling",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Antenatal, pregnancy and delivery risk factors for infant cerebral palsy: an umbrella review of meta-analyses and systematic reviews",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101990"
+    },
+    {
+      "reason": "Directly addresses a contested clinical indication using RCT-level evidence; informs shared decision-making",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Outcomes with cerclage for short cervix \u226420.9mm before 24 weeks in singletons without prior preterm birth: a focused meta-analysis of randomized controlled trials",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102048"
+    },
+    {
+      "reason": "Provides health-economic justification for FMF screening adoption at policy level",
+      "source": "BJOG",
+      "title": "First Trimester Screening for Preterm Preeclampsia in the United Kingdom: A Cost-Effectiveness Analysis",
+      "url": "https://doi.org/10.1111/1471-0528.70294"
+    },
+    {
+      "reason": "Largest multicenter dataset on fetal cardiac intervention in hydrops; informs case selection at specialized centers",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry (IFCIR)",
+      "url": "https://doi.org/10.1002/uog.70245"
+    }
+  ],
+  "generated_at": "2026-07-07T10:09:52.653346+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Periconceptional GLP-1 receptor agonist exposure is not associated with a statistically significant increase in adverse maternal pregnancy outcomes, though confidence intervals remain wide.",
+      "confidence": "medium",
+      "id": "claim_glp1",
+      "source_ids": [
+        "hattler_2026"
+      ]
+    },
+    {
+      "claim": "Forty-three antenatal and delivery factors, including pre-pregnancy obesity, are significantly associated with infant cerebral palsy based on pooled meta-analytic evidence.",
+      "confidence": "high",
+      "id": "claim_cp",
+      "source_ids": [
+        "spinillo_2026"
+      ]
+    },
+    {
+      "claim": "RCT-level evidence on cerclage for short cervix at or below 20.9 mm before 24 weeks in singletons without prior preterm birth has been synthesized, addressing a clinically debated indication.",
+      "confidence": "high",
+      "id": "claim_cerclage",
+      "source_ids": [
+        "boelig_2026"
+      ]
+    },
+    {
+      "claim": "FMF combined first-trimester screening for preterm preeclampsia is cost-effective compared to NICE criteria in the UK NHS when aspirin prophylaxis is applied.",
+      "confidence": "medium",
+      "id": "claim_fmf",
+      "source_ids": [
+        "ani_2026"
+      ]
+    },
+    {
+      "claim": "In-utero cardiac intervention in selected hydropic fetuses with congenital heart disease may improve survival compared to expectant management.",
+      "confidence": "low",
+      "id": "claim_fci",
+      "source_ids": [
+        "moongrady_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Hattler",
+      "id": "hattler_2026",
+      "publication": "Obstet Gynecol",
+      "title": "Glucagon-Like Peptide-1 Receptor Agonists and Risk of Adverse Maternal Pregnancy Outcomes: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006363",
+      "why_it_matters": "First large-scale meta-analysis addressing maternal safety of GLP-1 RAs in pregnancy; directly relevant to preconception counseling as prescribing expands",
+      "year": 2026
+    },
+    {
+      "author": "Spinillo",
+      "id": "spinillo_2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Antenatal, pregnancy and delivery risk factors for infant cerebral palsy: an umbrella review of meta-analyses and systematic reviews",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.101990",
+      "why_it_matters": "Comprehensive synthesis of 43 CP risk factors with evidence grading; useful reference for structured counseling",
+      "year": 2026
+    },
+    {
+      "author": "Boelig",
+      "id": "boelig_2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Outcomes with cerclage for short cervix \u226420.9mm before 24 weeks in singletons without prior preterm birth: a focused meta-analysis of randomized controlled trials",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102048",
+      "why_it_matters": "Directly addresses a contested clinical indication using RCT-level evidence; informs shared decision-making",
+      "year": 2026
+    },
+    {
+      "author": "Ani",
+      "id": "ani_2026",
+      "publication": "BJOG",
+      "title": "First Trimester Screening for Preterm Preeclampsia in the United Kingdom: A Cost-Effectiveness Analysis",
+      "url": "https://doi.org/10.1111/1471-0528.70294",
+      "why_it_matters": "Provides health-economic justification for FMF screening adoption at policy level",
+      "year": 2026
+    },
+    {
+      "author": "Moon-Grady",
+      "id": "moongrady_2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry (IFCIR)",
+      "url": "https://doi.org/10.1002/uog.70245",
+      "why_it_matters": "Largest multicenter dataset on fetal cardiac intervention in hydrops; informs case selection at specialized centers",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Hattler et al. - Obstet Gynecol - 2026 - Glucagon-Like Peptide-1 Receptor Agonists and Risk of Adverse Maternal Pregnancy Outcomes: A Systematic Review and Meta-analysis (https://doi.org/10.1097/aog.0000000000006363)",
+    "Spinillo et al. - Am J Obstet Gynecol MFM - 2026 - Antenatal, pregnancy and delivery risk factors for infant cerebral palsy: an umbrella review of meta-analyses and systematic reviews (https://doi.org/10.1016/j.ajogmf.2026.101990)",
+    "Boelig et al. - Am J Obstet Gynecol MFM - 2026 - Outcomes with cerclage for short cervix \u226420.9mm before 24 weeks in singletons without prior preterm birth: a focused meta-analysis of randomized controlled trials (https://doi.org/10.1016/j.ajogmf.2026.102048)",
+    "Ani et al. - BJOG - 2026 - First Trimester Screening for Preterm Preeclampsia in the United Kingdom: A Cost-Effectiveness Analysis (https://doi.org/10.1111/1471-0528.70294)",
+    "Moon-Grady et al. - Ultrasound Obstet Gynecol - 2026 - Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry (IFCIR) (https://doi.org/10.1002/uog.70245)"
+  ],
+  "topic": "MFM Rounds - week of 2026/07/07",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1077
+}

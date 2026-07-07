@@ -1,0 +1,41 @@
+CASPAR [direct]: The question every MFM is fielding right now: a patient presents at eight weeks, conceived on semaglutide, discontinued at five or six weeks. What's the maternal risk sentence? Until this week, the honest answer had a specific gap — no large-N synthesis of post-licensure maternal outcomes. That gap is now partially closed.
+JUNO [precise]: Partially. The scope is specific, and both facts have to travel together.
+CASPAR [grounded]: From Obstetrics and Gynecology, 2026: Hattler and colleagues, a systematic review and meta-analysis pooling nearly 187,000 pregnancies — GLP-1 receptor agonist exposure and adverse maternal outcomes.
+JUNO [pressing]: Design first. Why observational pooling and not something cleaner?
+CASPAR [plain]: Because you can't randomize pregnant patients to semaglutide. That's an ethical constraint, not a methodological choice. The evidence score of 0.4 reflects residual confounding — it doesn't mean the design was wrong.
+JUNO [holding]: The confounding is the part I want named explicitly. Obesity and diabetes are the indication. They're also independent risk factors for every outcome in this analysis.
+CASPAR [flat]: Yes. And the authors can't fully separate them. What makes the null result harder to dismiss is the denominator — 186,598 pregnancies. At that scale, the underpowered objection is substantially harder to sustain than it was against any prior single-cohort signal.
+JUNO [short]: Endpoints?
+CASPAR [specific]: Four primary maternal outcomes: gestational diabetes, hypertensive disorders, cesarean delivery, postpartum hemorrhage. No statistically significant increase across any of them in the pooled estimate.
+JUNO [careful]: Confidence intervals?
+CASPAR [direct]: Wide. A modest increase in harm is not excluded. The pooled estimate sits in a range that doesn't alarm, but it doesn't deliver precision either. And there's agent-level heterogeneity the analysis doesn't resolve — semaglutide and tirzepatide have meaningfully different half-lives, and the pooled estimate doesn't stratify by agent.
+JUNO [noting]: So the exposure window is doing real work here.
+CASPAR [yes]: Periconceptional or early first-trimester, predominantly discontinued on pregnancy recognition. That is the window this paper covers. Not continuation throughout gestation. If a patient was on tirzepatide through the second trimester, this analysis doesn't speak to her.
+JUNO [clinical]: So what actually changes in the counseling room?
+CASPAR [measured]: The sentence for inadvertent periconceptional exposure with early discontinuation. Previously you were saying: prelicensure signals are reassuring, post-licensure data are limited. Now you can say: the largest pooled analysis available — nearly 187,000 pregnancies — shows no statistically significant increase in adverse maternal outcomes across the four endpoints we were most concerned about, with the caveat that confidence intervals remain wide and agent-level precision isn't available. Those are not interchangeable sentences.
+JUNO [holding the line]: Default guidance?
+CASPAR [unchanged]: Discontinue before conception. This paper lowers the alarm level for inadvertent exposures. It does not revise the preconception recommendation.
+JUNO [flat]: Fetal outcomes.
+CASPAR [explicit]: Explicitly outside this analysis. Not addressed. The maternal null result does not extend to fetal or neonatal outcomes. That question is uncharacterized at this scale.
+JUNO [dry]: Both of those facts travel together.
+CASPAR [equally flat]: They do.
+JUNO [pivoting]: Rounds — four other things this week.
+CASPAR [moving]: From AJOG MFM, 2026: Spinillo and colleagues, an umbrella review of 35 meta-analyses — antenatal, pregnancy, and delivery risk factors for infant cerebral palsy. Forty-three factors with statistically significant associations, stratified by evidence strength. Pre-pregnancy obesity among the more robust.
+JUNO [clinical hook]: That's the one worth pulling into structured preconception counseling. Modifiable, and consistently underweighted relative to intrapartum events in most medicolegal framing of CP.
+CASPAR [caveat]: The review inherits the heterogeneity of its source meta-analyses. Use it as a reference document. The stratification is what makes it useful, not the aggregate count.
+JUNO [next]: From AJOG MFM, 2026: Boelig and colleagues, a focused meta-analysis of randomized controlled trials — cerclage for short cervix at or below 20.9 millimeters before 24 weeks in singletons without prior preterm birth.
+CASPAR [grounded]: This is the contested indication where practice varies most. The pooled sample size remains limited — effect estimates carry more uncertainty than the RCT framing might suggest, and they may shift as more trials report.
+JUNO [clinical]: For the patient in that gray zone — short cervix, no prior PTB, singleton — this is now the reference for the shared decision-making conversation. With the uncertainty stated explicitly.
+CASPAR [agreed]: Best current synthesis for a question that didn't have one.
+JUNO [moving]: From BJOG, 2026: Ani and colleagues, a cost-effectiveness analysis — first-trimester FMF screening for preterm preeclampsia in the UK NHS.
+CASPAR [one sentence]: FMF combined first-trimester screening is cost-effective versus NICE criteria in the UK NHS when aspirin prophylaxis is applied to screen-positive patients.
+JUNO [scope]: The clinical efficacy case is established. What Ani adds is the economic column — the piece that actually moves policy committees.
+CASPAR [limit]: The model is sensitive to local prevalence, aspirin uptake rates, and cost structures that differ substantially outside the UK. If your unit is still running NICE criteria and the budget conversation is coming, this is the paper that adds the economic argument. Outside the NHS, you need local modeling before citing the number.
+JUNO [final round]: From Ultrasound in Obstetrics and Gynecology, 2026: Moon-Grady and colleagues, international registry data on 91 hydropic fetuses — in-utero cardiac intervention and survival.
+CASPAR [caveat first]: Selection bias is structural here, not adjustable. Centers and families who opt for intervention differ systematically from those who don't, and that difference isn't captured in registry data. The survival signal has to be read through that lens before it gets cited.
+JUNO [holding]: And for a family facing that conversation — hydropic fetus, congenital heart disease, expectant management carrying dismal prognosis — this is the best available data. Ninety-one cases, multicenter, largest dataset on this indication. It belongs in the room.
+CASPAR [flat]: With the selection structure named as part of the sentence, not as a footnote to it.
+JUNO [close]: Three things still open after this week.
+CASPAR [naming them]: GLP-1 RA fetal outcomes — no large-N synthesis exists, and the maternal null result doesn't reach there. The cerclage threshold — exactly where the benefit boundary sits in this subgroup, and whether cervical length and gestational age interact in ways the Boelig synthesis can't yet resolve. And fetal cardiac intervention selection — which hydropic fetuses with CHD benefit most, and whether prospective criteria can be defined before broader adoption.
+JUNO [short]: None of those are answered by this week's data.
+CASPAR [equally short]: No. Full citations and DOIs in the show notes.

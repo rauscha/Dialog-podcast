@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Counseling Sentence That Changed"
+    },
+    {
+      "startTime": 44.09,
+      "title": "\u2014 Headline: Study Identity and Design Rationale"
+    },
+    {
+      "startTime": 88.17,
+      "title": "\u2014 Headline: The Finding and What the Numbers Actually Say"
+    },
+    {
+      "startTime": 132.26,
+      "title": "\u2014 Headline: Practice Impact and the Fetal Outcome Gap"
+    },
+    {
+      "startTime": 176.35,
+      "title": "\u2014 Pivot + Round 1: Spinillo CP Umbrella Review"
+    },
+    {
+      "startTime": 220.43,
+      "title": "\u2014 Round 2: Boelig Cerclage Meta-Analysis"
+    },
+    {
+      "startTime": 264.52,
+      "title": "\u2014 Round 3: Ani Cost-Effectiveness Analysis"
+    },
+    {
+      "startTime": 308.61,
+      "title": "\u2014 Round 4: Moon-Grady Fetal Cardiac Intervention in Hydrops"
+    },
+    {
+      "startTime": 352.69,
+      "title": "\u2014 Close: What Remains Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
