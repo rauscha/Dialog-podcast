@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260708_050201_the_fetal_frontier_-_week_of_2026_07_08.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week's Lead Paper Changes"
+    },
+    {
+      "start_sec": 40.49,
+      "start_time": "0:40",
+      "title": "\u2014 Headline: Design and Why IFCIR Earns Its Evidence Grade"
+    },
+    {
+      "start_sec": 80.99,
+      "start_time": "1:21",
+      "title": "\u2014 Headline: The Survival Signal and What the Numbers Show"
+    },
+    {
+      "start_sec": 121.48,
+      "start_time": "2:01",
+      "title": "\u2014 Headline: The Selection-Bias Mechanism and What It Means for Citation"
+    },
+    {
+      "start_sec": 161.97,
+      "start_time": "2:42",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 202.47,
+      "start_time": "3:22",
+      "title": "\u2014 Round 1: Kyhl-Svart, ART and Minor CHD"
+    },
+    {
+      "start_sec": 242.96,
+      "start_time": "4:03",
+      "title": "\u2014 Round 2: Nair, Fetal Sinus Bradycardia Spectrum"
+    },
+    {
+      "start_sec": 283.45,
+      "start_time": "4:43",
+      "title": "\u2014 Round 3: Li, Genomic Yield in Fetal Polydactyly"
+    },
+    {
+      "start_sec": 323.94,
+      "start_time": "5:24",
+      "title": "\u2014 Round 4: Jiang, NIPT for Rare Autosomal Trisomies"
+    },
+    {
+      "start_sec": 364.44,
+      "start_time": "6:04",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260708_050201_the_fetal_frontier_-_week_of_2026_07_08.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260708_050201_the_fetal_frontier_-_week_of_2026_07_08.companion.json",
+  "duration_sec": 449.930748,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Largest multicenter dataset on fetal cardiac intervention in hydrops; supports survival benefit and informs referral decisions for this high-acuity population.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry (IFCIR)",
+      "url": "https://doi.org/10.1002/uog.70245"
+    },
+    {
+      "reason": "Extends ART-CHD association to minor defects; may shift prenatal cardiac screening recommendations for ART pregnancies.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Risk of minor congenital heart defect in infants conceived via assisted reproductive technology: cohort study from the Copenhagen Baby Heart Study",
+      "url": "https://doi.org/10.1002/uog.70246"
+    },
+    {
+      "reason": "Clarifies that fetal sinus bradycardia can herald serious inherited arrhythmia or structural disease; argues against dismissing this finding as benign.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Spectrum of potentially lethal cardiac conditions presenting with fetal sinus bradycardia: a report on 34 cases",
+      "url": "https://doi.org/10.1002/uog.70260"
+    },
+    {
+      "reason": "Quantifies genetic diagnostic yield in fetal polydactyly; guides invasive testing decisions based on isolated versus syndromic presentation.",
+      "source": "Prenat Diagn",
+      "title": "Genomic Landscape and Perinatal Outcomes of Fetal Polydactyly: A Retrospective Cohort Study Integrating CNV-seq and Trio-ES",
+      "url": "https://doi.org/10.1002/pd.70216"
+    },
+    {
+      "reason": "Demonstrates very low PPV for NIPT-flagged rare autosomal trisomies; essential for calibrating patient counseling and avoiding overintervention.",
+      "source": "Prenat Diagn",
+      "title": "High Risk for Rare Autosomal Trisomies Detected by Non-Invasive Prenatal Testing: Prenatal Diagnosis and Pregnancy Outcomes",
+      "url": "https://doi.org/10.1002/pd.70181"
+    }
+  ],
+  "generated_at": "2026-07-08T10:10:10.230498+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Invasive fetal cardiac intervention in hydropic fetuses with CHD is associated with improved survival compared to expectant management.",
+      "confidence": "medium",
+      "id": "moon-grady-2026",
+      "source_ids": [
+        "moon-grady-2026"
+      ]
+    },
+    {
+      "claim": "ART-conceived singletons have elevated risk of minor congenital heart defects, not just major CHD.",
+      "confidence": "high",
+      "id": "kyhl-svart-2026",
+      "source_ids": [
+        "kyhl-svart-2026"
+      ]
+    },
+    {
+      "claim": "Fetal sinus bradycardia can be the presenting sign of serious inherited arrhythmia syndromes or structural cardiac disease with postnatal consequences.",
+      "confidence": "low",
+      "id": "nair-2026",
+      "source_ids": [
+        "nair-2026"
+      ]
+    },
+    {
+      "claim": "Combined CNV-seq and trio-exome sequencing achieves 36 percent diagnostic yield in fetal polydactyly overall, rising to 61 percent in non-isolated cases with specific anatomical patterns.",
+      "confidence": "medium",
+      "id": "li-2026",
+      "source_ids": [
+        "li-2026"
+      ]
+    },
+    {
+      "claim": "NIPT high-risk results for rare autosomal trisomies have a PPV of approximately 4.5 percent; maternal CNVs are a frequent confounder and UPD disorders are not detected.",
+      "confidence": "medium",
+      "id": "jiang-2026",
+      "source_ids": [
+        "jiang-2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Moon-Grady",
+      "id": "moon-grady-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry (IFCIR)",
+      "url": "https://doi.org/10.1002/uog.70245",
+      "why_it_matters": "Largest multicenter dataset on fetal cardiac intervention in hydrops; supports survival benefit and informs referral decisions for this high-acuity population.",
+      "year": 2026
+    },
+    {
+      "author": "Kyhl-Svart",
+      "id": "kyhl-svart-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Risk of minor congenital heart defect in infants conceived via assisted reproductive technology: cohort study from the Copenhagen Baby Heart Study",
+      "url": "https://doi.org/10.1002/uog.70246",
+      "why_it_matters": "Extends ART-CHD association to minor defects; may shift prenatal cardiac screening recommendations for ART pregnancies.",
+      "year": 2026
+    },
+    {
+      "author": "Nair",
+      "id": "nair-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Spectrum of potentially lethal cardiac conditions presenting with fetal sinus bradycardia: a report on 34 cases",
+      "url": "https://doi.org/10.1002/uog.70260",
+      "why_it_matters": "Clarifies that fetal sinus bradycardia can herald serious inherited arrhythmia or structural disease; argues against dismissing this finding as benign.",
+      "year": 2026
+    },
+    {
+      "author": "Li",
+      "id": "li-2026",
+      "publication": "Prenat Diagn",
+      "title": "Genomic Landscape and Perinatal Outcomes of Fetal Polydactyly: A Retrospective Cohort Study Integrating CNV-seq and Trio-ES",
+      "url": "https://doi.org/10.1002/pd.70216",
+      "why_it_matters": "Quantifies genetic diagnostic yield in fetal polydactyly; guides invasive testing decisions based on isolated versus syndromic presentation.",
+      "year": 2026
+    },
+    {
+      "author": "Jiang",
+      "id": "jiang-2026",
+      "publication": "Prenat Diagn",
+      "title": "High Risk for Rare Autosomal Trisomies Detected by Non-Invasive Prenatal Testing: Prenatal Diagnosis and Pregnancy Outcomes",
+      "url": "https://doi.org/10.1002/pd.70181",
+      "why_it_matters": "Demonstrates very low PPV for NIPT-flagged rare autosomal trisomies; essential for calibrating patient counseling and avoiding overintervention.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Moon-Grady et al. - Ultrasound Obstet Gynecol - 2026 - Invasive in-utero cardiac intervention in the hydropic fetus may improve survival: results from the International Fetal Cardiac Intervention Registry (IFCIR) (https://doi.org/10.1002/uog.70245)",
+    "Kyhl-Svart et al. - Ultrasound Obstet Gynecol - 2026 - Risk of minor congenital heart defect in infants conceived via assisted reproductive technology: cohort study from the Copenhagen Baby Heart Study (https://doi.org/10.1002/uog.70246)",
+    "Nair et al. - Ultrasound Obstet Gynecol - 2026 - Spectrum of potentially lethal cardiac conditions presenting with fetal sinus bradycardia: a report on 34 cases (https://doi.org/10.1002/uog.70260)",
+    "Li et al. - Prenat Diagn - 2026 - Genomic Landscape and Perinatal Outcomes of Fetal Polydactyly: A Retrospective Cohort Study Integrating CNV-seq and Trio-ES (https://doi.org/10.1002/pd.70216)",
+    "Jiang et al. - Prenat Diagn - 2026 - High Risk for Rare Autosomal Trisomies Detected by Non-Invasive Prenatal Testing: Prenatal Diagnosis and Pregnancy Outcomes (https://doi.org/10.1002/pd.70181)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/07/08",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1083
+}
