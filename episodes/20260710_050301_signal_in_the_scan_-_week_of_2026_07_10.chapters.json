@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Selection Problem"
+    },
+    {
+      "startTime": 57.37,
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "startTime": 114.75,
+      "title": "\u2014 Headline: The Finding and the Caveat"
+    },
+    {
+      "startTime": 172.12,
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "startTime": 229.5,
+      "title": "\u2014 Round 1: Cardiac MRI Entropy in Myocarditis (Wang)"
+    },
+    {
+      "startTime": 286.87,
+      "title": "\u2014 Round 2: Noncontrast Abbreviated MRI for HCC Post-TACE (Jeon)"
+    },
+    {
+      "startTime": 344.25,
+      "title": "\u2014 Round 3: Retinal Fundus AI for AF Prediction (Xu, NPJ)"
+    },
+    {
+      "startTime": 401.62,
+      "title": "\u2014 Round 4: RECIBM Bone Metastasis Response Criteria (Xu, Radiology)"
+    },
+    {
+      "startTime": 458.99,
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

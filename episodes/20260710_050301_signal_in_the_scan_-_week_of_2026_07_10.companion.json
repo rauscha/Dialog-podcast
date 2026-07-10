@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260710_050301_signal_in_the_scan_-_week_of_2026_07_10.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Selection Problem"
+    },
+    {
+      "start_sec": 57.37,
+      "start_time": "0:57",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 114.75,
+      "start_time": "1:55",
+      "title": "\u2014 Headline: The Finding and the Caveat"
+    },
+    {
+      "start_sec": 172.12,
+      "start_time": "2:52",
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "start_sec": 229.5,
+      "start_time": "3:49",
+      "title": "\u2014 Round 1: Cardiac MRI Entropy in Myocarditis (Wang)"
+    },
+    {
+      "start_sec": 286.87,
+      "start_time": "4:47",
+      "title": "\u2014 Round 2: Noncontrast Abbreviated MRI for HCC Post-TACE (Jeon)"
+    },
+    {
+      "start_sec": 344.25,
+      "start_time": "5:44",
+      "title": "\u2014 Round 3: Retinal Fundus AI for AF Prediction (Xu, NPJ)"
+    },
+    {
+      "start_sec": 401.62,
+      "start_time": "6:42",
+      "title": "\u2014 Round 4: RECIBM Bone Metastasis Response Criteria (Xu, Radiology)"
+    },
+    {
+      "start_sec": 458.99,
+      "start_time": "7:39",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260710_050301_signal_in_the_scan_-_week_of_2026_07_10.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260710_050301_signal_in_the_scan_-_week_of_2026_07_10.companion.json",
+  "duration_sec": 561.368413,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Identifies an imaging biomarker that may stratify which SDH patients benefit from MMA embolization, potentially rationalizing procedural selection.",
+      "source": "Radiology",
+      "title": "Hyperdense Capsule Sign at Noncontrast CT as an Indication for Middle Meningeal Artery Embolization for Nonacute Subdural Hematomas: A MAGIC-MT Trial Post Hoc Analysis",
+      "url": "https://doi.org/10.1148/radiol.251512"
+    },
+    {
+      "reason": "Adds a texture-based prognostic metric to cardiac MRI in myocarditis, independent of LGE and EF.",
+      "source": "Radiology",
+      "title": "Entropy for Prediction of MACEs in Myocarditis: A Cardiac MRI-based Biomarker of Myocardial Tissue Heterogeneity",
+      "url": "https://doi.org/10.1148/radiol.251932"
+    },
+    {
+      "reason": "Explores a contrast-sparing surveillance option for HCC patients post-TACE, relevant for renal-impaired or high-frequency imaging populations.",
+      "source": "Radiology",
+      "title": "Noncontrast Abbreviated MRI for Post-TACE Treatment Response Monitoring of Hepatocellular Carcinoma Based on Ancillary Features from LI-RADS",
+      "url": "https://doi.org/10.1148/radiol.252803"
+    },
+    {
+      "reason": "Demonstrates that retinal imaging encodes AF risk, validated across multiethnic cohorts, with potential for opportunistic screening.",
+      "source": "NPJ Digital Medicine",
+      "title": "Prediction of incident atrial fibrillation from retinal fundus images using a multimodal foundation model",
+      "url": "https://doi.org/10.1038/s41746-026-02969-9"
+    },
+    {
+      "reason": "Proposes new bone metastasis response criteria with stronger survival association than existing frameworks, addressing a gap in oncologic imaging.",
+      "source": "Radiology",
+      "title": "Response Evaluation Criteria in Bone Metastases: Performance and Association of Response Classifications with Survival Outcomes",
+      "url": "https://doi.org/10.1148/radiol.260907"
+    }
+  ],
+  "generated_at": "2026-07-10T10:11:39.860089+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "The hyperdense capsule sign on noncontrast CT identifies nonacute SDH patients who benefit from middle meningeal artery embolization; patients without the sign showed no benefit.",
+      "confidence": "high",
+      "id": "weng2026",
+      "source_ids": [
+        "weng2026"
+      ]
+    },
+    {
+      "claim": "Left ventricular entropy on cardiac MRI independently predicts major adverse cardiovascular events in acute myocarditis, adding prognostic value beyond late gadolinium enhancement and ejection fraction.",
+      "confidence": "medium",
+      "id": "wang2026",
+      "source_ids": [
+        "wang2026"
+      ]
+    },
+    {
+      "claim": "Noncontrast abbreviated MRI using LI-RADS ancillary features can detect HCC recurrence after TACE, offering a potential gadolinium-sparing surveillance option.",
+      "confidence": "medium",
+      "id": "jeon2026",
+      "source_ids": [
+        "jeon2026"
+      ]
+    },
+    {
+      "claim": "A multimodal AI model using retinal fundus images predicts incident atrial fibrillation with AUROC approximately 0.80, outperforming the CHARGE-AF clinical score across multiethnic cohorts.",
+      "confidence": "medium",
+      "id": "xu2026_af",
+      "source_ids": [
+        "xu2026_af"
+      ]
+    },
+    {
+      "claim": "New RECIBM criteria for bone metastasis response show stronger prognostic association with survival than existing response frameworks.",
+      "confidence": "medium",
+      "id": "xu2026_bone",
+      "source_ids": [
+        "xu2026_bone"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Weng",
+      "id": "weng2026",
+      "publication": "Radiology",
+      "title": "Hyperdense Capsule Sign at Noncontrast CT as an Indication for Middle Meningeal Artery Embolization for Nonacute Subdural Hematomas: A MAGIC-MT Trial Post Hoc Analysis",
+      "url": "https://doi.org/10.1148/radiol.251512",
+      "why_it_matters": "Identifies an imaging biomarker that may stratify which SDH patients benefit from MMA embolization, potentially rationalizing procedural selection.",
+      "year": 2026
+    },
+    {
+      "author": "Wang",
+      "id": "wang2026",
+      "publication": "Radiology",
+      "title": "Entropy for Prediction of MACEs in Myocarditis: A Cardiac MRI-based Biomarker of Myocardial Tissue Heterogeneity",
+      "url": "https://doi.org/10.1148/radiol.251932",
+      "why_it_matters": "Adds a texture-based prognostic metric to cardiac MRI in myocarditis, independent of LGE and EF.",
+      "year": 2026
+    },
+    {
+      "author": "Jeon",
+      "id": "jeon2026",
+      "publication": "Radiology",
+      "title": "Noncontrast Abbreviated MRI for Post-TACE Treatment Response Monitoring of Hepatocellular Carcinoma Based on Ancillary Features from LI-RADS",
+      "url": "https://doi.org/10.1148/radiol.252803",
+      "why_it_matters": "Explores a contrast-sparing surveillance option for HCC patients post-TACE, relevant for renal-impaired or high-frequency imaging populations.",
+      "year": 2026
+    },
+    {
+      "author": "Xu",
+      "id": "xu2026_af",
+      "publication": "NPJ Digital Medicine",
+      "title": "Prediction of incident atrial fibrillation from retinal fundus images using a multimodal foundation model",
+      "url": "https://doi.org/10.1038/s41746-026-02969-9",
+      "why_it_matters": "Demonstrates that retinal imaging encodes AF risk, validated across multiethnic cohorts, with potential for opportunistic screening.",
+      "year": 2026
+    },
+    {
+      "author": "Xu",
+      "id": "xu2026_bone",
+      "publication": "Radiology",
+      "title": "Response Evaluation Criteria in Bone Metastases: Performance and Association of Response Classifications with Survival Outcomes",
+      "url": "https://doi.org/10.1148/radiol.260907",
+      "why_it_matters": "Proposes new bone metastasis response criteria with stronger survival association than existing frameworks, addressing a gap in oncologic imaging.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Weng et al. - Radiology - 2026 - Hyperdense Capsule Sign at Noncontrast CT as an Indication for Middle Meningeal Artery Embolization for Nonacute Subdural Hematomas: A MAGIC-MT Trial Post Hoc Analysis (https://doi.org/10.1148/radiol.251512)",
+    "Wang et al. - Radiology - 2026 - Entropy for Prediction of MACEs in Myocarditis: A Cardiac MRI-based Biomarker of Myocardial Tissue Heterogeneity (https://doi.org/10.1148/radiol.251932)",
+    "Jeon et al. - Radiology - 2026 - Noncontrast Abbreviated MRI for Post-TACE Treatment Response Monitoring of Hepatocellular Carcinoma Based on Ancillary Features from LI-RADS (https://doi.org/10.1148/radiol.252803)",
+    "Xu et al. - NPJ Digital Medicine - 2026 - Prediction of incident atrial fibrillation from retinal fundus images using a multimodal foundation model (https://doi.org/10.1038/s41746-026-02969-9)",
+    "Xu et al. - Radiology - 2026 - Response Evaluation Criteria in Bone Metastases: Performance and Association of Response Classifications with Survival Outcomes (https://doi.org/10.1148/radiol.260907)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/07/10",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1366
+}
