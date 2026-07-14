@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260714_050223_mfm_rounds_-_week_of_2026_07_14.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Question That Needed a Trial"
+    },
+    {
+      "start_sec": 44.64,
+      "start_time": "0:45",
+      "title": "\u2014 Headline: Citation, Design, and What Earns the Evidence Grade"
+    },
+    {
+      "start_sec": 89.28,
+      "start_time": "1:29",
+      "title": "\u2014 Headline: Effect in Numbers, Then the Caveat"
+    },
+    {
+      "start_sec": 133.91,
+      "start_time": "2:14",
+      "title": "\u2014 Headline: Practice Impact, Honest Version"
+    },
+    {
+      "start_sec": 178.55,
+      "start_time": "2:59",
+      "title": "\u2014 Round 1: Lithium in Pregnancy (Roddy Mitchell)"
+    },
+    {
+      "start_sec": 223.19,
+      "start_time": "3:43",
+      "title": "\u2014 Round 2: Ischemic Placental Disease and Postpartum Brain Morbidity (Ananth)"
+    },
+    {
+      "start_sec": 267.83,
+      "start_time": "4:28",
+      "title": "\u2014 Round 3: Severe Preeclampsia Features and Morbidity Risk (Meng)"
+    },
+    {
+      "start_sec": 312.47,
+      "start_time": "5:12",
+      "title": "\u2014 Round 4: Hadlock Internal Inconsistency (Adu-Bredu)"
+    },
+    {
+      "start_sec": 357.1,
+      "start_time": "5:57",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260714_050223_mfm_rounds_-_week_of_2026_07_14.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260714_050223_mfm_rounds_-_week_of_2026_07_14.companion.json",
+  "duration_sec": 446.740975,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First RCT directly comparing cerclage techniques in the emergency setting; informs whether double-level placement justifies added complexity",
+      "source": "Am J Obstet Gynecol",
+      "title": "Double versus single emergency cervical cerclage combined with vaginal progesterone: a multicenter, non-blinded, randomized controlled trial",
+      "url": "https://doi.org/10.1016/j.ajog.2026.07.004"
+    },
+    {
+      "reason": "Large population cohort quantifying lithium-associated risks; directly actionable for preconception counseling in bipolar patients",
+      "source": "BJOG",
+      "title": "Lithium Use in Pregnancy and the Risk of Spontaneous Preterm Birth: An Australian Statewide Retrospective Cohort Study",
+      "url": "https://doi.org/10.1111/1471-0528.70301"
+    },
+    {
+      "reason": "Highlights maternal brain as target organ of placental dysfunction; supports enhanced postpartum surveillance after severe placental syndromes",
+      "source": "Am J Obstet Gynecol",
+      "title": "Ischemic Placental Disease and Hospitalization for Neurological and Psychiatric Disorders",
+      "url": "https://doi.org/10.1016/j.ajog.2026.07.008"
+    },
+    {
+      "reason": "Differentiates risk by specific severe feature; supports moving beyond binary classification toward feature-specific counseling",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Associations between individual severe features of preeclampsia and severe maternal morbidity",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102052"
+    },
+    {
+      "reason": "Identifies systematic discrepancies in widely-used reference at clinically critical thresholds; affects SGA classification decisions",
+      "source": "BJOG",
+      "title": "Internal Consistency of the Hadlock Estimated Fetal Weight Reference: Methodological Analysis",
+      "url": "https://doi.org/10.1111/1471-0528.70296"
+    }
+  ],
+  "generated_at": "2026-07-14T10:09:43.915529+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Double-level emergency cerclage was directly compared to single-level cerclage plus progesterone in a multicenter RCT, providing the first randomized evidence on technique selection in the emergency setting",
+      "confidence": "high",
+      "id": "kosinska-kaczynska-2026",
+      "source_ids": [
+        "kosinska-kaczynska-2026"
+      ]
+    },
+    {
+      "claim": "Lithium exposure in pregnancy is associated with approximately doubled risk of spontaneous preterm birth and LGA, and roughly 2.6-fold increased risk of congenital cardiac malformations",
+      "confidence": "medium",
+      "id": "roddy-mitchell-2026",
+      "source_ids": [
+        "roddy-mitchell-2026"
+      ]
+    },
+    {
+      "claim": "Ischemic placental disease significantly increases postpartum hospitalization risk for neurological and psychiatric disorders within the delivery year",
+      "confidence": "medium",
+      "id": "ananth-2026",
+      "source_ids": [
+        "ananth-2026"
+      ]
+    },
+    {
+      "claim": "Individual severe features of preeclampsia carry distinct associations with severe maternal morbidity, suggesting heterogeneous risk profiles",
+      "confidence": "medium",
+      "id": "meng-2026",
+      "source_ids": [
+        "meng-2026"
+      ]
+    },
+    {
+      "claim": "The Hadlock EFW reference chart and its regression equation show systematic discrepancies near the 3rd and 10th centiles that affect SGA classification",
+      "confidence": "high",
+      "id": "adu-bredu-2026",
+      "source_ids": [
+        "adu-bredu-2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Kosi\u0144ska-Kaczy\u0144ska",
+      "id": "kosinska-kaczynska-2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Double versus single emergency cervical cerclage combined with vaginal progesterone: a multicenter, non-blinded, randomized controlled trial",
+      "url": "https://doi.org/10.1016/j.ajog.2026.07.004",
+      "why_it_matters": "First RCT directly comparing cerclage techniques in the emergency setting; informs whether double-level placement justifies added complexity",
+      "year": 2026
+    },
+    {
+      "author": "Roddy Mitchell",
+      "id": "roddy-mitchell-2026",
+      "publication": "BJOG",
+      "title": "Lithium Use in Pregnancy and the Risk of Spontaneous Preterm Birth: An Australian Statewide Retrospective Cohort Study",
+      "url": "https://doi.org/10.1111/1471-0528.70301",
+      "why_it_matters": "Large population cohort quantifying lithium-associated risks; directly actionable for preconception counseling in bipolar patients",
+      "year": 2026
+    },
+    {
+      "author": "Ananth",
+      "id": "ananth-2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Ischemic Placental Disease and Hospitalization for Neurological and Psychiatric Disorders",
+      "url": "https://doi.org/10.1016/j.ajog.2026.07.008",
+      "why_it_matters": "Highlights maternal brain as target organ of placental dysfunction; supports enhanced postpartum surveillance after severe placental syndromes",
+      "year": 2026
+    },
+    {
+      "author": "Meng",
+      "id": "meng-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Associations between individual severe features of preeclampsia and severe maternal morbidity",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102052",
+      "why_it_matters": "Differentiates risk by specific severe feature; supports moving beyond binary classification toward feature-specific counseling",
+      "year": 2026
+    },
+    {
+      "author": "Adu-Bredu",
+      "id": "adu-bredu-2026",
+      "publication": "BJOG",
+      "title": "Internal Consistency of the Hadlock Estimated Fetal Weight Reference: Methodological Analysis",
+      "url": "https://doi.org/10.1111/1471-0528.70296",
+      "why_it_matters": "Identifies systematic discrepancies in widely-used reference at clinically critical thresholds; affects SGA classification decisions",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Kosi\u0144ska-Kaczy\u0144ska et al. - Am J Obstet Gynecol - 2026 - Double versus single emergency cervical cerclage combined with vaginal progesterone: a multicenter, non-blinded, randomized controlled trial (https://doi.org/10.1016/j.ajog.2026.07.004)",
+    "Roddy Mitchell - BJOG - 2026 - Lithium Use in Pregnancy and the Risk of Spontaneous Preterm Birth: An Australian Statewide Retrospective Cohort Study (https://doi.org/10.1111/1471-0528.70301)",
+    "Ananth et al. - Am J Obstet Gynecol - 2026 - Ischemic Placental Disease and Hospitalization for Neurological and Psychiatric Disorders (https://doi.org/10.1016/j.ajog.2026.07.008)",
+    "Meng et al. - Am J Obstet Gynecol MFM - 2026 - Associations between individual severe features of preeclampsia and severe maternal morbidity (https://doi.org/10.1016/j.ajogmf.2026.102052)",
+    "Adu-Bredu et al. - BJOG - 2026 - Internal Consistency of the Hadlock Estimated Fetal Weight Reference: Methodological Analysis (https://doi.org/10.1111/1471-0528.70296)"
+  ],
+  "topic": "MFM Rounds - week of 2026/07/14",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1096
+}

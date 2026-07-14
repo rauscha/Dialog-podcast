@@ -1,0 +1,41 @@
+CASPAR [grounded]: Emergency cerclage technique has been decided by operator preference since the procedure entered practice. This week it has a randomized trial. Seven centers, head-to-head, double versus single, both arms on vaginal progesterone. That's the lead.
+JUNO [direct]: First time that comparison has randomized data behind it.
+CASPAR [flat]: First time.
+CASPAR [carrying]: From AJOG, 2026: Kosińska-Kaczyńska and colleagues, a multicenter non-blinded RCT across 7 tertiary centers — double versus single emergency cervical cerclage combined with vaginal progesterone.
+JUNO [orienting]: The clinical scenario is a patient presenting with advanced cervical dilation, membranes at or near the os. Double-level means a second suture placed higher than the standard single McDonald or Shirodkar. The theoretical case is added mechanical support when the cervix is already failing acutely.
+CASPAR [precise]: The design question is whether you can run a proper RCT in that setting at all. Non-blinded by necessity — you can't sham a surgical technique in an acute presentation. Both arms received vaginal progesterone as background therapy. That's the realistic ceiling for this question, and it's the first time anyone's cleared it.
+JUNO [pressing]: So what does non-blinding actually cost you here?
+CASPAR [working it out]: Performance bias is real — surgeons who know which arm they're in may manage the subsequent pregnancy differently. Ascertainment bias if outcome assessors aren't masked. Neither is trivial. But the alternative is no randomized data, and we've had that for decades. The design earns its grade for what it is.
+JUNO [dry]: Right. So what do the numbers say.
+CASPAR [delivering]: Primary outcomes were pregnancy prolongation and neonatal survival. Double-level cerclage showed improvement in both. The effect is meaningful enough to prompt a protocol conversation. It is not large enough to be read as definitive across all settings.
+JUNO [pressing]: What's the caveat before anyone rewrites a protocol?
+CASPAR [holding it]: Tertiary-center population. Seven referral centers — the patients presenting there, the surgeons placing the sutures, the postoperative infrastructure. None of that maps cleanly onto a community hospital at two in the morning. Internally valid for what it enrolled. Generalizability to lower-volume centers is a separate question this paper doesn't touch.
+JUNO [following]: And the non-emergency indication — history-indicated cerclage — that's not here either.
+CASPAR [flat]: Different population, different stakes, different paper.
+JUNO [clean]: So what changes Monday?
+CASPAR [measured]: You have a citation you didn't have before. A protocol committee can now have a conversation that was previously running on expert opinion. What doesn't change is the 2 a.m. decision in a center that wasn't in this trial. The scope is emergency setting, tertiary center, the population enrolled.
+CASPAR [pivoting]: Rounds — four other things this week.
+CASPAR [carrying]: From BJOG, 2026: Roddy Mitchell and colleagues, an Australian statewide retrospective cohort — lithium use in pregnancy and spontaneous preterm birth risk.
+JUNO [adding]: Large population-level lithium-in-pregnancy dataset. Three numbers: approximately doubled spontaneous preterm birth risk, approximately doubled large-for-gestational-age risk, and roughly 2.6-fold increased congenital cardiac malformation risk.
+CASPAR [grounding]: Observational design. Lithium effects can't be cleanly separated from underlying bipolar disease severity or concurrent medications. Confounding by indication isn't fully adjustable.
+JUNO [holding]: Three distinct endpoints, three different causal pathways, all in the same direction and all at that magnitude. The confounding argument gets harder to sustain as you add endpoints.
+CASPAR [conceding]: It does — I'd rather name that than wave at it. The clinical move is that preconception counseling now has specific numbers to put on the table. Not a contraindication. A shared decision-making conversation with actual estimates rather than "discuss risks."
+CASPAR [carrying]: From AJOG, 2026: Ananth and colleagues, a nationwide US database study — ischemic placental disease and postpartum hospitalization for neurological and psychiatric disorders.
+JUNO [framing]: The exposure is the cluster — preeclampsia, placental abruption, placenta-mediated fetal growth restriction — conditions sharing a common uteroplacental vascular pathophysiology. What Ananth and colleagues document is a significantly elevated risk of postpartum hospitalization for neurological and psychiatric disorders within the delivery year.
+CASPAR [flagging]: Follow-up window is the limit. Same delivery year only. Long-term neurocognitive trajectory is not in this paper.
+JUNO [holding]: Nationwide data. Strong enough to ask whether postpartum surveillance for women with severe placental syndromes should be structured rather than opportunistic. The paper makes that question harder to defer.
+CASPAR [carrying]: From AJOG MFM, 2026: Meng and colleagues, a cohort analysis — associations between individual severe features of preeclampsia and severe maternal morbidity.
+CASPAR [finding]: Individual features carry distinct morbidity associations. Isolated thrombocytopenia is not the same risk profile as pulmonary edema or eclampsia. Treating the binary — severe features present or absent — as uniform may be misallocating management intensity.
+JUNO [clinical hook]: Feature-specific risk language is usable now even if a feature-specific delivery timing algorithm isn't. That's where this lands first — the counseling room, not the protocol manual.
+CASPAR [caveat]: Cohort analysis. Prospective validation gap is real. Don't rewrite delivery timing protocols from this.
+CASPAR [carrying]: From BJOG, 2026: Adu-Bredu and colleagues, a methodological analysis — internal consistency of the Hadlock estimated fetal weight reference.
+JUNO [grounding]: The Hadlock EFW reference — published in the mid-1980s, derived from a US population, still the most widely embedded reference in ultrasound software globally. Adu-Bredu and colleagues compared the published centile chart to its underlying regression equation and found systematic discrepancies concentrated near the 3rd and 10th centiles.
+CASPAR [precise]: Which are exactly the thresholds where clinical decisions turn. Enhanced surveillance, delivery timing, NICU notification — all of those hinge on whether a fetus is below the 10th or the 3rd. If the chart and the equation disagree there, some units are classifying by one and some by the other, and most haven't checked.
+JUNO [asking]: Does this invalidate prior growth assessments?
+CASPAR [clean]: No. Specific problem, specific centiles. The audit prompt is narrow: know whether your software is running chart-based or equation-based classification, and check whether they agree at the 3rd and 10th for the gestational ages where you're making decisions.
+JUNO [noting]: The paper doesn't tell you which reference to use instead.
+CASPAR [flat]: It doesn't.
+JUNO [closing]: Two threads the week opens without closing. The cerclage RCT — whether that result holds outside tertiary referral centers, and whether it extends to non-emergency indications. Neither question is answered here.
+CASPAR [adding]: And the Hadlock discrepancy is documented. A validated replacement for the population most of us are actually scanning isn't. Both are questions a clinician faces Monday without data that's been collected yet.
+JUNO [dry]: Which is where we are.
+CASPAR [sign-off]: DOIs for all five papers are in the show notes.
