@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260717_050155_signal_in_the_scan_-_week_of_2026_07_17.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week Changes"
+    },
+    {
+      "start_sec": 58.95,
+      "start_time": "0:59",
+      "title": "\u2014 Headline: Clinical Question and Design Choice"
+    },
+    {
+      "start_sec": 117.91,
+      "start_time": "1:58",
+      "title": "\u2014 Headline: Effect Size and Its Conditions"
+    },
+    {
+      "start_sec": 176.86,
+      "start_time": "2:57",
+      "title": "\u2014 Headline: Practice Impact and Open Thread"
+    },
+    {
+      "start_sec": 235.81,
+      "start_time": "3:56",
+      "title": "\u2014 Pivot and Round 1: Taib Mammography / Automation Bias"
+    },
+    {
+      "start_sec": 294.76,
+      "start_time": "4:55",
+      "title": "\u2014 Round 2: Lin CXR Foundation Model"
+    },
+    {
+      "start_sec": 353.72,
+      "start_time": "5:54",
+      "title": "\u2014 Round 3: Kim PROVISION-AF / AI-ECG in Atrial Fibrillation"
+    },
+    {
+      "start_sec": 412.67,
+      "start_time": "6:53",
+      "title": "\u2014 Round 4: Chen ccRCC / H&E-Based Immunotherapy Prediction"
+    },
+    {
+      "start_sec": 471.62,
+      "start_time": "7:52",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260717_050155_signal_in_the_scan_-_week_of_2026_07_17.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260717_050155_signal_in_the_scan_-_week_of_2026_07_17.companion.json",
+  "duration_sec": 575.574989,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First multi-omics fusion model for ovarian cancer chemotherapy response with AUC 0.939; identifies novel chemoresistance drivers; needs prospective validation.",
+      "source": "NPJ Digit Med",
+      "title": "Multi-omics fusion with machine learning enables robust prediction of treatment response in ovarian cancer for precision population health.",
+      "url": "https://doi.org/10.1038/s41746-026-02991-x"
+    },
+    {
+      "reason": "Eye-tracking evidence that incorrect AI prompts cause readers to miss cancers and over-call false positives; directly relevant to breast imaging workflow design.",
+      "source": "Radiology",
+      "title": "Automation Bias in Action: Eye Tracking of Humans Reading Screening Mammograms with and without AI Prompts.",
+      "url": "https://doi.org/10.1148/radiol.252590"
+    },
+    {
+      "reason": "Foundation model predicts over 1,000 phenotypes from CXR across three cohorts; demonstrates systemic disease profiling potential with explainability.",
+      "source": "NPJ Digit Med",
+      "title": "Transparent chest radiograph foundation model enables explainable human disease profiling.",
+      "url": "https://doi.org/10.1038/s41746-026-02990-y"
+    },
+    {
+      "reason": "Multinational simulation shows AI-ECG improves physician AF prediction from AUROC 0.57 to 0.65; modest but real decision-support benefit.",
+      "source": "NPJ Digit Med",
+      "title": "Impact of an AI algorithm for multi-day prediction of incident atrial fibrillation on clinical decision-making: PROVISION-AF study.",
+      "url": "https://doi.org/10.1038/s41746-026-02950-6"
+    },
+    {
+      "reason": "H&E-based deep learning infers CD8+ inflammation and predicts immunotherapy benefit in renal cell carcinoma; AUC ~0.78 across two multicenter cohorts.",
+      "source": "NPJ Digit Med",
+      "title": "Deep learning-based CD8+ T cell model for predicting prognosis and targeted immunotherapy benefit in ccRCC.",
+      "url": "https://doi.org/10.1038/s41746-026-02955-1"
+    }
+  ],
+  "generated_at": "2026-07-17T10:09:59.020549+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A random-forest model fusing transcriptomic, proteomic, and metabolomic data predicted ovarian cancer treatment response with AUC 0.939 and identified novel molecular drivers of chemoresistance.",
+      "confidence": "medium",
+      "id": "chen_ovarian_2026",
+      "source_ids": [
+        "chen_ovarian_2026"
+      ]
+    },
+    {
+      "claim": "Incorrect AI prompts during mammography reading induced automation bias, causing readers to miss AI-flagged false negatives and over-call AI false positives.",
+      "confidence": "medium",
+      "id": "taib_mammography_2026",
+      "source_ids": [
+        "taib_mammography_2026"
+      ]
+    },
+    {
+      "claim": "A chest radiograph foundation model predicted 554 prevalent and 457 incident phenotypes across three independent cohorts with explainable imaging-feature co-embeddings.",
+      "confidence": "high",
+      "id": "lin_cxr_2026",
+      "source_ids": [
+        "lin_cxr_2026"
+      ]
+    },
+    {
+      "claim": "AI-ECG prediction of incident atrial fibrillation improved physician discrimination from AUROC 0.57 to 0.65 in a multinational simulation of 70 physicians.",
+      "confidence": "medium",
+      "id": "kim_afib_2026",
+      "source_ids": [
+        "kim_afib_2026"
+      ]
+    },
+    {
+      "claim": "A deep-learning model inferring CD8+ T-cell inflammation from H&E slides predicted immunotherapy benefit in clear-cell renal cell carcinoma with AUC approximately 0.78 across two multicenter cohorts.",
+      "confidence": "medium",
+      "id": "chen_ccrcc_2026",
+      "source_ids": [
+        "chen_ccrcc_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Chen",
+      "id": "chen_ovarian_2026",
+      "publication": "NPJ Digit Med",
+      "title": "Multi-omics fusion with machine learning enables robust prediction of treatment response in ovarian cancer for precision population health.",
+      "url": "https://doi.org/10.1038/s41746-026-02991-x",
+      "why_it_matters": "First multi-omics fusion model for ovarian cancer chemotherapy response with AUC 0.939; identifies novel chemoresistance drivers; needs prospective validation.",
+      "year": 2026
+    },
+    {
+      "author": "Taib",
+      "id": "taib_mammography_2026",
+      "publication": "Radiology",
+      "title": "Automation Bias in Action: Eye Tracking of Humans Reading Screening Mammograms with and without AI Prompts.",
+      "url": "https://doi.org/10.1148/radiol.252590",
+      "why_it_matters": "Eye-tracking evidence that incorrect AI prompts cause readers to miss cancers and over-call false positives; directly relevant to breast imaging workflow design.",
+      "year": 2026
+    },
+    {
+      "author": "Lin",
+      "id": "lin_cxr_2026",
+      "publication": "NPJ Digit Med",
+      "title": "Transparent chest radiograph foundation model enables explainable human disease profiling.",
+      "url": "https://doi.org/10.1038/s41746-026-02990-y",
+      "why_it_matters": "Foundation model predicts over 1,000 phenotypes from CXR across three cohorts; demonstrates systemic disease profiling potential with explainability.",
+      "year": 2026
+    },
+    {
+      "author": "Kim",
+      "id": "kim_afib_2026",
+      "publication": "NPJ Digit Med",
+      "title": "Impact of an AI algorithm for multi-day prediction of incident atrial fibrillation on clinical decision-making: PROVISION-AF study.",
+      "url": "https://doi.org/10.1038/s41746-026-02950-6",
+      "why_it_matters": "Multinational simulation shows AI-ECG improves physician AF prediction from AUROC 0.57 to 0.65; modest but real decision-support benefit.",
+      "year": 2026
+    },
+    {
+      "author": "Chen",
+      "id": "chen_ccrcc_2026",
+      "publication": "NPJ Digit Med",
+      "title": "Deep learning-based CD8+ T cell model for predicting prognosis and targeted immunotherapy benefit in ccRCC.",
+      "url": "https://doi.org/10.1038/s41746-026-02955-1",
+      "why_it_matters": "H&E-based deep learning infers CD8+ inflammation and predicts immunotherapy benefit in renal cell carcinoma; AUC ~0.78 across two multicenter cohorts.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Chen et al. - NPJ Digit Med - 2026 - Multi-omics fusion with machine learning enables robust prediction of treatment response in ovarian cancer for precision population health. (https://doi.org/10.1038/s41746-026-02991-x)",
+    "Taib et al. - Radiology - 2026 - Automation Bias in Action: Eye Tracking of Humans Reading Screening Mammograms with and without AI Prompts. (https://doi.org/10.1148/radiol.252590)",
+    "Lin et al. - NPJ Digit Med - 2026 - Transparent chest radiograph foundation model enables explainable human disease profiling. (https://doi.org/10.1038/s41746-026-02990-y)",
+    "Kim et al. - NPJ Digit Med - 2026 - Impact of an AI algorithm for multi-day prediction of incident atrial fibrillation on clinical decision-making: PROVISION-AF study. (https://doi.org/10.1038/s41746-026-02950-6)",
+    "Chen et al. - NPJ Digit Med - 2026 - Deep learning-based CD8+ T cell model for predicting prognosis and targeted immunotherapy benefit in ccRCC. (https://doi.org/10.1038/s41746-026-02955-1)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/07/17",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1411
+}
