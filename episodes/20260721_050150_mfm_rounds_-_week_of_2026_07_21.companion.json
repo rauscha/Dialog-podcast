@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260721_050150_mfm_rounds_-_week_of_2026_07_21.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week Changes"
+    },
+    {
+      "start_sec": 51.26,
+      "start_time": "0:51",
+      "title": "\u2014 Headline: Citation and Clinical Question"
+    },
+    {
+      "start_sec": 102.52,
+      "start_time": "1:43",
+      "title": "\u2014 Headline: The Finding and the Numbers"
+    },
+    {
+      "start_sec": 153.78,
+      "start_time": "2:34",
+      "title": "\u2014 Headline: The Key Caveat and What It Does and Doesn't Do to the Finding"
+    },
+    {
+      "start_sec": 205.04,
+      "start_time": "3:25",
+      "title": "\u2014 Headline: What Changes in Practice"
+    },
+    {
+      "start_sec": 256.29,
+      "start_time": "4:16",
+      "title": "\u2014 Round 1: Barrett / HDP and Ophthalmic Disease"
+    },
+    {
+      "start_sec": 307.55,
+      "start_time": "5:08",
+      "title": "\u2014 Round 2: Berghella / Progesterone Plus Cerclage"
+    },
+    {
+      "start_sec": 358.81,
+      "start_time": "5:59",
+      "title": "\u2014 Round 3: Burns / Hysterotomy Extension Classification"
+    },
+    {
+      "start_sec": 410.07,
+      "start_time": "6:50",
+      "title": "\u2014 Round 4: Lin / HDP Hemodynamics and Long-Term CVD"
+    },
+    {
+      "start_sec": 461.33,
+      "start_time": "7:41",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260721_050150_mfm_rounds_-_week_of_2026_07_21.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260721_050150_mfm_rounds_-_week_of_2026_07_21.companion.json",
+  "duration_sec": 557.589184,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First long-term neurodevelopmental follow-up of the ALPS trial; directly informs antenatal steroid counseling and postnatal glucose monitoring protocols",
+      "source": "Obstet Gynecol",
+      "title": "Child Neurodevelopmental Outcomes After Late Preterm Hypoglycemia",
+      "url": "https://doi.org/10.1097/aog.0000000000006366"
+    },
+    {
+      "reason": "Large meta-analysis identifying a novel long-term sequela of HDP; expands counseling beyond cardiovascular to ophthalmologic surveillance",
+      "source": "BJOG",
+      "title": "Hypertensive Disorders of Pregnancy and the Long-Term Risk of Maternal Retinal and Ophthalmic Disease",
+      "url": "https://doi.org/10.1111/1471-0528.70307"
+    },
+    {
+      "reason": "Synthesizes level-one evidence to argue for mechanistic complementarity; may shift practice toward combination therapy in select patients",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Progesterone and cerclage together for short cervix",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102055"
+    },
+    {
+      "reason": "Proposes standardized classification for a common but underrecognized complication; links to subsequent preterm birth risk",
+      "source": "Obstet Gynecol",
+      "title": "Unintentional Extensions of the Cesarean Hysterotomy Incision",
+      "url": "https://doi.org/10.1097/aog.0000000000006288"
+    },
+    {
+      "reason": "Mechanistic framework connecting pregnancy hemodynamics to decades-later CVD; supports structured postpartum cardiovascular surveillance",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Cardiovascular maladaptation in women with hypertensive disorders of pregnancy and long-term cardiovascular risk",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102051"
+    }
+  ],
+  "generated_at": "2026-07-21T10:09:41.841304+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Neonatal hypoglycemia below 40 mg/dL in late preterm infants is associated with adverse neurodevelopmental outcomes at age six or older.",
+      "confidence": "high",
+      "id": "gyamfi-bannerman-2026",
+      "source_ids": [
+        "gyamfi-bannerman-2026"
+      ]
+    },
+    {
+      "claim": "Hypertensive disorders of pregnancy are associated with a greater than three-fold increased risk of diabetic retinopathy and other ophthalmic disease in long-term follow-up.",
+      "confidence": "high",
+      "id": "barrett-2026",
+      "source_ids": [
+        "barrett-2026"
+      ]
+    },
+    {
+      "claim": "Vaginal progesterone and cerclage may act through complementary rather than redundant pathways for preterm birth prevention in women with short cervix.",
+      "confidence": "medium",
+      "id": "berghella-2026",
+      "source_ids": [
+        "berghella-2026"
+      ]
+    },
+    {
+      "claim": "Second-stage cesarean is the strongest risk factor for unintentional hysterotomy extension, which is linked to subsequent preterm birth.",
+      "confidence": "medium",
+      "id": "burns-2026",
+      "source_ids": [
+        "burns-2026"
+      ]
+    },
+    {
+      "claim": "Cardiovascular maladaptation during HDP may persist postpartum and mechanistically link abnormal pregnancy hemodynamics to long-term CVD risk.",
+      "confidence": "medium",
+      "id": "lin-2026",
+      "source_ids": [
+        "lin-2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Gyamfi-Bannerman",
+      "id": "gyamfi-bannerman-2026",
+      "publication": "Obstet Gynecol",
+      "title": "Child Neurodevelopmental Outcomes After Late Preterm Hypoglycemia",
+      "url": "https://doi.org/10.1097/aog.0000000000006366",
+      "why_it_matters": "First long-term neurodevelopmental follow-up of the ALPS trial; directly informs antenatal steroid counseling and postnatal glucose monitoring protocols",
+      "year": 2026
+    },
+    {
+      "author": "Barrett",
+      "id": "barrett-2026",
+      "publication": "BJOG",
+      "title": "Hypertensive Disorders of Pregnancy and the Long-Term Risk of Maternal Retinal and Ophthalmic Disease",
+      "url": "https://doi.org/10.1111/1471-0528.70307",
+      "why_it_matters": "Large meta-analysis identifying a novel long-term sequela of HDP; expands counseling beyond cardiovascular to ophthalmologic surveillance",
+      "year": 2026
+    },
+    {
+      "author": "Berghella",
+      "id": "berghella-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Progesterone and cerclage together for short cervix",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102055",
+      "why_it_matters": "Synthesizes level-one evidence to argue for mechanistic complementarity; may shift practice toward combination therapy in select patients",
+      "year": 2026
+    },
+    {
+      "author": "Burns",
+      "id": "burns-2026",
+      "publication": "Obstet Gynecol",
+      "title": "Unintentional Extensions of the Cesarean Hysterotomy Incision",
+      "url": "https://doi.org/10.1097/aog.0000000000006288",
+      "why_it_matters": "Proposes standardized classification for a common but underrecognized complication; links to subsequent preterm birth risk",
+      "year": 2026
+    },
+    {
+      "author": "Lin",
+      "id": "lin-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Cardiovascular maladaptation in women with hypertensive disorders of pregnancy and long-term cardiovascular risk",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102051",
+      "why_it_matters": "Mechanistic framework connecting pregnancy hemodynamics to decades-later CVD; supports structured postpartum cardiovascular surveillance",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Gyamfi-Bannerman et al. - Obstet Gynecol - 2026 - Child Neurodevelopmental Outcomes After Late Preterm Hypoglycemia (https://doi.org/10.1097/aog.0000000000006366)",
+    "Barrett et al. - BJOG - 2026 - Hypertensive Disorders of Pregnancy and the Long-Term Risk of Maternal Retinal and Ophthalmic Disease (https://doi.org/10.1111/1471-0528.70307)",
+    "Berghella et al. - Am J Obstet Gynecol MFM - 2026 - Progesterone and cerclage together for short cervix (https://doi.org/10.1016/j.ajogmf.2026.102055)",
+    "Burns et al. - Obstet Gynecol - 2026 - Unintentional Extensions of the Cesarean Hysterotomy Incision (https://doi.org/10.1097/aog.0000000000006288)",
+    "Lin et al. - Am J Obstet Gynecol MFM - 2026 - Cardiovascular maladaptation in women with hypertensive disorders of pregnancy and long-term cardiovascular risk (https://doi.org/10.1016/j.ajogmf.2026.102051)"
+  ],
+  "topic": "MFM Rounds - week of 2026/07/21",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1320
+}

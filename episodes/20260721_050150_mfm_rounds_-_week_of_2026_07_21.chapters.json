@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What This Week Changes"
+    },
+    {
+      "startTime": 51.26,
+      "title": "\u2014 Headline: Citation and Clinical Question"
+    },
+    {
+      "startTime": 102.52,
+      "title": "\u2014 Headline: The Finding and the Numbers"
+    },
+    {
+      "startTime": 153.78,
+      "title": "\u2014 Headline: The Key Caveat and What It Does and Doesn't Do to the Finding"
+    },
+    {
+      "startTime": 205.04,
+      "title": "\u2014 Headline: What Changes in Practice"
+    },
+    {
+      "startTime": 256.29,
+      "title": "\u2014 Round 1: Barrett / HDP and Ophthalmic Disease"
+    },
+    {
+      "startTime": 307.55,
+      "title": "\u2014 Round 2: Berghella / Progesterone Plus Cerclage"
+    },
+    {
+      "startTime": 358.81,
+      "title": "\u2014 Round 3: Burns / Hysterotomy Extension Classification"
+    },
+    {
+      "startTime": 410.07,
+      "title": "\u2014 Round 4: Lin / HDP Hemodynamics and Long-Term CVD"
+    },
+    {
+      "startTime": 461.33,
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
