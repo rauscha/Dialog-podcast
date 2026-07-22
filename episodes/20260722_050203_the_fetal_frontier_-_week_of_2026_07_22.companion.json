@@ -1,0 +1,199 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260722_050203_the_fetal_frontier_-_week_of_2026_07_22.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Paradox That Needs Unpacking"
+    },
+    {
+      "start_sec": 46.8,
+      "start_time": "0:47",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 93.6,
+      "start_time": "1:34",
+      "title": "\u2014 Headline: The Finding and the Confound"
+    },
+    {
+      "start_sec": 140.41,
+      "start_time": "2:20",
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "start_sec": 187.21,
+      "start_time": "3:07",
+      "title": "\u2014 Pivot + Round 1: Cruz-Mart\u00ednez / CDH Measurement Bias"
+    },
+    {
+      "start_sec": 234.01,
+      "start_time": "3:54",
+      "title": "\u2014 Round 2: D'Amico / FGR Cardiac Dysfunction Meta-Analysis"
+    },
+    {
+      "start_sec": 280.81,
+      "start_time": "4:41",
+      "title": "\u2014 Round 3: Birene / NT Cohort"
+    },
+    {
+      "start_sec": 327.62,
+      "start_time": "5:28",
+      "title": "\u2014 Round 4: Bradford / MCA-PI in CHD + Close"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260722_050203_the_fetal_frontier_-_week_of_2026_07_22.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260722_050203_the_fetal_frontier_-_week_of_2026_07_22.companion.json",
+  "duration_sec": 419.418413,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Largest direct comparison of shunting versus expectant management in macrocystic CPAM; identifies CVR>2 and hydrops as mortality predictors and supports conservative management for stable lesions",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal and Perinatal Outcomes in Fetuses With Macrocystic Congenital Pulmonary Airway Malformations: Thoracoamniotic Shunting Versus Expectant Management",
+      "url": "https://doi.org/10.1002/pd.70172"
+    },
+    {
+      "reason": "Demonstrates 11% systematic overestimation of O/E-LHR based on fetal position, directly affecting severity classification and intervention thresholds in CDH",
+      "source": "Prenatal Diagnosis",
+      "title": "Lung Size Measurement in Left-Sided Congenital Diaphragmatic Hernia: Does Position of the Fetus Affect Results?",
+      "url": "https://doi.org/10.1002/pd.70222"
+    },
+    {
+      "reason": "Meta-analysis of 15 studies consolidating evidence for multi-parameter cardiac dysfunction in FGR, supporting functional echocardiography in surveillance",
+      "source": "Prenatal Diagnosis",
+      "title": "Cardiac Function in Fetal Growth Restriction: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1002/pd.70145"
+    },
+    {
+      "reason": "Long-term cohort showing 82% healthy live birth rate after normal workup in NT\u22653.5mm; informs counseling on continuation outcomes",
+      "source": "Prenatal Diagnosis",
+      "title": "Parental Decision-Making and Pregnancy Outcomes After Increased First-Trimester Nuchal Translucency: A 12-Year Cohort",
+      "url": "https://doi.org/10.1002/pd.70224"
+    },
+    {
+      "reason": "Challenges standard MCA-PI interpretation in CHD; lower PI associated with better neurodevelopment in systemic outflow obstruction, requiring physiology-specific Doppler interpretation",
+      "source": "Prenatal Diagnosis",
+      "title": "Association of Fetal Cerebrovascular Resistance and Neurodevelopment in Congenital Heart Disease: A Physiology-Based Analysis",
+      "url": "https://doi.org/10.1002/pd.70205"
+    }
+  ],
+  "generated_at": "2026-07-22T10:08:59.013143+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Thoracoamniotic shunting in macrocystic CPAM reduces lesion size but is associated with lower survival and higher prematurity compared to expectant management; CVR greater than 2 and hydrops are the dominant mortality predictors",
+      "confidence": "medium",
+      "id": "claim_carmant",
+      "source_ids": [
+        "carmant2026"
+      ]
+    },
+    {
+      "claim": "O/E-LHR in left-sided CDH is overestimated by approximately 11% when the lung is probe-proximal versus probe-distal, causing systematic severity misclassification",
+      "confidence": "medium",
+      "id": "claim_cruzmartinez",
+      "source_ids": [
+        "cruzmartinez2026"
+      ]
+    },
+    {
+      "claim": "FGR fetuses demonstrate consistent cardiac dysfunction across multiple parameters including altered geometry, impaired diastolic function, and reduced global function",
+      "confidence": "high",
+      "id": "claim_damico",
+      "source_ids": [
+        "damico2026"
+      ]
+    },
+    {
+      "claim": "After increased NT of 3.5mm or greater, 82% of pregnancies continuing post-normal genetic and structural workup result in healthy live births; termination without testing increases with NT thickness",
+      "confidence": "medium",
+      "id": "claim_birene",
+      "source_ids": [
+        "birene2026"
+      ]
+    },
+    {
+      "claim": "In CHD fetuses with systemic outflow obstruction, lower MCA-PI paradoxically associates with better 2-year neurodevelopmental outcomes",
+      "confidence": "medium",
+      "id": "claim_bradford",
+      "source_ids": [
+        "bradford2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Carmant",
+      "id": "carmant2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal and Perinatal Outcomes in Fetuses With Macrocystic Congenital Pulmonary Airway Malformations: Thoracoamniotic Shunting Versus Expectant Management",
+      "url": "https://doi.org/10.1002/pd.70172",
+      "why_it_matters": "Largest direct comparison of shunting versus expectant management in macrocystic CPAM; identifies CVR>2 and hydrops as mortality predictors and supports conservative management for stable lesions",
+      "year": 2026
+    },
+    {
+      "author": "Cruz-Mart\u00ednez",
+      "id": "cruzmartinez2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Lung Size Measurement in Left-Sided Congenital Diaphragmatic Hernia: Does Position of the Fetus Affect Results?",
+      "url": "https://doi.org/10.1002/pd.70222",
+      "why_it_matters": "Demonstrates 11% systematic overestimation of O/E-LHR based on fetal position, directly affecting severity classification and intervention thresholds in CDH",
+      "year": 2026
+    },
+    {
+      "author": "D'Amico",
+      "id": "damico2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Cardiac Function in Fetal Growth Restriction: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1002/pd.70145",
+      "why_it_matters": "Meta-analysis of 15 studies consolidating evidence for multi-parameter cardiac dysfunction in FGR, supporting functional echocardiography in surveillance",
+      "year": 2026
+    },
+    {
+      "author": "Birene",
+      "id": "birene2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Parental Decision-Making and Pregnancy Outcomes After Increased First-Trimester Nuchal Translucency: A 12-Year Cohort",
+      "url": "https://doi.org/10.1002/pd.70224",
+      "why_it_matters": "Long-term cohort showing 82% healthy live birth rate after normal workup in NT\u22653.5mm; informs counseling on continuation outcomes",
+      "year": 2026
+    },
+    {
+      "author": "Bradford",
+      "id": "bradford2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Association of Fetal Cerebrovascular Resistance and Neurodevelopment in Congenital Heart Disease: A Physiology-Based Analysis",
+      "url": "https://doi.org/10.1002/pd.70205",
+      "why_it_matters": "Challenges standard MCA-PI interpretation in CHD; lower PI associated with better neurodevelopment in systemic outflow obstruction, requiring physiology-specific Doppler interpretation",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Carmant et al. - Prenatal Diagnosis - 2026 - Prenatal and Perinatal Outcomes in Fetuses With Macrocystic Congenital Pulmonary Airway Malformations: Thoracoamniotic Shunting Versus Expectant Management (https://doi.org/10.1002/pd.70172)",
+    "Cruz-Mart\u00ednez et al. - Prenatal Diagnosis - 2026 - Lung Size Measurement in Left-Sided Congenital Diaphragmatic Hernia: Does Position of the Fetus Affect Results? (https://doi.org/10.1002/pd.70222)",
+    "D'Amico et al. - Prenatal Diagnosis - 2026 - Cardiac Function in Fetal Growth Restriction: A Systematic Review and Meta-Analysis (https://doi.org/10.1002/pd.70145)",
+    "Birene et al. - Prenatal Diagnosis - 2026 - Parental Decision-Making and Pregnancy Outcomes After Increased First-Trimester Nuchal Translucency: A 12-Year Cohort (https://doi.org/10.1002/pd.70224)",
+    "Bradford et al. - Prenatal Diagnosis - 2026 - Association of Fetal Cerebrovascular Resistance and Neurodevelopment in Congenital Heart Disease: A Physiology-Based Analysis (https://doi.org/10.1002/pd.70205)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/07/22",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 986
+}
