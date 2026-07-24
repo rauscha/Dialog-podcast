@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260724_050154_signal_in_the_scan_-_week_of_2026_07_24.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 COLD OPEN: The Unsolved Problem"
+    },
+    {
+      "start_sec": 48.58,
+      "start_time": "0:49",
+      "title": "\u2014 HEADLINE: Bibliographic Anchor and Design"
+    },
+    {
+      "start_sec": 97.16,
+      "start_time": "1:37",
+      "title": "\u2014 HEADLINE: Performance Numbers and What They Mean"
+    },
+    {
+      "start_sec": 145.74,
+      "start_time": "2:26",
+      "title": "\u2014 HEADLINE: The Validation Gap and Honest Practice Impact"
+    },
+    {
+      "start_sec": 194.32,
+      "start_time": "3:14",
+      "title": "\u2014 PIVOT + ROUND 1: McCabe Mammography"
+    },
+    {
+      "start_sec": 242.91,
+      "start_time": "4:03",
+      "title": "\u2014 ROUND 2: Li HCC Survival Prediction"
+    },
+    {
+      "start_sec": 291.49,
+      "start_time": "4:51",
+      "title": "\u2014 ROUND 3: Marth Weight Cycling and Muscle Quality"
+    },
+    {
+      "start_sec": 340.07,
+      "start_time": "5:40",
+      "title": "\u2014 ROUND 4: Shao PDAC Tumor Heterogeneity"
+    },
+    {
+      "start_sec": 388.65,
+      "start_time": "6:29",
+      "title": "\u2014 CLOSE: Open Threads and Sign-off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260724_050154_signal_in_the_scan_-_week_of_2026_07_24.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260724_050154_signal_in_the_scan_-_week_of_2026_07_24.companion.json",
+  "duration_sec": 482.229229,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Addresses a critical unmet need \u2014 preoperative differentiation of sarcoma from benign fibroids \u2014 with a prospective multicenter design that could change surgical planning and morcellation decisions.",
+      "source": "Am J Obstet Gynecol",
+      "title": "Liquid Biopsy Cell-free RNA-based Machine Learning Enables Preoperative Risk-Stratification of Uterine Leiomyosarcoma",
+      "url": "https://doi.org/10.1016/j.ajog.2026.07.024"
+    },
+    {
+      "reason": "Demonstrates at scale that AI can elevate generalist radiologist performance toward specialist benchmarks in breast cancer detection, relevant to workforce distribution and access.",
+      "source": "Radiology",
+      "title": "Closing the Performance Gap between Generalists and Breast Imaging Specialists Using a Nationally Deployed AI Workflow for Screening Mammography",
+      "url": "https://doi.org/10.1148/radiol.252005"
+    },
+    {
+      "reason": "Multimodal integration of imaging and pathology outperforms staging systems for HCC prognosis, illustrating the direction of AI-driven oncologic risk stratification.",
+      "source": "NPJ Digit Med",
+      "title": "Interpretable multimodal deep learning for time-resolved survival prediction after hepatocellular carcinoma resection",
+      "url": "https://doi.org/10.1038/s41746-026-03027-0"
+    },
+    {
+      "reason": "Quantifies a mechanism \u2014 intermuscular fat accumulation from weight cycling \u2014 that may inform counseling on weight management strategies beyond net weight targets.",
+      "source": "Radiology",
+      "title": "Association of Weight Cycling with MRI-based Thigh Muscle Quality and Knee-adjacent Obesity: Osteoarthritis Initiative Data",
+      "url": "https://doi.org/10.1148/radiol.253988"
+    },
+    {
+      "reason": "Achieves strong prognostic performance in PDAC across five cohorts, highlighting AI's potential to extract survival-relevant features from routine histopathology.",
+      "source": "NPJ Digit Med",
+      "title": "AI-driven tumor heterogeneity quantification and survival prediction in pancreatic ductal adenocarcinoma",
+      "url": "https://doi.org/10.1038/s41746-026-02979-7"
+    }
+  ],
+  "generated_at": "2026-07-24T10:09:45.169453+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A plasma cell-free RNA machine-learning classifier can distinguish uterine leiomyosarcoma from leiomyoma preoperatively in a prospective multicenter cohort.",
+      "confidence": "medium",
+      "id": "stahlschmidt2026",
+      "source_ids": [
+        "stahlschmidt2026"
+      ]
+    },
+    {
+      "claim": "AI-assisted mammography workflow deployed across 109 U.S. sites raised generalist radiologists' cancer detection rates toward specialist-level performance.",
+      "confidence": "high",
+      "id": "mccabe2026",
+      "source_ids": [
+        "mccabe2026"
+      ]
+    },
+    {
+      "claim": "A multimodal deep-learning model integrating MRI and pathology predicts post-resection HCC survival better than conventional staging systems across six centers.",
+      "confidence": "medium",
+      "id": "li2026",
+      "source_ids": [
+        "li2026"
+      ]
+    },
+    {
+      "claim": "Weight cycling is associated with greater intermuscular fat accumulation in thigh muscle on MRI, independent of net weight change.",
+      "confidence": "medium",
+      "id": "marth2026",
+      "source_ids": [
+        "marth2026"
+      ]
+    },
+    {
+      "claim": "An AI histopathology model quantifying tumor heterogeneity achieves C-index 0.761 for PDAC survival prediction across five independent cohorts.",
+      "confidence": "medium",
+      "id": "shao2026",
+      "source_ids": [
+        "shao2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Stahlschmidt",
+      "id": "stahlschmidt2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Liquid Biopsy Cell-free RNA-based Machine Learning Enables Preoperative Risk-Stratification of Uterine Leiomyosarcoma",
+      "url": "https://doi.org/10.1016/j.ajog.2026.07.024",
+      "why_it_matters": "Addresses a critical unmet need \u2014 preoperative differentiation of sarcoma from benign fibroids \u2014 with a prospective multicenter design that could change surgical planning and morcellation decisions.",
+      "year": 2026
+    },
+    {
+      "author": "McCabe",
+      "id": "mccabe2026",
+      "publication": "Radiology",
+      "title": "Closing the Performance Gap between Generalists and Breast Imaging Specialists Using a Nationally Deployed AI Workflow for Screening Mammography",
+      "url": "https://doi.org/10.1148/radiol.252005",
+      "why_it_matters": "Demonstrates at scale that AI can elevate generalist radiologist performance toward specialist benchmarks in breast cancer detection, relevant to workforce distribution and access.",
+      "year": 2026
+    },
+    {
+      "author": "Li",
+      "id": "li2026",
+      "publication": "NPJ Digit Med",
+      "title": "Interpretable multimodal deep learning for time-resolved survival prediction after hepatocellular carcinoma resection",
+      "url": "https://doi.org/10.1038/s41746-026-03027-0",
+      "why_it_matters": "Multimodal integration of imaging and pathology outperforms staging systems for HCC prognosis, illustrating the direction of AI-driven oncologic risk stratification.",
+      "year": 2026
+    },
+    {
+      "author": "Marth",
+      "id": "marth2026",
+      "publication": "Radiology",
+      "title": "Association of Weight Cycling with MRI-based Thigh Muscle Quality and Knee-adjacent Obesity: Osteoarthritis Initiative Data",
+      "url": "https://doi.org/10.1148/radiol.253988",
+      "why_it_matters": "Quantifies a mechanism \u2014 intermuscular fat accumulation from weight cycling \u2014 that may inform counseling on weight management strategies beyond net weight targets.",
+      "year": 2026
+    },
+    {
+      "author": "Shao",
+      "id": "shao2026",
+      "publication": "NPJ Digit Med",
+      "title": "AI-driven tumor heterogeneity quantification and survival prediction in pancreatic ductal adenocarcinoma",
+      "url": "https://doi.org/10.1038/s41746-026-02979-7",
+      "why_it_matters": "Achieves strong prognostic performance in PDAC across five cohorts, highlighting AI's potential to extract survival-relevant features from routine histopathology.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Stahlschmidt et al. - Am J Obstet Gynecol - 2026 - Liquid Biopsy Cell-free RNA-based Machine Learning Enables Preoperative Risk-Stratification of Uterine Leiomyosarcoma (https://doi.org/10.1016/j.ajog.2026.07.024)",
+    "McCabe et al. - Radiology - 2026 - Closing the Performance Gap between Generalists and Breast Imaging Specialists Using a Nationally Deployed AI Workflow for Screening Mammography (https://doi.org/10.1148/radiol.252005)",
+    "Li et al. - NPJ Digit Med - 2026 - Interpretable multimodal deep learning for time-resolved survival prediction after hepatocellular carcinoma resection (https://doi.org/10.1038/s41746-026-03027-0)",
+    "Marth et al. - Radiology - 2026 - Association of Weight Cycling with MRI-based Thigh Muscle Quality and Knee-adjacent Obesity: Osteoarthritis Initiative Data (https://doi.org/10.1148/radiol.253988)",
+    "Shao et al. - NPJ Digit Med - 2026 - AI-driven tumor heterogeneity quantification and survival prediction in pancreatic ductal adenocarcinoma (https://doi.org/10.1038/s41746-026-02979-7)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/07/24",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1145
+}
