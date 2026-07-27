@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Number That Reframes GDM Follow-Up"
+    },
+    {
+      "startTime": 44.34,
+      "title": "\u2014 Headline: Clinical Question and Design Choice"
+    },
+    {
+      "startTime": 88.69,
+      "title": "\u2014 Headline: The Incidence Number and Predictor Logic"
+    },
+    {
+      "startTime": 133.03,
+      "title": "\u2014 Headline: The Caveat and What Changes in Practice"
+    },
+    {
+      "startTime": 177.38,
+      "title": "\u2014 Round 1: Cerclage Preoperative Synthesis (Paladino)"
+    },
+    {
+      "startTime": 221.72,
+      "title": "\u2014 Round 2: HDP Awareness Gap (Saffian)"
+    },
+    {
+      "startTime": 266.06,
+      "title": "\u2014 Round 3: Polyhydramnios Dual-Criterion Refinement (Petrecca)"
+    },
+    {
+      "startTime": 310.41,
+      "title": "\u2014 Round 4: Twin HDP Long-Term Risk (Natan)"
+    },
+    {
+      "startTime": 354.75,
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260727_050211_mfm_rounds_-_week_of_2026_07_27.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Number That Reframes GDM Follow-Up"
+    },
+    {
+      "start_sec": 44.34,
+      "start_time": "0:44",
+      "title": "\u2014 Headline: Clinical Question and Design Choice"
+    },
+    {
+      "start_sec": 88.69,
+      "start_time": "1:29",
+      "title": "\u2014 Headline: The Incidence Number and Predictor Logic"
+    },
+    {
+      "start_sec": 133.03,
+      "start_time": "2:13",
+      "title": "\u2014 Headline: The Caveat and What Changes in Practice"
+    },
+    {
+      "start_sec": 177.38,
+      "start_time": "2:57",
+      "title": "\u2014 Round 1: Cerclage Preoperative Synthesis (Paladino)"
+    },
+    {
+      "start_sec": 221.72,
+      "start_time": "3:42",
+      "title": "\u2014 Round 2: HDP Awareness Gap (Saffian)"
+    },
+    {
+      "start_sec": 266.06,
+      "start_time": "4:26",
+      "title": "\u2014 Round 3: Polyhydramnios Dual-Criterion Refinement (Petrecca)"
+    },
+    {
+      "start_sec": 310.41,
+      "start_time": "5:10",
+      "title": "\u2014 Round 4: Twin HDP Long-Term Risk (Natan)"
+    },
+    {
+      "start_sec": 354.75,
+      "start_time": "5:55",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260727_050211_mfm_rounds_-_week_of_2026_07_27.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260727_050211_mfm_rounds_-_week_of_2026_07_27.companion.json",
+  "duration_sec": 444.095442,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Prospective data showing over 25% of GDM patients develop hypertension by 5 months postpartum, with identifiable prenatal predictors \u2014 strengthens case for early CV surveillance beyond glucose follow-up",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Hypertension at 5 months postpartum in women with gestational diabetes",
+      "url": "https://doi.org/10.1002/uog.70291"
+    },
+    {
+      "reason": "Comprehensive evidence synthesis clarifying indications and timing for HIC, UIC, and PEIC across singleton and twin gestations \u2014 directly guides high-frequency MFM procedure",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Preoperative Considerations for Cervical Cerclage (Part 1)",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102054"
+    },
+    {
+      "reason": "Roughly one-quarter of postpartum women with HDP unaware of diagnosis \u2014 identifies critical counseling gap with long-term CV risk implications",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Missed connections: exploring the gap in patient awareness of hypertensive disorders of pregnancy diagnoses",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102064"
+    },
+    {
+      "reason": "Requiring both AFI and MVP elevation for isolated polyhydramnios diagnosis best identifies pregnancies at risk \u2014 directly refines daily MFM diagnostic criteria",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Isolated Polyhydramnios: diagnosis should be made based on both elevated AFI and elevated MVP",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102037"
+    },
+    {
+      "reason": "Twin-gestation HDP confers similar long-term cardiometabolic risk as singleton HDP \u2014 challenges assumption that twin HDP is benign variant",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "The impact of twin gestation on long-term maternal morbidity among women with hypertensive disorders of pregnancy",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102059"
+    }
+  ],
+  "generated_at": "2026-07-27T10:08:39.008760+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "More than one-quarter of women with gestational diabetes developed hypertension by five months postpartum, and prenatal factors could predict those at highest risk",
+      "confidence": "medium",
+      "id": "gomez-fernandez-2026",
+      "source_ids": [
+        "gomez-fernandez-2026"
+      ]
+    },
+    {
+      "claim": "Evidence-based synthesis clarifies preoperative cerclage decision-making including indications and timing for history-indicated, ultrasound-indicated, and physical-exam-indicated cerclage in singleton and twin pregnancies",
+      "confidence": "medium",
+      "id": "paladino-2026",
+      "source_ids": [
+        "paladino-2026"
+      ]
+    },
+    {
+      "claim": "Approximately one-quarter of postpartum women with documented hypertensive disorders of pregnancy were unaware they had received this diagnosis",
+      "confidence": "medium",
+      "id": "saffian-2026",
+      "source_ids": [
+        "saffian-2026"
+      ]
+    },
+    {
+      "claim": "Diagnosing isolated polyhydramnios using both elevated AFI and elevated MVP rather than either criterion alone better identifies pregnancies at risk for adverse perinatal outcomes",
+      "confidence": "medium",
+      "id": "petrecca-2026",
+      "source_ids": [
+        "petrecca-2026"
+      ]
+    },
+    {
+      "claim": "Women with HDP in twin gestations have similar long-term cardiometabolic and cardiovascular morbidity as those with singleton HDP, with comparable recurrence rates in subsequent pregnancies",
+      "confidence": "medium",
+      "id": "natan-2026",
+      "source_ids": [
+        "natan-2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "G\u00f3mez Fern\u00e1ndez",
+      "id": "gomez-fernandez-2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Hypertension at 5 months postpartum in women with gestational diabetes",
+      "url": "https://doi.org/10.1002/uog.70291",
+      "why_it_matters": "Prospective data showing over 25% of GDM patients develop hypertension by 5 months postpartum, with identifiable prenatal predictors \u2014 strengthens case for early CV surveillance beyond glucose follow-up",
+      "year": 2026
+    },
+    {
+      "author": "Paladino",
+      "id": "paladino-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Preoperative Considerations for Cervical Cerclage (Part 1)",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102054",
+      "why_it_matters": "Comprehensive evidence synthesis clarifying indications and timing for HIC, UIC, and PEIC across singleton and twin gestations \u2014 directly guides high-frequency MFM procedure",
+      "year": 2026
+    },
+    {
+      "author": "Saffian",
+      "id": "saffian-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Missed connections: exploring the gap in patient awareness of hypertensive disorders of pregnancy diagnoses",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102064",
+      "why_it_matters": "Roughly one-quarter of postpartum women with HDP unaware of diagnosis \u2014 identifies critical counseling gap with long-term CV risk implications",
+      "year": 2026
+    },
+    {
+      "author": "Petrecca",
+      "id": "petrecca-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Isolated Polyhydramnios: diagnosis should be made based on both elevated AFI and elevated MVP",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102037",
+      "why_it_matters": "Requiring both AFI and MVP elevation for isolated polyhydramnios diagnosis best identifies pregnancies at risk \u2014 directly refines daily MFM diagnostic criteria",
+      "year": 2026
+    },
+    {
+      "author": "Natan",
+      "id": "natan-2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "The impact of twin gestation on long-term maternal morbidity among women with hypertensive disorders of pregnancy",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102059",
+      "why_it_matters": "Twin-gestation HDP confers similar long-term cardiometabolic risk as singleton HDP \u2014 challenges assumption that twin HDP is benign variant",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "G\u00f3mez Fern\u00e1ndez - Ultrasound Obstet Gynecol - 2026 - Hypertension at 5 months postpartum in women with gestational diabetes (https://doi.org/10.1002/uog.70291)",
+    "Paladino et al. - Am J Obstet Gynecol MFM - 2026 - Preoperative Considerations for Cervical Cerclage (Part 1) (https://doi.org/10.1016/j.ajogmf.2026.102054)",
+    "Saffian et al. - Am J Obstet Gynecol MFM - 2026 - Missed connections: exploring the gap in patient awareness of hypertensive disorders of pregnancy diagnoses (https://doi.org/10.1016/j.ajogmf.2026.102064)",
+    "Petrecca et al. - Am J Obstet Gynecol MFM - 2026 - Isolated Polyhydramnios: diagnosis should be made based on both elevated AFI and elevated MVP (https://doi.org/10.1016/j.ajogmf.2026.102037)",
+    "Natan et al. - Am J Obstet Gynecol MFM - 2026 - The impact of twin gestation on long-term maternal morbidity among women with hypertensive disorders of pregnancy (https://doi.org/10.1016/j.ajogmf.2026.102059)"
+  ],
+  "topic": "MFM Rounds - week of 2026/07/27",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1060
+}
