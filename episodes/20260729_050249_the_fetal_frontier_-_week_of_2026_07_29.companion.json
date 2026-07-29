@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260729_050249_the_fetal_frontier_-_week_of_2026_07_29.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Problem"
+    },
+    {
+      "start_sec": 48.42,
+      "start_time": "0:48",
+      "title": "\u2014 Headline: Citation, Design, and the Clinical Question"
+    },
+    {
+      "start_sec": 96.83,
+      "start_time": "1:37",
+      "title": "\u2014 Headline: The Finding and the Numbers"
+    },
+    {
+      "start_sec": 145.25,
+      "start_time": "2:25",
+      "title": "\u2014 Headline: Evidence Grade, Limitations, and Practice Impact"
+    },
+    {
+      "start_sec": 193.67,
+      "start_time": "3:14",
+      "title": "\u2014 Round 1: Hancock / cfDNA Fragment-Size"
+    },
+    {
+      "start_sec": 242.08,
+      "start_time": "4:02",
+      "title": "\u2014 Round 2: Lanners / Placenta-Heart Axis"
+    },
+    {
+      "start_sec": 290.5,
+      "start_time": "4:50",
+      "title": "\u2014 Round 3: Szwast / Heterotaxy-CHD Prognostication"
+    },
+    {
+      "start_sec": 338.92,
+      "start_time": "5:39",
+      "title": "\u2014 Round 4: Miranda / Fetoscopic Vesicostomy"
+    },
+    {
+      "start_sec": 387.33,
+      "start_time": "6:27",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260729_050249_the_fetal_frontier_-_week_of_2026_07_29.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260729_050249_the_fetal_frontier_-_week_of_2026_07_29.companion.json",
+  "duration_sec": 480.748163,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Demonstrates that quantitative cortical metrics can identify abnormalities in CMV-infected fetuses even when conventional MRI is normal, potentially improving prognostic counseling.",
+      "source": "Prenatal Diagnosis",
+      "title": "Quantitative MRI Assessment of Gyrification and Brain Volume in Congenital Cytomegalovirus Fetuses and Postnatal Outcome",
+      "url": "https://doi.org/10.1002/pd.70223"
+    },
+    {
+      "reason": "Large-scale evidence that fragment-size analysis can nearly halve false-positive rates for sex chromosome aneuploidies on cfDNA screening.",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal Screening Via cfDNA - Paired-End Sequencing Utilizing Fragment Size Information Reduces the Screen Positive Rate for X Chromosome Aneuploidies",
+      "url": "https://doi.org/10.1002/pd.70169"
+    },
+    {
+      "reason": "Bicentre data linking specific placental malperfusion patterns to CHD subtypes, supporting a mechanistic connection between placental and cardiac development.",
+      "source": "Prenatal Diagnosis",
+      "title": "Placental Dysfunction and Congenital Heart Disease: Investigating the Placenta-Heart Axis",
+      "url": "https://doi.org/10.1002/pd.70194"
+    },
+    {
+      "reason": "Largest fetal heterotaxy cohort identifying complete heart block, ventricular dysfunction, and pulmonary venous obstruction as actionable prenatal prognostic markers.",
+      "source": "Prenatal Diagnosis",
+      "title": "Risk Factors for Adverse Outcome in Fetuses With Heterotaxy Syndrome and Congenital Heart Disease",
+      "url": "https://doi.org/10.1002/pd.70173"
+    },
+    {
+      "reason": "Proposes a novel fetoscopic approach to LUTO that may offer advantages over vesicoamniotic shunting, though outcome data are pending.",
+      "source": "Prenatal Diagnosis",
+      "title": "Fetoscopic Vesicostomy for Lower Urinary Tract Obstruction: A Proposal for a New Surgical Technique",
+      "url": "https://doi.org/10.1002/pd.70212"
+    }
+  ],
+  "generated_at": "2026-07-29T10:10:23.510624+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Quantitative MRI gyrification analysis detects cortical abnormalities in CMV-infected fetuses even when conventional MRI appears normal, with correlation to postnatal outcomes.",
+      "confidence": "medium",
+      "id": "sadan2026",
+      "source_ids": [
+        "sadan2026"
+      ]
+    },
+    {
+      "claim": "Incorporating fragment-size data into paired-end cfDNA sequencing reduces monosomy X screen-positive rate by 49% and trisomy X by 43% in a large screening population.",
+      "confidence": "high",
+      "id": "hancock2026",
+      "source_ids": [
+        "hancock2026"
+      ]
+    },
+    {
+      "claim": "Congenital heart disease is associated with elevated maternal vascular malperfusion, and fetal vascular malperfusion increases specifically in CHD subtypes with reduced cerebral oxygenation.",
+      "confidence": "medium",
+      "id": "lanners2026",
+      "source_ids": [
+        "lanners2026"
+      ]
+    },
+    {
+      "claim": "In heterotaxy-CHD fetuses, complete heart block and ventricular dysfunction predict fetal demise; pulmonary venous obstruction and complete heart block predict postnatal mortality, with 68% 10-year survival.",
+      "confidence": "medium",
+      "id": "szwast2026",
+      "source_ids": [
+        "szwast2026"
+      ]
+    },
+    {
+      "claim": "A novel fetoscopic vesicostomy technique is proposed as an alternative intervention for fetal lower urinary tract obstruction.",
+      "confidence": "low",
+      "id": "miranda2026",
+      "source_ids": [
+        "miranda2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Sadan",
+      "id": "sadan2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Quantitative MRI Assessment of Gyrification and Brain Volume in Congenital Cytomegalovirus Fetuses and Postnatal Outcome",
+      "url": "https://doi.org/10.1002/pd.70223",
+      "why_it_matters": "Demonstrates that quantitative cortical metrics can identify abnormalities in CMV-infected fetuses even when conventional MRI is normal, potentially improving prognostic counseling.",
+      "year": 2026
+    },
+    {
+      "author": "Hancock",
+      "id": "hancock2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal Screening Via cfDNA - Paired-End Sequencing Utilizing Fragment Size Information Reduces the Screen Positive Rate for X Chromosome Aneuploidies",
+      "url": "https://doi.org/10.1002/pd.70169",
+      "why_it_matters": "Large-scale evidence that fragment-size analysis can nearly halve false-positive rates for sex chromosome aneuploidies on cfDNA screening.",
+      "year": 2026
+    },
+    {
+      "author": "Lanners",
+      "id": "lanners2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Placental Dysfunction and Congenital Heart Disease: Investigating the Placenta-Heart Axis",
+      "url": "https://doi.org/10.1002/pd.70194",
+      "why_it_matters": "Bicentre data linking specific placental malperfusion patterns to CHD subtypes, supporting a mechanistic connection between placental and cardiac development.",
+      "year": 2026
+    },
+    {
+      "author": "Szwast",
+      "id": "szwast2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Risk Factors for Adverse Outcome in Fetuses With Heterotaxy Syndrome and Congenital Heart Disease",
+      "url": "https://doi.org/10.1002/pd.70173",
+      "why_it_matters": "Largest fetal heterotaxy cohort identifying complete heart block, ventricular dysfunction, and pulmonary venous obstruction as actionable prenatal prognostic markers.",
+      "year": 2026
+    },
+    {
+      "author": "Miranda",
+      "id": "miranda2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Fetoscopic Vesicostomy for Lower Urinary Tract Obstruction: A Proposal for a New Surgical Technique",
+      "url": "https://doi.org/10.1002/pd.70212",
+      "why_it_matters": "Proposes a novel fetoscopic approach to LUTO that may offer advantages over vesicoamniotic shunting, though outcome data are pending.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Sadan et al. - Prenatal Diagnosis - 2026 - Quantitative MRI Assessment of Gyrification and Brain Volume in Congenital Cytomegalovirus Fetuses and Postnatal Outcome (https://doi.org/10.1002/pd.70223)",
+    "Hancock et al. - Prenatal Diagnosis - 2026 - Prenatal Screening Via cfDNA - Paired-End Sequencing Utilizing Fragment Size Information Reduces the Screen Positive Rate for X Chromosome Aneuploidies (https://doi.org/10.1002/pd.70169)",
+    "Lanners et al. - Prenatal Diagnosis - 2026 - Placental Dysfunction and Congenital Heart Disease: Investigating the Placenta-Heart Axis (https://doi.org/10.1002/pd.70194)",
+    "Szwast et al. - Prenatal Diagnosis - 2026 - Risk Factors for Adverse Outcome in Fetuses With Heterotaxy Syndrome and Congenital Heart Disease (https://doi.org/10.1002/pd.70173)",
+    "Miranda et al. - Prenatal Diagnosis - 2026 - Fetoscopic Vesicostomy for Lower Urinary Tract Obstruction: A Proposal for a New Surgical Technique (https://doi.org/10.1002/pd.70212)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/07/29",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1099
+}

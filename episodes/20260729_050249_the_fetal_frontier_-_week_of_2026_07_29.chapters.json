@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Clinical Problem"
+    },
+    {
+      "startTime": 48.42,
+      "title": "\u2014 Headline: Citation, Design, and the Clinical Question"
+    },
+    {
+      "startTime": 96.83,
+      "title": "\u2014 Headline: The Finding and the Numbers"
+    },
+    {
+      "startTime": 145.25,
+      "title": "\u2014 Headline: Evidence Grade, Limitations, and Practice Impact"
+    },
+    {
+      "startTime": 193.67,
+      "title": "\u2014 Round 1: Hancock / cfDNA Fragment-Size"
+    },
+    {
+      "startTime": 242.08,
+      "title": "\u2014 Round 2: Lanners / Placenta-Heart Axis"
+    },
+    {
+      "startTime": 290.5,
+      "title": "\u2014 Round 3: Szwast / Heterotaxy-CHD Prognostication"
+    },
+    {
+      "startTime": 338.92,
+      "title": "\u2014 Round 4: Miranda / Fetoscopic Vesicostomy"
+    },
+    {
+      "startTime": 387.33,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}
