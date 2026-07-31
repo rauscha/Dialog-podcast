@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260731_050156_signal_in_the_scan_-_week_of_2026_07_31.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changes"
+    },
+    {
+      "start_sec": 39.45,
+      "start_time": "0:39",
+      "title": "\u2014 Headline: Citation, Design, and Why the Evidence Grade Holds"
+    },
+    {
+      "start_sec": 78.91,
+      "start_time": "1:19",
+      "title": "\u2014 Headline: The Finding and the Structural Explanation"
+    },
+    {
+      "start_sec": 118.36,
+      "start_time": "1:58",
+      "title": "\u2014 Headline: Practice Impact and Honest Limits"
+    },
+    {
+      "start_sec": 157.82,
+      "start_time": "2:38",
+      "title": "\u2014 Round 1: LVO AI on CTA (Liu et al.)"
+    },
+    {
+      "start_sec": 197.27,
+      "start_time": "3:17",
+      "title": "\u2014 Round 2: Bone Tumor Risk Stratification (Song et al.)"
+    },
+    {
+      "start_sec": 236.73,
+      "start_time": "3:57",
+      "title": "\u2014 Round 3: Spatiotemporal Mammographic Asymmetry Model (Zhou, Radiology AI)"
+    },
+    {
+      "start_sec": 276.18,
+      "start_time": "4:36",
+      "title": "\u2014 Round 4: MerMED-FM Foundation Model (Zhou, Lancet Digital Health)"
+    },
+    {
+      "start_sec": 315.63,
+      "start_time": "5:16",
+      "title": "\u2014 Close: What to Watch and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260731_050156_signal_in_the_scan_-_week_of_2026_07_31.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260731_050156_signal_in_the_scan_-_week_of_2026_07_31.companion.json",
+  "duration_sec": 400.088254,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Directly informs expectations for CEM screening programs in high-risk women \u2014 prevalence-round yields do not predict steady-state performance",
+      "source": "Radiology",
+      "title": "Contrast-enhanced Mammography for Breast Cancer Screening in Women at Increased Risk: Comparison of Prevalence and Incidence Screens",
+      "url": "https://doi.org/10.1148/radiol.252433"
+    },
+    {
+      "reason": "Quantifies the sensitivity drop for distal occlusions, calibrating trust in AI stroke triage tools",
+      "source": "Radiol Artif Intell",
+      "title": "Anatomy-specific Performance of CT Angiography-based AI for Anterior Circulation Occlusion: Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1148/ryai.260261"
+    },
+    {
+      "reason": "Demonstrates AI outperforming radiologists and structured reporting for bone tumor triage in a rigorous multicenter design",
+      "source": "Radiology",
+      "title": "Radiograph-based Deep Learning Algorithm for Assisting Bone Tumor Risk Assessment: A Multicenter Study",
+      "url": "https://doi.org/10.1148/radiol.252921"
+    },
+    {
+      "reason": "Novel architecture leveraging bilateral and temporal asymmetries could refine personalized screening strategies",
+      "source": "Radiol Artif Intell",
+      "title": "Spatiotemporal Asymmetries of Longitudinal Screening Mammograms for Breast Cancer Risk Prediction",
+      "url": "https://doi.org/10.1148/ryai.250888"
+    },
+    {
+      "reason": "Tests the foundation model paradigm across 31 datasets and 12 specialties \u2014 a benchmark for generalization claims",
+      "source": "Lancet Digit Health",
+      "title": "MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model",
+      "url": "https://doi.org/10.1016/j.landig.2026.101007"
+    }
+  ],
+  "generated_at": "2026-07-31T10:08:43.038910+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Contrast-enhanced mammography cancer detection rates are lower at incidence screens than at prevalence screens in high-risk women",
+      "confidence": "high",
+      "id": "claim_lee",
+      "source_ids": [
+        "lee2026"
+      ]
+    },
+    {
+      "claim": "AI on CT angiography detects proximal large vessel occlusions with high accuracy but sensitivity drops substantially for distal M2/M3 segments",
+      "confidence": "high",
+      "id": "claim_liu",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "A multicenter deep learning model integrating clinical and semantic features outperformed radiologists and Bone-RADS for bone tumor malignancy stratification",
+      "confidence": "high",
+      "id": "claim_song",
+      "source_ids": [
+        "song2026"
+      ]
+    },
+    {
+      "claim": "Exploiting bilateral and longitudinal mammographic asymmetries improves breast cancer risk prediction over existing models",
+      "confidence": "medium",
+      "id": "claim_zhou_risk",
+      "source_ids": [
+        "zhou2026a"
+      ]
+    },
+    {
+      "claim": "A self-supervised multimodal foundation model achieved robust performance across 31 diverse imaging datasets spanning seven modalities",
+      "confidence": "medium",
+      "id": "claim_zhou_fm",
+      "source_ids": [
+        "zhou2027"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Lee",
+      "id": "lee2026",
+      "publication": "Radiology",
+      "title": "Contrast-enhanced Mammography for Breast Cancer Screening in Women at Increased Risk: Comparison of Prevalence and Incidence Screens",
+      "url": "https://doi.org/10.1148/radiol.252433",
+      "why_it_matters": "Directly informs expectations for CEM screening programs in high-risk women \u2014 prevalence-round yields do not predict steady-state performance",
+      "year": 2026
+    },
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "Radiol Artif Intell",
+      "title": "Anatomy-specific Performance of CT Angiography-based AI for Anterior Circulation Occlusion: Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1148/ryai.260261",
+      "why_it_matters": "Quantifies the sensitivity drop for distal occlusions, calibrating trust in AI stroke triage tools",
+      "year": 2026
+    },
+    {
+      "author": "Song",
+      "id": "song2026",
+      "publication": "Radiology",
+      "title": "Radiograph-based Deep Learning Algorithm for Assisting Bone Tumor Risk Assessment: A Multicenter Study",
+      "url": "https://doi.org/10.1148/radiol.252921",
+      "why_it_matters": "Demonstrates AI outperforming radiologists and structured reporting for bone tumor triage in a rigorous multicenter design",
+      "year": 2026
+    },
+    {
+      "author": "Zhou",
+      "id": "zhou2026a",
+      "publication": "Radiol Artif Intell",
+      "title": "Spatiotemporal Asymmetries of Longitudinal Screening Mammograms for Breast Cancer Risk Prediction",
+      "url": "https://doi.org/10.1148/ryai.250888",
+      "why_it_matters": "Novel architecture leveraging bilateral and temporal asymmetries could refine personalized screening strategies",
+      "year": 2026
+    },
+    {
+      "author": "Zhou",
+      "id": "zhou2027",
+      "publication": "Lancet Digit Health",
+      "title": "MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model",
+      "url": "https://doi.org/10.1016/j.landig.2026.101007",
+      "why_it_matters": "Tests the foundation model paradigm across 31 datasets and 12 specialties \u2014 a benchmark for generalization claims",
+      "year": 2027
+    }
+  ],
+  "sources": [
+    "Lee et al. - Radiology - 2026 - Contrast-enhanced Mammography for Breast Cancer Screening in Women at Increased Risk: Comparison of Prevalence and Incidence Screens (https://doi.org/10.1148/radiol.252433)",
+    "Liu et al. - Radiol Artif Intell - 2026 - Anatomy-specific Performance of CT Angiography-based AI for Anterior Circulation Occlusion: Systematic Review and Meta-Analysis (https://doi.org/10.1148/ryai.260261)",
+    "Song et al. - Radiology - 2026 - Radiograph-based Deep Learning Algorithm for Assisting Bone Tumor Risk Assessment: A Multicenter Study (https://doi.org/10.1148/radiol.252921)",
+    "Zhou et al. - Radiol Artif Intell - 2026 - Spatiotemporal Asymmetries of Longitudinal Screening Mammograms for Breast Cancer Risk Prediction (https://doi.org/10.1148/ryai.250888)",
+    "Zhou et al. - Lancet Digit Health - 2027 - MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model (https://doi.org/10.1016/j.landig.2026.101007)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/07/31",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 937
+}

@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What Changes"
+    },
+    {
+      "startTime": 39.45,
+      "title": "\u2014 Headline: Citation, Design, and Why the Evidence Grade Holds"
+    },
+    {
+      "startTime": 78.91,
+      "title": "\u2014 Headline: The Finding and the Structural Explanation"
+    },
+    {
+      "startTime": 118.36,
+      "title": "\u2014 Headline: Practice Impact and Honest Limits"
+    },
+    {
+      "startTime": 157.82,
+      "title": "\u2014 Round 1: LVO AI on CTA (Liu et al.)"
+    },
+    {
+      "startTime": 197.27,
+      "title": "\u2014 Round 2: Bone Tumor Risk Stratification (Song et al.)"
+    },
+    {
+      "startTime": 236.73,
+      "title": "\u2014 Round 3: Spatiotemporal Mammographic Asymmetry Model (Zhou, Radiology AI)"
+    },
+    {
+      "startTime": 276.18,
+      "title": "\u2014 Round 4: MerMED-FM Foundation Model (Zhou, Lancet Digital Health)"
+    },
+    {
+      "startTime": 315.63,
+      "title": "\u2014 Close: What to Watch and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}
