@@ -1,0 +1,881 @@
+{
+  "naive": {
+    "breaks": [
+      {
+        "detail": "Who is Jonathan Blow? The name was just dropped with no context.",
+        "severity": "med",
+        "turn": 1,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Wait \u2014 'Victor, our host'? I thought Victor was Jonathan Blow's lead programmer, not the host of this podcast. Now I'm confused about who's who.",
+        "severity": "med",
+        "turn": 2,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Who is Clara Fern\u00e1ndez-Vara and why is her definition the one we're using? She was just introduced with no setup.",
+        "severity": "low",
+        "turn": 11,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "The Monkey Island example got a bit tangled \u2014 a pump that's a dog inflated by a cat? I lost the thread of the actual puzzle logic, though I think that's intentional to show it's absurd.",
+        "severity": "low",
+        "turn": 15,
+        "type": null
+      },
+      {
+        "detail": "Who is Elyot Grant? He's just dropped in without any introduction.",
+        "severity": "low",
+        "turn": 17,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Traynor's 'five-level heuristic' hasn't been mentioned before \u2014 this is the first I'm hearing of it, and it's being referenced as if it was already established",
+        "severity": "med",
+        "turn": 33,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno just introduced 'Traynor's five-level heuristic' as if I already know what it is, but it was never explained. Now Caspar is asking the same question I have, which is good \u2014 but I still don't know what it is yet.",
+        "severity": "low",
+        "turn": 34,
+        "type": null
+      },
+      {
+        "detail": "Who is 'Caspar, our host moonlighting as a game designer'? Caspar has been the host the whole time but I had no idea he was also a game designer \u2014 that's never been established. Also, who is Zach Gage and what is 'hand stopping is the truth'? Neither has been mentioned before and there's no context for either.",
+        "severity": "high",
+        "turn": 45,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "The previous line mentioned 'Zach Gage' and 'hand stopping is the truth' without any prior introduction \u2014 I have no idea who Zach Gage is or what that phrase means",
+        "severity": "med",
+        "turn": 46,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "This five-level heuristic was already explained in detail earlier in the episode \u2014 Juno literally explained it when Caspar asked about it. Why is Juno presenting it now as if it's new?",
+        "severity": "med",
+        "turn": 55,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "If sequencing is so critical and The Witness lets you walk anywhere, how does that work with everything they just said about curriculum and teaching vs. testing?",
+        "severity": "low",
+        "turn": 57,
+        "type": null
+      },
+      {
+        "detail": "What is the 'pay-to-skip trap'? I haven't heard this term before and don't know what failure mode it refers to yet.",
+        "severity": "low",
+        "turn": 75,
+        "type": "undefined_name"
+      }
+    ],
+    "first_bounce_turn": 45,
+    "followed_overall": false,
+    "per_turn": [
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who are these 'best designers in the world' and what games are we talking about?",
+        "severity": null,
+        "turn": 0,
+        "type": null
+      },
+      {
+        "confusion": "Who is Jonathan Blow? The name was just dropped with no context.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is Jonathan Blow and why does his lead programmer matter to this story?",
+        "severity": "med",
+        "turn": 1,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": "Wait \u2014 'Victor, our host'? I thought Victor was Jonathan Blow's lead programmer, not the host of this podcast. Now I'm confused about who's who.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is Victor the programmer, the podcast host, or both somehow?",
+        "severity": "med",
+        "turn": 2,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the whole game is just drawing lines through mazes, what makes it special enough to talk about?",
+        "severity": null,
+        "turn": 3,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does 'the line can never cross itself' actually mean as a puzzle rule, and how does that one constraint turn into a whole game?",
+        "severity": null,
+        "turn": 4,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does adding the 'line can never cross itself' rule actually do to the puzzles?",
+        "severity": null,
+        "turn": 5,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How many other rules like this did Blow discover just by experimenting \u2014 and is that how the whole game was built?",
+        "severity": null,
+        "turn": 6,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How does a designer teach players a rule they discovered by accident?",
+        "severity": null,
+        "turn": 7,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do you know when you've found a good rule vs. a dead end?",
+        "severity": null,
+        "turn": 8,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do you know when you've found a good rule versus one that goes nowhere?",
+        "severity": null,
+        "turn": 9,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the method underneath the accident \u2014 how do the best designers know when they've found a good rule?",
+        "severity": null,
+        "turn": 10,
+        "type": null
+      },
+      {
+        "confusion": "Who is Clara Fern\u00e1ndez-Vara and why is her definition the one we're using? She was just introduced with no setup.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What makes this definition the right one to build on \u2014 and how does it fit The Witness, which seemed to have lots of solutions?",
+        "severity": "low",
+        "turn": 11,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What makes a rule 'good' \u2014 is there actually a repeatable method underneath the accident?",
+        "severity": null,
+        "turn": 12,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So if the designer has to provide everything, how do you make a puzzle hard without hiding anything?",
+        "severity": null,
+        "turn": 13,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the method underneath the accident that the best puzzle designers use?",
+        "severity": null,
+        "turn": 14,
+        "type": null
+      },
+      {
+        "confusion": "The Monkey Island example got a bit tangled \u2014 a pump that's a dog inflated by a cat? I lost the thread of the actual puzzle logic, though I think that's intentional to show it's absurd.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So what IS the method underneath the accident \u2014 the repeatable thing the best designers use?",
+        "severity": "low",
+        "turn": 15,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the repeatable method underneath the accident that the best puzzle designers use?",
+        "severity": null,
+        "turn": 16,
+        "type": null
+      },
+      {
+        "confusion": "Who is Elyot Grant? He's just dropped in without any introduction.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What exactly is the 'aha' moment and how does Elyot Grant define it differently from just hard puzzles getting solved?",
+        "severity": "low",
+        "turn": 17,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the repeatable method that the best puzzle designers use?",
+        "severity": null,
+        "turn": 18,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the actual method underneath the accident that the best puzzle designers use?",
+        "severity": null,
+        "turn": 19,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What did the Gestalt psychologists actually find out about how insight works, and how does that connect to designing puzzles?",
+        "severity": null,
+        "turn": 20,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the repeatable method underneath the accident that the best puzzle designers use?",
+        "severity": null,
+        "turn": 21,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the method underneath the accident \u2014 the repeatable process the best puzzle designers use?",
+        "severity": null,
+        "turn": 22,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the method underneath the accident that the best puzzle designers use?",
+        "severity": null,
+        "turn": 23,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If insight is the target, what's the actual method for engineering it?",
+        "severity": null,
+        "turn": 24,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How DO you tell the difference between insight and relief from the designer's side \u2014 and what's the actual method they use?",
+        "severity": null,
+        "turn": 25,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the structural problem baked into this craft?",
+        "severity": null,
+        "turn": 26,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So how do designers actually test whether their puzzle produces insight vs. relief if they can't see their own blind spots?",
+        "severity": null,
+        "turn": 27,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If designers can't tell from the inside whether their puzzle produces insight or just relief, what's the actual method for fixing that?",
+        "severity": null,
+        "turn": 28,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the curse of knowledge is structural and permanent, what do designers actually do about it \u2014 is playtesting even enough?",
+        "severity": null,
+        "turn": 29,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the specific techniques designers use to work around the curse of knowledge?",
+        "severity": null,
+        "turn": 30,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the actual steps in the method they keep promising to explain?",
+        "severity": null,
+        "turn": 31,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the two opposing views about what a puzzle designer is actually trying to build?",
+        "severity": null,
+        "turn": 32,
+        "type": null
+      },
+      {
+        "confusion": "Traynor's 'five-level heuristic' hasn't been mentioned before \u2014 this is the first I'm hearing of it, and it's being referenced as if it was already established",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the two designers and the two whiteboards Caspar just mentioned \u2014 are we about to hear that, or did we skip past it?",
+        "severity": "med",
+        "turn": 33,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Juno just introduced 'Traynor's five-level heuristic' as if I already know what it is, but it was never explained. Now Caspar is asking the same question I have, which is good \u2014 but I still don't know what it is yet.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the five-level heuristic and what problem does it solve?",
+        "severity": "low",
+        "turn": 34,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So how does this five-level heuristic fit into the bigger disagreement between designers they were about to describe?",
+        "severity": null,
+        "turn": 35,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What's the opposing design philosophy \u2014 what does the other whiteboard look like?",
+        "severity": null,
+        "turn": 36,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the opposing design philosophy to Traynor's system-centric approach?",
+        "severity": null,
+        "turn": 37,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So which approach actually works better \u2014 Traynor's bite-sized system demos or Blow's embrace of genuine complexity?",
+        "severity": null,
+        "turn": 38,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So which philosophy actually produces better puzzles \u2014 Traynor's simplicity or Blow's complexity?",
+        "severity": null,
+        "turn": 39,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So how do I actually figure out which type of puzzle game I'm building \u2014 is there a method for that, or is it just a gut call?",
+        "severity": null,
+        "turn": 40,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the process for generating puzzles?",
+        "severity": null,
+        "turn": 41,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the specific process for generating puzzles once you've picked a philosophy?",
+        "severity": null,
+        "turn": 42,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do you know when a constraint you've found is worth keeping versus a dead end \u2014 what's the filter?",
+        "severity": null,
+        "turn": 43,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How DO you know when a constraint is good versus a dead end?",
+        "severity": null,
+        "turn": 44,
+        "type": null
+      },
+      {
+        "confusion": "Who is 'Caspar, our host moonlighting as a game designer'? Caspar has been the host the whole time but I had no idea he was also a game designer \u2014 that's never been established. Also, who is Zach Gage and what is 'hand stopping is the truth'? Neither has been mentioned before and there's no context for either.",
+        "delivered_new_material": false,
+        "engaged": false,
+        "holding_question": "What is 'hand stopping is the truth' and who is Zach Gage?",
+        "severity": "high",
+        "turn": 45,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": "The previous line mentioned 'Zach Gage' and 'hand stopping is the truth' without any prior introduction \u2014 I have no idea who Zach Gage is or what that phrase means",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does 'hand stopping is the truth' mean, and who is Zach Gage?",
+        "severity": "med",
+        "turn": 46,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What do you actually do if your constraints never surprise you \u2014 is there a method to force that, or do you just keep trying?",
+        "severity": null,
+        "turn": 47,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do you know if your core interaction is genuinely generative before you've spent months on it?",
+        "severity": null,
+        "turn": 48,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does puzzle ordering actually do, and what's the hidden work it's performing?",
+        "severity": null,
+        "turn": 49,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do designers actually figure out the right order \u2014 is there a method for sequencing, or is it just trial and error?",
+        "severity": null,
+        "turn": 50,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What specific techniques do designers use to sequence puzzles correctly?",
+        "severity": null,
+        "turn": 51,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do you know when you've taught something well enough to move to testing?",
+        "severity": null,
+        "turn": 52,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is Portal going to be used as an example of the teaching/testing curriculum structure?",
+        "severity": null,
+        "turn": 53,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do you design a teaching puzzle that doesn't feel like a tutorial \u2014 is there a line between teaching and hand-holding?",
+        "severity": null,
+        "turn": 54,
+        "type": null
+      },
+      {
+        "confusion": "This five-level heuristic was already explained in detail earlier in the episode \u2014 Juno literally explained it when Caspar asked about it. Why is Juno presenting it now as if it's new?",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the sequencing section going to add anything new beyond what was already covered about the five-level heuristic?",
+        "severity": "med",
+        "turn": 55,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the actual workarounds designers use to get around the curse of knowledge?",
+        "severity": null,
+        "turn": 56,
+        "type": null
+      },
+      {
+        "confusion": "If sequencing is so critical and The Witness lets you walk anywhere, how does that work with everything they just said about curriculum and teaching vs. testing?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How does The Witness handle the teaching/testing sequence if there's no fixed order?",
+        "severity": "low",
+        "turn": 57,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How does The Witness handle teaching and sequencing if the player can explore in any order?",
+        "severity": null,
+        "turn": 58,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So does that mean players in The Witness can get genuinely stuck wandering around with no idea what to do next, or does the visual language guide them naturally toward the right starting point?",
+        "severity": null,
+        "turn": 59,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Does trusting the player to self-sequence actually work, or do most players just get stuck and quit?",
+        "severity": null,
+        "turn": 60,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do you actually test whether your puzzles work when you can't un-know the solution yourself?",
+        "severity": null,
+        "turn": 61,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the actual method for testing whether puzzles work, given the curse of knowledge?",
+        "severity": null,
+        "turn": 62,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What exactly does Zach Gage do with the footage once he's identified where the hand stops \u2014 how does that translate into changing the puzzle?",
+        "severity": null,
+        "turn": 63,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why is watching better than asking \u2014 what's wrong with just interviewing playtesters?",
+        "severity": null,
+        "turn": 64,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If you can't trust what players say and you can only watch their hands, how do you figure out WHY a puzzle broke so you can fix it?",
+        "severity": null,
+        "turn": 65,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So how do you actually set up a playtesting session where the designer isn't in the room \u2014 is there a standard way they do this?",
+        "severity": null,
+        "turn": 66,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does the face reveal that the hand doesn't, and are there other body language signals designers watch for?",
+        "severity": null,
+        "turn": 67,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What specific techniques do designers use to fix a puzzle once playtesting reveals it's broken?",
+        "severity": null,
+        "turn": 68,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the specific failure modes for each step in the puzzle design process?",
+        "severity": null,
+        "turn": 69,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the other failure modes beyond obscurity?",
+        "severity": null,
+        "turn": 70,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What specific game will they use as an example of the obscurity failure mode?",
+        "severity": null,
+        "turn": 71,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the other failure modes beyond obscurity?",
+        "severity": null,
+        "turn": 72,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does over-tutorializing mean as a failure mode, and how does it contrast with obscurity?",
+        "severity": null,
+        "turn": 73,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do you find the line between teaching enough and over-explaining \u2014 is there a rule for that?",
+        "severity": null,
+        "turn": 74,
+        "type": null
+      },
+      {
+        "confusion": "What is the 'pay-to-skip trap'? I haven't heard this term before and don't know what failure mode it refers to yet.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What exactly is the pay-to-skip trap and how does it relate to puzzle design failure modes?",
+        "severity": "low",
+        "turn": 75,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the remaining failure modes after pay-to-skip?",
+        "severity": null,
+        "turn": 76,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does 'designing to show off' mean as a failure mode, and how does it break the puzzle contract?",
+        "severity": null,
+        "turn": 77,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is Stephen's Sausage Roll an example of designing to show off, or is extreme difficulty without hints actually a legitimate design choice?",
+        "severity": null,
+        "turn": 78,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So where's the line between honoring genuine complexity and just showing off \u2014 is there a concrete test for that?",
+        "severity": null,
+        "turn": 79,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do you actually tell in practice whether your puzzle is hard because the system requires it or because you made it hard \u2014 is there a concrete test for that?",
+        "severity": null,
+        "turn": 80,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do you actually tell in practice whether your puzzle's difficulty serves the player or your own ego?",
+        "severity": null,
+        "turn": 81,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly are they circling back to \u2014 the curse of knowledge, or the designer's inability to judge their own work?",
+        "severity": null,
+        "turn": 82,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is forgetting your own puzzle actually a useful design tool, or just a lucky accident \u2014 and can you deliberately engineer that kind of distance?",
+        "severity": null,
+        "turn": 83,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Can you actually use deliberate forgetting as a design method, or is it just a curiosity about Blow's experience?",
+        "severity": null,
+        "turn": 84,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What happened when Mark Brown actually made his puzzle game \u2014 did the theory help at all, or did he fall into all the same traps?",
+        "severity": null,
+        "turn": 85,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is there anything left to cover, or is this the actual end of the episode?",
+        "severity": "low",
+        "turn": 86,
+        "type": "bored"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is there any practical way to deliberately slow down your own understanding, or is this just something that happens accidentally over long timescales?",
+        "severity": null,
+        "turn": 87,
+        "type": null
+      }
+    ]
+  },
+  "narration_vs_banter": {
+    "pass": true,
+    "ratio": 0.48863636363636365,
+    "react_only_beats": 45,
+    "render_beats": 43,
+    "threshold": 0.35
+  }
+}

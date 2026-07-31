@@ -1,0 +1,327 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260731_151019_a_guide_on_how_to_design_a_puzzle_in_a_puzzle_video_game_a_m.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "(S1) \u2014 The Rule He Found, Not Invented"
+    },
+    {
+      "start_sec": 133.47,
+      "start_time": "2:13",
+      "title": "(S2) \u2014 The Contract"
+    },
+    {
+      "start_sec": 266.94,
+      "start_time": "4:27",
+      "title": "(S3) \u2014 The Event in the Brain"
+    },
+    {
+      "start_sec": 400.4,
+      "start_time": "6:40",
+      "title": "(S4) \u2014 The Worst Judge of Your Own Puzzle"
+    },
+    {
+      "start_sec": 533.87,
+      "start_time": "8:54",
+      "title": "(S5) \u2014 Two Designers, Two Targets"
+    },
+    {
+      "start_sec": 667.34,
+      "start_time": "11:07",
+      "title": "(S6) \u2014 Constraint Discovery as Method"
+    },
+    {
+      "start_sec": 800.81,
+      "start_time": "13:21",
+      "title": "(S7) \u2014 The Curriculum"
+    },
+    {
+      "start_sec": 934.28,
+      "start_time": "15:34",
+      "title": "(S8) \u2014 Watch the Hand, Not the Mouth"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260731_151019_a_guide_on_how_to_design_a_puzzle_in_a_puzzle_video_game_a_m.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260731_151019_a_guide_on_how_to_design_a_puzzle_in_a_puzzle_video_game_a_m.companion.json",
+  "duration_sec": 1112.743923,
+  "episode_type": "how_to",
+  "episode_type_label": "Teaching How-To",
+  "follow_up_links": [
+    {
+      "reason": "Blow describes his iterative constraint-discovery process for The Witness\u2014starting with a core interaction (drawing lines on panels), then systematically asking 'what if' questions about constraints until emergent puzzle mechanics revealed themselves. His decision that 'the line can never cross itself' came from exploration, not premeditation, and unlocked the partition-based puzzle system.",
+      "source": "Gamasutra/Game Developer",
+      "title": "IndieCade: Inside Jonathan Blow's Puzzle Design Process",
+      "url": "https://www.gamedeveloper.com/design/indiecade-inside-jonathan-blow-s-puzzle-design-process"
+    },
+    {
+      "reason": "Traynor articulates 'system-centric' design: the goal is to showcase an interesting system, not to stump players. He advocates simplifying puzzles as much as possible while still demonstrating their core idea\u2014trimming possibility space, removing solution steps, keeping things bite-sized. His playtesting methodology (video recording, think-aloud protocols) offers concrete process guidance.",
+      "source": "GDC Vault",
+      "title": "System-Centric Puzzle Design in 'Patrick's Parabox' (GDC 2024)",
+      "url": "https://gdcvault.com/play/1034415/System-Centric-Puzzle-Design-in"
+    },
+    {
+      "reason": "Grant bridges traditional puzzle communities (crossword constructors, logic puzzle designers) with video game design. He documents vocabulary and aesthetic sensibilities from insular puzzlemaking communities that predate digital games, offering techniques most game designers have never encountered. The 3-hour extended cut is considered a definitive resource.",
+      "source": "GDC Vault / YouTube Extended Director's Cut",
+      "title": "30 Puzzle Design Lessons From The World's Greatest Puzzle Communities (GDC 2021)",
+      "url": "https://gdcvault.com/play/1027306/30-Puzzle-Design-Lessons-From"
+    },
+    {
+      "reason": "Fern\u00e1ndez-Vara frames puzzles as a 'contract between designer and player'\u2014the designer must provide all necessary information while still making it challenging. Her concept of 'insight' as the core pleasure ('feeling clever is fun') provides the psychological foundation for why puzzles work. She also addresses puzzle-narrative integration.",
+      "source": "GDC Vault",
+      "title": "Puzzle Writing: Best Practices (GDC Online 2010)",
+      "url": "https://gdcvault.com/play/1013851/Puzzle-Writing-Best"
+    },
+    {
+      "reason": "The Portal team describes how they added Test Chamber 01 after playtesting revealed players weren't understanding portals\u2014a level requiring players to walk through 5 portals in specific order with no way to brute-force. This eliminated most comprehension issues for the rest of the game. A canonical example of iterative tutorial design.",
+      "source": "GDC Vault",
+      "title": "A Portal Post-Mortem: Integrating Writing and Design (GDC 2008)",
+      "url": "https://gdcvault.com/play/197/A-PORTAL-Post-Mortem-Integrating"
+    },
+    {
+      "reason": "Gage offers a counterpoint to Blow-style linear puzzle design. His 'sandbox' approach means every game should let newcomers 'feel comfortable playing around' at the lowest level. His 'subway legibility' concept (from GDC 2018) and 'three reads' UI framework provide concrete visual design principles.",
+      "source": "Game Developer",
+      "title": "Puzzmo co-creator Zach Gage on building newspaper games that can last forever",
+      "url": "https://www.gamedeveloper.com/design/puzzmo-co-creator-zach-gage-on-building-newspaper-games-that-can-last-forever"
+    },
+    {
+      "reason": "VanDevander describes three puzzle creation methods: working backwards from solution, forward from initial state, or 'deductive chaining' (placing deducible situations and building specificity). He warns against two career-stage mistakes: not listening enough early on, and listening too much once established.",
+      "source": "taiji-game.com",
+      "title": "How I Design Puzzles (Taiji Development Blog)",
+      "url": "https://taiji-game.com/2022/02/23/84-how-i-design-puzzles/"
+    },
+    {
+      "reason": "Stephen Lavelle's game is cited as a masterclass in elegant minimalism\u2014extracting maximum depth from four movement keys and two-tile sausages. The game teaches rules through play, letting players discover mechanics (skewering, stacking, rotating) through experimentation rather than instruction.",
+      "source": "Thinky Games",
+      "title": "Stephen's Sausage Roll: 10 Years of Grilling",
+      "url": "https://thinkygames.com/features/10-years-of-grilling-stephens-sausage-roll-remains-one-of-the-most-influential-puzzle-games-ever-created/"
+    }
+  ],
+  "generated_at": "2026-07-31T20:47:16.175127+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "The core pleasure of puzzles is 'insight'\u2014the moment of realization that makes players feel clever. This should be the design goal, not proving the designer's cleverness.",
+      "confidence": "high",
+      "id": "insight_pleasure",
+      "source_ids": [
+        "fernandez_vara"
+      ]
+    },
+    {
+      "claim": "In 'system-centric' puzzle design, the goal is to showcase an interesting system, not to challenge or stump players. Players' motivation becomes wanting to see more of the system.",
+      "confidence": "high",
+      "id": "system_centric",
+      "source_ids": [
+        "traynor_parabox"
+      ]
+    },
+    {
+      "claim": "Blow's puzzle design process involves starting with a core interaction, then systematically exploring constraints through 'what if' questions until mechanics emerge from the exploration itself.",
+      "confidence": "high",
+      "id": "constraint_discovery",
+      "source_ids": [
+        "blow_witness"
+      ]
+    },
+    {
+      "claim": "The Witness's core mechanic\u2014that the line can never cross itself\u2014was discovered through exploration, not predetermined. This single constraint transformed puzzles into partition problems.",
+      "confidence": "high",
+      "id": "line_partition",
+      "source_ids": [
+        "blow_witness"
+      ]
+    },
+    {
+      "claim": "Valve added Portal's Test Chamber 01 after playtesting showed players weren't understanding portals. The level requires walking through 5 portals in order with no brute-force path, which eliminated most comprehension issues.",
+      "confidence": "high",
+      "id": "portal_test_chamber",
+      "source_ids": [
+        "portal_postmortem"
+      ]
+    },
+    {
+      "claim": "Patrick Traynor advocates making puzzles 'as easy as possible while still showing their idea'\u2014removing solution steps, trimming possibility space, keeping things bite-sized.",
+      "confidence": "high",
+      "id": "simplify_puzzles",
+      "source_ids": [
+        "traynor_parabox"
+      ]
+    },
+    {
+      "claim": "Recording playtesters on video is more valuable than think-aloud protocols for puzzle games, since most people don't naturally verbalize their puzzle-solving process.",
+      "confidence": "high",
+      "id": "video_playtesting",
+      "source_ids": [
+        "traynor_parabox"
+      ]
+    },
+    {
+      "claim": "Developers become extremely good at their own puzzles, which blinds them to actual difficulty. Even 'easy' levels can be challenging for players who haven't been working on the game.",
+      "confidence": "high",
+      "id": "designer_blindness",
+      "source_ids": [
+        "traynor_parabox"
+      ]
+    },
+    {
+      "claim": "Every puzzle is a contract: the designer must provide all information needed to solve it while still making it challenging enough to engage the player.",
+      "confidence": "high",
+      "id": "puzzle_contract",
+      "source_ids": [
+        "fernandez_vara"
+      ]
+    },
+    {
+      "claim": "The Witness uses open-world design to let players escape frustration by moving to easier puzzles, while still gating advanced ideas behind earlier versions.",
+      "confidence": "high",
+      "id": "nonlinear_escape",
+      "source_ids": [
+        "blow_witness"
+      ]
+    },
+    {
+      "claim": "Zach Gage designs every game as a sandbox where newcomers should 'feel comfortable playing around' at the lowest level, contrasting with linear puzzle progression.",
+      "confidence": "high",
+      "id": "sandbox_approach",
+      "source_ids": [
+        "gage_puzzmo"
+      ]
+    },
+    {
+      "claim": "Gage's 'subway legibility' principle: someone should be able to understand a game by watching over another player's shoulder on the subway. This drives minimalist UI decisions.",
+      "confidence": "high",
+      "id": "subway_legibility",
+      "source_ids": [
+        "gage_puzzmo"
+      ]
+    },
+    {
+      "claim": "If a player won't use a mechanic within the next 5 levels, don't introduce it yet. Save it for later.",
+      "confidence": "medium",
+      "id": "five_level_rule",
+      "source_ids": [
+        "traynor_parabox"
+      ]
+    },
+    {
+      "claim": "Baba Is You creator Arvi Teikari initially planned objects to have intrinsic properties that could be disabled with 'NOT', but concluded the game would be more interesting if objects had no default properties.",
+      "confidence": "high",
+      "id": "baba_no_defaults",
+      "source_ids": [
+        "blow_witness"
+      ]
+    },
+    {
+      "claim": "Matthew VanDevander identifies two career-stage mistakes: not listening enough to feedback early in one's career, and listening too much to others once established.",
+      "confidence": "high",
+      "id": "career_mistakes",
+      "source_ids": [
+        "vandevander_taiji"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Jonathan Blow",
+      "id": "blow_witness",
+      "publication": "Gamasutra/Game Developer",
+      "title": "IndieCade: Inside Jonathan Blow's Puzzle Design Process",
+      "url": "https://www.gamedeveloper.com/design/indiecade-inside-jonathan-blow-s-puzzle-design-process",
+      "why_it_matters": "Blow describes his iterative constraint-discovery process for The Witness\u2014starting with a core interaction (drawing lines on panels), then systematically asking 'what if' questions about constraints until emergent puzzle mechanics revealed themselves. His decision that 'the line can never cross itself' came from exploration, not premeditation, and unlocked the partition-based puzzle system.",
+      "year": "2011"
+    },
+    {
+      "author": "Patrick Traynor",
+      "id": "traynor_parabox",
+      "publication": "GDC Vault",
+      "title": "System-Centric Puzzle Design in 'Patrick's Parabox' (GDC 2024)",
+      "url": "https://gdcvault.com/play/1034415/System-Centric-Puzzle-Design-in",
+      "why_it_matters": "Traynor articulates 'system-centric' design: the goal is to showcase an interesting system, not to stump players. He advocates simplifying puzzles as much as possible while still demonstrating their core idea\u2014trimming possibility space, removing solution steps, keeping things bite-sized. His playtesting methodology (video recording, think-aloud protocols) offers concrete process guidance.",
+      "year": "2024"
+    },
+    {
+      "author": "Elyot Grant",
+      "id": "grant_30lessons",
+      "publication": "GDC Vault / YouTube Extended Director's Cut",
+      "title": "30 Puzzle Design Lessons From The World's Greatest Puzzle Communities (GDC 2021)",
+      "url": "https://gdcvault.com/play/1027306/30-Puzzle-Design-Lessons-From",
+      "why_it_matters": "Grant bridges traditional puzzle communities (crossword constructors, logic puzzle designers) with video game design. He documents vocabulary and aesthetic sensibilities from insular puzzlemaking communities that predate digital games, offering techniques most game designers have never encountered. The 3-hour extended cut is considered a definitive resource.",
+      "year": "2021"
+    },
+    {
+      "author": "Clara Fern\u00e1ndez-Vara",
+      "id": "fernandez_vara",
+      "publication": "GDC Vault",
+      "title": "Puzzle Writing: Best Practices (GDC Online 2010)",
+      "url": "https://gdcvault.com/play/1013851/Puzzle-Writing-Best",
+      "why_it_matters": "Fern\u00e1ndez-Vara frames puzzles as a 'contract between designer and player'\u2014the designer must provide all necessary information while still making it challenging. Her concept of 'insight' as the core pleasure ('feeling clever is fun') provides the psychological foundation for why puzzles work. She also addresses puzzle-narrative integration.",
+      "year": "2010"
+    },
+    {
+      "author": "Kim Swift, Erik Wolpaw",
+      "id": "portal_postmortem",
+      "publication": "GDC Vault",
+      "title": "A Portal Post-Mortem: Integrating Writing and Design (GDC 2008)",
+      "url": "https://gdcvault.com/play/197/A-PORTAL-Post-Mortem-Integrating",
+      "why_it_matters": "The Portal team describes how they added Test Chamber 01 after playtesting revealed players weren't understanding portals\u2014a level requiring players to walk through 5 portals in specific order with no way to brute-force. This eliminated most comprehension issues for the rest of the game. A canonical example of iterative tutorial design.",
+      "year": "2008"
+    },
+    {
+      "author": "Zach Gage (interviewed)",
+      "id": "gage_puzzmo",
+      "publication": "Game Developer",
+      "title": "Puzzmo co-creator Zach Gage on building newspaper games that can last forever",
+      "url": "https://www.gamedeveloper.com/design/puzzmo-co-creator-zach-gage-on-building-newspaper-games-that-can-last-forever",
+      "why_it_matters": "Gage offers a counterpoint to Blow-style linear puzzle design. His 'sandbox' approach means every game should let newcomers 'feel comfortable playing around' at the lowest level. His 'subway legibility' concept (from GDC 2018) and 'three reads' UI framework provide concrete visual design principles.",
+      "year": "2023"
+    },
+    {
+      "author": "Matthew VanDevander",
+      "id": "vandevander_taiji",
+      "publication": "taiji-game.com",
+      "title": "How I Design Puzzles (Taiji Development Blog)",
+      "url": "https://taiji-game.com/2022/02/23/84-how-i-design-puzzles/",
+      "why_it_matters": "VanDevander describes three puzzle creation methods: working backwards from solution, forward from initial state, or 'deductive chaining' (placing deducible situations and building specificity). He warns against two career-stage mistakes: not listening enough early on, and listening too much once established.",
+      "year": "2022"
+    },
+    {
+      "author": "Various developers interviewed",
+      "id": "sausage_roll",
+      "publication": "Thinky Games",
+      "title": "Stephen's Sausage Roll: 10 Years of Grilling",
+      "url": "https://thinkygames.com/features/10-years-of-grilling-stephens-sausage-roll-remains-one-of-the-most-influential-puzzle-games-ever-created/",
+      "why_it_matters": "Stephen Lavelle's game is cited as a masterclass in elegant minimalism\u2014extracting maximum depth from four movement keys and two-tile sausages. The game teaches rules through play, letting players discover mechanics (skewering, stacking, rotating) through experimentation rather than instruction.",
+      "year": "2026"
+    }
+  ],
+  "sources": [
+    "Jonathan Blow - Gamasutra/Game Developer - 2011 - IndieCade: Inside Jonathan Blow's Puzzle Design Process (https://www.gamedeveloper.com/design/indiecade-inside-jonathan-blow-s-puzzle-design-process)",
+    "Patrick Traynor - GDC Vault - 2024 - System-Centric Puzzle Design in 'Patrick's Parabox' (GDC 2024) (https://gdcvault.com/play/1034415/System-Centric-Puzzle-Design-in)",
+    "Elyot Grant - GDC Vault / YouTube Extended Director's Cut - 2021 - 30 Puzzle Design Lessons From The World's Greatest Puzzle Communities (GDC 2021) (https://gdcvault.com/play/1027306/30-Puzzle-Design-Lessons-From)",
+    "Clara Fern\u00e1ndez-Vara - GDC Vault - 2010 - Puzzle Writing: Best Practices (GDC Online 2010) (https://gdcvault.com/play/1013851/Puzzle-Writing-Best)",
+    "Kim Swift, Erik Wolpaw - GDC Vault - 2008 - A Portal Post-Mortem: Integrating Writing and Design (GDC 2008) (https://gdcvault.com/play/197/A-PORTAL-Post-Mortem-Integrating)",
+    "Zach Gage (interviewed) - Game Developer - 2023 - Puzzmo co-creator Zach Gage on building newspaper games that can last forever (https://www.gamedeveloper.com/design/puzzmo-co-creator-zach-gage-on-building-newspaper-games-that-can-last-forever)",
+    "Matthew VanDevander - taiji-game.com - 2022 - How I Design Puzzles (Taiji Development Blog) (https://taiji-game.com/2022/02/23/84-how-i-design-puzzles/)",
+    "Various developers interviewed - Thinky Games - 2026 - Stephen's Sausage Roll: 10 Years of Grilling (https://thinkygames.com/features/10-years-of-grilling-stephens-sausage-roll-remains-one-of-the-most-influential-puzzle-games-ever-created/)"
+  ],
+  "topic": "A guide on how to design a puzzle in a puzzle video game, a masterclass sourced from interviews, blog posts, and other writings fromsome of the best game designers out there",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 3248
+}

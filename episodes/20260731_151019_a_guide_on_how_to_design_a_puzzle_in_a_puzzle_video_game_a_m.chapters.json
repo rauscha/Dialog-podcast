@@ -1,0 +1,37 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "(S1) \u2014 The Rule He Found, Not Invented"
+    },
+    {
+      "startTime": 133.47,
+      "title": "(S2) \u2014 The Contract"
+    },
+    {
+      "startTime": 266.94,
+      "title": "(S3) \u2014 The Event in the Brain"
+    },
+    {
+      "startTime": 400.4,
+      "title": "(S4) \u2014 The Worst Judge of Your Own Puzzle"
+    },
+    {
+      "startTime": 533.87,
+      "title": "(S5) \u2014 Two Designers, Two Targets"
+    },
+    {
+      "startTime": 667.34,
+      "title": "(S6) \u2014 Constraint Discovery as Method"
+    },
+    {
+      "startTime": 800.81,
+      "title": "(S7) \u2014 The Curriculum"
+    },
+    {
+      "startTime": 934.28,
+      "title": "(S8) \u2014 Watch the Hand, Not the Mouth"
+    }
+  ],
+  "version": "1.2.0"
+}

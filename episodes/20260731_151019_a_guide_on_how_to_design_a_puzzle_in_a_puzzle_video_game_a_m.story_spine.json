@@ -1,0 +1,220 @@
+{
+  "logline": "A step-by-step account of how the best puzzle game designers in the world engineer a single moment \u2014 the 'aha' \u2014 and why the biggest obstacle to doing it is that they already know the answer.",
+  "newcomer_promise": "A listener who has never designed anything will be able to explain that building a good puzzle game means manufacturing a specific mental event in someone else's brain, that every decision about rules, order, and testing is aimed at that one moment, and that the designer's deepest problem is that they can never un-know the solution they're trying to hide.",
+  "segments": [
+    {
+      "anchor": "Jonathan Blow sitting at a desk drawing lines on panels \u2014 months of this \u2014 until one day he asks: what if the line can never cross itself?",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that the episode will teach a real, sourceable craft \u2014 not opinions \u2014 and that the central image is a designer discovering a rule rather than inventing one.",
+      "host_angle": "After the scene lands, Juno says: 'He didn't design that rule. He found it.' Caspar's tension: that's a beautiful way to put it, but it raises the question \u2014 if you're finding rules, how do you know when you've found a good one? That question is the engine of the episode.",
+      "id": "S1",
+      "names_to_define": [
+        {
+          "name": "Jonathan Blow",
+          "one_line": "Indie game designer who made Braid and The Witness, two of the most analyzed puzzle games ever built."
+        },
+        {
+          "name": "The Witness",
+          "one_line": "A 2016 puzzle game set on a mysterious island where every puzzle involves tracing a line through a maze \u2014 but the rules governing those mazes keep changing."
+        },
+        {
+          "name": "Braid",
+          "one_line": "Blow's 2008 game built around time-reversal mechanics, widely credited with launching the modern indie game era."
+        }
+      ],
+      "stakes": "A single constraint, not planned but discovered, rewires an entire game's puzzle system. If puzzle design can hinge on one accidental question, there must be a method underneath the accident \u2014 and that method is what this episode is about.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A dictionary definition written on a whiteboard \u2014 not a real one, a constructed one: 'A closed system containing enough information to reach one correct solution through reasoning.'",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener can distinguish a puzzle (closed system, one correct answer, reachable by reasoning) from a challenge (obstacle requiring skill or luck) and understands why that distinction matters for everything that follows.",
+      "host_angle": "Once the definition lands, Juno pushes: 'But players don't feel like they're signing a contract. They feel like they're stuck.' Caspar's response introduces the cognitive target \u2014 the 'aha' moment \u2014 and reframes the definition: the contract is what makes the 'aha' feel earned rather than arbitrary.",
+      "id": "S2",
+      "names_to_define": [
+        {
+          "name": "Clara Fern\u00e1ndez-Vara",
+          "one_line": "Game studies scholar at NYU who has written foundational work on what puzzles are and how they function as systems."
+        },
+        {
+          "name": "moon logic",
+          "one_line": "Slang for puzzle solutions that require leaps of reasoning no reasonable player would make \u2014 named after a famously nonsensical puzzle in the adventure game Monkey Island."
+        }
+      ],
+      "stakes": "Most people use 'puzzle' loosely. If the word means everything, the design advice means nothing. This segment draws the boundary: a puzzle is a contract between designer and player. Everything outside that contract \u2014 guessing, pixel-hunting, luck \u2014 is a different kind of game.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A player in a chair, alone, staring at a screen. The puzzle hasn't changed. They have. Something clicks \u2014 not in the game, in their head \u2014 and their hand moves.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that 'insight' is a real, describable cognitive event \u2014 not just 'feeling smart' \u2014 and that it is distinct from the relief of finishing something hard. The designer's job is to manufacture insight, not difficulty.",
+      "host_angle": "After the scene, Caspar draws the contrast: difficulty from obscurity produces relief \u2014 you're glad it's over. Insight produces satisfaction \u2014 you feel like you did something real. Juno's friction: 'So how does a designer tell the difference from the inside?' Caspar's answer: they mostly can't. Which is why the next segment exists.",
+      "id": "S3",
+      "names_to_define": [
+        {
+          "name": "insight",
+          "one_line": "The psychological term for the sudden mental reorganization \u2014 the 'aha' \u2014 when a solution that was invisible becomes obvious; studied in cognitive science since the 1920s."
+        },
+        {
+          "name": "Elyot Grant",
+          "one_line": "Designer and co-founder of Lunarch Studios who has written and spoken extensively about the cognitive mechanics of puzzle satisfaction."
+        }
+      ],
+      "stakes": "The designer is not trying to make a hard puzzle or a fair puzzle. They are trying to produce a specific event inside a stranger's brain: the moment a mental model snaps into place. If the designer doesn't understand what that event is, they have no target to aim at.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A designer who has just solved their own puzzle for the hundredth time, trying to remember what it felt like not to know the answer \u2014 and failing.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the curse of knowledge is not a disclaimer or a caveat \u2014 it is the central problem of the craft. Every technique that follows (constraint discovery, sequencing, playtesting) exists because the designer cannot trust their own perception of their own puzzles.",
+      "host_angle": "Juno names it plainly: 'You are the worst possible judge of your own puzzle.' Caspar extends it: this is why puzzle design is permanently empirical \u2014 you cannot think your way out of the curse, you have to watch someone else play. That pivot sets up the rest of the episode as a sequence of tools for working around a problem you can never fully solve.",
+      "id": "S4",
+      "names_to_define": [
+        {
+          "name": "curse of knowledge",
+          "one_line": "A cognitive bias, documented in psychology, where knowing something makes it nearly impossible to imagine not knowing it \u2014 a permanent occupational hazard for puzzle designers."
+        }
+      ],
+      "stakes": "The designer knows the solution. They cannot un-know it. Every judgment they make about whether a puzzle is too hard, too easy, or teaches the right thing is contaminated by knowledge the player doesn't have. This is not a personality flaw \u2014 it is a structural feature of the craft, and every other decision in puzzle design is a response to it.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "Two designers at a whiteboard, drawing arrows in opposite directions \u2014 one labeled 'show the system,' the other labeled 'honor the depth.'",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that 'make it simpler' and 'honor the complexity' are both defensible positions, not errors \u2014 and that the choice between them shapes what kind of game gets built. Neither host resolves the tension; they hold it.",
+      "host_angle": "Caspar lays out both positions without adjudicating. Juno's question: 'Is this actually a disagreement, or are they just describing different games?' Caspar's answer: it's a real disagreement about what the player's satisfaction should come from \u2014 feeling clever because the system revealed itself, or feeling clever because they wrestled something genuinely hard to the ground. Both are valid targets. They produce different games.",
+      "id": "S5",
+      "names_to_define": [
+        {
+          "name": "Patrick Traynor",
+          "one_line": "Designer of Patrick's Parabox, a 2022 puzzle game about boxes inside boxes, praised for its systematic elegance."
+        },
+        {
+          "name": "Patrick's Parabox",
+          "one_line": "A puzzle game where the core mechanic \u2014 pushing boxes that contain other boxes, including the box you're standing in \u2014 is explored exhaustively through simple, escalating puzzles."
+        },
+        {
+          "name": "system-centric design",
+          "one_line": "A design philosophy that treats the puzzle's underlying rule-set as the main attraction, with individual puzzles serving as demonstrations of that system."
+        }
+      ],
+      "stakes": "There is a real disagreement among the best puzzle designers about what a puzzle is for. Patrick Traynor says: make puzzles as simple as possible while still demonstrating the idea \u2014 the system is the star. Jonathan Blow says: difficulty should come from the system's genuine complexity, not from simplifying it away. Both have made great games. The tension between them shapes every downstream decision a designer makes.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Jonathan Blow, months into The Witness, drawing a new line on a panel and asking: 'What if it can't cross itself?' \u2014 the moment constraint discovery becomes a method, not an accident.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that constraint discovery is a repeatable process \u2014 start with a core interaction, ask 'what if,' follow the implications \u2014 and that the Witness line-crossing rule is an example of this process in action, not a stroke of genius.",
+      "host_angle": "Juno returns to her line from S1: 'He found it, he didn't invent it.' Now Caspar can answer the question he deferred: you know you've found a good constraint when it generates puzzles you didn't anticipate \u2014 when the system surprises you. That surprise is the signal. Juno's follow-up: 'What if you never get surprised?' Caspar: then you probably haven't found your core interaction yet.",
+      "id": "S6",
+      "names_to_define": [
+        {
+          "name": "constraint discovery",
+          "one_line": "The design process of finding new rules by asking what happens when you restrict or modify an existing mechanic \u2014 the rule emerges from the system rather than being imposed on it."
+        },
+        {
+          "name": "core interaction",
+          "one_line": "The single, fundamental thing the player does in a game \u2014 the action everything else is built around; in The Witness, it is tracing a line from start to finish."
+        }
+      ],
+      "stakes": "Puzzles don't come from nowhere. The best designers describe a generative process: start with a core interaction, then ask 'what if' questions until new mechanics emerge from the system itself. The constraint isn't imposed from outside \u2014 it's found inside the rules that already exist. Understanding this process is the difference between designing a puzzle and just having an idea.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A level select screen with twenty rooms in a row \u2014 and a designer's hand hovering over the delete key on room four.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands the teaching/testing distinction, can picture what Test Chamber 01 does and why it was added, and knows that the five-level heuristic is a useful starting point \u2014 not a rule \u2014 for deciding when to introduce a mechanic.",
+      "host_angle": "Caspar presents the five-level heuristic as a heuristic, explicitly. Juno pushes: 'But The Witness doesn't sequence linearly at all \u2014 you can walk anywhere.' Caspar's answer: open-world designs solve the sequencing problem differently \u2014 they use escape valves instead of gates. If a puzzle is too hard, you walk away and come back. The curriculum is spatial, not linear. Both approaches are responses to the same problem: the player needs to know the right things at the right time.",
+      "id": "S7",
+      "names_to_define": [
+        {
+          "name": "teaching/testing distinction",
+          "one_line": "The principle that puzzles should first introduce a mechanic in a low-stakes context (teaching) before asking the player to apply it under pressure (testing)."
+        },
+        {
+          "name": "five-level heuristic",
+          "one_line": "A rule of thumb \u2014 not a law \u2014 that says don't introduce a mechanic more than five levels before the player will need to use it, or they'll forget it."
+        },
+        {
+          "name": "Test Chamber 01",
+          "one_line": "A level added to Portal after playtesting revealed players were reaching level two without understanding how portals worked \u2014 five portals, in order, no way to skip the lesson."
+        },
+        {
+          "name": "Portal",
+          "one_line": "Valve's 2007 puzzle game where the player shoots linked portals into walls to move through space \u2014 one of the most studied examples of mechanic-teaching in game design."
+        }
+      ],
+      "stakes": "Once you have puzzles, you have to put them in order. The sequence determines what the player knows when they encounter each puzzle \u2014 and therefore whether the puzzle is solvable, trivial, or incomprehensible. Get the order wrong and the 'aha' never arrives: the player either breezes through or hits a wall. Sequencing is not decoration. It is the curriculum.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A designer watching a video recording of a playtester \u2014 not talking to them, just watching \u2014 and writing down the exact moment the playtester's hand stops moving.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands why video recording is more reliable than think-aloud protocols for puzzle playtesting, what specific signals to watch for (where players stop, what they try, when they give up), and why the designer should not be in the room during a playtest if they can help it.",
+      "host_angle": "Juno asks the obvious question: 'Why not just ask them?' Caspar's answer: players will tell you what they think you want to hear, or what they think sounds smart. The hand stopping is the truth. Juno's extension: and the designer being in the room changes what the player does \u2014 they perform competence. The data you get is about the social situation, not the puzzle.",
+      "id": "S8",
+      "names_to_define": [
+        {
+          "name": "think-aloud protocol",
+          "one_line": "A playtesting method where players narrate their thoughts out loud as they play \u2014 useful for some research, but often unreliable for puzzle design because players describe what they think they're doing, not what they're actually doing."
+        },
+        {
+          "name": "Zach Gage",
+          "one_line": "Designer of Puzzmo, SpellTower, and other games; one of the most publicly candid designers about playtesting methodology and the limits of designer intuition."
+        },
+        {
+          "name": "Puzzmo",
+          "one_line": "Gage's 2023 puzzle platform, distributed through outlets including the New York Times, designed to make puzzle games accessible to players who don't think of themselves as gamers."
+        }
+      ],
+      "stakes": "The designer cannot trust their own perception of their puzzles. Playtesting is the only tool that partially compensates for the curse of knowledge. But playtesting done wrong \u2014 asking players what they think, rather than watching what they do \u2014 produces noise, not signal. The method matters as much as the act.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A list of failure modes on a whiteboard, each one named like a disease: 'obscurity,' 'over-tutorializing,' 'the pay-to-skip trap,' 'designing to show off.'",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener can name at least three failure modes, describe what each one looks like in practice, and explain why each one breaks the contract between designer and player.",
+      "host_angle": "Caspar runs the list. Juno's role here is to make each failure mode concrete \u2014 'give me a game where this happened' \u2014 so the listener hears real examples, not abstractions. The disagreement, when it comes, is about 'designing to show off': Juno argues this is sometimes the point (Lavelle's game is hard because Lavelle wanted it hard). Caspar's response: the question is whether the difficulty serves the player's insight or the designer's ego. That's a judgment call, and it's the hardest one in the craft.",
+      "id": "S9",
+      "names_to_define": [
+        {
+          "name": "obscurity",
+          "one_line": "Difficulty that comes from withholding information the player needs \u2014 produces relief when solved, not insight; the opposite of good puzzle design."
+        },
+        {
+          "name": "over-tutorializing",
+          "one_line": "Explaining so much that the player never has to reason \u2014 removes the 'aha' by handing the player the answer before they've asked the question."
+        },
+        {
+          "name": "pay-to-skip trap",
+          "one_line": "A monetization design where players can pay to bypass hard puzzles \u2014 which, if the puzzles are good, removes the only thing that made the game worth playing."
+        },
+        {
+          "name": "Stephen Lavelle",
+          "one_line": "Designer of Stephen's Sausage Roll, a notoriously difficult puzzle game that Blow called 'the best puzzle game ever made' \u2014 known for refusing to simplify his systems for accessibility."
+        },
+        {
+          "name": "Stephen's Sausage Roll",
+          "one_line": "A 2016 puzzle game about cooking sausages on a grill that is, beneath its absurd premise, one of the most mechanically rigorous puzzle games ever made."
+        }
+      ],
+      "stakes": "Every step in the design process has a specific way it goes wrong. Naming the failure modes is not pessimism \u2014 it is the only way to recognize them before a game ships. A designer who can't name what went wrong can't fix it.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Jonathan Blow, years into The Witness, encountering a puzzle he designed \u2014 and genuinely not remembering how to solve it.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the curse of knowledge is not just a problem to manage \u2014 it is the reason puzzle design is permanently empirical, why no amount of clever thinking substitutes for watching someone else play, and why the designers who do this best treat their own confusion as a tool rather than an obstacle to overcome.",
+      "host_angle": "Caspar names the structural conclusion: you cannot think your way out of the curse of knowledge. You have to watch someone else play. That is why every technique in this episode exists. Juno's closing beat: the designers who are best at this are the ones who've learned to stay confused a little longer \u2014 to not rush toward the solution, because the confusion is the closest thing they have to being their player. Blow's decade on The Witness wasn't a bug. It was the method.",
+      "id": "S10",
+      "names_to_define": [
+        {
+          "name": "Mark Brown",
+          "one_line": "Creator of Game Maker's Toolkit, a YouTube channel and research project that has produced some of the most rigorous public analysis of puzzle game design available."
+        }
+      ],
+      "stakes": "The curse of knowledge runs in both directions. Blow forgot his own solutions because enough time had passed. That forgetting \u2014 usually treated as a failure of memory \u2014 turned out to be a resource: it let him experience his own puzzles as a player again. The designers who are best at this craft are the ones who have learned to treat their early confusion, before they've solved everything, as data to be preserved rather than a problem to be eliminated.",
+      "surrogate": "CASPAR"
+    }
+  ]
+}
