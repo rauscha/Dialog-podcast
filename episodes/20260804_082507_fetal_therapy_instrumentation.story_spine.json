@@ -1,0 +1,305 @@
+{
+  "logline": "How the design of a single fetal surgery instrument \u2014 a shunt, a balloon, a laser fiber \u2014 became the difference between a live birth and a stillbirth, and why the infrastructure built around those instruments may not be ready for what the biology is about to demand.",
+  "newcomer_promise": "A listener who knew nothing about fetal surgery will be able to tell a friend: surgeons can treat certain conditions before a baby is born using lasers, balloons, and tiny shunts threaded through the mother's abdomen, and the specific design of those instruments directly determines whether the baby survives; the field is now on the edge of delivering gene therapy the same way, and nobody has built the device for that yet.",
+  "segments": [
+    {
+      "anchor": "A Harrison shunt \u2014 a metal cannula roughly the diameter of a pencil lead, designed in the 1980s \u2014 sitting next to a Somatex shunt, a newer device with two small parasol-shaped flanges that spring open to hold it in place. Same job. Different object. The live birth rate for the condition they both treat went from 50% to 84.8% when centers switched.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that fetal surgery exists, that it uses physical instruments threaded into the uterus, and that the design of those instruments \u2014 not just surgical skill \u2014 has a measurable, documented effect on whether the baby lives.",
+      "host_angle": "After the numbers land, Caspar notes the obvious question this raises: if the instrument is the variable, why did it take until 2014 to change it? Juno holds that question open \u2014 the answer requires understanding the regulatory world these devices live in, which comes later.",
+      "id": "S1",
+      "names_to_define": [
+        {
+          "name": "Harrison shunt",
+          "one_line": "A metal tube-and-cannula device from the 1980s used to drain fluid from a fetus's blocked urinary tract or chest cavity into the amniotic sac"
+        },
+        {
+          "name": "Somatex shunt",
+          "one_line": "A 2014 shunt with self-deploying parasol-shaped ends that anchor it in place, delivered through a slightly narrower needle than the Harrison"
+        },
+        {
+          "name": "LUTO",
+          "one_line": "Lower Urinary Tract Obstruction \u2014 a fetal condition where a blockage prevents the bladder from draining, damaging the kidneys and lungs if untreated before birth"
+        },
+        {
+          "name": "fetal therapy",
+          "one_line": "Surgical or procedural intervention performed on a fetus while still in the uterus, to treat a condition that would cause death or severe disability if left until after birth"
+        }
+      ],
+      "stakes": "If a piece of hardware \u2014 not the surgeon's hands, not the hospital's reputation \u2014 is responsible for a 35-percentage-point difference in whether a baby survives, then the instrument is not a detail. It is the story. This segment establishes that premise before anything else.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A surgeon standing at an operating table, working on a pregnant patient. There are two patients in the room \u2014 but only one is on the table. The fetus cannot consent, cannot be examined directly, cannot tell the surgeon where it hurts. Every instrument in the surgeon's hand was designed to treat both patients simultaneously without the surgeon ever seeing one of them.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener can articulate why fetal surgery instruments are harder to design than ordinary surgical instruments: they must work through a small access point, inside a pressurized fluid-filled space, without disturbing a uterus prone to contracting, while treating a patient the surgeon cannot directly see or touch.",
+      "host_angle": "Juno names the design philosophy problem \u2014 you are building a tool for a patient you cannot ask and cannot see. Caspar grounds it: that abstraction has a concrete consequence, which is that every millimeter of instrument diameter and every material choice carries a risk profile for two people, not one.",
+      "id": "S2",
+      "names_to_define": [
+        {
+          "name": "two-patient problem",
+          "one_line": "The design constraint unique to fetal surgery: every instrument must treat the fetus without harming the mother, and the interests of those two patients are not always aligned"
+        },
+        {
+          "name": "hysterotomy",
+          "one_line": "A surgical incision into the uterus \u2014 the open approach used in early fetal surgery, now largely replaced by smaller fetoscopic access"
+        },
+        {
+          "name": "fetoscopic",
+          "one_line": "Performed through a narrow telescope-like instrument inserted through the mother's abdomen and uterus, rather than by opening the uterus surgically"
+        }
+      ],
+      "stakes": "Every other surgical field designs instruments for one patient. Fetal surgery instruments must protect the mother's uterus, avoid triggering preterm labor, and treat the fetus \u2014 all at once, through a single access point. This constraint is not a footnote; it is the reason every design decision in the field looks the way it does.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "Two clinical trial documents pinned to a wall \u2014 one from 2011, one from 2021. The 2011 paper is the MOMS trial: it showed that closing a spina bifida lesion before birth produced better outcomes than waiting. The 2021 paper is the TOTAL trial: it showed that a balloon inflated in a fetus's airway helped severe cases of a lung condition, but did nothing for moderate cases. These two pieces of paper define the current legal and clinical boundaries of what fetal surgery is allowed to do.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener knows which conditions fetal surgery has proven it can help \u2014 spina bifida, severe CDH, TTTS \u2014 and understands that the TOTAL trial's split verdict (severe yes, moderate no) is a meaningful scientific boundary, not a technicality.",
+      "host_angle": "Caspar notes that the TOTAL split verdict is now reshaping which centers are building FETO programs \u2014 the moderate CDH result effectively removed a patient population from the indication, concentrating the procedure at fewer centers. Juno flags that this concentration has a training consequence the episode will return to.",
+      "id": "S3",
+      "names_to_define": [
+        {
+          "name": "MOMS trial",
+          "one_line": "Management of Myelomeningocele Study \u2014 a 2011 randomized trial that proved fetal surgery to close open spina bifida lesions improved neurological outcomes compared to postnatal repair"
+        },
+        {
+          "name": "TOTAL trial",
+          "one_line": "Tracheal Occlusion to Accelerate Lung Growth \u2014 a 2021 European trial testing whether a balloon in the fetal airway improved survival for congenital diaphragmatic hernia; it worked for severe cases, not moderate ones"
+        },
+        {
+          "name": "CDH",
+          "one_line": "Congenital Diaphragmatic Hernia \u2014 a condition where a hole in the fetus's diaphragm allows abdominal organs to crowd into the chest, preventing lung development"
+        },
+        {
+          "name": "spina bifida",
+          "one_line": "A birth defect where the spinal column doesn't fully close, leaving spinal cord tissue exposed \u2014 fetal surgery can close the lesion before birth"
+        },
+        {
+          "name": "TTTS",
+          "one_line": "Twin-to-Twin Transfusion Syndrome \u2014 a condition in identical twin pregnancies where shared placental blood vessels cause one twin to receive too much blood and one too little, treated with laser surgery before birth"
+        },
+        {
+          "name": "FETO",
+          "one_line": "Fetoscopic Endoluminal Tracheal Occlusion \u2014 the procedure used in the TOTAL trial, in which a small balloon is placed in the fetal airway via fetoscope to stimulate lung growth"
+        }
+      ],
+      "stakes": "Before a surgeon can operate on a fetus, someone has to have proven \u2014 in a randomized controlled trial \u2014 that the intervention works. These two trials are the proof. They also define the edges: what is proven, what is not, and where the field is still operating on hope rather than data.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A tray of four instrument types laid out in a row: a fetoscope (a narrow telescope with a light source), a laser fiber (a hair-thin optical cable that carries energy to burn tissue), a tracheal balloon (a tiny inflatable device on a catheter), and a shunt (a small tube with anchoring flanges). These are the four categories of instruments that currently define the field. Everything else is a variation on one of these.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener can name the four instrument categories, knows roughly what each one does and which condition it treats, and understands that these are not interchangeable \u2014 each category has its own design constraints and regulatory history.",
+      "host_angle": "Juno observes that four categories sounds like a lot of coverage for a field most people have never heard of. Caspar points out the inverse: four categories for conditions that together affect tens of thousands of pregnancies per year globally means the instrument portfolio is actually remarkably thin \u2014 and that thinness is itself a story.",
+      "id": "S4",
+      "names_to_define": [
+        {
+          "name": "fetoscope",
+          "one_line": "A narrow telescope \u2014 typically 1 to 3 millimeters in diameter \u2014 inserted through the mother's abdomen into the uterus to visualize the fetus and guide instruments"
+        },
+        {
+          "name": "laser fiber",
+          "one_line": "A thin optical cable threaded through a fetoscope that delivers laser energy to coagulate \u2014 seal off \u2014 blood vessels, used in TTTS surgery"
+        },
+        {
+          "name": "photocoagulation",
+          "one_line": "Using laser energy to seal blood vessels by heating them until they close \u2014 the core technique in TTTS laser surgery"
+        },
+        {
+          "name": "tracheal balloon",
+          "one_line": "A tiny inflatable balloon placed in the fetal airway during FETO to block airflow, creating pressure that stimulates lung growth"
+        },
+        {
+          "name": "BALT Goldballoon",
+          "one_line": "The specific detachable balloon device used in FETO procedures, manufactured by a French company called BALT"
+        }
+      ],
+      "stakes": "The listener needs these four categories named and fixed before the episode can talk about any of them in detail. Without this taxonomy, the rest of the episode is a blur of technical terms. With it, every subsequent design problem has a home.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A single FDA approval document, dated 2006, for a Karl Storz fetoscope. Eighteen years later, it is still the only FDA-approved fetoscope for TTTS laser surgery in the United States. The approval came through a regulatory pathway called the Humanitarian Device Exemption \u2014 a track designed for devices that treat so few patients per year that a company could never recoup the cost of a full clinical trial.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands what a Humanitarian Device Exemption is, why it applies to fetal surgery devices, and why the 2006 Karl Storz approval being the only one of its kind is not an accident \u2014 it reflects a regulatory structure that simultaneously enabled the field and constrained its evolution.",
+      "host_angle": "After Maren enters and explains the engineering side of what the HDE pathway demands from a manufacturer \u2014 not just clinical data but the manufacturing documentation, the sterilization validation, the failure mode analysis \u2014 Caspar asks whether the HDE pathway is a feature or a bug for a field this small. Maren's answer complicates the question.",
+      "id": "S5",
+      "names_to_define": [
+        {
+          "name": "Karl Storz",
+          "one_line": "A German medical device company that manufactures the fetoscope used in the vast majority of TTTS laser surgeries in the United States \u2014 its 2006 FDA approval remains the only one of its kind"
+        },
+        {
+          "name": "Humanitarian Device Exemption",
+          "one_line": "An FDA approval pathway for medical devices that treat fewer than 8,000 patients per year in the US \u2014 requires showing the device is probably beneficial rather than proving superiority in a full clinical trial"
+        },
+        {
+          "name": "HDE",
+          "one_line": "Abbreviation for Humanitarian Device Exemption"
+        },
+        {
+          "name": "FDA",
+          "one_line": "The US Food and Drug Administration \u2014 the federal agency that approves medical devices and drugs before they can be sold or used clinically in the United States"
+        }
+      ],
+      "stakes": "The regulatory pathway that allowed the only approved fetoscope to reach the market is also the pathway that makes it nearly impossible for a competitor to enter. A Humanitarian Device Exemption requires proving the device is probably beneficial \u2014 not that it is superior to what exists. That lower bar got one device approved; it also created a moat that has kept the competitive landscape frozen for nearly two decades.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Maren, a device engineer, holds up the two shunts from Segment 1 and explains what actually changed between them \u2014 not in abstract design terms, but in specific mechanical terms: the Harrison's straight cannula relies on friction and tissue pressure to stay in place; the Somatex's parasol flanges deploy on both sides of the uterine wall, distributing the anchoring force across a wider surface area. The dislocation problem wasn't solved by better surgery. It was solved by geometry.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the Somatex improvement was not a vague 'better design' \u2014 it was a specific solution to a specific failure mode (dislocation), achieved through a geometric change (parasol flanges) that also required a new delivery mechanism. The instrument, the delivery system, and the failure mode are three linked problems that were solved together.",
+      "host_angle": "Juno asks Maren whether the Somatex result is reproducible \u2014 meaning, can other engineers look at that outcome data and reverse-engineer what to do next? Maren's answer: the outcome data tells you the geometry worked; it doesn't tell you what failure modes the next geometry will introduce. That's the engineering problem that outcome studies alone can't solve.",
+      "id": "S6",
+      "names_to_define": [
+        {
+          "name": "parasol geometry",
+          "one_line": "The design feature of the Somatex shunt in which two disc-shaped flanges spring open on either side of the uterine wall after insertion, anchoring the shunt against dislocation"
+        },
+        {
+          "name": "shunt dislocation",
+          "one_line": "The failure mode in which a fetal shunt migrates out of position after placement \u2014 the dominant complication with the Harrison design that the Somatex geometry was engineered to prevent"
+        },
+        {
+          "name": "uterine wall",
+          "one_line": "The muscular wall of the uterus \u2014 fetal shunts must pass through it and remain anchored across it without triggering contractions or tearing"
+        }
+      ],
+      "stakes": "The 35-percentage-point survival difference from Segment 1 now has a mechanism. The listener can understand not just that the instrument changed, but why the specific change mattered \u2014 and why it took a particular combination of materials, geometry, and delivery system engineering to get there, not just a surgeon deciding to try something different.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "Maren describes a specific moment that every fetal intervention engineer has to reckon with: the moment the instrument is withdrawn from the uterus. The access hole in the uterine membrane \u2014 the amnion \u2014 does not close the way skin closes. It does not seal. In 30 to 46 percent of cases, that membrane ruptures prematurely, triggering early labor. No instrument currently in use has solved this. No material currently available can reliably seal it.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that PPROM is not a rare complication or a solvable engineering problem at current scales \u2014 it is a structural feature of the tissue that makes fetal intervention inherently risky, and that this risk is the binding constraint on everything else in the field, including instrument size, procedure timing, and how many interventions a pregnancy can safely undergo.",
+      "host_angle": "Caspar asks Maren directly: is this a materials science problem, a geometry problem, or something else? Maren's answer \u2014 it's a biology problem that materials science keeps trying to solve and keeps failing to solve, because the amnion doesn't behave like a synthetic membrane and the repair window after withdrawal is essentially zero at current access diameters \u2014 is the sharpest moment of the interview.",
+      "id": "S7",
+      "names_to_define": [
+        {
+          "name": "PPROM",
+          "one_line": "Preterm Premature Rupture of Membranes \u2014 the early breaking of the amniotic sac, which triggers preterm labor and is the most common serious complication of fetal surgery, occurring in 30 to 46 percent of cases"
+        },
+        {
+          "name": "amnion",
+          "one_line": "The inner membrane of the amniotic sac that surrounds the fetus \u2014 it does not self-seal after puncture the way skin does, making instrument access a permanent risk factor for early labor"
+        },
+        {
+          "name": "amniotic sac",
+          "one_line": "The fluid-filled membrane enclosure surrounding the fetus inside the uterus \u2014 its integrity is essential for fetal lung development and pregnancy continuation"
+        }
+      ],
+      "stakes": "Preterm premature rupture of membranes \u2014 PPROM \u2014 is not a side effect to mention and move past. It is the dominant complication across every fetal procedure type. It limits how early surgeons can intervene, how large an instrument they can use, and how many procedures a single pregnancy can tolerate. Every new instrument entering the field is implicitly trying to solve it, and none of them have.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A fellowship program coordinator's calendar \u2014 a handful of programs in the United States that train surgeons to perform fetal interventions. NAFTNet lists 57 member centers. The training pipeline that feeds those centers runs through a small number of fellowship slots per year. The TOTAL trial's split verdict just removed moderate CDH from the FETO indication \u2014 concentrating a procedure that was already rare into even fewer hands.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the field's expertise is concentrated in a small number of centers and trained through a narrow pipeline, that the TOTAL verdict has made that concentration more acute for FETO specifically, and that simulation is being developed as a partial answer to a problem that volume alone cannot solve.",
+      "host_angle": "Juno notes that this is the point where the instrument story and the access story converge \u2014 a better device that only a handful of people can use correctly is not a solved problem. Caspar adds the geographic dimension: if the 57 NAFTNet centers are not evenly distributed, then instrument improvement without training infrastructure improvement just widens the gap between patients who can reach expertise and patients who cannot.",
+      "id": "S8",
+      "names_to_define": [
+        {
+          "name": "NAFTNet",
+          "one_line": "North American Fetal Therapy Network \u2014 a consortium of 57 centers in the US and Canada that perform fetal interventions; membership does not guarantee uniform procedure volumes or outcomes"
+        },
+        {
+          "name": "fellowship",
+          "one_line": "A post-residency training period \u2014 typically one to two years \u2014 in which a physician learns a subspecialty; fetal intervention fellowships are rare and have very few slots per year"
+        },
+        {
+          "name": "simulation",
+          "one_line": "Training on physical or digital models that replicate the conditions of fetal surgery \u2014 increasingly used to build procedural competency before operating on actual patients, given how few cases any one trainee will see"
+        }
+      ],
+      "stakes": "Instrumentation and surgical capability are not the same thing. A better shunt design does not help if the surgeon placing it has done the procedure five times rather than five hundred. The training bottleneck means that even as instruments improve, the number of people who can use them correctly is not keeping pace \u2014 and the concentration of expertise at a small number of centers creates geographic access problems that the instrument improvements cannot fix.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A flexible robotic endoscope prototype from a research group at KU Leuven in Belgium \u2014 a device that can bend and steer inside the uterus rather than moving in a fixed line. The specific problem it was designed to solve: when the placenta is on the front wall of the uterus, a straight fetoscope cannot reach the blood vessels that need to be lasered in TTTS surgery without crossing the placenta, which risks bleeding. A steerable instrument could navigate around it. The prototype works in the lab. It has not been used in routine clinical practice.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands what problem robotic fetoscopy is trying to solve (the anterior placenta access problem), why the prototype is genuinely interesting engineering, and why the gap between a working prototype and a clinical tool involves sterilization, manufacturing, training, and cost \u2014 not just whether the device can steer.",
+      "host_angle": "Maren's pushback here is the sharpest moment of the robotic discussion: she asks what happens to the actuation cables after 50 sterilization cycles, whether the center doing 200 TTTS cases per year can justify the capital cost, and whether the anterior placenta problem is common enough to drive adoption at scale. Juno receives this as a genuine question rather than a dismissal \u2014 the engineering elegance is real; the clinical readiness is not yet demonstrated.",
+      "id": "S9",
+      "names_to_define": [
+        {
+          "name": "KU Leuven",
+          "one_line": "Katholieke Universiteit Leuven \u2014 a Belgian research university whose fetal medicine group has been developing flexible robotic endoscope prototypes for fetoscopic surgery"
+        },
+        {
+          "name": "anterior placenta",
+          "one_line": "A placenta attached to the front wall of the uterus \u2014 a common anatomical variation that blocks straight-line fetoscope access to fetal blood vessels in TTTS surgery"
+        },
+        {
+          "name": "robotic fetoscopy",
+          "one_line": "Fetoscopic surgery performed with a steerable, robotically controlled instrument rather than a fixed-direction scope \u2014 currently experimental"
+        },
+        {
+          "name": "sterilization cycle compatibility",
+          "one_line": "Whether a device can survive the high-heat or chemical sterilization processes required between surgical uses without degrading \u2014 a key manufacturing requirement that prototype devices often fail before clinical use"
+        }
+      ],
+      "stakes": "Robotic fetoscopy is real engineering, not speculation \u2014 but there is a gap between a working prototype and a clinical tool that is easy to underestimate. Sterilization, manufacturing consistency, training on a new instrument interface, and capital cost at centers that may do 200 cases per year are all unsolved problems that come before a single clinical trial. The anterior placenta problem the device solves is genuine; whether the solution is ready is a different question.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Maren's exit line: the instruments she knows how to build are for moving things \u2014 a shunt, a balloon, a fiber. A viral vector is not a thing you move the same way. That is a different conversation. She leaves. Juno and Caspar are alone with the question she just handed them.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands why Maren's exit is meaningful \u2014 she is not leaving because the conversation is over, but because the next question is outside the domain of instrument engineering as currently practiced. A viral vector is not a shunt. The regulatory category, the manufacturing requirements, and the failure modes are all different, and the field has not yet built the infrastructure to handle them.",
+      "host_angle": "Caspar names the regulatory gap plainly: a gene therapy delivery device is not a Class II medical device like a shunt or a fetoscope \u2014 it is entangled with the biologic it carries, which means FDA review involves both the device center and the biologics center, and nobody has navigated that pathway for a fetal application yet. Juno holds the design philosophy question: what does it mean to design a delivery instrument when you cannot fully separate the instrument from the therapy it carries?",
+      "id": "S10",
+      "names_to_define": [
+        {
+          "name": "viral vector",
+          "one_line": "A modified virus used to carry therapeutic genetic material into cells \u2014 the delivery vehicle for most gene therapy approaches, including fetal gene therapy"
+        },
+        {
+          "name": "gene therapy",
+          "one_line": "Treatment that delivers genetic material into a patient's cells to correct or compensate for a disease-causing mutation \u2014 in fetal applications, this means treating the fetus before birth"
+        },
+        {
+          "name": "somatic fetal gene therapy",
+          "one_line": "Gene therapy delivered to a fetus's body cells \u2014 distinct from germline editing, which would alter heritable DNA; somatic therapy affects only the treated individual"
+        }
+      ],
+      "stakes": "Maren's exit is the structural hinge of the episode. Everything before it was about instruments that physically move objects into or through the fetus. What comes next is about delivering biological information \u2014 a gene therapy vector \u2014 into fetal tissue. The delivery problem looks superficially similar (you still need access to the fetus) but is categorically different in regulatory classification, manufacturing requirements, and failure mode. The field does not yet have a device for this, and the biology is arriving before the infrastructure exists to receive it.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A conference presentation slide from ASGCT 2026 \u2014 Tippi MacKenzie's first-in-human trial design for fetal gene therapy targeting GM1 gangliosidosis, a fatal metabolic disease. The slide shows a proposed delivery route into the fetal brain. The instrument that would execute that delivery does not exist yet. The regulatory pathway for approving it does not exist yet. The manufacturer who would build it has not been identified.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that fetal gene therapy is not a distant hypothetical \u2014 a specific trial design for a specific disease has been presented publicly, and the scientific rationale for treating before birth is sound. The missing pieces are not biological. They are a delivery device, a regulatory pathway, and a manufacturer \u2014 and none of those three things currently exist for this application.",
+      "host_angle": "Caspar names the PPROM problem as the binding constraint even here: whatever device delivers a viral vector into the fetal brain still has to enter through the uterus, and the membrane rupture risk that limits every current instrument will limit this one too. Juno closes on the design philosophy: MacKenzie is designing a trial for a patient she cannot ask and cannot fully see, using an instrument that has not been built yet, to treat a disease whose window for intervention closes before birth. That is the field's condition, stated at its most extreme.",
+      "id": "S11",
+      "names_to_define": [
+        {
+          "name": "Tippi MacKenzie",
+          "one_line": "A maternal-fetal medicine surgeon and researcher at UCSF who has been a leading figure in in utero stem cell and gene therapy research, and who presented a first-in-human fetal gene therapy trial design at ASGCT 2026"
+        },
+        {
+          "name": "ASGCT",
+          "one_line": "American Society of Gene and Cell Therapy \u2014 the major professional conference for gene therapy research, where MacKenzie presented her fetal trial design in 2026"
+        },
+        {
+          "name": "GM1 gangliosidosis",
+          "one_line": "A fatal inherited metabolic disease caused by a single gene mutation that prevents cells from breaking down certain fats, leading to progressive neurological destruction \u2014 one of the target conditions for early fetal gene therapy trials"
+        },
+        {
+          "name": "in utero gene therapy",
+          "one_line": "Delivery of therapeutic genetic material to a fetus while still in the uterus \u2014 the approach is designed to treat diseases early enough to prevent irreversible damage that would occur before or shortly after birth"
+        }
+      ],
+      "stakes": "MacKenzie's trial design is not speculation \u2014 it is a specific, named, presented clinical plan for treating a specific disease in a fetus before birth using gene therapy. The gap between that plan and its execution is not a scientific gap. The science is far enough along to design the trial. The gap is infrastructure: no device, no regulatory pathway, no manufacturer. The field has proven its interventions work; now it has to build the apparatus to deliver the next generation of them.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Two hosts, no guest. Juno looks at the Harrison shunt from Segment 1 \u2014 the 1980s object that started the episode. Caspar names the one open question he would most want answered. Juno names what it means to design a tool for a patient you cannot see and cannot ask.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener leaves with a clear picture of a field that has earned its confidence in a narrow set of proven interventions, is honest about its dominant unsolved problem (PPROM), and is facing a genuine infrastructure question \u2014 not a scientific one \u2014 about whether it can absorb what the biology is about to demand. The ending is not optimistic or pessimistic. It is precise.",
+      "host_angle": "Caspar's closing note names PPROM as the binding constraint he would most want solved \u2014 not because it is the most dramatic problem, but because it is the one that limits everything else: instrument size, procedure timing, number of interventions per pregnancy, and ultimately the viability of delivering gene therapy the same way surgeons currently deliver shunts and balloons. Juno's closing note is about what it means to design a tool for a patient you cannot see and cannot ask \u2014 the design philosophy problem that runs underneath every instrument decision in the field, and that becomes most acute when the instrument is carrying not a shunt but a gene.",
+      "id": "S12",
+      "names_to_define": [],
+      "stakes": "The episode's ending is not a prediction. It is an honest accounting of where the field stands: the instruments got good enough to prove the interventions work; the trials proved which interventions are real; the training and regulatory infrastructure is struggling to keep pace; and the next generation of therapy \u2014 gene delivery \u2014 is arriving before anyone has built the device to carry it. The field is genuinely good at a narrow set of things, and it knows it.",
+      "surrogate": "CASPAR"
+    }
+  ]
+}

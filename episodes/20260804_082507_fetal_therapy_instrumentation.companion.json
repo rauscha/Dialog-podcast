@@ -1,0 +1,304 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_082507_fetal_therapy_instrumentation.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 S1: The Object That Changed the Number"
+    },
+    {
+      "start_sec": 117.88,
+      "start_time": "1:58",
+      "title": "\u2014 S2: Two Patients, One Access Point"
+    },
+    {
+      "start_sec": 235.75,
+      "start_time": "3:56",
+      "title": "\u2014 S3: What the Trials Proved"
+    },
+    {
+      "start_sec": 353.63,
+      "start_time": "5:54",
+      "title": "\u2014 S4: The Four Categories"
+    },
+    {
+      "start_sec": 471.5,
+      "start_time": "7:52",
+      "title": "\u2014 S5: The 2006 Approval That Still Defines the Field"
+    },
+    {
+      "start_sec": 589.38,
+      "start_time": "9:49",
+      "title": "\u2014 S6: What Actually Changed (Maren Explains the Geometry)"
+    },
+    {
+      "start_sec": 707.26,
+      "start_time": "11:47",
+      "title": "\u2014 S7: The Hole That Doesn't Close (PPROM)"
+    },
+    {
+      "start_sec": 825.13,
+      "start_time": "13:45",
+      "title": "\u2014 S8: The Training Bottleneck"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_082507_fetal_therapy_instrumentation.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_082507_fetal_therapy_instrumentation.companion.json",
+  "duration_sec": 988.00678,
+  "episode_type": "landscape",
+  "episode_type_label": "Scout The Landscape",
+  "follow_up_links": [
+    {
+      "reason": "Comprehensive 2025 review covering the transition from open to minimally invasive techniques, instrument miniaturization, and the experimental status of robotic-assisted fetal surgery.",
+      "source": "Medicina (MDPI)",
+      "title": "Advances in Fetal Surgery: A Narrative Review of Therapeutic Interventions and Future Directions",
+      "url": "https://doi.org/10.3390/medicina61071136"
+    },
+    {
+      "reason": "Landmark RCT establishing FETO efficacy for severe CDH (40% vs 15% survival to discharge), while showing no benefit for moderate CDH\u2014defines current clinical boundaries for tracheal balloon intervention.",
+      "source": "New England Journal of Medicine",
+      "title": "TOTAL Trial Results (Severe and Moderate Arms)",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2027030"
+    },
+    {
+      "reason": "Head-to-head comparison showing Somatex shunt significantly outperforms Harrison shunt (84.8% vs 50% live birth rate), illustrating how instrument design directly impacts outcomes.",
+      "source": "Journal of Clinical Medicine (MDPI)",
+      "title": "Vesicoamniotic Shunting: Comparison of Somatex vs. Harrison Shunt Systems",
+      "url": "https://www.mdpi.com/2077-0383/11/9/2359"
+    },
+    {
+      "reason": "Demonstrates how flexible robotic endoscopes can improve access to anteriorly located placentas during TTTS laser surgery\u2014a key technical limitation of current rigid fetoscopes.",
+      "source": "arXiv preprint",
+      "title": "Advancing Minimally Invasive Precision Surgery with Robotic Flexible Endoscopy",
+      "url": "https://arxiv.org/html/2511.14458"
+    },
+    {
+      "reason": "Represents next-generation instrumentation: soft robotics for continuous fetal monitoring, funded by Querrey-Simpson Institute and Lurie Children's Hospital Foundation.",
+      "source": "Nature Biomedical Engineering",
+      "title": "A filamentary soft robotic probe for multimodal in utero monitoring of fetal health",
+      "url": "https://www.nature.com/articles/s41551-025-01605-3"
+    },
+    {
+      "reason": "Reports Tippi MacKenzie (UCSF) presenting first-in-human trial design for prenatal gene therapy (GM1 gangliosidosis) at ASGCT 2026\u2014signals convergence of fetal surgery and gene therapy instrumentation.",
+      "source": "The Scientist",
+      "title": "Fetal Gene Therapy Makes Strides Toward the Clinic",
+      "url": "https://www.the-scientist.com/fetal-gene-therapy-makes-strides-toward-the-clinic-74497"
+    },
+    {
+      "reason": "Addresses the training bottleneck: how simulation-based preparation is essential for FETO program rollout, highlighting that instrumentation alone is insufficient without team coordination.",
+      "source": "Journal of Perinatology",
+      "title": "Using simulation to prepare multidisciplinary teams for complex fetal interventions",
+      "url": "Referenced in bioengineer.org coverage"
+    },
+    {
+      "reason": "The only FDA-approved fetoscope system for TTTS laser surgery\u2014illustrates the regulatory pathway (Humanitarian Device Exemption) and the limited competitive landscape.",
+      "source": "FDA CDRH Documents",
+      "title": "Karl Storz TTTS Fetoscopy Instruments Sets - FDA Summary of Safety and Probable Benefit",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf4/H040005b.pdf"
+    }
+  ],
+  "generated_at": "2026-08-04T14:01:48.898918+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim specific knowledge of Karl Storz's internal engineering decisions or IP",
+        "Should not predict when any specific robotic system will reach clinical approval",
+        "Should not characterize any specific center's outcomes or competence",
+        "Should not speculate on what a gene therapy delivery device will look like \u2014 can only describe what constraints it would have to satisfy"
+      ],
+      "cartesia_voice_id": "a01c369f-6d2d-4185-bc20-b32c225eab70",
+      "credential_frame": "A composite of engineers who have worked on catheter-based fetal intervention tools \u2014 shunt delivery systems, intrauterine access devices \u2014 navigating FDA Humanitarian Device Exemption pathways and the specific mechanical constraints of operating through a pregnant uterus",
+      "delivery_baseline": "Measured pace, slightly clipped consonants, answers questions one layer deeper than asked \u2014 not to show off but because the surface answer is genuinely incomplete",
+      "display_name": "Maren",
+      "expertise": "Why instrument design choices in fetal surgery are not just miniaturization problems \u2014 they are simultaneous mechanical, materials, and regulatory constraint problems. Can explain concretely why the Somatex parasol geometry solved a dislocation problem the Harrison cannula couldn't, why membrane sealing after instrument withdrawal is a materials science dead end at current scales, and why a gene therapy delivery device is a categorically different regulatory object than a shunt or a laser fiber.",
+      "field": "minimally invasive surgical device engineering, with a focus on obstetric and neonatal applications",
+      "label": "MAREN",
+      "personality": "Precise and slightly impatient with abstraction \u2014 will interrupt a vague claim to ask what gauge, what material, what failure mode. Not unkind, but has a low tolerance for engineering elegance being mistaken for clinical readiness. Occasionally dry about the gap between what a prototype can do in a lab and what a scrub tech can set up at 2am.",
+      "role_in_episode": "Enters after the shunt comparison beat to explain why the Somatex result is not just a better design story but a regulatory and manufacturing story. Stays through the PPROM beat to explain why it resists instrumentation solutions. Provides the sharpest pushback on robotic hype \u2014 not from clinical evidence but from the manufacturing and sterilization realities that precede clinical trials. Exits before the gene therapy beat so Juno and Caspar can close on the open frontier without an engineer's voice narrowing the frame.",
+      "synthetic": true,
+      "tts_provider": "cartesia",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "NAFTNet has grown from 18 centers at founding to 57 leading medical centers across the US, Canada, Mexico, and South America as of 2026.",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "NAFTNet website 2026"
+      ]
+    },
+    {
+      "claim": "The TOTAL trial showed FETO improved survival to discharge from 15% to 40% in severe left-sided CDH, but increased risk of preterm prelabor rupture of membranes.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "Karl Storz fetoscopes remain the only FDA-approved fetoscopy instruments for TTTS, creating a near-monopoly in the US market.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S8",
+        "Springer 2013 review"
+      ]
+    },
+    {
+      "claim": "The Somatex intrauterine shunt showed significantly better outcomes than the Harrison shunt for LUTO (84.8% vs 50% live birth rate), attributed to its smaller 18G delivery cannula and self-deploying parasol design.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Robotic-assisted fetal surgery is currently in experimental stage but expected to play a decisive role in the future, with KU Leuven and other groups developing flexible robotic endoscopes.",
+      "confidence": "Medium-High",
+      "id": "C5",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "claim": "The MOMS trial (published 2011) established that prenatal spina bifida repair reduces need for VP shunting and improves motor outcomes at 30 months, but with maternal/fetal risks including ~46% PPROM rate.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "CHOP MOMS data"
+      ]
+    },
+    {
+      "claim": "First-in-human fetal gene therapy trials are now being designed, with GM1 gangliosidosis as an initial target (Tippi MacKenzie, UCSF).",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "PPROM remains the Achilles heel of fetal intervention, complicating 30-40% of preterm deliveries and occurring in 32-46% of fetal surgery cases depending on procedure type.",
+      "confidence": "High",
+      "id": "C8",
+      "source_ids": [
+        "Medscape, CHOP data"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Multiple authors",
+      "id": "S1",
+      "publication": "Medicina (MDPI)",
+      "title": "Advances in Fetal Surgery: A Narrative Review of Therapeutic Interventions and Future Directions",
+      "url": "https://doi.org/10.3390/medicina61071136",
+      "why_it_matters": "Comprehensive 2025 review covering the transition from open to minimally invasive techniques, instrument miniaturization, and the experimental status of robotic-assisted fetal surgery.",
+      "year": "2025"
+    },
+    {
+      "author": "Jan Deprest, Kypros Nicolaides et al.",
+      "id": "S2",
+      "publication": "New England Journal of Medicine",
+      "title": "TOTAL Trial Results (Severe and Moderate Arms)",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2027030",
+      "why_it_matters": "Landmark RCT establishing FETO efficacy for severe CDH (40% vs 15% survival to discharge), while showing no benefit for moderate CDH\u2014defines current clinical boundaries for tracheal balloon intervention.",
+      "year": "2021"
+    },
+    {
+      "author": "Multiple authors",
+      "id": "S3",
+      "publication": "Journal of Clinical Medicine (MDPI)",
+      "title": "Vesicoamniotic Shunting: Comparison of Somatex vs. Harrison Shunt Systems",
+      "url": "https://www.mdpi.com/2077-0383/11/9/2359",
+      "why_it_matters": "Head-to-head comparison showing Somatex shunt significantly outperforms Harrison shunt (84.8% vs 50% live birth rate), illustrating how instrument design directly impacts outcomes.",
+      "year": "2022"
+    },
+    {
+      "author": "Multiple authors (KU Leuven group)",
+      "id": "S4",
+      "publication": "arXiv preprint",
+      "title": "Advancing Minimally Invasive Precision Surgery with Robotic Flexible Endoscopy",
+      "url": "https://arxiv.org/html/2511.14458",
+      "why_it_matters": "Demonstrates how flexible robotic endoscopes can improve access to anteriorly located placentas during TTTS laser surgery\u2014a key technical limitation of current rigid fetoscopes.",
+      "year": "2026"
+    },
+    {
+      "author": "Hedan Bai, Jianlin Zhou et al. (Northwestern University)",
+      "id": "S5",
+      "publication": "Nature Biomedical Engineering",
+      "title": "A filamentary soft robotic probe for multimodal in utero monitoring of fetal health",
+      "url": "https://www.nature.com/articles/s41551-025-01605-3",
+      "why_it_matters": "Represents next-generation instrumentation: soft robotics for continuous fetal monitoring, funded by Querrey-Simpson Institute and Lurie Children's Hospital Foundation.",
+      "year": "2026"
+    },
+    {
+      "author": "The Scientist staff",
+      "id": "S6",
+      "publication": "The Scientist",
+      "title": "Fetal Gene Therapy Makes Strides Toward the Clinic",
+      "url": "https://www.the-scientist.com/fetal-gene-therapy-makes-strides-toward-the-clinic-74497",
+      "why_it_matters": "Reports Tippi MacKenzie (UCSF) presenting first-in-human trial design for prenatal gene therapy (GM1 gangliosidosis) at ASGCT 2026\u2014signals convergence of fetal surgery and gene therapy instrumentation.",
+      "year": "2026"
+    },
+    {
+      "author": "Halamek LP, Blumenfeld YJ, Balikrishnan K et al.",
+      "id": "S7",
+      "publication": "Journal of Perinatology",
+      "title": "Using simulation to prepare multidisciplinary teams for complex fetal interventions",
+      "url": "Referenced in bioengineer.org coverage",
+      "why_it_matters": "Addresses the training bottleneck: how simulation-based preparation is essential for FETO program rollout, highlighting that instrumentation alone is insufficient without team coordination.",
+      "year": "2025"
+    },
+    {
+      "author": "FDA/Karl Storz",
+      "id": "S8",
+      "publication": "FDA CDRH Documents",
+      "title": "Karl Storz TTTS Fetoscopy Instruments Sets - FDA Summary of Safety and Probable Benefit",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf4/H040005b.pdf",
+      "why_it_matters": "The only FDA-approved fetoscope system for TTTS laser surgery\u2014illustrates the regulatory pathway (Humanitarian Device Exemption) and the limited competitive landscape.",
+      "year": "2006 (HDE approval)"
+    }
+  ],
+  "sources": [
+    "Multiple authors - Medicina (MDPI) - 2025 - Advances in Fetal Surgery: A Narrative Review of Therapeutic Interventions and Future Directions (https://doi.org/10.3390/medicina61071136)",
+    "Jan Deprest, Kypros Nicolaides et al. - New England Journal of Medicine - 2021 - TOTAL Trial Results (Severe and Moderate Arms) (https://www.nejm.org/doi/full/10.1056/NEJMoa2027030)",
+    "Multiple authors - Journal of Clinical Medicine (MDPI) - 2022 - Vesicoamniotic Shunting: Comparison of Somatex vs. Harrison Shunt Systems (https://www.mdpi.com/2077-0383/11/9/2359)",
+    "Multiple authors (KU Leuven group) - arXiv preprint - 2026 - Advancing Minimally Invasive Precision Surgery with Robotic Flexible Endoscopy (https://arxiv.org/html/2511.14458)",
+    "Hedan Bai, Jianlin Zhou et al. (Northwestern University) - Nature Biomedical Engineering - 2026 - A filamentary soft robotic probe for multimodal in utero monitoring of fetal health (https://www.nature.com/articles/s41551-025-01605-3)",
+    "The Scientist staff - The Scientist - 2026 - Fetal Gene Therapy Makes Strides Toward the Clinic (https://www.the-scientist.com/fetal-gene-therapy-makes-strides-toward-the-clinic-74497)",
+    "Halamek LP, Blumenfeld YJ, Balikrishnan K et al. - Journal of Perinatology - 2025 - Using simulation to prepare multidisciplinary teams for complex fetal interventions (Referenced in bioengineer.org coverage)",
+    "FDA/Karl Storz - FDA CDRH Documents - 2006 (HDE approval) - Karl Storz TTTS Fetoscopy Instruments Sets - FDA Summary of Safety and Probable Benefit (https://www.accessdata.fda.gov/cdrh_docs/pdf4/H040005b.pdf)"
+  ],
+  "topic": "Fetal therapy instrumentation",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    },
+    "MAREN": {
+      "bit_rate": 192000,
+      "language": "en",
+      "model": "sonic-3.5",
+      "provider": "cartesia",
+      "sample_rate": 44100,
+      "speed": 1.0,
+      "version": "2026-03-01",
+      "voice_label": "MAREN"
+    }
+  },
+  "word_count": 2738
+}

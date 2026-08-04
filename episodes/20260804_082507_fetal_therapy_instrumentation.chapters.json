@@ -1,0 +1,37 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 S1: The Object That Changed the Number"
+    },
+    {
+      "startTime": 117.88,
+      "title": "\u2014 S2: Two Patients, One Access Point"
+    },
+    {
+      "startTime": 235.75,
+      "title": "\u2014 S3: What the Trials Proved"
+    },
+    {
+      "startTime": 353.63,
+      "title": "\u2014 S4: The Four Categories"
+    },
+    {
+      "startTime": 471.5,
+      "title": "\u2014 S5: The 2006 Approval That Still Defines the Field"
+    },
+    {
+      "startTime": 589.38,
+      "title": "\u2014 S6: What Actually Changed (Maren Explains the Geometry)"
+    },
+    {
+      "startTime": 707.26,
+      "title": "\u2014 S7: The Hole That Doesn't Close (PPROM)"
+    },
+    {
+      "startTime": 825.13,
+      "title": "\u2014 S8: The Training Bottleneck"
+    }
+  ],
+  "version": "1.2.0"
+}

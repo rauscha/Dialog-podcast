@@ -1,0 +1,764 @@
+{
+  "naive": {
+    "breaks": [
+      {
+        "detail": "Juno says 'every surgical instrument ever made is designed for one patient' \u2014 I'm not sure what that means yet, it feels like a setup for a contrast but I don't have the payoff",
+        "severity": "low",
+        "turn": 7,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Where did 'fewer centers' come from? Nothing in what I've heard mentioned anything about centers or where procedures are performed \u2014 this feels like a jump to a new idea without setup",
+        "severity": "med",
+        "turn": 21,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Caspar is asking Juno to explain something Juno just said \u2014 but Caspar is the expert here, so why is he confused by Juno's point? It feels like a rhetorical device, but it's disorienting because the roles seem to have flipped.",
+        "severity": "low",
+        "turn": 22,
+        "type": "whiplash"
+      },
+      {
+        "detail": "Caspar just asked a confused question that Juno already answered in the previous line \u2014 this feels like the conversation went backwards",
+        "severity": "med",
+        "turn": 24,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Wait \u2014 Caspar was the one asking the confused question, but now Juno is answering it. Did the speakers swap roles? Also, reimbursement hasn't been mentioned before \u2014 where did that come from?",
+        "severity": "low",
+        "turn": 25,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "What does 'your tray' mean here? Is this a metaphor, a literal object, a handoff of some kind?",
+        "severity": "low",
+        "turn": 28,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Who is Maren? She hasn't been introduced before \u2014 is she joining the conversation?",
+        "severity": "med",
+        "turn": 30,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Who is Maren? She was briefly mentioned a moment ago as a 'materials-science and regulatory economist' but now she's an 'AI ethics researcher and resident skeptic' \u2014 those are very different descriptions and I don't know which is right or if she's actually going to appear now",
+        "severity": "med",
+        "turn": 38,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Gene therapy via viral vector came out of nowhere \u2014 we were talking about membrane rupture as a surgical complication, and suddenly there's a mention of viruses delivering DNA. I don't know how those two things connect.",
+        "severity": "med",
+        "turn": 47,
+        "type": "whiplash"
+      },
+      {
+        "detail": "Gene therapy and viral vectors were just introduced in one line by Maren, and now Juno is already asking a follow-up question about getting genes inside cells \u2014 I haven't heard enough yet to understand how gene therapy connects to the membrane problem or why it's being discussed here",
+        "severity": "med",
+        "turn": 49,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno suddenly mentions 'viral vector' and 'catheter' and 'fetoscopic sheath shaped to guide where a viral vector lands' \u2014 I don't know where viral vectors came from in this context. That term appeared briefly before but wasn't explained as part of instrument design. This feels like a leap.",
+        "severity": "med",
+        "turn": 51,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Maren suddenly mentions 'a viral vector' \u2014 that term was dropped earlier in passing but never explained. What does gene therapy via viral vector have to do with fetal surgery instruments? That thread was never picked up.",
+        "severity": "med",
+        "turn": 57,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Maren mentioned 'gene therapy via viral vector' and 'viral vector' a couple times but it was never explained \u2014 now Juno is flagging the same confusion I had",
+        "severity": "low",
+        "turn": 58,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "This line is a response to something, but it's unclear what Caspar is confirming \u2014 the last thing said was Maren's point about viral vectors being in different territory. 'It is' doesn't clarify anything.",
+        "severity": "low",
+        "turn": 62,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "A lot of new proper nouns at once \u2014 Tippi MacKenzie, ASGCT 2026, GM1 gangliosidosis \u2014 and I'm not sure if this is a real announced trial or a hypothetical being discussed. Also 'first-in-human trial design' sounds like it's been formally proposed, but then it says the instrument, the regulatory pathway, and the manufacturer don't exist yet, which feels contradictory.",
+        "severity": "med",
+        "turn": 66,
+        "type": "lost_thread"
+      }
+    ],
+    "first_bounce_turn": null,
+    "followed_overall": true,
+    "per_turn": [
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why are these two shunts being compared, and what's the significance of the difference?",
+        "severity": null,
+        "turn": 0,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What condition are these shunts actually treating, and why does the design difference matter?",
+        "severity": null,
+        "turn": 1,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Which of the two shunts is actually better for this \u2014 and why does it matter which one you use?",
+        "severity": null,
+        "turn": 2,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does the newer Somatex shunt actually work better, or is there some tradeoff?",
+        "severity": null,
+        "turn": 3,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is that difference actually proven to be caused by the shunt design, or could other factors explain it?",
+        "severity": null,
+        "turn": 4,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take from the 1980s to 2014 to improve the shunt design if the outcome difference is this dramatic?",
+        "severity": null,
+        "turn": 5,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to change the instrument, and what does the regulatory world have to do with it?",
+        "severity": null,
+        "turn": 6,
+        "type": null
+      },
+      {
+        "confusion": "Juno says 'every surgical instrument ever made is designed for one patient' \u2014 I'm not sure what that means yet, it feels like a setup for a contrast but I don't have the payoff",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What's strange about fetal therapy specifically \u2014 is it that the instrument operates on two patients at once?",
+        "severity": "low",
+        "turn": 7,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to change the instrument if the Somatex is so much better?",
+        "severity": null,
+        "turn": 8,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to change the instrument if the difference in outcomes was so dramatic?",
+        "severity": null,
+        "turn": 9,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do surgeons actually navigate when the mother's and fetus's interests conflict \u2014 is there a protocol, or is it judgment calls?",
+        "severity": null,
+        "turn": 10,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to change the instrument if the difference in outcomes was so dramatic?",
+        "severity": null,
+        "turn": 11,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the Somatex shunt \u2014 does it work through the fetoscopic approach, and is that why it's better?",
+        "severity": null,
+        "turn": 12,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to change the instrument if the difference in outcomes is so dramatic?",
+        "severity": null,
+        "turn": 13,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to change the instrument if the Somatex is so much better?",
+        "severity": null,
+        "turn": 14,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to switch from the Harrison to the Somatex if the outcomes were so much better?",
+        "severity": null,
+        "turn": 15,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What's the second paper?",
+        "severity": null,
+        "turn": 16,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What's the second paper Caspar mentioned?",
+        "severity": null,
+        "turn": 17,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Did the TOTAL trial prove FETO works, like MOMS proved fetal spina bifida surgery works?",
+        "severity": null,
+        "turn": 18,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Did the TOTAL trial actually show the FETO procedure worked, and how does it compare to the MOMS trial results?",
+        "severity": null,
+        "turn": 19,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the same procedure works for severe cases but not moderate ones \u2014 does that mean they still don't have a good treatment for moderate CDH?",
+        "severity": null,
+        "turn": 20,
+        "type": null
+      },
+      {
+        "confusion": "Where did 'fewer centers' come from? Nothing in what I've heard mentioned anything about centers or where procedures are performed \u2014 this feels like a jump to a new idea without setup",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why would proving a procedure works lead to it being concentrated at fewer centers?",
+        "severity": "med",
+        "turn": 21,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Caspar is asking Juno to explain something Juno just said \u2014 but Caspar is the expert here, so why is he confused by Juno's point? It feels like a rhetorical device, but it's disorienting because the roles seem to have flipped.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why would proving a procedure works cause it to be concentrated at fewer centers?",
+        "severity": "low",
+        "turn": 22,
+        "type": "whiplash"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How many of these specialist centers actually exist, and where are they?",
+        "severity": null,
+        "turn": 23,
+        "type": null
+      },
+      {
+        "confusion": "Caspar just asked a confused question that Juno already answered in the previous line \u2014 this feels like the conversation went backwards",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to update the shunt design if the outcome difference was so dramatic?",
+        "severity": "med",
+        "turn": 24,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Wait \u2014 Caspar was the one asking the confused question, but now Juno is answering it. Did the speakers swap roles? Also, reimbursement hasn't been mentioned before \u2014 where did that come from?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why does proving a treatment works make it harder to access \u2014 and how does reimbursement fit into the regulatory world Caspar said we'd get to?",
+        "severity": "low",
+        "turn": 25,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How does the training pipeline getting tighter actually play out \u2014 are there just not enough surgeons being trained to do these procedures?",
+        "severity": null,
+        "turn": 26,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to move from the Harrison shunt to the Somatex if the outcomes are that different?",
+        "severity": null,
+        "turn": 27,
+        "type": null
+      },
+      {
+        "confusion": "What does 'your tray' mean here? Is this a metaphor, a literal object, a handoff of some kind?",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the actual instrument categories Juno was just asking about?",
+        "severity": "low",
+        "turn": 28,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why did it take until 2014 to replace the Harrison shunt with the Somatex if the survival difference is that dramatic?",
+        "severity": null,
+        "turn": 29,
+        "type": null
+      },
+      {
+        "confusion": "Who is Maren? She hasn't been introduced before \u2014 is she joining the conversation?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is Maren about to speak, and what is a 'regulatory economist' exactly?",
+        "severity": "med",
+        "turn": 30,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is Maren, and when does she actually show up?",
+        "severity": null,
+        "turn": 31,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is Maren and when does she actually show up?",
+        "severity": null,
+        "turn": 32,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is Maren, and when are we going to hear from her?",
+        "severity": null,
+        "turn": 33,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why has no other company gotten FDA approval for a fetoscope in 18 years \u2014 is that a regulatory problem, a market problem, or both?",
+        "severity": null,
+        "turn": 34,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why has no other company gotten FDA approval for a fetoscope in 18 years?",
+        "severity": null,
+        "turn": 35,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the bar is lower for HDE approval, why hasn't any competitor bothered to clear it in 18 years?",
+        "severity": null,
+        "turn": 36,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why hasn't anyone else tried to get a competing fetoscope approved in 18 years?",
+        "severity": null,
+        "turn": 37,
+        "type": null
+      },
+      {
+        "confusion": "Who is Maren? She was briefly mentioned a moment ago as a 'materials-science and regulatory economist' but now she's an 'AI ethics researcher and resident skeptic' \u2014 those are very different descriptions and I don't know which is right or if she's actually going to appear now",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is Maren actually joining this conversation, and why does her job description keep changing?",
+        "severity": "med",
+        "turn": 38,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who exactly is Maren \u2014 she's been mentioned twice as an 'AI ethics researcher' and now she's speaking, but that title seems odd for someone talking about medical device economics?",
+        "severity": null,
+        "turn": 39,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the economics froze the field, why did the Somatex eventually get made at all \u2014 what changed to make it viable in 2014?",
+        "severity": null,
+        "turn": 40,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If dislocation was the known dominant failure mode for decades, why did it take until 2014 for someone to design the flanged anchor solution?",
+        "severity": null,
+        "turn": 41,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the geometry fix was so obvious in hindsight, why did it take from the 1980s to 2014 to get there?",
+        "severity": null,
+        "turn": 42,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If solving three linked problems together is what finally produced the Somatex \u2014 why did it take from the 1980s to 2014 to get there?",
+        "severity": null,
+        "turn": 43,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why did it take from the 1980s to 2014 to solve the dislocation problem if the geometry fix seems relatively straightforward?",
+        "severity": null,
+        "turn": 44,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If outcome data only shows you failures after they happen in patients, how do engineers actually test these devices safely before they're used on real pregnant women and fetuses?",
+        "severity": null,
+        "turn": 45,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What is 'the membrane' and why hasn't it been solved in forty years?",
+        "severity": null,
+        "turn": 46,
+        "type": null
+      },
+      {
+        "confusion": "Gene therapy via viral vector came out of nowhere \u2014 we were talking about membrane rupture as a surgical complication, and suddenly there's a mention of viruses delivering DNA. I don't know how those two things connect.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does gene therapy have to do with membrane rupture after fetal surgery?",
+        "severity": "med",
+        "turn": 47,
+        "type": "whiplash"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the amnion doesn't self-seal, has anyone figured out how to close that hole \u2014 and what does gene therapy via viral vector have to do with fixing a membrane?",
+        "severity": null,
+        "turn": 48,
+        "type": null
+      },
+      {
+        "confusion": "Gene therapy and viral vectors were just introduced in one line by Maren, and now Juno is already asking a follow-up question about getting genes inside cells \u2014 I haven't heard enough yet to understand how gene therapy connects to the membrane problem or why it's being discussed here",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does gene therapy have to do with the membrane not sealing after fetal surgery?",
+        "severity": "med",
+        "turn": 49,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If none of the sealant approaches work, is anyone trying to redesign the instruments to leave a smaller hole in the first place?",
+        "severity": null,
+        "turn": 50,
+        "type": null
+      },
+      {
+        "confusion": "Juno suddenly mentions 'viral vector' and 'catheter' and 'fetoscopic sheath shaped to guide where a viral vector lands' \u2014 I don't know where viral vectors came from in this context. That term appeared briefly before but wasn't explained as part of instrument design. This feels like a leap.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does gene therapy via viral vector have to do with the instruments being discussed \u2014 is that a separate treatment category I missed?",
+        "severity": "med",
+        "turn": 51,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If diameter is the key constraint, what's the absolute minimum diameter you can work with and still do these procedures?",
+        "severity": null,
+        "turn": 52,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Has this robotic prototype actually been used on patients, or is it still experimental?",
+        "severity": null,
+        "turn": 53,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does the flexible robotic endoscope actually solve the anterior placenta problem, and does it make PPROM worse by requiring a larger access point?",
+        "severity": null,
+        "turn": 54,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Do any high-volume centers actually have enough anterior placenta cases to justify buying the robotic platform?",
+        "severity": null,
+        "turn": 55,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Will the robotic endoscope ever make it to actual clinical use, and what would that take?",
+        "severity": null,
+        "turn": 56,
+        "type": null
+      },
+      {
+        "confusion": "Maren suddenly mentions 'a viral vector' \u2014 that term was dropped earlier in passing but never explained. What does gene therapy via viral vector have to do with fetal surgery instruments? That thread was never picked up.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is a viral vector doing in this conversation about shunts and fetoscopes \u2014 is gene therapy actually part of fetal surgery now?",
+        "severity": "med",
+        "turn": 57,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Maren mentioned 'gene therapy via viral vector' and 'viral vector' a couple times but it was never explained \u2014 now Juno is flagging the same confusion I had",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does gene therapy via viral vector have to do with fetal surgery instruments, and why did Maren bring it up?",
+        "severity": "low",
+        "turn": 58,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who floated this idea, and is gene therapy via catheter actually being attempted in fetal surgery right now?",
+        "severity": null,
+        "turn": 59,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What would gene therapy via viral vector actually look like in fetal surgery, and why is it so different from mechanical tools?",
+        "severity": null,
+        "turn": 60,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If gene therapy on a fetus could permanently rewrite its genome, who consents to that \u2014 and how is that even regulated?",
+        "severity": null,
+        "turn": 61,
+        "type": null
+      },
+      {
+        "confusion": "This line is a response to something, but it's unclear what Caspar is confirming \u2014 the last thing said was Maren's point about viral vectors being in different territory. 'It is' doesn't clarify anything.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How would gene therapy via viral vector actually be delivered to a fetus, and who is working on that?",
+        "severity": "low",
+        "turn": 62,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does gene delivery actually look like mechanically \u2014 is it a catheter, a needle, something else entirely?",
+        "severity": null,
+        "turn": 63,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the regulatory category for fetal gene therapy delivery doesn't exist yet, who would even start building it \u2014 a device company, a biotech, or someone else entirely?",
+        "severity": null,
+        "turn": 64,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Has anyone actually tried to build one of these viral vector delivery devices for fetal use, or is this purely theoretical at this point?",
+        "severity": null,
+        "turn": 65,
+        "type": null
+      },
+      {
+        "confusion": "A lot of new proper nouns at once \u2014 Tippi MacKenzie, ASGCT 2026, GM1 gangliosidosis \u2014 and I'm not sure if this is a real announced trial or a hypothetical being discussed. Also 'first-in-human trial design' sounds like it's been formally proposed, but then it says the instrument, the regulatory pathway, and the manufacturer don't exist yet, which feels contradictory.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the instrument, the regulatory pathway, and the manufacturer don't exist, in what sense is this a 'trial design' \u2014 is this a real thing being planned or a thought experiment?",
+        "severity": "med",
+        "turn": 66,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is actually going to build the delivery instrument for the MacKenzie trial, and how long would that take?",
+        "severity": null,
+        "turn": 67,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If PPROM is the constraint that limits everything \u2014 including this new gene therapy frontier \u2014 and nobody has solved it in 40 years, what would actually solving it even look like?",
+        "severity": null,
+        "turn": 68,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is actually going to build the instrument MacKenzie needs, and how long will that take?",
+        "severity": null,
+        "turn": 69,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Will they actually get into how that delivery instrument for the gene therapy trial gets designed or regulated?",
+        "severity": null,
+        "turn": 70,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who actually built the Somatex, and why did it take until 2014 \u2014 what was the specific obstacle that kept the better geometry from existing sooner?",
+        "severity": null,
+        "turn": 71,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the 'next object' \u2014 is it the gene therapy delivery device, the robotic fetoscope, or something else entirely?",
+        "severity": null,
+        "turn": 72,
+        "type": null
+      }
+    ]
+  },
+  "narration_vs_banter": {
+    "pass": true,
+    "ratio": 0.5205479452054794,
+    "react_only_beats": 35,
+    "render_beats": 38,
+    "threshold": 0.35
+  }
+}
