@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260805_050228_the_fetal_frontier_-_week_of_2026_08_05.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open A: The Design Step That Earns the Grade"
+    },
+    {
+      "start_sec": 42.84,
+      "start_time": "0:43",
+      "title": "\u2014 Cold Open B: What TRAP Demands"
+    },
+    {
+      "start_sec": 85.67,
+      "start_time": "1:26",
+      "title": "\u2014 Headline: Citation, Design, and Why External Validation Matters"
+    },
+    {
+      "start_sec": 128.51,
+      "start_time": "2:09",
+      "title": "\u2014 Headline: The Markers, the Cutoffs, the Effect Sizes"
+    },
+    {
+      "start_sec": 171.34,
+      "start_time": "2:51",
+      "title": "\u2014 Headline: The Caveat and What Actually Changes"
+    },
+    {
+      "start_sec": 214.18,
+      "start_time": "3:34",
+      "title": "\u2014 Pivot + Round 1: Sirico, MPI in FGR"
+    },
+    {
+      "start_sec": 257.01,
+      "start_time": "4:17",
+      "title": "\u2014 Round 2: Stevens, cfDNA Follow-Up Equity"
+    },
+    {
+      "start_sec": 299.85,
+      "start_time": "5:00",
+      "title": "\u2014 Round 3: Tinajero, Ophthalmic Artery Doppler"
+    },
+    {
+      "start_sec": 342.68,
+      "start_time": "5:43",
+      "title": "\u2014 Round 4: Olivieri, Zygosity and Twin Anomaly Distribution"
+    },
+    {
+      "start_sec": 385.52,
+      "start_time": "6:26",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260805_050228_the_fetal_frontier_-_week_of_2026_08_05.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260805_050228_the_fetal_frontier_-_week_of_2026_08_05.companion.json",
+  "duration_sec": 473.351066,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Externally validated ultrasound markers enable evidence-based intervention thresholds in TRAP, moving beyond gestalt-driven decisions",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Development and external validation of prognostic markers to predict pump-twin survival in twin reversed arterial perfusion sequence",
+      "url": "https://doi.org/10.1002/uog.70256"
+    },
+    {
+      "reason": "Meta-analysis consolidates evidence for bilateral cardiac dysfunction in FGR, supporting MPI integration into surveillance protocols",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Left and right myocardial performance indices in growth-restricted fetuses: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70233"
+    },
+    {
+      "reason": "Documents significant equity gaps in confirmatory testing uptake, directly affecting counseling and clinical pathways",
+      "source": "Prenat Diagn",
+      "title": "Diagnostic Testing After Positive Cell-Free DNA Screening for Sex Chromosome Aneuploidies: Clinical and Socioeconomic Determinants",
+      "url": "https://doi.org/10.1002/pd.70229"
+    },
+    {
+      "reason": "Offers non-invasive ultrasound-based tracking of angiogenic imbalance for preeclampsia surveillance near term",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Ophthalmic artery Doppler as potential surrogate marker of angiogenic imbalance in near-term pregnancy",
+      "url": "https://doi.org/10.1002/uog.70270"
+    },
+    {
+      "reason": "Clarifies that monozygosity drives certain concordant anomaly patterns independent of chorionicity-related hemodynamics",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Association of zygosity and chorionicity with anatomical distribution of congenital malformations in twin pregnancies",
+      "url": "https://doi.org/10.1002/uog.70290"
+    }
+  ],
+  "generated_at": "2026-08-05T10:09:43.847117+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Externally validated ultrasound prognostic markers can stratify pump-twin survival risk in TRAP sequence, supporting more evidence-based intervention timing",
+      "confidence": "medium",
+      "id": "wu2026trap",
+      "source_ids": [
+        "wu2026trap"
+      ]
+    },
+    {
+      "claim": "Growth-restricted fetuses show bilateral MPI elevation and diastolic dysfunction, with early-onset FGR demonstrating more pronounced cardiac changes",
+      "confidence": "high",
+      "id": "sirico2026mpi",
+      "source_ids": [
+        "sirico2026mpi"
+      ]
+    },
+    {
+      "claim": "Only about one-quarter of patients with positive cfDNA for sex chromosome aneuploidies pursue confirmatory testing, with uptake disparities linked to insurance, ethnicity, and deprivation",
+      "confidence": "medium",
+      "id": "stevens2026cfdna",
+      "source_ids": [
+        "stevens2026cfdna"
+      ]
+    },
+    {
+      "claim": "Ophthalmic artery PSV ratio correlates with sFlt-1/PlGF ratios in late preterm pregnancies, offering a non-invasive surrogate for angiogenic imbalance",
+      "confidence": "medium",
+      "id": "tinajero2026oa",
+      "source_ids": [
+        "tinajero2026oa"
+      ]
+    },
+    {
+      "claim": "Monozygotic twins have elevated risk of concordant structural malformations in specific anatomical clusters independent of chorionicity-related hemodynamic effects",
+      "confidence": "medium",
+      "id": "olivieri2026twins",
+      "source_ids": [
+        "olivieri2026twins"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Wu",
+      "id": "wu2026trap",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Development and external validation of prognostic markers to predict pump-twin survival in twin reversed arterial perfusion sequence",
+      "url": "https://doi.org/10.1002/uog.70256",
+      "why_it_matters": "Externally validated ultrasound markers enable evidence-based intervention thresholds in TRAP, moving beyond gestalt-driven decisions",
+      "year": 2026
+    },
+    {
+      "author": "Sirico",
+      "id": "sirico2026mpi",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Left and right myocardial performance indices in growth-restricted fetuses: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70233",
+      "why_it_matters": "Meta-analysis consolidates evidence for bilateral cardiac dysfunction in FGR, supporting MPI integration into surveillance protocols",
+      "year": 2026
+    },
+    {
+      "author": "Stevens",
+      "id": "stevens2026cfdna",
+      "publication": "Prenat Diagn",
+      "title": "Diagnostic Testing After Positive Cell-Free DNA Screening for Sex Chromosome Aneuploidies: Clinical and Socioeconomic Determinants",
+      "url": "https://doi.org/10.1002/pd.70229",
+      "why_it_matters": "Documents significant equity gaps in confirmatory testing uptake, directly affecting counseling and clinical pathways",
+      "year": 2026
+    },
+    {
+      "author": "Tinajero",
+      "id": "tinajero2026oa",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Ophthalmic artery Doppler as potential surrogate marker of angiogenic imbalance in near-term pregnancy",
+      "url": "https://doi.org/10.1002/uog.70270",
+      "why_it_matters": "Offers non-invasive ultrasound-based tracking of angiogenic imbalance for preeclampsia surveillance near term",
+      "year": 2026
+    },
+    {
+      "author": "Olivieri",
+      "id": "olivieri2026twins",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Association of zygosity and chorionicity with anatomical distribution of congenital malformations in twin pregnancies",
+      "url": "https://doi.org/10.1002/uog.70290",
+      "why_it_matters": "Clarifies that monozygosity drives certain concordant anomaly patterns independent of chorionicity-related hemodynamics",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Wu et al. - Ultrasound Obstet Gynecol - 2026 - Development and external validation of prognostic markers to predict pump-twin survival in twin reversed arterial perfusion sequence (https://doi.org/10.1002/uog.70256)",
+    "Sirico et al. - Ultrasound Obstet Gynecol - 2026 - Left and right myocardial performance indices in growth-restricted fetuses: systematic review and meta-analysis (https://doi.org/10.1002/uog.70233)",
+    "Stevens et al. - Prenat Diagn - 2026 - Diagnostic Testing After Positive Cell-Free DNA Screening for Sex Chromosome Aneuploidies: Clinical and Socioeconomic Determinants (https://doi.org/10.1002/pd.70229)",
+    "Tinajero et al. - Ultrasound Obstet Gynecol - 2026 - Ophthalmic artery Doppler as potential surrogate marker of angiogenic imbalance in near-term pregnancy (https://doi.org/10.1002/uog.70270)",
+    "Olivieri et al. - Ultrasound Obstet Gynecol - 2026 - Association of zygosity and chorionicity with anatomical distribution of congenital malformations in twin pregnancies (https://doi.org/10.1002/uog.70290)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/08/05",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1140
+}

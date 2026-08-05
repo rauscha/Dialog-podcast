@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open A: The Design Step That Earns the Grade"
+    },
+    {
+      "startTime": 42.84,
+      "title": "\u2014 Cold Open B: What TRAP Demands"
+    },
+    {
+      "startTime": 85.67,
+      "title": "\u2014 Headline: Citation, Design, and Why External Validation Matters"
+    },
+    {
+      "startTime": 128.51,
+      "title": "\u2014 Headline: The Markers, the Cutoffs, the Effect Sizes"
+    },
+    {
+      "startTime": 171.34,
+      "title": "\u2014 Headline: The Caveat and What Actually Changes"
+    },
+    {
+      "startTime": 214.18,
+      "title": "\u2014 Pivot + Round 1: Sirico, MPI in FGR"
+    },
+    {
+      "startTime": 257.01,
+      "title": "\u2014 Round 2: Stevens, cfDNA Follow-Up Equity"
+    },
+    {
+      "startTime": 299.85,
+      "title": "\u2014 Round 3: Tinajero, Ophthalmic Artery Doppler"
+    },
+    {
+      "startTime": 342.68,
+      "title": "\u2014 Round 4: Olivieri, Zygosity and Twin Anomaly Distribution"
+    },
+    {
+      "startTime": 385.52,
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

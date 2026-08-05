@@ -1,0 +1,42 @@
+CASPAR [flat, direct]: Most prognostic work in TRAP stops at derivation. This one didn't.
+JUNO [clinical]: Which means for the first time we have thresholds that weren't built and tested on the same cases. That's the lead.
+CASPAR [grounded]: Quick orientation: TRAP sequence — acardiac twin has no functioning heart, survives on reversed arterial flow from the pump twin, which is at risk of high-output failure and death. Intervention timing has run on gestalt and single-center experience for a long time, because TRAP is rare enough that no one accumulates cases fast enough to externally validate anything.
+JUNO [matter-of-fact]: And when a family gets referred somewhere new, the threshold travels with the clinician. Not with the evidence.
+CASPAR [confirming]: That's the structural problem Wu and colleagues address.
+CASPAR [formal citation]: From Ultrasound in Obstetrics and Gynecology, 2026: Wu and colleagues, a development and external validation cohort study — prognostic ultrasound markers to predict pump-twin survival in twin reversed arterial perfusion sequence.
+JUNO [pressing]: Design structure before numbers.
+CASPAR [methodical]: Markers developed in one cohort, tested in a separate external population. Validation cases were not used to build the model — that's the minimum bar, and it's the bar most TRAP literature hasn't cleared. The inputs include acardiac-to-pump twin ratio, Doppler indices, and gestational age at presentation. Output is pump-twin survival.
+JUNO [focused]: Direction of the effect?
+CASPAR [precise]: Higher acardiac-to-pump ratio and abnormal Doppler indices at presentation associate with worse pump-twin outcomes. The validated cutoffs stratify who needs intervention now versus who can be observed.
+JUNO [clinically]: So the protocol-committee conversation shifts. Not "what does your center usually do at this ratio" — "what does the validated model say the risk is at this ratio."
+CASPAR [measured]: Those are genuinely different conversations. I'd rate evidence confidence medium — the design earns the grade, but I want to name the constraint before we go further.
+JUNO [anticipating]: The N.
+CASPAR [confirming]: TRAP is rare. Even a validation cohort is modest in absolute numbers. That's not a criticism of the study — it's a structural feature of the condition. A model validated in a small external cohort may perform differently in centers with different referral patterns, different gestational-age distributions, different intervention protocols. The markers earn credibility from the design step. Not from large N.
+JUNO [direct]: So what actually changes?
+CASPAR [honest]: A shared reference point for intervention timing. Centers now have a threshold they can cite that wasn't derived from their own cases. What doesn't change yet is a mandate — no guideline body has incorporated these thresholds, and multicenter adoption will test the model in populations the derivation study didn't see. The argument you bring to the protocol committee is stronger. The protocol committee still has to make the decision.
+JUNO [holding both]: And for centers that have been operating on one experienced clinician's gestalt, that reference point matters. It's portable in a way gestalt isn't.
+CASPAR [dry]: It is.
+CASPAR [pivoting]: Rounds — four other things this week.
+JUNO [formal]: From Ultrasound in Obstetrics and Gynecology, 2026: Sirico and colleagues, a systematic review and meta-analysis — left and right myocardial performance indices in growth-restricted fetuses.
+CASPAR [consolidating]: Pooled data confirm bilateral MPI elevation and diastolic dysfunction in FGR, with early-onset showing more pronounced cardiac changes than late-onset. Strongest design in the rounds this week.
+JUNO [pressing]: Caveat?
+CASPAR [naming it]: Heterogeneity in MPI measurement technique across included studies. The pooled numbers don't directly translate to a single operationalizable cutoff. You can't read a threshold off this meta-analysis and apply it to your unit's protocol without knowing how your technique maps to what the included studies actually did.
+JUNO [clinical hook]: The early-versus-late-onset distinction is the piece worth acting on. Early-onset FGR warrants closer cardiac surveillance, and this gives you the pooled data to support that decision.
+CASPAR [formal]: From Prenatal Diagnosis, 2026: Stevens and colleagues, a retrospective cohort — diagnostic testing uptake after positive cell-free DNA screening for sex chromosome aneuploidies.
+JUNO [flat]: Twenty-six percent.
+CASPAR [confirming]: Twenty-six percent of patients with a positive cfDNA result for a sex chromosome aneuploidy pursued confirmatory diagnostic testing. Disparities by insurance status, ethnicity, and socioeconomic deprivation. Retrospective design identifies the association — it doesn't establish mechanism. We don't know from this paper whether the barrier is cost, counseling quality, or access to amniocentesis or CVS.
+JUNO [pressing the stakes]: And cfDNA PPV for sex chromosome aneuploidies is generally lower than for trisomies 21, 18, and 13 — which makes confirmatory testing more important here, not less. Leaving the result unconfirmed is a larger clinical problem than it would be for a T21 screen.
+CASPAR [adding]: Three-quarters of positive screens never reaching confirmation is a structural problem. The follow-through question has to be explicit in the counseling visit.
+JUNO [blunt]: That conversation has to happen at the time of the result. Not at the next appointment.
+CASPAR [formal]: From Ultrasound in Obstetrics and Gynecology, 2026: Tinajero and colleagues, a nested analysis within an RCT — ophthalmic artery Doppler as a surrogate marker of angiogenic imbalance in near-term pregnancy.
+JUNO [one sentence]: Ophthalmic artery PSV ratio correlates with sFlt-1/PlGF in late preterm pregnancies. Non-invasive, no blood draw required.
+CASPAR [labeling immediately]: Label it correctly: nested analysis, not standalone validation. Operator reproducibility across equipment and sonographers is uncharacterized. That's the gap that determines whether this is deployable outside a controlled setting.
+JUNO [filing it]: Interesting correlation. Needs reproducibility data before it moves anywhere.
+CASPAR [formal]: From Ultrasound in Obstetrics and Gynecology, 2026: Olivieri and colleagues, a registry-based cohort — association of zygosity and chorionicity with anatomical distribution of congenital malformations in twin pregnancies.
+JUNO [distinction first]: The distinction that has to land before the finding makes sense: monozygosity is embryological — identical twins from a single zygote. Monochorionicity is hemodynamic — shared placentation with vascular connections. They overlap, but a monozygotic pair can be dichorionic.
+CASPAR [building]: The finding is that concordant structural malformations in specific anatomical clusters in monozygotic twins are independent of chorionicity. The vascular sharing isn't driving it. Something intrinsic to monozygosity is.
+JUNO [caveat]: Registry design — zygosity ascertainment may be incomplete. The independence claim is directionally credible, not definitive.
+CASPAR [clinical hook]: The implication is that monozygotic dichorionic pairs warrant systematic anomaly surveillance beyond the hemodynamic risks of monochorionicity. These pairs sometimes get a lighter surveillance posture than that finding supports.
+JUNO [close]: Two things still unsettled. Whether the Wu TRAP markers hold across centers with different intervention protocols and referral patterns — one external validation cohort is not multicenter adoption. And how to close the diagnostic follow-up gap after positive cfDNA for sex chromosome aneuploidies — Stevens names the problem precisely, but neither the mechanism nor the intervention is characterized.
+CASPAR [plain]: Both named. Neither resolved.
+JUNO [sign-off]: Show notes have all five DOIs. Wu, Sirico, Stevens, Tinajero, Olivieri.
