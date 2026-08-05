@@ -1,0 +1,83 @@
+CASPAR [measured]: There's a Lenovo ThinkPad X1 Carbon Gen 14 sitting on an iFixit teardown mat right now, and it just scored a nine out of ten.
+JUNO [curious]: Which is — for anyone who hasn't spent time on iFixit — the repair-focused site that scores electronics on how easy they are to open and fix. Ten means fully repairable. One means basically sealed shut.
+CASPAR [dry]: Nine out of ten is the highest score ever given to a mainstream ultralight. An ultralight being the category of machines that weigh under roughly 1.4 kilograms — portability first, everything else second.
+JUNO [landing it]: So Lenovo's flagship just became almost as repairable as a Framework — a laptop built specifically around that premise.
+CASPAR [confirming]: One point below. Framework — the startup founded in 2020 whose entire pitch is that you should be able to repair, upgrade, and eventually swap the core components of your laptop — scores a perfect ten. Lenovo scores nine. On the same scale.
+JUNO [the obvious question]: So what is Framework actually selling now?
+CASPAR [holding it]: That's the question. We're not answering it yet.
+JUNO [small laugh]: No. Because first we need to talk about who's actually making this decision. And that part matters for everything that comes after.
+CASPAR [setting up]: Seven years on one machine.
+JUNO [carrying it]: A ThinkPad X1 Carbon Gen 7 — the 2019 model — sitting next to someone's desk right now. Not broken. Not noticeably slow. Just old enough that a decision has to be made. And the person making it has been using that same laptop every day for around seven years.
+CASPAR [surrogate]: What does that actually tell us about what they need?
+JUNO [thinking it through]: That they're not optimizing for benchmark scores. They bought something, it worked, and they stopped thinking about it. That's the baseline — a machine that disappears into the work.
+CASPAR [dry]: Which is harder to engineer than most spec sheets suggest.
+JUNO [agreeing]: And it means any recommendation that ignores that pattern is giving advice to the wrong person. Everything we look at from here — weight, battery, keyboard, financial risk — runs through that filter. Does this machine let you stop thinking about it?
+CASPAR [transitioning]: So. What did Lenovo build for 2026?
+CASPAR [carrying]: The Gen 14 on a postal scale reads 996 grams. Lighter than a standard hardcover book. The chassis is what Lenovo calls a Space Frame — a lattice-style internal structure that reduces weight while keeping the machine rigid and, crucially, improving access to internal components. That's part of why the iFixit score jumped.
+JUNO [surrogate]: What's in there, port-wise?
+CASPAR [matter-of-fact]: HDMI, three Thunderbolt 4 ports — one cable that carries power, data, and video simultaneously — and USB-A. No dongles required for common connections. Battery is 58 watt-hours.
+JUNO [picking at it]: And the RAM?
+CASPAR [plain]: Soldered in at purchase. You choose 32 or 64 gigabytes when you order, and that is the machine you own for its lifetime.
+JUNO [sitting with it]: So it's repairable — battery, keyboard, SSD — but the memory is fixed.
+CASPAR [confirming]: That's the machine. For someone who already trusts the ThinkPad line, it's the lowest-friction upgrade path available. Same keyboard. Same TrackPoint. Now you can open it yourself.
+JUNO [transitioning]: The other machine on the table was built around a completely different theory of what that limitation should cost you.
+JUNO [carrying]: Picture a mainboard — the circuit board containing the processor and core logic — about the size of a paperback novel, sitting next to an aluminum chassis it slides into. And beside that, a row of small rectangular cartridges lined up like a hand of cards. Those are Framework's Expansion Cards. You choose which ports you want: USB-A, HDMI, SD card, USB-C. They slot into the sides of the laptop.
+CASPAR [surrogate]: What does it actually mean to plan your ports?
+JUNO [concrete]: Before a trip, you look at what you need. Presenting from a projector? Put the HDMI card in. Transferring files from a camera? Swap in the SD card. It takes about ten seconds — but you have to think about it before you leave. The ThinkPad has HDMI built in. The Framework has a slot where HDMI could go.
+CASPAR [noting it]: That's the first hint of something.
+JUNO [not yet calling it]: We'll come back to it. The machine itself: Framework 13 Pro, their 2026 flagship. Ground-up redesign in CNC aluminum — precision-machined from a solid block. Weighs 1.4 kilograms. Battery is 74 watt-hours, roughly 28 percent larger than the ThinkPad's 58. Real-world runtime on the Intel version runs 12 to 16 hours. AMD data is still sparse. RAM is upgradeable — Intel version uses LPCAMM2, a newer low-power format; AMD version uses DDR5 SO-DIMM, a widely available standard. Either way, you can add more later.
+CASPAR [the key thing]: And the mainboard.
+JUNO [landing it]: And the mainboard. When a faster processor generation comes out in three years, you don't buy a new laptop. You buy a new mainboard and slide it in. That is a fundamentally different theory of ownership than anything Lenovo offers.
+CASPAR [transitioning]: Which brings us back to the iFixit chart.
+CASPAR [carrying]: ThinkPad Gen 14: nine out of ten. Framework 13 Pro: ten out of ten. And there's a quote from Lenovo's design team acknowledging that Framework influenced the Gen 14 redesign. When the incumbent explicitly credits the challenger for changing how it designs its flagship, that's not a footnote. The repairability gap that defined this category for several years has nearly closed.
+JUNO [surrogate]: But closing the repairability gap — does that close the whole gap?
+CASPAR [the distinction]: No. And this is where most coverage goes wrong. Repairability means you can fix what breaks — cracked screen, dead battery, failed keyboard — without sending the machine to a manufacturer. Both laptops now offer that. Upgradeability means you can improve beyond the original specification. In Framework's case, swap the entire processor assembly for a newer generation. The ThinkPad is repairable within a fixed spec. The Framework is repairable and upgradeable. Those are different claims.
+JUNO [honest question]: Does upgradeability actually matter in practice, or is it theoretical for most people?
+CASPAR [dry]: That's exactly what Maren can answer. She's been living on a Framework after years on ThinkPads.
+MAREN [measured]: I bought it because the argument was sound — not because I was a fan of the company. Lenovo publicly crediting Framework as an influence meant I wasn't taking a leap of faith on an underdog. Something had already shifted.
+JUNO [setup]: You've actually lived on one. What does the Framework ask of you that a ThinkPad never did?
+MAREN [direct]: The cards. I had a work trip — three days, one presentation, external drive, monitor in the hotel. I stood in my kitchen the night before counting ports. I'd already swapped in a faster mainboard for that trip, so yes, upgradeability mattered in practice. But the port planning —
+JUNO [cutting in]: That never happened with a ThinkPad.
+MAREN [resuming]: Never. The HDMI was just there. That's the thing nobody warns you about.
+JUNO [pushing]: Is that a one-time adjustment or does it keep coming back?
+MAREN [honest]: It recurs. Less than it did the first month, but it recurs. Before anything with a different setup than my desk, I think about it. It's not catastrophic. It's just a thing you do now.
+JUNO [the keyboard]: PCWorld rated the Framework keyboard B-plus. For someone who's typed on a ThinkPad for around seven years — what does that mean day to day?
+MAREN [no softening]: It means it's not a ThinkPad keyboard. The travel is shorter. The feedback is different. I adjusted in about three weeks. But I noticed it every day for those three weeks, and I still notice it sometimes when I'm tired. If the keyboard is the reason you bought a ThinkPad, that matters.
+CASPAR [entering]: If the community is load-bearing for support — when something goes wrong, you're going to a forum rather than an enterprise line — what happens to that if the company contracts?
+MAREN [pause]: I don't know. That's the honest answer. The community is real. The guides are good. But I don't know what it looks like if Framework gets smaller. I've thought about it.
+JUNO [quietly]: Thank you, Maren.
+MAREN [brief]: Yeah.
+JUNO [reframing]: So the question isn't which laptop is better. It's how much hardware attention you're willing to give.
+CASPAR [carrying]: In July 2026, Framework's CEO — Nirav Patel, the company's founder — issued a public statement. Supplier cost pressures on LPCAMM2 memory were, in his words, putting the company's ability to operate at real financial risk. Total funding raised across Framework's entire existence: approximately forty-four million dollars.
+JUNO [surrogate]: Against a sixty-billion-dollar incumbent.
+CASPAR [plain]: Against a sixty-billion-dollar incumbent. This is not speculation about whether Framework will fail. It's a statement about what you're betting on. The mainboard upgrade path, the Expansion Card ecosystem, the repair guides, the parts availability — all of it requires Framework to exist. A company that has publicly flagged financial risk is a different bet than one that hasn't. That's the fact. It belongs in the decision.
+JUNO [transitioning]: There's one more thing that belongs in the decision, and most reviews bury it.
+JUNO [carrying]: Battery life on the ThinkPad is not one number — it's a choice you make at configuration. The IPS display, an LCD with accurate colors and low power consumption, gets up to 24 hours in a standardized WiFi endurance test. The OLED — richer blacks, higher contrast, but higher power draw — gets 12 to 14 hours. Framework 13 Pro on Intel: 12 to 16 hours real-world. AMD data is still coming in.
+CASPAR [surrogate]: So the ThinkPad can be either a 24-hour machine or a 12-hour machine depending on which screen you pick?
+JUNO [confirming]: That's the single most consequential configuration decision in the ThinkPad purchase. Pick IPS if you want it to last a full travel day without thinking about the charger. Pick OLED because it looked better in the store, and you've bought a different machine than you thought.
+CASPAR [carrying]: Price. ThinkPad Gen 14 configured with 32 gigabytes and a one-terabyte SSD: roughly two thousand to twenty-five hundred dollars. Framework 13 Pro AMD configured comparably: same range.
+JUNO [surrogate]: Why does the Framework AMD cost as much as it does? The original pitch was affordability through modularity.
+CASPAR [one sentence]: There's a DRAM shortage right now — a supply constraint in the memory chip market — and because the Framework's Intel RAM is a separate purchasable LPCAMM2 module rather than soldered in at the factory, current module prices have hit configurations harder than Framework would otherwise expect.
+JUNO [naming it]: So budget doesn't resolve this. Both machines cost the same. The decision has to be made on something else.
+CASPAR [dry]: Which is harder to compare than dollars.
+JUNO [carrying the scenarios]: Five situations. First: weight matters. You're in airports a lot, you carry the bag for six hours. The ThinkPad is 400 grams lighter. That's real over a long day.
+CASPAR [surrogate]: For someone who kept a ThinkPad for around seven years?
+JUNO [yes]: Probably yes. The Gen 7 they've been carrying weighs about the same as the Gen 14. They already know what that weight feels like. They chose it.
+JUNO [continuing]: Second: keyboard. You type a lot. The keyboard is the interface between you and the work.
+CASPAR [surrogate]: Seven-year ThinkPad user?
+JUNO [yes]: Yes. Unambiguously. The ThinkPad keyboard is the benchmark. The Framework is B-plus. For this person, that's not a minor detail.
+JUNO [continuing]: Third: Linux. You run it as your primary OS, you want community support for edge cases, you want Ubuntu to just work.
+CASPAR [surrogate]: Seven-year ThinkPad user?
+JUNO [hedging]: Depends. ThinkPads have solid Linux support. But Framework's community is more active on edge cases. If Linux is the primary OS, Framework is worth the friction.
+JUNO [continuing]: Fourth: ten-year horizon. You want to keep this machine for another decade. You're thinking about whether the processor will still be relevant in 2033.
+CASPAR [surrogate]: Seven-year ThinkPad user?
+JUNO [working it out]: Yes — and this is where I've actually shifted a bit. I came into this thinking the mainboard upgrade path was mostly theoretical. But if you're genuinely going to keep a laptop for ten years, swapping the processor generation in year four or five is real value. The ThinkPad doesn't offer that. Framework earns something here.
+CASPAR [dry]: That's a meaningful shift.
+JUNO [last one]: Fifth: risk tolerance. You want to know the company will still be making parts in five years.
+CASPAR [surrogate]: Seven-year ThinkPad user?
+JUNO [yes]: Yes. Someone who kept a machine for seven years is not a person who wants to think about whether their parts supplier still exists. That's a ThinkPad answer.
+CASPAR [the caveat]: Framework's financial risk is not a reason to dismiss the machine. The company has shipped products for five years. The community is real. But it is a reason to know what you're betting on. You're not just buying a laptop — you're buying into a parts ecosystem that requires a company that has publicly flagged financial pressure to keep running. Not a wrong bet. A different one.
+JUNO [closing]: Two kinds of people — and I mean this practically, not as a personality quiz. One person wants to buy a laptop and stop thinking about it. Wants the keyboard to feel like the one they already know. Wants the HDMI port to just be there. Wants to know that in five years, if the battery dies, there's a clear path to a replacement. That person buys the ThinkPad X1 Carbon Gen 14 with the IPS display, 32 gigabytes of RAM, and doesn't look back.
+JUNO [continuing]: The other person is willing to think about their laptop occasionally in exchange for thinking about it less often over a longer horizon. They want to know that in year four, when a meaningfully faster processor exists, they don't have to buy a whole new machine. They're comfortable with the port shuffle before a trip. They've accepted that the keyboard is B-plus. And they've looked at Framework's financial situation and decided the bet is worth making. That person buys the Framework 13 Pro.
+CASPAR [last]: Seven years on a ThinkPad is a pretty clear signal about which of those two people you are.
+JUNO [quiet]: It is.

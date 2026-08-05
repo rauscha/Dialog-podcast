@@ -1,0 +1,222 @@
+{
+  "logline": "A nine-year ThinkPad owner faces a choice between buying the same trust again or betting on a company that redefined laptop ownership \u2014 right as that company's survival comes into question.",
+  "newcomer_promise": "A listener who has never heard of Framework or followed laptop reviews can explain why two laptops that cost the same and are both repairable are still genuinely different choices, and which one makes sense if you want to keep it for a decade without thinking about it.",
+  "segments": [
+    {
+      "anchor": "A Lenovo ThinkPad X1 Carbon Gen 14 sitting on an iFixit teardown mat, scored 9 out of 10 \u2014 the highest repairability score ever given to a mainstream ultralight laptop.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that repairability used to be Framework's exclusive selling point, that Lenovo just scored 9 out of 10 on the same scale Framework scores 10, and that this creates a genuine question: if both machines are now repairable, what is Framework actually selling?",
+      "host_angle": "Caspar presents the iFixit number as the counterintuitive opening fact. Juno asks the obvious question \u2014 so what is Framework actually selling now? \u2014 which the episode will spend the rest of its time answering. Neither host answers it yet.",
+      "id": "S1",
+      "names_to_define": [
+        {
+          "name": "iFixit",
+          "one_line": "A repair-focused website that scores consumer electronics on how easy they are to open, fix, and maintain \u2014 10 is fully repairable, 1 is essentially sealed."
+        },
+        {
+          "name": "ThinkPad X1 Carbon Gen 14",
+          "one_line": "Lenovo's flagship ultralight business laptop, fourteenth generation of a line that has existed since 2012."
+        },
+        {
+          "name": "Framework",
+          "one_line": "A startup founded in 2020 whose entire pitch is that you should be able to repair, upgrade, and eventually swap the core components of your laptop rather than replace the whole machine."
+        },
+        {
+          "name": "ultralight",
+          "one_line": "A laptop category defined by weighing under roughly 1.4 kilograms \u2014 prioritizing portability over raw power or screen size."
+        }
+      ],
+      "stakes": "For years, the only reason to consider a Framework laptop over a ThinkPad was that you could actually fix the Framework yourself. If Lenovo just closed that gap, the entire premise of this decision changes \u2014 and nobody who bought a Framework last year was told that was coming.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A nine-year-old ThinkPad X1 Carbon Gen 7, still running, sitting next to its owner's desk \u2014 not broken, not slow enough to force a replacement, just old enough that a decision has to be made.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands who is making this decision and why it matters: someone who kept one machine for nine years is not optimizing for benchmark scores, they are optimizing for not having to think about their laptop. That constraint shapes every tradeoff that follows.",
+      "host_angle": "Juno frames the nine-year ownership as the diagnostic lens. Caspar asks what that actually tells us about what the person needs \u2014 not what they say they want. The hosts agree the baseline is the most important piece of context in the episode, and that most reviews ignore it entirely.",
+      "id": "S2",
+      "names_to_define": [
+        {
+          "name": "ThinkPad X1 Carbon Gen 7",
+          "one_line": "The 2019 model of Lenovo's flagship ultralight \u2014 the machine being replaced, representing nine years of daily use as a trust baseline."
+        }
+      ],
+      "stakes": "Keeping a laptop for nine years is unusual enough to be diagnostic. It tells you something about what this person actually values \u2014 not specs, not novelty, just something that disappears into the work. Any recommendation that ignores that baseline is giving advice to the wrong person.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "The ThinkPad X1 Carbon Gen 14 on a postal scale reading 996 grams \u2014 lighter than a standard hardcover book \u2014 next to a spec sheet showing its Space Frame chassis, HDMI port, three Thunderbolt 4 ports, and a 58Wh battery.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener can describe the ThinkPad Gen 14 in plain terms: under a kilogram, ports that work without adapters, a battery that lasts 12 to 24 hours depending on the display chosen, and RAM that is soldered in at purchase and cannot be changed later.",
+      "host_angle": "Caspar walks through the machine's physical facts without editorializing. Juno asks about the soldered RAM \u2014 what does it mean that you can't change it later? Caspar explains: you pick 32 or 64 gigabytes at purchase and that is the machine you own for its lifetime. No judgment yet on whether that matters.",
+      "id": "S3",
+      "names_to_define": [
+        {
+          "name": "Space Frame",
+          "one_line": "Lenovo's name for the Gen 14's internal structural redesign \u2014 a lattice-style chassis that reduces weight while maintaining rigidity and improving access to internal components."
+        },
+        {
+          "name": "Thunderbolt 4",
+          "one_line": "Intel's high-speed port standard \u2014 a single cable that can carry power, data, and video simultaneously, used for docking stations, external drives, and monitors."
+        },
+        {
+          "name": "58Wh battery",
+          "one_line": "The battery capacity in watt-hours \u2014 a higher number means more stored energy and longer potential runtime before needing to charge."
+        }
+      ],
+      "stakes": "This is what Lenovo built for 2026: a machine that weighs under a kilogram, needs no dongles for common connections, and can now be opened and repaired by the person who owns it. For someone who already trusts the ThinkPad line, this is the lowest-friction upgrade path available.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A Framework 13 Pro mainboard \u2014 the size of a paperback novel \u2014 sitting on a table next to the aluminum chassis it slides into, with a row of small rectangular Expansion Cards lined up beside it like a card hand.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the Framework 13 Pro weighs more than the ThinkPad, has a larger battery, uses modular ports that require planning, and offers something the ThinkPad does not: the ability to swap the entire processor assembly for a future generation without buying a new laptop.",
+      "host_angle": "Juno walks through the Framework's physical facts. Caspar asks the newcomer's question: what does it actually mean to plan your ports? Juno explains the Expansion Card system \u2014 you choose before a trip, you can swap them, but you have to think about it. The first hint of ownership tax surfaces here, without verdict.",
+      "id": "S4",
+      "names_to_define": [
+        {
+          "name": "Framework 13 Pro",
+          "one_line": "Framework's 2026 flagship laptop \u2014 a ground-up redesign in CNC-machined aluminum, weighing 1.4 kilograms, with a modular port system and a battery 28 percent larger than the ThinkPad Gen 14's."
+        },
+        {
+          "name": "mainboard",
+          "one_line": "The circuit board that contains the processor, integrated graphics, and core logic of a laptop \u2014 in a Framework, this entire assembly can be swapped out for a newer generation."
+        },
+        {
+          "name": "Expansion Cards",
+          "one_line": "Framework's modular port system \u2014 small cartridges that slot into the laptop's sides, letting the owner choose which ports they want: USB-A, HDMI, SD card, USB-C, and others."
+        },
+        {
+          "name": "CNC aluminum",
+          "one_line": "A manufacturing process where a block of aluminum is precision-machined into a chassis \u2014 associated with premium build quality and structural rigidity."
+        },
+        {
+          "name": "LPCAMM2",
+          "one_line": "A newer RAM module standard used in the Intel version of the Framework 13 Pro \u2014 upgradeable after purchase, unlike soldered RAM."
+        },
+        {
+          "name": "SO-DIMM",
+          "one_line": "An older, widely available RAM module standard used in the AMD version of the Framework 13 Pro \u2014 also upgradeable after purchase."
+        },
+        {
+          "name": "74Wh battery",
+          "one_line": "The Framework 13 Pro's battery capacity \u2014 28 percent larger than the ThinkPad Gen 14's 58Wh, contributing to its real-world runtime of 12 to 16 hours."
+        }
+      ],
+      "stakes": "Framework's argument is not just that you can fix this laptop \u2014 it is that you can replace its brain. When a faster processor generation comes out in three years, you do not buy a new laptop; you buy a new mainboard and slide it in. That is a fundamentally different theory of ownership than anything Lenovo offers.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A side-by-side chart: ThinkPad Gen 14 at 9/10 iFixit, Framework 13 Pro at 10/10 \u2014 and a quote from Lenovo's design team acknowledging Framework's influence on the Gen 14 redesign.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener can articulate the distinction: both laptops are now repairable, meaning you can fix what breaks. Only the Framework is upgradeable in the deeper sense \u2014 you can replace the processor generation. The ThinkPad is repairable within a fixed specification. That distinction is the actual axis of this decision.",
+      "host_angle": "Caspar names the convergence and the distinction explicitly. Juno asks: does upgradeability actually matter in practice, or is it a theoretical benefit most people never use? Caspar says that question is exactly what the guest can answer \u2014 and introduces Maren.",
+      "id": "S5",
+      "names_to_define": [
+        {
+          "name": "repairability",
+          "one_line": "The ability to fix a broken component \u2014 replace a cracked screen, a dead battery, a failed keyboard \u2014 without sending the machine to a manufacturer."
+        },
+        {
+          "name": "upgradeability",
+          "one_line": "The ability to improve a component beyond its original specification \u2014 adding more RAM, or in Framework's case, swapping the processor assembly for a newer generation entirely."
+        }
+      ],
+      "stakes": "The gap that defined this category for four years has nearly closed. When the incumbent explicitly credits the challenger for changing how it designs its flagship, that is not a minor footnote \u2014 it is a signal that the market shifted. But closing the repairability gap is not the same as closing the upgradeability gap, and collapsing those two things leads to the wrong decision.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Maren, a multi-year Framework owner who came from ThinkPads, describing the moment before a work trip when she realized she had to decide which Expansion Cards to pack.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands the Framework ownership tax in concrete terms: the Expansion Card planning before travel, the keyboard adjustment period for someone coming from a ThinkPad, and the degree to which community forums replace enterprise support lines when something goes wrong.",
+      "host_angle": "Juno asks the setup question: you have actually lived on one of these \u2014 what does the Framework ask of you that a ThinkPad never did? Maren answers without softening. Juno then pushes specifically on the keyboard: PCWorld rated it B-plus \u2014 what does that mean for someone who has typed on a ThinkPad for nine years? Maren answers directly. Caspar listens and does not interrupt.",
+      "id": "S6",
+      "names_to_define": [
+        {
+          "name": "Maren",
+          "one_line": "A composite voice representing multi-year Framework owners who migrated from ThinkPads and have documented the transition honestly \u2014 including the parts that did not work as advertised."
+        }
+      ],
+      "stakes": "Everything the Framework promises on paper has to be paid for in some unit of attention. The question is how much attention, how often, and whether that cost is front-loaded or recurring. Someone who kept a ThinkPad for nine years because it disappeared into the work needs to know what the Framework asks of them before they commit.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "Caspar reading aloud a July 2026 public statement from Framework's CEO warning that supplier costs have put the company at financial risk \u2014 then holding up the number: forty million dollars total raised across Framework's entire existence.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that Framework's financial situation is a real variable in this decision \u2014 not because failure is certain, but because the value of owning a Framework depends on the company continuing to make parts. The listener also understands that Maren, who owns one, does not know how this resolves.",
+      "host_angle": "Caspar presents the CEO's statement and the funding number as plain facts, without dramatizing them. He then asks Maren: if the community is load-bearing for support, what happens to that if the company contracts? Maren answers honestly that she does not know, and names that uncertainty as real. Juno thanks Maren and she exits.",
+      "id": "S7",
+      "names_to_define": [
+        {
+          "name": "Framework CEO",
+          "one_line": "Nirav Patel, co-founder and CEO of Framework Computer, who issued a public statement in July 2026 warning that supplier cost pressures were creating financial risk for the company."
+        }
+      ],
+      "stakes": "Framework's entire value proposition depends on parts being available for years. The mainboard upgrade path, the Expansion Card ecosystem, the community repair guides \u2014 all of it requires Framework to exist. A company that has raised forty million dollars total and whose CEO has publicly flagged financial risk is not the same bet as a sixty-billion-dollar incumbent. This is not speculation; it is the CEO's own words.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A battery life table: ThinkPad Gen 14 with IPS display at up to 24 hours in a WiFi endurance test; ThinkPad Gen 14 with OLED at 12 to 14 hours; Framework 13 Pro at 12 to 16 hours real-world on Intel, with AMD data still sparse.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the ThinkPad's display choice determines its battery life category \u2014 IPS gets up to 24 hours, OLED gets 12 to 14 \u2014 and that the Framework 13 Pro's battery life is competitive with the ThinkPad OLED but not with the ThinkPad IPS. The AMD Framework's real-world numbers are not yet well established.",
+      "host_angle": "Juno walks through the battery numbers. Caspar asks the newcomer's question: wait, so the ThinkPad can be either a 24-hour machine or a 12-hour machine depending on which screen you pick? Juno confirms and names it as the single most consequential configuration decision in the ThinkPad purchase. No recommendation yet.",
+      "id": "S8",
+      "names_to_define": [
+        {
+          "name": "IPS display",
+          "one_line": "A type of LCD screen technology \u2014 accurate colors, good viewing angles, and significantly lower power consumption than OLED."
+        },
+        {
+          "name": "OLED display",
+          "one_line": "A screen technology where each pixel generates its own light \u2014 richer blacks and higher contrast than IPS, but higher power draw, which reduces battery life."
+        },
+        {
+          "name": "WiFi endurance test",
+          "one_line": "A standardized battery benchmark where the laptop browses the web continuously over WiFi at a fixed screen brightness until the battery dies \u2014 used by reviewers including Notebookcheck."
+        }
+      ],
+      "stakes": "Battery life is not one number \u2014 it is a choice the buyer makes at configuration, and on the ThinkPad that choice is load-bearing. The IPS display versus the OLED display is not a cosmetic preference; it is the difference between a machine that lasts a full travel day and one that does not. A nine-year owner who does not know this could buy the wrong ThinkPad.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A price comparison: ThinkPad X1 Carbon Gen 14 configured with 32GB RAM and 1TB SSD landing around two thousand to twenty-five hundred dollars; Framework 13 Pro AMD configured comparably landing in the same range \u2014 with a one-sentence explanation of why the Framework AMD costs more than expected.",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that both machines land in the same price range when configured comparably, that budget does not resolve the decision, and that the Framework AMD costs more than intuition suggests because of current RAM module pricing \u2014 not because it is a premium tier above the Intel version.",
+      "host_angle": "Caspar presents the price comparison. Juno asks why the Framework AMD costs as much as it does given that Framework's original pitch was affordability through modularity. Caspar gives the one-sentence DRAM explanation. Both hosts note that price parity is the fact that forces the decision onto values.",
+      "id": "S9",
+      "names_to_define": [
+        {
+          "name": "DRAM shortage",
+          "one_line": "A periodic supply constraint in the memory chip market where demand outpaces production, driving up the cost of RAM modules \u2014 which affects the Framework AMD's price because its RAM is a separate purchasable component rather than soldered in at the factory."
+        }
+      ],
+      "stakes": "Price parity means the decision cannot be resolved by budget. When two machines cost the same, the buyer has to choose on values \u2014 and values are harder to compare than dollars. The Framework AMD's counterintuitive premium also needs a plain explanation so the listener does not assume it is a mistake.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Juno reading five short scenarios aloud \u2014 weight, keyboard, Linux, ten-year horizon, risk tolerance \u2014 each one pointing to a different answer, like a decision tree drawn in the air.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener can match their own situation to one of the five scenarios and arrive at a clear answer. They also understand that right-to-repair as an ideology is not sufficient on its own to override keyboard feel, company longevity, or weight \u2014 and that the episode is not making a moral argument, only a practical one.",
+      "host_angle": "Juno reads the scenarios. Caspar asks after each one: does that scenario apply to someone who kept a ThinkPad for nine years? Juno answers yes or no and says why. The two hosts are in agreement by the end of the scenario map \u2014 this is not a debate segment, it is a convergence segment.",
+      "id": "S10",
+      "names_to_define": [
+        {
+          "name": "right-to-repair",
+          "one_line": "A policy and consumer movement advocating for laws and manufacturer practices that give owners the legal right and practical ability to fix their own devices."
+        }
+      ],
+      "stakes": "The listener came in with a real decision to make. The episode has now given them everything they need to make it \u2014 but only if the scenarios are mapped to the actual person, not to an abstract buyer. The nine-year frame is the filter. Every scenario runs through it.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "Juno naming two kinds of people \u2014 not as a personality quiz, but as a practical observation about how much hardware attention each choice requires over five years.",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener can state the decision rule in their own words: if you want to stop thinking about your laptop, the ThinkPad is the answer. If you want to think about your laptop less often over a longer horizon and you are willing to engage with it occasionally to get there, the Framework earns it \u2014 with the caveat that the company's financial situation is a real variable, not a footnote.",
+      "host_angle": "Juno delivers the closing frame: two kinds of people, named practically. Caspar adds the one caveat neither host has said aloud until now \u2014 that the Framework's financial risk is not a reason to dismiss it, but it is a reason to know what you are betting on. The episode ends without telling the listener what to buy, only who each machine is actually for.",
+      "id": "S11",
+      "names_to_define": [],
+      "stakes": "The listener needs to leave with a decision rule, not a verdict. The episode's job is to make the rule clear enough that the listener can apply it to themselves without Juno or Caspar present. If the closing image is a person, not a product, the rule sticks.",
+      "surrogate": "CASPAR"
+    }
+  ]
+}

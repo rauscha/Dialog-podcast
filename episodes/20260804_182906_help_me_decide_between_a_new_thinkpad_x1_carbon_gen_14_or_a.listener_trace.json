@@ -1,0 +1,872 @@
+{
+  "naive": {
+    "breaks": [
+      {
+        "detail": "What's a Framework? That name was just dropped without any explanation of who makes it or what it is beyond 'a laptop built specifically for easy repairs'",
+        "severity": "low",
+        "turn": 3,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Who spent nine years on one machine? This seems like a new thread starting but I have no idea who or what machine is being referenced.",
+        "severity": "med",
+        "turn": 8,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "The phrase 'nine years on one machine' came out of nowhere \u2014 I have no idea what machine, what person, or how this connects to the laptop repairability discussion",
+        "severity": "med",
+        "turn": 9,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "I thought we were talking about a patient on a mechanical heart pump \u2014 now we're back to a laptop? Is the person with the heart pump also the person with the old ThinkPad? That connection isn't clear yet.",
+        "severity": "med",
+        "turn": 11,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "I'm not sure who 'they' refers to \u2014 the heart patient, the laptop owner, or both? The show seems to be drawing a parallel but hasn't made it explicit yet.",
+        "severity": "low",
+        "turn": 12,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "What 'other machine' \u2014 I didn't know there was a second machine being compared here",
+        "severity": "med",
+        "turn": 24,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "What is 'the first hint of something'? Hint of what? This is too vague to follow.",
+        "severity": "med",
+        "turn": 28,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "What system? What pressure? What balance? This is very abstract and I have no idea what specific thing is about to unravel \u2014 the laptop comparison? Framework as a company? Something else entirely?",
+        "severity": "med",
+        "turn": 30,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "LPCAMM2 vs SO-DIMM \u2014 I don't know what those mean beyond 'newer' and 'older,' and I'm not sure why the distinction matters yet",
+        "severity": "low",
+        "turn": 31,
+        "type": null
+      },
+      {
+        "detail": "He said 'and the mainboard' and then... nothing. That's not a complete thought. Is this a cliffhanger setup or did something get cut off?",
+        "severity": "low",
+        "turn": 32,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Who is Maren? That name just appeared out of nowhere with no introduction.",
+        "severity": "med",
+        "turn": 35,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Who is Maren? She was mentioned briefly before but I didn't realize she was a person on this podcast or a hardware tester \u2014 she seemed like a hypothetical user earlier",
+        "severity": "med",
+        "turn": 39,
+        "type": "undefined_name"
+      }
+    ],
+    "first_bounce_turn": null,
+    "followed_overall": true,
+    "per_turn": [
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does a score of nine out of ten mean in this context \u2014 is this a repairability rating?",
+        "severity": null,
+        "turn": 0,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why did this laptop score a nine \u2014 what makes it almost but not quite a ten?",
+        "severity": null,
+        "turn": 1,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What makes this laptop so much easier to repair than other ultralights?",
+        "severity": null,
+        "turn": 2,
+        "type": null
+      },
+      {
+        "confusion": "What's a Framework? That name was just dropped without any explanation of who makes it or what it is beyond 'a laptop built specifically for easy repairs'",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What is Framework and why is it the benchmark for repairability?",
+        "severity": "low",
+        "turn": 3,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How did Lenovo actually achieve a nine \u2014 what did they do differently in the design?",
+        "severity": null,
+        "turn": 4,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly makes the ThinkPad score a nine \u2014 what did Lenovo actually change?",
+        "severity": null,
+        "turn": 5,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is Framework actually selling now, if Lenovo is nearly as repairable?",
+        "severity": "low",
+        "turn": 6,
+        "type": "no_stakes"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is making this decision, and what decision are they even talking about?",
+        "severity": null,
+        "turn": 7,
+        "type": null
+      },
+      {
+        "confusion": "Who spent nine years on one machine? This seems like a new thread starting but I have no idea who or what machine is being referenced.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is making the decision about repairability, and what does nine years on one machine mean?",
+        "severity": "med",
+        "turn": 8,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "The phrase 'nine years on one machine' came out of nowhere \u2014 I have no idea what machine, what person, or how this connects to the laptop repairability discussion",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who are we talking about and what does 'nine years on one machine' mean in this context?",
+        "severity": "med",
+        "turn": 9,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does someone who lived on a mechanical heart pump for nine years have to do with laptop repairability?",
+        "severity": null,
+        "turn": 10,
+        "type": null
+      },
+      {
+        "confusion": "I thought we were talking about a patient on a mechanical heart pump \u2014 now we're back to a laptop? Is the person with the heart pump also the person with the old ThinkPad? That connection isn't clear yet.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is the person who lived nine years on a heart pump the same person who used a ThinkPad for nine years, and if so, how does that connect to the repair/repairability story?",
+        "severity": "med",
+        "turn": 11,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "I'm not sure who 'they' refers to \u2014 the heart patient, the laptop owner, or both? The show seems to be drawing a parallel but hasn't made it explicit yet.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the heart patient the same person who's been using the ThinkPad for nine years, or are these two separate stories being compared?",
+        "severity": "low",
+        "turn": 12,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Why does the heart pump patient story connect to the laptop decision \u2014 is this the same person?",
+        "severity": null,
+        "turn": 13,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the heart pump patient's situation have to do with the laptop decision \u2014 are they the same person?",
+        "severity": null,
+        "turn": 14,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the heart pump patient have to do with the laptop decision \u2014 are they the same person buying the ThinkPad?",
+        "severity": null,
+        "turn": 15,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What specifically makes the ThinkPad X1 Carbon Gen 14 score a nine \u2014 what did Lenovo actually change to make it so repairable?",
+        "severity": null,
+        "turn": 16,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Does being lighter and more repairable mean it's actually better for someone who just wants a machine that disappears into the work?",
+        "severity": null,
+        "turn": 17,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is Framework actually selling now if a mainstream laptop is nearly as repairable?",
+        "severity": null,
+        "turn": 18,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How long does that 58 watt-hour battery actually last in real use?",
+        "severity": null,
+        "turn": 19,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is Framework actually selling now that a mainstream laptop nearly matches its repairability score?",
+        "severity": null,
+        "turn": 20,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the RAM is permanently fixed, how does this machine score a nine out of ten for repairability?",
+        "severity": null,
+        "turn": 21,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the RAM is soldered in, does that actually matter for someone who just wants a machine that 'disappears into the work'?",
+        "severity": null,
+        "turn": 22,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is Framework actually selling now that Lenovo has caught up on repairability?",
+        "severity": null,
+        "turn": 23,
+        "type": null
+      },
+      {
+        "confusion": "What 'other machine' \u2014 I didn't know there was a second machine being compared here",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the other machine they're about to discuss, and is it Framework?",
+        "severity": "med",
+        "turn": 24,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the Framework laptop lets you pick your own ports \u2014 does that mean you can also swap out the mainboard itself?",
+        "severity": null,
+        "turn": 25,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the ThinkPad scores a nine and Framework scores a ten, is the repairability difference actually meaningful in practice?",
+        "severity": null,
+        "turn": 26,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Does the flexibility of Framework's port system actually matter enough in practice to justify the extra thinking it requires?",
+        "severity": null,
+        "turn": 27,
+        "type": null
+      },
+      {
+        "confusion": "What is 'the first hint of something'? Hint of what? This is too vague to follow.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is Framework actually selling now, and how does the port-planning tradeoff connect to the bigger picture?",
+        "severity": "med",
+        "turn": 28,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is Framework actually selling now, and what is the 'something' that the port-planning detail is hinting at?",
+        "severity": null,
+        "turn": 29,
+        "type": null
+      },
+      {
+        "confusion": "What system? What pressure? What balance? This is very abstract and I have no idea what specific thing is about to unravel \u2014 the laptop comparison? Framework as a company? Something else entirely?",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is actually going to tip or unravel \u2014 are we talking about Framework the company, the port-planning tradeoff, or something bigger?",
+        "severity": "med",
+        "turn": 30,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "LPCAMM2 vs SO-DIMM \u2014 I don't know what those mean beyond 'newer' and 'older,' and I'm not sure why the distinction matters yet",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What was 'the first hint of something' Caspar mentioned \u2014 and does the Framework's upgradeable RAM make it clearly better for this nine-year user?",
+        "severity": "low",
+        "turn": 31,
+        "type": null
+      },
+      {
+        "confusion": "He said 'and the mainboard' and then... nothing. That's not a complete thought. Is this a cliffhanger setup or did something get cut off?",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What's significant about the Framework mainboard specifically \u2014 is it upgradeable or swappable in a way that matters?",
+        "severity": "low",
+        "turn": 32,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How much does a replacement mainboard actually cost compared to just buying a new laptop?",
+        "severity": null,
+        "turn": 33,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If Framework lets you swap the mainboard and Lenovo is now nearly as repairable, what does the iFixit chart actually show that we haven't already covered?",
+        "severity": null,
+        "turn": 34,
+        "type": null
+      },
+      {
+        "confusion": "Who is Maren? That name just appeared out of nowhere with no introduction.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is Maren, and why are they specifically the example being used here?",
+        "severity": "med",
+        "turn": 35,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is repairability the only thing that matters here, or is the mainboard-swapping thing still a fundamental difference?",
+        "severity": null,
+        "turn": 36,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Does the upgradeability advantage actually matter in practice for someone like the nine-year ThinkPad user, or is repairability enough?",
+        "severity": null,
+        "turn": 37,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Will the person who used their laptop for nine years actually benefit from upgradeability, or is repairability enough for them?",
+        "severity": null,
+        "turn": 38,
+        "type": null
+      },
+      {
+        "confusion": "Who is Maren? She was mentioned briefly before but I didn't realize she was a person on this podcast or a hardware tester \u2014 she seemed like a hypothetical user earlier",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is Maren actually going to speak, and has she been a real person this whole time or was she introduced as a hypothetical?",
+        "severity": "med",
+        "turn": 39,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What did Maren actually find after living on the Framework \u2014 does upgradeability matter in practice or not?",
+        "severity": null,
+        "turn": 40,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does upgradeability actually matter in practice \u2014 what has Maren's real-world experience been on the Framework?",
+        "severity": null,
+        "turn": 41,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does upgradeability actually matter in practice for someone like the nine-year ThinkPad user, or is it something most people never use?",
+        "severity": null,
+        "turn": 42,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What layoffs and market pullbacks? Is Framework in trouble?",
+        "severity": null,
+        "turn": 43,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the upgradeability is real, but does the port-planning hassle outweigh it for someone who just wants the machine to disappear into the work?",
+        "severity": null,
+        "turn": 44,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does the port-planning friction with Framework actually become a habit you stop noticing, or does it stay annoying?",
+        "severity": null,
+        "turn": 45,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is the port-planning friction enough to make the ThinkPad the better choice for someone who just wants the machine to disappear into the work?",
+        "severity": null,
+        "turn": 46,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How does the Framework keyboard actually compare to the ThinkPad keyboard for someone who's used one for nine years?",
+        "severity": null,
+        "turn": 47,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the keyboard is a real downgrade and the ports require planning, what does Framework actually win on for someone like the nine-year ThinkPad user?",
+        "severity": null,
+        "turn": 48,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happened with Framework's layoffs \u2014 how bad were they, and does the community still hold up?",
+        "severity": null,
+        "turn": 49,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happened with Framework's layoffs \u2014 how bad were they and does it threaten the company's survival?",
+        "severity": null,
+        "turn": 50,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Framework keeps shrinking, at what point does the community support actually collapse \u2014 and what happens to people who already bought one?",
+        "severity": null,
+        "turn": 51,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If Framework shrinks or disappears, what actually happens to people who bought in and are depending on that community for support?",
+        "severity": null,
+        "turn": 52,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happens to Framework's repair ecosystem if the company keeps shrinking?",
+        "severity": null,
+        "turn": 53,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happens to Framework's repair ecosystem if the company keeps shrinking?",
+        "severity": null,
+        "turn": 54,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Framework is financially stressed with only $40 million raised and shrinking, is it actually safe to buy one right now?",
+        "severity": null,
+        "turn": 55,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Can Framework actually survive competing against a company that massive with only forty million dollars total?",
+        "severity": null,
+        "turn": 56,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If Framework shrank or disappeared, what would actually happen to people already using one \u2014 could they still get parts?",
+        "severity": null,
+        "turn": 57,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the thing most reviews bury that belongs in the decision?",
+        "severity": null,
+        "turn": 58,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So if the ThinkPad IPS gets up to 24 hours but the OLED only gets 12-14, and Framework gets 12-16, does the display choice basically erase the battery difference between the two laptops?",
+        "severity": null,
+        "turn": 59,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does Framework's financial situation actually make it a bad bet, or is the community strong enough to survive if the company shrinks?",
+        "severity": null,
+        "turn": 60,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So if the ThinkPad IPS gets 24 hours and the Framework gets 12-16, does that mean the ThinkPad IPS version is actually the better battery choice for someone who wants to stop thinking about their laptop?",
+        "severity": null,
+        "turn": 61,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If they're the same price, what's actually the deciding factor between the two?",
+        "severity": null,
+        "turn": 62,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Can Framework actually survive long enough for the mainboard upgrade path to pay off?",
+        "severity": null,
+        "turn": 63,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the very thing that makes Framework upgradeable \u2014 separate RAM \u2014 is also making it more expensive right now?",
+        "severity": null,
+        "turn": 64,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So if budget doesn't separate them, what are the actual values they're about to lay out?",
+        "severity": null,
+        "turn": 65,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So if budget doesn't separate them and it comes down to values, how do you actually make the call for someone like the nine-year ThinkPad user?",
+        "severity": null,
+        "turn": 66,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the other four situations, and which one will apply to the nine-year ThinkPad user?",
+        "severity": null,
+        "turn": 67,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Which machine is actually right for the nine-year ThinkPad user \u2014 the Gen 14 or the Framework?",
+        "severity": null,
+        "turn": 68,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So what are the other four situations they're about to walk through?",
+        "severity": null,
+        "turn": 69,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Will the Framework survive long enough for the mainboard upgrade path to actually pay off?",
+        "severity": null,
+        "turn": 70,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Will the Framework's financial instability actually tip the recommendation away from it?",
+        "severity": null,
+        "turn": 71,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the remaining three scenarios, and which machine will they ultimately recommend for the nine-year ThinkPad user?",
+        "severity": null,
+        "turn": 72,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Which of these two laptops is better for Linux users \u2014 and does Framework's community advantage matter here given their financial uncertainty?",
+        "severity": null,
+        "turn": 73,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Which laptop is actually going to be recommended for this nine-year ThinkPad user?",
+        "severity": null,
+        "turn": 74,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the remaining two of the five situations they're walking through?",
+        "severity": null,
+        "turn": 75,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Framework has financial risk and might not exist in 10 years, how can the mainboard upgrade path actually deliver on a ten-year horizon?",
+        "severity": null,
+        "turn": 76,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "For someone on a ten-year horizon, is the Framework's upgradeable mainboard actually the better bet despite the company's financial risk?",
+        "severity": null,
+        "turn": 77,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Framework's financial situation is shaky, does a ten-year ownership plan actually work if the company might not exist in year four or five to sell you that new mainboard?",
+        "severity": null,
+        "turn": 78,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So which machine does the nine-year ThinkPad user actually end up choosing?",
+        "severity": null,
+        "turn": 79,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Which machine will they actually recommend for the nine-year ThinkPad user?",
+        "severity": null,
+        "turn": 80,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So after all five scenarios, does the nine-year ThinkPad user end up with a clear recommendation, or is it still a split?",
+        "severity": null,
+        "turn": 81,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So which machine does the nine-year ThinkPad user actually end up choosing?",
+        "severity": "low",
+        "turn": 82,
+        "type": "bored"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is the second kind of person \u2014 the one who doesn't just want to stop thinking about it?",
+        "severity": null,
+        "turn": 83,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is there actually a clear recommendation for the nine-year ThinkPad user specifically, or does the episode just leave it open?",
+        "severity": null,
+        "turn": 84,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": null,
+        "severity": null,
+        "turn": 85,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": null,
+        "severity": null,
+        "turn": 86,
+        "type": null
+      }
+    ]
+  },
+  "narration_vs_banter": {
+    "pass": true,
+    "ratio": 0.4482758620689655,
+    "react_only_beats": 48,
+    "render_beats": 39,
+    "threshold": 0.35
+  }
+}

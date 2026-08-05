@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 S1: The Number That Changes Everything"
+    },
+    {
+      "startTime": 88.52,
+      "title": "\u2014 S2: The Nine-Year Diagnostic"
+    },
+    {
+      "startTime": 177.04,
+      "title": "\u2014 S3: What Lenovo Built"
+    },
+    {
+      "startTime": 265.56,
+      "title": "\u2014 S4: What Framework Built"
+    },
+    {
+      "startTime": 354.09,
+      "title": "\u2014 S5: The Gap That Nearly Closed"
+    },
+    {
+      "startTime": 442.61,
+      "title": "\u2014 S6: The Ownership Tax"
+    },
+    {
+      "startTime": 531.13,
+      "title": "\u2014 S7: The Forty Million Dollar Question"
+    },
+    {
+      "startTime": 619.65,
+      "title": "\u2014 S8: The Display Decision Nobody Tells You About"
+    },
+    {
+      "startTime": 708.17,
+      "title": "\u2014 S9: Price Parity and What It Forces"
+    }
+  ],
+  "version": "1.2.0"
+}

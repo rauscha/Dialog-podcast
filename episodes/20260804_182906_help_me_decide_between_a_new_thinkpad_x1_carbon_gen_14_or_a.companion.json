@@ -1,0 +1,324 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_182906_help_me_decide_between_a_new_thinkpad_x1_carbon_gen_14_or_a.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 S1: The Number That Changes Everything"
+    },
+    {
+      "start_sec": 88.52,
+      "start_time": "1:29",
+      "title": "\u2014 S2: The Nine-Year Diagnostic"
+    },
+    {
+      "start_sec": 177.04,
+      "start_time": "2:57",
+      "title": "\u2014 S3: What Lenovo Built"
+    },
+    {
+      "start_sec": 265.56,
+      "start_time": "4:26",
+      "title": "\u2014 S4: What Framework Built"
+    },
+    {
+      "start_sec": 354.09,
+      "start_time": "5:54",
+      "title": "\u2014 S5: The Gap That Nearly Closed"
+    },
+    {
+      "start_sec": 442.61,
+      "start_time": "7:23",
+      "title": "\u2014 S6: The Ownership Tax"
+    },
+    {
+      "start_sec": 531.13,
+      "start_time": "8:51",
+      "title": "\u2014 S7: The Forty Million Dollar Question"
+    },
+    {
+      "start_sec": 619.65,
+      "start_time": "10:20",
+      "title": "\u2014 S8: The Display Decision Nobody Tells You About"
+    },
+    {
+      "start_sec": 708.17,
+      "start_time": "11:48",
+      "title": "\u2014 S9: Price Parity and What It Forces"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_182906_help_me_decide_between_a_new_thinkpad_x1_carbon_gen_14_or_a.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_182906_help_me_decide_between_a_new_thinkpad_x1_carbon_gen_14_or_a.companion.json",
+  "duration_sec": 841.693288,
+  "episode_type": "decision_brief",
+  "episode_type_label": "Decision Brief",
+  "follow_up_links": [
+    {
+      "reason": "Comprehensive review covering the Space Frame redesign, port selection, and thermal performance. Confirms the 9/10 iFixit score and notes that Lenovo 'incorporates some ideas clearly inspired by Framework.'",
+      "source": "HotHardware",
+      "title": "Lenovo ThinkPad X1 Carbon Gen 14 Aura Edition Review",
+      "url": "https://hothardware.com/reviews/lenovo-thinkpad-x1-carbon-gen-14-aura-edition-review"
+    },
+    {
+      "reason": "Detailed breakdown of the 13 Pro's ground-up redesign, battery claims (20 hours headline, 12-16 real-world), and LPCAMM2 memory. Notes this is 'the first Framework laptop that feels genuinely premium.'",
+      "source": "Vibetric",
+      "title": "Framework Laptop Pro 13 Review: The Best Modular Laptop Finally Earns Its Price",
+      "url": "https://vibetric.com/framework-laptop-pro-13-review/"
+    },
+    {
+      "reason": "Rigorous battery testing showing 24 hours WiFi (IPS) and 14 hours at full brightness. Critical note: factory display calibration is poor and requires manual calibration.",
+      "source": "Notebookcheck",
+      "title": "Flagship business laptop with almost 24 hours of battery life",
+      "url": "https://www.notebookcheck.net/Flagship-business-laptop-with-almost-24-hours-of-battery-life-Lenovo-ThinkPad-X1-Carbon-Gen-14-Review.1332558.0.html"
+    },
+    {
+      "reason": "Covers the Linux angle\u2014Ubuntu configurations outselling Windows\u2014and the historical battery life problems (4-5 hours on older AMD models) that the 13 Pro addresses.",
+      "source": "MayhemCode",
+      "title": "Framework Laptop 13 Pro Review 2026: Specs, Price & Linux",
+      "url": "https://www.mayhemcode.com/2026/04/framework-laptop-13-pro-review-2026.html"
+    },
+    {
+      "reason": "Explains the Space Frame mechanics: double-sided motherboard cuts PCB footprint 20%, reclaimed space goes to 70% larger cooling fan. Confirms magnetic top panel attachment.",
+      "source": "The Gadgeteer",
+      "title": "ThinkPad X1 Carbon Gen 14 Weighs 2.15 Pounds and Lenovo Wants You to Open It",
+      "url": "https://the-gadgeteer.com/2026/07/16/thinkpad-x1-carbon-gen-14-review/"
+    },
+    {
+      "reason": "Honest pricing analysis: AMD HX 370 configs cost ~$2,500. Notes the LPCAMM2 installation requires care\u2014'too casual installation will kill a new mainboard real quick.'",
+      "source": "PC Gamer",
+      "title": "Beautiful design and brutal pricing, the Framework 13 Pro is a very 2026 laptop",
+      "url": "https://www.pcgamer.com/hardware/gaming-laptops/framework-13-pro-review/"
+    },
+    {
+      "reason": "Background on Framework's funding strategy: $40M total raised, deliberate approach to fundraising. CEO Nirav Patel: 'We are a consumer electronics company, not a laptop company.'",
+      "source": "TechCrunch",
+      "title": "Framework's repairability philosophy is set to expand beyond the laptop",
+      "url": "https://techcrunch.com/2024/04/23/frameworks-repairability-philosophy-is-set-to-expand-beyond-the-laptop"
+    },
+    {
+      "reason": "Longevity data: 'Business users report X1 Carbons still running reliably after 5\u20136 years of daily use.' Notes the keyboard/TrackPoint interface has remained virtually unchanged for 12+ years.",
+      "source": "Alibaba Electronics",
+      "title": "ThinkPad X1 Carbon Buying Guide: Gen 9\u201314 Compared",
+      "url": "https://electronics.alibaba.com/buyingguides/thinkpad-x1-carbon-buying-guide-gen-9%E2%80%9314-compared"
+    }
+  ],
+  "generated_at": "2026-08-05T00:02:18.879349+00:00",
+  "guest_hosts": [
+    {
+      "boundaries": [
+        "Should not claim specific mainboard upgrade pricing Framework hasn't committed to",
+        "Should not predict Framework's financial outcome",
+        "Should not claim the keyboard gap has closed \u2014 PCWorld's B+ rating stands",
+        "Should not recommend one machine over the other \u2014 that's Juno and Caspar's job"
+      ],
+      "credential_frame": "A composite of multi-year Framework owners who migrated from ThinkPads and have documented the transition honestly \u2014 including the parts that didn't work as advertised",
+      "delivery_baseline": "Measured, slightly dry. Speaks in short declarative sentences. Pauses before answering. Not warm, not cold \u2014 just honest.",
+      "display_name": "Maren",
+      "elevenlabs_voice_id": "IQjnnInWsKbdAesop75D",
+      "expertise": "What the Framework ownership experience actually costs in attention over time \u2014 the expansion card shuffle, the keyboard adjustment period, the community dependency, and whether the mainboard upgrade path feels like a real option or a theoretical one",
+      "field": "long-cycle laptop ownership, hardware pragmatism",
+      "label": "MAREN",
+      "personality": "Pragmatic and slightly impatient with ideology. Bought the Framework because the argument was sound, not because she was a fan. Will say 'it's fine' about things that are genuinely fine and 'that's real friction' about things that aren't. Doesn't perform enthusiasm.",
+      "role_in_episode": "Enters after Caspar lays out the repairability convergence. Complicates the Framework side of the ledger by naming the ownership tax \u2014 the things you have to think about that a ThinkPad user never does. Exits before the recommendation logic so Juno and Caspar can close without her framing dominating.",
+      "synthetic": true,
+      "tts_provider": "elevenlabs",
+      "voice": "sage"
+    }
+  ],
+  "key_claims": [
+    {
+      "claim": "ThinkPad X1 Carbon Gen 14 scored 9/10 from iFixit for repairability\u2014the highest score ever for a mainstream ultralight laptop. Battery, SSD, keyboard, USB-C ports, and fans are all user-replaceable.",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S1",
+        "S5"
+      ]
+    },
+    {
+      "claim": "ThinkPad X1 Carbon Gen 14 weighs 996g (2.15 lbs) with OLED display, making it the lightest laptop in its performance class. The IPS version weighs 1.14kg.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S3",
+        "S5"
+      ]
+    },
+    {
+      "claim": "Framework 13 Pro battery life: 20 hours claimed (Netflix streaming at 250 nits), 12-16 hours real-world mixed workload. Previous Framework 13 AMD models got only 4-5 hours under coding workloads.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S2",
+        "S4"
+      ]
+    },
+    {
+      "claim": "ThinkPad X1 Carbon Gen 14 battery life: up to 24 hours in WiFi test (IPS display), 14 hours at full brightness. OLED versions get significantly less.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S3"
+      ]
+    },
+    {
+      "claim": "Framework 13 Pro AMD configurations start around $2,500 for comparable specs (HX 370, 32GB RAM, 1TB SSD). ThinkPad X1 Carbon Gen 14 starts at $1,999, typically configured around $2,500-2,800.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "ThinkPad X1 Carbon Gen 14 has soldered RAM (32GB or 64GB, no upgrades). Framework 13 Pro uses LPCAMM2 (Intel) or SO-DIMM (AMD), upgradeable to 64GB.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "claim": "Framework confirmed Ubuntu configurations are outselling Windows on the 13 Pro\u2014unusual for any laptop manufacturer.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "claim": "Framework has raised $40M total across 4 funding rounds. In July 2026, the CEO warned that supplier costs put the company at 'financial risk.'",
+      "confidence": "Medium-High",
+      "id": "C8",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "ThinkPad X1 Carbon series has sold over 10 million units since 2012. Business users report reliable operation after 5-6 years of daily use.",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "claim": "Framework 13 Pro keyboard rated 'B+' by PCWorld, below Lenovo and Microsoft but improved from previous generations.",
+      "confidence": "High",
+      "id": "C10",
+      "source_ids": [
+        "S4"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "David Altavilla",
+      "id": "S1",
+      "publication": "HotHardware",
+      "title": "Lenovo ThinkPad X1 Carbon Gen 14 Aura Edition Review",
+      "url": "https://hothardware.com/reviews/lenovo-thinkpad-x1-carbon-gen-14-aura-edition-review",
+      "why_it_matters": "Comprehensive review covering the Space Frame redesign, port selection, and thermal performance. Confirms the 9/10 iFixit score and notes that Lenovo 'incorporates some ideas clearly inspired by Framework.'",
+      "year": "2026"
+    },
+    {
+      "author": "Vibetric",
+      "id": "S2",
+      "publication": "Vibetric",
+      "title": "Framework Laptop Pro 13 Review: The Best Modular Laptop Finally Earns Its Price",
+      "url": "https://vibetric.com/framework-laptop-pro-13-review/",
+      "why_it_matters": "Detailed breakdown of the 13 Pro's ground-up redesign, battery claims (20 hours headline, 12-16 real-world), and LPCAMM2 memory. Notes this is 'the first Framework laptop that feels genuinely premium.'",
+      "year": "2026"
+    },
+    {
+      "author": "Notebookcheck",
+      "id": "S3",
+      "publication": "Notebookcheck",
+      "title": "Flagship business laptop with almost 24 hours of battery life",
+      "url": "https://www.notebookcheck.net/Flagship-business-laptop-with-almost-24-hours-of-battery-life-Lenovo-ThinkPad-X1-Carbon-Gen-14-Review.1332558.0.html",
+      "why_it_matters": "Rigorous battery testing showing 24 hours WiFi (IPS) and 14 hours at full brightness. Critical note: factory display calibration is poor and requires manual calibration.",
+      "year": "2026"
+    },
+    {
+      "author": "MayhemCode",
+      "id": "S4",
+      "publication": "MayhemCode",
+      "title": "Framework Laptop 13 Pro Review 2026: Specs, Price & Linux",
+      "url": "https://www.mayhemcode.com/2026/04/framework-laptop-13-pro-review-2026.html",
+      "why_it_matters": "Covers the Linux angle\u2014Ubuntu configurations outselling Windows\u2014and the historical battery life problems (4-5 hours on older AMD models) that the 13 Pro addresses.",
+      "year": "2026"
+    },
+    {
+      "author": "The Gadgeteer",
+      "id": "S5",
+      "publication": "The Gadgeteer",
+      "title": "ThinkPad X1 Carbon Gen 14 Weighs 2.15 Pounds and Lenovo Wants You to Open It",
+      "url": "https://the-gadgeteer.com/2026/07/16/thinkpad-x1-carbon-gen-14-review/",
+      "why_it_matters": "Explains the Space Frame mechanics: double-sided motherboard cuts PCB footprint 20%, reclaimed space goes to 70% larger cooling fan. Confirms magnetic top panel attachment.",
+      "year": "2026"
+    },
+    {
+      "author": "PC Gamer",
+      "id": "S6",
+      "publication": "PC Gamer",
+      "title": "Beautiful design and brutal pricing, the Framework 13 Pro is a very 2026 laptop",
+      "url": "https://www.pcgamer.com/hardware/gaming-laptops/framework-13-pro-review/",
+      "why_it_matters": "Honest pricing analysis: AMD HX 370 configs cost ~$2,500. Notes the LPCAMM2 installation requires care\u2014'too casual installation will kill a new mainboard real quick.'",
+      "year": "2026"
+    },
+    {
+      "author": "Brian Heater",
+      "id": "S7",
+      "publication": "TechCrunch",
+      "title": "Framework's repairability philosophy is set to expand beyond the laptop",
+      "url": "https://techcrunch.com/2024/04/23/frameworks-repairability-philosophy-is-set-to-expand-beyond-the-laptop",
+      "why_it_matters": "Background on Framework's funding strategy: $40M total raised, deliberate approach to fundraising. CEO Nirav Patel: 'We are a consumer electronics company, not a laptop company.'",
+      "year": "2024"
+    },
+    {
+      "author": "Alibaba Electronics",
+      "id": "S8",
+      "publication": "Alibaba Electronics",
+      "title": "ThinkPad X1 Carbon Buying Guide: Gen 9\u201314 Compared",
+      "url": "https://electronics.alibaba.com/buyingguides/thinkpad-x1-carbon-buying-guide-gen-9%E2%80%9314-compared",
+      "why_it_matters": "Longevity data: 'Business users report X1 Carbons still running reliably after 5\u20136 years of daily use.' Notes the keyboard/TrackPoint interface has remained virtually unchanged for 12+ years.",
+      "year": "2026"
+    }
+  ],
+  "sources": [
+    "David Altavilla - HotHardware - 2026 - Lenovo ThinkPad X1 Carbon Gen 14 Aura Edition Review (https://hothardware.com/reviews/lenovo-thinkpad-x1-carbon-gen-14-aura-edition-review)",
+    "Vibetric et al. - Vibetric - 2026 - Framework Laptop Pro 13 Review: The Best Modular Laptop Finally Earns Its Price (https://vibetric.com/framework-laptop-pro-13-review/)",
+    "Notebookcheck et al. - Notebookcheck - 2026 - Flagship business laptop with almost 24 hours of battery life (https://www.notebookcheck.net/Flagship-business-laptop-with-almost-24-hours-of-battery-life-Lenovo-ThinkPad-X1-Carbon-Gen-14-Review.1332558.0.html)",
+    "MayhemCode et al. - MayhemCode - 2026 - Framework Laptop 13 Pro Review 2026: Specs, Price & Linux (https://www.mayhemcode.com/2026/04/framework-laptop-13-pro-review-2026.html)",
+    "The Gadgeteer - The Gadgeteer - 2026 - ThinkPad X1 Carbon Gen 14 Weighs 2.15 Pounds and Lenovo Wants You to Open It (https://the-gadgeteer.com/2026/07/16/thinkpad-x1-carbon-gen-14-review/)",
+    "PC Gamer - PC Gamer - 2026 - Beautiful design and brutal pricing, the Framework 13 Pro is a very 2026 laptop (https://www.pcgamer.com/hardware/gaming-laptops/framework-13-pro-review/)",
+    "Brian Heater - TechCrunch - 2024 - Framework's repairability philosophy is set to expand beyond the laptop (https://techcrunch.com/2024/04/23/frameworks-repairability-philosophy-is-set-to-expand-beyond-the-laptop)",
+    "Alibaba Electronics - Alibaba Electronics - 2026 - ThinkPad X1 Carbon Buying Guide: Gen 9\u201314 Compared (https://electronics.alibaba.com/buyingguides/thinkpad-x1-carbon-buying-guide-gen-9%E2%80%9314-compared)"
+  ],
+  "topic": "help me decide between a new Thinkpad X1 carbon gen 14 or a framework 13 pro, AMD. You can consider other options as well but those are my top two choices currently, and you can use that knowledge (and that I'm replacing a 9 yr old Thinkpad carbon x1 gen 7) to guide you.",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    },
+    "MAREN": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "MAREN"
+    }
+  },
+  "word_count": 2437
+}
