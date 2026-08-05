@@ -1,0 +1,74 @@
+JUNO [present, quiet]: July 20, 1969. Neil Armstrong's boot touches the lunar surface. Six hundred million people watching the same impossible thing happen in real time.
+CASPAR [dry]: And you're about to tell me the faeries noticed.
+JUNO [yes, exactly]: In the lore of a 1995 tabletop roleplaying game called Changeling: The Dreaming — yes. That surge of collective human wonder tears open gates that have been sealed since the medieval period. The faerie nobility floods back into the world. Not because of a ritual. Not because of a sacrifice. Because of a rocket.
+CASPAR [beat]: So science didn't kill magic. Science's greatest achievement brought it back.
+JUNO [sitting with it]: That's the premise. Two games from the 1990s — Changeling: The Dreaming and Mage: The Ascension — both published by White Wolf as part of a shared horror universe called the World of Darkness. You know the World of Darkness from its vampires and werewolves. Those games are about monsters hiding in our world. These two are asking something stranger: who decides what's real? And what happens to the people who lose that argument?
+CASPAR [grounding]: White Wolf launched the World of Darkness in 1991 with Vampire: The Masquerade. Mage came in 1993. Changeling in 1995. By the time they arrived, the line had already established that monsters were real and hiding. These two asked what else might be hiding.
+JUNO [back to the moon]: In Changeling's cosmology, wonder is a literal fuel. They call it Glamour. The collective imaginative realm that faeries draw power from is called the Dreaming, and it shrinks as human wonder diminishes. Five centuries of plague and inquisition and industrial rationalism had been bleeding it dry. And then six hundred million people held their breath and watched a human being stand on the moon, and the Dreaming flooded back.
+CASPAR [genuinely interested]: The game treats wonder as a measurable resource.
+JUNO [yes]: Which immediately tells you these games are doing something stranger than their genre suggests. If wonder is something living things run on, the question isn't just where monsters come from. The question is what happens when we stop producing it.
+CASPAR [small pivot]: There's also a protective forgetting built in. They call it the Mists. Humans who witness faerie magic have the memory blurred away. Sounds like a convenience for the fae — except it cuts both ways. Changelings themselves forget what they are as they age. The Mists don't discriminate.
+JUNO [quiet]: The thing that protects you is also the thing that erases you.
+CASPAR [moving on]: Before we can talk about what depletes wonder, we have to meet the faction that's been doing it deliberately. And we have to be fair to them, because they have a case.
+JUNO [surrogate]: Make it.
+CASPAR [careful]: A child in a village in 1890. Cholera fever. In a world without germ theory — without the understanding that disease is caused by microorganisms, not bad air — that child dies. In a world where germ theory has been accepted, encoded into medicine, built into hospitals and water systems and public health infrastructure, that child survives. Has children. Grows old. That is what the Technocracy did.
+JUNO [quietly]: Mm-hmm.
+JUNO [defining as she goes]: The Technocracy being — in Mage: The Ascension — the faction of awakened individuals who've been winning a centuries-long secret war by convincing humanity that only scientific materialism is real.
+CASPAR [continuing]: Mage's premise is that reality is shaped by collective human belief — the Consensus. What billions of ordinary people believe is possible becomes, in fact, what is possible. The Technocracy spent three hundred years encoding their vision into that Consensus. Germ theory. Vaccines. Newtonian physics. They made the world legible and predictable enough that people stopped dying of things they didn't understand. The unawakened majority — Sleepers — hold that Consensus in place now just by living in it. The Technocracy didn't force them. They convinced them. And the conviction stuck.
+JUNO [naming the cost]: And the price is that dragons are impossible.
+CASPAR [flat]: Yes. That's the trade.
+JUNO [not letting it go]: Is it a bad trade?
+CASPAR [honest]: The game doesn't tell you. That's what makes it interesting.
+JUNO [moving to the mechanic]: So what does it feel like to push against a Consensus that eight billion people are holding in place?
+CASPAR [building the scene]: There's a moment. You're a mage on a crowded subway car. Something is wrong — someone's in danger, something needs to happen. You can throw a fireball. Visible, unmistakable, impossible. Or you can make the train brake at exactly the right moment and call it a mechanical failure.
+JUNO [following]: Same outcome, completely different risk.
+CASPAR [yes]: The game calls the backlash Paradox — not divine punishment, more like the inertia of collective disbelief made physical. Eight billion people who are certain fire doesn't come from nowhere. Do something that visibly contradicts what Sleepers believe is possible — vulgar magic — and Paradox hits you hard. Disguise the act as something that could plausibly have happened anyway — coincidental magic — and you slide under the wire. The Consensus doesn't notice. The train just braked.
+JUNO [landing it]: So the mechanic is the argument. The world punishes you for being openly impossible.
+CASPAR [yes, then the push]: Which means the most powerful thing a mage can do is hide what they're doing. Or — the more uncomfortable reading — change what people believe is possible in the first place. Which is exactly what the Technocracy did. They didn't hide. They rewrote the Consensus. That's not coincidental magic. That's winning the war.
+JUNO [immediately]: Right. And if the Traditions want to actually win, they'd have to do the same thing. Not sneak around inside what people already believe. Change what people believe. Which is a much harder problem than throwing a fireball in an empty alley.
+CASPAR [dry]: Which raises the question of whether the Traditions are actually capable of it.
+JUNO [carrier]: They are not a unified front. Nine factions. Nine distinct magical philosophies sharing a council. Hermetic wizards doing ritual magic rooted in ancient scholarship. Verbena witches, blood-magic practitioners tied to nature's raw cycles. Dreamspeakers, representing indigenous and shamanic traditions. Euthanatos death-mages who believe their role is to end lives that have become traps — souls so locked into causing harm that death is the only door left open. And then two chairs at that table occupied by people who used to work for the enemy.
+CASPAR [surrogate]: Which two?
+JUNO [building it]: The Sons of Ether left the Technocracy in 1904. Their paradigm was aether physics — the luminiferous ether, the medium through which light was supposed to travel. The Michelson-Morley experiments had already cast serious doubt on it, and the Technocracy voted to remove it from the Consensus. Aether was deemed unscientific. The Sons were told their life's work was now impossible. They defected. And as a parting shot —
+CASPAR [cutting in]: They didn't leave quietly.
+JUNO [resuming]: No. They slipped relativity and quantum mechanics into the Consensus on their way out the door. Made reality weirder than the Technocracy wanted.
+CASPAR [small]: That's a very specific act of revenge.
+JUNO [continuing]: The Virtual Adepts left in the mid-1950s. The game ties their defection to the Technocracy's treatment of Alan Turing — the mathematician central to breaking the Enigma code, prosecuted by the British government for being gay, dead in 1954. In the World of Darkness, the Technocracy had him killed. The Virtual Adepts treat reality as code that can be rewritten. They believe information should be free. They brought Technocratic secrets with them when they left.
+CASPAR [naming it]: So the rebel coalition includes former Technocrats. Mad scientists and hackers sitting next to wizards and witches and death-mages. And they argue constantly.
+JUNO [yes]: The game refuses to give you a clean rebellion to root for.
+CASPAR [the push]: The defectors being there is the game admitting something — maybe you can't fight the Consensus from outside it. You need people who understand how it was built.
+JUNO [other reading]: Or the game is admitting the Technocracy was right about some things, and the people who figured that out are now sitting with the witches. A Technocracy defector didn't get bitten or claimed by a spirit. They looked at the evidence and walked over. The horror of being wrong about reality is something they authored themselves.
+CASPAR [neither resolved]: Both could be true.
+JUNO [transition, quieter]: The Mage side of this is a war. Big, sprawling, centuries long. The Changeling side is something smaller. And in some ways much worse.
+CASPAR [surrogate]: Show me.
+JUNO [building slowly]: Late thirties. Reasonable apartment. The mortgage is manageable. The commute is fine. There's a good show on. They feel fine. They feel nothing in particular. They have a dentist appointment on Thursday.
+CASPAR [waiting]: And?
+JUNO [landing it]: They don't know they're a changeling anymore. In the game's term, a Kithain — a fae soul reborn into a human body. The Mists took the memories. Not dramatically. Not in a single moment. They blurred away one by one, over years, as something called Banality accumulated. Banality isn't evil. That's the important part. It's just ordinary. Television. Lines at the bank. Traffic. The mortgage. The accumulation of mundane reality building up like sediment, depleting the Glamour until the fae nature goes out like a light. The person who remains is fine. Completely fine. They just stopped being what they were, one sensible decision at a time.
+CASPAR [slow]: Every other World of Darkness game, the horror is something that happened to you.
+JUNO [yes]: A vampire bit you.
+CASPAR [flat]: A spirit claimed you.
+JUNO [quiet]: Something external arrived and changed you.
+CASPAR [landing it]: This one — the horror is something you did to yourself.
+CASPAR [different register]: There's a 1999 film.
+JUNO [already there]: The Matrix.
+CASPAR [careful]: Phil Brucato — Mage's lead developer — has said publicly that Mage was a major inspiration for The Matrix. The parallel is real and specific. Sleepers versus the awakened. The Consensus as managed reality. The cost of seeing through it. Agents as enforcers of a shared fiction.
+JUNO [convinced]: I find it completely compelling.
+CASPAR [holding the line]: The parallel being real doesn't make the influence confirmed. The Wachowskis have never said so directly.
+JUNO [accepting, then]: Does that matter?
+CASPAR [unexpected]: Honestly — maybe not. Two different creative projects arrived at the same structure within six years of each other. That might be more interesting than a citation. It means the idea was ready. The culture was ready to think about managed reality, about what it costs to stay asleep. Mage was asking it in 1993. The Matrix asked it in 1999. Maybe neither one caused the other. Maybe they both noticed the same thing at the same time.
+JUNO [warm]: That's actually the better version of the story.
+CASPAR [small]: I thought so.
+JUNO [working it out]: Mage calls it the Consensus. Changeling calls it Banality. Two names for the same pressure — well, not quite the same. One arrives from outside, eight billion people holding a shape around you. The other accumulates from inside, one sensible day at a time. But both games are describing the same force. And neither one resolves it.
+CASPAR [grounding]: That's not a flaw. The Technocracy doesn't lose. Banality doesn't stop accumulating. Every session ends with the players a little older than when they started, and the world no more magical than before.
+JUNO [personal]: Because the antagonist in both games isn't waiting for you somewhere. It's already inside the Consensus you hold in place by believing in it. Inside the Banality you feed every time you choose the sensible thing.
+CASPAR [resistant]: I'm not sure living a stable life is the same as being the villain of someone else's story.
+JUNO [quiet]: Neither am I. Exactly.
+CASPAR [pause]: But I notice I can't quite finish that sentence.
+JUNO [not wrapping it]: What did you trade away. And when did you stop noticing.
+CASPAR [flat, honest]: Yeah.
+CASPAR [slow]: We said something like this about puzzle design. The curse of knowledge runs in both directions. You can unknow something. It just takes years.
+JUNO [quiet, almost surprised]: We were talking about game designers forgetting what it felt like not to understand their own mechanic.
+CASPAR [dry]: And now we're talking about forgetting what it felt like to believe in things.
+JUNO [soft]: Same direction. Different road.
+CASPAR [settling]: I'm not sure that makes me feel better.
+JUNO [not trying to]: No.

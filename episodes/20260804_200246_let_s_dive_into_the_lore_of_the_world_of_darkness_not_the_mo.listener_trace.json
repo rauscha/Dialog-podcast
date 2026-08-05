@@ -1,0 +1,761 @@
+{
+  "naive": {
+    "breaks": [
+      {
+        "detail": "Who is Caspar and who is Juno talking to? Also 'fairy world' and 'influencer bubble' came out of nowhere \u2014 we were just on the moon in 1969.",
+        "severity": "med",
+        "turn": 1,
+        "type": "whiplash"
+      },
+      {
+        "detail": "Caspar just introduced 'fairy world' as a term, but now Juno is asking what it means \u2014 even though Caspar said it was Juno's term. That's contradictory.",
+        "severity": "med",
+        "turn": 2,
+        "type": "whiplash"
+      },
+      {
+        "detail": "I'm not sure how the moon landing connects to influencers and brand deals \u2014 the jump from 1969 to this 'fairy world' topic feels abrupt and I don't know what the show is actually about yet",
+        "severity": "med",
+        "turn": 3,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Wait \u2014 we were just talking about influencers and brand deals and the moon landing anniversary, and now suddenly we're in a 1995 tabletop RPG about faeries? I have no idea how we got here or why this is relevant.",
+        "severity": "high",
+        "turn": 4,
+        "type": "whiplash"
+      },
+      {
+        "detail": "Wait \u2014 'Changelings' are humans who were kidnapped and remade? I thought they were faeries coming back into the world. And what's a 'decoy left in their crib' \u2014 like, a fake baby?",
+        "severity": "med",
+        "turn": 11,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Who or what is the Technocracy exactly \u2014 is this a faction inside the game, or something in the real world, or both? The line blurs that.",
+        "severity": "low",
+        "turn": 15,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "This line jumped from the subway fireball scenario to something about 'nine Traditions, nine seats at the table, two chairs already empty' \u2014 I have no idea what the Traditions are or why chairs are empty, and it doesn't connect to what was just being discussed",
+        "severity": "high",
+        "turn": 24,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno just mentioned nine Traditions and two empty chairs out of nowhere \u2014 now Caspar is asking about it, which means I still don't know what the Traditions are or why two are missing",
+        "severity": "med",
+        "turn": 25,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Wait \u2014 what subway explosion? Did something explode, or is that a hypothetical from the earlier subway scenario? I thought that was just an example.",
+        "severity": "med",
+        "turn": 26,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno's previous line jumped mid-sentence into the nine Traditions out of nowhere, and now Caspar is both explaining Paradox AND circling back to clarify the Traditions \u2014 I'm slightly tangled about which thread we're actually on, but the Paradox explanation itself is clear and new",
+        "severity": "low",
+        "turn": 27,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Wait \u2014 four factions have been named? I've only heard 'Technocracy' and 'Traditions' as groups, not individual faction names. When were four of the nine named? I missed that.",
+        "severity": "med",
+        "turn": 34,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "I'm also confused about this \u2014 Juno mentioned nine Traditions and named some factions but I lost track of which ones were actually introduced vs just referenced, so Caspar's question mirrors my own uncertainty",
+        "severity": "med",
+        "turn": 35,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno just repeated almost word-for-word something she already said earlier about 'every other World of Darkness game, the horror is something that happened to you, a bite or a spirit claim that rewrites what you are without your consent' \u2014 I heard that exact phrase before, so this feels like a loop",
+        "severity": "low",
+        "turn": 46,
+        "type": "lost_thread"
+      }
+    ],
+    "first_bounce_turn": null,
+    "followed_overall": true,
+    "per_turn": [
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What is this podcast actually about \u2014 the moon landing specifically, or something broader?",
+        "severity": null,
+        "turn": 0,
+        "type": null
+      },
+      {
+        "confusion": "Who is Caspar and who is Juno talking to? Also 'fairy world' and 'influencer bubble' came out of nowhere \u2014 we were just on the moon in 1969.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does the moon landing have to do with influencers?",
+        "severity": "med",
+        "turn": 1,
+        "type": "whiplash"
+      },
+      {
+        "confusion": "Caspar just introduced 'fairy world' as a term, but now Juno is asking what it means \u2014 even though Caspar said it was Juno's term. That's contradictory.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the influencer bubble have to do with the moon landing?",
+        "severity": "med",
+        "turn": 2,
+        "type": "whiplash"
+      },
+      {
+        "confusion": "I'm not sure how the moon landing connects to influencers and brand deals \u2014 the jump from 1969 to this 'fairy world' topic feels abrupt and I don't know what the show is actually about yet",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What specific event or influencer behavior are they actually going to analyze today?",
+        "severity": "med",
+        "turn": 3,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Wait \u2014 we were just talking about influencers and brand deals and the moon landing anniversary, and now suddenly we're in a 1995 tabletop RPG about faeries? I have no idea how we got here or why this is relevant.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does a tabletop RPG about faeries have to do with influencers and the moon landing anniversary gap they were about to pull apart?",
+        "severity": "high",
+        "turn": 4,
+        "type": "whiplash"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How does a tabletop RPG from 1995 connect to the influencer bubble stuff they were setting up earlier?",
+        "severity": null,
+        "turn": 5,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does it mean to 'lose the argument' about what's real \u2014 is that like going insane, or something else?",
+        "severity": null,
+        "turn": 6,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What exactly is Mage: The Ascension about \u2014 faeries were explained but Mage still hasn't been",
+        "severity": null,
+        "turn": 7,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If wonder is the fuel and the moon landing brought magic back, what's been happening to Glamour since 1969 \u2014 is it draining again?",
+        "severity": null,
+        "turn": 8,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do the two games \u2014 Changeling and Mage \u2014 actually differ in how they answer 'who decides what's real'?",
+        "severity": null,
+        "turn": 9,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happens when wonder runs out \u2014 and how do the two games answer that differently?",
+        "severity": null,
+        "turn": 10,
+        "type": null
+      },
+      {
+        "confusion": "Wait \u2014 'Changelings' are humans who were kidnapped and remade? I thought they were faeries coming back into the world. And what's a 'decoy left in their crib' \u2014 like, a fake baby?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Changelings forget what they are as they age, how do they ever figure it out \u2014 and what happens when they do?",
+        "severity": "med",
+        "turn": 11,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Mists erase both humans AND the changelings themselves, how does anyone ever remember what they are?",
+        "severity": null,
+        "turn": 12,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is this faction that deliberately depletes wonder, and what's their justification?",
+        "severity": null,
+        "turn": 13,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is this faction that's been deliberately depleting wonder, and what's their case?",
+        "severity": null,
+        "turn": 14,
+        "type": null
+      },
+      {
+        "confusion": "Who or what is the Technocracy exactly \u2014 is this a faction inside the game, or something in the real world, or both? The line blurs that.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Technocracy made the world safer by pushing out magic, are they actually the villains of this story?",
+        "severity": "low",
+        "turn": 15,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Technocracy made science real by convincing people it was real, does that mean science itself is just one option among many \u2014 and what are the other factions trying to make real instead?",
+        "severity": null,
+        "turn": 16,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Technocracy's vision of reality is basically just... science and medicine that saves lives, why are they the villains?",
+        "severity": null,
+        "turn": 17,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So if the Technocracy made the world safer but killed magic, are they the villains or not?",
+        "severity": null,
+        "turn": 18,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Technocracy made the world safer by killing magic, who are the 'good guys' here \u2014 and what does Changeling's moon landing premise mean for that trade-off?",
+        "severity": null,
+        "turn": 19,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the Technocracy actually the villain here, or are they the necessary evil that saved billions of lives?",
+        "severity": null,
+        "turn": 20,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the Technocracy actually the villain here, or are they the good guys who just made magic impossible as a side effect?",
+        "severity": null,
+        "turn": 21,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is it actually a bad trade \u2014 safety and science vs. magic and wonder?",
+        "severity": null,
+        "turn": 22,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What actually happens if you throw the fireball \u2014 does the Consensus push back somehow?",
+        "severity": null,
+        "turn": 23,
+        "type": null
+      },
+      {
+        "confusion": "This line jumped from the subway fireball scenario to something about 'nine Traditions, nine seats at the table, two chairs already empty' \u2014 I have no idea what the Traditions are or why chairs are empty, and it doesn't connect to what was just being discussed",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What are the nine Traditions and why are two seats empty?",
+        "severity": "high",
+        "turn": 24,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Juno just mentioned nine Traditions and two empty chairs out of nowhere \u2014 now Caspar is asking about it, which means I still don't know what the Traditions are or why two are missing",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the nine Traditions and which two are already gone?",
+        "severity": "med",
+        "turn": 25,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Wait \u2014 what subway explosion? Did something explode, or is that a hypothetical from the earlier subway scenario? I thought that was just an example.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Which two factions were wiped out, and who wiped them out \u2014 the Technocracy?",
+        "severity": "med",
+        "turn": 26,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Juno's previous line jumped mid-sentence into the nine Traditions out of nowhere, and now Caspar is both explaining Paradox AND circling back to clarify the Traditions \u2014 I'm slightly tangled about which thread we're actually on, but the Paradox explanation itself is clear and new",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Which two Traditions are already gone, and how did they get wiped out?",
+        "severity": "low",
+        "turn": 27,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happens to the two missing Tradition factions \u2014 how did they get wiped out?",
+        "severity": null,
+        "turn": 28,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happens when a mage gets hit by Paradox \u2014 how bad does it get?",
+        "severity": null,
+        "turn": 29,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who are the two missing Traditions and what happened to them?",
+        "severity": null,
+        "turn": 30,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So could the Traditions theoretically fight back by doing their own version of what the Technocracy did \u2014 rewriting the Consensus toward magic instead of science?",
+        "severity": null,
+        "turn": 31,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Traditions have to change what people believe to win, how would they even do that \u2014 and would that make them any different from the Technocracy?",
+        "severity": null,
+        "turn": 32,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Are the Traditions actually capable of changing the Consensus the way the Technocracy did?",
+        "severity": null,
+        "turn": 33,
+        "type": null
+      },
+      {
+        "confusion": "Wait \u2014 four factions have been named? I've only heard 'Technocracy' and 'Traditions' as groups, not individual faction names. When were four of the nine named? I missed that.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Which two of the nine Traditions used to work for the Technocracy, and what does that mean for the coalition?",
+        "severity": "med",
+        "turn": 34,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "I'm also confused about this \u2014 Juno mentioned nine Traditions and named some factions but I lost track of which ones were actually introduced vs just referenced, so Caspar's question mirrors my own uncertainty",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Which specific Traditions have actually been named and explained so far, and which two seats are already empty?",
+        "severity": "med",
+        "turn": 35,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What do the Order of Hermes and the Verbena actually do \u2014 what's their magical philosophy \u2014 and what were the Virtual Adepts and Sons of Ether doing inside the Technocracy before they switched sides?",
+        "severity": null,
+        "turn": 36,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the other five Traditions we haven't named yet, and what does it mean for the coalition that two of its members used to be enemies?",
+        "severity": null,
+        "turn": 37,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What did the Virtual Adepts defect over \u2014 do they have a similarly dramatic exit story?",
+        "severity": null,
+        "turn": 38,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What did the Virtual Adepts do \u2014 why did they defect, and what's their equivalent revenge story?",
+        "severity": null,
+        "turn": 39,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Virtual Adepts believe reality is code and brought Technocratic secrets with them, what did they actually do with those secrets \u2014 and does that make them more dangerous than the Sons of Ether?",
+        "severity": null,
+        "turn": 40,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "That's five of the nine seats named now \u2014 who are the remaining four Traditions?",
+        "severity": null,
+        "turn": 41,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the remaining four unnamed Traditions, and what does it actually mean for a life to be a 'trap' in the Euthanatos sense?",
+        "severity": null,
+        "turn": 42,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who decides when a soul is actually stuck \u2014 is there any check on the Euthanatos making that call, or is it entirely up to them?",
+        "severity": null,
+        "turn": 43,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Traditions are this fractured, have they ever actually won anything against the Technocracy?",
+        "severity": null,
+        "turn": 44,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Can the Traditions actually change what people believe, or are they stuck sneaking around inside the existing Consensus forever?",
+        "severity": null,
+        "turn": 45,
+        "type": null
+      },
+      {
+        "confusion": "Juno just repeated almost word-for-word something she already said earlier about 'every other World of Darkness game, the horror is something that happened to you, a bite or a spirit claim that rewrites what you are without your consent' \u2014 I heard that exact phrase before, so this feels like a loop",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the defectors admitted the Technocracy was right about some things, does that mean the Traditions are actually fighting for the wrong side?",
+        "severity": "low",
+        "turn": 46,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly are the other five unnamed Traditions, and do they matter to the argument?",
+        "severity": null,
+        "turn": 47,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the defectors had 'full information' when they left the Technocracy, does that mean they knew they were giving up power and safety \u2014 and what exactly did they lose by switching sides?",
+        "severity": null,
+        "turn": 48,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So if both readings can be true at once, does the game ever force you to pick a side, or is the whole point that you can't?",
+        "severity": null,
+        "turn": 49,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What makes the Changeling side 'smaller but worse' than the Mage war?",
+        "severity": null,
+        "turn": 50,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the Changeling side, and why is it 'much worse' than a centuries-long war?",
+        "severity": null,
+        "turn": 51,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does this ordinary person's life have to do with the Changeling side of things \u2014 is this a specific character, or is Juno painting a picture of what the loss of wonder actually looks like from the inside?",
+        "severity": null,
+        "turn": 52,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What's so bad about the Changeling side compared to the Mage war?",
+        "severity": null,
+        "turn": 53,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is there any way for a changeling to reverse the Banality buildup and remember what they are, or is it a one-way door?",
+        "severity": null,
+        "turn": 54,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is there any way for a changeling to reverse the Banality, or is it always a one-way slide into forgetting?",
+        "severity": null,
+        "turn": 55,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the slow self-erasure through ordinary life the central tragedy of Changeling, and is there any way to fight it?",
+        "severity": null,
+        "turn": 56,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the 1999 film have to do with Changeling or Mage?",
+        "severity": null,
+        "turn": 57,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How does The Matrix connect to Mage or Changeling specifically?",
+        "severity": null,
+        "turn": 58,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Did The Matrix actually borrow from Mage, or is this just a parallel that developed independently?",
+        "severity": null,
+        "turn": 59,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How deep does the Mage/Matrix connection actually go \u2014 did the Wachowskis directly borrow from it?",
+        "severity": null,
+        "turn": 60,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So did Mage actually inspire The Matrix or not \u2014 is this just a coincidence?",
+        "severity": null,
+        "turn": 61,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Did Mage actually inspire The Matrix, or is this just a parallel that looks convincing?",
+        "severity": null,
+        "turn": 62,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Are there other examples from the 90s that were also 'noticing the same thing' about managed reality?",
+        "severity": null,
+        "turn": 63,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If both Mage and The Matrix noticed the same cultural moment independently, what was it about the 1990s specifically that made 'managed reality' such a ready idea?",
+        "severity": null,
+        "turn": 64,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Traditions can't fight the Consensus from outside it, what's their actual plan \u2014 and can nine factions who argue constantly even execute one?",
+        "severity": null,
+        "turn": 65,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If both games describe the same force but neither resolves it, what are players actually supposed to do with that \u2014 is there any way to win?",
+        "severity": null,
+        "turn": 66,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the games are designed so you can't actually win \u2014 the Technocracy keeps winning, Banality keeps building \u2014 why would anyone want to play them?",
+        "severity": null,
+        "turn": 67,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Consensus and Banality are both things you participate in just by living normally, is there any way to actually fight them, or is the game saying you're already losing?",
+        "severity": null,
+        "turn": 68,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the game actually saying ordinary people are villains, or is it more complicated than that?",
+        "severity": null,
+        "turn": 69,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So is living an ordinary life actually a form of harm in these games, or is the game just making you feel that way?",
+        "severity": null,
+        "turn": 70,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is living a stable, ordinary life actually a form of complicity in erasing magic and wonder \u2014 or is that an unfair framing?",
+        "severity": null,
+        "turn": 71,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What did I personally trade away, and is there any way back?",
+        "severity": null,
+        "turn": 72,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What did I trade away, and when did I stop noticing?",
+        "severity": null,
+        "turn": 73,
+        "type": null
+      }
+    ]
+  },
+  "narration_vs_banter": {
+    "pass": true,
+    "ratio": 0.4189189189189189,
+    "react_only_beats": 43,
+    "render_beats": 31,
+    "threshold": 0.35
+  }
+}

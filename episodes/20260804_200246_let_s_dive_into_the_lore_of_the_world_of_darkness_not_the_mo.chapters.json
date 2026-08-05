@@ -1,0 +1,29 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 The Rocket That Opened the Gates"
+    },
+    {
+      "startTime": 113.7,
+      "title": "\u2014 The Faction That Ended Smallpox"
+    },
+    {
+      "startTime": 227.4,
+      "title": "\u2014 The Subway Car Problem"
+    },
+    {
+      "startTime": 341.1,
+      "title": "\u2014 The Round Table With Two Empty Chairs"
+    },
+    {
+      "startTime": 454.8,
+      "title": "\u2014 The Changeling in the Reasonable Apartment"
+    },
+    {
+      "startTime": 568.5,
+      "title": "\u2014 The Parallel That May Not Be a Coincidence"
+    }
+  ],
+  "version": "1.2.0"
+}

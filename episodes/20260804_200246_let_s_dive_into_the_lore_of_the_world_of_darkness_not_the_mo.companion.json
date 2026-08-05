@@ -1,0 +1,282 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_200246_let_s_dive_into_the_lore_of_the_world_of_darkness_not_the_mo.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 The Rocket That Opened the Gates"
+    },
+    {
+      "start_sec": 113.7,
+      "start_time": "1:54",
+      "title": "\u2014 The Faction That Ended Smallpox"
+    },
+    {
+      "start_sec": 227.4,
+      "start_time": "3:47",
+      "title": "\u2014 The Subway Car Problem"
+    },
+    {
+      "start_sec": 341.1,
+      "start_time": "5:41",
+      "title": "\u2014 The Round Table With Two Empty Chairs"
+    },
+    {
+      "start_sec": 454.8,
+      "start_time": "7:35",
+      "title": "\u2014 The Changeling in the Reasonable Apartment"
+    },
+    {
+      "start_sec": 568.5,
+      "start_time": "9:29",
+      "title": "\u2014 The Parallel That May Not Be a Coincidence"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_200246_let_s_dive_into_the_lore_of_the_world_of_darkness_not_the_mo.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260804_200246_let_s_dive_into_the_lore_of_the_world_of_darkness_not_the_mo.companion.json",
+  "duration_sec": 727.200635,
+  "episode_type": "deep_dive",
+  "episode_type_label": "Deep Dive",
+  "follow_up_links": [
+    {
+      "reason": "Provides verified publication dates, designer credits (Stewart Wieck, Christopher Earley, Stephan Wieck, Bill Bridges, Sam Chupp, Andrew Greenberg, Chris Hind), and edition history. Confirms first publication August 19, 1993 at Gen Con.",
+      "source": "Wikipedia",
+      "title": "Mage: The Ascension (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mage:_The_Ascension"
+    },
+    {
+      "reason": "Documents the game's publication history (July 1995, 2nd ed 1997, 20th Anniversary 2017), core premise of fae souls in human bodies, and the five eras of Changeling history including the Shattering and Resurgence.",
+      "source": "Wikipedia",
+      "title": "Changeling: The Dreaming (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Changeling:_The_Dreaming"
+    },
+    {
+      "reason": "Explains the core metaphysical concept of Mage: reality is shaped by collective belief of 'Sleepers' (unawakened humans). Mages must fight against billions of minds to work magic, and Paradox punishes violations of consensus.",
+      "source": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Consensus",
+      "url": "https://whitewolf.fandom.com/wiki/Consensus"
+    },
+    {
+      "reason": "Details the mechanical and narrative consequences of violating consensus reality\u2014backlash, Quiet (magical madness), Paradox spirits, and Paradox Realms. Describes Paradox as 'the inertia of 8 billion gallons of belief.'",
+      "source": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Paradox",
+      "url": "https://whitewolf.fandom.com/wiki/Paradox_(MTAs)"
+    },
+    {
+      "reason": "Documents the 1969 Resurgence\u2014when the moon landing generated enough Glamour to reopen gates to Arcadia, allowing the sidhe nobility to return. Notes the sidhe 'feel the cold sting of Banality far more harshly than commoner kithain.'",
+      "source": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Sidhe",
+      "url": "https://whitewolf.fandom.com/wiki/Sidhe_(CTD)"
+    },
+    {
+      "reason": "Interview with Mage's lead developer Phil Brucato discussing the game's design philosophy. Notes Mage was 'a massive hypertext linking genre literature, philosophy, world mythology and the occult' and 'a major inspiration behind the Matrix movies.'",
+      "source": "Ultraculture",
+      "title": "Ultraculture Podcast - Phil Brucato Interview",
+      "url": "https://ultraculture.org/blog/2016/02/12/mage-the-ascension-satyros-phil-brucato/"
+    },
+    {
+      "reason": "Documents the defection of the Electrodyne Engineers from the Technocracy in 1904 after the Union 'aided the expulsion of the Luminiferous Ether from the Consensus.' Shows how scientific paradigm shifts are literal magical warfare in the setting.",
+      "source": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Sons of Ether",
+      "url": "https://whitewolf.fandom.com/wiki/Sons_of_Ether"
+    },
+    {
+      "reason": "Describes the catastrophic separation of the Dreaming from reality (1200-1400 AD), associated with the Black Plague and Spanish Inquisition. Most sidhe fled to Arcadia; commoners developed the Changeling Way to survive in human bodies.",
+      "source": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Shattering",
+      "url": "https://whitewolf.fandom.com/wiki/Shattering"
+    }
+  ],
+  "generated_at": "2026-08-05T01:34:36.922438+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Mage: The Ascension was first published on August 19, 1993 at Gen Con, making it the third game in the World of Darkness series after Vampire: The Masquerade and Werewolf: The Apocalypse.",
+      "confidence": "High",
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "claim": "The core metaphysical premise of Mage is that reality is shaped by collective human belief (the Consensus), and mages are people who have 'Awakened' to this truth and can reshape reality through will\u2014but face Paradox when they contradict what billions of Sleepers believe is possible.",
+      "confidence": "High",
+      "id": "C2",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "claim": "The Sons of Ether defected from the Technocracy in 1904 after the Union voted to remove the luminiferous ether from the Consensus (following the Michelson-Morley experiments). As a 'parting shot,' they slipped relativity and quantum mechanics into the Consensus.",
+      "confidence": "High",
+      "id": "C3",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "The Virtual Adepts defected from the Technocracy in 1961, reportedly spurred by the Technocracy's treatment of Alan Turing. They joined the Council of Nine Traditions through the Sons of Ether's sponsorship.",
+      "confidence": "High",
+      "id": "C4",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "claim": "Changeling: The Dreaming was published in July 1995 as the fifth World of Darkness game, and borrowed heavily from Neil Gaiman's The Sandman and Neverwhere.",
+      "confidence": "High",
+      "id": "C5",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "claim": "In Changeling lore, the 1969 moon landing generated such a surge of human wonder and Glamour that it reopened the gates to Arcadia, allowing the sidhe nobility to return to Earth after centuries of absence\u2014an event called the Resurgence.",
+      "confidence": "High",
+      "id": "C6",
+      "source_ids": [
+        "S5",
+        "S2"
+      ]
+    },
+    {
+      "claim": "The returning sidhe's attempt to reclaim rulership over commoner changelings sparked the Accordance War in the early 1970s, which ended with High King David Ardry ap Gwydion establishing the Parliament of Dreams as a compromise.",
+      "confidence": "High",
+      "id": "C7",
+      "source_ids": [
+        "S2",
+        "S8"
+      ]
+    },
+    {
+      "claim": "Mage: The Ascension was cited by developer Phil Brucato as 'a major inspiration behind the Matrix movies,' with the game's themes of awakening to hidden reality and fighting a system of control predating the 1999 film by six years.",
+      "confidence": "Medium-High (based on developer statement, not Wachowski confirmation)",
+      "id": "C8",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "claim": "The Shattering (1200-1400 AD) was the catastrophic severing of the Dreaming from mundane reality, associated with the Black Plague. Most sidhe fled to Arcadia; commoners who remained developed the Changeling Way ritual to survive by bonding fae souls with human bodies.",
+      "confidence": "High",
+      "id": "C9",
+      "source_ids": [
+        "S8",
+        "S2"
+      ]
+    },
+    {
+      "claim": "Banality in Changeling represents not just disbelief but the mundane forces of modern life\u2014'television, doctors, lines at the bank, money machines, traffic, malls'\u2014and if a changeling's Banality exceeds their Glamour, they slip into the Mists and forget their fae nature.",
+      "confidence": "High",
+      "id": "C10",
+      "source_ids": [
+        "S2"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Various contributors",
+      "id": "S1",
+      "publication": "Wikipedia",
+      "title": "Mage: The Ascension (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mage:_The_Ascension",
+      "why_it_matters": "Provides verified publication dates, designer credits (Stewart Wieck, Christopher Earley, Stephan Wieck, Bill Bridges, Sam Chupp, Andrew Greenberg, Chris Hind), and edition history. Confirms first publication August 19, 1993 at Gen Con.",
+      "year": "2026 (accessed)"
+    },
+    {
+      "author": "Various contributors",
+      "id": "S2",
+      "publication": "Wikipedia",
+      "title": "Changeling: The Dreaming (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Changeling:_The_Dreaming",
+      "why_it_matters": "Documents the game's publication history (July 1995, 2nd ed 1997, 20th Anniversary 2017), core premise of fae souls in human bodies, and the five eras of Changeling history including the Shattering and Resurgence.",
+      "year": "2026 (accessed)"
+    },
+    {
+      "author": "Fan contributors",
+      "id": "S3",
+      "publication": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Consensus",
+      "url": "https://whitewolf.fandom.com/wiki/Consensus",
+      "why_it_matters": "Explains the core metaphysical concept of Mage: reality is shaped by collective belief of 'Sleepers' (unawakened humans). Mages must fight against billions of minds to work magic, and Paradox punishes violations of consensus.",
+      "year": "2026 (accessed)"
+    },
+    {
+      "author": "Fan contributors",
+      "id": "S4",
+      "publication": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Paradox",
+      "url": "https://whitewolf.fandom.com/wiki/Paradox_(MTAs)",
+      "why_it_matters": "Details the mechanical and narrative consequences of violating consensus reality\u2014backlash, Quiet (magical madness), Paradox spirits, and Paradox Realms. Describes Paradox as 'the inertia of 8 billion gallons of belief.'",
+      "year": "2026 (accessed)"
+    },
+    {
+      "author": "Fan contributors",
+      "id": "S5",
+      "publication": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Sidhe",
+      "url": "https://whitewolf.fandom.com/wiki/Sidhe_(CTD)",
+      "why_it_matters": "Documents the 1969 Resurgence\u2014when the moon landing generated enough Glamour to reopen gates to Arcadia, allowing the sidhe nobility to return. Notes the sidhe 'feel the cold sting of Banality far more harshly than commoner kithain.'",
+      "year": "2026 (accessed)"
+    },
+    {
+      "author": "Jason Louv",
+      "id": "S6",
+      "publication": "Ultraculture",
+      "title": "Ultraculture Podcast - Phil Brucato Interview",
+      "url": "https://ultraculture.org/blog/2016/02/12/mage-the-ascension-satyros-phil-brucato/",
+      "why_it_matters": "Interview with Mage's lead developer Phil Brucato discussing the game's design philosophy. Notes Mage was 'a massive hypertext linking genre literature, philosophy, world mythology and the occult' and 'a major inspiration behind the Matrix movies.'",
+      "year": "2016"
+    },
+    {
+      "author": "Fan contributors",
+      "id": "S7",
+      "publication": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Sons of Ether",
+      "url": "https://whitewolf.fandom.com/wiki/Sons_of_Ether",
+      "why_it_matters": "Documents the defection of the Electrodyne Engineers from the Technocracy in 1904 after the Union 'aided the expulsion of the Luminiferous Ether from the Consensus.' Shows how scientific paradigm shifts are literal magical warfare in the setting.",
+      "year": "2026 (accessed)"
+    },
+    {
+      "author": "Fan contributors",
+      "id": "S8",
+      "publication": "White Wolf Wiki (Fandom)",
+      "title": "White Wolf Wiki - Shattering",
+      "url": "https://whitewolf.fandom.com/wiki/Shattering",
+      "why_it_matters": "Describes the catastrophic separation of the Dreaming from reality (1200-1400 AD), associated with the Black Plague and Spanish Inquisition. Most sidhe fled to Arcadia; commoners developed the Changeling Way to survive in human bodies.",
+      "year": "2026 (accessed)"
+    }
+  ],
+  "sources": [
+    "Various contributors - Wikipedia - 2026 (accessed) - Mage: The Ascension (Wikipedia) (https://en.wikipedia.org/wiki/Mage:_The_Ascension)",
+    "Various contributors - Wikipedia - 2026 (accessed) - Changeling: The Dreaming (Wikipedia) (https://en.wikipedia.org/wiki/Changeling:_The_Dreaming)",
+    "Fan contributors - White Wolf Wiki (Fandom) - 2026 (accessed) - White Wolf Wiki - Consensus (https://whitewolf.fandom.com/wiki/Consensus)",
+    "Fan contributors - White Wolf Wiki (Fandom) - 2026 (accessed) - White Wolf Wiki - Paradox (https://whitewolf.fandom.com/wiki/Paradox_(MTAs))",
+    "Fan contributors - White Wolf Wiki (Fandom) - 2026 (accessed) - White Wolf Wiki - Sidhe (https://whitewolf.fandom.com/wiki/Sidhe_(CTD))",
+    "Jason Louv - Ultraculture - 2016 - Ultraculture Podcast - Phil Brucato Interview (https://ultraculture.org/blog/2016/02/12/mage-the-ascension-satyros-phil-brucato/)",
+    "Fan contributors - White Wolf Wiki (Fandom) - 2026 (accessed) - White Wolf Wiki - Sons of Ether (https://whitewolf.fandom.com/wiki/Sons_of_Ether)",
+    "Fan contributors - White Wolf Wiki (Fandom) - 2026 (accessed) - White Wolf Wiki - Shattering (https://whitewolf.fandom.com/wiki/Shattering)"
+  ],
+  "topic": "Let's dive into the lore of the World of Darkness. Not the most common characters - werewolves and vampires, but the mages and changelings.",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 2110
+}
