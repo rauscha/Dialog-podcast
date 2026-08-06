@@ -1,0 +1,199 @@
+{
+  "logline": "A tabletop RPG from 1993 built its entire engine on one idea: reality is a democracy, and someone is rigging the vote \u2014 and this is the story of who, how, and why nobody can agree on what winning would even look like.",
+  "newcomer_promise": "A listener who knew nothing can retell: what it means to Awaken, why the game's villains might be its heroes, what Paradox is and why it's not just a magic penalty, and why the war at the center of the game has been fought for centuries over a goal nobody can define.",
+  "segments": [
+    {
+      "anchor": "A person stops a bullet mid-air in a crowded street \u2014 and then the street pushes back",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that in this game, reality is not fixed \u2014 it is maintained by collective belief \u2014 and that acting against that consensus has consequences. Paradox is not a punishment from a god or a rule from a rulebook; it is the inertia of what everyone alive believes to be true.",
+      "host_angle": "Only after the mechanic lands: Juno names what this means philosophically \u2014 individual will versus the weight of consensus. Caspar pushes on the implied politics: if collective belief is a force, then whoever controls what people believe controls what's physically possible. That tension is introduced here but not resolved.",
+      "id": "S1",
+      "names_to_define": [
+        {
+          "name": "World of Darkness",
+          "one_line": "A horror tabletop RPG setting published by White Wolf starting in 1991, where vampires, werewolves, and other supernatural creatures are real but hidden from ordinary people."
+        },
+        {
+          "name": "White Wolf",
+          "one_line": "The game company that published the World of Darkness line, beginning with Vampire: The Masquerade in 1991."
+        },
+        {
+          "name": "Mage: The Ascension",
+          "one_line": "The 1993 tabletop RPG in the World of Darkness line, built around the idea that reality is shaped by collective human belief and that some people can rewrite it."
+        },
+        {
+          "name": "Paradox",
+          "one_line": "The game mechanic \u2014 and philosophical argument \u2014 that when a mage does something visibly impossible, the weight of collective human disbelief pushes back and damages them."
+        },
+        {
+          "name": "Vulgar magic",
+          "one_line": "Magic that looks obviously impossible to witnesses, which triggers Paradox."
+        },
+        {
+          "name": "Coincidental magic",
+          "one_line": "Magic disguised as something that could plausibly happen naturally, which mostly avoids Paradox."
+        }
+      ],
+      "stakes": "Before we know any names or factions, we need to understand the one rule that makes everything else in this game make sense: doing the impossible in front of witnesses costs you something. Not because magic is forbidden \u2014 because eight billion people's worth of 'that can't happen' is a physical force.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A person wakes up one morning and realizes, for the first time, that the walls of the room they are sitting in are not solid \u2014 they are a story everyone agreed to tell",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that Awakening is not empowerment \u2014 it is estrangement. A mage sees through a lie that everyone else is living inside, and reality will now punish them for knowing. The Avatar is not a clean gift either; it is a pressure inside the mage with its own direction, which may not align with what the mage wants.",
+      "host_angle": "After the rupture lands: Caspar names what it costs socially and psychologically \u2014 you can no longer fully live inside the world everyone else inhabits. Juno is drawn to the liberation angle; Caspar holds the line that the game itself refuses to let Awakening be purely good. The hosts do not resolve this.",
+      "id": "S2",
+      "names_to_define": [
+        {
+          "name": "Awakening",
+          "one_line": "The moment a mage realizes reality is consensual and malleable \u2014 described in the game as the most significant and terrifying event of a person's life, not a superpower but an epistemological break."
+        },
+        {
+          "name": "Avatar",
+          "one_line": "The fragment of a mage's soul that pushes them toward Ascension \u2014 it has its own agenda and can sometimes be indistinguishable from an external entity or a demon."
+        },
+        {
+          "name": "Phil Brucato",
+          "one_line": "The lead developer of Mage: The Ascension, a practicing pagan who infused real occult philosophy into the game's mechanics and later revised his own conclusions about what the game got wrong."
+        },
+        {
+          "name": "Stewart Wieck",
+          "one_line": "The designer who originated Mage: The Ascension, released at Gen Con on August 19, 1993."
+        },
+        {
+          "name": "Gen Con",
+          "one_line": "The largest tabletop gaming convention in North America, where Mage: The Ascension debuted in 1993."
+        }
+      ],
+      "stakes": "This is the moment the game calls Awakening, and the rulebook describes it not as a gift but as a rupture. Understanding what Awakening is \u2014 and what it costs \u2014 is the foundation for everything that follows, because every mage in the setting has been through this and is now permanently outside the consensus everyone else lives inside.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A council table in 1466 where practitioners of nine completely different magical traditions agree, for the first time, to stop fighting each other",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that the Traditions are a coalition, not a family \u2014 formed because the alternative was extinction, not because they share values. They fight for a world where magic is possible. The listener also understands that this world would include the Euthanatos deciding who is ready to die, and the Verbena's history of blood magic. The Traditions are not clean.",
+      "host_angle": "After the Traditions land in full texture: Juno notes that the game resists making them simple heroes \u2014 the internal moral failures are built into the lore, not added later. Caspar asks the structural question: if the heroes are this compromised, what does that do to the war's moral stakes? This is a setup for the Technocracy segment, not a resolution.",
+      "id": "S3",
+      "names_to_define": [
+        {
+          "name": "Council of Nine Mystic Traditions",
+          "one_line": "The alliance of nine magical factions formed in 1466, united by a shared theory of nine Spheres of magic and a common enemy, but divided by almost everything else."
+        },
+        {
+          "name": "Nine Spheres",
+          "one_line": "The game's framework for what aspects of reality a mage can manipulate \u2014 including Forces, Life, Mind, Time, and five others \u2014 each Tradition specializes in different Spheres."
+        },
+        {
+          "name": "Euthanatos",
+          "one_line": "One of the nine Traditions \u2014 mages who believe in the necessity of death as transformation, and who historically killed people they judged ready to die."
+        },
+        {
+          "name": "Verbena",
+          "one_line": "One of the nine Traditions \u2014 blood-and-earth witches whose practices historically included human sacrifice."
+        }
+      ],
+      "stakes": "The Traditions are the closest thing the game has to protagonists \u2014 but they were formed out of desperation, not unity, and they have never fully trusted each other. Understanding who they are and why they banded together sets up the war. Understanding what they actually do to each other sets up why they are not the clean heroes.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "A hospital in 1900 where a child survives smallpox because of a vaccine \u2014 and the faction that made that possible is the game's villain",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that the Technocracy's magic looks like science \u2014 vaccines, electricity, surgery \u2014 which means it does not trigger Paradox, because it does not look impossible. They have been winning the Ascension War partly by making their miracles look mundane. The listener also genuinely holds both sides of the argument: the Technocracy made the world safer and smaller. The Traditions want a world where magic is real \u2014 and so are vampires.",
+      "host_angle": "After the Technocracy's case lands without irony: Caspar names the discomfort directly \u2014 the game asks you to root against the faction that ended smallpox. Juno pushes on what 'safe' costs: a world where the impossible is impossible, where human potential is capped at what the Technocracy permits. Neither host flattens the Technocracy into a simple villain. This is the episode's moral center.",
+      "id": "S4",
+      "names_to_define": [
+        {
+          "name": "Technocracy",
+          "one_line": "The game's primary antagonist faction \u2014 descended from the Order of Reason, dedicated to protecting ordinary humans from supernatural predators through rationalism, science, and technology, by making reality stable and predictable."
+        },
+        {
+          "name": "Order of Reason",
+          "one_line": "The predecessor organization to the Technocracy, founded in 1325, which began the project of rationalizing reality and pushing back against supernatural threats."
+        },
+        {
+          "name": "Ascension War",
+          "one_line": "The centuries-long conflict between the Traditions and the Technocracy over what reality should be \u2014 who controls the consensus, and for whose benefit."
+        }
+      ],
+      "stakes": "The Technocracy is the most important move the game makes, and it only works if the listener genuinely feels the force of their argument before hearing the critique. Before 1900, average human lifespan was under fifty years. Plague, cholera, smallpox \u2014 the Technocracy's project eliminated most of that. They made reality predictable. They made it safe. The question is whether that trade was theirs to make.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "Three figures who belong to neither side: a man whose delusions have become more real than the street he walks down, a woman who has deliberately inverted everything her soul was reaching toward, and the fragment of soul inside every mage that may have its own agenda",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that Marauders are not villains in the conventional sense \u2014 they are casualties of Awakening taken too far, and their immunity to Paradox makes them a walking argument about what happens when individual will completely overrides consensus. The Nephandi are the game's genuine horror: the possibility that some mages are working to end everything, from inside every faction. And the Avatar \u2014 the thing pushing every mage toward Ascension \u2014 may not be trustworthy.",
+      "host_angle": "After all three land: Juno notes that the Nephandi infiltration plot means the listener can never be sure which characters in the setting are compromised \u2014 it is a structural paranoia built into the lore. Caspar connects the Marauders back to Paradox: a Marauder is what happens when one person's reality wins completely over consensus. That is either the ultimate Awakening or its destruction. The hosts sit with that without resolving it.",
+      "id": "S5",
+      "names_to_define": [
+        {
+          "name": "Marauders",
+          "one_line": "Mages whose Avatars have shattered, trapping them inside personal delusions so powerful that reality bends to match them \u2014 they are immune to Paradox because they have already broken."
+        },
+        {
+          "name": "Nephandi",
+          "one_line": "Mages who have deliberately inverted their Avatars, turning away from Ascension toward Oblivion \u2014 they may be infiltrating every other faction and could be winning the war from inside."
+        },
+        {
+          "name": "Oblivion",
+          "one_line": "In World of Darkness lore, the force or state of absolute unmaking \u2014 not death, but erasure of existence itself."
+        }
+      ],
+      "stakes": "The Marauders, the Nephandi, and the Avatar are the game's way of saying the war between Traditions and Technocracy is not the whole picture \u2014 and possibly not even the most dangerous thing happening. These three elements complicate the setting's moral geometry in ways that cannot be resolved by picking a side.",
+      "surrogate": "CASPAR"
+    },
+    {
+      "anchor": "The word 'Ascension' written at the top of a page in the game's rulebook \u2014 with nothing defined beneath it",
+      "carrier": "CASPAR",
+      "comprehension_target": "The listener understands that the Ascension War has been fought for centuries over a destination nobody can describe. The Traditions and the Technocracy have different answers; individual mages within each faction have different answers. The game's designers made this choice deliberately. The listener holds the full weight of that: a war prosecuted across generations for a prize that has never been defined.",
+      "host_angle": "After the undefined goal lands: Juno finds something almost beautiful in it \u2014 a war over a destination nobody can describe is also a story about human longing itself, which never resolves cleanly either. Caspar names the other possibility directly: this is either the game's deepest honesty about the nature of transcendence, or its most convenient evasion of a question it raised and couldn't answer. Caspar is genuinely unsure which. Neither host resolves it. This is where the episode stops.",
+      "id": "S6",
+      "names_to_define": [
+        {
+          "name": "Ascension",
+          "one_line": "The undefined ultimate goal every mage is supposedly working toward \u2014 the game intentionally never specifies what it is, and every faction has a different answer."
+        }
+      ],
+      "stakes": "Every mage in the setting is fighting a centuries-long war toward a goal called Ascension. No mage has been confirmed to have achieved it. Every Tradition has a different answer for what it means. The game never defines it. This is not an oversight \u2014 it is the game's most deliberate design choice, and it changes what the entire war means.",
+      "surrogate": "JUNO"
+    },
+    {
+      "anchor": "A second rulebook, published in 2005, that answers the same question with a completely different cosmology \u2014 and a game designer in the early 2000s admitting the first book got something wrong",
+      "carrier": "JUNO",
+      "comprehension_target": "The listener understands that Ascension and Awakening are two different games with two different metaphysics \u2014 not two editions of the same answer. Ascension asks: who controls consensus reality? Awakening asks: what cut us off from the real? The listener also holds Brucato's self-revision: the man who built Ascension's engine later said it was wrong about technology \u2014 the internet didn't flatten humanity, it made things stranger and more diverse. The game's creator revised his own thesis. That is part of what the game is.",
+      "host_angle": "After both the reboot and the self-revision land: Juno notes that a designer publicly revising the argument their own game made is itself a kind of Ascension \u2014 the willingness to say the map was wrong. Caspar connects it back to the episode's central question: if even the game's creator isn't sure what the right answer is, that might be the most honest thing about the whole thirty-year project. Neither host wraps this into a conclusion. The uncertainty is the point.",
+      "id": "S7",
+      "names_to_define": [
+        {
+          "name": "Mage: The Awakening",
+          "one_line": "The 2005 successor game that replaced consensus reality with Gnostic cosmology: magic comes from five Supernal Realms, cut off from the Fallen World by the Abyss after Atlantis's hubris broke the connection."
+        },
+        {
+          "name": "Supernal Realms",
+          "one_line": "In Mage: The Awakening, the five higher planes of existence where magic originates \u2014 separated from the ordinary world by the Abyss."
+        },
+        {
+          "name": "The Abyss",
+          "one_line": "In Mage: The Awakening, the gulf between the Supernal Realms and the Fallen World, created by Atlantis's hubris \u2014 it actively corrupts magic that tries to cross it."
+        },
+        {
+          "name": "Exarchs",
+          "one_line": "In Mage: The Awakening, mages who ascended to the Supernal Realms and now actively prevent others from doing the same \u2014 the game's primary antagonists."
+        },
+        {
+          "name": "Oracles",
+          "one_line": "In Mage: The Awakening, mages who also ascended but left Watchtowers behind so ordinary humans could still reach magic \u2014 the counterforce to the Exarchs."
+        },
+        {
+          "name": "Fallen World",
+          "one_line": "In Mage: The Awakening, the ordinary world cut off from the Supernal Realms \u2014 the world as it is, diminished and separated from its magical source."
+        },
+        {
+          "name": "Gnostic cosmology",
+          "one_line": "A religious and philosophical tradition holding that the material world is a flawed or corrupt copy of a higher spiritual reality, and that hidden knowledge can reconnect a person to that source."
+        }
+      ],
+      "stakes": "Mage: The Awakening is not a revision of Ascension \u2014 it is a different answer to the same question. Understanding what it changed, and why, is part of the story. And Phil Brucato's public self-revision \u2014 the lead developer of Ascension saying the first edition was wrong about technology \u2014 is the moment the game's own creator revised his thesis. That is worth sitting with.",
+      "surrogate": "CASPAR"
+    }
+  ]
+}

@@ -1,0 +1,992 @@
+{
+  "naive": {
+    "breaks": [
+      {
+        "detail": "We went back to the opening image instead of answering what Mage does differently \u2014 I'm waiting for that answer",
+        "severity": "low",
+        "turn": 4,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "I still don't know what 'the street pushes back' means \u2014 Caspar is asking my exact question back",
+        "severity": "low",
+        "turn": 5,
+        "type": "no_stakes"
+      },
+      {
+        "detail": "I still don't know what the mechanical or rules difference is \u2014 this sounds like a narrative description, not an explanation of what makes Mage distinct as a game system",
+        "severity": "med",
+        "turn": 6,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Caspar is asking the same question he just asked, and Juno already answered it \u2014 now he's asking again and I'm not sure if the answer wasn't satisfying or if we're going in circles",
+        "severity": "med",
+        "turn": 7,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "This is the third time we've heard basically the same explanation about the bullet and the crowd \u2014 I still don't know what the actual game mechanic is that makes Mage different from Vampire or Werewolf",
+        "severity": "med",
+        "turn": 8,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Caspar is asking about 'the street pushes back' which was said several lines ago \u2014 we've looped back to an earlier question instead of moving forward, and I still don't know what the actual game mechanic is",
+        "severity": "med",
+        "turn": 9,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "I still don't know the actual mechanic \u2014 like, what happens in the game when Paradox hits you? Does it deal damage, does it kill you, does something weird happen? 'The air thickens' and 'the mage gets hurt' is evocative but I don't know what it means in play.",
+        "severity": "low",
+        "turn": 12,
+        "type": null
+      },
+      {
+        "detail": "Caspar says he's 'being a surrogate' \u2014 I don't know what that means in this context. A surrogate for whom? The audience? That wasn't established.",
+        "severity": "low",
+        "turn": 19,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Who is this absent person? Why aren't they here? This feels like it's about a real relationship or situation outside the game discussion but I have no context for it.",
+        "severity": "med",
+        "turn": 21,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno is asking Caspar to answer the question instead of answering it herself \u2014 I'm not sure why Caspar would know what it feels like to discover you're a mage",
+        "severity": "low",
+        "turn": 26,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "What's an Avatar in this context \u2014 is it a separate being inside you, or part of you, or something else entirely?",
+        "severity": "med",
+        "turn": 32,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "The Technocracy \u2014 that's a new name dropped fast. A 'secret council enforcing one rational reality'? I don't know who they are or how they fit into what's been built so far.",
+        "severity": "med",
+        "turn": 34,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "Wait, who is 'the enemy' exactly? They've been teasing this faction for a while but I still don't have a name or clear picture of them.",
+        "severity": "med",
+        "turn": 47,
+        "type": "undefined_name"
+      },
+      {
+        "detail": "I don't know if this is still the game's lore or if we've shifted to talking about real-world smallpox history \u2014 it sounds weirdly specific and factual",
+        "severity": "med",
+        "turn": 49,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Wait \u2014 so the Technocracy made all the good things in the world? The villain created vaccines and electricity? I thought they were the bad guys controlling reality, but now they're also... responsible for modern medicine?",
+        "severity": "med",
+        "turn": 51,
+        "type": "whiplash"
+      },
+      {
+        "detail": "I don't know what 'Supernal Realms' or 'the Fallen World' or 'the Abyss' actually mean in practical terms \u2014 like, how do these replace Paradox and consensus reality mechanically or in play?",
+        "severity": "med",
+        "turn": 80,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "I'm not sure myself \u2014 Juno just introduced the 2005 reboot with completely different cosmology, and now Caspar is asking the same question I have: is this a sequel/reboot or a continuation?",
+        "severity": "low",
+        "turn": 81,
+        "type": null
+      },
+      {
+        "detail": "Caspar just asked this exact question and Juno already answered it \u2014 now Caspar is asking it again almost word for word, which is disorienting",
+        "severity": "med",
+        "turn": 83,
+        "type": "lost_thread"
+      },
+      {
+        "detail": "Juno is repeating almost exactly what she just said \u2014 the reboot explanation, the Abyss, the ancestors destroying the bridge \u2014 this is the third time this same information has been delivered in slightly different words",
+        "severity": "med",
+        "turn": 84,
+        "type": "bored"
+      },
+      {
+        "detail": "Watchtowers \u2014 what are those exactly? And I'm not sure I fully grasp what 'ascended' means in this new system since Ascension was never defined in the old one either",
+        "severity": "low",
+        "turn": 86,
+        "type": "undefined_name"
+      }
+    ],
+    "first_bounce_turn": null,
+    "followed_overall": true,
+    "per_turn": [
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is Juno, and what world are we in where bullets can be stopped by a raised hand?",
+        "severity": null,
+        "turn": 0,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the scene Juno described \u2014 is that a scenario they're about to play out in the game?",
+        "severity": null,
+        "turn": 1,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does Mage do that the others don't?",
+        "severity": null,
+        "turn": 2,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does Mage do that the other World of Darkness games don't?",
+        "severity": null,
+        "turn": 3,
+        "type": null
+      },
+      {
+        "confusion": "We went back to the opening image instead of answering what Mage does differently \u2014 I'm waiting for that answer",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does Mage do that the other World of Darkness games don't?",
+        "severity": "low",
+        "turn": 4,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "I still don't know what 'the street pushes back' means \u2014 Caspar is asking my exact question back",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does 'the street pushes back' actually mean, and what makes Mage different from other magic systems?",
+        "severity": "low",
+        "turn": 5,
+        "type": "no_stakes"
+      },
+      {
+        "confusion": "I still don't know what the mechanical or rules difference is \u2014 this sounds like a narrative description, not an explanation of what makes Mage distinct as a game system",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does 'the street pushes back' actually mean \u2014 is that a game mechanic, and how does witnesses seeing magic change what happens next?",
+        "severity": "med",
+        "turn": 6,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Caspar is asking the same question he just asked, and Juno already answered it \u2014 now he's asking again and I'm not sure if the answer wasn't satisfying or if we're going in circles",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually IS the core mechanic of Mage that makes it different from Vampire or Werewolf?",
+        "severity": "med",
+        "turn": 7,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "This is the third time we've heard basically the same explanation about the bullet and the crowd \u2014 I still don't know what the actual game mechanic is that makes Mage different from Vampire or Werewolf",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What is the core mechanic of Mage: The Ascension that makes it distinct from the other World of Darkness games?",
+        "severity": "med",
+        "turn": 8,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Caspar is asking about 'the street pushes back' which was said several lines ago \u2014 we've looped back to an earlier question instead of moving forward, and I still don't know what the actual game mechanic is",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does Mage actually let you do mechanically that other RPGs don't?",
+        "severity": "med",
+        "turn": 9,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Why does doing the impossible thing hurt the mage specifically \u2014 is it like a cost, or is something punishing them?",
+        "severity": null,
+        "turn": 10,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the core mechanic of Mage that makes it different from Vampire and Werewolf?",
+        "severity": null,
+        "turn": 11,
+        "type": null
+      },
+      {
+        "confusion": "I still don't know the actual mechanic \u2014 like, what happens in the game when Paradox hits you? Does it deal damage, does it kill you, does something weird happen? 'The air thickens' and 'the mage gets hurt' is evocative but I don't know what it means in play.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does Paradox actually do to you in the game \u2014 is it random, is it proportional, can you die from it?",
+        "severity": "low",
+        "turn": 12,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What exactly is the core mechanic of Mage \u2014 how does a player actually do magic in the game?",
+        "severity": null,
+        "turn": 13,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So does that mean magic works fine if no one sees it? Like, can mages just do impossible things in private without consequence?",
+        "severity": null,
+        "turn": 14,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How does a mage avoid Paradox \u2014 can they do magic secretly, or is there some other workaround?",
+        "severity": null,
+        "turn": 15,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So is the whole game basically about mages trying to be sneaky with their magic to avoid Paradox, or is there more to it than that?",
+        "severity": null,
+        "turn": 16,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the Paradox system actually look like at the table \u2014 how do you roll for it or track it?",
+        "severity": null,
+        "turn": 17,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So does the game actually let you play with narrative as a tool to shift what reality allows?",
+        "severity": null,
+        "turn": 18,
+        "type": null
+      },
+      {
+        "confusion": "Caspar says he's 'being a surrogate' \u2014 I don't know what that means in this context. A surrogate for whom? The audience? That wasn't established.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does it mean for Caspar to be a 'surrogate' \u2014 is that a podcast format thing they set up before I started listening?",
+        "severity": "low",
+        "turn": 19,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What did Caspar mean by 'surrogate' \u2014 is that a podcast format thing or something from the game?",
+        "severity": null,
+        "turn": 20,
+        "type": null
+      },
+      {
+        "confusion": "Who is this absent person? Why aren't they here? This feels like it's about a real relationship or situation outside the game discussion but I have no context for it.",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is the person that should be having this conversation, and what does this have to do with Mage: The Ascension?",
+        "severity": "med",
+        "turn": 21,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is the person who should be having this conversation but isn't?",
+        "severity": null,
+        "turn": 22,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who are the factions actually fighting over this narrative control in the game?",
+        "severity": null,
+        "turn": 23,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What factions are actually fighting over the narrative, and how does that play out in the game?",
+        "severity": null,
+        "turn": 24,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What factions are fighting over the narrative, and how does that actually play out in the game?",
+        "severity": null,
+        "turn": 25,
+        "type": null
+      },
+      {
+        "confusion": "Juno is asking Caspar to answer the question instead of answering it herself \u2014 I'm not sure why Caspar would know what it feels like to discover you're a mage",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is the person who 'should be having this conversation' that Caspar mentioned earlier?",
+        "severity": "low",
+        "turn": 26,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If reality is a shared hallucination, does Awakening mean you can just... opt out of it? And what happens to you if you do?",
+        "severity": null,
+        "turn": 27,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is Mage: The Ascension actually an influence on The Matrix, or is this just a casual comparison?",
+        "severity": null,
+        "turn": 28,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Did the Wachowskis actually draw from Mage, or is this just a coincidence that fans want to be true?",
+        "severity": null,
+        "turn": 29,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually happens mechanically when you cast magic \u2014 how does the dice system work?",
+        "severity": null,
+        "turn": 30,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who are the factions that control the narrative, and how do they actually fight over it?",
+        "severity": null,
+        "turn": 31,
+        "type": null
+      },
+      {
+        "confusion": "What's an Avatar in this context \u2014 is it a separate being inside you, or part of you, or something else entirely?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What exactly is the Avatar and what does it do to the mage?",
+        "severity": "med",
+        "turn": 32,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What is Ascension actually \u2014 what are mages trying to reach?",
+        "severity": null,
+        "turn": 33,
+        "type": null
+      },
+      {
+        "confusion": "The Technocracy \u2014 that's a new name dropped fast. A 'secret council enforcing one rational reality'? I don't know who they are or how they fit into what's been built so far.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is the Technocracy and how long have they been controlling reality?",
+        "severity": "med",
+        "turn": 34,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who exactly is the Technocracy and how do they enforce 'rational' reality?",
+        "severity": null,
+        "turn": 35,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What decision did the Awakened make in 1466, and why does it matter so much?",
+        "severity": null,
+        "turn": 36,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What happened in 1466 that shaped everything after it?",
+        "severity": null,
+        "turn": 37,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What made them finally agree to stop fighting in 1466, and what did they actually agree to do together?",
+        "severity": null,
+        "turn": 38,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What made these nine warring magical traditions suddenly agree to stop fighting in 1466?",
+        "severity": null,
+        "turn": 39,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is this enemy that was winning badly enough to force nine warring factions to unite?",
+        "severity": null,
+        "turn": 40,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who is the enemy that was winning and forced the nine traditions to unite?",
+        "severity": null,
+        "turn": 41,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "How do groups that practice killing and human sacrifice sit at the same council table as allies \u2014 what holds that coalition together?",
+        "severity": null,
+        "turn": 42,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "How do you actually play as a protagonist who might kill people or perform human sacrifice \u2014 does the game reckon with that morally?",
+        "severity": null,
+        "turn": 43,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the protagonists include people who decide when others are ready to die, how are players supposed to engage with that \u2014 do you play as one of them?",
+        "severity": null,
+        "turn": 44,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who exactly is the enemy the Traditions united against, and what does the war actually look like?",
+        "severity": null,
+        "turn": 45,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who are the Traditions actually fighting, and are they worse enough to make the Traditions look like heroes by comparison?",
+        "severity": null,
+        "turn": 46,
+        "type": null
+      },
+      {
+        "confusion": "Wait, who is 'the enemy' exactly? They've been teasing this faction for a while but I still don't have a name or clear picture of them.",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Who is this enemy that ended smallpox to own the cure \u2014 is this the Technocracy they mentioned earlier?",
+        "severity": "med",
+        "turn": 47,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who exactly is this enemy and how did they get powerful enough to deliberately end a disease?",
+        "severity": null,
+        "turn": 48,
+        "type": null
+      },
+      {
+        "confusion": "I don't know if this is still the game's lore or if we've shifted to talking about real-world smallpox history \u2014 it sounds weirdly specific and factual",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Are we still talking about the Technocracy in the game, or did we just slip into actual real-world history?",
+        "severity": "med",
+        "turn": 49,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Who exactly is this enemy \u2014 the Technocracy? \u2014 and how did they get control of something like smallpox eradication?",
+        "severity": null,
+        "turn": 50,
+        "type": null
+      },
+      {
+        "confusion": "Wait \u2014 so the Technocracy made all the good things in the world? The villain created vaccines and electricity? I thought they were the bad guys controlling reality, but now they're also... responsible for modern medicine?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the villain built the world that keeps ordinary people alive and safe, how is the game asking me to root against them?",
+        "severity": "med",
+        "turn": 51,
+        "type": "whiplash"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Yeah, seriously \u2014 how is the faction that ended smallpox and built modern medicine supposed to be the bad guy?",
+        "severity": null,
+        "turn": 52,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What were the competing paths they suppressed \u2014 what does a world with magic instead of science actually look like?",
+        "severity": null,
+        "turn": 53,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What specific methods did this faction use to suppress competing paths \u2014 how did they actually do it?",
+        "severity": null,
+        "turn": 54,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Technocracy was genuinely protecting people from vampires and werewolves, why are they the villain \u2014 is it just the suppression of magic, or is there something darker coming?",
+        "severity": null,
+        "turn": 55,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Technocracy built vaccines and saved lives, what actually makes them the villain \u2014 is it just the suppression of magic, or something worse?",
+        "severity": null,
+        "turn": 56,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Technocracy's magic looks like science and avoids Paradox, does that mean they're actually more powerful than the Traditions \u2014 and is there any way to fight that?",
+        "severity": null,
+        "turn": 57,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is there a third option \u2014 something outside both the Traditions and the Technocracy?",
+        "severity": null,
+        "turn": 58,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So is there actually a 'good side' in this game at all, or is it just two flavors of dangerous?",
+        "severity": null,
+        "turn": 59,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If neither side is clean, is there any faction in this game that actually represents a clear moral good?",
+        "severity": null,
+        "turn": 60,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the things that don't fit into either side?",
+        "severity": null,
+        "turn": 61,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Marauders bend reality around their delusions, can anyone stop them \u2014 and does stopping them trigger Paradox?",
+        "severity": null,
+        "turn": 62,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Paradox is what keeps mages in check, what stops a Marauder from just rewriting everything?",
+        "severity": null,
+        "turn": 63,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Marauders are completely outside the system and immune to Paradox, is there any way to stop them at all?",
+        "severity": null,
+        "turn": 64,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What are the other two things that don't fit into either side \u2014 we only got Marauders so far?",
+        "severity": null,
+        "turn": 65,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What does it actually mean to 'invert' your Avatar \u2014 is that a choice, a corruption, or something that happens to you?",
+        "severity": null,
+        "turn": 66,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Nephandi are inside every faction, does that mean no one can trust anyone \u2014 not even within the Traditions or the Technocracy?",
+        "severity": null,
+        "turn": 67,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If you can never know who's compromised, how does anyone in this game actually function or trust anyone enough to do anything?",
+        "severity": null,
+        "turn": 68,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "So if the Avatar might be a demon, does that mean every mage is potentially being manipulated by something evil from the inside?",
+        "severity": null,
+        "turn": 69,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually is Ascension \u2014 what are all these mages supposedly working toward?",
+        "severity": null,
+        "turn": 70,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the rulebook actually say Ascension is?",
+        "severity": null,
+        "turn": 71,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What does the word 'Ascension' actually mean in this game \u2014 what is the goal everyone is supposedly working toward?",
+        "severity": null,
+        "turn": 72,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If no one knows what Ascension actually is, how do mages even know they're fighting toward the right thing \u2014 or that it's worth the cost?",
+        "severity": null,
+        "turn": 73,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What actually is Ascension \u2014 is the game's refusal to define it intentional design or a gap they never filled?",
+        "severity": null,
+        "turn": 74,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "Is the undefined Ascension a genuine philosophical statement or did the designers just not know how to answer their own question?",
+        "severity": null,
+        "turn": 75,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the undefined nature of Ascension a design strength or a cop-out \u2014 and will the podcast ever take a side?",
+        "severity": null,
+        "turn": 76,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Will the podcast ever land on one interpretation of Ascension, or is the ambiguity itself the point they're building toward?",
+        "severity": null,
+        "turn": 77,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What did the 2005 rulebook say, and how did it try to define what the original deliberately left blank?",
+        "severity": null,
+        "turn": 78,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "What did the 2005 rulebook actually say, and how did it try to define Ascension differently?",
+        "severity": null,
+        "turn": 79,
+        "type": null
+      },
+      {
+        "confusion": "I don't know what 'Supernal Realms' or 'the Fallen World' or 'the Abyss' actually mean in practical terms \u2014 like, how do these replace Paradox and consensus reality mechanically or in play?",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "So the 2005 version completely threw out the collective-belief-shapes-reality idea \u2014 does that mean Paradox is gone too, and what replaces it?",
+        "severity": "med",
+        "turn": 80,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "I'm not sure myself \u2014 Juno just introduced the 2005 reboot with completely different cosmology, and now Caspar is asking the same question I have: is this a sequel/reboot or a continuation?",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is Mage: The Awakening the same world as Mage: The Ascension, or did White Wolf completely restart the setting?",
+        "severity": null,
+        "turn": 81,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Traditions and the Ascension War are completely gone in the reboot, why did we spend so long on them \u2014 are they just context, or does the podcast come back to them?",
+        "severity": null,
+        "turn": 82,
+        "type": null
+      },
+      {
+        "confusion": "Caspar just asked this exact question and Juno already answered it \u2014 now Caspar is asking it again almost word for word, which is disorienting",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Did the 2005 reboot keep anything from the original setting, or is it truly a clean break?",
+        "severity": "med",
+        "turn": 83,
+        "type": "lost_thread"
+      },
+      {
+        "confusion": "Juno is repeating almost exactly what she just said \u2014 the reboot explanation, the Abyss, the ancestors destroying the bridge \u2014 this is the third time this same information has been delivered in slightly different words",
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If Awakening is a full reboot with no shared continuity, why are we spending so much time on it \u2014 are we going to compare the two versions, or is one of them the real focus?",
+        "severity": "med",
+        "turn": 84,
+        "type": "bored"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "If the Ascension War is gone in the reboot, what conflict replaces it \u2014 are there still factions fighting in Awakening?",
+        "severity": null,
+        "turn": 85,
+        "type": null
+      },
+      {
+        "confusion": "Watchtowers \u2014 what are those exactly? And I'm not sure I fully grasp what 'ascended' means in this new system since Ascension was never defined in the old one either",
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If the Exarchs already made it to the top and are now blocking everyone else, why \u2014 what do they gain from keeping others out?",
+        "severity": "low",
+        "turn": 86,
+        "type": "undefined_name"
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "What did Brucato say he got wrong \u2014 about the original game, the reboot, or something else entirely?",
+        "severity": null,
+        "turn": 87,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": true,
+        "engaged": true,
+        "holding_question": "If Brucato revised his view that technology is the enemy of magic, does that mean the Technocracy were actually the good guys all along \u2014 or does it just complicate the original argument further?",
+        "severity": null,
+        "turn": 88,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Does Brucato think the original game's anti-technology stance was actually wrong, or is he just updating it for the modern world?",
+        "severity": null,
+        "turn": 89,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is Ascension's undefined destination the game's deepest honesty, or its biggest cop-out?",
+        "severity": null,
+        "turn": 90,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the 2005 reboot considered better or worse than the original, and did it actually answer the Ascension question or just replace it with a different unanswered one?",
+        "severity": null,
+        "turn": 91,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the game's unresolved ending a feature or a flaw \u2014 and does Brucato's self-revision answer that or just deepen it?",
+        "severity": null,
+        "turn": 92,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the undefined nature of Ascension a feature or a flaw \u2014 and does Brucato's self-revision settle that or just reopen it?",
+        "severity": null,
+        "turn": 93,
+        "type": null
+      },
+      {
+        "confusion": null,
+        "delivered_new_material": false,
+        "engaged": true,
+        "holding_question": "Is the game ultimately profound or just unfinished \u2014 and does it matter if even the creator changed his mind?",
+        "severity": null,
+        "turn": 94,
+        "type": null
+      }
+    ]
+  },
+  "narration_vs_banter": {
+    "pass": true,
+    "ratio": 0.43157894736842106,
+    "react_only_beats": 54,
+    "render_beats": 41,
+    "threshold": 0.35
+  }
+}
