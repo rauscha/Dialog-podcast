@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260807_050202_signal_in_the_scan_-_week_of_2026_08_07.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: Why This Week's Lead Paper Matters"
+    },
+    {
+      "start_sec": 42.45,
+      "start_time": "0:42",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 84.9,
+      "start_time": "1:25",
+      "title": "\u2014 Headline: Sonographic Features"
+    },
+    {
+      "start_sec": 127.36,
+      "start_time": "2:07",
+      "title": "\u2014 Headline: Caveats and Evidence Grade"
+    },
+    {
+      "start_sec": 169.81,
+      "start_time": "2:50",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 212.26,
+      "start_time": "3:32",
+      "title": "\u2014 Round 1: DBT-DINO (Dorfner, Radiology 2026)"
+    },
+    {
+      "start_sec": 254.71,
+      "start_time": "4:15",
+      "title": "\u2014 Round 2: LLM Clinical Histories (Serapio, Radiology 2026)"
+    },
+    {
+      "start_sec": 297.17,
+      "start_time": "4:57",
+      "title": "\u2014 Round 3: Photon-Counting CT for Liver Fibrosis (Wu, Radiology 2026)"
+    },
+    {
+      "start_sec": 339.62,
+      "start_time": "5:40",
+      "title": "\u2014 Round 4: FDA Transparency in Radiology AI (Dayma, Radiology AI 2026)"
+    },
+    {
+      "start_sec": 382.07,
+      "start_time": "6:22",
+      "title": "\u2014 Close: What to Watch, What's Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260807_050202_signal_in_the_scan_-_week_of_2026_08_07.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260807_050202_signal_in_the_scan_-_week_of_2026_08_07.companion.json",
+  "duration_sec": 469.523107,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Characterizes sonographic features of a rare but surgically consequential diagnosis, sharpening preoperative suspicion for malignant transformation in dermoid cysts",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Imaging in gynecological disease (31): clinical and ultrasound characteristics of ovarian mature cystic teratomas containing malignancies",
+      "url": "https://doi.org/10.1002/uog.70224"
+    },
+    {
+      "reason": "Demonstrates that domain-specific self-supervised pretraining at scale improves breast imaging AI performance over generic models",
+      "source": "Radiology",
+      "title": "DBT-DINO: Toward Foundation Model-Based Analysis of Digital Breast Tomosynthesis",
+      "url": "https://doi.org/10.1148/radiol.254034"
+    },
+    {
+      "reason": "Shows LLMs can generate more comprehensive and useful imaging indications than clinician-provided histories, with direct workflow implications",
+      "source": "Radiology",
+      "title": "Radiologically Relevant Clinical History Summarization with Large Language Models: A Multireader Performance Study",
+      "url": "https://doi.org/10.1148/radiol.253238"
+    },
+    {
+      "reason": "Validates a CT-derived biomarker for liver fibrosis staging with performance equivalent to MR elastography, potentially simplifying workup",
+      "source": "Radiology",
+      "title": "Photon-counting CT Extracellular Volume Fraction for Liver Fibrosis Assessment: Validation against MR Elastography and Histopathology",
+      "url": "https://doi.org/10.1148/radiol.253979"
+    },
+    {
+      "reason": "Maps the regulatory landscape for radiology AI updates, highlighting adoption leadership but persistent transparency gaps",
+      "source": "Radiol Artif Intell",
+      "title": "Predetermined Change Control Plan Adoption and Documentation Transparency in FDA-cleared Radiology Artificial Intelligence/Machine Learning Devices",
+      "url": "https://doi.org/10.1148/ryai.260385"
+    }
+  ],
+  "generated_at": "2026-08-07T10:09:15.500485+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Specific ultrasound features can be identified in ovarian mature cystic teratomas that have undergone malignant transformation, based on a 26-case multicenter series",
+      "confidence": "low",
+      "id": "claim_giudice",
+      "source_ids": [
+        "giudice2026"
+      ]
+    },
+    {
+      "claim": "A self-supervised foundation model pretrained on 25 million DBT slices outperforms ImageNet baselines on breast density, cancer risk, and lesion detection tasks",
+      "confidence": "medium",
+      "id": "claim_dorfner",
+      "source_ids": [
+        "dorfner2026"
+      ]
+    },
+    {
+      "claim": "LLM-generated summaries of EHR notes outperformed clinician-provided clinical histories on comprehensiveness and radiologist-rated usefulness in a 20-reader study",
+      "confidence": "medium",
+      "id": "claim_serapio",
+      "source_ids": [
+        "serapio2026"
+      ]
+    },
+    {
+      "claim": "Photon-counting CT-derived extracellular volume fraction stages liver fibrosis with performance equivalent to MR elastography in a prospective 139-patient cohort",
+      "confidence": "medium",
+      "id": "claim_wu",
+      "source_ids": [
+        "wu2026"
+      ]
+    },
+    {
+      "claim": "FDA-cleared radiology AI devices lead all specialties in Predetermined Change Control Plan adoption, but documentation transparency remains inconsistent",
+      "confidence": "medium",
+      "id": "claim_dayma",
+      "source_ids": [
+        "dayma2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Giudice",
+      "id": "giudice2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Imaging in gynecological disease (31): clinical and ultrasound characteristics of ovarian mature cystic teratomas containing malignancies",
+      "url": "https://doi.org/10.1002/uog.70224",
+      "why_it_matters": "Characterizes sonographic features of a rare but surgically consequential diagnosis, sharpening preoperative suspicion for malignant transformation in dermoid cysts",
+      "year": 2026
+    },
+    {
+      "author": "Dorfner",
+      "id": "dorfner2026",
+      "publication": "Radiology",
+      "title": "DBT-DINO: Toward Foundation Model-Based Analysis of Digital Breast Tomosynthesis",
+      "url": "https://doi.org/10.1148/radiol.254034",
+      "why_it_matters": "Demonstrates that domain-specific self-supervised pretraining at scale improves breast imaging AI performance over generic models",
+      "year": 2026
+    },
+    {
+      "author": "Serapio",
+      "id": "serapio2026",
+      "publication": "Radiology",
+      "title": "Radiologically Relevant Clinical History Summarization with Large Language Models: A Multireader Performance Study",
+      "url": "https://doi.org/10.1148/radiol.253238",
+      "why_it_matters": "Shows LLMs can generate more comprehensive and useful imaging indications than clinician-provided histories, with direct workflow implications",
+      "year": 2026
+    },
+    {
+      "author": "Wu",
+      "id": "wu2026",
+      "publication": "Radiology",
+      "title": "Photon-counting CT Extracellular Volume Fraction for Liver Fibrosis Assessment: Validation against MR Elastography and Histopathology",
+      "url": "https://doi.org/10.1148/radiol.253979",
+      "why_it_matters": "Validates a CT-derived biomarker for liver fibrosis staging with performance equivalent to MR elastography, potentially simplifying workup",
+      "year": 2026
+    },
+    {
+      "author": "Dayma",
+      "id": "dayma2026",
+      "publication": "Radiol Artif Intell",
+      "title": "Predetermined Change Control Plan Adoption and Documentation Transparency in FDA-cleared Radiology Artificial Intelligence/Machine Learning Devices",
+      "url": "https://doi.org/10.1148/ryai.260385",
+      "why_it_matters": "Maps the regulatory landscape for radiology AI updates, highlighting adoption leadership but persistent transparency gaps",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Giudice et al. - Ultrasound Obstet Gynecol - 2026 - Imaging in gynecological disease (31): clinical and ultrasound characteristics of ovarian mature cystic teratomas containing malignancies (https://doi.org/10.1002/uog.70224)",
+    "Dorfner et al. - Radiology - 2026 - DBT-DINO: Toward Foundation Model-Based Analysis of Digital Breast Tomosynthesis (https://doi.org/10.1148/radiol.254034)",
+    "Serapio et al. - Radiology - 2026 - Radiologically Relevant Clinical History Summarization with Large Language Models: A Multireader Performance Study (https://doi.org/10.1148/radiol.253238)",
+    "Wu et al. - Radiology - 2026 - Photon-counting CT Extracellular Volume Fraction for Liver Fibrosis Assessment: Validation against MR Elastography and Histopathology (https://doi.org/10.1148/radiol.253979)",
+    "Dayma et al. - Radiol Artif Intell - 2026 - Predetermined Change Control Plan Adoption and Documentation Transparency in FDA-cleared Radiology Artificial Intelligence/Machine Learning Devices (https://doi.org/10.1148/ryai.260385)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/08/07",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1131
+}
