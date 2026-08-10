@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260810_050203_mfm_rounds_-_week_of_2026_08_10.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week's Lead Paper Does"
+    },
+    {
+      "start_sec": 45.97,
+      "start_time": "0:46",
+      "title": "\u2014 Headline: Clinical Question and Design Grade"
+    },
+    {
+      "start_sec": 91.94,
+      "start_time": "1:32",
+      "title": "\u2014 Headline: The Finding \u2014 Triangulation Across Three Pathways"
+    },
+    {
+      "start_sec": 137.92,
+      "start_time": "2:18",
+      "title": "\u2014 Headline: The Honest Caveat and What Changes in Practice"
+    },
+    {
+      "start_sec": 183.89,
+      "start_time": "3:04",
+      "title": "\u2014 Round 1: Nair \u2014 Fetal Sinus Bradycardia Spectrum"
+    },
+    {
+      "start_sec": 229.86,
+      "start_time": "3:50",
+      "title": "\u2014 Round 2: Page \u2014 Stillbirth Autopsy Counseling Gap"
+    },
+    {
+      "start_sec": 275.83,
+      "start_time": "4:36",
+      "title": "\u2014 Round 3: Berghella \u2014 Cervical Insufficiency Redefinition"
+    },
+    {
+      "start_sec": 321.8,
+      "start_time": "5:22",
+      "title": "\u2014 Round 4: Paul \u2014 ML Preterm Birth Prediction at Population Scale"
+    },
+    {
+      "start_sec": 367.77,
+      "start_time": "6:08",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260810_050203_mfm_rounds_-_week_of_2026_08_10.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260810_050203_mfm_rounds_-_week_of_2026_08_10.companion.json",
+  "duration_sec": 458.745556,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Large prospective cohort clarifies that late UtA PI integrates angiogenic, hemodynamic, and vascular stiffness signals \u2014 mechanistic foundation for third-trimester Doppler screening",
+      "source": "Am J Obstet Gynecol",
+      "title": "What does uterine artery Doppler reflect in late pregnancy? Insights from angiogenic, hemodynamic, and vascular markers in preeclampsia.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.004"
+    },
+    {
+      "reason": "Characterizes the range of serious postnatal cardiac diagnoses in persistent fetal bradycardia \u2014 reinforces need for thorough fetal cardiac evaluation",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Spectrum of potentially lethal cardiac conditions presenting with fetal sinus bradycardia: a report on 34 cases.",
+      "url": "https://doi.org/10.1002/uog.70260"
+    },
+    {
+      "reason": "Identifies modifiable factors behind low stillbirth autopsy rates across 20 centers \u2014 quality improvement target for perinatal loss evaluation",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Characteristics and clinician perspectives associated with fetal autopsy completion and counseling.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102060"
+    },
+    {
+      "reason": "Proposes redefining cervical insufficiency around cerclage trial evidence rather than historical clinical criteria \u2014 could reshape documentation and counseling",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Cervical insufficiency revisited: a proposal for a new treatment-aligned definition.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102047"
+    },
+    {
+      "reason": "Demonstrates scalable ML-based preterm birth prediction using administrative data \u2014 population triage tool rather than individual diagnostic",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Leveraging administrative health records and machine learning for population-level prediction of preterm birth.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102033"
+    }
+  ],
+  "generated_at": "2026-08-10T10:09:35.742608+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Uterine artery pulsatility index at 35-36 weeks correlates with angiogenic imbalance, altered maternal hemodynamics, and increased vascular stiffness in women who develop preeclampsia",
+      "confidence": "high",
+      "id": "chatzakis2026",
+      "source_ids": [
+        "chatzakis2026"
+      ]
+    },
+    {
+      "claim": "Persistent fetal sinus bradycardia is associated with a substantial risk of serious postnatal cardiac diagnoses including structural defects, conduction abnormalities, and cardiomyopathies",
+      "confidence": "medium",
+      "id": "nair2026",
+      "source_ids": [
+        "nair2026"
+      ]
+    },
+    {
+      "claim": "Fetal autopsy counseling and completion rates after stillbirth are low and associated with identifiable patient and clinician factors that vary across institutions",
+      "confidence": "medium",
+      "id": "page2026",
+      "source_ids": [
+        "page2026"
+      ]
+    },
+    {
+      "claim": "Cervical insufficiency should be redefined operationally around evidence-based cerclage indications rather than traditional clinical diagnosis",
+      "confidence": "low",
+      "id": "berghella2026",
+      "source_ids": [
+        "berghella2026"
+      ]
+    },
+    {
+      "claim": "Machine learning models using administrative health records can predict preterm birth at 26 weeks with modest but scalable population-level performance",
+      "confidence": "medium",
+      "id": "paul2026",
+      "source_ids": [
+        "paul2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Chatzakis",
+      "id": "chatzakis2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "What does uterine artery Doppler reflect in late pregnancy? Insights from angiogenic, hemodynamic, and vascular markers in preeclampsia.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.004",
+      "why_it_matters": "Large prospective cohort clarifies that late UtA PI integrates angiogenic, hemodynamic, and vascular stiffness signals \u2014 mechanistic foundation for third-trimester Doppler screening",
+      "year": 2026
+    },
+    {
+      "author": "Nair",
+      "id": "nair2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Spectrum of potentially lethal cardiac conditions presenting with fetal sinus bradycardia: a report on 34 cases.",
+      "url": "https://doi.org/10.1002/uog.70260",
+      "why_it_matters": "Characterizes the range of serious postnatal cardiac diagnoses in persistent fetal bradycardia \u2014 reinforces need for thorough fetal cardiac evaluation",
+      "year": 2026
+    },
+    {
+      "author": "Page",
+      "id": "page2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Characteristics and clinician perspectives associated with fetal autopsy completion and counseling.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102060",
+      "why_it_matters": "Identifies modifiable factors behind low stillbirth autopsy rates across 20 centers \u2014 quality improvement target for perinatal loss evaluation",
+      "year": 2026
+    },
+    {
+      "author": "Berghella",
+      "id": "berghella2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Cervical insufficiency revisited: a proposal for a new treatment-aligned definition.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102047",
+      "why_it_matters": "Proposes redefining cervical insufficiency around cerclage trial evidence rather than historical clinical criteria \u2014 could reshape documentation and counseling",
+      "year": 2026
+    },
+    {
+      "author": "Paul",
+      "id": "paul2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Leveraging administrative health records and machine learning for population-level prediction of preterm birth.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102033",
+      "why_it_matters": "Demonstrates scalable ML-based preterm birth prediction using administrative data \u2014 population triage tool rather than individual diagnostic",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Chatzakis et al. - Am J Obstet Gynecol - 2026 - What does uterine artery Doppler reflect in late pregnancy? Insights from angiogenic, hemodynamic, and vascular markers in preeclampsia. (https://doi.org/10.1016/j.ajog.2026.08.004)",
+    "Nair et al. - Ultrasound Obstet Gynecol - 2026 - Spectrum of potentially lethal cardiac conditions presenting with fetal sinus bradycardia: a report on 34 cases. (https://doi.org/10.1002/uog.70260)",
+    "Page et al. - Am J Obstet Gynecol MFM - 2026 - Characteristics and clinician perspectives associated with fetal autopsy completion and counseling. (https://doi.org/10.1016/j.ajogmf.2026.102060)",
+    "Berghella et al. - Am J Obstet Gynecol MFM - 2026 - Cervical insufficiency revisited: a proposal for a new treatment-aligned definition. (https://doi.org/10.1016/j.ajogmf.2026.102047)",
+    "Paul et al. - Am J Obstet Gynecol MFM - 2026 - Leveraging administrative health records and machine learning for population-level prediction of preterm birth. (https://doi.org/10.1016/j.ajogmf.2026.102033)"
+  ],
+  "topic": "MFM Rounds - week of 2026/08/10",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1067
+}
