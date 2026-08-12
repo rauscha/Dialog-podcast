@@ -1,0 +1,40 @@
+CASPAR [measured]: This week, for the first time, we have a structured international framework for primary fetal pleural effusion — diagnosis, surveillance, shunt criteria, delivery timing. That gap is closed, at least at the level of expert consensus.
+JUNO [direct]: Four supporting papers in rounds — alloimmunization, screening evidence quality, mirror syndrome, TAPS. Heavy week from Prenatal Diagnosis.
+CASPAR [grounding]: From Prenatal Diagnosis, 2026: Abiad and colleagues, an international Delphi consensus of 32 experts — the first structured clinical guidelines for primary fetal pleural effusion.
+JUNO [pressing]: Before the recommendations land — what does the methodology actually give us?
+CASPAR [precise]: Iterative structured questionnaires, predefined agreement thresholds, 32 international fetal medicine experts. What you get is expert opinion formalized. Not prospective outcome data. The clinical value is real; the evidence grade is what it is.
+JUNO [moving on]: Scope first. What earns the label "primary"?
+CASPAR [methodical]: Structural cardiac anomaly ruled out. Chromosomal abnormality excluded. Infectious etiology cleared. What remains after that workup is a primary effusion — and the consensus applies to that specific population. The exclusion work is part of the framework, not a footnote.
+JUNO [probing]: Borderline presentations — unilateral, small, stable at first scan. Does the consensus hold there?
+CASPAR [measured]: It addresses them, but agreement thresholds were lower in those scenarios. The strong convergence is in the more severe presentations — bilateral effusions, progressive disease, hydrops. Which is, not coincidentally, where the field most needed it. The distribution of agreement is itself informative.
+JUNO [noting]: So the softer recommendations are exactly where clinicians were already most uncertain.
+CASPAR [dry]: Right. Three concrete outputs: imaging surveillance intervals stratified by size and laterality — agreed frequency, not "monitor closely." Thoracoamniotic shunt candidacy: the consensus favored shunting for bilateral effusions, for hydrops, or for progressive unilateral effusion with mediastinal shift. Delivery timing: 37 to 38 weeks in stable cases, earlier with hydrops or failed shunt.
+JUNO [clinically]: Delivery timing is the piece that actually changes the protocol conversation. Before this, that number in a stable primary effusion was essentially whoever was on call.
+CASPAR [confirming]: For centers already managing these carefully, the consensus probably confirms existing practice. What changes is that the framework is shared and citable. That matters for counseling, for protocol committees, and for any unit seeing its first case.
+JUNO [pressing]: Honest limits?
+CASPAR [flat]: No outcomes data against these specific recommendations yet. And even within "primary" effusions — after the full exclusion workup — etiologic heterogeneity means borderline cases still require judgment. The consensus gives you a defensible anchor. It doesn't replace clinical reasoning.
+JUNO [to the listener]: For a family, the change is concrete. A clinician can now tell them the management plan reflects international expert agreement rather than local habit. That's a different sentence to be in.
+CASPAR [pivoting]: Rounds — four other things this week.
+JUNO [clean]: First.
+CASPAR [bibliographic]: From Prenatal Diagnosis, 2026: Bennasar and colleagues, a narrative review — antibody-specific management nuances in non-RhD alloimmunizations. Evidence score 0.3.
+JUNO [framing]: The instinct is to run anti-Kell, anti-c, anti-E the way you run RhD.
+CASPAR [correcting]: That instinct causes real errors. Bennasar makes the case that titration thresholds, genotyping accuracy, and intervention timing differ substantially by antibody type. Anti-Kell is the clearest example — titer correlates poorly with fetal anemia severity, so RhD-derived titer thresholds can delay intervention. Other antibodies carry lower clinical significance and may prompt premature escalation if you're running RhD logic on them. First question when you see a non-RhD antibody: was this surveillance protocol designed for it, or borrowed?
+JUNO [next]: Zhang.
+CASPAR [bibliographic]: From Prenatal Diagnosis, 2026: Zhang and colleagues, an umbrella review of systematic reviews — evidence quality in prenatal Down syndrome screening. Evidence score 1.0 — highest-quality design in this week's set.
+JUNO [direct]: The finding is uncomfortable.
+CASPAR [measured]: Most of the systematic reviews underpinning current prenatal Down syndrome screening practice are methodologically low quality. The evidence architecture is thinner than it looks. The reassurance: NIPT superiority over traditional screening holds across sensitivity analyses despite the noise. The clinical conclusion is unchanged. But we've been right for reasons that are less well-documented than we assumed. Those aren't the same problem, and the second one still matters.
+JUNO [naming it]: Worth sitting with rather than moving straight to "but NIPT still wins."
+CASPAR [agreeing]: Yes. Both things are true.
+CASPAR [bibliographic]: From Prenatal Diagnosis, 2026: Tudisco and colleagues, a narrative review — mirror syndrome pathophysiology and the role of fetal therapy. Evidence score 0.3.
+JUNO [framing]: The reflex is delivery.
+CASPAR [reframing]: Tudisco reframes that. The shared angiogenic biomarker profile with preeclampsia — elevated sFlt-1, suppressed PlGF — points toward a mechanism: if the maternal syndrome is driven by the fetal hydrops, treating the hydrops via in utero intervention may in some cases reverse the maternal disease. For any mirror syndrome case where the underlying hydrops has a treatable etiology, the fetal therapy conversation should happen before delivery is assumed to be the only option.
+JUNO [pressing]: How solid is the reversal evidence?
+CASPAR [holding]: Case series and small cohorts — this is a narrative review. The sFlt-1/PlGF profile confirms diagnosis and tracks response; it has not been validated as an intervention threshold. But the clinical reflex shifts: "what's causing the hydrops" before "when do we deliver."
+CASPAR [bibliographic]: From Prenatal Diagnosis, 2026: Shantz and colleagues, a single-center retrospective of 52 cases — TAPS management stratification and outcomes. Evidence score 0.4.
+JUNO [setting up]: Three arms — expectant, intrauterine transfusion, selective fetoscopic laser.
+CASPAR [precise]: Treatment choice correlated with presentation characteristics — gestational age at diagnosis, MCA-PSV discordance, fluid status. Selective fetoscopic laser had the lowest dual survival at 50%, but achieved the latest delivery gestation across the three groups.
+JUNO [pressing]: That 50% number needs the gestation next to it. In isolation it reads as a failure.
+CASPAR [holding]: Exactly. Survival probability and delivery gestation are paired outputs. What the family is optimizing for is a conversation, not something the protocol resolves. And to be clear: 52 cases, single center, not randomized. Presentation severity is confounded with treatment choice throughout. This informs individualized counseling. It doesn't set a protocol.
+JUNO [closing]: Two open questions worth naming.
+CASPAR [clean]: The pleural effusion consensus needs prospective validation against outcomes data. The recommendations are the best available — and they are expert opinion. Someone has to run that study. On mirror syndrome: the sFlt-1/PlGF profile is characterized; whether it can guide intervention timing rather than just confirm diagnosis is not. Neither resolves without data that hasn't been collected.
+JUNO [sign-off]: Show notes have DOIs for all five papers.

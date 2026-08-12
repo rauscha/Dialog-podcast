@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Gap That Just Closed"
+    },
+    {
+      "startTime": 43.1,
+      "title": "\u2014 Headline Introduction: Design and Evidence Grade"
+    },
+    {
+      "startTime": 86.2,
+      "title": "\u2014 Headline: Scope and Diagnostic Criteria"
+    },
+    {
+      "startTime": 129.29,
+      "title": "\u2014 Headline: The Consensus Recommendations"
+    },
+    {
+      "startTime": 172.39,
+      "title": "\u2014 Headline: Practice Impact and Limits"
+    },
+    {
+      "startTime": 215.49,
+      "title": "\u2014 Round 1: Bennasar on Non-RhD Alloimmunization"
+    },
+    {
+      "startTime": 258.59,
+      "title": "\u2014 Round 2: Zhang on Screening Evidence Quality"
+    },
+    {
+      "startTime": 301.68,
+      "title": "\u2014 Round 3: Tudisco on Mirror Syndrome"
+    },
+    {
+      "startTime": 344.78,
+      "title": "\u2014 Round 4: Shantz on TAPS Management"
+    },
+    {
+      "startTime": 387.88,
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

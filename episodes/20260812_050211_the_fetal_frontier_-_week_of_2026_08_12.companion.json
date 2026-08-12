@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260812_050211_the_fetal_frontier_-_week_of_2026_08_12.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Gap That Just Closed"
+    },
+    {
+      "start_sec": 43.1,
+      "start_time": "0:43",
+      "title": "\u2014 Headline Introduction: Design and Evidence Grade"
+    },
+    {
+      "start_sec": 86.2,
+      "start_time": "1:26",
+      "title": "\u2014 Headline: Scope and Diagnostic Criteria"
+    },
+    {
+      "start_sec": 129.29,
+      "start_time": "2:09",
+      "title": "\u2014 Headline: The Consensus Recommendations"
+    },
+    {
+      "start_sec": 172.39,
+      "start_time": "2:52",
+      "title": "\u2014 Headline: Practice Impact and Limits"
+    },
+    {
+      "start_sec": 215.49,
+      "start_time": "3:35",
+      "title": "\u2014 Round 1: Bennasar on Non-RhD Alloimmunization"
+    },
+    {
+      "start_sec": 258.59,
+      "start_time": "4:19",
+      "title": "\u2014 Round 2: Zhang on Screening Evidence Quality"
+    },
+    {
+      "start_sec": 301.68,
+      "start_time": "5:02",
+      "title": "\u2014 Round 3: Tudisco on Mirror Syndrome"
+    },
+    {
+      "start_sec": 344.78,
+      "start_time": "5:45",
+      "title": "\u2014 Round 4: Shantz on TAPS Management"
+    },
+    {
+      "start_sec": 387.88,
+      "start_time": "6:28",
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260812_050211_the_fetal_frontier_-_week_of_2026_08_12.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260812_050211_the_fetal_frontier_-_week_of_2026_08_12.companion.json",
+  "duration_sec": 475.976372,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First structured clinical guidelines for primary fetal pleural effusion; fills a major evidence gap with 32-expert international consensus",
+      "source": "Prenatal Diagnosis",
+      "title": "International Expert Consensus on the Diagnosis and Clinical Management of Primary Fetal Pleural Effusion",
+      "url": "https://doi.org/10.1002/pd.70221"
+    },
+    {
+      "reason": "Clarifies antibody-specific differences in titration thresholds and intervention timing that are often overlooked when extrapolating from RhD protocols",
+      "source": "Prenatal Diagnosis",
+      "title": "The Diagnosis and Prenatal Management of Non-RHD Alloimmunizations",
+      "url": "https://doi.org/10.1002/pd.70231"
+    },
+    {
+      "reason": "Confirms NIPT superiority is robust despite finding most underlying systematic reviews are low quality",
+      "source": "Prenatal Diagnosis",
+      "title": "Quality of Evidence for Prenatal Down Syndrome Screening: An Umbrella Review",
+      "url": "https://doi.org/10.1002/pd.70191"
+    },
+    {
+      "reason": "Demonstrates that treating underlying fetal hydrops can reverse maternal mirror syndrome; reframes condition as potentially treatable",
+      "source": "Prenatal Diagnosis",
+      "title": "Mirror Syndrome (Ballantyne Syndrome): Prenatal Diagnosis, Pathophysiology, and the Role of Fetal Therapy",
+      "url": "https://doi.org/10.1002/pd.70228"
+    },
+    {
+      "reason": "Largest single-center TAPS stratification; shows treatment choice correlates with presentation characteristics and informs individualized counseling",
+      "source": "Prenatal Diagnosis",
+      "title": "Twin Anemia Polycythemia Sequence: Pretreatment Characteristics and Outcomes Stratified by Management Approach",
+      "url": "https://doi.org/10.1002/pd.70199"
+    }
+  ],
+  "generated_at": "2026-08-12T10:10:52.611373+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "International Delphi consensus establishes the first structured clinical guidelines for diagnosis, monitoring, and management of primary fetal pleural effusion",
+      "confidence": "medium",
+      "id": "claim_abiad",
+      "source_ids": [
+        "abiad2026"
+      ]
+    },
+    {
+      "claim": "Non-RhD alloimmunizations require antibody-specific approaches to titration thresholds, genotyping accuracy, and intervention timing rather than extrapolation from RhD protocols",
+      "confidence": "medium",
+      "id": "claim_bennasar",
+      "source_ids": [
+        "bennasar2026"
+      ]
+    },
+    {
+      "claim": "Most systematic reviews on prenatal Down syndrome screening are low quality, but NIPT superiority over traditional screening remains robust across sensitivity analyses",
+      "confidence": "high",
+      "id": "claim_zhang",
+      "source_ids": [
+        "zhang2026"
+      ]
+    },
+    {
+      "claim": "Mirror syndrome shares an angiogenic biomarker profile with preeclampsia, and treating underlying fetal hydrops via in utero therapy can reverse maternal disease",
+      "confidence": "medium",
+      "id": "claim_tudisco",
+      "source_ids": [
+        "tudisco2026"
+      ]
+    },
+    {
+      "claim": "In 52 TAPS cases, treatment choice correlated with gestational age, MCA discordance, and fluid status; selective fetoscopic laser had lowest dual survival at 50% but achieved latest delivery gestation",
+      "confidence": "medium",
+      "id": "claim_shantz",
+      "source_ids": [
+        "shantz2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Abiad",
+      "id": "abiad2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "International Expert Consensus on the Diagnosis and Clinical Management of Primary Fetal Pleural Effusion",
+      "url": "https://doi.org/10.1002/pd.70221",
+      "why_it_matters": "First structured clinical guidelines for primary fetal pleural effusion; fills a major evidence gap with 32-expert international consensus",
+      "year": 2026
+    },
+    {
+      "author": "Bennasar",
+      "id": "bennasar2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "The Diagnosis and Prenatal Management of Non-RHD Alloimmunizations",
+      "url": "https://doi.org/10.1002/pd.70231",
+      "why_it_matters": "Clarifies antibody-specific differences in titration thresholds and intervention timing that are often overlooked when extrapolating from RhD protocols",
+      "year": 2026
+    },
+    {
+      "author": "Zhang",
+      "id": "zhang2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Quality of Evidence for Prenatal Down Syndrome Screening: An Umbrella Review",
+      "url": "https://doi.org/10.1002/pd.70191",
+      "why_it_matters": "Confirms NIPT superiority is robust despite finding most underlying systematic reviews are low quality",
+      "year": 2026
+    },
+    {
+      "author": "Tudisco",
+      "id": "tudisco2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Mirror Syndrome (Ballantyne Syndrome): Prenatal Diagnosis, Pathophysiology, and the Role of Fetal Therapy",
+      "url": "https://doi.org/10.1002/pd.70228",
+      "why_it_matters": "Demonstrates that treating underlying fetal hydrops can reverse maternal mirror syndrome; reframes condition as potentially treatable",
+      "year": 2026
+    },
+    {
+      "author": "Shantz",
+      "id": "shantz2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Twin Anemia Polycythemia Sequence: Pretreatment Characteristics and Outcomes Stratified by Management Approach",
+      "url": "https://doi.org/10.1002/pd.70199",
+      "why_it_matters": "Largest single-center TAPS stratification; shows treatment choice correlates with presentation characteristics and informs individualized counseling",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Abiad et al. - Prenatal Diagnosis - 2026 - International Expert Consensus on the Diagnosis and Clinical Management of Primary Fetal Pleural Effusion (https://doi.org/10.1002/pd.70221)",
+    "Bennasar et al. - Prenatal Diagnosis - 2026 - The Diagnosis and Prenatal Management of Non-RHD Alloimmunizations (https://doi.org/10.1002/pd.70231)",
+    "Zhang et al. - Prenatal Diagnosis - 2026 - Quality of Evidence for Prenatal Down Syndrome Screening: An Umbrella Review (https://doi.org/10.1002/pd.70191)",
+    "Tudisco et al. - Prenatal Diagnosis - 2026 - Mirror Syndrome (Ballantyne Syndrome): Prenatal Diagnosis, Pathophysiology, and the Role of Fetal Therapy (https://doi.org/10.1002/pd.70228)",
+    "Shantz et al. - Prenatal Diagnosis - 2026 - Twin Anemia Polycythemia Sequence: Pretreatment Characteristics and Outcomes Stratified by Management Approach (https://doi.org/10.1002/pd.70199)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/08/12",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1103
+}
