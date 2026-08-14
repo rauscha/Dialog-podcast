@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260814_050206_signal_in_the_scan_-_week_of_2026_08_14.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Dilemma"
+    },
+    {
+      "start_sec": 54.18,
+      "start_time": "0:54",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 108.36,
+      "start_time": "1:48",
+      "title": "\u2014 Headline: Effect Size and Prognosis Stratification"
+    },
+    {
+      "start_sec": 162.54,
+      "start_time": "2:43",
+      "title": "\u2014 Headline: The Acquisition-Parameter Caveat and Practice Impact"
+    },
+    {
+      "start_sec": 216.72,
+      "start_time": "3:37",
+      "title": "\u2014 Round 1: Node-RADS vs. ESGAR in Rectal Cancer"
+    },
+    {
+      "start_sec": 270.9,
+      "start_time": "4:31",
+      "title": "\u2014 Round 2: HAIC vs. TKIs After Immunotherapy Failure in HCC"
+    },
+    {
+      "start_sec": 325.08,
+      "start_time": "5:25",
+      "title": "\u2014 Round 3: G-PROG and Glaucoma Progression Prediction"
+    },
+    {
+      "start_sec": 379.26,
+      "start_time": "6:19",
+      "title": "\u2014 Round 4: Reader Expertise, LLM Confidence, and Chest Imaging"
+    },
+    {
+      "start_sec": 433.44,
+      "start_time": "7:13",
+      "title": "\u2014 Close: What to Watch, What's Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260814_050206_signal_in_the_scan_-_week_of_2026_08_14.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260814_050206_signal_in_the_scan_-_week_of_2026_08_14.companion.json",
+  "duration_sec": 532.625193,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Multicenter radiomics model offers preoperative prediction of high-grade histology in part-solid lung adenocarcinomas, potentially informing surgical extent decisions",
+      "source": "Radiology",
+      "title": "Contrast-enhanced CT Radiomics for High-Grade Pattern Identification and Prognostic Stratification in Lung Adenocarcinoma with Consolidation-to-Tumor Ratio of 25% or More",
+      "url": "https://doi.org/10.1148/radiol.260264"
+    },
+    {
+      "reason": "Multicenter validation shows comparable performance between two nodal staging systems, providing flexibility for institutional adoption",
+      "source": "Radiology",
+      "title": "Comparison of Diagnostic Performance of Node-RADS and ESGAR Criteria in Rectal Cancer Nodal Assessment at MRI",
+      "url": "https://doi.org/10.1148/radiol.253676"
+    },
+    {
+      "reason": "IPTW-adjusted data supports HAIC over TKIs for tumor response and PFS after immunotherapy failure in advanced HCC",
+      "source": "Radiology",
+      "title": "Comparison of Second-line Hepatic Arterial Infusion Chemotherapy and Tyrosine Kinase Inhibitors in Advanced Hepatocellular Carcinoma",
+      "url": "https://doi.org/10.1148/radiol.253280"
+    },
+    {
+      "reason": "G-PROG model predicts 2\u20135-year glaucoma progression from single fundus images with six-site external validation, advancing single-timepoint prognostication",
+      "source": "Lancet Digital Health",
+      "title": "Prediction of structural glaucoma progression from baseline fundus photographs using deep learning: a retrospective multicentre study",
+      "url": "https://doi.org/10.1016/j.landig.2026.101032"
+    },
+    {
+      "reason": "Reader study demonstrates that human-AI collaboration benefit depends on both model accuracy and reader experience, informing deployment strategies",
+      "source": "Radiology",
+      "title": "Determinants of Reader-LLM Interaction in Thoracic Radiology: Impact of Model Confidence and Reader Expertise",
+      "url": "https://doi.org/10.1148/radiol.253397"
+    }
+  ],
+  "generated_at": "2026-08-14T10:10:53.103811+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A multicenter radiomics model using contrast-enhanced CT can predict high-grade histologic patterns in stage I lung adenocarcinoma and stratify prognosis before surgery",
+      "confidence": "high",
+      "id": "headline_1",
+      "source_ids": [
+        "headline_1"
+      ]
+    },
+    {
+      "claim": "Node-RADS and ESGAR MRI criteria perform comparably for rectal cancer nodal staging, with an optimal Node-RADS threshold validated externally",
+      "confidence": "high",
+      "id": "rounds_1",
+      "source_ids": [
+        "rounds_1"
+      ]
+    },
+    {
+      "claim": "Hepatic arterial infusion chemotherapy outperforms TKIs on tumor response and progression-free survival as second-line therapy in advanced HCC after immunotherapy failure",
+      "confidence": "medium",
+      "id": "rounds_2",
+      "source_ids": [
+        "rounds_2"
+      ]
+    },
+    {
+      "claim": "Deep learning model G-PROG predicts 2\u20135-year structural glaucoma progression from single baseline fundus photographs with multicenter external validation",
+      "confidence": "medium",
+      "id": "rounds_3",
+      "source_ids": [
+        "rounds_3"
+      ]
+    },
+    {
+      "claim": "Radiologist integration of LLM-generated diagnoses improves with high-accuracy models, modulated by reader expertise and displayed model confidence",
+      "confidence": "medium",
+      "id": "rounds_4",
+      "source_ids": [
+        "rounds_4"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "E",
+      "id": "headline_1",
+      "publication": "Radiology",
+      "title": "Contrast-enhanced CT Radiomics for High-Grade Pattern Identification and Prognostic Stratification in Lung Adenocarcinoma with Consolidation-to-Tumor Ratio of 25% or More",
+      "url": "https://doi.org/10.1148/radiol.260264",
+      "why_it_matters": "Multicenter radiomics model offers preoperative prediction of high-grade histology in part-solid lung adenocarcinomas, potentially informing surgical extent decisions",
+      "year": 2026
+    },
+    {
+      "author": "Li",
+      "id": "rounds_1",
+      "publication": "Radiology",
+      "title": "Comparison of Diagnostic Performance of Node-RADS and ESGAR Criteria in Rectal Cancer Nodal Assessment at MRI",
+      "url": "https://doi.org/10.1148/radiol.253676",
+      "why_it_matters": "Multicenter validation shows comparable performance between two nodal staging systems, providing flexibility for institutional adoption",
+      "year": 2026
+    },
+    {
+      "author": "Yoo",
+      "id": "rounds_2",
+      "publication": "Radiology",
+      "title": "Comparison of Second-line Hepatic Arterial Infusion Chemotherapy and Tyrosine Kinase Inhibitors in Advanced Hepatocellular Carcinoma",
+      "url": "https://doi.org/10.1148/radiol.253280",
+      "why_it_matters": "IPTW-adjusted data supports HAIC over TKIs for tumor response and PFS after immunotherapy failure in advanced HCC",
+      "year": 2026
+    },
+    {
+      "author": "Hemelings",
+      "id": "rounds_3",
+      "publication": "Lancet Digital Health",
+      "title": "Prediction of structural glaucoma progression from baseline fundus photographs using deep learning: a retrospective multicentre study",
+      "url": "https://doi.org/10.1016/j.landig.2026.101032",
+      "why_it_matters": "G-PROG model predicts 2\u20135-year glaucoma progression from single fundus images with six-site external validation, advancing single-timepoint prognostication",
+      "year": 2027
+    },
+    {
+      "author": "Song",
+      "id": "rounds_4",
+      "publication": "Radiology",
+      "title": "Determinants of Reader-LLM Interaction in Thoracic Radiology: Impact of Model Confidence and Reader Expertise",
+      "url": "https://doi.org/10.1148/radiol.253397",
+      "why_it_matters": "Reader study demonstrates that human-AI collaboration benefit depends on both model accuracy and reader experience, informing deployment strategies",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "E et al. - Radiology - 2026 - Contrast-enhanced CT Radiomics for High-Grade Pattern Identification and Prognostic Stratification in Lung Adenocarcinoma with Consolidation-to-Tumor Ratio of 25% or More (https://doi.org/10.1148/radiol.260264)",
+    "Li et al. - Radiology - 2026 - Comparison of Diagnostic Performance of Node-RADS and ESGAR Criteria in Rectal Cancer Nodal Assessment at MRI (https://doi.org/10.1148/radiol.253676)",
+    "Yoo et al. - Radiology - 2026 - Comparison of Second-line Hepatic Arterial Infusion Chemotherapy and Tyrosine Kinase Inhibitors in Advanced Hepatocellular Carcinoma (https://doi.org/10.1148/radiol.253280)",
+    "Hemelings et al. - Lancet Digital Health - 2027 - Prediction of structural glaucoma progression from baseline fundus photographs using deep learning: a retrospective multicentre study (https://doi.org/10.1016/j.landig.2026.101032)",
+    "Song et al. - Radiology - 2026 - Determinants of Reader-LLM Interaction in Thoracic Radiology: Impact of Model Confidence and Reader Expertise (https://doi.org/10.1148/radiol.253397)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/08/14",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1228
+}
