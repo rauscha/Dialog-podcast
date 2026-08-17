@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260817_050150_mfm_rounds_-_week_of_2026_08_17.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Question"
+    },
+    {
+      "start_sec": 40.78,
+      "start_time": "0:41",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 81.56,
+      "start_time": "1:22",
+      "title": "\u2014 Headline: Effect Size"
+    },
+    {
+      "start_sec": 122.34,
+      "start_time": "2:02",
+      "title": "\u2014 Headline: The Confounding-by-Indication Problem"
+    },
+    {
+      "start_sec": 163.12,
+      "start_time": "2:43",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 203.9,
+      "start_time": "3:24",
+      "title": "\u2014 Round 1: Nachum \u2014 GDM's Multigenerational Reach"
+    },
+    {
+      "start_sec": 244.67,
+      "start_time": "4:05",
+      "title": "\u2014 Round 2: Graifman \u2014 Carrier Screening Workflow Failures"
+    },
+    {
+      "start_sec": 285.45,
+      "start_time": "4:45",
+      "title": "\u2014 Round 3: Moradi \u2014 Probiotics in ART"
+    },
+    {
+      "start_sec": 326.23,
+      "start_time": "5:26",
+      "title": "\u2014 Round 4: Rao \u2014 TTTS Discordance Threshold"
+    },
+    {
+      "start_sec": 367.01,
+      "start_time": "6:07",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260817_050150_mfm_rounds_-_week_of_2026_08_17.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260817_050150_mfm_rounds_-_week_of_2026_08_17.companion.json",
+  "duration_sec": 452.79068,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Addresses a clinically actionable timing question for aspirin prophylaxis in the moderate-risk population where guidance has been less specific",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Early initiation of low-dose aspirin before 12 weeks improves pregnancy outcomes in women with moderate-risk factors for preeclampsia",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102089"
+    },
+    {
+      "reason": "Sibling-controlled design strengthens causal inference for multigenerational metabolic consequences of GDM",
+      "source": "Am J Obstet Gynecol",
+      "title": "Maternal Gestational Diabetes and the Risk of Polyendocrine Metabolic Ovarian and Metabolic Syndromes in their Daughters: A Sibling Controlled Cohort Study",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.006"
+    },
+    {
+      "reason": "Documents real-world workflow failures in carrier screening that perpetuate inequities in genetic risk detection",
+      "source": "Obstet Gynecol",
+      "title": "Carrier Screening Insights From a Maternal-Fetal Medicine Practice",
+      "url": "https://doi.org/10.1097/aog.0000000000006291"
+    },
+    {
+      "reason": "First pooled analysis of probiotics as ART adjunct; identifies a question worth better trials despite low-moderate evidence quality",
+      "source": "Obstet Gynecol",
+      "title": "Oral and Vaginal Probiotics and Pregnancy Outcomes in Women With Infertility: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006356"
+    },
+    {
+      "reason": "Suggests the standard 25% discordance threshold may not be optimal for TTTS prognostication \u2014 relevant for high-volume fetal therapy centers",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Identifying an optimal inter-twin weight discordance cutoff for predicting donor survival after fetoscopic laser surgery for twin-twin transfusion syndrome",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102081"
+    }
+  ],
+  "generated_at": "2026-08-17T10:08:47.461797+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Initiating low-dose aspirin before 12 weeks in women with multiple moderate-risk factors for preeclampsia reduces preeclampsia and adverse outcomes compared to starting between 12 and 20 weeks",
+      "confidence": "medium",
+      "id": "claim_lee",
+      "source_ids": [
+        "lee2026"
+      ]
+    },
+    {
+      "claim": "In utero exposure to maternal gestational diabetes is associated with increased risk of polycystic ovary syndrome and metabolic syndrome in daughters, even after controlling for shared sibling factors",
+      "confidence": "medium",
+      "id": "claim_nachum",
+      "source_ids": [
+        "nachum2026"
+      ]
+    },
+    {
+      "claim": "Carrier screening in MFM practice frequently occurs too late, uses discordant panels between partners, and lacks concurrent partner testing, perpetuating inequities",
+      "confidence": "low",
+      "id": "claim_graifman",
+      "source_ids": [
+        "graifman2026"
+      ]
+    },
+    {
+      "claim": "Oral and vaginal probiotics may improve pregnancy rates in women with infertility, though evidence quality is low to moderate",
+      "confidence": "medium",
+      "id": "claim_moradi",
+      "source_ids": [
+        "moradi2026"
+      ]
+    },
+    {
+      "claim": "The optimal inter-twin weight discordance threshold for predicting donor survival after fetoscopic laser for TTTS differs from the standard 25% cutoff",
+      "confidence": "low",
+      "id": "claim_rao",
+      "source_ids": [
+        "rao2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Lee",
+      "id": "lee2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Early initiation of low-dose aspirin before 12 weeks improves pregnancy outcomes in women with moderate-risk factors for preeclampsia",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102089",
+      "why_it_matters": "Addresses a clinically actionable timing question for aspirin prophylaxis in the moderate-risk population where guidance has been less specific",
+      "year": 2026
+    },
+    {
+      "author": "Nachum",
+      "id": "nachum2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Maternal Gestational Diabetes and the Risk of Polyendocrine Metabolic Ovarian and Metabolic Syndromes in their Daughters: A Sibling Controlled Cohort Study",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.006",
+      "why_it_matters": "Sibling-controlled design strengthens causal inference for multigenerational metabolic consequences of GDM",
+      "year": 2026
+    },
+    {
+      "author": "Graifman",
+      "id": "graifman2026",
+      "publication": "Obstet Gynecol",
+      "title": "Carrier Screening Insights From a Maternal-Fetal Medicine Practice",
+      "url": "https://doi.org/10.1097/aog.0000000000006291",
+      "why_it_matters": "Documents real-world workflow failures in carrier screening that perpetuate inequities in genetic risk detection",
+      "year": 2026
+    },
+    {
+      "author": "Moradi",
+      "id": "moradi2026",
+      "publication": "Obstet Gynecol",
+      "title": "Oral and Vaginal Probiotics and Pregnancy Outcomes in Women With Infertility: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006356",
+      "why_it_matters": "First pooled analysis of probiotics as ART adjunct; identifies a question worth better trials despite low-moderate evidence quality",
+      "year": 2026
+    },
+    {
+      "author": "Rao",
+      "id": "rao2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Identifying an optimal inter-twin weight discordance cutoff for predicting donor survival after fetoscopic laser surgery for twin-twin transfusion syndrome",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102081",
+      "why_it_matters": "Suggests the standard 25% discordance threshold may not be optimal for TTTS prognostication \u2014 relevant for high-volume fetal therapy centers",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Lee et al. - Am J Obstet Gynecol MFM - 2026 - Early initiation of low-dose aspirin before 12 weeks improves pregnancy outcomes in women with moderate-risk factors for preeclampsia (https://doi.org/10.1016/j.ajogmf.2026.102089)",
+    "Nachum et al. - Am J Obstet Gynecol - 2026 - Maternal Gestational Diabetes and the Risk of Polyendocrine Metabolic Ovarian and Metabolic Syndromes in their Daughters: A Sibling Controlled Cohort Study (https://doi.org/10.1016/j.ajog.2026.08.006)",
+    "Graifman et al. - Obstet Gynecol - 2026 - Carrier Screening Insights From a Maternal-Fetal Medicine Practice (https://doi.org/10.1097/aog.0000000000006291)",
+    "Moradi et al. - Obstet Gynecol - 2026 - Oral and Vaginal Probiotics and Pregnancy Outcomes in Women With Infertility: A Systematic Review and Meta-analysis (https://doi.org/10.1097/aog.0000000000006356)",
+    "Rao et al. - Am J Obstet Gynecol MFM - 2026 - Identifying an optimal inter-twin weight discordance cutoff for predicting donor survival after fetoscopic laser surgery for twin-twin transfusion syndrome (https://doi.org/10.1016/j.ajogmf.2026.102081)"
+  ],
+  "topic": "MFM Rounds - week of 2026/08/17",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1060
+}
