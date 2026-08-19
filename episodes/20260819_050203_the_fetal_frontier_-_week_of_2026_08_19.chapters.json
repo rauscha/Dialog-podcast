@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 COLD OPEN: What Changed This Week"
+    },
+    {
+      "startTime": 48.57,
+      "title": "\u2014 HEADLINE: Clinical Question and Design Choice"
+    },
+    {
+      "startTime": 97.15,
+      "title": "\u2014 HEADLINE: Effect and the Occlusion Duration Finding"
+    },
+    {
+      "startTime": 145.72,
+      "title": "\u2014 HEADLINE: Key Caveat \u2014 Anatomy or Biology?"
+    },
+    {
+      "startTime": 194.29,
+      "title": "\u2014 HEADLINE: Practice Implications"
+    },
+    {
+      "startTime": 242.86,
+      "title": "\u2014 ROUND 1: Xu \u2014 Trio-Exome MIE Analysis for UPD Detection"
+    },
+    {
+      "startTime": 291.44,
+      "title": "\u2014 ROUND 2: Duquenne \u2014 cfDNA Platform PPV Variability"
+    },
+    {
+      "startTime": 340.01,
+      "title": "\u2014 ROUND 3: Sonner/ODYSSEY \u2014 Prenatal Exome Yield Gap"
+    },
+    {
+      "startTime": 388.58,
+      "title": "\u2014 ROUND 4: Carmant \u2014 Interhemispheric Fissure Distortion in OSB"
+    },
+    {
+      "startTime": 437.15,
+      "title": "\u2014 CLOSE: What Remains Open"
+    }
+  ],
+  "version": "1.2.0"
+}
