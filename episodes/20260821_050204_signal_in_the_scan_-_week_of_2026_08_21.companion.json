@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260821_050204_signal_in_the_scan_-_week_of_2026_08_21.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changed This Week"
+    },
+    {
+      "start_sec": 30.63,
+      "start_time": "0:31",
+      "title": "\u2014 Headline: Clinical Question and Design"
+    },
+    {
+      "start_sec": 61.26,
+      "start_time": "1:01",
+      "title": "\u2014 Headline: Effect in Numbers"
+    },
+    {
+      "start_sec": 91.9,
+      "start_time": "1:32",
+      "title": "\u2014 Headline: Key Caveat and Generalizability Ceiling"
+    },
+    {
+      "start_sec": 122.53,
+      "start_time": "2:03",
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "start_sec": 153.16,
+      "start_time": "2:33",
+      "title": "\u2014 Round 1: McCoy CTG Corrigendum"
+    },
+    {
+      "start_sec": 183.79,
+      "start_time": "3:04",
+      "title": "\u2014 Round 2: Coelho Prostate MRI Quality Framework"
+    },
+    {
+      "start_sec": 214.43,
+      "start_time": "3:34",
+      "title": "\u2014 Round 3: Zhao 68Ga-NK224 PET in NSCLC"
+    },
+    {
+      "start_sec": 245.06,
+      "start_time": "4:05",
+      "title": "\u2014 Round 4: Asghariahmadabad OEF and Ischemic Core"
+    },
+    {
+      "start_sec": 275.69,
+      "start_time": "4:36",
+      "title": "\u2014 Close: What to Watch, What's Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260821_050204_signal_in_the_scan_-_week_of_2026_08_21.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260821_050204_signal_in_the_scan_-_week_of_2026_08_21.companion.json",
+  "duration_sec": 351.322358,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First multinational multicenter external validation showing AI fracture detection maintains accuracy across European sites and improves clinician performance as a second reader",
+      "source": "Radiology",
+      "title": "Multinational Validation of a Radiography-Based AI Tool for Appendicular Fracture Detection and Corresponding Reader Performance",
+      "url": "https://doi.org/10.1148/radiol.243548"
+    },
+    {
+      "reason": "Published correction to a high-profile deep-learning CTG study \u2014 relevant for anyone citing or building on that work",
+      "source": "Am J Obstet Gynecol",
+      "title": "Corrigendum to 'Intrapartum electronic fetal heart rate monitoring to predict acidemia at birth with the use of deep learning'",
+      "url": "https://doi.org/10.1016/j.ajog.2026.04.019"
+    },
+    {
+      "reason": "Demonstrates that AI-derived image quality scores calibrated to diagnostic outcomes outperform subjective reader labels for prostate MRI",
+      "source": "Radiology",
+      "title": "Diagnostically Calibrated AI Image Quality Framework Applied to Prostate Cancer Detection at MRI",
+      "url": "https://doi.org/10.1148/radiol.253360"
+    },
+    {
+      "reason": "Novel PET tracer captures whole-body PD-L1 heterogeneity missed by single-biopsy IHC, with uptake correlating to immunotherapy response",
+      "source": "Radiology",
+      "title": "68Ga-NK224 PET/CT Reveals Intra- and Intertumoral Heterogeneity of PD-L1 in Non-Small Cell Lung Cancer",
+      "url": "https://doi.org/10.1148/radiol.260372"
+    },
+    {
+      "reason": "Pre-treatment OEF from DSC-MRI predicts which ischemic core voxels are salvageable, refining core volume estimates in hyperacute stroke",
+      "source": "Radiology",
+      "title": "MRI Metabolic Biomarkers Predict Ischemic Lesion Survival in Hyperacute Stroke: New Insight on Diffusion Reversibility",
+      "url": "https://doi.org/10.1148/radiol.252121"
+    }
+  ],
+  "generated_at": "2026-08-21T10:08:45.712607+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "An AI fracture detection tool maintained diagnostic accuracy across three European hospitals and improved clinician sensitivity and specificity when used as a second reader",
+      "confidence": "high",
+      "id": "claim_ruitenbeek",
+      "source_ids": [
+        "ruitenbeek2026"
+      ]
+    },
+    {
+      "claim": "Errors in a prior deep-learning CTG study for predicting neonatal acidemia have been formally corrected; primary findings remain but specific figures required amendment",
+      "confidence": "low",
+      "id": "claim_mccoy",
+      "source_ids": [
+        "mccoy2026"
+      ]
+    },
+    {
+      "claim": "Deep-learning image quality scores calibrated to actual prostate cancer detection accuracy outperform subjective reader-based quality labels in predicting AI diagnostic performance",
+      "confidence": "medium",
+      "id": "claim_coelho",
+      "source_ids": [
+        "coelho2026"
+      ]
+    },
+    {
+      "claim": "68Ga-NK224 PET/CT noninvasively captures whole-body PD-L1 heterogeneity in NSCLC, and lesion-specific uptake correlates with immunotherapy response better than single-biopsy IHC",
+      "confidence": "medium",
+      "id": "claim_zhao",
+      "source_ids": [
+        "zhao2026"
+      ]
+    },
+    {
+      "claim": "Pre-treatment oxygen extraction fraction derived from DSC-MRI predicts which ischemic core voxels will undergo diffusion reversal after successful reperfusion",
+      "confidence": "medium",
+      "id": "claim_asghariahmadabad",
+      "source_ids": [
+        "asghariahmadabad2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Ruitenbeek",
+      "id": "ruitenbeek2026",
+      "publication": "Radiology",
+      "title": "Multinational Validation of a Radiography-Based AI Tool for Appendicular Fracture Detection and Corresponding Reader Performance",
+      "url": "https://doi.org/10.1148/radiol.243548",
+      "why_it_matters": "First multinational multicenter external validation showing AI fracture detection maintains accuracy across European sites and improves clinician performance as a second reader",
+      "year": 2026
+    },
+    {
+      "author": "McCoy",
+      "id": "mccoy2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Corrigendum to 'Intrapartum electronic fetal heart rate monitoring to predict acidemia at birth with the use of deep learning'",
+      "url": "https://doi.org/10.1016/j.ajog.2026.04.019",
+      "why_it_matters": "Published correction to a high-profile deep-learning CTG study \u2014 relevant for anyone citing or building on that work",
+      "year": 2026
+    },
+    {
+      "author": "Coelho",
+      "id": "coelho2026",
+      "publication": "Radiology",
+      "title": "Diagnostically Calibrated AI Image Quality Framework Applied to Prostate Cancer Detection at MRI",
+      "url": "https://doi.org/10.1148/radiol.253360",
+      "why_it_matters": "Demonstrates that AI-derived image quality scores calibrated to diagnostic outcomes outperform subjective reader labels for prostate MRI",
+      "year": 2026
+    },
+    {
+      "author": "Zhao",
+      "id": "zhao2026",
+      "publication": "Radiology",
+      "title": "68Ga-NK224 PET/CT Reveals Intra- and Intertumoral Heterogeneity of PD-L1 in Non-Small Cell Lung Cancer",
+      "url": "https://doi.org/10.1148/radiol.260372",
+      "why_it_matters": "Novel PET tracer captures whole-body PD-L1 heterogeneity missed by single-biopsy IHC, with uptake correlating to immunotherapy response",
+      "year": 2026
+    },
+    {
+      "author": "Asghariahmadabad",
+      "id": "asghariahmadabad2026",
+      "publication": "Radiology",
+      "title": "MRI Metabolic Biomarkers Predict Ischemic Lesion Survival in Hyperacute Stroke: New Insight on Diffusion Reversibility",
+      "url": "https://doi.org/10.1148/radiol.252121",
+      "why_it_matters": "Pre-treatment OEF from DSC-MRI predicts which ischemic core voxels are salvageable, refining core volume estimates in hyperacute stroke",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Ruitenbeek et al. - Radiology - 2026 - Multinational Validation of a Radiography-Based AI Tool for Appendicular Fracture Detection and Corresponding Reader Performance (https://doi.org/10.1148/radiol.243548)",
+    "McCoy et al. - Am J Obstet Gynecol - 2026 - Corrigendum to 'Intrapartum electronic fetal heart rate monitoring to predict acidemia at birth with the use of deep learning' (https://doi.org/10.1016/j.ajog.2026.04.019)",
+    "Coelho et al. - Radiology - 2026 - Diagnostically Calibrated AI Image Quality Framework Applied to Prostate Cancer Detection at MRI (https://doi.org/10.1148/radiol.253360)",
+    "Zhao et al. - Radiology - 2026 - 68Ga-NK224 PET/CT Reveals Intra- and Intertumoral Heterogeneity of PD-L1 in Non-Small Cell Lung Cancer (https://doi.org/10.1148/radiol.260372)",
+    "Asghariahmadabad et al. - Radiology - 2026 - MRI Metabolic Biomarkers Predict Ischemic Lesion Survival in Hyperacute Stroke: New Insight on Diffusion Reversibility (https://doi.org/10.1148/radiol.252121)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/08/21",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 807
+}
