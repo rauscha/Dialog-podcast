@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260824_050201_mfm_rounds_-_week_of_2026_08_24.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week's Lead Paper Does"
+    },
+    {
+      "start_sec": 65.68,
+      "start_time": "1:06",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 131.35,
+      "start_time": "2:11",
+      "title": "\u2014 Headline: Evidence Grades and Effect Sizes by Indication"
+    },
+    {
+      "start_sec": 197.03,
+      "start_time": "3:17",
+      "title": "\u2014 Headline: What Changes in Practice"
+    },
+    {
+      "start_sec": 262.7,
+      "start_time": "4:23",
+      "title": "\u2014 Pivot and Round 1: Thyroid Trajectories by TPO Status"
+    },
+    {
+      "start_sec": 328.38,
+      "start_time": "5:28",
+      "title": "\u2014 Round 2: Continuous BMI Modeling"
+    },
+    {
+      "start_sec": 394.06,
+      "start_time": "6:34",
+      "title": "\u2014 Round 3: Oxytocin Infusion Rate and Blood Loss"
+    },
+    {
+      "start_sec": 459.73,
+      "start_time": "7:40",
+      "title": "\u2014 Round 4: Severe HDP Recurrence Risk"
+    },
+    {
+      "start_sec": 525.41,
+      "start_time": "8:45",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260824_050201_mfm_rounds_-_week_of_2026_08_24.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260824_050201_mfm_rounds_-_week_of_2026_08_24.companion.json",
+  "duration_sec": 636.084739,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Authoritative guideline consolidating cerclage indications, techniques, and management \u2014 directly governs MFM clinical practice and standardizes counseling.",
+      "source": "Obstet Gynecol",
+      "title": "Obstetric Cerclage.",
+      "url": "https://doi.org/10.1097/aog.0000000000006379"
+    },
+    {
+      "reason": "Multicenter RCT secondary analysis characterizing thyroid trajectories by TPO status \u2014 informs monitoring and postpartum counseling.",
+      "source": "Obstet Gynecol",
+      "title": "Thyroid Function Throughout Pregnancy in Women With Subclinical Hypothyroidism or Hypothyroxinemia.",
+      "url": "https://doi.org/10.1097/aog.0000000000006373"
+    },
+    {
+      "reason": "Large population data showing nonlinear BMI-risk relationships \u2014 refines counseling with outcome-specific absolute risks.",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Modeling Pre-Pregnancy Body Mass Index as a Continuous Exposure for Obstetric and Neonatal Outcomes: A Population-Based Analysis of 3.4 Million Births.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102091"
+    },
+    {
+      "reason": "Block-randomized QI study supporting higher oxytocin infusion rates for PPH prevention \u2014 actionable for labor and delivery protocols.",
+      "source": "Obstet Gynecol",
+      "title": "A Quality-Improvement Study Evaluating Three Postpartum Prophylactic Oxytocin Rates and Blood Loss After Vaginal Birth.",
+      "url": "https://doi.org/10.1097/aog.0000000000006355"
+    },
+    {
+      "reason": "Large US cohort quantifying ~15% recurrence risk after severe HDP \u2014 anchors preconception counseling with concrete numbers.",
+      "source": "Obstet Gynecol",
+      "title": "Risk of Recurrent Severe Preeclampsia, HELLP (Hemolysis, Elevated Liver Enzymes, and Low Platelet Count) Syndrome, and Eclampsia in a Subsequent Pregnancy.",
+      "url": "https://doi.org/10.1097/aog.0000000000006398"
+    }
+  ],
+  "generated_at": "2026-08-24T10:11:11.673900+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "ACOG guideline consolidates cerclage indications, techniques, and management using modified GRADE, clarifying which patients benefit from cerclage versus progesterone alone.",
+      "confidence": "high",
+      "id": "cerclage_guideline",
+      "source_ids": [
+        "cerclage_guideline"
+      ]
+    },
+    {
+      "claim": "Thyroid function trajectories in subclinical hypothyroidism and hypothyroxinemia vary by TPO antibody status through pregnancy and one year postpartum.",
+      "confidence": "high",
+      "id": "thyroid_rct",
+      "source_ids": [
+        "thyroid_rct"
+      ]
+    },
+    {
+      "claim": "Continuous spline modeling of pre-pregnancy BMI reveals nonlinear, outcome-specific risk relationships, with categorical thresholds underestimating risk at extremes.",
+      "confidence": "medium",
+      "id": "bmi_spline",
+      "source_ids": [
+        "bmi_spline"
+      ]
+    },
+    {
+      "claim": "Higher-rate postpartum oxytocin infusion reduces median quantitative blood loss compared to lower rates after vaginal birth.",
+      "confidence": "high",
+      "id": "oxytocin_qi",
+      "source_ids": [
+        "oxytocin_qi"
+      ]
+    },
+    {
+      "claim": "Prior severe preeclampsia, HELLP, or eclampsia confers approximately 15% recurrence risk in subsequent pregnancy, with earlier index delivery predicting higher recurrence.",
+      "confidence": "medium",
+      "id": "preeclampsia_recurrence",
+      "source_ids": [
+        "preeclampsia_recurrence"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "ACOG Committee on Clinical Practice Guidelines\u2013Obstetrics in collaboration with Andrew S. Thagard, MD, Andrea D. Shields, MD, MS, and Cynthia Gyamfi-Bannerman, MD, MS",
+      "id": "cerclage_guideline",
+      "publication": "Obstet Gynecol",
+      "title": "Obstetric Cerclage.",
+      "url": "https://doi.org/10.1097/aog.0000000000006379",
+      "why_it_matters": "Authoritative guideline consolidating cerclage indications, techniques, and management \u2014 directly governs MFM clinical practice and standardizes counseling.",
+      "year": 2026
+    },
+    {
+      "author": "Theilen",
+      "id": "thyroid_rct",
+      "publication": "Obstet Gynecol",
+      "title": "Thyroid Function Throughout Pregnancy in Women With Subclinical Hypothyroidism or Hypothyroxinemia.",
+      "url": "https://doi.org/10.1097/aog.0000000000006373",
+      "why_it_matters": "Multicenter RCT secondary analysis characterizing thyroid trajectories by TPO status \u2014 informs monitoring and postpartum counseling.",
+      "year": 2026
+    },
+    {
+      "author": "Sebag",
+      "id": "bmi_spline",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Modeling Pre-Pregnancy Body Mass Index as a Continuous Exposure for Obstetric and Neonatal Outcomes: A Population-Based Analysis of 3.4 Million Births.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102091",
+      "why_it_matters": "Large population data showing nonlinear BMI-risk relationships \u2014 refines counseling with outcome-specific absolute risks.",
+      "year": 2026
+    },
+    {
+      "author": "Litman",
+      "id": "oxytocin_qi",
+      "publication": "Obstet Gynecol",
+      "title": "A Quality-Improvement Study Evaluating Three Postpartum Prophylactic Oxytocin Rates and Blood Loss After Vaginal Birth.",
+      "url": "https://doi.org/10.1097/aog.0000000000006355",
+      "why_it_matters": "Block-randomized QI study supporting higher oxytocin infusion rates for PPH prevention \u2014 actionable for labor and delivery protocols.",
+      "year": 2026
+    },
+    {
+      "author": "Trawick",
+      "id": "preeclampsia_recurrence",
+      "publication": "Obstet Gynecol",
+      "title": "Risk of Recurrent Severe Preeclampsia, HELLP (Hemolysis, Elevated Liver Enzymes, and Low Platelet Count) Syndrome, and Eclampsia in a Subsequent Pregnancy.",
+      "url": "https://doi.org/10.1097/aog.0000000000006398",
+      "why_it_matters": "Large US cohort quantifying ~15% recurrence risk after severe HDP \u2014 anchors preconception counseling with concrete numbers.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "ACOG Committee on Clinical Practice Guidelines\u2013Obstetrics in collaboration with Andrew S. Thagard, MD, Andrea D. Shields, MD, MS, and Cynthia Gyamfi-Bannerman, MD, MS - Obstet Gynecol - 2026 - Obstetric Cerclage. (https://doi.org/10.1097/aog.0000000000006379)",
+    "Theilen et al. - Obstet Gynecol - 2026 - Thyroid Function Throughout Pregnancy in Women With Subclinical Hypothyroidism or Hypothyroxinemia. (https://doi.org/10.1097/aog.0000000000006373)",
+    "Sebag et al. - Am J Obstet Gynecol MFM - 2026 - Modeling Pre-Pregnancy Body Mass Index as a Continuous Exposure for Obstetric and Neonatal Outcomes: A Population-Based Analysis of 3.4 Million Births. (https://doi.org/10.1016/j.ajogmf.2026.102091)",
+    "Litman et al. - Obstet Gynecol - 2026 - A Quality-Improvement Study Evaluating Three Postpartum Prophylactic Oxytocin Rates and Blood Loss After Vaginal Birth. (https://doi.org/10.1097/aog.0000000000006355)",
+    "Trawick et al. - Obstet Gynecol - 2026 - Risk of Recurrent Severe Preeclampsia, HELLP (Hemolysis, Elevated Liver Enzymes, and Low Platelet Count) Syndrome, and Eclampsia in a Subsequent Pregnancy. (https://doi.org/10.1097/aog.0000000000006398)"
+  ],
+  "topic": "MFM Rounds - week of 2026/08/24",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1462
+}
