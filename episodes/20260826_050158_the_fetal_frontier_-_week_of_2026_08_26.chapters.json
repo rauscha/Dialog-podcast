@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Two Numbers That Don't Move Together"
+    },
+    {
+      "startTime": 37.83,
+      "title": "\u2014 Headline: Formal Citation and Design"
+    },
+    {
+      "startTime": 75.67,
+      "title": "\u2014 Headline: The Effect Sizes and What They Mean Together"
+    },
+    {
+      "startTime": 113.5,
+      "title": "\u2014 Headline: The Mosaicism Ratio Analysis and Its Failure"
+    },
+    {
+      "startTime": 151.34,
+      "title": "\u2014 Headline: Practice Implication \u2014 Post-Amnio Surveillance Is Not Optional"
+    },
+    {
+      "startTime": 189.17,
+      "title": "\u2014 Round 1: Propranolol for Chorioangioma (van der Meeren)"
+    },
+    {
+      "startTime": 227.0,
+      "title": "\u2014 Round 2: KBG Syndrome Prenatal Phenotype (Yang)"
+    },
+    {
+      "startTime": 264.84,
+      "title": "\u2014 Round 3: Flexible vs. Rigid Fetoscope Simulator Trial (Rault)"
+    },
+    {
+      "startTime": 302.67,
+      "title": "\u2014 Round 4: Prenatal BWS Molecular Testing (Connolly)"
+    },
+    {
+      "startTime": 340.51,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}

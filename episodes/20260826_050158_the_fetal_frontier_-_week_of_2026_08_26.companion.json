@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260826_050158_the_fetal_frontier_-_week_of_2026_08_26.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Two Numbers That Don't Move Together"
+    },
+    {
+      "start_sec": 37.83,
+      "start_time": "0:38",
+      "title": "\u2014 Headline: Formal Citation and Design"
+    },
+    {
+      "start_sec": 75.67,
+      "start_time": "1:16",
+      "title": "\u2014 Headline: The Effect Sizes and What They Mean Together"
+    },
+    {
+      "start_sec": 113.5,
+      "start_time": "1:54",
+      "title": "\u2014 Headline: The Mosaicism Ratio Analysis and Its Failure"
+    },
+    {
+      "start_sec": 151.34,
+      "start_time": "2:31",
+      "title": "\u2014 Headline: Practice Implication \u2014 Post-Amnio Surveillance Is Not Optional"
+    },
+    {
+      "start_sec": 189.17,
+      "start_time": "3:09",
+      "title": "\u2014 Round 1: Propranolol for Chorioangioma (van der Meeren)"
+    },
+    {
+      "start_sec": 227.0,
+      "start_time": "3:47",
+      "title": "\u2014 Round 2: KBG Syndrome Prenatal Phenotype (Yang)"
+    },
+    {
+      "start_sec": 264.84,
+      "start_time": "4:25",
+      "title": "\u2014 Round 3: Flexible vs. Rigid Fetoscope Simulator Trial (Rault)"
+    },
+    {
+      "start_sec": 302.67,
+      "start_time": "5:03",
+      "title": "\u2014 Round 4: Prenatal BWS Molecular Testing (Connolly)"
+    },
+    {
+      "start_sec": 340.51,
+      "start_time": "5:41",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260826_050158_the_fetal_frontier_-_week_of_2026_08_26.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260826_050158_the_fetal_frontier_-_week_of_2026_08_26.companion.json",
+  "duration_sec": 423.341474,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Provides large-cohort data showing that while fetal PPV for rare autosomal trisomies is low, adverse pregnancy outcomes occur in about a third of cases regardless of fetal confirmation \u2014 reshaping post-NIPT counseling and surveillance.",
+      "source": "Prenatal Diagnosis",
+      "title": "Rare Autosomal Trisomies Detected by Noninvasive Prenatal Testing: Performance, Outcomes, and Exploratory Analysis of the Theoretical Mosaicism Ratio",
+      "url": "https://doi.org/10.1002/pd.70237"
+    },
+    {
+      "reason": "First case series suggesting maternal oral propranolol may achieve tumor regression and fetal stabilization in symptomatic chorioangioma, potentially offering a non-invasive alternative to fetoscopic ablation.",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Maternal propranolol as a safe alternative to invasive fetal surgery in chorioangioma management",
+      "url": "https://doi.org/10.1002/uog.70272"
+    },
+    {
+      "reason": "Defines the prenatal phenotype of KBG syndrome and highlights that non-coding 16q24.3 deletions may be missed without targeted microarray analysis.",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal Genetic and Sonographic Features of KBG Syndrome: A Cohort Study of 19 Fetal Cases",
+      "url": "https://doi.org/10.1002/pd.70241"
+    },
+    {
+      "reason": "Simulator trial showing no performance difference between flexible and rigid fetoscopes for TTTS laser, relevant for equipment decisions in challenging placental locations.",
+      "source": "Prenatal Diagnosis",
+      "title": "Performance of a Flexible Versus Rigid Fetoscope in the Simulated Management of Twin-to-Twin Transfusion Syndrome",
+      "url": "https://doi.org/10.1002/pd.70213"
+    },
+    {
+      "reason": "Large multi-lab dataset quantifying prenatal BWS detection rates and practical limitations from methylation mosaicism and sample failures \u2014 directly informs pre-test counseling.",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal Genetic Testing for Beckwith-Wiedemann Syndrome: Considerations, Challenges and Observations (A Real-World Study)",
+      "url": "https://doi.org/10.1002/pd.70206"
+    }
+  ],
+  "generated_at": "2026-08-26T10:14:42.414189+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Genome-wide NIPT rare autosomal trisomies have a fetal PPV of approximately 5 percent, but about one-third of flagged pregnancies experience adverse outcomes including growth restriction, stillbirth, or preterm delivery; the theoretical mosaicism ratio does not reliably predict which pregnancies are at highest risk.",
+      "confidence": "medium",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "Maternal oral propranolol led to chorioangioma regression and resolution of fetal cardiac decompensation in all four treated cases without need for fetoscopic intervention.",
+      "confidence": "low",
+      "id": "vandermeeren2026",
+      "source_ids": [
+        "vandermeeren2026"
+      ]
+    },
+    {
+      "claim": "The most common prenatal findings in KBG syndrome are fetal growth restriction and increased nuchal translucency; chromosomal microarray can detect non-coding 16q24.3 deletions that targeted sequencing may miss.",
+      "confidence": "low",
+      "id": "yang2026",
+      "source_ids": [
+        "yang2026"
+      ]
+    },
+    {
+      "claim": "Flexible and rigid fetoscopes showed no significant difference in operator performance for simulated TTTS Solomonization across 20 operators in a crossover design.",
+      "confidence": "medium",
+      "id": "rault2026",
+      "source_ids": [
+        "rault2026"
+      ]
+    },
+    {
+      "claim": "Prenatal molecular testing for Beckwith-Wiedemann syndrome yields a detection rate of approximately 10 percent, with methylation mosaicism and sample failures representing key practical limitations.",
+      "confidence": "medium",
+      "id": "connolly2026",
+      "source_ids": [
+        "connolly2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Rare Autosomal Trisomies Detected by Noninvasive Prenatal Testing: Performance, Outcomes, and Exploratory Analysis of the Theoretical Mosaicism Ratio",
+      "url": "https://doi.org/10.1002/pd.70237",
+      "why_it_matters": "Provides large-cohort data showing that while fetal PPV for rare autosomal trisomies is low, adverse pregnancy outcomes occur in about a third of cases regardless of fetal confirmation \u2014 reshaping post-NIPT counseling and surveillance.",
+      "year": 2026
+    },
+    {
+      "author": "van der Meeren",
+      "id": "vandermeeren2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Maternal propranolol as a safe alternative to invasive fetal surgery in chorioangioma management",
+      "url": "https://doi.org/10.1002/uog.70272",
+      "why_it_matters": "First case series suggesting maternal oral propranolol may achieve tumor regression and fetal stabilization in symptomatic chorioangioma, potentially offering a non-invasive alternative to fetoscopic ablation.",
+      "year": 2026
+    },
+    {
+      "author": "Yang",
+      "id": "yang2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal Genetic and Sonographic Features of KBG Syndrome: A Cohort Study of 19 Fetal Cases",
+      "url": "https://doi.org/10.1002/pd.70241",
+      "why_it_matters": "Defines the prenatal phenotype of KBG syndrome and highlights that non-coding 16q24.3 deletions may be missed without targeted microarray analysis.",
+      "year": 2026
+    },
+    {
+      "author": "Rault",
+      "id": "rault2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Performance of a Flexible Versus Rigid Fetoscope in the Simulated Management of Twin-to-Twin Transfusion Syndrome",
+      "url": "https://doi.org/10.1002/pd.70213",
+      "why_it_matters": "Simulator trial showing no performance difference between flexible and rigid fetoscopes for TTTS laser, relevant for equipment decisions in challenging placental locations.",
+      "year": 2026
+    },
+    {
+      "author": "Connolly",
+      "id": "connolly2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal Genetic Testing for Beckwith-Wiedemann Syndrome: Considerations, Challenges and Observations (A Real-World Study)",
+      "url": "https://doi.org/10.1002/pd.70206",
+      "why_it_matters": "Large multi-lab dataset quantifying prenatal BWS detection rates and practical limitations from methylation mosaicism and sample failures \u2014 directly informs pre-test counseling.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Liu et al. - Prenatal Diagnosis - 2026 - Rare Autosomal Trisomies Detected by Noninvasive Prenatal Testing: Performance, Outcomes, and Exploratory Analysis of the Theoretical Mosaicism Ratio (https://doi.org/10.1002/pd.70237)",
+    "van der Meeren - Ultrasound in Obstetrics and Gynecology - 2026 - Maternal propranolol as a safe alternative to invasive fetal surgery in chorioangioma management (https://doi.org/10.1002/uog.70272)",
+    "Yang et al. - Prenatal Diagnosis - 2026 - Prenatal Genetic and Sonographic Features of KBG Syndrome: A Cohort Study of 19 Fetal Cases (https://doi.org/10.1002/pd.70241)",
+    "Rault et al. - Prenatal Diagnosis - 2026 - Performance of a Flexible Versus Rigid Fetoscope in the Simulated Management of Twin-to-Twin Transfusion Syndrome (https://doi.org/10.1002/pd.70213)",
+    "Connolly et al. - Prenatal Diagnosis - 2026 - Prenatal Genetic Testing for Beckwith-Wiedemann Syndrome: Considerations, Challenges and Observations (A Real-World Study) (https://doi.org/10.1002/pd.70206)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/08/26",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 962
+}
