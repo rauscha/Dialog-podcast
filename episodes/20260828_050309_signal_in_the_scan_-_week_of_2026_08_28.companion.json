@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260828_050309_signal_in_the_scan_-_week_of_2026_08_28.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Verdict That Wasn't Final"
+    },
+    {
+      "start_sec": 51.77,
+      "start_time": "0:52",
+      "title": "\u2014 Headline: Clinical Question and Trial Background"
+    },
+    {
+      "start_sec": 103.55,
+      "start_time": "1:44",
+      "title": "\u2014 Headline: The Method (Why This Isn't Data Dredging)"
+    },
+    {
+      "start_sec": 155.32,
+      "start_time": "2:35",
+      "title": "\u2014 Headline: The Finding and Effect Size"
+    },
+    {
+      "start_sec": 207.09,
+      "start_time": "3:27",
+      "title": "\u2014 Headline: Caveat and Practice Impact"
+    },
+    {
+      "start_sec": 258.86,
+      "start_time": "4:19",
+      "title": "\u2014 Round 1: SCAN-MRI in Type 2 Diabetes"
+    },
+    {
+      "start_sec": 310.64,
+      "start_time": "5:11",
+      "title": "\u2014 Round 2: Popliteal Artery Wall Morphology and Knee OA"
+    },
+    {
+      "start_sec": 362.41,
+      "start_time": "6:02",
+      "title": "\u2014 Round 3: Ground-Glass Nodule Growth Trajectories"
+    },
+    {
+      "start_sec": 414.18,
+      "start_time": "6:54",
+      "title": "\u2014 Round 4: MORGOTH EEG Foundation Model"
+    },
+    {
+      "start_sec": 465.95,
+      "start_time": "7:46",
+      "title": "\u2014 Close: What to Watch, What's Still Open"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260828_050309_signal_in_the_scan_-_week_of_2026_08_28.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260828_050309_signal_in_the_scan_-_week_of_2026_08_28.companion.json",
+  "duration_sec": 562.726077,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Demonstrates that interpretable AI can rescue actionable subgroup findings from negative RCTs, with direct implications for sarcoma management and trial reanalysis methodology",
+      "source": "Lancet Digital Health",
+      "title": "Identifying subsets of patients with retroperitoneal sarcoma who benefit from radiotherapy: an Interpretable AI reanalysis of the STRASS randomised trial",
+      "url": "https://doi.org/10.1016/j.landig.2026.101021"
+    },
+    {
+      "reason": "Multi-cohort validation shows imaging-derived biomarkers can outperform clinical scores for CV risk in diabetes, potentially changing risk stratification",
+      "source": "Radiology",
+      "title": "SCAN-MRI: Cardiac MRI-integrated Risk Score for Predicting Cardiovascular Events in Type 2 Diabetes Mellitus",
+      "url": "https://doi.org/10.1148/radiol.252374"
+    },
+    {
+      "reason": "Large multicenter data linking vascular imaging findings to OA progression, suggesting systemic vascular health may influence joint disease",
+      "source": "Radiology",
+      "title": "Associations of Popliteal Artery Wall Morphology at MRI and Knee Osteoarthritis in the Osteoarthritis Initiative",
+      "url": "https://doi.org/10.1148/radiol.253583"
+    },
+    {
+      "reason": "Provides data-driven guidance for surveillance intervals of incidental lung nodules, addressing a common clinical dilemma",
+      "source": "Radiology",
+      "title": "Growth Patterns and Risk Stratification of Incidental Small Pure Ground-Glass Nodules across Independent Cohorts",
+      "url": "https://doi.org/10.1148/radiol.253139"
+    },
+    {
+      "reason": "Broad external validation of an EEG foundation model suggests AI may standardize and accelerate neurological diagnostics across diverse settings",
+      "source": "Lancet Digital Health",
+      "title": "Toward unified and comprehensive automated electroencephalogram interpretation: a multicentre development and validation of an electroencephalogram foundation model",
+      "url": "https://doi.org/10.1016/j.landig.2026.101039"
+    }
+  ],
+  "generated_at": "2026-08-28T10:11:49.276786+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Interpretable AI reanalysis of the STRASS RCT identifies liposarcoma subsets that benefit from preoperative radiotherapy, refining the original null overall finding",
+      "confidence": "high",
+      "id": "bertsimas2026",
+      "source_ids": [
+        "bertsimas2026"
+      ]
+    },
+    {
+      "claim": "A cardiac MRI-derived risk score outperforms standard clinical calculators for predicting heart failure hospitalization or cardiovascular death in type 2 diabetes",
+      "confidence": "medium",
+      "id": "yang2026",
+      "source_ids": [
+        "yang2026"
+      ]
+    },
+    {
+      "claim": "Greater popliteal artery wall thickness on MRI is associated with worse knee osteoarthritis pain and radiographic progression",
+      "confidence": "medium",
+      "id": "pishgar2026",
+      "source_ids": [
+        "pishgar2026"
+      ]
+    },
+    {
+      "claim": "Five-year CT follow-up identifies distinct growth trajectories and independent risk factors for progression of small pure ground-glass nodules",
+      "confidence": "medium",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "The MORGOTH EEG foundation model achieves expert-level performance across diverse neurological interpretation tasks validated at 48 external institutions",
+      "confidence": "medium",
+      "id": "sun2026",
+      "source_ids": [
+        "sun2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Bertsimas",
+      "id": "bertsimas2026",
+      "publication": "Lancet Digital Health",
+      "title": "Identifying subsets of patients with retroperitoneal sarcoma who benefit from radiotherapy: an Interpretable AI reanalysis of the STRASS randomised trial",
+      "url": "https://doi.org/10.1016/j.landig.2026.101021",
+      "why_it_matters": "Demonstrates that interpretable AI can rescue actionable subgroup findings from negative RCTs, with direct implications for sarcoma management and trial reanalysis methodology",
+      "year": 2026
+    },
+    {
+      "author": "Yang",
+      "id": "yang2026",
+      "publication": "Radiology",
+      "title": "SCAN-MRI: Cardiac MRI-integrated Risk Score for Predicting Cardiovascular Events in Type 2 Diabetes Mellitus",
+      "url": "https://doi.org/10.1148/radiol.252374",
+      "why_it_matters": "Multi-cohort validation shows imaging-derived biomarkers can outperform clinical scores for CV risk in diabetes, potentially changing risk stratification",
+      "year": 2026
+    },
+    {
+      "author": "Pishgar",
+      "id": "pishgar2026",
+      "publication": "Radiology",
+      "title": "Associations of Popliteal Artery Wall Morphology at MRI and Knee Osteoarthritis in the Osteoarthritis Initiative",
+      "url": "https://doi.org/10.1148/radiol.253583",
+      "why_it_matters": "Large multicenter data linking vascular imaging findings to OA progression, suggesting systemic vascular health may influence joint disease",
+      "year": 2026
+    },
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "Radiology",
+      "title": "Growth Patterns and Risk Stratification of Incidental Small Pure Ground-Glass Nodules across Independent Cohorts",
+      "url": "https://doi.org/10.1148/radiol.253139",
+      "why_it_matters": "Provides data-driven guidance for surveillance intervals of incidental lung nodules, addressing a common clinical dilemma",
+      "year": 2026
+    },
+    {
+      "author": "Sun",
+      "id": "sun2026",
+      "publication": "Lancet Digital Health",
+      "title": "Toward unified and comprehensive automated electroencephalogram interpretation: a multicentre development and validation of an electroencephalogram foundation model",
+      "url": "https://doi.org/10.1016/j.landig.2026.101039",
+      "why_it_matters": "Broad external validation of an EEG foundation model suggests AI may standardize and accelerate neurological diagnostics across diverse settings",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Bertsimas et al. - Lancet Digital Health - 2026 - Identifying subsets of patients with retroperitoneal sarcoma who benefit from radiotherapy: an Interpretable AI reanalysis of the STRASS randomised trial (https://doi.org/10.1016/j.landig.2026.101021)",
+    "Yang et al. - Radiology - 2026 - SCAN-MRI: Cardiac MRI-integrated Risk Score for Predicting Cardiovascular Events in Type 2 Diabetes Mellitus (https://doi.org/10.1148/radiol.252374)",
+    "Pishgar et al. - Radiology - 2026 - Associations of Popliteal Artery Wall Morphology at MRI and Knee Osteoarthritis in the Osteoarthritis Initiative (https://doi.org/10.1148/radiol.253583)",
+    "Liu et al. - Radiology - 2026 - Growth Patterns and Risk Stratification of Incidental Small Pure Ground-Glass Nodules across Independent Cohorts (https://doi.org/10.1148/radiol.253139)",
+    "Sun et al. - Lancet Digital Health - 2026 - Toward unified and comprehensive automated electroencephalogram interpretation: a multicentre development and validation of an electroencephalogram foundation model (https://doi.org/10.1016/j.landig.2026.101039)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/08/28",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1346
+}
