@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Clinical Problem Named"
+    },
+    {
+      "startTime": 43.25,
+      "title": "\u2014 Headline: Design and Evidence Grade"
+    },
+    {
+      "startTime": 86.49,
+      "title": "\u2014 Headline: The Result and Its Precision"
+    },
+    {
+      "startTime": 129.74,
+      "title": "\u2014 Headline: The Heterogeneity Caveat and What It Limits"
+    },
+    {
+      "startTime": 172.98,
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "startTime": 216.23,
+      "title": "\u2014 Round 1: Universal Aspirin (Duryea)"
+    },
+    {
+      "startTime": 259.47,
+      "title": "\u2014 Round 2: Long COVID and Pregnancy (Metz)"
+    },
+    {
+      "startTime": 302.72,
+      "title": "\u2014 Round 3: Fetal Size and Neurodevelopment (Zhao)"
+    },
+    {
+      "startTime": 345.96,
+      "title": "\u2014 Round 4: Cerclage Height (van der Krogt)"
+    },
+    {
+      "startTime": 389.21,
+      "title": "\u2014 Close: What Remains Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

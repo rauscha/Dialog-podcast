@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260831_050157_mfm_rounds_-_week_of_2026_08_31.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Problem Named"
+    },
+    {
+      "start_sec": 43.25,
+      "start_time": "0:43",
+      "title": "\u2014 Headline: Design and Evidence Grade"
+    },
+    {
+      "start_sec": 86.49,
+      "start_time": "1:26",
+      "title": "\u2014 Headline: The Result and Its Precision"
+    },
+    {
+      "start_sec": 129.74,
+      "start_time": "2:10",
+      "title": "\u2014 Headline: The Heterogeneity Caveat and What It Limits"
+    },
+    {
+      "start_sec": 172.98,
+      "start_time": "2:53",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 216.23,
+      "start_time": "3:36",
+      "title": "\u2014 Round 1: Universal Aspirin (Duryea)"
+    },
+    {
+      "start_sec": 259.47,
+      "start_time": "4:19",
+      "title": "\u2014 Round 2: Long COVID and Pregnancy (Metz)"
+    },
+    {
+      "start_sec": 302.72,
+      "start_time": "5:03",
+      "title": "\u2014 Round 3: Fetal Size and Neurodevelopment (Zhao)"
+    },
+    {
+      "start_sec": 345.96,
+      "start_time": "5:46",
+      "title": "\u2014 Round 4: Cerclage Height (van der Krogt)"
+    },
+    {
+      "start_sec": 389.21,
+      "start_time": "6:29",
+      "title": "\u2014 Close: What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260831_050157_mfm_rounds_-_week_of_2026_08_31.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260831_050157_mfm_rounds_-_week_of_2026_08_31.companion.json",
+  "duration_sec": 477.452086,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First meta-analysis to quantify net clinical benefit of thromboprophylaxis specifically in mild-risk thrombophilia during pregnancy, directly addressing a common clinical dilemma with the highest available evidence tier",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "The clinical net benefit of venous thromboembolism prophylaxis in mild-risk thrombophilia and pregnancy: a systematic review and meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102041"
+    },
+    {
+      "reason": "Large observational data suggesting universal aspirin dispensation may reduce severe preeclampsia while bypassing implementation barriers of risk-stratification algorithms",
+      "source": "Am J Obstet Gynecol",
+      "title": "Universal Aspirin Dispensation for Prevention of Preeclampsia in a High-Risk Population",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.036"
+    },
+    {
+      "reason": "First large multicenter prospective data with propensity-matching showing Long COVID classification associated with adverse pregnancy outcomes including preterm birth",
+      "source": "Obstet Gynecol",
+      "title": "Pregnancy Outcomes in Individuals With Long COVID",
+      "url": "https://doi.org/10.1097/aog.0000000000006410"
+    },
+    {
+      "reason": "Large cohort data informing term delivery timing counseling by demonstrating fetal size has more persistent neurodevelopmental association than gestational age within 37-41 weeks",
+      "source": "Am J Obstet Gynecol",
+      "title": "The relationship between gestational age, delivery, and fetal size, and neurodevelopment outcomes from infancy to adolescence",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.025"
+    },
+    {
+      "reason": "RCT-derived secondary analysis finding no difference in pregnancy loss between high and low cerclage placement, informing surgical technique decisions",
+      "source": "BJOG",
+      "title": "High Versus Low Transvaginal Cerclage and Pregnancy Outcomes: A Secondary Analysis of the C-STICH Trial",
+      "url": "https://doi.org/10.1111/1471-0528.70320"
+    }
+  ],
+  "generated_at": "2026-08-31T10:09:39.720435+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Pooled data allow quantification of net clinical benefit from thromboprophylaxis in pregnant patients with mild-risk thrombophilia including heterozygous Factor V Leiden, prothrombin gene variant, and Protein C/S deficiency",
+      "confidence": "high",
+      "id": "claim_klein",
+      "source_ids": [
+        "klein_2026"
+      ]
+    },
+    {
+      "claim": "Universal dispensation of 162mg aspirin at a safety-net obstetric program was associated with reduced severe preeclampsia compared to risk-stratified approaches",
+      "confidence": "medium",
+      "id": "claim_duryea",
+      "source_ids": [
+        "duryea_2026"
+      ]
+    },
+    {
+      "claim": "Long COVID classification is associated with adverse pregnancy outcomes including preterm birth after propensity-score adjustment",
+      "confidence": "medium",
+      "id": "claim_metz",
+      "source_ids": [
+        "metz_2026"
+      ]
+    },
+    {
+      "claim": "In term-born children, fetal size at birth shows more persistent association with neurodevelopmental outcomes through adolescence than gestational age within the 37-41 week range",
+      "confidence": "medium",
+      "id": "claim_zhao",
+      "source_ids": [
+        "zhao_2026"
+      ]
+    },
+    {
+      "claim": "High versus low transvaginal cerclage placement shows no significant difference in pregnancy loss rates",
+      "confidence": "medium",
+      "id": "claim_vanderkrogt",
+      "source_ids": [
+        "vanderkrogt_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Klein",
+      "id": "klein_2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "The clinical net benefit of venous thromboembolism prophylaxis in mild-risk thrombophilia and pregnancy: a systematic review and meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102041",
+      "why_it_matters": "First meta-analysis to quantify net clinical benefit of thromboprophylaxis specifically in mild-risk thrombophilia during pregnancy, directly addressing a common clinical dilemma with the highest available evidence tier",
+      "year": 2026
+    },
+    {
+      "author": "Duryea",
+      "id": "duryea_2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Universal Aspirin Dispensation for Prevention of Preeclampsia in a High-Risk Population",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.036",
+      "why_it_matters": "Large observational data suggesting universal aspirin dispensation may reduce severe preeclampsia while bypassing implementation barriers of risk-stratification algorithms",
+      "year": 2026
+    },
+    {
+      "author": "Metz",
+      "id": "metz_2026",
+      "publication": "Obstet Gynecol",
+      "title": "Pregnancy Outcomes in Individuals With Long COVID",
+      "url": "https://doi.org/10.1097/aog.0000000000006410",
+      "why_it_matters": "First large multicenter prospective data with propensity-matching showing Long COVID classification associated with adverse pregnancy outcomes including preterm birth",
+      "year": 2026
+    },
+    {
+      "author": "Zhao",
+      "id": "zhao_2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "The relationship between gestational age, delivery, and fetal size, and neurodevelopment outcomes from infancy to adolescence",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.025",
+      "why_it_matters": "Large cohort data informing term delivery timing counseling by demonstrating fetal size has more persistent neurodevelopmental association than gestational age within 37-41 weeks",
+      "year": 2026
+    },
+    {
+      "author": "van der Krogt",
+      "id": "vanderkrogt_2026",
+      "publication": "BJOG",
+      "title": "High Versus Low Transvaginal Cerclage and Pregnancy Outcomes: A Secondary Analysis of the C-STICH Trial",
+      "url": "https://doi.org/10.1111/1471-0528.70320",
+      "why_it_matters": "RCT-derived secondary analysis finding no difference in pregnancy loss between high and low cerclage placement, informing surgical technique decisions",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Klein et al. - Am J Obstet Gynecol MFM - 2026 - The clinical net benefit of venous thromboembolism prophylaxis in mild-risk thrombophilia and pregnancy: a systematic review and meta-analysis (https://doi.org/10.1016/j.ajogmf.2026.102041)",
+    "Duryea et al. - Am J Obstet Gynecol - 2026 - Universal Aspirin Dispensation for Prevention of Preeclampsia in a High-Risk Population (https://doi.org/10.1016/j.ajog.2026.08.036)",
+    "Metz et al. - Obstet Gynecol - 2026 - Pregnancy Outcomes in Individuals With Long COVID (https://doi.org/10.1097/aog.0000000000006410)",
+    "Zhao et al. - Am J Obstet Gynecol - 2026 - The relationship between gestational age, delivery, and fetal size, and neurodevelopment outcomes from infancy to adolescence (https://doi.org/10.1016/j.ajog.2026.08.025)",
+    "van der Krogt - BJOG - 2026 - High Versus Low Transvaginal Cerclage and Pregnancy Outcomes: A Secondary Analysis of the C-STICH Trial (https://doi.org/10.1111/1471-0528.70320)"
+  ],
+  "topic": "MFM Rounds - week of 2026/08/31",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1122
+}
