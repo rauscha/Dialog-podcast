@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260902_050159_the_fetal_frontier_-_week_of_2026_09_02.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 COLD OPEN: The Clinical Problem"
+    },
+    {
+      "start_sec": 51.39,
+      "start_time": "0:51",
+      "title": "\u2014 HEADLINE: Study Design and What Earns the Evidence Grade"
+    },
+    {
+      "start_sec": 102.77,
+      "start_time": "1:43",
+      "title": "\u2014 HEADLINE: Effect Size and Clinical Calibration"
+    },
+    {
+      "start_sec": 154.16,
+      "start_time": "2:34",
+      "title": "\u2014 HEADLINE: Key Limitation and Practice Impact"
+    },
+    {
+      "start_sec": 205.55,
+      "start_time": "3:26",
+      "title": "\u2014 PIVOT"
+    },
+    {
+      "start_sec": 256.94,
+      "start_time": "4:17",
+      "title": "\u2014 ROUND 1: Shah on Long-Term FETO Outcomes"
+    },
+    {
+      "start_sec": 308.32,
+      "start_time": "5:08",
+      "title": "\u2014 ROUND 2: Sorrenti on sFGR Classification in MCDA Twins"
+    },
+    {
+      "start_sec": 359.71,
+      "start_time": "6:00",
+      "title": "\u2014 ROUND 3: Bulan on Multisite UA Doppler Scoring"
+    },
+    {
+      "start_sec": 411.1,
+      "start_time": "6:51",
+      "title": "\u2014 ROUND 4: Murillo on Cardiac Remodeling After Threatened Preterm Labor"
+    },
+    {
+      "start_sec": 462.49,
+      "start_time": "7:42",
+      "title": "\u2014 CLOSE: What to Watch, What Is Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260902_050159_the_fetal_frontier_-_week_of_2026_09_02.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260902_050159_the_fetal_frontier_-_week_of_2026_09_02.companion.json",
+  "duration_sec": 558.872993,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Quantifies the measurement noise inherent in daily Doppler surveillance, informing how to interpret serial changes",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Interobserver and intraobserver variability of fetal and maternal Doppler measurements: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70287"
+    },
+    {
+      "reason": "Provides longitudinal outcome data beyond survival for FETO counseling \u2014 respiratory morbidity and growth trajectories",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Long-term outcome after fetal endoscopic tracheal occlusion for congenital diaphragmatic hernia: systematic review",
+      "url": "https://doi.org/10.1002/uog.70302"
+    },
+    {
+      "reason": "Challenges the discriminatory power of current sFGR classification \u2014 may need additional markers for risk stratification",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70320"
+    },
+    {
+      "reason": "Introduces a novel multisite UA Doppler scoring concept that may capture placental heterogeneity missed by single-site sampling",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Modified umbilical artery Doppler scoring system based on multisite assessment: association with perinatal outcome in early and late fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70319"
+    },
+    {
+      "reason": "Suggests threatened preterm labor may leave a measurable cardiac signature even when delivery occurs at term \u2014 potential monitoring implications",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Fetuses exposed to an episode of threatened preterm labor delivered at or near term show signs of cardiac remodeling",
+      "url": "https://doi.org/10.1002/uog.70304"
+    }
+  ],
+  "generated_at": "2026-09-02T10:10:49.530727+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Inter- and intraobserver variability for UA, MCA, and UtA Doppler is quantifiable and clinically relevant, though heterogeneity across studies limits derivation of universal thresholds for significant change.",
+      "confidence": "high",
+      "id": "prins2026",
+      "source_ids": [
+        "prins2026"
+      ]
+    },
+    {
+      "claim": "Long-term FETO survivors show respiratory morbidity as the most common sequela, with growth faltering at one year that typically improves with catch-up growth.",
+      "confidence": "medium",
+      "id": "shah2026",
+      "source_ids": [
+        "shah2026"
+      ]
+    },
+    {
+      "claim": "UA Doppler-based classification stratifies sFGR severity in MCDA twins but has limited discriminatory performance for predicting adverse outcomes.",
+      "confidence": "medium",
+      "id": "sorrenti2026",
+      "source_ids": [
+        "sorrenti2026"
+      ]
+    },
+    {
+      "claim": "A bilateral multisite UA Doppler scoring system correlates with composite adverse perinatal outcome in both early- and late-onset FGR.",
+      "confidence": "medium",
+      "id": "bulan2026",
+      "source_ids": [
+        "bulan2026"
+      ]
+    },
+    {
+      "claim": "Fetuses exposed to threatened preterm labor without intra-amniotic infection demonstrate measurable cardiac remodeling on echocardiography even when delivered at term.",
+      "confidence": "medium",
+      "id": "murillo2026",
+      "source_ids": [
+        "murillo2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Prins",
+      "id": "prins2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Interobserver and intraobserver variability of fetal and maternal Doppler measurements: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70287",
+      "why_it_matters": "Quantifies the measurement noise inherent in daily Doppler surveillance, informing how to interpret serial changes",
+      "year": 2026
+    },
+    {
+      "author": "Shah",
+      "id": "shah2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Long-term outcome after fetal endoscopic tracheal occlusion for congenital diaphragmatic hernia: systematic review",
+      "url": "https://doi.org/10.1002/uog.70302",
+      "why_it_matters": "Provides longitudinal outcome data beyond survival for FETO counseling \u2014 respiratory morbidity and growth trajectories",
+      "year": 2026
+    },
+    {
+      "author": "Sorrenti",
+      "id": "sorrenti2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70320",
+      "why_it_matters": "Challenges the discriminatory power of current sFGR classification \u2014 may need additional markers for risk stratification",
+      "year": 2026
+    },
+    {
+      "author": "Bulan",
+      "id": "bulan2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Modified umbilical artery Doppler scoring system based on multisite assessment: association with perinatal outcome in early and late fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70319",
+      "why_it_matters": "Introduces a novel multisite UA Doppler scoring concept that may capture placental heterogeneity missed by single-site sampling",
+      "year": 2026
+    },
+    {
+      "author": "Murillo",
+      "id": "murillo2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Fetuses exposed to an episode of threatened preterm labor delivered at or near term show signs of cardiac remodeling",
+      "url": "https://doi.org/10.1002/uog.70304",
+      "why_it_matters": "Suggests threatened preterm labor may leave a measurable cardiac signature even when delivery occurs at term \u2014 potential monitoring implications",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Prins et al. - Ultrasound Obstet Gynecol - 2026 - Interobserver and intraobserver variability of fetal and maternal Doppler measurements: systematic review and meta-analysis (https://doi.org/10.1002/uog.70287)",
+    "Shah et al. - Ultrasound Obstet Gynecol - 2026 - Long-term outcome after fetal endoscopic tracheal occlusion for congenital diaphragmatic hernia: systematic review (https://doi.org/10.1002/uog.70302)",
+    "Sorrenti et al. - Ultrasound Obstet Gynecol - 2026 - Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction (https://doi.org/10.1002/uog.70320)",
+    "Bulan et al. - Ultrasound Obstet Gynecol - 2026 - Modified umbilical artery Doppler scoring system based on multisite assessment: association with perinatal outcome in early and late fetal growth restriction (https://doi.org/10.1002/uog.70319)",
+    "Murillo et al. - Ultrasound Obstet Gynecol - 2026 - Fetuses exposed to an episode of threatened preterm labor delivered at or near term show signs of cardiac remodeling (https://doi.org/10.1002/uog.70304)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/09/02",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1398
+}

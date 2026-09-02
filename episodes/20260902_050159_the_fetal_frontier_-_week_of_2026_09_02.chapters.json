@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 COLD OPEN: The Clinical Problem"
+    },
+    {
+      "startTime": 51.39,
+      "title": "\u2014 HEADLINE: Study Design and What Earns the Evidence Grade"
+    },
+    {
+      "startTime": 102.77,
+      "title": "\u2014 HEADLINE: Effect Size and Clinical Calibration"
+    },
+    {
+      "startTime": 154.16,
+      "title": "\u2014 HEADLINE: Key Limitation and Practice Impact"
+    },
+    {
+      "startTime": 205.55,
+      "title": "\u2014 PIVOT"
+    },
+    {
+      "startTime": 256.94,
+      "title": "\u2014 ROUND 1: Shah on Long-Term FETO Outcomes"
+    },
+    {
+      "startTime": 308.32,
+      "title": "\u2014 ROUND 2: Sorrenti on sFGR Classification in MCDA Twins"
+    },
+    {
+      "startTime": 359.71,
+      "title": "\u2014 ROUND 3: Bulan on Multisite UA Doppler Scoring"
+    },
+    {
+      "startTime": 411.1,
+      "title": "\u2014 ROUND 4: Murillo on Cardiac Remodeling After Threatened Preterm Labor"
+    },
+    {
+      "startTime": 462.49,
+      "title": "\u2014 CLOSE: What to Watch, What Is Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
