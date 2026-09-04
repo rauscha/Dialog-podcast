@@ -1,0 +1,38 @@
+CASPAR [grounded]: Every week in high-risk obstetrics, delivery decisions turn on whether a change in umbilical artery pulsatility index is real or noise. The reproducibility literature existed — scattered across individual studies with heterogeneous designs, different equipment, different operator experience. Nobody had formally pooled it.
+JUNO [direct]: So the threshold for acting on a borderline Doppler change has been set by convention. Not by a quantified estimate of how much of that change might just be the operator.
+CASPAR [grounded]: Until now. From Ultrasound in Obstetrics and Gynecology, 2026: Prins and colleagues, a systematic review and meta-analysis of 26 studies — interobserver and intraobserver variability of fetal and maternal Doppler measurements.
+JUNO [precise]: Three vessel systems. Umbilical artery, middle cerebral artery, uterine artery. Both interobserver — two operators measuring the same vessel on the same patient — and intraobserver — one operator measuring it twice.
+CASPAR [measured]: What earns the evidence grade is the application of TRUST criteria — a structured quality appraisal framework built specifically for reproducibility research. Applying it across 26 studies forces explicit quality grading before pooling. That's a different tier than a narrative review averaging whatever happened to be published.
+JUNO [pressing]: What do the numbers actually show?
+CASPAR [careful]: Reproducibility varies meaningfully across indices, and that ranking is the operationally important output. Uterine artery PI shows relatively better agreement. MCA PI is noisier — which matters because the cerebroplacental ratio compounds the variability of both components. UA PI sits in between, but with wide confidence intervals on the pooled estimate because study methods varied substantially across the 26 included papers.
+JUNO [pressing]: How wide?
+CASPAR [honest]: Wide enough that for some indices the pooled estimate should be read as a range. The heterogeneity in equipment, operator training, and acquisition protocols means the confidence intervals don't collapse the way you'd want. Prins quantifies the noise. It doesn't fully explain it.
+JUNO [flat]: So the MCA — the one we use to detect brain-sparing — is the noisier of the indices examined.
+CASPAR [dry]: Which is an uncomfortable place for that particular measurement to land.
+JUNO [operational]: What does this actually change at the bedside?
+CASPAR [precise]: It calibrates the confidence you can place in a single borderline value. Say a colleague argues that a UA PI has risen from 1.1 to 1.3 over two weeks and delivery is indicated. You now have a pooled, graded estimate of how much of that change could be interobserver variation — not expert intuition, a citable number. For indices where the variability envelope is wide relative to the clinical decision threshold, a single measurement is not sufficient to act on without confirmation. That sentence is now backed by a meta-analysis.
+JUNO [grounded]: What Prins doesn't do is set a new threshold. It doesn't tell you when to deliver.
+CASPAR [confirming]: Right. And the question it raises without answering is whether standardized acquisition protocols can compress these variability estimates, or whether some of this noise is irreducible — a physics and workflow problem that better training alone won't fix. That's the prospective trial nobody has run.
+JUNO [brief]: The paper gives you a number to cite. Whether that number shrinks with better protocols is what comes next.
+CASPAR [moving on]: Rounds — four other things this week.
+JUNO [clean]: From Ultrasound in Obstetrics and Gynecology, 2026: Pete and colleagues, a prospective head-to-head comparison — diagnostic accuracy of ultrasound versus MRI for deep endometriosis using the Enzian classification.
+CASPAR [brief]: Enzian maps disease by anatomical compartment — bowel, ureter, bladder, parametrium. The reference framework for preoperative planning.
+JUNO [finding]: Pete found comparable diagnostic accuracy between the two modalities across compartments.
+CASPAR [caveat]: Experienced hands. This doesn't transfer to every ultrasound suite.
+JUNO [hook]: But if your center has that expertise, the reflexive MRI referral is now a harder argument to make. The resource conversation is legitimate.
+CASPAR [next]: From Ultrasound in Obstetrics and Gynecology, 2026: Watananirun and colleagues, a multicenter longitudinal study — lung growth patterns after FETO in right- versus left-sided congenital diaphragmatic hernia.
+JUNO [brief]: Right-sided CDH shows a different o/e-LHR trajectory after FETO compared to left-sided cases, and occlusion duration correlates with observed lung growth across both.
+CASPAR [flat]: Whether that difference reflects a compressed starting baseline or a genuine difference in how right-sided cases respond to occlusion — still unresolved. The trajectories are characterized. The mechanism isn't.
+JUNO [one sentence]: Laterality-stratified counseling is supported. Revised occlusion targets for right-sided programs are not.
+CASPAR [moving]: From Ultrasound in Obstetrics and Gynecology, 2026: Bulan and colleagues, a prospective cohort — a modified bilateral multisite umbilical artery Doppler scoring system in fetal growth restriction.
+JUNO [finding]: Rather than a single free-loop UA pulsatility index, Bulan samples the umbilical artery at multiple sites — placental insertion, free loop, fetal end — and scores the bilateral composite. In their FGR cohort, the composite correlated with adverse perinatal outcomes in both early and late disease.
+CASPAR [direct]: The cohort is modest. A score that correlates with outcomes in a single prospective cohort is proof of concept, not a validated surveillance tool. External validation first.
+JUNO [noting]: The conceptual fit with this week's headline is real, though. If single-site UA PI carries the measurement noise Prins just quantified, a multisite composite that captures regional variation in umbilical resistance is at least asking a better question.
+CASPAR [honest]: Asking a better question. Not yet answering it with sufficient evidence.
+JUNO [last round]: From Ultrasound in Obstetrics and Gynecology, 2026: Lopian and colleagues, a machine learning development study — predicting large-for-gestational-age neonates with adverse outcomes at third-trimester scan.
+CASPAR [framing]: The prediction target matters. Not LGA alone — LGA with adverse perinatal outcomes. That's the clinically relevant end of the macrosomia spectrum, and it's the right question to frame.
+JUNO [finding]: ML using third-trimester biometry and Doppler inputs modestly outperformed logistic regression on that target.
+CASPAR [honest]: Modestly. No external validation, early-stage model development. The performance margin doesn't justify workflow integration yet.
+JUNO [holding]: The framing of the task is more interesting than the model architecture at this stage. Whether ML is the right tool for it at this performance level is still open.
+CASPAR [close]: Two things to watch. Whether acquisition standardization can compress the variability estimates Prins quantified — or whether the noise floor is partly irreducible. That's a prospective trial question and it hasn't been run. And whether the Bulan scoring system and the Lopian model validate in larger, more diverse populations, or whether both represent the ceiling of what a single prospective cohort can show.
+JUNO [sign-off]: Full citations and DOIs for all five papers — Prins, Pete, Watananirun, Bulan, and Lopian — are in the show notes.

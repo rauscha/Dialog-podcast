@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Measurement Problem"
+    },
+    {
+      "startTime": 45.96,
+      "title": "\u2014 Headline Citation and Design"
+    },
+    {
+      "startTime": 91.92,
+      "title": "\u2014 Headline Numbers: What the Variability Estimates Show"
+    },
+    {
+      "startTime": 137.87,
+      "title": "\u2014 Headline Practice Impact and Honest Limits"
+    },
+    {
+      "startTime": 183.83,
+      "title": "\u2014 Round 1: Deep Endometriosis Imaging (Pete)"
+    },
+    {
+      "startTime": 229.79,
+      "title": "\u2014 Round 2: FETO Laterality (Watananirun)"
+    },
+    {
+      "startTime": 275.75,
+      "title": "\u2014 Round 3: Multisite UA Doppler Scoring in FGR (Bulan)"
+    },
+    {
+      "startTime": 321.71,
+      "title": "\u2014 Round 4: ML for LGA with Adverse Outcomes (Lopian)"
+    },
+    {
+      "startTime": 367.66,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}

@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260904_050200_signal_in_the_scan_-_week_of_2026_09_04.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Measurement Problem"
+    },
+    {
+      "start_sec": 45.96,
+      "start_time": "0:46",
+      "title": "\u2014 Headline Citation and Design"
+    },
+    {
+      "start_sec": 91.92,
+      "start_time": "1:32",
+      "title": "\u2014 Headline Numbers: What the Variability Estimates Show"
+    },
+    {
+      "start_sec": 137.87,
+      "start_time": "2:18",
+      "title": "\u2014 Headline Practice Impact and Honest Limits"
+    },
+    {
+      "start_sec": 183.83,
+      "start_time": "3:04",
+      "title": "\u2014 Round 1: Deep Endometriosis Imaging (Pete)"
+    },
+    {
+      "start_sec": 229.79,
+      "start_time": "3:50",
+      "title": "\u2014 Round 2: FETO Laterality (Watananirun)"
+    },
+    {
+      "start_sec": 275.75,
+      "start_time": "4:36",
+      "title": "\u2014 Round 3: Multisite UA Doppler Scoring in FGR (Bulan)"
+    },
+    {
+      "start_sec": 321.71,
+      "start_time": "5:22",
+      "title": "\u2014 Round 4: ML for LGA with Adverse Outcomes (Lopian)"
+    },
+    {
+      "start_sec": 367.66,
+      "start_time": "6:08",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260904_050200_signal_in_the_scan_-_week_of_2026_09_04.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260904_050200_signal_in_the_scan_-_week_of_2026_09_04.companion.json",
+  "duration_sec": 458.622177,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Quantifies the measurement noise in Doppler indices that drive delivery timing \u2014 essential for interpreting serial surveillance",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Interobserver and intraobserver variability of fetal and maternal Doppler measurements: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70287"
+    },
+    {
+      "reason": "Informs imaging modality choice for surgical planning in deep endometriosis",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Head-to-head prospective comparison of diagnostic accuracy of preoperative ultrasonography and MRI in patients undergoing surgery for deep endometriosis using #Enzian classification",
+      "url": "https://doi.org/10.1002/uog.70298"
+    },
+    {
+      "reason": "Multicenter fetal surgery data refining FETO management by hernia laterality",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Effect of right- vs left-sided congenital diaphragmatic hernia and duration of tracheal occlusion on longitudinal lung-size changes",
+      "url": "https://doi.org/10.1002/uog.70308"
+    },
+    {
+      "reason": "Proposes a refined FGR surveillance tool using bilateral multisite Doppler",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Modified umbilical artery Doppler scoring system based on multisite assessment: association with perinatal outcome in early and late fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70319"
+    },
+    {
+      "reason": "Tests ML for a clinically relevant third-trimester prediction task",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Machine learning for prediction of large-for-gestational-age neonate with adverse outcome at routine ultrasound examination at 35-37 weeks",
+      "url": "https://doi.org/10.1002/uog.70317"
+    }
+  ],
+  "generated_at": "2026-09-04T10:09:40.048122+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Pooled meta-analysis of 26 studies quantifies interobserver and intraobserver variability for UA, MCA, and uterine artery Doppler, revealing heterogeneous reproducibility across indices",
+      "confidence": "high",
+      "id": "prins2026",
+      "source_ids": [
+        "prins2026"
+      ]
+    },
+    {
+      "claim": "Prospective comparison shows ultrasound and MRI have comparable diagnostic accuracy for deep endometriosis compartments when mapped to Enzian classification",
+      "confidence": "medium",
+      "id": "pete2026",
+      "source_ids": [
+        "pete2026"
+      ]
+    },
+    {
+      "claim": "Lung growth trajectories after FETO differ between right- and left-sided CDH, with occlusion duration influencing observed-to-expected lung-to-head ratio changes",
+      "confidence": "medium",
+      "id": "watananirun2026",
+      "source_ids": [
+        "watananirun2026"
+      ]
+    },
+    {
+      "claim": "A bilateral multisite UA Doppler scoring system correlates with composite adverse perinatal outcomes in a prospective FGR cohort",
+      "confidence": "low",
+      "id": "bulan2026",
+      "source_ids": [
+        "bulan2026"
+      ]
+    },
+    {
+      "claim": "Machine learning models using third-trimester biometry and Doppler modestly outperform logistic regression for predicting LGA neonates with adverse outcomes",
+      "confidence": "low",
+      "id": "lopian2026",
+      "source_ids": [
+        "lopian2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Prins",
+      "id": "prins2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Interobserver and intraobserver variability of fetal and maternal Doppler measurements: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70287",
+      "why_it_matters": "Quantifies the measurement noise in Doppler indices that drive delivery timing \u2014 essential for interpreting serial surveillance",
+      "year": 2026
+    },
+    {
+      "author": "Pete",
+      "id": "pete2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Head-to-head prospective comparison of diagnostic accuracy of preoperative ultrasonography and MRI in patients undergoing surgery for deep endometriosis using #Enzian classification",
+      "url": "https://doi.org/10.1002/uog.70298",
+      "why_it_matters": "Informs imaging modality choice for surgical planning in deep endometriosis",
+      "year": 2026
+    },
+    {
+      "author": "Watananirun",
+      "id": "watananirun2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Effect of right- vs left-sided congenital diaphragmatic hernia and duration of tracheal occlusion on longitudinal lung-size changes",
+      "url": "https://doi.org/10.1002/uog.70308",
+      "why_it_matters": "Multicenter fetal surgery data refining FETO management by hernia laterality",
+      "year": 2026
+    },
+    {
+      "author": "Bulan",
+      "id": "bulan2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Modified umbilical artery Doppler scoring system based on multisite assessment: association with perinatal outcome in early and late fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70319",
+      "why_it_matters": "Proposes a refined FGR surveillance tool using bilateral multisite Doppler",
+      "year": 2026
+    },
+    {
+      "author": "Lopian",
+      "id": "lopian2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Machine learning for prediction of large-for-gestational-age neonate with adverse outcome at routine ultrasound examination at 35-37 weeks",
+      "url": "https://doi.org/10.1002/uog.70317",
+      "why_it_matters": "Tests ML for a clinically relevant third-trimester prediction task",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Prins et al. - Ultrasound Obstet Gynecol - 2026 - Interobserver and intraobserver variability of fetal and maternal Doppler measurements: systematic review and meta-analysis (https://doi.org/10.1002/uog.70287)",
+    "Pete et al. - Ultrasound Obstet Gynecol - 2026 - Head-to-head prospective comparison of diagnostic accuracy of preoperative ultrasonography and MRI in patients undergoing surgery for deep endometriosis using #Enzian classification (https://doi.org/10.1002/uog.70298)",
+    "Watananirun et al. - Ultrasound Obstet Gynecol - 2026 - Effect of right- vs left-sided congenital diaphragmatic hernia and duration of tracheal occlusion on longitudinal lung-size changes (https://doi.org/10.1002/uog.70308)",
+    "Bulan et al. - Ultrasound Obstet Gynecol - 2026 - Modified umbilical artery Doppler scoring system based on multisite assessment: association with perinatal outcome in early and late fetal growth restriction (https://doi.org/10.1002/uog.70319)",
+    "Lopian et al. - Ultrasound Obstet Gynecol - 2026 - Machine learning for prediction of large-for-gestational-age neonate with adverse outcome at routine ultrasound examination at 35-37 weeks (https://doi.org/10.1002/uog.70317)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/09/04",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1115
+}
