@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Clinical Decision the Headline Paper Bears On"
+    },
+    {
+      "startTime": 51.42,
+      "title": "\u2014 Headline: Citation, Design, and the Four Categories"
+    },
+    {
+      "startTime": 102.84,
+      "title": "\u2014 Headline: Gestational Age Distribution, Microbial Profiles, and Outcome Data"
+    },
+    {
+      "startTime": 154.26,
+      "title": "\u2014 Headline: Caveat and Practice Impact"
+    },
+    {
+      "startTime": 205.68,
+      "title": "\u2014 Pivot + Round 1: G\u00f6bl on GDM Endpoint Methodology"
+    },
+    {
+      "startTime": 257.09,
+      "title": "\u2014 Round 2: Martins on FET Endometrial Preparation and HDP Risk"
+    },
+    {
+      "startTime": 308.51,
+      "title": "\u2014 Round 3: Boutin on Incremental Genome Yield After Exome in Hydrops"
+    },
+    {
+      "startTime": 359.93,
+      "title": "\u2014 Round 4: Cenac on FGR Trajectory and Neonatal Outcomes"
+    },
+    {
+      "startTime": 411.35,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}

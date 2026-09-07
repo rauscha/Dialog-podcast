@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260907_050221_mfm_rounds_-_week_of_2026_09_07.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Decision the Headline Paper Bears On"
+    },
+    {
+      "start_sec": 51.42,
+      "start_time": "0:51",
+      "title": "\u2014 Headline: Citation, Design, and the Four Categories"
+    },
+    {
+      "start_sec": 102.84,
+      "start_time": "1:43",
+      "title": "\u2014 Headline: Gestational Age Distribution, Microbial Profiles, and Outcome Data"
+    },
+    {
+      "start_sec": 154.26,
+      "start_time": "2:34",
+      "title": "\u2014 Headline: Caveat and Practice Impact"
+    },
+    {
+      "start_sec": 205.68,
+      "start_time": "3:26",
+      "title": "\u2014 Pivot + Round 1: G\u00f6bl on GDM Endpoint Methodology"
+    },
+    {
+      "start_sec": 257.09,
+      "start_time": "4:17",
+      "title": "\u2014 Round 2: Martins on FET Endometrial Preparation and HDP Risk"
+    },
+    {
+      "start_sec": 308.51,
+      "start_time": "5:09",
+      "title": "\u2014 Round 3: Boutin on Incremental Genome Yield After Exome in Hydrops"
+    },
+    {
+      "start_sec": 359.93,
+      "start_time": "6:00",
+      "title": "\u2014 Round 4: Cenac on FGR Trajectory and Neonatal Outcomes"
+    },
+    {
+      "start_sec": 411.35,
+      "start_time": "6:51",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260907_050221_mfm_rounds_-_week_of_2026_09_07.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260907_050221_mfm_rounds_-_week_of_2026_09_07.companion.json",
+  "duration_sec": 507.769569,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Offers a clinically actionable framework for PPROM risk stratification at amniocentesis, linking intra-amniotic category to microbial profile and neonatal outcome.",
+      "source": "Am J Obstet Gynecol",
+      "title": "Intra-amniotic Categories of Preterm Prelabor Rupture of Membranes: Gestational Age-Specific Distribution, Amniotic fluid Microbial Profiles, and Neonatal Outcomes.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.038"
+    },
+    {
+      "reason": "Exposes how endpoint and growth standard choices drive apparent GDM treatment effects, essential for interpreting trial results in practice.",
+      "source": "Am J Obstet Gynecol",
+      "title": "Neonatal outcomes in gestational diabetes trials: What clinicians should consider when interpreting treatment effects.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.044"
+    },
+    {
+      "reason": "Meta-analysis showing higher live-birth rates and lower HDP risk with ovulation-based FET protocols \u2014 a potential practice-changing safety signal.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Endometrial preparation with vs without ovulation for frozen-embryo transfer: systematic review and meta-analysis of randomized controlled trials.",
+      "url": "https://doi.org/10.1002/uog.70299"
+    },
+    {
+      "reason": "Demonstrates that genome sequencing adds diagnostic yield after nondiagnostic exome in hydrops, informing prenatal genetic counseling workflow.",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Incremental yield of genome sequencing after exome sequencing for nonimmune hydrops fetalis spectrum.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102067"
+    },
+    {
+      "reason": "Supports dynamic FGR reclassification by showing that trajectory \u2014 not just a single measurement \u2014 predicts neonatal outcomes.",
+      "source": "Am J Obstet Gynecol",
+      "title": "Persistent, Resolved, and Absent Fetal Growth Restriction: A Comparison of Neonatal Outcomes.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.022"
+    }
+  ],
+  "generated_at": "2026-09-07T10:09:55.980579+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Four intra-amniotic categories in PPROM \u2014 sterile inflammation, microbial invasion without inflammation, microbial invasion with inflammation, and neither \u2014 have distinct gestational age distributions, microbial profiles, and neonatal outcomes.",
+      "confidence": "medium",
+      "id": "kacerovsky2026",
+      "source_ids": [
+        "kacerovsky2026"
+      ]
+    },
+    {
+      "claim": "The apparent treatment effect in GDM trials varies substantially depending on the composite endpoint chosen and the fetal growth standard applied.",
+      "confidence": "medium",
+      "id": "gobl2026",
+      "source_ids": [
+        "gobl2026"
+      ]
+    },
+    {
+      "claim": "Ovulation-based endometrial preparation for frozen embryo transfer is associated with higher live-birth rates and lower risk of hypertensive disorders of pregnancy compared to artificial cycles.",
+      "confidence": "high",
+      "id": "martins2026",
+      "source_ids": [
+        "martins2026"
+      ]
+    },
+    {
+      "claim": "Genome sequencing identifies additional pathogenic variants in a meaningful proportion of nonimmune hydrops fetalis cases after nondiagnostic exome sequencing.",
+      "confidence": "medium",
+      "id": "boutin2026",
+      "source_ids": [
+        "boutin2026"
+      ]
+    },
+    {
+      "claim": "Neonatal outcomes differ meaningfully between persistent, resolved, and absent FGR, supporting trajectory-based rather than single-timepoint classification.",
+      "confidence": "medium",
+      "id": "cenac2026",
+      "source_ids": [
+        "cenac2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Kacerovsky",
+      "id": "kacerovsky2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Intra-amniotic Categories of Preterm Prelabor Rupture of Membranes: Gestational Age-Specific Distribution, Amniotic fluid Microbial Profiles, and Neonatal Outcomes.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.038",
+      "why_it_matters": "Offers a clinically actionable framework for PPROM risk stratification at amniocentesis, linking intra-amniotic category to microbial profile and neonatal outcome.",
+      "year": 2026
+    },
+    {
+      "author": "G\u00f6bl",
+      "id": "gobl2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Neonatal outcomes in gestational diabetes trials: What clinicians should consider when interpreting treatment effects.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.044",
+      "why_it_matters": "Exposes how endpoint and growth standard choices drive apparent GDM treatment effects, essential for interpreting trial results in practice.",
+      "year": 2026
+    },
+    {
+      "author": "Martins",
+      "id": "martins2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Endometrial preparation with vs without ovulation for frozen-embryo transfer: systematic review and meta-analysis of randomized controlled trials.",
+      "url": "https://doi.org/10.1002/uog.70299",
+      "why_it_matters": "Meta-analysis showing higher live-birth rates and lower HDP risk with ovulation-based FET protocols \u2014 a potential practice-changing safety signal.",
+      "year": 2026
+    },
+    {
+      "author": "Boutin",
+      "id": "boutin2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Incremental yield of genome sequencing after exome sequencing for nonimmune hydrops fetalis spectrum.",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102067",
+      "why_it_matters": "Demonstrates that genome sequencing adds diagnostic yield after nondiagnostic exome in hydrops, informing prenatal genetic counseling workflow.",
+      "year": 2026
+    },
+    {
+      "author": "Cenac",
+      "id": "cenac2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Persistent, Resolved, and Absent Fetal Growth Restriction: A Comparison of Neonatal Outcomes.",
+      "url": "https://doi.org/10.1016/j.ajog.2026.08.022",
+      "why_it_matters": "Supports dynamic FGR reclassification by showing that trajectory \u2014 not just a single measurement \u2014 predicts neonatal outcomes.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Kacerovsky et al. - Am J Obstet Gynecol - 2026 - Intra-amniotic Categories of Preterm Prelabor Rupture of Membranes: Gestational Age-Specific Distribution, Amniotic fluid Microbial Profiles, and Neonatal Outcomes. (https://doi.org/10.1016/j.ajog.2026.08.038)",
+    "G\u00f6bl et al. - Am J Obstet Gynecol - 2026 - Neonatal outcomes in gestational diabetes trials: What clinicians should consider when interpreting treatment effects. (https://doi.org/10.1016/j.ajog.2026.08.044)",
+    "Martins et al. - Ultrasound Obstet Gynecol - 2026 - Endometrial preparation with vs without ovulation for frozen-embryo transfer: systematic review and meta-analysis of randomized controlled trials. (https://doi.org/10.1002/uog.70299)",
+    "Boutin et al. - Am J Obstet Gynecol MFM - 2026 - Incremental yield of genome sequencing after exome sequencing for nonimmune hydrops fetalis spectrum. (https://doi.org/10.1016/j.ajogmf.2026.102067)",
+    "Cenac et al. - Am J Obstet Gynecol - 2026 - Persistent, Resolved, and Absent Fetal Growth Restriction: A Comparison of Neonatal Outcomes. (https://doi.org/10.1016/j.ajog.2026.08.022)"
+  ],
+  "topic": "MFM Rounds - week of 2026/09/07",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1172
+}
