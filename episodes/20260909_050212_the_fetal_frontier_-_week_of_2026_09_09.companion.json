@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260909_050212_the_fetal_frontier_-_week_of_2026_09_09.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: Name What Changes"
+    },
+    {
+      "start_sec": 49.09,
+      "start_time": "0:49",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 98.18,
+      "start_time": "1:38",
+      "title": "\u2014 Headline: The Phenotype Pattern"
+    },
+    {
+      "start_sec": 147.27,
+      "start_time": "2:27",
+      "title": "\u2014 Headline: Caveats and Diagnostic Limits"
+    },
+    {
+      "start_sec": 196.36,
+      "start_time": "3:16",
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "start_sec": 245.45,
+      "start_time": "4:05",
+      "title": "\u2014 Pivot + Round 1: Lopian ML for LGA"
+    },
+    {
+      "start_sec": 294.54,
+      "start_time": "4:55",
+      "title": "\u2014 Round 2: Mockler Vasa Previa Laser Ablation"
+    },
+    {
+      "start_sec": 343.63,
+      "start_time": "5:44",
+      "title": "\u2014 Round 3: Kunpalin LVR Thresholds"
+    },
+    {
+      "start_sec": 392.72,
+      "start_time": "6:33",
+      "title": "\u2014 Round 4: Schenone MRI Cervical"
+    },
+    {
+      "start_sec": 441.81,
+      "start_time": "7:22",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260909_050212_the_fetal_frontier_-_week_of_2026_09_09.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260909_050212_the_fetal_frontier_-_week_of_2026_09_09.companion.json",
+  "duration_sec": 535.903107,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Defines a consistent prenatal ultrasound phenotype for MOPD1, enabling earlier consideration of RNU4ATAC sequencing when this constellation is seen.",
+      "source": "Prenatal Diagnosis",
+      "title": "Prenatal Phenotypic Features of Five Fetal Cases With RNU4ATAC-Associated Microcephalic Osteodysplastic Primordial Dwarfism Type I",
+      "url": "https://doi.org/10.1002/pd.70240"
+    },
+    {
+      "reason": "Tests whether ML can improve LGA risk stratification beyond traditional models; marginal gains suggest more work is needed.",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Machine learning for prediction of large-for-gestational-age neonate with adverse outcome at routine ultrasound examination at 35-37 weeks",
+      "url": "https://doi.org/10.1002/uog.70317"
+    },
+    {
+      "reason": "Largest VP laser ablation series; supports comparable outcomes across subtypes and potential for outpatient management.",
+      "source": "Fetal Diagnosis and Therapy",
+      "title": "Treatment Outcomes after Fetoscopic Laser Ablation of Type II versus Type III Vasa Previa",
+      "url": "https://doi.org/10.1159/fdt/acuag002"
+    },
+    {
+      "reason": "Proposes LVR thresholds to guide counseling and EXIT planning for non-nuchal lymphatic malformations.",
+      "source": "Prenatal Diagnosis",
+      "title": "Natural History of Fetal Non-Nuchal Lymphatic Malformations: A Single Center Retrospective Study",
+      "url": "https://doi.org/10.1002/pd.70211"
+    },
+    {
+      "reason": "Clarifies that MRI cervical length cannot replace TVS; useful context for MRI-referred patients.",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Cervical length assessment using magnetic resonance imaging during pregnancy: correlation and agreement with transvaginal ultrasound",
+      "url": "https://doi.org/10.1002/uog.70269"
+    }
+  ],
+  "generated_at": "2026-09-09T10:10:32.313040+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A consistent prenatal ultrasound pattern of early IUGR, microcephaly, ACC, intracranial cysts, and lissencephaly characterizes RNU4ATAC-associated MOPD1 and can guide targeted genetic testing.",
+      "confidence": "low",
+      "id": "liebmann2026",
+      "source_ids": [
+        "liebmann2026"
+      ]
+    },
+    {
+      "claim": "Machine learning models using third-trimester biometry and Doppler offer only marginal improvement over logistic regression for predicting LGA with adverse outcomes.",
+      "confidence": "low",
+      "id": "lopian2026",
+      "source_ids": [
+        "lopian2026"
+      ]
+    },
+    {
+      "claim": "Fetoscopic laser ablation of type II and type III vasa previa achieves 100 percent perinatal survival with comparable outcomes, and outpatient management appears feasible.",
+      "confidence": "medium",
+      "id": "mockler2026",
+      "source_ids": [
+        "mockler2026"
+      ]
+    },
+    {
+      "claim": "Lesion volume ratio thresholds of greater than 11 cm\u00b2 for hemorrhage risk and greater than 4 cm\u00b2 for delivery complications may guide counseling and EXIT planning for fetal non-nuchal lymphatic malformations.",
+      "confidence": "low",
+      "id": "kunpalin2026",
+      "source_ids": [
+        "kunpalin2026"
+      ]
+    },
+    {
+      "claim": "MRI-derived cervical length correlates with TVS but has insufficient sensitivity and specificity to replace TVS for short cervix diagnosis.",
+      "confidence": "medium",
+      "id": "schenone2026",
+      "source_ids": [
+        "schenone2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Liebmann",
+      "id": "liebmann2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Prenatal Phenotypic Features of Five Fetal Cases With RNU4ATAC-Associated Microcephalic Osteodysplastic Primordial Dwarfism Type I",
+      "url": "https://doi.org/10.1002/pd.70240",
+      "why_it_matters": "Defines a consistent prenatal ultrasound phenotype for MOPD1, enabling earlier consideration of RNU4ATAC sequencing when this constellation is seen.",
+      "year": 2026
+    },
+    {
+      "author": "Lopian",
+      "id": "lopian2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Machine learning for prediction of large-for-gestational-age neonate with adverse outcome at routine ultrasound examination at 35-37 weeks",
+      "url": "https://doi.org/10.1002/uog.70317",
+      "why_it_matters": "Tests whether ML can improve LGA risk stratification beyond traditional models; marginal gains suggest more work is needed.",
+      "year": 2026
+    },
+    {
+      "author": "Mockler",
+      "id": "mockler2026",
+      "publication": "Fetal Diagnosis and Therapy",
+      "title": "Treatment Outcomes after Fetoscopic Laser Ablation of Type II versus Type III Vasa Previa",
+      "url": "https://doi.org/10.1159/fdt/acuag002",
+      "why_it_matters": "Largest VP laser ablation series; supports comparable outcomes across subtypes and potential for outpatient management.",
+      "year": 2026
+    },
+    {
+      "author": "Kunpalin",
+      "id": "kunpalin2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Natural History of Fetal Non-Nuchal Lymphatic Malformations: A Single Center Retrospective Study",
+      "url": "https://doi.org/10.1002/pd.70211",
+      "why_it_matters": "Proposes LVR thresholds to guide counseling and EXIT planning for non-nuchal lymphatic malformations.",
+      "year": 2026
+    },
+    {
+      "author": "Schenone",
+      "id": "schenone2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Cervical length assessment using magnetic resonance imaging during pregnancy: correlation and agreement with transvaginal ultrasound",
+      "url": "https://doi.org/10.1002/uog.70269",
+      "why_it_matters": "Clarifies that MRI cervical length cannot replace TVS; useful context for MRI-referred patients.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Liebmann et al. - Prenatal Diagnosis - 2026 - Prenatal Phenotypic Features of Five Fetal Cases With RNU4ATAC-Associated Microcephalic Osteodysplastic Primordial Dwarfism Type I (https://doi.org/10.1002/pd.70240)",
+    "Lopian et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Machine learning for prediction of large-for-gestational-age neonate with adverse outcome at routine ultrasound examination at 35-37 weeks (https://doi.org/10.1002/uog.70317)",
+    "Mockler et al. - Fetal Diagnosis and Therapy - 2026 - Treatment Outcomes after Fetoscopic Laser Ablation of Type II versus Type III Vasa Previa (https://doi.org/10.1159/fdt/acuag002)",
+    "Kunpalin et al. - Prenatal Diagnosis - 2026 - Natural History of Fetal Non-Nuchal Lymphatic Malformations: A Single Center Retrospective Study (https://doi.org/10.1002/pd.70211)",
+    "Schenone et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Cervical length assessment using magnetic resonance imaging during pregnancy: correlation and agreement with transvaginal ultrasound (https://doi.org/10.1002/uog.70269)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/09/09",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1264
+}

@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: Name What Changes"
+    },
+    {
+      "startTime": 49.09,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 98.18,
+      "title": "\u2014 Headline: The Phenotype Pattern"
+    },
+    {
+      "startTime": 147.27,
+      "title": "\u2014 Headline: Caveats and Diagnostic Limits"
+    },
+    {
+      "startTime": 196.36,
+      "title": "\u2014 Headline: Practice Impact"
+    },
+    {
+      "startTime": 245.45,
+      "title": "\u2014 Pivot + Round 1: Lopian ML for LGA"
+    },
+    {
+      "startTime": 294.54,
+      "title": "\u2014 Round 2: Mockler Vasa Previa Laser Ablation"
+    },
+    {
+      "startTime": 343.63,
+      "title": "\u2014 Round 3: Kunpalin LVR Thresholds"
+    },
+    {
+      "startTime": 392.72,
+      "title": "\u2014 Round 4: Schenone MRI Cervical"
+    },
+    {
+      "startTime": 441.81,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}
