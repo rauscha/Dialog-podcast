@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260911_050232_signal_in_the_scan_-_week_of_2026_09_11.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Design Gap Closes"
+    },
+    {
+      "start_sec": 34.55,
+      "start_time": "0:35",
+      "title": "\u2014 Headline Citation and Clinical Question"
+    },
+    {
+      "start_sec": 69.11,
+      "start_time": "1:09",
+      "title": "\u2014 Design Choice That Earns the Evidence Grade"
+    },
+    {
+      "start_sec": 103.66,
+      "start_time": "1:44",
+      "title": "\u2014 Effect in Numbers and What Changes in Practice"
+    },
+    {
+      "start_sec": 138.21,
+      "start_time": "2:18",
+      "title": "\u2014 The China-Only Limitation and the Trust-Calibration Problem"
+    },
+    {
+      "start_sec": 172.76,
+      "start_time": "2:53",
+      "title": "\u2014 Pivot and Round 1: Sorrenti, UA Doppler in sFGR/MCDA"
+    },
+    {
+      "start_sec": 207.32,
+      "start_time": "3:27",
+      "title": "\u2014 Round 2: Lin/OccuNet, Radiograph-Negative Femoral Neck Fractures"
+    },
+    {
+      "start_sec": 241.87,
+      "start_time": "4:02",
+      "title": "\u2014 Round 3: Deipolyi, Ketamine vs. Fentanyl in IR Sedation"
+    },
+    {
+      "start_sec": 276.42,
+      "start_time": "4:36",
+      "title": "\u2014 Round 4: Paramasamy, Commercial AI and Pulmonary Nodule Reading Time"
+    },
+    {
+      "start_sec": 310.98,
+      "start_time": "5:11",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260911_050232_signal_in_the_scan_-_week_of_2026_09_11.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260911_050232_signal_in_the_scan_-_week_of_2026_09_11.companion.json",
+  "duration_sec": 390.528118,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First multicenter RCT showing AI assistance improves real-time sonographer detection of fetal intracranial malformations \u2014 direct implementation evidence for prenatal imaging.",
+      "source": "Lancet Digital Health",
+      "title": "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China",
+      "url": "https://doi.org/10.1016/j.landig.2026.101040"
+    },
+    {
+      "reason": "Validates a widely used Doppler classification for sFGR prognosis across a 24-year cohort, reinforcing current surveillance protocols.",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70320"
+    },
+    {
+      "reason": "Multicenter external validation of AI detecting occult femoral neck fractures \u2014 matches radiologists, outperforms ED physicians.",
+      "source": "Radiology",
+      "title": "Improving Recognition Performance and Reader Efficiency for Femoral-Neck Fracture Detection on Pelvic or Hip Radiographs Using Artificial Intelligence",
+      "url": "https://doi.org/10.1148/radiol.253931"
+    },
+    {
+      "reason": "RCT evidence for ketamine-based sedation reducing intraprocedural pain in IR \u2014 relevant for procedural sedation protocols.",
+      "source": "Radiology",
+      "title": "Ketamine Plus Midazolam versus Fentanyl Plus Midazolam for Sedation and Analgesia during Image-guided Procedures in Interventional Radiology: Randomized Clinical Trial",
+      "url": "https://doi.org/10.1148/radiol.260671"
+    },
+    {
+      "reason": "Large real-world data showing modest reading time reduction with commercial AI for pulmonary nodules \u2014 workflow efficiency signal.",
+      "source": "Radiology",
+      "title": "Impact of Commercial Artificial Intelligence on Radiologist Reading Time for Pulmonary Nodule Evaluation at Chest CT",
+      "url": "https://doi.org/10.1148/radiol.260484"
+    }
+  ],
+  "generated_at": "2026-09-11T10:10:07.034892+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "AI assistance during real-time prenatal ultrasound significantly improved sonographer detection of fetal intracranial malformations compared to unassisted scanning.",
+      "confidence": "high",
+      "id": "lei2026",
+      "source_ids": [
+        "lei2026"
+      ]
+    },
+    {
+      "claim": "Umbilical artery Doppler classification effectively stratified selective fetal growth restriction severity and predicted adverse outcomes in monochorionic pregnancies, though most cases were the milder Type I phenotype.",
+      "confidence": "medium",
+      "id": "sorrenti2026",
+      "source_ids": [
+        "sorrenti2026"
+      ]
+    },
+    {
+      "claim": "The OccuNet AI model detected radiograph-negative femoral neck fractures with accuracy matching radiologists and exceeding emergency physicians across four external validation sites.",
+      "confidence": "high",
+      "id": "lin2026",
+      "source_ids": [
+        "lin2026"
+      ]
+    },
+    {
+      "claim": "Ketamine plus midazolam reduced intraprocedural pain compared to fentanyl plus midazolam during interventional radiology procedures.",
+      "confidence": "high",
+      "id": "deipolyi2026",
+      "source_ids": [
+        "deipolyi2026"
+      ]
+    },
+    {
+      "claim": "Commercial AI for pulmonary nodule assessment modestly reduced radiologist reading time in real-world practice at a single tertiary center.",
+      "confidence": "medium",
+      "id": "paramasamy2026",
+      "source_ids": [
+        "paramasamy2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Lei",
+      "id": "lei2026",
+      "publication": "Lancet Digital Health",
+      "title": "Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China",
+      "url": "https://doi.org/10.1016/j.landig.2026.101040",
+      "why_it_matters": "First multicenter RCT showing AI assistance improves real-time sonographer detection of fetal intracranial malformations \u2014 direct implementation evidence for prenatal imaging.",
+      "year": 2026
+    },
+    {
+      "author": "Sorrenti",
+      "id": "sorrenti2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70320",
+      "why_it_matters": "Validates a widely used Doppler classification for sFGR prognosis across a 24-year cohort, reinforcing current surveillance protocols.",
+      "year": 2026
+    },
+    {
+      "author": "Lin",
+      "id": "lin2026",
+      "publication": "Radiology",
+      "title": "Improving Recognition Performance and Reader Efficiency for Femoral-Neck Fracture Detection on Pelvic or Hip Radiographs Using Artificial Intelligence",
+      "url": "https://doi.org/10.1148/radiol.253931",
+      "why_it_matters": "Multicenter external validation of AI detecting occult femoral neck fractures \u2014 matches radiologists, outperforms ED physicians.",
+      "year": 2026
+    },
+    {
+      "author": "Deipolyi",
+      "id": "deipolyi2026",
+      "publication": "Radiology",
+      "title": "Ketamine Plus Midazolam versus Fentanyl Plus Midazolam for Sedation and Analgesia during Image-guided Procedures in Interventional Radiology: Randomized Clinical Trial",
+      "url": "https://doi.org/10.1148/radiol.260671",
+      "why_it_matters": "RCT evidence for ketamine-based sedation reducing intraprocedural pain in IR \u2014 relevant for procedural sedation protocols.",
+      "year": 2026
+    },
+    {
+      "author": "Paramasamy",
+      "id": "paramasamy2026",
+      "publication": "Radiology",
+      "title": "Impact of Commercial Artificial Intelligence on Radiologist Reading Time for Pulmonary Nodule Evaluation at Chest CT",
+      "url": "https://doi.org/10.1148/radiol.260484",
+      "why_it_matters": "Large real-world data showing modest reading time reduction with commercial AI for pulmonary nodules \u2014 workflow efficiency signal.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Lei et al. - Lancet Digital Health - 2026 - Evaluating AI-assisted detection of fetal intracranial malformations in prenatal ultrasound practice: a multicentre, self-crossover, randomised controlled trial in China (https://doi.org/10.1016/j.landig.2026.101040)",
+    "Sorrenti et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction (https://doi.org/10.1002/uog.70320)",
+    "Lin et al. - Radiology - 2026 - Improving Recognition Performance and Reader Efficiency for Femoral-Neck Fracture Detection on Pelvic or Hip Radiographs Using Artificial Intelligence (https://doi.org/10.1148/radiol.253931)",
+    "Deipolyi et al. - Radiology - 2026 - Ketamine Plus Midazolam versus Fentanyl Plus Midazolam for Sedation and Analgesia during Image-guided Procedures in Interventional Radiology: Randomized Clinical Trial (https://doi.org/10.1148/radiol.260671)",
+    "Paramasamy et al. - Radiology - 2026 - Impact of Commercial Artificial Intelligence on Radiologist Reading Time for Pulmonary Nodule Evaluation at Chest CT (https://doi.org/10.1148/radiol.260484)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/09/11",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 965
+}

@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Design Gap Closes"
+    },
+    {
+      "startTime": 34.55,
+      "title": "\u2014 Headline Citation and Clinical Question"
+    },
+    {
+      "startTime": 69.11,
+      "title": "\u2014 Design Choice That Earns the Evidence Grade"
+    },
+    {
+      "startTime": 103.66,
+      "title": "\u2014 Effect in Numbers and What Changes in Practice"
+    },
+    {
+      "startTime": 138.21,
+      "title": "\u2014 The China-Only Limitation and the Trust-Calibration Problem"
+    },
+    {
+      "startTime": 172.76,
+      "title": "\u2014 Pivot and Round 1: Sorrenti, UA Doppler in sFGR/MCDA"
+    },
+    {
+      "startTime": 207.32,
+      "title": "\u2014 Round 2: Lin/OccuNet, Radiograph-Negative Femoral Neck Fractures"
+    },
+    {
+      "startTime": 241.87,
+      "title": "\u2014 Round 3: Deipolyi, Ketamine vs. Fentanyl in IR Sedation"
+    },
+    {
+      "startTime": 276.42,
+      "title": "\u2014 Round 4: Paramasamy, Commercial AI and Pulmonary Nodule Reading Time"
+    },
+    {
+      "startTime": 310.98,
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
