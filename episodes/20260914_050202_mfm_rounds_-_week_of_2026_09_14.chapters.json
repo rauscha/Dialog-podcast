@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What This Week Changes"
+    },
+    {
+      "startTime": 51.16,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 102.32,
+      "title": "\u2014 Headline: Effect Sizes and the Primary Comparison"
+    },
+    {
+      "startTime": 153.48,
+      "title": "\u2014 Headline: Practice Implications and What Remains Open"
+    },
+    {
+      "startTime": 204.64,
+      "title": "\u2014 Pivot + Round 1: Doyle / Episiotomy and OASIS During OVD"
+    },
+    {
+      "startTime": 255.81,
+      "title": "\u2014 Round 2: Noll / Umbilical Venous Parameters in MCDA-sFGR"
+    },
+    {
+      "startTime": 306.97,
+      "title": "\u2014 Round 3: Sorrenti / UA Doppler Classification Performance in MCDA-sFGR"
+    },
+    {
+      "startTime": 358.13,
+      "title": "\u2014 Round 4: Chaemsaithong / IL-6 as fFN Replacement in Threatened PTL"
+    },
+    {
+      "startTime": 409.29,
+      "title": "\u2014 Close: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

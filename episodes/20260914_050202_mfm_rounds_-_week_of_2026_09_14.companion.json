@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260914_050202_mfm_rounds_-_week_of_2026_09_14.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week Changes"
+    },
+    {
+      "start_sec": 51.16,
+      "start_time": "0:51",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 102.32,
+      "start_time": "1:42",
+      "title": "\u2014 Headline: Effect Sizes and the Primary Comparison"
+    },
+    {
+      "start_sec": 153.48,
+      "start_time": "2:33",
+      "title": "\u2014 Headline: Practice Implications and What Remains Open"
+    },
+    {
+      "start_sec": 204.64,
+      "start_time": "3:25",
+      "title": "\u2014 Pivot + Round 1: Doyle / Episiotomy and OASIS During OVD"
+    },
+    {
+      "start_sec": 255.81,
+      "start_time": "4:16",
+      "title": "\u2014 Round 2: Noll / Umbilical Venous Parameters in MCDA-sFGR"
+    },
+    {
+      "start_sec": 306.97,
+      "start_time": "5:07",
+      "title": "\u2014 Round 3: Sorrenti / UA Doppler Classification Performance in MCDA-sFGR"
+    },
+    {
+      "start_sec": 358.13,
+      "start_time": "5:58",
+      "title": "\u2014 Round 4: Chaemsaithong / IL-6 as fFN Replacement in Threatened PTL"
+    },
+    {
+      "start_sec": 409.29,
+      "start_time": "6:49",
+      "title": "\u2014 Close: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260914_050202_mfm_rounds_-_week_of_2026_09_14.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260914_050202_mfm_rounds_-_week_of_2026_09_14.companion.json",
+  "duration_sec": 505.450113,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Large population cohort quantifying the excess perinatal risk from co-occurring mental health and substance use disorders \u2014 supports targeted risk stratification and intensified surveillance for this specific phenotype",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Perinatal outcomes in individuals with co-occurring anxiety and/or depression and substance use in pregnancy",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102116"
+    },
+    {
+      "reason": "Large multicenter US cohort data on episiotomy and OASIS during OVD \u2014 directly informs routine practice decisions with effect modification by delivery type and parity",
+      "source": "Obstet Gynecol",
+      "title": "Episiotomy and Anal Sphincter Injury During Operative Vaginal Delivery in a U.S. Cohort",
+      "url": "https://doi.org/10.1097/aog.0000000000006426"
+    },
+    {
+      "reason": "Introduces umbilical venous parameters as mechanistically grounded and prognostically useful additions to UA Doppler in MCDA-sFGR surveillance",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Intertwin differences in umbilical venous diameter and flow reflect placental sharing and perinatal outcome in monochorionic twins with selective fetal growth restriction",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102100"
+    },
+    {
+      "reason": "Evaluates the widely used UA Doppler classification for sFGR and finds limited standalone discriminatory performance \u2014 argues for multi-parameter integration",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70320"
+    },
+    {
+      "reason": "Timely validation of IL-6 as fFN alternative for PTL triage given global fFN discontinuation \u2014 prospective design with direct clinical replacement utility",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Comparison between cervicovaginal fluid interleukin-6 and fetal fibronectin in combination with cervical ultrasound characteristics for the prediction of spontaneous preterm delivery in threatened preterm labor",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102092"
+    }
+  ],
+  "generated_at": "2026-09-14T10:09:57.722598+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Co-occurring stimulant or polysubstance use with anxiety/depression in pregnancy substantially increases hypertensive disorders and adverse maternal-neonatal outcomes compared to mental health diagnosis alone",
+      "confidence": "medium",
+      "id": "claim_hayer",
+      "source_ids": [
+        "hayer2026"
+      ]
+    },
+    {
+      "claim": "Episiotomy during operative vaginal delivery is associated with higher odds of obstetric anal sphincter injury, with effect modification by OVD type and parity",
+      "confidence": "medium",
+      "id": "claim_doyle",
+      "source_ids": [
+        "doyle2026"
+      ]
+    },
+    {
+      "claim": "Intertwin umbilical venous diameter and flow differences reflect placental sharing and independently predict adverse outcomes in MCDA-sFGR beyond UA Doppler alone",
+      "confidence": "medium",
+      "id": "claim_noll",
+      "source_ids": [
+        "noll2026"
+      ]
+    },
+    {
+      "claim": "UA Doppler-based sFGR classification in MCDA twins stratifies severity but has limited discriminatory performance for adverse outcomes beyond established markers",
+      "confidence": "medium",
+      "id": "claim_sorrenti",
+      "source_ids": [
+        "sorrenti2026"
+      ]
+    },
+    {
+      "claim": "Cervicovaginal IL-6 combined with cervical ultrasound characteristics matches or exceeds fFN for preterm delivery prediction in threatened PTL",
+      "confidence": "medium",
+      "id": "claim_chaemsaithong",
+      "source_ids": [
+        "chaemsaithong2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Hayer",
+      "id": "hayer2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Perinatal outcomes in individuals with co-occurring anxiety and/or depression and substance use in pregnancy",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102116",
+      "why_it_matters": "Large population cohort quantifying the excess perinatal risk from co-occurring mental health and substance use disorders \u2014 supports targeted risk stratification and intensified surveillance for this specific phenotype",
+      "year": 2026
+    },
+    {
+      "author": "Doyle",
+      "id": "doyle2026",
+      "publication": "Obstet Gynecol",
+      "title": "Episiotomy and Anal Sphincter Injury During Operative Vaginal Delivery in a U.S. Cohort",
+      "url": "https://doi.org/10.1097/aog.0000000000006426",
+      "why_it_matters": "Large multicenter US cohort data on episiotomy and OASIS during OVD \u2014 directly informs routine practice decisions with effect modification by delivery type and parity",
+      "year": 2026
+    },
+    {
+      "author": "Noll",
+      "id": "noll2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Intertwin differences in umbilical venous diameter and flow reflect placental sharing and perinatal outcome in monochorionic twins with selective fetal growth restriction",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102100",
+      "why_it_matters": "Introduces umbilical venous parameters as mechanistically grounded and prognostically useful additions to UA Doppler in MCDA-sFGR surveillance",
+      "year": 2026
+    },
+    {
+      "author": "Sorrenti",
+      "id": "sorrenti2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction",
+      "url": "https://doi.org/10.1002/uog.70320",
+      "why_it_matters": "Evaluates the widely used UA Doppler classification for sFGR and finds limited standalone discriminatory performance \u2014 argues for multi-parameter integration",
+      "year": 2026
+    },
+    {
+      "author": "Chaemsaithong",
+      "id": "chaemsaithong2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Comparison between cervicovaginal fluid interleukin-6 and fetal fibronectin in combination with cervical ultrasound characteristics for the prediction of spontaneous preterm delivery in threatened preterm labor",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102092",
+      "why_it_matters": "Timely validation of IL-6 as fFN alternative for PTL triage given global fFN discontinuation \u2014 prospective design with direct clinical replacement utility",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Hayer et al. - Am J Obstet Gynecol MFM - 2026 - Perinatal outcomes in individuals with co-occurring anxiety and/or depression and substance use in pregnancy (https://doi.org/10.1016/j.ajogmf.2026.102116)",
+    "Doyle et al. - Obstet Gynecol - 2026 - Episiotomy and Anal Sphincter Injury During Operative Vaginal Delivery in a U.S. Cohort (https://doi.org/10.1097/aog.0000000000006426)",
+    "Noll et al. - Am J Obstet Gynecol MFM - 2026 - Intertwin differences in umbilical venous diameter and flow reflect placental sharing and perinatal outcome in monochorionic twins with selective fetal growth restriction (https://doi.org/10.1016/j.ajogmf.2026.102100)",
+    "Sorrenti et al. - Ultrasound Obstet Gynecol - 2026 - Prognostic performance of umbilical artery Doppler-based classification in monochorionic pregnancies complicated by selective fetal growth restriction (https://doi.org/10.1002/uog.70320)",
+    "Chaemsaithong et al. - Am J Obstet Gynecol MFM - 2026 - Comparison between cervicovaginal fluid interleukin-6 and fetal fibronectin in combination with cervical ultrasound characteristics for the prediction of spontaneous preterm delivery in threatened preterm labor (https://doi.org/10.1016/j.ajogmf.2026.102092)"
+  ],
+  "topic": "MFM Rounds - week of 2026/09/14",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1158
+}
