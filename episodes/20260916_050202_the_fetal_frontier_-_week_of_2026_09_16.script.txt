@@ -1,0 +1,43 @@
+CASPAR [flat, direct]: Labs are making platform decisions right now. The pitch for medium-coverage WGS as a single prenatal assay is that you get CNVs, sequence variants, and AOH from one run. Zhang tests the AOH leg of that pitch.
+JUNO [even]: The answer isn't yes or no. It's yes, with a specific miss rate in a specific size range that matters for specific cases — and that part has to land before anyone cites the 97% figure in a committee meeting.
+CASPAR [precise]: From Prenatal Diagnosis, 2026: Zhang and colleagues, a comparative diagnostic accuracy study — medium-coverage whole-genome sequencing versus chromosomal microarray for prenatal absence-of-heterozygosity detection.
+JUNO [grounding]: CMA is the reference standard. WGS is the challenger. The question is whether medium-coverage WGS — the CNV-plus approach many labs are moving toward — can replace CMA for detecting AOH: the genomic signal you use to identify uniparental disomy, imprinting disorders, consanguinity.
+CASPAR [building]: Head-to-head in prenatal samples. Not a retrospective chart pull — direct diagnostic accuracy comparison. That design choice is why the numbers are worth citing.
+JUNO [waiting]: Give me the numbers in the order that matters.
+CASPAR [measured]: Sample-level sensitivity: 97%. WGS correctly identifies that AOH exists somewhere in the genome in nearly all cases where CMA does. That is the figure circulating. It is accurate.
+JUNO [flat]: And the other one.
+CASPAR [flat]: Segment-level sensitivity for AOH regions between 5 and 10 megabases: approximately 53%. WGS misses roughly 47% of individual segments in that size range. Larger segments — above 10 megabases — fare substantially better. The miss rate is concentrated in the intermediate range.
+JUNO [naming it]: Which is exactly where imprinting disorders live. Beckwith-Wiedemann, Silver-Russell, Angelman, Prader-Willi — the relevant AOH signals for those conditions are often in that intermediate range. Moderate consanguinity signals too.
+CASPAR [confirming]: Right. Sample-level sensitivity tells you whether the assay flags the case. Segment-level sensitivity tells you whether it finds the lesion. For UPD workups, you need the lesion.
+JUNO [pressing]: So what actually changes?
+CASPAR [deliberate]: WGS as a consolidating platform for CNV and sequence variant detection — this data supports that. One run, those two outputs, near-equivalent AOH sensitivity at the sample level. The committee can consolidate.
+JUNO [completing it]: It cannot retire CMA. Those are different decisions and this paper supports one of them.
+CASPAR [holding the line]: The scenarios where the gap matters: UPD workup triggered by an imprinting phenotype, consanguinity quantification where degree of relatedness is driving counseling, any case where you need segment-level AOH precision rather than just a flag that AOH exists. In those cases, CMA stays.
+JUNO [operationally]: And the threshold for triggering reflex CMA confirmation when WGS is your primary platform —
+CASPAR [cutting in]: Not defined by this paper. Zhang defines the miss rate. It does not define the threshold. That's the first open question this week.
+JUNO [landing it]: A family told WGS was sufficient for a BWS workup, when the relevant segment was in the 5-to-10 megabase range — that's a counseling failure downstream. The 97% figure is accurate. It is not the figure that matters for that family.
+CASPAR [brief]: Both statements are true.
+JUNO [pivoting]: Rounds — four other things this week.
+CASPAR [clean entry]: From Prenatal Diagnosis, 2026: Guibaud and colleagues, a case series of six — maternal sirolimus therapy for fetal extensive lymphatic cystic malformations.
+JUNO [one clause]: Sirolimus has postnatal evidence in lymphatic anomalies. This is early structured prenatal safety and pharmacokinetic data.
+CASPAR [precise]: Six cases. Maternal side effects mild and manageable. Transplacental transfer confirmed — sirolimus reaches fetal circulation. Preliminary imaging suggested lesion response in some cases. That last part is not efficacy data.
+JUNO [holding]: Not efficacy data.
+CASPAR [clean]: What this paper does is begin to define the parameters for the next study — safety framing, preliminary patient selection criteria, dosing context. Six patients. Transplacental transfer confirmed, toxicity manageable. Watch for a cohort that can actually power an efficacy question.
+JUNO [transitioning]: From Prenatal Diagnosis, 2026: Sanin-Ramirez and colleagues, a single-center series of nine — fetoscopic airway evaluation immediately before EXIT procedures.
+CASPAR [grounding]: The question is whether fetoscopy immediately before a planned EXIT changes the operative plan.
+JUNO [the finding]: Nine cases. In one — roughly 11% of the cohort — fetoscopy confirmed airway patency. The team downgraded to standard cesarean. In the remaining eight, real-time visualization guided the choice between direct intubation and tracheostomy. All nine survived the delivery room.
+CASPAR [caveat, flat]: Single center, nine patients. Directionally useful, not generalizable.
+JUNO [naming the constraint]: One in nine is a real number at an EXIT center. Whether your team can execute the fetoscopy in that window without adding procedural risk — that's the implementation question this paper doesn't answer. But if you're running an EXIT program, the workflow modification is worth a serious look.
+CASPAR [moving]: From Prenatal Diagnosis, 2026: Gibbs and colleagues, a laboratory cohort of 41 prenatally reported variants of uncertain significance — clinical utility of selective VUS reporting.
+JUNO [framing]: Default in many labs is to suppress VUS from prenatal reports — uncertainty without actionability, more burden than benefit. Gibbs tests whether MDT-curated selective reporting changes that calculus.
+CASPAR [the numbers]: 41 VUS reported prenatally after MDT review. 56% subsequently upgraded to likely pathogenic or pathogenic — predominantly through post-mortem examination or postnatal phenotyping.
+JUNO [dry]: 44% did not upgrade.
+CASPAR [holding it]: 56% is a strong argument for selective reporting. 44% non-upgrade is the reason "selective" has to mean something — MDT-curated, phenotype-severe, follow-up anticipated. The MDT selection step is load-bearing. Without it, that reclassification rate doesn't hold.
+JUNO [the policy question]: Whether 56% justifies formalizing selective reporting at most centers, or whether the 44% non-upgrade rate still argues for restraint — that's the second open question this week. Both numbers belong in the room when that conversation happens.
+CASPAR [last round]: From Fetal Diagnosis and Therapy, 2026: Budney and colleagues, a prospective cohort of 171 patients — perinatal mood and anxiety disorders in women undergoing open fetal myelomeningocele repair.
+JUNO [flat]: 171 patients prospectively screened. Roughly 51% screened positive for depression preoperatively. By the postpartum period, that dropped to approximately 25%.
+CASPAR [the trajectory]: Still elevated relative to the general obstetric population, but a meaningful decline. Much of the burden appears anticipatory — it doesn't persist uniformly into the postpartum period.
+JUNO [program implication]: Half of your open MMC patients are screening positive before you operate. That's a program design question — whether mental health support is integrated from the point of diagnosis, not handed off at discharge. The 25% postpartum figure is not a resolution. It's one in four.
+CASPAR [adding]: Largest PMAD dataset in open fetal surgery to date. The preoperative rate is high enough that a referral-only model doesn't hold.
+JUNO [closing]: Two questions this week's papers frame more precisely than they answer. What AOH segment-size threshold should trigger reflex CMA confirmation when WGS is the primary prenatal platform? Zhang defines the miss rate — the threshold is still open. And does the 56% reclassification rate in Gibbs justify a formal policy shift toward selective MDT-curated prenatal reporting, or does the 44% non-upgrade rate argue for restraint?
+CASPAR [even]: Both more precisely framed than they were Monday. Neither answered. Show notes have the DOIs — Zhang, Guibaud, Sanin-Ramirez, Gibbs, Budney. Prenatal Diagnosis and Fetal Diagnosis and Therapy, 2026.
