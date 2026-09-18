@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260918_050159_signal_in_the_scan_-_week_of_2026_09_18.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open A: The Design Choice"
+    },
+    {
+      "start_sec": 43.12,
+      "start_time": "0:43",
+      "title": "\u2014 Cold Open B: The Number, Named"
+    },
+    {
+      "start_sec": 86.24,
+      "start_time": "1:26",
+      "title": "\u2014 Headline: Design and Evidence Grade"
+    },
+    {
+      "start_sec": 129.36,
+      "start_time": "2:09",
+      "title": "\u2014 Headline: Caveat Hierarchy"
+    },
+    {
+      "start_sec": 172.47,
+      "start_time": "2:52",
+      "title": "\u2014 Headline: Practice Implication Split"
+    },
+    {
+      "start_sec": 215.59,
+      "start_time": "3:36",
+      "title": "\u2014 Round 1: Ciccarone, Ovarian Radiomics"
+    },
+    {
+      "start_sec": 258.71,
+      "start_time": "4:19",
+      "title": "\u2014 Round 2: Li, LLM-Assisted Tumor MRI"
+    },
+    {
+      "start_sec": 301.83,
+      "start_time": "5:02",
+      "title": "\u2014 Round 3: Fu, Photon-Counting CT for Breast Staging"
+    },
+    {
+      "start_sec": 344.95,
+      "start_time": "5:45",
+      "title": "\u2014 Round 4: Hathaway, Opportunistic Chest CT Muscle Biomarkers"
+    },
+    {
+      "start_sec": 388.07,
+      "start_time": "6:28",
+      "title": "\u2014 Close: Two Open Threads"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260918_050159_signal_in_the_scan_-_week_of_2026_09_18.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260918_050159_signal_in_the_scan_-_week_of_2026_09_18.companion.json",
+  "duration_sec": 476.184036,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Demonstrates AI can match expert CRL-based dating using unstructured ultrasound video, potentially enabling accurate gestational age estimation in settings without trained sonographers.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Real-time gestational-age estimation at 11-13 weeks using artificial intelligence on non-targeted ultrasound sweeps",
+      "url": "https://doi.org/10.1002/uog.70335"
+    },
+    {
+      "reason": "Early signal that ultrasound radiomics may help grade serous ovarian carcinoma noninvasively, though validation in larger cohorts is essential.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Differentiating high- and low-grade serous ovarian carcinoma using radiomics: a pilot study",
+      "url": "https://doi.org/10.1002/uog.70331"
+    },
+    {
+      "reason": "Shows large language model assistance can elevate generalist radiologist performance toward subspecialist accuracy in complex tumor interpretation.",
+      "source": "Radiology",
+      "title": "Bridging the Generalist-Subspecialist Gap with GPT-5-Thinking: Dual-Center Evaluation in Orbital and Head-and-Neck Tumor MRI Reports",
+      "url": "https://doi.org/10.1148/radiol.253579"
+    },
+    {
+      "reason": "Prospective evidence that photon-counting CT may offer a faster, potentially lower-cost alternative to MRI for breast cancer staging.",
+      "source": "Radiology",
+      "title": "Performance of Photon-counting CT for Assessing Pretreatment Breast Cancer: Comparison with Mammography, MRI, and 18F-FDG PET/CT",
+      "url": "https://doi.org/10.1148/radiol.253531"
+    },
+    {
+      "reason": "Large multicenter longitudinal data supporting opportunistic extraction of bone health biomarkers from routine chest CT.",
+      "source": "Radiology",
+      "title": "Opportunistic Chest CT Paraspinal Muscle Biomarkers to Predict Longitudinal Thoracic Vertebral Bone Mineral Density Loss: Results from MESA",
+      "url": "https://doi.org/10.1148/radiol.260238"
+    }
+  ],
+  "generated_at": "2026-09-18T10:09:50.981625+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "AI applied to non-targeted first-trimester ultrasound sweeps estimates gestational age with a mean absolute error of approximately two days, matching expert crown-rump length measurement.",
+      "confidence": "medium",
+      "id": "claim_eisenkolb",
+      "source_ids": [
+        "eisenkolb2026"
+      ]
+    },
+    {
+      "claim": "Ultrasound-derived radiomics features can differentiate high-grade from low-grade serous ovarian carcinoma in a pilot cohort.",
+      "confidence": "low",
+      "id": "claim_ciccarone",
+      "source_ids": [
+        "ciccarone2026"
+      ]
+    },
+    {
+      "claim": "GPT-5-Thinking assistance improves generalist radiologist accuracy in orbital and head-and-neck tumor MRI classification toward subspecialist levels.",
+      "confidence": "high",
+      "id": "claim_li",
+      "source_ids": [
+        "li2026"
+      ]
+    },
+    {
+      "claim": "Photon-counting CT shows staging performance comparable to MRI and superior to mammography for pretreatment breast cancer assessment.",
+      "confidence": "high",
+      "id": "claim_fu",
+      "source_ids": [
+        "fu2026"
+      ]
+    },
+    {
+      "claim": "Low paraspinal muscle attenuation on opportunistic chest CT independently predicts subsequent vertebral bone mineral density loss and fracture.",
+      "confidence": "high",
+      "id": "claim_hathaway",
+      "source_ids": [
+        "hathaway2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Eisenkolb",
+      "id": "eisenkolb2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Real-time gestational-age estimation at 11-13 weeks using artificial intelligence on non-targeted ultrasound sweeps",
+      "url": "https://doi.org/10.1002/uog.70335",
+      "why_it_matters": "Demonstrates AI can match expert CRL-based dating using unstructured ultrasound video, potentially enabling accurate gestational age estimation in settings without trained sonographers.",
+      "year": 2026
+    },
+    {
+      "author": "Ciccarone",
+      "id": "ciccarone2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Differentiating high- and low-grade serous ovarian carcinoma using radiomics: a pilot study",
+      "url": "https://doi.org/10.1002/uog.70331",
+      "why_it_matters": "Early signal that ultrasound radiomics may help grade serous ovarian carcinoma noninvasively, though validation in larger cohorts is essential.",
+      "year": 2026
+    },
+    {
+      "author": "Li",
+      "id": "li2026",
+      "publication": "Radiology",
+      "title": "Bridging the Generalist-Subspecialist Gap with GPT-5-Thinking: Dual-Center Evaluation in Orbital and Head-and-Neck Tumor MRI Reports",
+      "url": "https://doi.org/10.1148/radiol.253579",
+      "why_it_matters": "Shows large language model assistance can elevate generalist radiologist performance toward subspecialist accuracy in complex tumor interpretation.",
+      "year": 2026
+    },
+    {
+      "author": "Fu",
+      "id": "fu2026",
+      "publication": "Radiology",
+      "title": "Performance of Photon-counting CT for Assessing Pretreatment Breast Cancer: Comparison with Mammography, MRI, and 18F-FDG PET/CT",
+      "url": "https://doi.org/10.1148/radiol.253531",
+      "why_it_matters": "Prospective evidence that photon-counting CT may offer a faster, potentially lower-cost alternative to MRI for breast cancer staging.",
+      "year": 2026
+    },
+    {
+      "author": "Hathaway",
+      "id": "hathaway2026",
+      "publication": "Radiology",
+      "title": "Opportunistic Chest CT Paraspinal Muscle Biomarkers to Predict Longitudinal Thoracic Vertebral Bone Mineral Density Loss: Results from MESA",
+      "url": "https://doi.org/10.1148/radiol.260238",
+      "why_it_matters": "Large multicenter longitudinal data supporting opportunistic extraction of bone health biomarkers from routine chest CT.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Eisenkolb et al. - Ultrasound Obstet Gynecol - 2026 - Real-time gestational-age estimation at 11-13 weeks using artificial intelligence on non-targeted ultrasound sweeps (https://doi.org/10.1002/uog.70335)",
+    "Ciccarone et al. - Ultrasound Obstet Gynecol - 2026 - Differentiating high- and low-grade serous ovarian carcinoma using radiomics: a pilot study (https://doi.org/10.1002/uog.70331)",
+    "Li et al. - Radiology - 2026 - Bridging the Generalist-Subspecialist Gap with GPT-5-Thinking: Dual-Center Evaluation in Orbital and Head-and-Neck Tumor MRI Reports (https://doi.org/10.1148/radiol.253579)",
+    "Fu et al. - Radiology - 2026 - Performance of Photon-counting CT for Assessing Pretreatment Breast Cancer: Comparison with Mammography, MRI, and 18F-FDG PET/CT (https://doi.org/10.1148/radiol.253531)",
+    "Hathaway et al. - Radiology - 2026 - Opportunistic Chest CT Paraspinal Muscle Biomarkers to Predict Longitudinal Thoracic Vertebral Bone Mineral Density Loss: Results from MESA (https://doi.org/10.1148/radiol.260238)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/09/18",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1131
+}
