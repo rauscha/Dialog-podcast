@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Planning Number"
+    },
+    {
+      "startTime": 45.96,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 91.92,
+      "title": "\u2014 Headline: Effect in Numbers"
+    },
+    {
+      "startTime": 137.88,
+      "title": "\u2014 Headline: The Measurement Problem"
+    },
+    {
+      "startTime": 183.83,
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "startTime": 229.79,
+      "title": "\u2014 Round 1: Triplet Reduction and Preeclampsia"
+    },
+    {
+      "startTime": 275.75,
+      "title": "\u2014 Round 2: Proteinuria Thresholds in Expectant Management"
+    },
+    {
+      "startTime": 321.71,
+      "title": "\u2014 Round 3: Antihypertensive Escalation as a Severity Signal"
+    },
+    {
+      "startTime": 367.67,
+      "title": "\u2014 Round 4: BMI and Oxytocin Requirements"
+    },
+    {
+      "startTime": 413.63,
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

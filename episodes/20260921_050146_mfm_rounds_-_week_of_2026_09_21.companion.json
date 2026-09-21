@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260921_050146_mfm_rounds_-_week_of_2026_09_21.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Planning Number"
+    },
+    {
+      "start_sec": 45.96,
+      "start_time": "0:46",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 91.92,
+      "start_time": "1:32",
+      "title": "\u2014 Headline: Effect in Numbers"
+    },
+    {
+      "start_sec": 137.88,
+      "start_time": "2:18",
+      "title": "\u2014 Headline: The Measurement Problem"
+    },
+    {
+      "start_sec": 183.83,
+      "start_time": "3:04",
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "start_sec": 229.79,
+      "start_time": "3:50",
+      "title": "\u2014 Round 1: Triplet Reduction and Preeclampsia"
+    },
+    {
+      "start_sec": 275.75,
+      "start_time": "4:36",
+      "title": "\u2014 Round 2: Proteinuria Thresholds in Expectant Management"
+    },
+    {
+      "start_sec": 321.71,
+      "start_time": "5:22",
+      "title": "\u2014 Round 3: Antihypertensive Escalation as a Severity Signal"
+    },
+    {
+      "start_sec": 367.67,
+      "start_time": "6:08",
+      "title": "\u2014 Round 4: BMI and Oxytocin Requirements"
+    },
+    {
+      "start_sec": 413.63,
+      "start_time": "6:54",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260921_050146_mfm_rounds_-_week_of_2026_09_21.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260921_050146_mfm_rounds_-_week_of_2026_09_21.companion.json",
+  "duration_sec": 504.584172,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Large multicenter trend data directly informs hemorrhage preparedness planning and risk stratification for contemporary obstetric populations",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Trends in postpartum hemorrhage, associated risk factors, and severe maternal outcomes in a multihospital health system, 2016-2023",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102082"
+    },
+    {
+      "reason": "Quantifies preeclampsia risk reduction with embryo reduction, directly applicable to triplet management counseling",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Incidence of pre-eclampsia in triplet pregnancies with and without embryo reduction",
+      "url": "https://doi.org/10.1002/uog.70341"
+    },
+    {
+      "reason": "Provides specific proteinuria thresholds for risk stratification during expectant management of preterm preeclampsia",
+      "source": "BJOG",
+      "title": "Association Between Proteinuria and Pregnancy Outcomes in Women With Preterm Pre-Eclampsia Undergoing Expectant Management",
+      "url": "https://doi.org/10.1111/1471-0528.70335"
+    },
+    {
+      "reason": "Identifies antihypertensive escalation as a potential marker of deterioration during expectant management",
+      "source": "Am J Obstet Gynecol",
+      "title": "Antihypertensive Treatment Escalation and Maternal Outcomes During Expectant Management of Early-Onset Preeclampsia With Severe Features",
+      "url": "https://doi.org/10.1016/j.ajog.2026.09.019"
+    },
+    {
+      "reason": "Supports development of BMI-adjusted oxytocin dosing protocols for labor induction",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Higher maternal body mass index is associated with increased oxytocin requirements during induction of labor",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102110"
+    }
+  ],
+  "generated_at": "2026-09-21T10:09:16.933409+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Postpartum hemorrhage incidence increased from 8.1% to 10.4% and severe PPH from 0.9% to 1.3% across a large health system from 2016 to 2023, concurrent with rising induction rates and maternal comorbidities",
+      "confidence": "high",
+      "id": "claim_pph_trend",
+      "source_ids": [
+        "kovacheva2026"
+      ]
+    },
+    {
+      "claim": "Reducing triplets to singleton results in preeclampsia rates around 2%, compared to approximately 10% in non-reduced triplets or twins reduced from triplets",
+      "confidence": "medium",
+      "id": "claim_triplet_reduction",
+      "source_ids": [
+        "yerlikaya2026"
+      ]
+    },
+    {
+      "claim": "In expectantly managed preterm preeclampsia, proteinuria of 5 grams or more per 24 hours is associated with approximately 5 days shorter latency and 28% maternal complication rate versus 9% with proteinuria under 3 grams",
+      "confidence": "medium",
+      "id": "claim_proteinuria_threshold",
+      "source_ids": [
+        "rooyen2026"
+      ]
+    },
+    {
+      "claim": "Escalating antihypertensive treatment during expectant management of early-onset severe preeclampsia is associated with worse maternal outcomes, likely as a severity marker",
+      "confidence": "low",
+      "id": "claim_antihypertensive_escalation",
+      "source_ids": [
+        "bart2026"
+      ]
+    },
+    {
+      "claim": "Higher maternal BMI is independently associated with greater cumulative oxytocin dose and higher maximum infusion rates during labor induction in nulliparous women",
+      "confidence": "medium",
+      "id": "claim_bmi_oxytocin",
+      "source_ids": [
+        "bladfalt2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Kovacheva",
+      "id": "kovacheva2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Trends in postpartum hemorrhage, associated risk factors, and severe maternal outcomes in a multihospital health system, 2016-2023",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102082",
+      "why_it_matters": "Large multicenter trend data directly informs hemorrhage preparedness planning and risk stratification for contemporary obstetric populations",
+      "year": 2026
+    },
+    {
+      "author": "Yerlikaya-Schatten",
+      "id": "yerlikaya2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Incidence of pre-eclampsia in triplet pregnancies with and without embryo reduction",
+      "url": "https://doi.org/10.1002/uog.70341",
+      "why_it_matters": "Quantifies preeclampsia risk reduction with embryo reduction, directly applicable to triplet management counseling",
+      "year": 2026
+    },
+    {
+      "author": "Rooyen",
+      "id": "rooyen2026",
+      "publication": "BJOG",
+      "title": "Association Between Proteinuria and Pregnancy Outcomes in Women With Preterm Pre-Eclampsia Undergoing Expectant Management",
+      "url": "https://doi.org/10.1111/1471-0528.70335",
+      "why_it_matters": "Provides specific proteinuria thresholds for risk stratification during expectant management of preterm preeclampsia",
+      "year": 2026
+    },
+    {
+      "author": "Bart",
+      "id": "bart2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Antihypertensive Treatment Escalation and Maternal Outcomes During Expectant Management of Early-Onset Preeclampsia With Severe Features",
+      "url": "https://doi.org/10.1016/j.ajog.2026.09.019",
+      "why_it_matters": "Identifies antihypertensive escalation as a potential marker of deterioration during expectant management",
+      "year": 2026
+    },
+    {
+      "author": "Bladf\u00e4lt",
+      "id": "bladfalt2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Higher maternal body mass index is associated with increased oxytocin requirements during induction of labor",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102110",
+      "why_it_matters": "Supports development of BMI-adjusted oxytocin dosing protocols for labor induction",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Kovacheva et al. - Am J Obstet Gynecol MFM - 2026 - Trends in postpartum hemorrhage, associated risk factors, and severe maternal outcomes in a multihospital health system, 2016-2023 (https://doi.org/10.1016/j.ajogmf.2026.102082)",
+    "Yerlikaya-Schatten et al. - Ultrasound Obstet Gynecol - 2026 - Incidence of pre-eclampsia in triplet pregnancies with and without embryo reduction (https://doi.org/10.1002/uog.70341)",
+    "Rooyen et al. - BJOG - 2026 - Association Between Proteinuria and Pregnancy Outcomes in Women With Preterm Pre-Eclampsia Undergoing Expectant Management (https://doi.org/10.1111/1471-0528.70335)",
+    "Bart et al. - Am J Obstet Gynecol - 2026 - Antihypertensive Treatment Escalation and Maternal Outcomes During Expectant Management of Early-Onset Preeclampsia With Severe Features (https://doi.org/10.1016/j.ajog.2026.09.019)",
+    "Bladf\u00e4lt et al. - Am J Obstet Gynecol MFM - 2026 - Higher maternal body mass index is associated with increased oxytocin requirements during induction of labor (https://doi.org/10.1016/j.ajogmf.2026.102110)"
+  ],
+  "topic": "MFM Rounds - week of 2026/09/21",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1209
+}
