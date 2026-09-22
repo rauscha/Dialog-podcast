@@ -2,6 +2,23 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
+## P0 — Move episode audio to GitHub Releases, before Pages hits its 1 GB cap (added 2026-09-21)
+
+**Why:** the feeds serve every episode from GitHub Pages (`rauscha.github.io/Dialog-podcast/episodes/...`), and a published Pages site can be at most **1 GB**.
+As of 2026-09-21, `episodes/` is **~960 MB across 79 MP3s**, so there's only room for a few more episodes. The audio also means every clone downloads ~1 GB of history.
+
+**Why not Git LFS:** Pages deployed straight from the branch serves LFS *pointer files*, not the audio, so the feeds would break.
+
+**Plan:**
+1. Upload the existing MP3s as **Release assets**, for example one `episodes-YYYY-MM` release per month. Use `gh release create` / `gh release upload`. Assets can be up to 2 GB each, are never cloned, and don't count toward the Pages size.
+2. Change the publish step so new episodes are uploaded with `gh release upload`, and write each enclosure URL as `https://github.com/rauscha/Dialog-podcast/releases/download/<tag>/<file>.mp3`.
+3. Rewrite the enclosure URLs in `feed*.xml`. **Keep every `<guid>` unchanged**, so podcast apps don't treat old episodes as new or download them again. Keep `length` equal to the file's byte size.
+4. Before switching everything, check one migrated episode in the Apple Podcasts validator. Release downloads redirect, and the host has to allow byte-range requests.
+5. Add `episodes/` to `.gitignore` and delete the MP3s from the tree.
+6. Optional: remove the old MP3s from history with `git filter-repo --path episodes --invert-paths` and force-push. That shrinks every clone from ~1 GB to a few MB. **Re-clone the copies on crane-desk and tikiserv afterwards.**
+
+**Until then:** machines that don't need the audio can use a code-only clone: `git clone --filter=blob:none --no-checkout <url>`, then `git sparse-checkout set --no-cone '/*' '!/episodes/'`, then `git checkout main`. crane-frame is set up this way.
+
 ## ✅ P0 — Throttle digests to WEEKLY — DONE (2026-06-06)
 
 **Shipped:** added a weekly throttle to `_show_is_due()` (`generate_podcast.py`). New module
