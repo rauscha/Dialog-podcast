@@ -1,0 +1,815 @@
+<title>Asynchronous Signal Chain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+
+<style>
+  /* ── Tokens: light is the base; dark redefines only values ─────────── */
+  :root {
+    color-scheme: light;
+
+    --paper:    #eaeff1;
+    --panel:    #fbfcfc;
+    --panel-2:  #dfe7e9;
+    --rule:     #c2ced2;
+    --rule-2:   #aebcc1;
+
+    --ink:      #12191c;
+    --ink-2:    #3d4c52;
+    --ink-3:    #6a7a80;
+
+    /* mark hues — SVG fills and strokes */
+    --m-blue:   #0072B2;
+    --m-teal:   #009E73;
+    --m-amber:  #E69F00;
+    --m-verm:   #D55E00;
+    --m-mauve:  #CC79A7;
+
+    /* label hues — text and chips, contrast-checked on this ground */
+    --l-blue:   #005c90;
+    --l-teal:   #007054;
+    --l-amber:  #7d5800;
+    --l-verm:   #ab4103;
+    --l-mauve:  #8e3f74;
+
+    --tint-verm: #fbe8dd;
+    --tint-blue: #e0ecf4;
+
+    --shadow: 0 1px 2px rgba(18,25,28,.06), 0 8px 20px -14px rgba(18,25,28,.22);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --paper:   #0f1518;
+      --panel:   #172025;
+      --panel-2: #1f2a30;
+      --rule:    #2d3b42;
+      --rule-2:  #41525a;
+
+      --ink:     #e8eef0;
+      --ink-2:   #a9bbc1;
+      --ink-3:   #7d9097;
+
+      --m-blue:  #4aa8dd;
+      --m-teal:  #35c39b;
+      --m-amber: #e8b53f;
+      --m-verm:  #f2793a;
+      --m-mauve: #dd9cc0;
+
+      --l-blue:  #79c2ec;
+      --l-teal:  #4fd3ac;
+      --l-amber: #f0c260;
+      --l-verm:  #ff8f57;
+      --l-mauve: #eaaed0;
+
+      --tint-verm: #35211a;
+      --tint-blue: #16262f;
+
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 24px -16px rgba(0,0,0,.7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper:   #0f1518;
+    --panel:   #172025;
+    --panel-2: #1f2a30;
+    --rule:    #2d3b42;
+    --rule-2:  #41525a;
+
+    --ink:     #e8eef0;
+    --ink-2:   #a9bbc1;
+    --ink-3:   #7d9097;
+
+    --m-blue:  #4aa8dd;
+    --m-teal:  #35c39b;
+    --m-amber: #e8b53f;
+    --m-verm:  #f2793a;
+    --m-mauve: #dd9cc0;
+
+    --l-blue:  #79c2ec;
+    --l-teal:  #4fd3ac;
+    --l-amber: #f0c260;
+    --l-verm:  #ff8f57;
+    --l-mauve: #eaaed0;
+
+    --tint-verm: #35211a;
+    --tint-blue: #16262f;
+
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 24px -16px rgba(0,0,0,.7);
+  }
+
+  /* ── Base ──────────────────────────────────────────────────────────── */
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.62;
+    padding-inline: 20px;
+    padding-block: 0;
+  }
+  .wrap { max-width: 920px; margin-inline: auto; }
+
+  h1, h2, h3, .eyebrow, .chip, th, .num { font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; }
+  code, .mono, .spec { font-family: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace; }
+
+  .eyebrow {
+    font-size: 11.5px; font-weight: 700; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+
+  /* ── Masthead ──────────────────────────────────────────────────────── */
+  header.masthead { padding-block: 56px 14px; }
+  header.masthead .eyebrow { display: block; margin-bottom: 18px; }
+  header.masthead .eyebrow code { font-size: 11.5px; color: var(--l-blue); letter-spacing: .04em; }
+  h1 {
+    font-size: clamp(38px, 8vw, 62px);
+    font-weight: 800; letter-spacing: -.028em; line-height: .98;
+    margin: 0 0 20px; text-wrap: balance;
+  }
+  .standfirst {
+    font-size: clamp(19px, 2.4vw, 22px); line-height: 1.5;
+    color: var(--ink-2); max-width: 34em; margin: 0;
+  }
+  .standfirst strong { color: var(--ink); font-weight: 600; }
+
+  .facts {
+    display: flex; flex-wrap: wrap; gap: 0;
+    margin-block: 34px 0; border-top: 1px solid var(--rule);
+  }
+  .fact {
+    flex: 1 1 130px; padding: 14px 18px 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .fact .num {
+    display: block; font-size: 25px; font-weight: 700; letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+  }
+  .fact .lbl { font-size: 12.5px; color: var(--ink-3); font-family: "Archivo", sans-serif; }
+
+  /* ── Sections ──────────────────────────────────────────────────────── */
+  section { padding-block: 44px 0; }
+  section > .eyebrow { display: block; margin-bottom: 10px; }
+  h2 {
+    font-size: clamp(25px, 3.6vw, 32px); font-weight: 700; letter-spacing: -.022em;
+    margin: 0 0 14px; text-wrap: balance; line-height: 1.12;
+  }
+  h3 {
+    font-size: 16px; font-weight: 700; letter-spacing: .01em;
+    margin: 30px 0 8px; color: var(--ink);
+  }
+  p { max-width: 64ch; margin: 0 0 15px; }
+  p code, li code, td code, dd code {
+    font-size: .84em; background: var(--panel-2); color: var(--ink);
+    padding: .1em .38em; border-radius: 2px;
+  }
+
+  /* ── Figures ───────────────────────────────────────────────────────── */
+  figure { margin: 26px 0 0; }
+  .fig-scroll {
+    overflow-x: auto; background: var(--panel);
+    border: 1px solid var(--rule); border-radius: 4px;
+    box-shadow: var(--shadow); padding: 6px;
+  }
+  .diagram { display: block; width: 100%; height: auto; color: var(--rule-2); }
+  #chain  { min-width: 760px; }
+  #gate   { min-width: 640px; }
+  #arrange{ min-width: 620px; }
+  .diagram text { font-family: "Archivo", sans-serif; }
+  .diagram text.m { font-family: "JetBrains Mono", monospace; }
+  figcaption {
+    font-size: 14.5px; color: var(--ink-3); margin-top: 11px;
+    max-width: 64ch; line-height: 1.5;
+  }
+  figcaption b { color: var(--ink-2); font-weight: 600; font-family: "Archivo", sans-serif; font-size: 13px; }
+
+  /* ── Tables ────────────────────────────────────────────────────────── */
+  .t-scroll { overflow-x: auto; margin-top: 20px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+  th {
+    text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-3);
+    padding: 0 14px 8px 0; border-bottom: 1.5px solid var(--rule-2); white-space: nowrap;
+  }
+  td {
+    padding: 11px 14px 11px 0; border-bottom: 1px solid var(--rule);
+    vertical-align: top; line-height: 1.45;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.mono, th.mono { font-size: 13px; }
+  td.pass { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 14.5px; white-space: nowrap; }
+  td.dim { color: var(--ink-3); }
+
+  /* ── Chips / badges ────────────────────────────────────────────────── */
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 99px; white-space: nowrap;
+    border: 1px solid currentColor;
+  }
+  .chip.always { color: var(--l-blue);  background: var(--tint-blue); }
+  .chip.open   { color: var(--l-verm);  background: var(--tint-verm); }
+  .chip.flag   { color: var(--ink-3);   background: transparent; border-style: dashed; }
+
+  /* ── Fail-mode list: shape + label carry it, never hue alone ──────── */
+  .modes { display: grid; gap: 0; margin-top: 22px; }
+  .mode {
+    display: grid; grid-template-columns: 112px 1fr; gap: 18px;
+    padding: 15px 0; border-bottom: 1px solid var(--rule); align-items: start;
+  }
+  .mode:last-child { border-bottom: none; }
+  .mode .tag {
+    font-family: "Archivo", sans-serif; font-size: 11px; font-weight: 800;
+    letter-spacing: .1em; text-transform: uppercase; padding: 4px 0 4px 12px;
+  }
+  .mode.halt .tag   { color: var(--l-verm);  border-left: 4px solid var(--m-verm); }
+  .mode.degrade .tag{ color: var(--l-mauve); border-left: 4px dashed var(--m-mauve); }
+  .mode p { margin: 0; font-size: 15.5px; }
+  .mode p + p { margin-top: 6px; color: var(--ink-3); font-size: 14.5px; }
+
+  /* ── Two-path comparison ───────────────────────────────────────────── */
+  .paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 0 34px; margin-top: 24px; }
+  .path { border-top: 3px solid var(--rule-2); padding-top: 14px; }
+  .path.open { border-top-color: var(--m-blue); }
+  .path.rounds { border-top-color: var(--m-amber); }
+  .path h3 { margin: 0 0 4px; font-size: 17px; }
+  .path .who { font-size: 13px; color: var(--ink-3); font-family: "Archivo", sans-serif; margin-bottom: 12px; }
+  .path dl { margin: 0; font-size: 14.5px; }
+  .path dt {
+    font-family: "Archivo", sans-serif; font-size: 10.5px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-top: 12px;
+  }
+  .path dd { margin: 2px 0 0; line-height: 1.45; }
+
+  ul.tight { margin: 8px 0 0; padding-left: 20px; }
+  ul.tight li { margin-bottom: 5px; max-width: 62ch; }
+
+  footer {
+    margin-top: 56px; padding-block: 22px 60px;
+    border-top: 1px solid var(--rule);
+    font-size: 13.5px; color: var(--ink-3);
+  }
+  footer .mono { font-size: 12.5px; }
+
+  a { color: var(--l-blue); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  :focus-visible { outline: 2px solid var(--m-verm); outline-offset: 3px; }
+
+  @media (max-width: 560px) {
+    .mode { grid-template-columns: 1fr; gap: 8px; }
+    .mode .tag { padding-left: 10px; }
+  }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <span class="eyebrow">Dialog-podcast · <code>generate_podcast.py</code></span>
+  <h1>Asynchronous Signal&nbsp;Chain</h1>
+  <p class="standfirst">A topic goes in one end. A mastered MP3, a chapter file and an RSS item come out the other &mdash; having passed through <strong>fourteen language-model passes, one closed comprehension loop, and a mastering chain that ends at &minus;14&nbsp;LUFS</strong>.</p>
+
+  <div class="facts">
+    <div class="fact"><span class="num">6</span><span class="lbl">logged stages</span></div>
+    <div class="fact"><span class="num">14</span><span class="lbl">LLM passes</span></div>
+    <div class="fact"><span class="num">2</span><span class="lbl">intake paths</span></div>
+    <div class="fact"><span class="num">4</span><span class="lbl">published feeds</span></div>
+    <div class="fact"><span class="num">&le;8</span><span class="lbl">TTS workers</span></div>
+  </div>
+</header>
+
+<!-- ══ FIGURE 1 — the whole chain ═══════════════════════════════════════ -->
+<section>
+  <span class="eyebrow">The chain, end to end</span>
+  <h2>Two ways in, one body, four feeds out</h2>
+  <p>The orchestrator logs its own progress as <code>[1/5]</code>&hellip;<code>[5/5]</code>, and the run manifest records the same march as named stages: <code>research_script → audio → rss → git</code>. Those markers are the spine of the diagram below — it is the pipeline's own numbering, not a narrative imposed on it.</p>
+
+  <figure>
+    <div class="fig-scroll">
+      <svg id="chain" class="diagram" viewBox="0 0 880 958" role="img"
+           aria-label="Six-stage flow: entry by Telegram or Task Scheduler, through a generation lock; research by web search or journal ranking, converging on one shared script-build function; script passes ending in a draft-and-gate repair cycle; an edit chain; audio rendering; and publication to RSS and git.">
+        <defs>
+          <marker id="c-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)"/>
+          </marker>
+          <marker id="c-ar-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--m-verm)"/>
+          </marker>
+          <marker id="c-ar-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--m-mauve)"/>
+          </marker>
+        </defs>
+
+        <!-- ─ BAND 1 · ENTRY ─ -->
+        <rect x="170" y="44" width="670" height="118" rx="4" fill="var(--panel-2)" stroke="currentColor" stroke-opacity=".55"/>
+        <text class="m" x="146" y="62" text-anchor="end" font-size="11" font-weight="700" fill="var(--ink-3)">ENTRY</text>
+        <text class="m" x="146" y="78" text-anchor="end" font-size="10" fill="var(--ink-3)">stage: init</text>
+
+        <rect x="190" y="62" width="300" height="46" rx="3" fill="var(--panel)" stroke="var(--m-blue)" stroke-opacity=".7"/>
+        <text x="204" y="81" font-size="13" font-weight="700" fill="var(--ink)">Telegram bot</text>
+        <text class="m" x="204" y="97" font-size="10.5" fill="var(--ink-3)">telegram_bot.py — one topic, on demand</text>
+
+        <rect x="520" y="62" width="300" height="46" rx="3" fill="var(--panel)" stroke="var(--m-amber)" stroke-opacity=".8"/>
+        <text x="534" y="81" font-size="13" font-weight="700" fill="var(--ink)">Task Scheduler · 05:00 daily</text>
+        <text class="m" x="534" y="97" font-size="10.5" fill="var(--ink-3)">run_digests.ps1 → --digest-all</text>
+
+        <polyline points="340,108 340,116 400,116 400,122" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <polyline points="670,108 670,116 490,116 490,122" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <rect x="320" y="122" width="250" height="28" rx="14" fill="var(--panel)" stroke="currentColor"/>
+        <text class="m" x="445" y="140" text-anchor="middle" font-size="10.5" fill="var(--ink-2)">generation lock — one run at a time</text>
+
+        <!-- arrow 1 -->
+        <line x1="300" y1="162" x2="300" y2="192" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <text class="m" x="312" y="182" font-size="10.5" fill="var(--ink-3)">topic string</text>
+
+        <!-- ─ BAND 2 · RESEARCH ─ -->
+        <rect x="170" y="194" width="670" height="126" rx="4" fill="var(--panel-2)" stroke="currentColor" stroke-opacity=".55"/>
+        <text class="m" x="146" y="212" text-anchor="end" font-size="11" font-weight="700" fill="var(--l-blue)">[1/5]</text>
+        <text class="m" x="146" y="228" text-anchor="end" font-size="10" fill="var(--ink-3)">research</text>
+
+        <rect x="190" y="212" width="300" height="52" rx="3" fill="var(--panel)" stroke="var(--m-blue)" stroke-opacity=".7"/>
+        <text x="204" y="231" font-size="12.5" font-weight="700" fill="var(--ink)">live web_search</text>
+        <text class="m" x="204" y="246" font-size="10.5" fill="var(--ink-3)">Opus 4.5 · source cards, key claims,</text>
+        <text class="m" x="204" y="258" font-size="10.5" fill="var(--ink-3)">hooks, open questions</text>
+
+        <rect x="520" y="212" width="300" height="52" rx="3" fill="var(--panel)" stroke="var(--m-amber)" stroke-opacity=".8"/>
+        <text x="534" y="231" font-size="12.5" font-weight="700" fill="var(--ink)">digest_ranker</text>
+        <text class="m" x="534" y="246" font-size="10.5" fill="var(--ink-3)">PubMed · Europe PMC · Altmetric · SJR</text>
+        <text class="m" x="534" y="258" font-size="10.5" fill="var(--ink-3)">→ 1 headline + rounds papers</text>
+
+        <polyline points="340,264 340,272 400,272 400,280" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <polyline points="670,264 670,272 490,272 490,280" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <rect x="250" y="280" width="390" height="28" rx="3" fill="var(--tint-blue)" stroke="var(--m-blue)"/>
+        <text class="m" x="445" y="298" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--l-blue)">research_package → _script_from_research_package()</text>
+
+        <!-- arrow 2 -->
+        <line x1="300" y1="320" x2="300" y2="350" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <text class="m" x="312" y="340" font-size="10.5" fill="var(--ink-3)">research_package.json</text>
+
+        <!-- ─ BAND 3 · SCRIPT ─ -->
+        <rect x="170" y="352" width="670" height="140" rx="4" fill="var(--panel-2)" stroke="currentColor" stroke-opacity=".55"/>
+        <text class="m" x="146" y="370" text-anchor="end" font-size="11" font-weight="700" fill="var(--l-blue)">[2/5]</text>
+        <text class="m" x="146" y="386" text-anchor="end" font-size="10" fill="var(--ink-3)">script</text>
+
+        <rect x="190" y="382" width="80" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="230" y="402" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">thesis</text>
+        <rect x="278" y="382" width="80" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="318" y="402" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">guest?</text>
+        <rect x="366" y="382" width="80" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="406" y="402" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">spine</text>
+        <rect x="454" y="382" width="80" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="494" y="402" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">beats</text>
+        <rect x="542" y="382" width="80" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="582" y="402" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">cues</text>
+        <line x1="270" y1="398" x2="278" y2="398" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="358" y1="398" x2="366" y2="398" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="446" y1="398" x2="454" y2="398" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="534" y1="398" x2="542" y2="398" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="622" y1="398" x2="644" y2="398" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+
+        <!-- the one cycle -->
+        <rect x="648" y="382" width="172" height="32" rx="3" fill="var(--panel)" stroke="var(--ink-2)" stroke-width="1.4"/>
+        <text x="734" y="402" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--ink)">draft dialogue</text>
+        <rect x="648" y="434" width="172" height="32" rx="3" fill="var(--tint-verm)" stroke="var(--m-verm)" stroke-width="1.6"/>
+        <text x="734" y="454" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--l-verm)">listener gate &#9671;</text>
+        <line x1="688" y1="414" x2="688" y2="430" stroke="var(--m-verm)" stroke-width="1.6" marker-end="url(#c-ar-v)"/>
+        <line x1="780" y1="434" x2="780" y2="418" stroke="var(--m-verm)" stroke-width="1.6" marker-end="url(#c-ar-v)"/>
+        <text class="m" x="734" y="482" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--l-verm)">repair &times; &le;2 rounds</text>
+
+        <!-- arrow 3 -->
+        <line x1="300" y1="492" x2="300" y2="522" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <text class="m" x="312" y="512" font-size="10.5" fill="var(--ink-3)">draft_script.txt</text>
+
+        <!-- ─ BAND 4 · EDIT ─ -->
+        <rect x="170" y="524" width="670" height="110" rx="4" fill="var(--panel-2)" stroke="currentColor" stroke-opacity=".55"/>
+        <text class="m" x="146" y="542" text-anchor="end" font-size="11" font-weight="700" fill="var(--l-blue)">[3/5]</text>
+        <text class="m" x="146" y="558" text-anchor="end" font-size="10" fill="var(--ink-3)">edit</text>
+
+        <rect x="190" y="552" width="96" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="238" y="572" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">anti-clich&eacute;</text>
+        <rect x="294" y="552" width="96" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="342" y="572" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">rhythm &#9671;</text>
+        <rect x="398" y="552" width="96" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="446" y="572" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">disfluency &#9671;</text>
+        <rect x="502" y="552" width="110" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="557" y="572" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">fact-check</text>
+        <rect x="620" y="552" width="96" height="32" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="668" y="572" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">callback &#9671;</text>
+        <rect x="724" y="552" width="96" height="32" rx="3" fill="var(--panel)" stroke="var(--ink-2)" stroke-width="1.4"/>
+        <text x="772" y="572" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--ink)">perform</text>
+        <line x1="286" y1="568" x2="294" y2="568" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="390" y1="568" x2="398" y2="568" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="494" y1="568" x2="502" y2="568" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="612" y1="568" x2="620" y2="568" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="716" y1="568" x2="724" y2="568" stroke="currentColor" stroke-width="1.2"/>
+        <text class="m" x="190" y="608" font-size="10.5" fill="var(--ink-3)">&#9671; open-topic only — the three weekly digests bypass these four passes</text>
+        <text class="m" x="190" y="622" font-size="10.5" fill="var(--ink-3)">fact-check keeps live web_search on topics, and runs tool-free on digests</text>
+
+        <!-- arrow 4 -->
+        <line x1="300" y1="634" x2="300" y2="664" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <text class="m" x="312" y="654" font-size="10.5" fill="var(--ink-3)">performance script + emotion tags</text>
+
+        <!-- ─ BAND 5 · AUDIO ─ -->
+        <rect x="170" y="666" width="670" height="110" rx="4" fill="var(--panel-2)" stroke="currentColor" stroke-opacity=".55"/>
+        <text class="m" x="146" y="684" text-anchor="end" font-size="11" font-weight="700" fill="var(--l-teal)">[4/5]</text>
+        <text class="m" x="146" y="700" text-anchor="end" font-size="10" fill="var(--ink-3)">audio</text>
+
+        <rect x="190" y="694" width="106" height="32" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text x="243" y="714" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">split turns</text>
+        <rect x="304" y="694" width="118" height="32" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text x="363" y="714" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">TTS &times;N</text>
+        <rect x="430" y="694" width="132" height="32" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text x="496" y="714" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">gaps + splice</text>
+        <rect x="570" y="694" width="124" height="32" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text x="632" y="714" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">bookends</text>
+        <rect x="702" y="694" width="118" height="32" rx="3" fill="var(--panel)" stroke="var(--ink-2)" stroke-width="1.4"/>
+        <text x="761" y="714" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--ink)">master</text>
+        <line x1="296" y1="710" x2="304" y2="710" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="422" y1="710" x2="430" y2="710" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="562" y1="710" x2="570" y2="710" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="694" y1="710" x2="702" y2="710" stroke="currentColor" stroke-width="1.2"/>
+        <text class="m" x="190" y="750" font-size="10.5" fill="var(--ink-3)">&minus;14 LUFS · &minus;1 dBTP · LRA 11 · 192 kbps · 44.1 kHz · stereo</text>
+        <text class="m" x="190" y="764" font-size="10.5" fill="var(--ink-3)">work dir is deleted on the way out — only the sidecars survive</text>
+
+        <!-- arrow 5 -->
+        <line x1="300" y1="776" x2="300" y2="806" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <text class="m" x="312" y="796" font-size="10.5" fill="var(--ink-3)">&lt;timestamp&gt;_&lt;slug&gt;.mp3</text>
+
+        <!-- ─ BAND 6 · PUBLISH ─ -->
+        <rect x="170" y="808" width="670" height="124" rx="4" fill="var(--panel-2)" stroke="currentColor" stroke-opacity=".55"/>
+        <text class="m" x="146" y="826" text-anchor="end" font-size="11" font-weight="700" fill="var(--l-amber)">[5/5]</text>
+        <text class="m" x="146" y="842" text-anchor="end" font-size="10" fill="var(--ink-3)">rss + git</text>
+
+        <rect x="190" y="826" width="196" height="46" rx="3" fill="var(--panel)" stroke="var(--m-amber)" stroke-opacity=".8"/>
+        <text x="204" y="845" font-size="12" font-weight="700" fill="var(--ink)">sidecars</text>
+        <text class="m" x="204" y="861" font-size="10" fill="var(--ink-3)">.chapters · .companion · .script</text>
+
+        <rect x="402" y="826" width="196" height="46" rx="3" fill="var(--panel)" stroke="var(--m-amber)" stroke-opacity=".8"/>
+        <text x="416" y="845" font-size="12" font-weight="700" fill="var(--ink)">RSS item appended</text>
+        <text class="m" x="416" y="861" font-size="10" fill="var(--ink-3)">feed.xml · feed-mfm/fetal/ai.xml</text>
+
+        <rect x="614" y="826" width="206" height="46" rx="3" fill="var(--panel)" stroke="var(--m-amber)" stroke-opacity=".8"/>
+        <text x="628" y="845" font-size="12" font-weight="700" fill="var(--ink)">git commit + push</text>
+        <text class="m" x="628" y="861" font-size="10" fill="var(--ink-3)">→ GitHub Pages · SKIP_GIT=1 opts out</text>
+        <line x1="386" y1="849" x2="398" y2="849" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+        <line x1="598" y1="849" x2="610" y2="849" stroke="currentColor" stroke-width="1.4" marker-end="url(#c-ar)"/>
+
+        <rect x="190" y="886" width="630" height="30" rx="3" fill="none" stroke="var(--m-mauve)" stroke-width="1.4" stroke-dasharray="5 4"/>
+        <text class="m" x="205" y="905" font-size="10.5" font-weight="700" fill="var(--l-mauve)">roundtrip check</text>
+        <text class="m" x="300" y="905" font-size="10.5" fill="var(--ink-3)">transcribe the master → naive re-read → log it. Dashed: reports, never blocks.</text>
+      </svg>
+    </div>
+    <figcaption><b>Figure 1.</b> The pipeline's own stage markers, in order. Both intakes converge twice — first on the generation lock, then on <code>_script_from_research_package()</code>, the single body that every episode is built by. Diamond-marked passes (&#9671;) run only for open-topic episodes.</figcaption>
+  </figure>
+</section>
+
+<!-- ══ TWO PATHS ═══════════════════════════════════════════════════════ -->
+<section>
+  <span class="eyebrow">Intake</span>
+  <h2>The same body, reached two different ways</h2>
+  <p>An episode is either something you asked for or something the calendar asked for. They differ only in how the research package is assembled; from that object onward the code path is identical.</p>
+
+  <div class="paths">
+    <div class="path open">
+      <h3>Open topic</h3>
+      <div class="who">You type a topic into Telegram</div>
+      <dl>
+        <dt>Research</dt>
+        <dd>Opus 4.5 with the live <code>web_search</code> tool, returning source cards, key claims with confidence, story hooks and things to avoid.</dd>
+        <dt>Passes</dt>
+        <dd>All fourteen, including the comprehension gate.</dd>
+        <dt>Publishes to</dt>
+        <dd><code>feed.xml</code></dd>
+      </dl>
+    </div>
+    <div class="path rounds">
+      <h3>Weekly rounds digest</h3>
+      <div class="who">Windows Task Scheduler, 05:00, every day</div>
+      <dl>
+        <dt>Research</dt>
+        <dd>A citation-free ranker: PubMed and Europe&nbsp;PMC discovery, ledger filter, cheap pre-rank funnel, then Altmetric attention, SJR quartile and evidence level fused with a batched LLM read of each abstract. Abstracts never leave the ranker — only its paraphrase does.</dd>
+        <dt>Passes</dt>
+        <dd>Ten. The consultant-rounds register is specified tightly enough that rhythm-breaking, disfluency, callbacks and the gate would only disturb it.</dd>
+        <dt>Publishes to</dt>
+        <dd><code>feed-mfm.xml</code> · <code>feed-fetal.xml</code> · <code>feed-ai.xml</code></dd>
+      </dl>
+    </div>
+  </div>
+
+  <h3>Weekday gate</h3>
+  <p>The task fires daily; the gate decides whether anything happens. A show is due on its scheduled weekday, or the day after if yesterday was missed — and never twice inside six days, so a stale ledger can't fire a backlog after an outage.</p>
+  <div class="t-scroll">
+    <table>
+      <thead><tr><th>Show</th><th>Feed</th><th>Airs</th><th>Length</th></tr></thead>
+      <tbody>
+        <tr><td class="pass">MFM Rounds</td><td class="mono">feed-mfm.xml</td><td>Monday</td><td>16 min</td></tr>
+        <tr><td class="pass">The Fetal Frontier</td><td class="mono">feed-fetal.xml</td><td>Wednesday</td><td>16 min</td></tr>
+        <tr><td class="pass">Signal in the Scan</td><td class="mono">feed-ai.xml</td><td>Friday</td><td>16 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══ PASS TABLE ══════════════════════════════════════════════════════ -->
+<section>
+  <span class="eyebrow">The script bench &middot; stages 2 and 3</span>
+  <h2>Fourteen passes, in order</h2>
+  <p>Nothing here writes a whole episode in one shot. Each pass takes the previous script and changes one thing about it — structure, then voice, then truth, then performance. The order matters: naturalness runs before fact-checking, so corrections land in already-natural lines rather than re-flattening them.</p>
+
+  <div class="t-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Pass</th><th>Model</th><th>Runs</th><th>What changes</th></tr></thead>
+      <tbody>
+        <tr><td class="mono dim">1</td><td class="pass">Research</td><td class="mono">Opus 4.5</td><td><span class="chip always">always</span></td><td>Builds the research package. Web search on topics; the ranker's paraphrases on digests.</td></tr>
+        <tr><td class="mono dim">2</td><td class="pass">Thesis</td><td class="mono">Sonnet 4.6</td><td><span class="chip always">always</span></td><td>One editorial memo: what this episode argues and what it promises the listener.</td></tr>
+        <tr><td class="mono dim">3</td><td class="pass">Guest decision</td><td class="mono">Sonnet 4.6</td><td><span class="chip flag">use_guest_hosts</span></td><td>Decides whether the topic earns a third voice, and gives them a label and a routed voice. Max one.</td></tr>
+        <tr><td class="mono dim">4</td><td class="pass">Story spine</td><td class="mono">Sonnet 4.6</td><td><span class="chip flag">use_story_spine</span></td><td>The narrative backbone as structured segments — the thing that makes it an episode rather than a conversation.</td></tr>
+        <tr><td class="mono dim">5</td><td class="pass">Beat sheet</td><td class="mono">Sonnet 4.6</td><td><span class="chip always">always</span></td><td>One beat per spine segment, plus a stance map: where Juno and Caspar disagree.</td></tr>
+        <tr><td class="mono dim">6</td><td class="pass">Sonic cues</td><td class="mono">Sonnet 4.6</td><td><span class="chip flag">use_sonic_footnotes</span></td><td>Plans up to two licensed sound cues, &le;8&nbsp;s each. Silence is preferred over decoration.</td></tr>
+        <tr><td class="mono dim">7</td><td class="pass">Dialogue draft</td><td class="mono">Sonnet 4.6</td><td><span class="chip always">always</span></td><td>First real script, temperature 0.6. Speaker-tagged lines with per-line emotion.</td></tr>
+        <tr><td class="mono dim">8</td><td class="pass">Comprehension gate</td><td class="mono">Sonnet 4.6</td><td><span class="chip open">open topic</span></td><td>The only loop in the pipeline. See Figure&nbsp;2.</td></tr>
+        <tr><td class="mono dim">9</td><td class="pass">Anti-clich&eacute;</td><td class="mono">Sonnet 4.6</td><td><span class="chip always">always</span></td><td>Strips the AI-podcast tells the draft reached for.</td></tr>
+        <tr><td class="mono dim">10</td><td class="pass">Rhythm</td><td class="mono">Sonnet 4.6</td><td><span class="chip open">open topic</span></td><td>Breaks turn symmetry — real talk doesn't alternate in even paragraphs.</td></tr>
+        <tr><td class="mono dim">11</td><td class="pass">Disfluency</td><td class="mono">Sonnet 4.6</td><td><span class="chip open">open topic</span></td><td>Sparse hesitation before hard words, and short backchannels for the listening host. Capped near one per six turns.</td></tr>
+        <tr><td class="mono dim">12</td><td class="pass">Fact-check</td><td class="mono">Sonnet 4.6</td><td><span class="chip always">always</span></td><td>Corrects and calibrates claims inline, with web search on topics. Any appendix it appends is stripped. Fiction types get a continuity review instead.</td></tr>
+        <tr><td class="mono dim">13</td><td class="pass">Closing callback</td><td class="mono">Sonnet 4.6</td><td><span class="chip open">open topic</span></td><td>Reaches into the host-memory file for something from a past episode and lands the ending on it.</td></tr>
+        <tr><td class="mono dim">14</td><td class="pass">Performance</td><td class="mono">Sonnet 4.6</td><td><span class="chip always">always</span></td><td>Final read-aloud pass: what the voices actually receive.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:20px">Two small models sit off to the side: Haiku&nbsp;4.5 writes the episode title and the ten-word MusicGen prompt. And after the script is final, another Sonnet pass updates <code>host_memory.json</code> and <code>personal_context.json</code> — which is how episode 40 can refer back to episode 12.</p>
+</section>
+
+<!-- ══ FIGURE 2 — the gate ═════════════════════════════════════════════ -->
+<section>
+  <span class="eyebrow">The only closed loop</span>
+  <h2>A listener who doesn't already know the answer</h2>
+  <p>Everything else in the chain is a straight line. This is the one place the script can be sent backwards. Two synthetic readers go through the draft — one naive, reading turn by turn and flagging where it lost the thread; one expert, looking for spots that sound substantive but say nothing. Their findings are turned into specific repair moves and the draft is re-read.</p>
+
+  <figure>
+    <div class="fig-scroll">
+      <svg id="gate" class="diagram" viewBox="0 0 720 412" role="img"
+           aria-label="Cycle: the draft script is read by a naive listener and an expert listener; three tests decide whether it is clear; failures become clarify, rewrite or cut moves and the repaired script is re-read, up to two rounds; if rounds run out the episode publishes anyway with the listener trace saved beside it.">
+        <defs>
+          <marker id="g-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)"/>
+          </marker>
+          <marker id="g-ar-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--m-verm)"/>
+          </marker>
+          <marker id="g-ar-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--m-mauve)"/>
+          </marker>
+        </defs>
+
+        <!-- draft in -->
+        <rect x="130" y="24" width="150" height="40" rx="3" fill="var(--panel-2)" stroke="currentColor"/>
+        <text x="205" y="42" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)">draft script</text>
+        <text class="m" x="205" y="56" text-anchor="middle" font-size="10" fill="var(--ink-3)">pass 7</text>
+        <line x1="280" y1="44" x2="294" y2="44" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="300" cy="44" r="4" fill="var(--ink-2)"/>
+
+        <!-- two readers -->
+        <line x1="300" y1="44" x2="300" y2="36" stroke="currentColor" stroke-width="1.4"/>
+        <polyline points="300,36 326,36" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#g-ar)"/>
+        <polyline points="300,44 300,92 326,92" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#g-ar)"/>
+
+        <rect x="332" y="16" width="180" height="40" rx="3" fill="var(--panel)" stroke="var(--m-blue)" stroke-opacity=".8"/>
+        <text x="346" y="34" font-size="12.5" font-weight="700" fill="var(--ink)">naive listener</text>
+        <text class="m" x="346" y="48" font-size="10" fill="var(--ink-3)">reads turn by turn, in order</text>
+
+        <rect x="332" y="72" width="180" height="40" rx="3" fill="var(--panel)" stroke="var(--m-blue)" stroke-opacity=".8"/>
+        <text x="346" y="90" font-size="12.5" font-weight="700" fill="var(--ink)">expert listener</text>
+        <text class="m" x="346" y="104" font-size="10" fill="var(--ink-3)">hunts hollow spots</text>
+
+        <!-- the three tests -->
+        <rect x="532" y="10" width="172" height="108" rx="3" fill="var(--panel-2)" stroke="currentColor"/>
+        <text class="m" x="546" y="28" font-size="10" font-weight="700" fill="var(--ink-3)">THREE TESTS</text>
+        <text class="m" x="546" y="48" font-size="10.5" fill="var(--ink-2)">no med/high breaks</text>
+        <text class="m" x="546" y="66" font-size="10.5" fill="var(--ink-2)">narration ratio &ge; 0.35</text>
+        <text class="m" x="546" y="84" font-size="10.5" fill="var(--ink-2)">no hollow spots</text>
+        <text class="m" x="546" y="106" font-size="9.5" fill="var(--ink-3)">ratio recalibrated 0.6 → 0.35</text>
+        <line x1="512" y1="64" x2="528" y2="64" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+        <!-- decision -->
+        <polyline points="422,112 422,140" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#g-ar)"/>
+        <polygon points="422,146 542,188 422,230 302,188" fill="var(--panel)" stroke="var(--ink-2)" stroke-width="1.4"/>
+        <text x="422" y="185" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)">all three clear?</text>
+        <text class="m" x="422" y="200" text-anchor="middle" font-size="10" fill="var(--ink-3)">round 1 &middot; round 2</text>
+
+        <!-- pass -->
+        <line x1="542" y1="188" x2="562" y2="188" stroke="currentColor" stroke-width="1.4" marker-end="url(#g-ar)"/>
+        <text class="m" x="552" y="180" text-anchor="middle" font-size="10" font-weight="700" fill="var(--ink-2)">yes</text>
+        <rect x="568" y="168" width="136" height="40" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-width="1.4"/>
+        <text x="636" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">on to pass 9</text>
+        <text class="m" x="636" y="200" text-anchor="middle" font-size="10" fill="var(--ink-3)">anti-clich&eacute; &rarr;</text>
+
+        <!-- fail -->
+        <line x1="422" y1="230" x2="422" y2="252" stroke="var(--m-verm)" stroke-width="1.6" marker-end="url(#g-ar-v)"/>
+        <text class="m" x="434" y="246" font-size="10" font-weight="700" fill="var(--l-verm)">no</text>
+        <rect x="250" y="256" width="340" height="72" rx="3" fill="var(--tint-verm)" stroke="var(--m-verm)" stroke-width="1.6"/>
+        <text x="266" y="276" font-size="12.5" font-weight="700" fill="var(--l-verm)">repair moves</text>
+        <text class="m" x="266" y="293" font-size="10.5" fill="var(--ink-2)">clarify &middot; rewrite &middot; cut — chosen per break type</text>
+        <text class="m" x="266" y="308" font-size="10.5" fill="var(--ink-2)">picked worst-severity first, applied highest-turn first</text>
+        <text class="m" x="266" y="321" font-size="9.5" fill="var(--ink-3)">so a spliced clarification can't shift a target not yet repaired</text>
+
+        <!-- re-gate loop -->
+        <polyline points="250,292 92,292 92,132 300,132 300,56" fill="none" stroke="var(--m-verm)" stroke-width="1.6" marker-end="url(#g-ar-v)"/>
+        <text class="m" x="168" y="284" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--l-verm)">re-read the repaired script</text>
+        <text class="m" x="168" y="146" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--l-verm)">&le; 2 rounds</text>
+
+        <!-- exhausted -->
+        <line x1="422" y1="328" x2="422" y2="350" stroke="var(--m-mauve)" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#g-ar-m)"/>
+        <rect x="200" y="354" width="440" height="46" rx="3" fill="none" stroke="var(--m-mauve)" stroke-width="1.4" stroke-dasharray="5 4"/>
+        <text x="214" y="373" font-size="12" font-weight="700" fill="var(--l-mauve)">rounds exhausted &rarr; publish anyway</text>
+        <text class="m" x="214" y="389" font-size="10.5" fill="var(--ink-3)">warn, and write listener_trace beside the audio. Surface, don't block.</text>
+      </svg>
+    </div>
+    <figcaption><b>Figure 2.</b> The comprehension gate. The loop is capped at two rounds and deliberately cannot fail an episode — residual problems are logged and persisted as a sidecar for editorial review rather than held back. The narration ratio threshold was dropped from 0.6 to 0.35 after good digests measured 0.31&ndash;0.54 and kept tripping repair on content that was already fine.</figcaption>
+  </figure>
+</section>
+
+<!-- ══ FIGURE 3 — the arrangement ══════════════════════════════════════ -->
+<section>
+  <span class="eyebrow">Stage 4 &middot; audio</span>
+  <h2>Rendered per turn, arranged as one program</h2>
+  <p>Text-to-speech happens a turn at a time, in parallel, each speaker on their own routed voice and provider. That leaves a pile of clips with no timing — so the arrangement stage is where the conversation actually becomes conversational. Each turn's baked-in head and tail silence is trimmed off first, so the inserted gap is the <em>perceived</em> gap; then the gap flexes by context rather than sitting flat at 180&nbsp;ms everywhere.</p>
+
+  <figure>
+    <div class="fig-scroll">
+      <svg id="arrange" class="diagram" viewBox="0 0 720 546" role="img"
+           aria-label="The performance script is split into turns, rendered in parallel by up to eight workers with one voice per speaker, then arranged: per-turn trim and normalize, variable gaps with footnote splices, concatenation with a micro-crossfade, ident and music bookends, and a mastering chain ending in a 192 kbps stereo MP3.">
+        <defs>
+          <marker id="a-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)"/>
+          </marker>
+          <marker id="a-ar-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--m-teal)"/>
+          </marker>
+        </defs>
+
+        <!-- fan out -->
+        <rect x="14" y="48" width="130" height="40" rx="3" fill="var(--panel-2)" stroke="currentColor"/>
+        <text x="79" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">performance</text>
+        <text x="79" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">script</text>
+        <line x1="144" y1="68" x2="168" y2="68" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <rect x="174" y="48" width="126" height="40" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text class="m" x="237" y="66" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">_split_turns</text>
+        <text class="m" x="237" y="80" text-anchor="middle" font-size="10" fill="var(--ink-3)">N tagged turns</text>
+
+        <polyline points="300,68 328,68 328,29 352,29" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#a-ar)"/>
+        <polyline points="328,68 352,68" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#a-ar)"/>
+        <polyline points="328,68 328,107 352,107" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#a-ar)"/>
+
+        <rect x="358" y="14" width="196" height="30" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text class="m" x="370" y="33" font-size="10.5" fill="var(--ink)">turn 1 · JUNO → cedar</text>
+        <rect x="358" y="53" width="196" height="30" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text class="m" x="370" y="72" font-size="10.5" fill="var(--ink)">turn 2 · CASPAR → marin</text>
+        <rect x="358" y="92" width="196" height="30" rx="3" fill="var(--panel)" stroke="var(--m-teal)" stroke-opacity=".8"/>
+        <text class="m" x="370" y="111" font-size="10.5" fill="var(--ink)">turn N · GUEST → routed</text>
+
+        <polyline points="554,29 578,29 578,60" fill="none" stroke="currentColor" stroke-width="1.3"/>
+        <polyline points="554,68 578,68" fill="none" stroke="currentColor" stroke-width="1.3"/>
+        <polyline points="554,107 578,107 578,76" fill="none" stroke="currentColor" stroke-width="1.3"/>
+        <line x1="578" y1="68" x2="596" y2="68" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <rect x="602" y="48" width="104" height="40" rx="3" fill="var(--panel)" stroke="var(--ink-2)" stroke-width="1.4"/>
+        <text class="m" x="654" y="66" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">N turn mp3s</text>
+        <text class="m" x="654" y="79" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">in order</text>
+
+        <text class="m" x="358" y="146" font-size="10.5" fill="var(--ink-3)">thread pool, &le;8 workers · one bad turn is swallowed · &gt;20% failures aborts the run</text>
+
+        <!-- drop into the arrangement stack -->
+        <polyline points="654,88 654,166 176,166 176,186" fill="none" stroke="var(--m-teal)" stroke-width="1.5" marker-end="url(#a-ar-t)"/>
+
+        <!-- stack -->
+        <text class="m" x="100" y="211" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink-3)">TRIM</text>
+        <rect x="110" y="186" width="596" height="40" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="126" y="205" font-size="12" font-weight="600" fill="var(--ink)">edge-trim each turn, then normalize it</text>
+        <text class="m" x="126" y="219" font-size="10" fill="var(--ink-3)">keep 40 ms pad · anything under &minus;50 dB peak is trimmable ·each turn to &minus;14 LUFS</text>
+
+        <line x1="176" y1="226" x2="176" y2="240" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <text class="m" x="100" y="265" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink-3)">SPACE</text>
+        <rect x="110" y="240" width="596" height="54" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="126" y="259" font-size="12" font-weight="600" fill="var(--ink)">interleave gaps sized by what the next line is</text>
+        <text class="m" x="126" y="274" font-size="10" fill="var(--ink-3)">70 latch · 110 reaction · 120 same speaker · 180 base · 300 landing beat  (ms)</text>
+        <text class="m" x="126" y="287" font-size="10" fill="var(--ink-3)">sonic footnotes splice in here, framed by one deliberate 350 ms pad either side</text>
+
+        <line x1="176" y1="294" x2="176" y2="308" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <text class="m" x="100" y="333" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink-3)">JOIN</text>
+        <rect x="110" y="308" width="596" height="40" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="126" y="327" font-size="12" font-weight="600" fill="var(--ink)">concatenate with a 10 ms micro-crossfade</text>
+        <text class="m" x="126" y="341" font-size="10" fill="var(--ink-3)">a click-killer at the seams only — the gap stays the single spacing ruler</text>
+
+        <line x1="176" y1="348" x2="176" y2="362" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <text class="m" x="100" y="387" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink-3)">BOOKEND</text>
+        <rect x="110" y="362" width="596" height="40" rx="3" fill="var(--panel)" stroke="currentColor"/>
+        <text x="126" y="381" font-size="12" font-weight="600" fill="var(--ink)">ident &rarr; music intro &rarr; dialogue &rarr; music outro</text>
+        <text class="m" x="126" y="395" font-size="10" fill="var(--ink-3)">MusicGen small, prompted by Haiku · 2.5 s equal-power crossfade at each join</text>
+
+        <line x1="176" y1="402" x2="176" y2="416" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <text class="m" x="100" y="441" text-anchor="end" font-size="10" font-weight="700" fill="var(--ink-3)">MASTER</text>
+        <rect x="110" y="416" width="596" height="40" rx="3" fill="var(--panel)" stroke="var(--ink-2)" stroke-width="1.4"/>
+        <text x="126" y="435" font-size="12" font-weight="600" fill="var(--ink)">de-ess 6.5 kHz &rarr; HP 60 Hz &rarr; LP 18 kHz &rarr; two-pass loudnorm</text>
+        <text class="m" x="126" y="449" font-size="10" fill="var(--ink-3)">fails soft: a mastering error ships the premaster rather than nothing</text>
+
+        <line x1="176" y1="456" x2="176" y2="470" stroke="currentColor" stroke-width="1.4" marker-end="url(#a-ar)"/>
+        <text class="m" x="100" y="497" text-anchor="end" font-size="10" font-weight="700" fill="var(--l-teal)">OUT</text>
+        <rect x="110" y="470" width="596" height="44" rx="3" fill="var(--panel-2)" stroke="var(--m-teal)" stroke-width="1.6"/>
+        <text class="m" x="126" y="491" font-size="11.5" font-weight="700" fill="var(--ink)">&minus;14 LUFS · &minus;1 dBTP · LRA 11 · 192 kbps · 44.1 kHz · stereo</text>
+        <text class="m" x="126" y="506" font-size="10" fill="var(--ink-3)">streaming-standard, and the same target per turn, per clip and for the final master</text>
+      </svg>
+    </div>
+    <figcaption><b>Figure 3.</b> Fan out per turn, fan back in, then five arrangement stages. Because per-turn, per-clip and final loudness all target the same &minus;14&nbsp;LUFS, the program stays internally balanced no matter which provider rendered which voice.</figcaption>
+  </figure>
+
+  <h3>One voice per speaker, one provider per voice</h3>
+  <p>Each speaker label resolves to its own route: a provider, a voice id and a model. Juno and Caspar sit on OpenAI's <code>gpt-4o-mini-tts</code> by default, which is the only model that accepts the per-line emotion tags the script carries as spoken-word instructions. A guest can be routed across to ElevenLabs or Cartesia so a third voice doesn't sound like a recolored host.</p>
+</section>
+
+<!-- ══ FAILURE SEMANTICS ═══════════════════════════════════════════════ -->
+<section>
+  <span class="eyebrow">What stops a run, and what doesn't</span>
+  <h2>Almost nothing is allowed to block publication</h2>
+  <p>The design bias is loud: an episode that ships slightly diminished beats an episode that doesn't ship. Only a handful of conditions actually halt a run, and every one of them means the output would be worthless rather than merely worse. Everything else degrades, records a warning on the run manifest, and keeps going.</p>
+
+  <div class="modes">
+    <div class="mode halt">
+      <div class="tag">Halts</div>
+      <div>
+        <p>More than 20% of turns fail to render.</p>
+        <p>Usually a provider auth or quota wall hitting every turn at once — the alternative is publishing a near-silent episode.</p>
+      </div>
+    </div>
+    <div class="mode halt">
+      <div class="tag">Halts</div>
+      <div>
+        <p>A digest run finds no candidate papers.</p>
+        <p>Aborts before the ledger is touched, so nothing gets marked covered.</p>
+      </div>
+    </div>
+    <div class="mode halt">
+      <div class="tag">Halts</div>
+      <div>
+        <p>No <code>ANTHROPIC_API_KEY</code> on a digest run.</p>
+        <p>Both the ranker and the script build need it.</p>
+      </div>
+    </div>
+    <div class="mode degrade">
+      <div class="tag">Degrades</div>
+      <div>
+        <p>Clip extraction fails &rarr; dialogue-only audio.</p>
+      </div>
+    </div>
+    <div class="mode degrade">
+      <div class="tag">Degrades</div>
+      <div>
+        <p>A sonic cue can't be resolved or licensed &rarr; ship without it.</p>
+        <p>Cues are also dropped when clips are on; the two don't co-mix yet.</p>
+      </div>
+    </div>
+    <div class="mode degrade">
+      <div class="tag">Degrades</div>
+      <div>
+        <p>MusicGen or <code>audiocraft</code> unavailable &rarr; a numpy ambient pad, or just the show ident.</p>
+      </div>
+    </div>
+    <div class="mode degrade">
+      <div class="tag">Degrades</div>
+      <div>
+        <p>Mastering or duration probe fails &rarr; publish the premaster, note it on the manifest.</p>
+      </div>
+    </div>
+    <div class="mode degrade">
+      <div class="tag">Degrades</div>
+      <div>
+        <p>The comprehension gate can't clear in two rounds &rarr; publish, and save the trace.</p>
+      </div>
+    </div>
+    <div class="mode degrade">
+      <div class="tag">Degrades</div>
+      <div>
+        <p>The ledger write after a successful digest fails &rarr; warn only.</p>
+        <p>Bookkeeping never blocks a shipped episode.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>What the run leaves behind</h3>
+  <p>The work directory — per-turn MP3s, downloaded cues, music stems, the intermediate scripts — is deleted when the run exits. Five things survive next to the audio, and they are what any later editorial review actually reads:</p>
+  <ul class="tight">
+    <li><code>.script.txt</code> — the final spoken script, for the flow and AI-tell passes</li>
+    <li><code>.chapters.json</code> — chapter marks derived from the beat sheet</li>
+    <li><code>.companion.json</code> — sources, claims, follow-up links, credits</li>
+    <li><code>.listener_trace.json</code> — what the synthetic listeners flagged, and what survived repair</li>
+    <li><code>.story_spine.json</code> — the backbone the episode was built from</li>
+  </ul>
+  <p style="margin-top:15px">A durable copy of the run manifest is written alongside them, whether the run succeeded or failed — so a crashed run still says which stage it died in.</p>
+</section>
+
+<footer>
+  <p style="margin:0 0 6px">Drawn from the code, not the docs: <span class="mono">generate_podcast.py</span> and the twenty-two modules around it, on <span class="mono">main</span>.</p>
+  <p class="mono" style="margin:0; color:var(--ink-3)">14,342 lines · 23 python modules · 3 weekly shows · 4 feeds</p>
+</footer>
+
+</div>
