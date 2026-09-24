@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 COLD OPEN: What Changes This Week"
+    },
+    {
+      "startTime": 56.81,
+      "title": "\u2014 HEADLINE: Citation, Clinical Question, and Design"
+    },
+    {
+      "startTime": 113.62,
+      "title": "\u2014 HEADLINE: Effect in Numbers"
+    },
+    {
+      "startTime": 170.43,
+      "title": "\u2014 HEADLINE: Key Caveat and Practice Impact"
+    },
+    {
+      "startTime": 227.24,
+      "title": "\u2014 PIVOT + ROUND 1: Fetal Intracranial Hemorrhage (Shinar)"
+    },
+    {
+      "startTime": 284.04,
+      "title": "\u2014 ROUND 2: Closed Spinal Dysraphism (Athiel)"
+    },
+    {
+      "startTime": 340.85,
+      "title": "\u2014 ROUND 3: Prenatal Coarctation Diagnosis (Chonnak)"
+    },
+    {
+      "startTime": 397.66,
+      "title": "\u2014 ROUND 4: RAFT Sub-Study / Hyperoxia Testing (Taleb)"
+    },
+    {
+      "startTime": 454.47,
+      "title": "\u2014 CLOSE: What to Watch, What Is Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

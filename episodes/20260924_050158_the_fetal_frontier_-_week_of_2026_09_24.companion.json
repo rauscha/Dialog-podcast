@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260924_050158_the_fetal_frontier_-_week_of_2026_09_24.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 COLD OPEN: What Changes This Week"
+    },
+    {
+      "start_sec": 56.81,
+      "start_time": "0:57",
+      "title": "\u2014 HEADLINE: Citation, Clinical Question, and Design"
+    },
+    {
+      "start_sec": 113.62,
+      "start_time": "1:54",
+      "title": "\u2014 HEADLINE: Effect in Numbers"
+    },
+    {
+      "start_sec": 170.43,
+      "start_time": "2:50",
+      "title": "\u2014 HEADLINE: Key Caveat and Practice Impact"
+    },
+    {
+      "start_sec": 227.24,
+      "start_time": "3:47",
+      "title": "\u2014 PIVOT + ROUND 1: Fetal Intracranial Hemorrhage (Shinar)"
+    },
+    {
+      "start_sec": 284.04,
+      "start_time": "4:44",
+      "title": "\u2014 ROUND 2: Closed Spinal Dysraphism (Athiel)"
+    },
+    {
+      "start_sec": 340.85,
+      "start_time": "5:41",
+      "title": "\u2014 ROUND 3: Prenatal Coarctation Diagnosis (Chonnak)"
+    },
+    {
+      "start_sec": 397.66,
+      "start_time": "6:38",
+      "title": "\u2014 ROUND 4: RAFT Sub-Study / Hyperoxia Testing (Taleb)"
+    },
+    {
+      "start_sec": 454.47,
+      "start_time": "7:34",
+      "title": "\u2014 CLOSE: What to Watch, What Is Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260924_050158_the_fetal_frontier_-_week_of_2026_09_24.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260924_050158_the_fetal_frontier_-_week_of_2026_09_24.companion.json",
+  "duration_sec": 556.280635,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Provides direct PPV and residual risk data for cfDNA after PGT-A euploid transfer, reshaping post-IVF prenatal counseling",
+      "source": "Prenatal Diagnosis",
+      "title": "Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk",
+      "url": "https://doi.org/10.1002/pd.70249"
+    },
+    {
+      "reason": "Consolidates classification, etiology, imaging workflow, and outcome data into a counseling-ready framework for fetal ICH",
+      "source": "Prenatal Diagnosis",
+      "title": "Fetal Intracranial Hemorrhage: What to Tell Expecting Parents?",
+      "url": "https://doi.org/10.1002/pd.70253"
+    },
+    {
+      "reason": "Rare lesion spectrum with postnatal functional outcome data at 18 and 36 months for prenatal counseling",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study",
+      "url": "https://doi.org/10.1002/uog.70340"
+    },
+    {
+      "reason": "Multicenter external validation of existing metrics plus a superior multivariable model for prenatal CoA detection",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321"
+    },
+    {
+      "reason": "RCT sub-study introducing hyperoxia-based pulmonary artery reactivity as a functional endpoint predicting respiratory outcome in BRA",
+      "source": "Fetal Diagnosis and Therapy",
+      "title": "Fetal Echocardiography and Hyperoxia Testing after Serial Amnioinfusions: Results from the RAFT Trial Bilateral Renal Agenesis Arm",
+      "url": "https://doi.org/10.1159/000553472"
+    }
+  ],
+  "generated_at": "2026-09-24T10:10:12.512666+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "After PGT-A euploid embryo transfer, cfDNA screening has a positive predictive value of only 12.5 percent for aneuploidy, with confirmed aneuploidy at amniocentesis in 0.1 percent and clinically relevant CMA findings in 0.5 percent overall.",
+      "confidence": "medium",
+      "id": "lu2026",
+      "source_ids": [
+        "lu2026"
+      ]
+    },
+    {
+      "claim": "Approximately 30 percent of fetal intracranial hemorrhage cases have an identifiable genetic etiology, and a structured neurosonography workflow can guide parental counseling on neurodevelopmental outcomes.",
+      "confidence": "medium",
+      "id": "shinar2026",
+      "source_ids": [
+        "shinar2026"
+      ]
+    },
+    {
+      "claim": "In closed spinal dysraphism, limited dorsal myeloschisis is the dominant prenatal finding, and postnatal functional outcomes at 18 and 36 months can be characterized from multicenter cohort data.",
+      "confidence": "medium",
+      "id": "athiel2026",
+      "source_ids": [
+        "athiel2026"
+      ]
+    },
+    {
+      "claim": "A new multivariable predictive model for prenatal coarctation diagnosis outperforms any single sagittal aortic-arch parameter on external multicenter validation.",
+      "confidence": "medium",
+      "id": "chonnak2026",
+      "source_ids": [
+        "chonnak2026"
+      ]
+    },
+    {
+      "claim": "In bilateral renal agenesis treated with serial amnioinfusions, decreased fetal pulmonary artery pulsatility index on hyperoxia testing correlates with favorable 30-day respiratory outcomes.",
+      "confidence": "medium",
+      "id": "taleb2026",
+      "source_ids": [
+        "taleb2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Lu",
+      "id": "lu2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk",
+      "url": "https://doi.org/10.1002/pd.70249",
+      "why_it_matters": "Provides direct PPV and residual risk data for cfDNA after PGT-A euploid transfer, reshaping post-IVF prenatal counseling",
+      "year": 2026
+    },
+    {
+      "author": "Shinar",
+      "id": "shinar2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Fetal Intracranial Hemorrhage: What to Tell Expecting Parents?",
+      "url": "https://doi.org/10.1002/pd.70253",
+      "why_it_matters": "Consolidates classification, etiology, imaging workflow, and outcome data into a counseling-ready framework for fetal ICH",
+      "year": 2026
+    },
+    {
+      "author": "Athiel",
+      "id": "athiel2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study",
+      "url": "https://doi.org/10.1002/uog.70340",
+      "why_it_matters": "Rare lesion spectrum with postnatal functional outcome data at 18 and 36 months for prenatal counseling",
+      "year": 2026
+    },
+    {
+      "author": "Chonnak",
+      "id": "chonnak2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321",
+      "why_it_matters": "Multicenter external validation of existing metrics plus a superior multivariable model for prenatal CoA detection",
+      "year": 2026
+    },
+    {
+      "author": "Taleb",
+      "id": "taleb2026",
+      "publication": "Fetal Diagnosis and Therapy",
+      "title": "Fetal Echocardiography and Hyperoxia Testing after Serial Amnioinfusions: Results from the RAFT Trial Bilateral Renal Agenesis Arm",
+      "url": "https://doi.org/10.1159/000553472",
+      "why_it_matters": "RCT sub-study introducing hyperoxia-based pulmonary artery reactivity as a functional endpoint predicting respiratory outcome in BRA",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Lu et al. - Prenatal Diagnosis - 2026 - Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk (https://doi.org/10.1002/pd.70249)",
+    "Shinar et al. - Prenatal Diagnosis - 2026 - Fetal Intracranial Hemorrhage: What to Tell Expecting Parents? (https://doi.org/10.1002/pd.70253)",
+    "Athiel et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study (https://doi.org/10.1002/uog.70340)",
+    "Chonnak et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model (https://doi.org/10.1002/uog.70321)",
+    "Taleb et al. - Fetal Diagnosis and Therapy - 2026 - Fetal Echocardiography and Hyperoxia Testing after Serial Amnioinfusions: Results from the RAFT Trial Bilateral Renal Agenesis Arm (https://doi.org/10.1159/000553472)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/09/24",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1306
+}
