@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260925_050150_signal_in_the_scan_-_week_of_2026_09_25.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Structural Problem Named"
+    },
+    {
+      "start_sec": 44.89,
+      "start_time": "0:45",
+      "title": "\u2014 Headline: The Clinical Question"
+    },
+    {
+      "start_sec": 89.78,
+      "start_time": "1:30",
+      "title": "\u2014 Headline: Design and What It Built"
+    },
+    {
+      "start_sec": 134.67,
+      "start_time": "2:15",
+      "title": "\u2014 Headline: Effect in Numbers and Key Limitation"
+    },
+    {
+      "start_sec": 179.56,
+      "start_time": "3:00",
+      "title": "\u2014 Pivot"
+    },
+    {
+      "start_sec": 224.45,
+      "start_time": "3:44",
+      "title": "\u2014 Round 1: DeepVEST (Cantone, Radiology: AI)"
+    },
+    {
+      "start_sec": 269.34,
+      "start_time": "4:29",
+      "title": "\u2014 Round 2: Multimodal TAVI Risk (Shiri, Lancet Digital Health)"
+    },
+    {
+      "start_sec": 314.23,
+      "start_time": "5:14",
+      "title": "\u2014 Round 3: RETFound Benchmark (Yew, Lancet Digital Health)"
+    },
+    {
+      "start_sec": 359.12,
+      "start_time": "5:59",
+      "title": "\u2014 Round 4: MRI-Guided Amyloid PET (Cai, Radiology)"
+    },
+    {
+      "start_sec": 404.01,
+      "start_time": "6:44",
+      "title": "\u2014 Close: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260925_050150_signal_in_the_scan_-_week_of_2026_09_25.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260925_050150_signal_in_the_scan_-_week_of_2026_09_25.companion.json",
+  "duration_sec": 493.896825,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Systematically quantifies pharmacotherapy evidence gaps for pregnant, breastfeeding, and pediatric populations using NLP at scale",
+      "source": "J Am Med Inform Assoc",
+      "title": "A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery",
+      "url": "https://doi.org/10.1093/jamia/ocag130"
+    },
+    {
+      "reason": "Demonstrates that AI-driven vessel removal improves radiologist perception of lesion margins in breast MRI",
+      "source": "Radiol Artif Intell",
+      "title": "DeepVEST: Deep Learning-based Vessel Segmentation and Erasure in Breast MRI for Improved Lesion Assessment",
+      "url": "https://doi.org/10.1148/ryai.250630"
+    },
+    {
+      "reason": "Multimodal AI outperforms existing risk scores for post-TAVI mortality with multicenter validation",
+      "source": "Lancet Digit Health",
+      "title": "Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation",
+      "url": "https://doi.org/10.1016/j.landig.2026.101049"
+    },
+    {
+      "reason": "Tempers expectations for foundation models by showing RETFound matches but rarely beats conventional deep learning",
+      "source": "Lancet Digit Health",
+      "title": "Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection",
+      "url": "https://doi.org/10.1016/j.landig.2026.101031"
+    },
+    {
+      "reason": "Shows MRI-guided PET reconstruction improves inter-reader agreement for amyloid imaging",
+      "source": "Radiology",
+      "title": "MRI-guided versus OSEM Amyloid Brain PET Reconstruction for Reader Agreement, Visual Consistency, and Diagnostic Accuracy",
+      "url": "https://doi.org/10.1148/radiol.260692"
+    }
+  ],
+  "generated_at": "2026-09-25T10:09:14.903525+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A co-learning NLP framework can systematically map pharmacotherapy evidence gaps for pregnant, breastfeeding, and pediatric populations across tens of millions of abstracts",
+      "confidence": "medium",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "Deep-learning vessel erasure from breast MRI MIPs improves radiologist-perceived lesion margin visibility, with vessels obscuring lesions in about 60 percent of cases",
+      "confidence": "medium",
+      "id": "cantone2026",
+      "source_ids": [
+        "cantone2026"
+      ]
+    },
+    {
+      "claim": "Multimodal AI integrating clinical, ECG, echo, CT, and cath data predicts long-term post-TAVI mortality better than existing risk scores across two international centers",
+      "confidence": "high",
+      "id": "shiri2026",
+      "source_ids": [
+        "shiri2026"
+      ]
+    },
+    {
+      "claim": "The RETFound retinal foundation model matches but rarely outperforms conventional deep-learning models for retinal disease detection, even in low-label settings",
+      "confidence": "high",
+      "id": "yew2026",
+      "source_ids": [
+        "yew2026"
+      ]
+    },
+    {
+      "claim": "MRI-guided amyloid PET reconstruction improves inter-reader agreement and Centiloid separation compared to standard OSEM reconstruction",
+      "confidence": "medium",
+      "id": "cai2026",
+      "source_ids": [
+        "cai2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "J Am Med Inform Assoc",
+      "title": "A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery",
+      "url": "https://doi.org/10.1093/jamia/ocag130",
+      "why_it_matters": "Systematically quantifies pharmacotherapy evidence gaps for pregnant, breastfeeding, and pediatric populations using NLP at scale",
+      "year": 2026
+    },
+    {
+      "author": "Cantone",
+      "id": "cantone2026",
+      "publication": "Radiol Artif Intell",
+      "title": "DeepVEST: Deep Learning-based Vessel Segmentation and Erasure in Breast MRI for Improved Lesion Assessment",
+      "url": "https://doi.org/10.1148/ryai.250630",
+      "why_it_matters": "Demonstrates that AI-driven vessel removal improves radiologist perception of lesion margins in breast MRI",
+      "year": 2026
+    },
+    {
+      "author": "Shiri",
+      "id": "shiri2026",
+      "publication": "Lancet Digit Health",
+      "title": "Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation",
+      "url": "https://doi.org/10.1016/j.landig.2026.101049",
+      "why_it_matters": "Multimodal AI outperforms existing risk scores for post-TAVI mortality with multicenter validation",
+      "year": 2026
+    },
+    {
+      "author": "Yew",
+      "id": "yew2026",
+      "publication": "Lancet Digit Health",
+      "title": "Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection",
+      "url": "https://doi.org/10.1016/j.landig.2026.101031",
+      "why_it_matters": "Tempers expectations for foundation models by showing RETFound matches but rarely beats conventional deep learning",
+      "year": 2026
+    },
+    {
+      "author": "Cai",
+      "id": "cai2026",
+      "publication": "Radiology",
+      "title": "MRI-guided versus OSEM Amyloid Brain PET Reconstruction for Reader Agreement, Visual Consistency, and Diagnostic Accuracy",
+      "url": "https://doi.org/10.1148/radiol.260692",
+      "why_it_matters": "Shows MRI-guided PET reconstruction improves inter-reader agreement for amyloid imaging",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Liu et al. - J Am Med Inform Assoc - 2026 - A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery (https://doi.org/10.1093/jamia/ocag130)",
+    "Cantone et al. - Radiol Artif Intell - 2026 - DeepVEST: Deep Learning-based Vessel Segmentation and Erasure in Breast MRI for Improved Lesion Assessment (https://doi.org/10.1148/ryai.250630)",
+    "Shiri et al. - Lancet Digit Health - 2026 - Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation (https://doi.org/10.1016/j.landig.2026.101049)",
+    "Yew et al. - Lancet Digit Health - 2026 - Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection (https://doi.org/10.1016/j.landig.2026.101031)",
+    "Cai et al. - Radiology - 2026 - MRI-guided versus OSEM Amyloid Brain PET Reconstruction for Reader Agreement, Visual Consistency, and Diagnostic Accuracy (https://doi.org/10.1148/radiol.260692)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/09/25",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1196
+}
