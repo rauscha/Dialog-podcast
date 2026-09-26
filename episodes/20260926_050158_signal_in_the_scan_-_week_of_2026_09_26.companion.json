@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260926_050158_signal_in_the_scan_-_week_of_2026_09_26.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changes This Week"
+    },
+    {
+      "start_sec": 45.35,
+      "start_time": "0:45",
+      "title": "\u2014 Headline: Design and What the Framework Actually Does"
+    },
+    {
+      "start_sec": 90.7,
+      "start_time": "1:31",
+      "title": "\u2014 Headline: The Framework's Hard Limit"
+    },
+    {
+      "start_sec": 136.05,
+      "start_time": "2:16",
+      "title": "\u2014 Headline: Practice Impact, Honestly Stated"
+    },
+    {
+      "start_sec": 181.4,
+      "start_time": "3:01",
+      "title": "\u2014 Pivot + Round 1: DeepVEST (Breast MRI Vessel Erasure)"
+    },
+    {
+      "start_sec": 226.75,
+      "start_time": "3:47",
+      "title": "\u2014 Round 2: RETFound (Foundation Model Reality Check)"
+    },
+    {
+      "start_sec": 272.11,
+      "start_time": "4:32",
+      "title": "\u2014 Round 3: Cai (MRI-Guided Amyloid PET Reconstruction)"
+    },
+    {
+      "start_sec": 317.46,
+      "start_time": "5:17",
+      "title": "\u2014 Round 4: Han (Five-Year Long-COVID Pulmonary Imaging)"
+    },
+    {
+      "start_sec": 362.81,
+      "start_time": "6:03",
+      "title": "\u2014 Close: What to Watch, What's Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260926_050158_signal_in_the_scan_-_week_of_2026_09_26.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260926_050158_signal_in_the_scan_-_week_of_2026_09_26.companion.json",
+  "duration_sec": 453.158277,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Systematically quantifies where pharmacotherapy evidence is missing for pregnant, lactating, and pediatric patients \u2014 a direct input for research prioritization in OB prescribing.",
+      "source": "J Am Med Inform Assoc",
+      "title": "A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery",
+      "url": "https://doi.org/10.1093/jamia/ocag130"
+    },
+    {
+      "reason": "Demonstrates a practical AI tool that removes vascular clutter on breast MRI, improving radiologist lesion detection \u2014 relevant to high-risk breast imaging workflows.",
+      "source": "Radiol Artif Intell",
+      "title": "DeepVEST: Deep Learning-based Vessel Segmentation and Erasure in Breast MRI for Improved Lesion Assessment",
+      "url": "https://doi.org/10.1148/ryai.250630"
+    },
+    {
+      "reason": "Large multicenter study showing a domain-specific foundation model does not reliably beat standard supervised learning \u2014 a reality check for foundation-model hype across imaging AI.",
+      "source": "Lancet Digit Health",
+      "title": "Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection",
+      "url": "https://doi.org/10.1016/j.landig.2026.101031"
+    },
+    {
+      "reason": "Shows MRI-guided PET reconstruction improves inter-reader agreement for amyloid imaging \u2014 a technical advance for neuroradiology colleagues.",
+      "source": "Radiology",
+      "title": "MRI-guided versus OSEM Amyloid Brain PET Reconstruction for Reader Agreement, Visual Consistency, and Diagnostic Accuracy",
+      "url": "https://doi.org/10.1148/radiol.260692"
+    },
+    {
+      "reason": "Prospective five-year data showing persistent pulmonary imaging abnormalities in COVID-19 survivors, including those with initially mild disease \u2014 relevant for long-term follow-up considerations.",
+      "source": "Radiology",
+      "title": "Five-year Quantitative Chest CT and Hyperpolarized Xenon 129 Ventilation MRI Findings in Survivors of COVID-19 Pneumonia",
+      "url": "https://doi.org/10.1148/radiol.261153"
+    }
+  ],
+  "generated_at": "2026-09-26T10:09:21.034931+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A co-learning LLM framework applied to 38 million PubMed abstracts reveals systematic underrepresentation of pregnant, breastfeeding, and pediatric populations in pharmacotherapy research.",
+      "confidence": "medium",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "DeepVEST, a deep learning vessel-erasure tool, reduces vascular obscuration on breast MRI and improves radiologist lesion assessment on maximum intensity projection images.",
+      "confidence": "medium",
+      "id": "cantone2026",
+      "source_ids": [
+        "cantone2026"
+      ]
+    },
+    {
+      "claim": "RETFound, a retina-specific foundation model, does not consistently outperform standard supervised deep learning models for ocular and systemic disease detection across multiple tasks.",
+      "confidence": "high",
+      "id": "yew2026",
+      "source_ids": [
+        "yew2026"
+      ]
+    },
+    {
+      "claim": "MRI-guided PET reconstruction improves inter-reader agreement and quantitative amyloid separation compared to standard OSEM reconstruction in brain PET/MRI.",
+      "confidence": "medium",
+      "id": "cai2026",
+      "source_ids": [
+        "cai2026"
+      ]
+    },
+    {
+      "claim": "COVID-19 pneumonia survivors show persistent pulmonary abnormalities on CT and xenon-129 ventilation MRI at five years, even after initially nonsevere illness.",
+      "confidence": "medium",
+      "id": "han2026",
+      "source_ids": [
+        "han2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "J Am Med Inform Assoc",
+      "title": "A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery",
+      "url": "https://doi.org/10.1093/jamia/ocag130",
+      "why_it_matters": "Systematically quantifies where pharmacotherapy evidence is missing for pregnant, lactating, and pediatric patients \u2014 a direct input for research prioritization in OB prescribing.",
+      "year": 2026
+    },
+    {
+      "author": "Cantone",
+      "id": "cantone2026",
+      "publication": "Radiol Artif Intell",
+      "title": "DeepVEST: Deep Learning-based Vessel Segmentation and Erasure in Breast MRI for Improved Lesion Assessment",
+      "url": "https://doi.org/10.1148/ryai.250630",
+      "why_it_matters": "Demonstrates a practical AI tool that removes vascular clutter on breast MRI, improving radiologist lesion detection \u2014 relevant to high-risk breast imaging workflows.",
+      "year": 2026
+    },
+    {
+      "author": "Yew",
+      "id": "yew2026",
+      "publication": "Lancet Digit Health",
+      "title": "Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection",
+      "url": "https://doi.org/10.1016/j.landig.2026.101031",
+      "why_it_matters": "Large multicenter study showing a domain-specific foundation model does not reliably beat standard supervised learning \u2014 a reality check for foundation-model hype across imaging AI.",
+      "year": 2026
+    },
+    {
+      "author": "Cai",
+      "id": "cai2026",
+      "publication": "Radiology",
+      "title": "MRI-guided versus OSEM Amyloid Brain PET Reconstruction for Reader Agreement, Visual Consistency, and Diagnostic Accuracy",
+      "url": "https://doi.org/10.1148/radiol.260692",
+      "why_it_matters": "Shows MRI-guided PET reconstruction improves inter-reader agreement for amyloid imaging \u2014 a technical advance for neuroradiology colleagues.",
+      "year": 2026
+    },
+    {
+      "author": "Han",
+      "id": "han2026",
+      "publication": "Radiology",
+      "title": "Five-year Quantitative Chest CT and Hyperpolarized Xenon 129 Ventilation MRI Findings in Survivors of COVID-19 Pneumonia",
+      "url": "https://doi.org/10.1148/radiol.261153",
+      "why_it_matters": "Prospective five-year data showing persistent pulmonary imaging abnormalities in COVID-19 survivors, including those with initially mild disease \u2014 relevant for long-term follow-up considerations.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Liu et al. - J Am Med Inform Assoc - 2026 - A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery (https://doi.org/10.1093/jamia/ocag130)",
+    "Cantone et al. - Radiol Artif Intell - 2026 - DeepVEST: Deep Learning-based Vessel Segmentation and Erasure in Breast MRI for Improved Lesion Assessment (https://doi.org/10.1148/ryai.250630)",
+    "Yew et al. - Lancet Digit Health - 2026 - Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection (https://doi.org/10.1016/j.landig.2026.101031)",
+    "Cai et al. - Radiology - 2026 - MRI-guided versus OSEM Amyloid Brain PET Reconstruction for Reader Agreement, Visual Consistency, and Diagnostic Accuracy (https://doi.org/10.1148/radiol.260692)",
+    "Han et al. - Radiology - 2026 - Five-year Quantitative Chest CT and Hyperpolarized Xenon 129 Ventilation MRI Findings in Survivors of COVID-19 Pneumonia (https://doi.org/10.1148/radiol.261153)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/09/26",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1079
+}
