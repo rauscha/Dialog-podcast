@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260929_050205_mfm_rounds_-_week_of_2026_09_29.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 COLD OPEN"
+    },
+    {
+      "start_sec": 43.44,
+      "start_time": "0:43",
+      "title": "\u2014 HEADLINE: DESIGN AND EVIDENCE GRADE"
+    },
+    {
+      "start_sec": 86.88,
+      "start_time": "1:27",
+      "title": "\u2014 HEADLINE: POPULATION AND VISIT PROTOCOL"
+    },
+    {
+      "start_sec": 130.32,
+      "start_time": "2:10",
+      "title": "\u2014 HEADLINE: OUTCOME, EFFECT SIZE, AND NON-INFERIORITY MARGIN"
+    },
+    {
+      "start_sec": 173.76,
+      "start_time": "2:54",
+      "title": "\u2014 HEADLINE: PRACTICE IMPACT AND TELEMEDICINE DEPENDENCY"
+    },
+    {
+      "start_sec": 217.2,
+      "start_time": "3:37",
+      "title": "\u2014 PIVOT + ROUND 1: LIN (ASPIRIN BREAKTHROUGH PREECLAMPSIA)"
+    },
+    {
+      "start_sec": 260.64,
+      "start_time": "4:21",
+      "title": "\u2014 ROUND 2: PALADINO (PERICERCLAGE ADJUNCTS)"
+    },
+    {
+      "start_sec": 304.08,
+      "start_time": "5:04",
+      "title": "\u2014 ROUND 3: MIRMOZAFFARI (SEVERE-FEATURE PREECLAMPSIA RISK STRATIFICATION)"
+    },
+    {
+      "start_sec": 347.52,
+      "start_time": "5:48",
+      "title": "\u2014 ROUND 4: CHEN (POSTPARTUM CARDIOVASCULAR SURVEILLANCE AT 12 MONTHS)"
+    },
+    {
+      "start_sec": 390.96,
+      "start_time": "6:31",
+      "title": "\u2014 CLOSE: WHAT TO WATCH, WHAT IS STILL UNSETTLED"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260929_050205_mfm_rounds_-_week_of_2026_09_29.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260929_050205_mfm_rounds_-_week_of_2026_09_29.companion.json",
+  "duration_sec": 479.403039,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "RCT evidence supporting reduced in-person ANC visits for low-risk women, with direct implications for clinic resource allocation",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102134"
+    },
+    {
+      "reason": "Identifies biomarker predictors of breakthrough preterm preeclampsia despite aspirin, refining risk counseling",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia",
+      "url": "https://doi.org/10.1002/uog.70339"
+    },
+    {
+      "reason": "Meta-analytic synthesis of pericerclage adjunct efficacy, informing adjunct protocol decisions",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Pericerclage tocolytics, antibiotics, or their combination and risk of preterm birth: a systematic review and meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102140"
+    },
+    {
+      "reason": "Demonstrates differential risk by individual severe-feature criteria, enabling more granular preeclampsia risk stratification",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Association between diagnostic criteria of preeclampsia with severe features and adverse perinatal outcomes",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102135"
+    },
+    {
+      "reason": "Documents persistent cardiovascular risk at 12 months post-HDP, supporting structured postpartum surveillance",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Postpartum anthropometric and cardiovascular profile following hypertensive disorders of pregnancy: 12-month follow-up",
+      "url": "https://doi.org/10.1002/uog.70313"
+    }
+  ],
+  "generated_at": "2026-09-29T10:09:14.037161+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Reducing in-person antenatal visits from 8 to 4 (supplemented by 2 telemedicine contacts) is non-inferior for maternal and neonatal outcomes in low-risk women",
+      "confidence": "high",
+      "id": "stalberg2026",
+      "source_ids": [
+        "stalberg2026"
+      ]
+    },
+    {
+      "claim": "Among aspirin-treated high-risk women, higher FMF triple-test estimated risk and specific biomarkers independently predict breakthrough preterm preeclampsia",
+      "confidence": "high",
+      "id": "lin2026",
+      "source_ids": [
+        "lin2026"
+      ]
+    },
+    {
+      "claim": "Pericerclage antibiotics and/or tocolytics may reduce preterm birth, though evidence quality varies by cerclage indication",
+      "confidence": "medium",
+      "id": "paladino2026",
+      "source_ids": [
+        "paladino2026"
+      ]
+    },
+    {
+      "claim": "Individual severe-feature criteria in preeclampsia confer differential risk for adverse perinatal outcomes",
+      "confidence": "medium",
+      "id": "mirmozaffari2026",
+      "source_ids": [
+        "mirmozaffari2026"
+      ]
+    },
+    {
+      "claim": "Women with hypertensive disorders of pregnancy show persistent adverse cardiovascular and anthropometric profiles at 12 months postpartum compared with normotensive controls",
+      "confidence": "medium",
+      "id": "chen2026",
+      "source_ids": [
+        "chen2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "St\u00e5lberg",
+      "id": "stalberg2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102134",
+      "why_it_matters": "RCT evidence supporting reduced in-person ANC visits for low-risk women, with direct implications for clinic resource allocation",
+      "year": 2026
+    },
+    {
+      "author": "Lin",
+      "id": "lin2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia",
+      "url": "https://doi.org/10.1002/uog.70339",
+      "why_it_matters": "Identifies biomarker predictors of breakthrough preterm preeclampsia despite aspirin, refining risk counseling",
+      "year": 2026
+    },
+    {
+      "author": "Paladino",
+      "id": "paladino2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Pericerclage tocolytics, antibiotics, or their combination and risk of preterm birth: a systematic review and meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102140",
+      "why_it_matters": "Meta-analytic synthesis of pericerclage adjunct efficacy, informing adjunct protocol decisions",
+      "year": 2026
+    },
+    {
+      "author": "Mirmozaffari",
+      "id": "mirmozaffari2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Association between diagnostic criteria of preeclampsia with severe features and adverse perinatal outcomes",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102135",
+      "why_it_matters": "Demonstrates differential risk by individual severe-feature criteria, enabling more granular preeclampsia risk stratification",
+      "year": 2026
+    },
+    {
+      "author": "Chen",
+      "id": "chen2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Postpartum anthropometric and cardiovascular profile following hypertensive disorders of pregnancy: 12-month follow-up",
+      "url": "https://doi.org/10.1002/uog.70313",
+      "why_it_matters": "Documents persistent cardiovascular risk at 12 months post-HDP, supporting structured postpartum surveillance",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "St\u00e5lberg et al. - Am J Obstet Gynecol MFM - 2026 - Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications (https://doi.org/10.1016/j.ajogmf.2026.102134)",
+    "Lin et al. - Ultrasound Obstet Gynecol - 2026 - Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia (https://doi.org/10.1002/uog.70339)",
+    "Paladino et al. - Am J Obstet Gynecol MFM - 2026 - Pericerclage tocolytics, antibiotics, or their combination and risk of preterm birth: a systematic review and meta-analysis (https://doi.org/10.1016/j.ajogmf.2026.102140)",
+    "Mirmozaffari et al. - Am J Obstet Gynecol MFM - 2026 - Association between diagnostic criteria of preeclampsia with severe features and adverse perinatal outcomes (https://doi.org/10.1016/j.ajogmf.2026.102135)",
+    "Chen et al. - Ultrasound Obstet Gynecol - 2026 - Postpartum anthropometric and cardiovascular profile following hypertensive disorders of pregnancy: 12-month follow-up (https://doi.org/10.1002/uog.70313)"
+  ],
+  "topic": "MFM Rounds - week of 2026/09/29",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1067
+}

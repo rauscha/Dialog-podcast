@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 COLD OPEN"
+    },
+    {
+      "startTime": 43.44,
+      "title": "\u2014 HEADLINE: DESIGN AND EVIDENCE GRADE"
+    },
+    {
+      "startTime": 86.88,
+      "title": "\u2014 HEADLINE: POPULATION AND VISIT PROTOCOL"
+    },
+    {
+      "startTime": 130.32,
+      "title": "\u2014 HEADLINE: OUTCOME, EFFECT SIZE, AND NON-INFERIORITY MARGIN"
+    },
+    {
+      "startTime": 173.76,
+      "title": "\u2014 HEADLINE: PRACTICE IMPACT AND TELEMEDICINE DEPENDENCY"
+    },
+    {
+      "startTime": 217.2,
+      "title": "\u2014 PIVOT + ROUND 1: LIN (ASPIRIN BREAKTHROUGH PREECLAMPSIA)"
+    },
+    {
+      "startTime": 260.64,
+      "title": "\u2014 ROUND 2: PALADINO (PERICERCLAGE ADJUNCTS)"
+    },
+    {
+      "startTime": 304.08,
+      "title": "\u2014 ROUND 3: MIRMOZAFFARI (SEVERE-FEATURE PREECLAMPSIA RISK STRATIFICATION)"
+    },
+    {
+      "startTime": 347.52,
+      "title": "\u2014 ROUND 4: CHEN (POSTPARTUM CARDIOVASCULAR SURVEILLANCE AT 12 MONTHS)"
+    },
+    {
+      "startTime": 390.96,
+      "title": "\u2014 CLOSE: WHAT TO WATCH, WHAT IS STILL UNSETTLED"
+    }
+  ],
+  "version": "1.2.0"
+}
