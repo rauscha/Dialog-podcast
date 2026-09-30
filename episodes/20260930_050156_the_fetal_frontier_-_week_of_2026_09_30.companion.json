@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260930_050156_the_fetal_frontier_-_week_of_2026_09_30.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changed This Week"
+    },
+    {
+      "start_sec": 61.72,
+      "start_time": "1:02",
+      "title": "\u2014 Headline: Clinical Question and Design"
+    },
+    {
+      "start_sec": 123.44,
+      "start_time": "2:03",
+      "title": "\u2014 Headline: Effect Size and the Isolated/Complex Split"
+    },
+    {
+      "start_sec": 185.16,
+      "start_time": "3:05",
+      "title": "\u2014 Headline: The Phenotyping Limit and the MRI Question"
+    },
+    {
+      "start_sec": 246.88,
+      "start_time": "4:07",
+      "title": "\u2014 Headline: Practice Implication and What the Paper Does Not Settle"
+    },
+    {
+      "start_sec": 308.6,
+      "start_time": "5:09",
+      "title": "\u2014 Round 1: Lu / cfDNA After PGT-A"
+    },
+    {
+      "start_sec": 370.32,
+      "start_time": "6:10",
+      "title": "\u2014 Round 2: Athiel / Closed Spinal Dysraphism"
+    },
+    {
+      "start_sec": 432.04,
+      "start_time": "7:12",
+      "title": "\u2014 Round 3: Chonnak / CoA Prediction Methods"
+    },
+    {
+      "start_sec": 493.76,
+      "start_time": "8:14",
+      "title": "\u2014 Round 4: Shinar / Fetal Intracranial Hemorrhage"
+    },
+    {
+      "start_sec": 555.48,
+      "start_time": "9:15",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260930_050156_the_fetal_frontier_-_week_of_2026_09_30.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20260930_050156_the_fetal_frontier_-_week_of_2026_09_30.companion.json",
+  "duration_sec": 662.197302,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Provides the largest multicenter cohort quantifying exome/genome yield in ACC after negative CMA; directly informs sequencing triage and prenatal counseling",
+      "source": "Prenatal Diagnosis",
+      "title": "Diagnostic Yield of Sequencing in Prenatal Agenesis of the Corpus Callosum in a Well-Phenotyped International Cohort",
+      "url": "https://doi.org/10.1002/pd.70252"
+    },
+    {
+      "reason": "Quantifies residual aneuploidy risk and cfDNA PPV after PGT-A; essential for counseling IVF patients on the role of additional screening",
+      "source": "Prenatal Diagnosis",
+      "title": "Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk",
+      "url": "https://doi.org/10.1002/pd.70249"
+    },
+    {
+      "reason": "Provides prenatal-postnatal concordance and 36-month functional outcomes for CSD subtypes; fills a gap in counseling data",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study",
+      "url": "https://doi.org/10.1002/uog.70340"
+    },
+    {
+      "reason": "External validation of existing CoA prediction methods and introduction of a multivariable model; refines prenatal cardiac screening protocols",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321"
+    },
+    {
+      "reason": "Consolidates etiology, workup, and prognosis for fetal ICH into a practical counseling framework; notes ~30% genetic yield in fully investigated cases",
+      "source": "Prenatal Diagnosis",
+      "title": "Fetal Intracranial Hemorrhage: What to Tell Expecting Parents?",
+      "url": "https://doi.org/10.1002/pd.70253"
+    }
+  ],
+  "generated_at": "2026-09-30T10:11:13.786129+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Exome or genome sequencing identifies pathogenic or likely pathogenic variants in 30% of prenatally diagnosed ACC cases after negative CMA, with yield increasing to 41% when additional phenotypic features are present.",
+      "confidence": "medium",
+      "id": "claim_dugoff",
+      "source_ids": [
+        "dugoff2026"
+      ]
+    },
+    {
+      "claim": "After PGT-A euploid embryo transfer, residual confirmed aneuploidy risk at amniocentesis is approximately 0.1%, and cfDNA positive predictive value is only 12.5%.",
+      "confidence": "medium",
+      "id": "claim_lu",
+      "source_ids": [
+        "lu2026"
+      ]
+    },
+    {
+      "claim": "In prenatally diagnosed closed spinal dysraphism, limited dorsal myeloschisis is the most common subtype, with prenatal-postnatal diagnostic concordance and functional outcomes now characterized at 36 months.",
+      "confidence": "medium",
+      "id": "claim_athiel",
+      "source_ids": [
+        "athiel2026"
+      ]
+    },
+    {
+      "claim": "A multivariable model combining multiple sagittal aortic-arch parameters improves prenatal coarctation discrimination over any single echocardiographic measurement.",
+      "confidence": "medium",
+      "id": "claim_chonnak",
+      "source_ids": [
+        "chonnak2026"
+      ]
+    },
+    {
+      "claim": "A genetic etiology is identified in approximately 30% of fetal intracranial hemorrhage cases that undergo comprehensive investigation.",
+      "confidence": "low",
+      "id": "claim_shinar",
+      "source_ids": [
+        "shinar2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Dugoff",
+      "id": "dugoff2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Diagnostic Yield of Sequencing in Prenatal Agenesis of the Corpus Callosum in a Well-Phenotyped International Cohort",
+      "url": "https://doi.org/10.1002/pd.70252",
+      "why_it_matters": "Provides the largest multicenter cohort quantifying exome/genome yield in ACC after negative CMA; directly informs sequencing triage and prenatal counseling",
+      "year": 2026
+    },
+    {
+      "author": "Lu",
+      "id": "lu2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk",
+      "url": "https://doi.org/10.1002/pd.70249",
+      "why_it_matters": "Quantifies residual aneuploidy risk and cfDNA PPV after PGT-A; essential for counseling IVF patients on the role of additional screening",
+      "year": 2026
+    },
+    {
+      "author": "Athiel",
+      "id": "athiel2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study",
+      "url": "https://doi.org/10.1002/uog.70340",
+      "why_it_matters": "Provides prenatal-postnatal concordance and 36-month functional outcomes for CSD subtypes; fills a gap in counseling data",
+      "year": 2026
+    },
+    {
+      "author": "Chonnak",
+      "id": "chonnak2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321",
+      "why_it_matters": "External validation of existing CoA prediction methods and introduction of a multivariable model; refines prenatal cardiac screening protocols",
+      "year": 2026
+    },
+    {
+      "author": "Shinar",
+      "id": "shinar2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Fetal Intracranial Hemorrhage: What to Tell Expecting Parents?",
+      "url": "https://doi.org/10.1002/pd.70253",
+      "why_it_matters": "Consolidates etiology, workup, and prognosis for fetal ICH into a practical counseling framework; notes ~30% genetic yield in fully investigated cases",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Dugoff et al. - Prenatal Diagnosis - 2026 - Diagnostic Yield of Sequencing in Prenatal Agenesis of the Corpus Callosum in a Well-Phenotyped International Cohort (https://doi.org/10.1002/pd.70252)",
+    "Lu et al. - Prenatal Diagnosis - 2026 - Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk (https://doi.org/10.1002/pd.70249)",
+    "Athiel et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study (https://doi.org/10.1002/uog.70340)",
+    "Chonnak et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model (https://doi.org/10.1002/uog.70321)",
+    "Shinar et al. - Prenatal Diagnosis - 2026 - Fetal Intracranial Hemorrhage: What to Tell Expecting Parents? (https://doi.org/10.1002/pd.70253)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/09/30",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1607
+}
