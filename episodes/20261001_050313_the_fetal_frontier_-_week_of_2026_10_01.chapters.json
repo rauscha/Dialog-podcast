@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Number That Was Missing"
+    },
+    {
+      "startTime": 52.85,
+      "title": "\u2014 Headline: Clinical Question and Design"
+    },
+    {
+      "startTime": 105.71,
+      "title": "\u2014 Headline: The Numbers and the Phenotype Split"
+    },
+    {
+      "startTime": 158.56,
+      "title": "\u2014 Headline: The Diagnostic Ceiling"
+    },
+    {
+      "startTime": 211.42,
+      "title": "\u2014 Headline: Practice Implication"
+    },
+    {
+      "startTime": 264.27,
+      "title": "\u2014 Pivot + Round 1: Closed Spinal Dysraphism Outcomes"
+    },
+    {
+      "startTime": 317.12,
+      "title": "\u2014 Round 2: cfDNA After Euploid Embryo Transfer"
+    },
+    {
+      "startTime": 369.98,
+      "title": "\u2014 Round 3: Fetal Intracranial Hemorrhage Workup"
+    },
+    {
+      "startTime": 422.83,
+      "title": "\u2014 Round 4: Coarctation of the Aorta \u2014 Sagittal Arch Parameters"
+    },
+    {
+      "startTime": 475.68,
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
