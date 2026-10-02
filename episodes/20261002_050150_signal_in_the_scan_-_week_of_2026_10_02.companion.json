@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261002_050150_signal_in_the_scan_-_week_of_2026_10_02.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week's Lead Paper Changes"
+    },
+    {
+      "start_sec": 53.84,
+      "start_time": "0:54",
+      "title": "\u2014 Headline: Clinical Question and Design Architecture"
+    },
+    {
+      "start_sec": 107.67,
+      "start_time": "1:48",
+      "title": "\u2014 Headline: What the Map Shows"
+    },
+    {
+      "start_sec": 161.51,
+      "start_time": "2:42",
+      "title": "\u2014 Headline: Practice Impact and Limits"
+    },
+    {
+      "start_sec": 215.35,
+      "start_time": "3:35",
+      "title": "\u2014 Round 1: Shiri TAVI Multimodal AI"
+    },
+    {
+      "start_sec": 269.18,
+      "start_time": "4:29",
+      "title": "\u2014 Round 2: Tse Bosniak v2019"
+    },
+    {
+      "start_sec": 323.02,
+      "start_time": "5:23",
+      "title": "\u2014 Round 3: Yew RETFound"
+    },
+    {
+      "start_sec": 376.86,
+      "start_time": "6:17",
+      "title": "\u2014 Round 4: Han COVID Imaging"
+    },
+    {
+      "start_sec": 430.69,
+      "start_time": "7:11",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261002_050150_signal_in_the_scan_-_week_of_2026_10_02.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261002_050150_signal_in_the_scan_-_week_of_2026_10_02.companion.json",
+  "duration_sec": 529.530794,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First scalable NLP tool to systematically map where maternal and pediatric drug evidence is missing, offering a prioritization roadmap for future trials.",
+      "source": "J Am Med Inform Assoc",
+      "title": "A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery",
+      "url": "https://doi.org/10.1093/jamia/ocag130"
+    },
+    {
+      "reason": "Demonstrates that fusing clinical, imaging, and procedural data outperforms traditional risk scores for post-TAVI prognosis in multicenter validation.",
+      "source": "Lancet Digit Health",
+      "title": "Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation",
+      "url": "https://doi.org/10.1016/j.landig.2026.101049"
+    },
+    {
+      "reason": "Provides multicenter real-world validation of the updated Bosniak classification, refining malignancy risk estimates for complex cystic renal lesions.",
+      "source": "Radiology",
+      "title": "Diagnostic Accuracy of Bosniak v2019 for Predicting Cancer and Unfavorable Histology in Class III-IV Cystic Renal Masses",
+      "url": "https://doi.org/10.1148/radiol.252603"
+    },
+    {
+      "reason": "Challenges the assumption that domain-specific foundation models automatically outperform standard pretrained networks when training data are plentiful.",
+      "source": "Lancet Digit Health",
+      "title": "Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection",
+      "url": "https://doi.org/10.1016/j.landig.2026.101031"
+    },
+    {
+      "reason": "Documents persistent subclinical ventilation defects at five years post-COVID despite normal spirometry, highlighting the limits of standard pulmonary function testing.",
+      "source": "Radiology",
+      "title": "Five-year Quantitative Chest CT and Hyperpolarized Xenon 129 Ventilation MRI Findings in Survivors of COVID-19 Pneumonia",
+      "url": "https://doi.org/10.1148/radiol.261153"
+    }
+  ],
+  "generated_at": "2026-10-02T10:10:11.130489+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "A co-learning NLP framework mining 38 million PubMed abstracts can systematically identify persistent evidence gaps in maternal and pediatric pharmacotherapy research.",
+      "confidence": "medium",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "Multimodal AI integrating clinical, imaging, and procedural data predicts long-term mortality after TAVI more accurately than conventional risk scores in multicenter validation.",
+      "confidence": "high",
+      "id": "shiri2026",
+      "source_ids": [
+        "shiri2026"
+      ]
+    },
+    {
+      "claim": "Bosniak v2019 classification predicts malignancy in approximately 75 percent of class III-IV cystic renal masses, with subclass and nodule size adding prognostic value for unfavorable histology.",
+      "confidence": "high",
+      "id": "tse2026",
+      "source_ids": [
+        "tse2026"
+      ]
+    },
+    {
+      "claim": "The retina-specific foundation model RETFound does not consistently outperform standard pretrained deep-learning models, particularly when full training data are available.",
+      "confidence": "high",
+      "id": "yew2026",
+      "source_ids": [
+        "yew2026"
+      ]
+    },
+    {
+      "claim": "COVID-19 pneumonia survivors show persistent ventilation defects on hyperpolarized Xe-129 MRI and quantitative CT at five years despite near-normal spirometry.",
+      "confidence": "medium",
+      "id": "han2026",
+      "source_ids": [
+        "han2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "J Am Med Inform Assoc",
+      "title": "A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery",
+      "url": "https://doi.org/10.1093/jamia/ocag130",
+      "why_it_matters": "First scalable NLP tool to systematically map where maternal and pediatric drug evidence is missing, offering a prioritization roadmap for future trials.",
+      "year": 2026
+    },
+    {
+      "author": "Shiri",
+      "id": "shiri2026",
+      "publication": "Lancet Digit Health",
+      "title": "Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation",
+      "url": "https://doi.org/10.1016/j.landig.2026.101049",
+      "why_it_matters": "Demonstrates that fusing clinical, imaging, and procedural data outperforms traditional risk scores for post-TAVI prognosis in multicenter validation.",
+      "year": 2026
+    },
+    {
+      "author": "Tse",
+      "id": "tse2026",
+      "publication": "Radiology",
+      "title": "Diagnostic Accuracy of Bosniak v2019 for Predicting Cancer and Unfavorable Histology in Class III-IV Cystic Renal Masses",
+      "url": "https://doi.org/10.1148/radiol.252603",
+      "why_it_matters": "Provides multicenter real-world validation of the updated Bosniak classification, refining malignancy risk estimates for complex cystic renal lesions.",
+      "year": 2026
+    },
+    {
+      "author": "Yew",
+      "id": "yew2026",
+      "publication": "Lancet Digit Health",
+      "title": "Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection",
+      "url": "https://doi.org/10.1016/j.landig.2026.101031",
+      "why_it_matters": "Challenges the assumption that domain-specific foundation models automatically outperform standard pretrained networks when training data are plentiful.",
+      "year": 2026
+    },
+    {
+      "author": "Han",
+      "id": "han2026",
+      "publication": "Radiology",
+      "title": "Five-year Quantitative Chest CT and Hyperpolarized Xenon 129 Ventilation MRI Findings in Survivors of COVID-19 Pneumonia",
+      "url": "https://doi.org/10.1148/radiol.261153",
+      "why_it_matters": "Documents persistent subclinical ventilation defects at five years post-COVID despite normal spirometry, highlighting the limits of standard pulmonary function testing.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Liu et al. - J Am Med Inform Assoc - 2026 - A co-learning framework for maternal and pediatric pharmacotherapy knowledge gap discovery (https://doi.org/10.1093/jamia/ocag130)",
+    "Shiri et al. - Lancet Digit Health - 2026 - Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation (https://doi.org/10.1016/j.landig.2026.101049)",
+    "Tse et al. - Radiology - 2026 - Diagnostic Accuracy of Bosniak v2019 for Predicting Cancer and Unfavorable Histology in Class III-IV Cystic Renal Masses (https://doi.org/10.1148/radiol.252603)",
+    "Yew et al. - Lancet Digit Health - 2026 - Performance and label efficiency of traditional deep-learning models and a retina-specific foundation model for ocular and systemic disease detection (https://doi.org/10.1016/j.landig.2026.101031)",
+    "Han et al. - Radiology - 2026 - Five-year Quantitative Chest CT and Hyperpolarized Xenon 129 Ventilation MRI Findings in Survivors of COVID-19 Pneumonia (https://doi.org/10.1148/radiol.261153)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/10/02",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1254
+}
