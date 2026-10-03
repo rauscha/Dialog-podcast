@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What This Week's Lead Paper Does"
+    },
+    {
+      "startTime": 48.15,
+      "title": "\u2014 Headline: Design and Corpus"
+    },
+    {
+      "startTime": 96.31,
+      "title": "\u2014 Headline: What the Map Shows and Its Primary Ceiling"
+    },
+    {
+      "startTime": 144.46,
+      "title": "\u2014 Headline: Practice Impact and Open Thread"
+    },
+    {
+      "startTime": 192.61,
+      "title": "\u2014 Round 1: Shiri TAVI Multimodal AI"
+    },
+    {
+      "startTime": 240.76,
+      "title": "\u2014 Round 2: Han Five-Year Xenon-129 MRI"
+    },
+    {
+      "startTime": 288.92,
+      "title": "\u2014 Round 3: Tse Bosniak v2019"
+    },
+    {
+      "startTime": 337.07,
+      "title": "\u2014 Round 4: Zhu Dual-Modality Ultrasound Lymphadenopathy"
+    },
+    {
+      "startTime": 385.22,
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "version": "1.2.0"
+}
