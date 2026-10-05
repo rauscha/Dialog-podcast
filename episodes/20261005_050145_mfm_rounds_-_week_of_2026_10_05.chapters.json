@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: What Changes This Week"
+    },
+    {
+      "startTime": 57.81,
+      "title": "\u2014 Headline: Design and Why It Earns the Grade"
+    },
+    {
+      "startTime": 115.61,
+      "title": "\u2014 Headline: Effect Directions and Magnitudes"
+    },
+    {
+      "startTime": 173.42,
+      "title": "\u2014 Headline: Key Limitation and Practice Impact"
+    },
+    {
+      "startTime": 231.22,
+      "title": "\u2014 Round 1: GLP-1 RA Periconception Exposure (Lau, BJOG)"
+    },
+    {
+      "startTime": 289.03,
+      "title": "\u2014 Round 2: Reduced-Visit Antenatal Care (St\u00e5lberg, AJOG MFM)"
+    },
+    {
+      "startTime": 346.83,
+      "title": "\u2014 Round 3: Selective Reduction in Monochorionic sFGR (Rojhani, AJOG)"
+    },
+    {
+      "startTime": 404.64,
+      "title": "\u2014 Round 4: Aspirin Breakthrough Predictors (Lin, UOG)"
+    },
+    {
+      "startTime": 462.45,
+      "title": "\u2014 Close: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

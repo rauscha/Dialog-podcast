@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261005_050145_mfm_rounds_-_week_of_2026_10_05.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What Changes This Week"
+    },
+    {
+      "start_sec": 57.81,
+      "start_time": "0:58",
+      "title": "\u2014 Headline: Design and Why It Earns the Grade"
+    },
+    {
+      "start_sec": 115.61,
+      "start_time": "1:56",
+      "title": "\u2014 Headline: Effect Directions and Magnitudes"
+    },
+    {
+      "start_sec": 173.42,
+      "start_time": "2:53",
+      "title": "\u2014 Headline: Key Limitation and Practice Impact"
+    },
+    {
+      "start_sec": 231.22,
+      "start_time": "3:51",
+      "title": "\u2014 Round 1: GLP-1 RA Periconception Exposure (Lau, BJOG)"
+    },
+    {
+      "start_sec": 289.03,
+      "start_time": "4:49",
+      "title": "\u2014 Round 2: Reduced-Visit Antenatal Care (St\u00e5lberg, AJOG MFM)"
+    },
+    {
+      "start_sec": 346.83,
+      "start_time": "5:47",
+      "title": "\u2014 Round 3: Selective Reduction in Monochorionic sFGR (Rojhani, AJOG)"
+    },
+    {
+      "start_sec": 404.64,
+      "start_time": "6:45",
+      "title": "\u2014 Round 4: Aspirin Breakthrough Predictors (Lin, UOG)"
+    },
+    {
+      "start_sec": 462.45,
+      "start_time": "7:42",
+      "title": "\u2014 Close: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261005_050145_mfm_rounds_-_week_of_2026_10_05.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261005_050145_mfm_rounds_-_week_of_2026_10_05.companion.json",
+  "duration_sec": 565.250975,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Largest US meta-analysis on doula support; moderate-certainty evidence for reduced preterm birth, cesarean delivery, and improved postpartum engagement \u2014 directly relevant to coverage policy debates.",
+      "source": "Obstet Gynecol",
+      "title": "Doula Support During Pregnancy, Childbirth, and Postpartum: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006395"
+    },
+    {
+      "reason": "Synthesizes emerging safety data on GLP-1 RA periconception exposure at a moment when patient encounters are surging and guidance is sparse.",
+      "source": "BJOG",
+      "title": "Glucagon-Like Peptide-1 Receptor Agonists in Pregnancy: Periconception Exposure and Perinatal Outcomes",
+      "url": "https://doi.org/10.1111/1471-0528.70339"
+    },
+    {
+      "reason": "Stepped-wedge RCT demonstrating non-inferiority of a reduced-visit model; informs resource allocation and value-based care design.",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102134"
+    },
+    {
+      "reason": "Provides pooled co-twin survival and gestational age data stratified by technique \u2014 anchors counseling for a rare, high-stakes intervention.",
+      "source": "Am J Obstet Gynecol",
+      "title": "Selective Reduction in Monochorionic Pregnancies With Selective Fetal Growth Restriction: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajog.2026.09.038"
+    },
+    {
+      "reason": "Identifies biomarker and risk profiles predicting breakthrough preterm preeclampsia despite aspirin; refines surveillance strategies.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia",
+      "url": "https://doi.org/10.1002/uog.70339"
+    }
+  ],
+  "generated_at": "2026-10-05T10:10:35.599047+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Doula support is associated with lower preterm birth and cesarean delivery rates, improved birth experience, and higher postpartum visit attendance at moderate certainty.",
+      "confidence": "high",
+      "id": "viswanathan2026",
+      "source_ids": [
+        "viswanathan2026"
+      ]
+    },
+    {
+      "claim": "Emerging data on GLP-1 receptor agonist periconception exposure are synthesized but remain limited and largely observational.",
+      "confidence": "low",
+      "id": "lau2026",
+      "source_ids": [
+        "lau2026"
+      ]
+    },
+    {
+      "claim": "A reduced-visit antenatal care model (four in-person plus two telemedicine visits) appears non-inferior to standard eight-visit care in low-risk Swedish women.",
+      "confidence": "medium",
+      "id": "stalberg2026",
+      "source_ids": [
+        "stalberg2026"
+      ]
+    },
+    {
+      "claim": "Selective reduction in monochorionic pregnancies with sFGR yields pooled co-twin survival and gestational age estimates that vary by surgical technique.",
+      "confidence": "medium",
+      "id": "rojhani2026",
+      "source_ids": [
+        "rojhani2026"
+      ]
+    },
+    {
+      "claim": "Higher first-trimester FMF estimated risk and specific biomarker profiles predict breakthrough preterm preeclampsia among aspirin-treated high-risk women.",
+      "confidence": "medium",
+      "id": "lin2026",
+      "source_ids": [
+        "lin2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Viswanathan",
+      "id": "viswanathan2026",
+      "publication": "Obstet Gynecol",
+      "title": "Doula Support During Pregnancy, Childbirth, and Postpartum: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006395",
+      "why_it_matters": "Largest US meta-analysis on doula support; moderate-certainty evidence for reduced preterm birth, cesarean delivery, and improved postpartum engagement \u2014 directly relevant to coverage policy debates.",
+      "year": 2026
+    },
+    {
+      "author": "Lau",
+      "id": "lau2026",
+      "publication": "BJOG",
+      "title": "Glucagon-Like Peptide-1 Receptor Agonists in Pregnancy: Periconception Exposure and Perinatal Outcomes",
+      "url": "https://doi.org/10.1111/1471-0528.70339",
+      "why_it_matters": "Synthesizes emerging safety data on GLP-1 RA periconception exposure at a moment when patient encounters are surging and guidance is sparse.",
+      "year": 2026
+    },
+    {
+      "author": "St\u00e5lberg",
+      "id": "stalberg2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102134",
+      "why_it_matters": "Stepped-wedge RCT demonstrating non-inferiority of a reduced-visit model; informs resource allocation and value-based care design.",
+      "year": 2026
+    },
+    {
+      "author": "Rojhani",
+      "id": "rojhani2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Selective Reduction in Monochorionic Pregnancies With Selective Fetal Growth Restriction: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajog.2026.09.038",
+      "why_it_matters": "Provides pooled co-twin survival and gestational age data stratified by technique \u2014 anchors counseling for a rare, high-stakes intervention.",
+      "year": 2026
+    },
+    {
+      "author": "Lin",
+      "id": "lin2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia",
+      "url": "https://doi.org/10.1002/uog.70339",
+      "why_it_matters": "Identifies biomarker and risk profiles predicting breakthrough preterm preeclampsia despite aspirin; refines surveillance strategies.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Viswanathan et al. - Obstet Gynecol - 2026 - Doula Support During Pregnancy, Childbirth, and Postpartum: A Systematic Review and Meta-Analysis (https://doi.org/10.1097/aog.0000000000006395)",
+    "Lau et al. - BJOG - 2026 - Glucagon-Like Peptide-1 Receptor Agonists in Pregnancy: Periconception Exposure and Perinatal Outcomes (https://doi.org/10.1111/1471-0528.70339)",
+    "St\u00e5lberg et al. - Am J Obstet Gynecol MFM - 2026 - Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications (https://doi.org/10.1016/j.ajogmf.2026.102134)",
+    "Rojhani et al. - Am J Obstet Gynecol - 2026 - Selective Reduction in Monochorionic Pregnancies With Selective Fetal Growth Restriction: A Systematic Review and Meta-analysis (https://doi.org/10.1016/j.ajog.2026.09.038)",
+    "Lin et al. - Ultrasound Obstet Gynecol - 2026 - Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia (https://doi.org/10.1002/uog.70339)"
+  ],
+  "topic": "MFM Rounds - week of 2026/10/05",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1383
+}
