@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261006_050148_mfm_rounds_-_week_of_2026_10_06.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: Evidence Grade as the Threshold"
+    },
+    {
+      "start_sec": 46.32,
+      "start_time": "0:46",
+      "title": "\u2014 Headline: Design and What Earns the Evidence Grade"
+    },
+    {
+      "start_sec": 92.63,
+      "start_time": "1:33",
+      "title": "\u2014 Headline: Effect Direction and Clinical Meaning"
+    },
+    {
+      "start_sec": 138.95,
+      "start_time": "2:19",
+      "title": "\u2014 Headline: Implementation Gap and What Actually Changes"
+    },
+    {
+      "start_sec": 185.26,
+      "start_time": "3:05",
+      "title": "\u2014 Pivot and Round 1: GLP-1 RA Periconceptional Exposure"
+    },
+    {
+      "start_sec": 231.58,
+      "start_time": "3:52",
+      "title": "\u2014 Round 2: St\u00e5lberg Reduced-Visit Model (Callback)"
+    },
+    {
+      "start_sec": 277.89,
+      "start_time": "4:38",
+      "title": "\u2014 Round 3: Selective Reduction in Monochorionic sFGR"
+    },
+    {
+      "start_sec": 324.21,
+      "start_time": "5:24",
+      "title": "\u2014 Round 4: Preeclampsia Severe-Feature Criterion Stratification"
+    },
+    {
+      "start_sec": 370.52,
+      "start_time": "6:11",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261006_050148_mfm_rounds_-_week_of_2026_10_06.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261006_050148_mfm_rounds_-_week_of_2026_10_06.companion.json",
+  "duration_sec": 461.838662,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Moderate-certainty meta-analysis demonstrating likely reductions in preterm birth and cesarean rates with doula support \u2014 the strongest synthesis to date for integrating doulas into equitable maternity care.",
+      "source": "Obstet Gynecol",
+      "title": "Doula Support During Pregnancy, Childbirth, and Postpartum: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006395"
+    },
+    {
+      "reason": "Summarizes sparse safety data on GLP-1 RA periconceptional exposure and identifies counseling gaps for an increasingly common clinical scenario.",
+      "source": "BJOG",
+      "title": "Glucagon-Like Peptide-1 Receptor Agonists in Pregnancy: Periconception Exposure and Perinatal Outcomes",
+      "url": "https://doi.org/10.1111/1471-0528.70339"
+    },
+    {
+      "reason": "Stepped-wedge cluster RCT showing non-inferiority of reduced in-person visits with telemedicine supplementation \u2014 directly informs resource allocation and telehealth expansion.",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102134"
+    },
+    {
+      "reason": "Quantifies co-twin demise and delivery timing by technique \u2014 directly useful for procedural counseling in rare high-stakes monochorionic cases.",
+      "source": "Am J Obstet Gynecol",
+      "title": "Selective Reduction in Monochorionic Pregnancies With Selective Fetal Growth Restriction: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajog.2026.09.038"
+    },
+    {
+      "reason": "Demonstrates that individual severe-feature criteria carry differential prognostic weight \u2014 supports more individualized counseling and management in preeclampsia with severe features.",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Association between diagnostic criteria of preeclampsia with severe features and adverse perinatal outcomes",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102135"
+    }
+  ],
+  "generated_at": "2026-10-06T10:10:13.500078+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Continuous doula support likely reduces preterm birth and cesarean delivery rates and improves patient-reported birth experience, based on pooled data from 12 RCTs and 18 non-randomized studies with moderate GRADE certainty.",
+      "confidence": "high",
+      "id": "viswanathan2026",
+      "source_ids": [
+        "viswanathan2026"
+      ]
+    },
+    {
+      "claim": "Safety data on GLP-1 receptor agonist exposure around conception remain sparse, with no clear teratogenic signal but significant counseling gaps for clinicians managing these patients.",
+      "confidence": "low",
+      "id": "lau2026",
+      "source_ids": [
+        "lau2026"
+      ]
+    },
+    {
+      "claim": "A reduced in-person antenatal visit schedule supplemented by telemedicine appears non-inferior to standard care for maternal and neonatal outcomes in low-risk pregnancies.",
+      "confidence": "medium",
+      "id": "stalberg2026",
+      "source_ids": [
+        "stalberg2026"
+      ]
+    },
+    {
+      "claim": "Selective reduction in monochorionic pregnancies with selective fetal growth restriction yields quantifiable co-twin demise and delivery gestational age rates that differ by technique.",
+      "confidence": "medium",
+      "id": "rojhani2026",
+      "source_ids": [
+        "rojhani2026"
+      ]
+    },
+    {
+      "claim": "Individual severe-feature criteria in preeclampsia confer differential perinatal risk, allowing more granular prognostic stratification than the composite diagnosis alone.",
+      "confidence": "medium",
+      "id": "mirmozaffari2026",
+      "source_ids": [
+        "mirmozaffari2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Viswanathan",
+      "id": "viswanathan2026",
+      "publication": "Obstet Gynecol",
+      "title": "Doula Support During Pregnancy, Childbirth, and Postpartum: A Systematic Review and Meta-Analysis",
+      "url": "https://doi.org/10.1097/aog.0000000000006395",
+      "why_it_matters": "Moderate-certainty meta-analysis demonstrating likely reductions in preterm birth and cesarean rates with doula support \u2014 the strongest synthesis to date for integrating doulas into equitable maternity care.",
+      "year": 2026
+    },
+    {
+      "author": "Lau",
+      "id": "lau2026",
+      "publication": "BJOG",
+      "title": "Glucagon-Like Peptide-1 Receptor Agonists in Pregnancy: Periconception Exposure and Perinatal Outcomes",
+      "url": "https://doi.org/10.1111/1471-0528.70339",
+      "why_it_matters": "Summarizes sparse safety data on GLP-1 RA periconceptional exposure and identifies counseling gaps for an increasingly common clinical scenario.",
+      "year": 2026
+    },
+    {
+      "author": "St\u00e5lberg",
+      "id": "stalberg2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102134",
+      "why_it_matters": "Stepped-wedge cluster RCT showing non-inferiority of reduced in-person visits with telemedicine supplementation \u2014 directly informs resource allocation and telehealth expansion.",
+      "year": 2026
+    },
+    {
+      "author": "Rojhani",
+      "id": "rojhani2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Selective Reduction in Monochorionic Pregnancies With Selective Fetal Growth Restriction: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajog.2026.09.038",
+      "why_it_matters": "Quantifies co-twin demise and delivery timing by technique \u2014 directly useful for procedural counseling in rare high-stakes monochorionic cases.",
+      "year": 2026
+    },
+    {
+      "author": "Mirmozaffari",
+      "id": "mirmozaffari2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Association between diagnostic criteria of preeclampsia with severe features and adverse perinatal outcomes",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102135",
+      "why_it_matters": "Demonstrates that individual severe-feature criteria carry differential prognostic weight \u2014 supports more individualized counseling and management in preeclampsia with severe features.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Viswanathan et al. - Obstet Gynecol - 2026 - Doula Support During Pregnancy, Childbirth, and Postpartum: A Systematic Review and Meta-Analysis (https://doi.org/10.1097/aog.0000000000006395)",
+    "Lau et al. - BJOG - 2026 - Glucagon-Like Peptide-1 Receptor Agonists in Pregnancy: Periconception Exposure and Perinatal Outcomes (https://doi.org/10.1111/1471-0528.70339)",
+    "St\u00e5lberg et al. - Am J Obstet Gynecol MFM - 2026 - Maternal and neonatal outcomes in a reduced visit antenatal care program for women at low risk for complications (https://doi.org/10.1016/j.ajogmf.2026.102134)",
+    "Rojhani et al. - Am J Obstet Gynecol - 2026 - Selective Reduction in Monochorionic Pregnancies With Selective Fetal Growth Restriction: A Systematic Review and Meta-analysis (https://doi.org/10.1016/j.ajog.2026.09.038)",
+    "Mirmozaffari et al. - Am J Obstet Gynecol MFM - 2026 - Association between diagnostic criteria of preeclampsia with severe features and adverse perinatal outcomes (https://doi.org/10.1016/j.ajogmf.2026.102135)"
+  ],
+  "topic": "MFM Rounds - week of 2026/10/06",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1155
+}

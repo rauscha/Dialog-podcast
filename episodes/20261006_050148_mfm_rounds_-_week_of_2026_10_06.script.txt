@@ -1,0 +1,40 @@
+CASPAR [measured]: Viswanathan and colleagues have given us the strongest synthesis to date on doula support — twelve RCTs, eighteen non-randomized studies, GRADE methodology, moderate certainty on hard outcomes including preterm birth and cesarean delivery. The question this week is what moderate certainty plus a workforce shortage actually changes in practice.
+JUNO [dry]: Which is a more interesting question than it sounds.
+CASPAR [grounded]: From Obstetrics & Gynecology, 2026: Viswanathan and colleagues, a systematic review and meta-analysis of 12 RCTs and 18 non-randomized studies — doula support during pregnancy, childbirth, and postpartum.
+JUNO [pressing]: Walk me through what earns the GRADE rating. This literature has been around in various forms for a while.
+CASPAR [precise]: What earns it is the methodology — GRADE applied systematically across thirty pooled studies, not a narrative summary. Moderate certainty means the effect is likely real and unlikely to be reversed by future evidence. Not proven beyond revision. That distinction has to land before you look at any numbers.
+JUNO [nodding]: And the heterogeneity.
+CASPAR [direct]: That's the primary caveat, and it belongs before the effect direction, not after. Doula training, scope, intensity — varied substantially across included studies. Some were providing continuous labor support. Others were engaged across the full perinatal period. The pooled estimate is real, but it's an estimate across a heterogeneous intervention. There's no single standardized protocol sitting underneath it.
+JUNO [clinical]: So what does the effect direction actually look like?
+CASPAR [careful]: Likely reduction in preterm birth and cesarean delivery rates. Improved patient-reported birth experience. Direction is consistent; I'm not going to cite specific magnitudes here because they require the full table to interpret — those are in the show notes. But the direction on both hard outcomes is favorable, and the certainty grade is moderate. Not low, not high.
+JUNO [flat]: And the equity piece isn't incidental.
+CASPAR [confirming]: No. The signal is strongest in the included studies focused on populations with existing disparities in cesarean rates and preterm birth. That's also where the implementation argument is most compelling.
+JUNO [ahead of him]: Which is also where the workforce gap is widest.
+CASPAR [wry]: Yes. Cost-effectiveness data remain thin. Implementation fidelity across the thirty studies is inconsistent — which is part of what the heterogeneity reflects. A health system that wants to act on this faces a supply problem before it faces a policy problem.
+JUNO [revising slightly]: I came into this thinking the main barrier was reimbursement. But workforce supply is upstream of that — you can't reimburse what isn't there to hire.
+CASPAR [affirming]: That's right. The evidence grade is the contribution. What a reimbursement negotiation does with moderate certainty and a shortage of trained doulas is a different document, and this paper doesn't write it.
+JUNO [leaving it]: The strongest synthesis of the week is for an intervention most systems can't currently deliver at scale.
+CASPAR [pivoting]: Rounds — four other things this week.
+CASPAR [citing]: From BJOG, 2026: Lau and colleagues, a narrative review — GLP-1 receptor agonist exposure around conception and perinatal outcomes.
+JUNO [grounding]: This is the scenario landing in clinic now. A patient conceived on semaglutide or tirzepatide, or recognized the pregnancy and stopped. What do we actually have?
+CASPAR [calibrating]: Very little, and that's the finding. Narrative review of case reports and registry fragments — not a cohort, not a signal-detection study. No clear teratogenic signal, but no reassuring large-cohort data either. Those are not the same statement, and conflating them in the counseling room is a mistake.
+JUNO [operational]: So the move is documentation and structured counseling, not reassurance.
+CASPAR [affirming]: Careful documentation of exposure timing for pharmacovigilance, structured preconception counseling for patients still on these agents. The registry data that would actually answer the safety question are probably two years out, given how fast prescribing is expanding. The counseling gap is widening faster than the evidence.
+CASPAR [moving]: From AJOG MFM, 2026: Stålberg and colleagues, a stepped-wedge cluster RCT — reduced in-person antenatal visits supplemented by telemedicine for low-risk women.
+JUNO [brief]: We covered the headline result on the twenty-ninth.
+CASPAR [clipped]: We did. Non-inferiority confirmed. The constraint holds: the safety signal is attached to the full protocol — the specific combination of in-person visits and structured telemedicine contacts as tested — and to accurate risk stratification at enrollment. Fewer visits without the remote contacts is a different experiment without a safety signal behind it. Digital access remains the local variable this paper can't resolve for you.
+CASPAR [moving]: From AJOG, 2026: Rojhani and colleagues, a systematic review and meta-analysis — selective reduction in monochorionic pregnancies complicated by selective fetal growth restriction.
+JUNO [framing]: Rare scenario, high stakes, historically thin procedural data.
+CASPAR [delivering]: Monochorionic pairs where one fetus is significantly growth-restricted — the management options include selective reduction of the affected twin, and co-twin demise rate is the number families need. Rojhani pools the available data and gives technique-specific breakdowns for co-twin demise and gestational age at delivery. Those numbers are directly usable in the shared decision-making conversation.
+JUNO [holding]: The included studies vary in how they define technique and select cases.
+CASPAR [yes, but]: Treat the pooled estimate as a floor, not a point estimate you hand to a family without that context. But for a scenario where MFMs have been working from thin series data, a technique-stratified synthesis is a real upgrade. This is the paper you cite when you're in that room.
+CASPAR [last round]: From AJOG MFM, 2026: Mirmozaffari and colleagues, a cohort study — association between individual severe-feature criteria in preeclampsia and adverse perinatal outcomes.
+JUNO [setting up]: Whether the composite diagnosis is doing enough work, or whether the individual criteria carry different prognostic weight.
+CASPAR [direct]: The latter. Severe-range blood pressures, thrombocytopenia, renal or hepatic involvement — associated with different perinatal outcome profiles. The composite label groups patients who may carry meaningfully different risk. That matters for the timing and level-of-care conversation.
+JUNO [clinical]: Knowing which criterion is driving the designation changes what you say about prognosis, even before it changes what you do.
+CASPAR [holding the ceiling]: Cohort study. Prospective validation is the prerequisite before criterion-specific stratification drives formal management algorithms. Don't revise your protocol on this alone.
+JUNO [practical]: Use it in the counseling conversation now.
+CASPAR [affirming]: In the room, yes. Not in the order set yet.
+CASPAR [closing]: Three things still moving. The GLP-1 RA registry gap — prescribing is expanding faster than the safety literature, and registry data are the next source, probably within two years. The doula workforce bottleneck — evidence grade is now strong enough that reimbursement policy may shift, but supply is the rate-limiting step. And the Mirmozaffari criterion-stratification question — prospective validation before criterion-specific algorithms.
+JUNO [closing]: The evidence grade on the doula paper is real. The implementation pathway isn't in the paper. That asymmetry doesn't resolve itself.
+CASPAR [sign-off]: DOIs and full citations in the show notes.
