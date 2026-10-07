@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261007_050204_the_fetal_frontier_-_week_of_2026_10_07.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Question"
+    },
+    {
+      "start_sec": 62.91,
+      "start_time": "1:03",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 125.81,
+      "start_time": "2:06",
+      "title": "\u2014 Headline: Effect Size and Stratification"
+    },
+    {
+      "start_sec": 188.72,
+      "start_time": "3:09",
+      "title": "\u2014 Headline: The 83% Problem and Practice Change"
+    },
+    {
+      "start_sec": 251.62,
+      "start_time": "4:12",
+      "title": "\u2014 Pivot and Round 1: CNV-NIPT at Scale (Liu)"
+    },
+    {
+      "start_sec": 314.53,
+      "start_time": "5:15",
+      "title": "\u2014 Round 2: Post-PGT-A cfDNA (Lu)"
+    },
+    {
+      "start_sec": 377.43,
+      "start_time": "6:17",
+      "title": "\u2014 Round 3: Prenatal CoA Screening (Chonnak)"
+    },
+    {
+      "start_sec": 440.34,
+      "start_time": "7:20",
+      "title": "\u2014 Round 4: Molecular Autopsy in Consanguineous Cohort (Darouich)"
+    },
+    {
+      "start_sec": 503.25,
+      "start_time": "8:23",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261007_050204_the_fetal_frontier_-_week_of_2026_10_07.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261007_050204_the_fetal_frontier_-_week_of_2026_10_07.companion.json",
+  "duration_sec": 611.152018,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Largest multicenter cohort quantifying sequencing yield in prenatal ACC; directly informs counseling and testing algorithms",
+      "source": "Prenatal Diagnosis",
+      "title": "Diagnostic Yield of Sequencing in Prenatal Agenesis of the Corpus Callosum in a Well-Phenotyped International Cohort",
+      "url": "https://doi.org/10.1002/pd.70252"
+    },
+    {
+      "reason": "Largest CNV-NIPT performance dataset; establishes real-world PPV and fetal fraction benchmarks",
+      "source": "Prenatal Diagnosis",
+      "title": "Clinical Performance Evaluation of Size-Selective Placental Cell-Free DNA Enrichment for Non-Invasive Prenatal Testing of Fetal Copy Number Variants",
+      "url": "https://doi.org/10.1002/pd.70262"
+    },
+    {
+      "reason": "Quantifies residual aneuploidy risk and cfDNA performance post-PGT-A; practice-changing for ART counseling",
+      "source": "Prenatal Diagnosis",
+      "title": "Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk",
+      "url": "https://doi.org/10.1002/pd.70249"
+    },
+    {
+      "reason": "Multicenter validation showing no single parameter suffices; supports multivariable approach to prenatal CoA screening",
+      "source": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321"
+    },
+    {
+      "reason": "68% diagnostic yield supports integrated molecular autopsy workflow for recurrence counseling in consanguineous families",
+      "source": "Prenatal Diagnosis",
+      "title": "Integrated Molecular Autopsy in a Highly Consanguineous Perinatal Cohort With Severe Malformations and Strong Genetic Susceptibility",
+      "url": "https://doi.org/10.1002/pd.70264"
+    }
+  ],
+  "generated_at": "2026-10-07T10:10:18.267039+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Sequencing after negative CMA in prenatal ACC yields pathogenic or likely pathogenic variants in 30% overall, with 17% yield in isolated ACC and 41% when extracranial anomalies are present.",
+      "confidence": "high",
+      "id": "dugoff2026",
+      "source_ids": [
+        "dugoff2026"
+      ]
+    },
+    {
+      "claim": "Size-selective cfDNA enrichment achieves approximately 19% mean fetal fraction and 59% PPV for CNV detection across a large clinical cohort.",
+      "confidence": "high",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "After PGT-A euploid transfer, residual confirmed aneuploidy is 0.1%, and cfDNA sensitivity for detecting these cases is only 50% with a PPV of 12.5%.",
+      "confidence": "medium",
+      "id": "lu2026",
+      "source_ids": [
+        "lu2026"
+      ]
+    },
+    {
+      "claim": "No single sagittal aortic-arch parameter reliably predicts prenatal coarctation across centers; a multivariable model outperforms individual metrics.",
+      "confidence": "high",
+      "id": "chonnak2026",
+      "source_ids": [
+        "chonnak2026"
+      ]
+    },
+    {
+      "claim": "Integrated molecular autopsy combining deep phenotyping with exome or genome sequencing achieves 68% diagnostic yield in consanguineous perinatal cases with severe anomalies.",
+      "confidence": "medium",
+      "id": "darouich2026",
+      "source_ids": [
+        "darouich2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Dugoff",
+      "id": "dugoff2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Diagnostic Yield of Sequencing in Prenatal Agenesis of the Corpus Callosum in a Well-Phenotyped International Cohort",
+      "url": "https://doi.org/10.1002/pd.70252",
+      "why_it_matters": "Largest multicenter cohort quantifying sequencing yield in prenatal ACC; directly informs counseling and testing algorithms",
+      "year": 2026
+    },
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Clinical Performance Evaluation of Size-Selective Placental Cell-Free DNA Enrichment for Non-Invasive Prenatal Testing of Fetal Copy Number Variants",
+      "url": "https://doi.org/10.1002/pd.70262",
+      "why_it_matters": "Largest CNV-NIPT performance dataset; establishes real-world PPV and fetal fraction benchmarks",
+      "year": 2026
+    },
+    {
+      "author": "Lu",
+      "id": "lu2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk",
+      "url": "https://doi.org/10.1002/pd.70249",
+      "why_it_matters": "Quantifies residual aneuploidy risk and cfDNA performance post-PGT-A; practice-changing for ART counseling",
+      "year": 2026
+    },
+    {
+      "author": "Chonnak",
+      "id": "chonnak2026",
+      "publication": "Ultrasound in Obstetrics and Gynecology",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321",
+      "why_it_matters": "Multicenter validation showing no single parameter suffices; supports multivariable approach to prenatal CoA screening",
+      "year": 2026
+    },
+    {
+      "author": "Darouich",
+      "id": "darouich2026",
+      "publication": "Prenatal Diagnosis",
+      "title": "Integrated Molecular Autopsy in a Highly Consanguineous Perinatal Cohort With Severe Malformations and Strong Genetic Susceptibility",
+      "url": "https://doi.org/10.1002/pd.70264",
+      "why_it_matters": "68% diagnostic yield supports integrated molecular autopsy workflow for recurrence counseling in consanguineous families",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Dugoff et al. - Prenatal Diagnosis - 2026 - Diagnostic Yield of Sequencing in Prenatal Agenesis of the Corpus Callosum in a Well-Phenotyped International Cohort (https://doi.org/10.1002/pd.70252)",
+    "Liu et al. - Prenatal Diagnosis - 2026 - Clinical Performance Evaluation of Size-Selective Placental Cell-Free DNA Enrichment for Non-Invasive Prenatal Testing of Fetal Copy Number Variants (https://doi.org/10.1002/pd.70262)",
+    "Lu et al. - Prenatal Diagnosis - 2026 - Cell-Free DNA Screening After Euploid Embryo Transfer: Concordance With Amniocentesis and Residual Aneuploidy Risk (https://doi.org/10.1002/pd.70249)",
+    "Chonnak et al. - Ultrasound in Obstetrics and Gynecology - 2026 - Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model (https://doi.org/10.1002/uog.70321)",
+    "Darouich et al. - Prenatal Diagnosis - 2026 - Integrated Molecular Autopsy in a Highly Consanguineous Perinatal Cohort With Severe Malformations and Strong Genetic Susceptibility (https://doi.org/10.1002/pd.70264)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/10/07",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1400
+}
