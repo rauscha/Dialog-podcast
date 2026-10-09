@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261009_050150_signal_in_the_scan_-_week_of_2026_10_09.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Diagnostic Problem"
+    },
+    {
+      "start_sec": 49.31,
+      "start_time": "0:49",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 98.62,
+      "start_time": "1:39",
+      "title": "\u2014 Headline: The Sonographic Criteria"
+    },
+    {
+      "start_sec": 147.93,
+      "start_time": "2:28",
+      "title": "\u2014 Headline: The Ceiling and Practice Impact"
+    },
+    {
+      "start_sec": 197.24,
+      "start_time": "3:17",
+      "title": "\u2014 Pivot and Round 1: Closed Spinal Dysraphism (Athiel)"
+    },
+    {
+      "start_sec": 246.55,
+      "start_time": "4:07",
+      "title": "\u2014 Round 2: Prenatal Coarctation (Chonnak)"
+    },
+    {
+      "start_sec": 295.86,
+      "start_time": "4:56",
+      "title": "\u2014 Round 3: Bosniak v2019 (Tse)"
+    },
+    {
+      "start_sec": 345.17,
+      "start_time": "5:45",
+      "title": "\u2014 Round 4: Multimodal AI for TAVI Mortality (Shiri)"
+    },
+    {
+      "start_sec": 394.48,
+      "start_time": "6:34",
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261009_050150_signal_in_the_scan_-_week_of_2026_10_09.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261009_050150_signal_in_the_scan_-_week_of_2026_10_09.companion.json",
+  "duration_sec": 488.791519,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Proposes reproducible sonographic criteria for a rare, high-morbidity diagnosis strongly associated with IVF conception",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Imaging in gynecological disease (32): clinical and ultrasound characteristics of early abdominal ectopic pregnancy",
+      "url": "https://doi.org/10.1002/uog.70342"
+    },
+    {
+      "reason": "Links prenatal ultrasound phenotypes to functional outcomes at 18 and 36 months, improving counseling for a difficult-to-detect anomaly",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study",
+      "url": "https://doi.org/10.1002/uog.70340"
+    },
+    {
+      "reason": "Demonstrates that a multivariable model outperforms any single fetal echo parameter for prenatal coarctation diagnosis",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321"
+    },
+    {
+      "reason": "Large multicenter validation showing Bosniak v2019 predicts malignancy but with variable correlation to unfavorable histology by subclass and nodule size",
+      "source": "Radiology",
+      "title": "Diagnostic Accuracy of Bosniak v2019 for Predicting Cancer and Unfavorable Histology in Class III-IV Cystic Renal Masses",
+      "url": "https://doi.org/10.1148/radiol.252603"
+    },
+    {
+      "reason": "Establishes a benchmark for multimodal AI in cardiovascular risk prediction with a clinically meaningful endpoint",
+      "source": "Lancet Digit Health",
+      "title": "Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
+      "url": "https://doi.org/10.1016/j.landig.2026.101049"
+    }
+  ],
+  "generated_at": "2026-10-09T10:09:31.178900+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Abdominal ectopic pregnancy is strongly associated with IVF conception and can be distinguished from tubal ectopic by specific ultrasound criteria including empty uterus, absent adnexal mass, and extrauterine gestational sac surrounded by bowel",
+      "confidence": "medium",
+      "id": "berg2026",
+      "source_ids": [
+        "berg2026"
+      ]
+    },
+    {
+      "claim": "Prenatal ultrasound findings in closed spinal dysraphism correlate with postnatal motor and bladder function at 18 and 36 months across a spectrum of lesion types",
+      "confidence": "medium",
+      "id": "athiel2026",
+      "source_ids": [
+        "athiel2026"
+      ]
+    },
+    {
+      "claim": "A multivariable model combining multiple sagittal aortic-arch parameters outperforms any single fetal echo measure for prenatal coarctation diagnosis",
+      "confidence": "high",
+      "id": "chonnak2026",
+      "source_ids": [
+        "chonnak2026"
+      ]
+    },
+    {
+      "claim": "Bosniak v2019 classification predicts malignancy in class III-IV cystic renal masses, but correlation with unfavorable histology varies by subclass and nodule size",
+      "confidence": "high",
+      "id": "tse2026",
+      "source_ids": [
+        "tse2026"
+      ]
+    },
+    {
+      "claim": "Multimodal AI integrating clinical, ECG, echo, CT, and lab data predicts long-term mortality after TAVI better than any single data modality",
+      "confidence": "high",
+      "id": "shiri2026",
+      "source_ids": [
+        "shiri2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Berg",
+      "id": "berg2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Imaging in gynecological disease (32): clinical and ultrasound characteristics of early abdominal ectopic pregnancy",
+      "url": "https://doi.org/10.1002/uog.70342",
+      "why_it_matters": "Proposes reproducible sonographic criteria for a rare, high-morbidity diagnosis strongly associated with IVF conception",
+      "year": 2026
+    },
+    {
+      "author": "Athiel",
+      "id": "athiel2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study",
+      "url": "https://doi.org/10.1002/uog.70340",
+      "why_it_matters": "Links prenatal ultrasound phenotypes to functional outcomes at 18 and 36 months, improving counseling for a difficult-to-detect anomaly",
+      "year": 2026
+    },
+    {
+      "author": "Chonnak",
+      "id": "chonnak2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model",
+      "url": "https://doi.org/10.1002/uog.70321",
+      "why_it_matters": "Demonstrates that a multivariable model outperforms any single fetal echo parameter for prenatal coarctation diagnosis",
+      "year": 2026
+    },
+    {
+      "author": "Tse",
+      "id": "tse2026",
+      "publication": "Radiology",
+      "title": "Diagnostic Accuracy of Bosniak v2019 for Predicting Cancer and Unfavorable Histology in Class III-IV Cystic Renal Masses",
+      "url": "https://doi.org/10.1148/radiol.252603",
+      "why_it_matters": "Large multicenter validation showing Bosniak v2019 predicts malignancy but with variable correlation to unfavorable histology by subclass and nodule size",
+      "year": 2026
+    },
+    {
+      "author": "Shiri",
+      "id": "shiri2026",
+      "publication": "Lancet Digit Health",
+      "title": "Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study",
+      "url": "https://doi.org/10.1016/j.landig.2026.101049",
+      "why_it_matters": "Establishes a benchmark for multimodal AI in cardiovascular risk prediction with a clinically meaningful endpoint",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Berg et al. - Ultrasound Obstet Gynecol - 2026 - Imaging in gynecological disease (32): clinical and ultrasound characteristics of early abdominal ectopic pregnancy (https://doi.org/10.1002/uog.70342)",
+    "Athiel et al. - Ultrasound Obstet Gynecol - 2026 - Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study (https://doi.org/10.1002/uog.70340)",
+    "Chonnak et al. - Ultrasound Obstet Gynecol - 2026 - Sagittal aortic-arch assessment for prenatal diagnosis of coarctation of the aorta: comparative evaluation of 10 published methods and a new predictive model (https://doi.org/10.1002/uog.70321)",
+    "Tse et al. - Radiology - 2026 - Diagnostic Accuracy of Bosniak v2019 for Predicting Cancer and Unfavorable Histology in Class III-IV Cystic Renal Masses (https://doi.org/10.1148/radiol.252603)",
+    "Shiri et al. - Lancet Digit Health - 2026 - Multimodal artificial intelligence-based long-term mortality prediction after transcatheter aortic valve implantation: a multicentre development, validation, and testing study (https://doi.org/10.1016/j.landig.2026.101049)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/10/09",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1211
+}

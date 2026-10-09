@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Diagnostic Problem"
+    },
+    {
+      "startTime": 49.31,
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "startTime": 98.62,
+      "title": "\u2014 Headline: The Sonographic Criteria"
+    },
+    {
+      "startTime": 147.93,
+      "title": "\u2014 Headline: The Ceiling and Practice Impact"
+    },
+    {
+      "startTime": 197.24,
+      "title": "\u2014 Pivot and Round 1: Closed Spinal Dysraphism (Athiel)"
+    },
+    {
+      "startTime": 246.55,
+      "title": "\u2014 Round 2: Prenatal Coarctation (Chonnak)"
+    },
+    {
+      "startTime": 295.86,
+      "title": "\u2014 Round 3: Bosniak v2019 (Tse)"
+    },
+    {
+      "startTime": 345.17,
+      "title": "\u2014 Round 4: Multimodal AI for TAVI Mortality (Shiri)"
+    },
+    {
+      "startTime": 394.48,
+      "title": "\u2014 Close: What to Watch, What Is Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
