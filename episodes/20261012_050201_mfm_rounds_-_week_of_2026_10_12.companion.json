@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261012_050201_mfm_rounds_-_week_of_2026_10_12.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Problem Lin Answers"
+    },
+    {
+      "start_sec": 46.48,
+      "start_time": "0:46",
+      "title": "\u2014 Headline: Design and Population"
+    },
+    {
+      "start_sec": 92.96,
+      "start_time": "1:33",
+      "title": "\u2014 Headline: The Finding"
+    },
+    {
+      "start_sec": 139.44,
+      "start_time": "2:19",
+      "title": "\u2014 Headline: Caveats and Practice Impact"
+    },
+    {
+      "start_sec": 185.92,
+      "start_time": "3:06",
+      "title": "\u2014 Pivot and Round 1: Zeng \u2014 CSP Outcomes"
+    },
+    {
+      "start_sec": 232.4,
+      "start_time": "3:52",
+      "title": "\u2014 Round 2: Ben Saleh \u2014 Postpartum VTE and Hereditary Risk"
+    },
+    {
+      "start_sec": 278.88,
+      "start_time": "4:39",
+      "title": "\u2014 Round 3: Benuzzi \u2014 ML Ceiling for Term Stillbirth"
+    },
+    {
+      "start_sec": 325.36,
+      "start_time": "5:25",
+      "title": "\u2014 Round 4: Cooper \u2014 Adnexal Imaging in Pregnancy"
+    },
+    {
+      "start_sec": 371.84,
+      "start_time": "6:12",
+      "title": "\u2014 Close: Open Threads and Sign-Off"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261012_050201_mfm_rounds_-_week_of_2026_10_12.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261012_050201_mfm_rounds_-_week_of_2026_10_12.companion.json",
+  "duration_sec": 463.316213,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Multicenter RCT secondary analysis directly informing aspirin prophylaxis counseling and post-prophylaxis surveillance stratification",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia",
+      "url": "https://doi.org/10.1002/uog.70339"
+    },
+    {
+      "reason": "Quantifies catastrophic outcomes in expectant-managed CSP, supporting early intervention discussions",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Adverse outcome in Cesarean scar pregnancy continuing into mid-to-late gestation: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70293"
+    },
+    {
+      "reason": "Nationwide cohort supporting hereditary risk scoring for postpartum thromboprophylaxis decisions",
+      "source": "Am J Obstet Gynecol",
+      "title": "Postpartum Venous Thrombosis in Sweden: A Nationwide Family Study",
+      "url": "https://doi.org/10.1016/j.ajog.2026.10.001"
+    },
+    {
+      "reason": "Large population study demonstrating ceiling effects of registry-variable ML models for stillbirth prediction",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Limits of Machine Learning for Predicting Stillbirth at Term: A Population-Based Cohort of 302,192 Pregnancies in Northern Italy",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102148"
+    },
+    {
+      "reason": "Systematic review highlighting variable performance of IOTA models in pregnancy and lack of validated pregnancy-specific algorithms",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Diagnostic imaging of adnexal lesions in pregnancy: systematic review",
+      "url": "https://doi.org/10.1002/uog.70296"
+    }
+  ],
+  "generated_at": "2026-10-12T10:09:16.708320+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "First-trimester FMF risk strata and specific biomarkers remain independent predictors of breakthrough preterm preeclampsia even among aspirin-treated high-risk women.",
+      "confidence": "high",
+      "id": "claim_lin",
+      "source_ids": [
+        "lin2026"
+      ]
+    },
+    {
+      "claim": "Cesarean scar pregnancies continuing beyond 14 weeks carry very high pooled rates of placenta accreta spectrum and hysterectomy, with CSP subtype and myometrial thickness as key risk modifiers.",
+      "confidence": "high",
+      "id": "claim_zeng",
+      "source_ids": [
+        "zeng2026"
+      ]
+    },
+    {
+      "claim": "Graded family history of VTE confers incrementally higher postpartum VTE risk in primiparae, supporting hereditary scoring for thromboprophylaxis decisions.",
+      "confidence": "medium",
+      "id": "claim_bensaleh",
+      "source_ids": [
+        "bensaleh2026"
+      ]
+    },
+    {
+      "claim": "Advanced machine learning algorithms applied to registry-level variables achieve only modest AUC for term stillbirth prediction, indicating fundamental limits of this approach.",
+      "confidence": "medium",
+      "id": "claim_benuzzi",
+      "source_ids": [
+        "benuzzi2026"
+      ]
+    },
+    {
+      "claim": "IOTA-based models for adnexal lesion characterization in pregnancy show variable performance across studies, and heterogeneity precludes meta-analysis.",
+      "confidence": "high",
+      "id": "claim_cooper",
+      "source_ids": [
+        "cooper2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Lin",
+      "id": "lin2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia",
+      "url": "https://doi.org/10.1002/uog.70339",
+      "why_it_matters": "Multicenter RCT secondary analysis directly informing aspirin prophylaxis counseling and post-prophylaxis surveillance stratification",
+      "year": 2026
+    },
+    {
+      "author": "Zeng",
+      "id": "zeng2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Adverse outcome in Cesarean scar pregnancy continuing into mid-to-late gestation: systematic review and meta-analysis",
+      "url": "https://doi.org/10.1002/uog.70293",
+      "why_it_matters": "Quantifies catastrophic outcomes in expectant-managed CSP, supporting early intervention discussions",
+      "year": 2026
+    },
+    {
+      "author": "Ben Saleh",
+      "id": "bensaleh2026",
+      "publication": "Am J Obstet Gynecol",
+      "title": "Postpartum Venous Thrombosis in Sweden: A Nationwide Family Study",
+      "url": "https://doi.org/10.1016/j.ajog.2026.10.001",
+      "why_it_matters": "Nationwide cohort supporting hereditary risk scoring for postpartum thromboprophylaxis decisions",
+      "year": 2026
+    },
+    {
+      "author": "Benuzzi",
+      "id": "benuzzi2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Limits of Machine Learning for Predicting Stillbirth at Term: A Population-Based Cohort of 302,192 Pregnancies in Northern Italy",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102148",
+      "why_it_matters": "Large population study demonstrating ceiling effects of registry-variable ML models for stillbirth prediction",
+      "year": 2026
+    },
+    {
+      "author": "Cooper",
+      "id": "cooper2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Diagnostic imaging of adnexal lesions in pregnancy: systematic review",
+      "url": "https://doi.org/10.1002/uog.70296",
+      "why_it_matters": "Systematic review highlighting variable performance of IOTA models in pregnancy and lack of validated pregnancy-specific algorithms",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Lin et al. - Ultrasound Obstet Gynecol - 2026 - Determinants of preterm pre-eclampsia following low-dose aspirin prophylaxis: evidence from stepped-wedge cluster randomized trial in Asia (https://doi.org/10.1002/uog.70339)",
+    "Zeng et al. - Ultrasound Obstet Gynecol - 2026 - Adverse outcome in Cesarean scar pregnancy continuing into mid-to-late gestation: systematic review and meta-analysis (https://doi.org/10.1002/uog.70293)",
+    "Ben Saleh - Am J Obstet Gynecol - 2026 - Postpartum Venous Thrombosis in Sweden: A Nationwide Family Study (https://doi.org/10.1016/j.ajog.2026.10.001)",
+    "Benuzzi et al. - Am J Obstet Gynecol MFM - 2026 - Limits of Machine Learning for Predicting Stillbirth at Term: A Population-Based Cohort of 302,192 Pregnancies in Northern Italy (https://doi.org/10.1016/j.ajogmf.2026.102148)",
+    "Cooper et al. - Ultrasound Obstet Gynecol - 2026 - Diagnostic imaging of adnexal lesions in pregnancy: systematic review (https://doi.org/10.1002/uog.70296)"
+  ],
+  "topic": "MFM Rounds - week of 2026/10/12",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1106
+}
