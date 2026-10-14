@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261014_050159_the_fetal_frontier_-_week_of_2026_10_14.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 COLD OPEN: What Changed This Week"
+    },
+    {
+      "start_sec": 49.89,
+      "start_time": "0:50",
+      "title": "\u2014 HEADLINE: Study Design and Why It Earns the Evidence Grade"
+    },
+    {
+      "start_sec": 99.78,
+      "start_time": "1:40",
+      "title": "\u2014 HEADLINE: Functional Outcome Findings"
+    },
+    {
+      "start_sec": 149.67,
+      "start_time": "2:30",
+      "title": "\u2014 HEADLINE: Key Caveat \u2014 What n=70 Can and Cannot Support"
+    },
+    {
+      "start_sec": 199.56,
+      "start_time": "3:20",
+      "title": "\u2014 HEADLINE: Practice Impact"
+    },
+    {
+      "start_sec": 249.45,
+      "start_time": "4:09",
+      "title": "\u2014 ROUND 1: Galloway / ClinGen Prenatal Gene Curation"
+    },
+    {
+      "start_sec": 299.34,
+      "start_time": "4:59",
+      "title": "\u2014 ROUND 2: Munoz / Genetic Testing During TTTS Laser"
+    },
+    {
+      "start_sec": 349.23,
+      "start_time": "5:49",
+      "title": "\u2014 ROUND 3: Shinar / Fetal Intracranial Hemorrhage"
+    },
+    {
+      "start_sec": 399.11,
+      "start_time": "6:39",
+      "title": "\u2014 ROUND 4: Yu / Isolated Pelvic Kidney Genetic Yield"
+    },
+    {
+      "start_sec": 449.0,
+      "start_time": "7:29",
+      "title": "\u2014 CLOSE: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261014_050159_the_fetal_frontier_-_week_of_2026_10_14.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261014_050159_the_fetal_frontier_-_week_of_2026_10_14.companion.json",
+  "duration_sec": 543.893583,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "Provides multicenter outcome data for a diagnostically challenging prenatal finding, anchoring counseling with concrete functional outcomes at 18 and 36 months.",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study.",
+      "url": "https://doi.org/10.1002/uog.70340"
+    },
+    {
+      "reason": "International expert curation directly informs prenatal exome interpretation standards, providing an evidence-based framework for genomic counseling.",
+      "source": "Prenat Diagn",
+      "title": "Curating the Fetal Genome: Experience of the ClinGen Prenatal Gene Curation Expert Panel (GCEP).",
+      "url": "https://doi.org/10.1002/pd.70246"
+    },
+    {
+      "reason": "Directly relevant to fetal therapy practice; demonstrates feasibility and uptake of genetic testing during an already-invasive procedure.",
+      "source": "Prenat Diagn",
+      "title": "Opportunistic Prenatal Genetic Testing During Fetoscopic Laser Surgery for Twin-Twin Transfusion Syndrome.",
+      "url": "https://doi.org/10.1002/pd.70267"
+    },
+    {
+      "reason": "Practical counseling framework for uncommon but high-stakes prenatal diagnosis, synthesizing classification, etiology, and neurodevelopmental outcomes.",
+      "source": "Prenat Diagn",
+      "title": "Fetal Intracranial Hemorrhage: What to Tell Expecting Parents?",
+      "url": "https://doi.org/10.1002/pd.70253"
+    },
+    {
+      "reason": "Largest genetic workup series for isolated pelvic kidney; guides invasive testing counseling by demonstrating very low CMA yield.",
+      "source": "Prenat Diagn",
+      "title": "Genetic Investigation of Pregnancies With an Isolated Fetal Pelvic Kidney.",
+      "url": "https://doi.org/10.1002/pd.70271"
+    }
+  ],
+  "generated_at": "2026-10-14T10:10:31.475689+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "In 70 prenatally diagnosed closed spinal dysraphism cases over 10 years, limited dorsal myeloschisis was the predominant subtype, with functional outcomes documented at 18 and 36 months.",
+      "confidence": "medium",
+      "id": "athiel2026",
+      "source_ids": [
+        "athiel2026"
+      ]
+    },
+    {
+      "claim": "The ClinGen Prenatal Gene Curation Expert Panel systematically curated 61 genes across 63 disease relationships for severe prenatal phenotypes, establishing an evidence-based framework for prenatal genomic counseling.",
+      "confidence": "medium",
+      "id": "galloway2026",
+      "source_ids": [
+        "galloway2026"
+      ]
+    },
+    {
+      "claim": "Opportunistic genetic testing during fetoscopic laser for TTTS is feasible with 78% uptake, though clinically significant abnormalities were detected in only a small fraction of cases.",
+      "confidence": "medium",
+      "id": "munoz2026",
+      "source_ids": [
+        "munoz2026"
+      ]
+    },
+    {
+      "claim": "Fetal intracranial hemorrhage has heterogeneous etiologies including FNAIT, COL4A1/2 variants, and infections, with neurodevelopmental outcomes varying by classification and underlying cause.",
+      "confidence": "low",
+      "id": "shinar2026",
+      "source_ids": [
+        "shinar2026"
+      ]
+    },
+    {
+      "claim": "Among 212 isolated pelvic kidney fetuses, CMA diagnostic yield was 0.5%, with trio exome adding modest yield and KMT2D being the most clinically attributable gene.",
+      "confidence": "medium",
+      "id": "yu2026",
+      "source_ids": [
+        "yu2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Athiel",
+      "id": "athiel2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study.",
+      "url": "https://doi.org/10.1002/uog.70340",
+      "why_it_matters": "Provides multicenter outcome data for a diagnostically challenging prenatal finding, anchoring counseling with concrete functional outcomes at 18 and 36 months.",
+      "year": 2026
+    },
+    {
+      "author": "Galloway",
+      "id": "galloway2026",
+      "publication": "Prenat Diagn",
+      "title": "Curating the Fetal Genome: Experience of the ClinGen Prenatal Gene Curation Expert Panel (GCEP).",
+      "url": "https://doi.org/10.1002/pd.70246",
+      "why_it_matters": "International expert curation directly informs prenatal exome interpretation standards, providing an evidence-based framework for genomic counseling.",
+      "year": 2026
+    },
+    {
+      "author": "Munoz",
+      "id": "munoz2026",
+      "publication": "Prenat Diagn",
+      "title": "Opportunistic Prenatal Genetic Testing During Fetoscopic Laser Surgery for Twin-Twin Transfusion Syndrome.",
+      "url": "https://doi.org/10.1002/pd.70267",
+      "why_it_matters": "Directly relevant to fetal therapy practice; demonstrates feasibility and uptake of genetic testing during an already-invasive procedure.",
+      "year": 2026
+    },
+    {
+      "author": "Shinar",
+      "id": "shinar2026",
+      "publication": "Prenat Diagn",
+      "title": "Fetal Intracranial Hemorrhage: What to Tell Expecting Parents?",
+      "url": "https://doi.org/10.1002/pd.70253",
+      "why_it_matters": "Practical counseling framework for uncommon but high-stakes prenatal diagnosis, synthesizing classification, etiology, and neurodevelopmental outcomes.",
+      "year": 2026
+    },
+    {
+      "author": "Yu",
+      "id": "yu2026",
+      "publication": "Prenat Diagn",
+      "title": "Genetic Investigation of Pregnancies With an Isolated Fetal Pelvic Kidney.",
+      "url": "https://doi.org/10.1002/pd.70271",
+      "why_it_matters": "Largest genetic workup series for isolated pelvic kidney; guides invasive testing counseling by demonstrating very low CMA yield.",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Athiel et al. - Ultrasound Obstet Gynecol - 2026 - Prenatal findings and postnatal outcomes in cases of closed spinal dysraphism: 10-year two-center cohort study. (https://doi.org/10.1002/uog.70340)",
+    "Galloway et al. - Prenat Diagn - 2026 - Curating the Fetal Genome: Experience of the ClinGen Prenatal Gene Curation Expert Panel (GCEP). (https://doi.org/10.1002/pd.70246)",
+    "Munoz et al. - Prenat Diagn - 2026 - Opportunistic Prenatal Genetic Testing During Fetoscopic Laser Surgery for Twin-Twin Transfusion Syndrome. (https://doi.org/10.1002/pd.70267)",
+    "Shinar et al. - Prenat Diagn - 2026 - Fetal Intracranial Hemorrhage: What to Tell Expecting Parents? (https://doi.org/10.1002/pd.70253)",
+    "Yu et al. - Prenat Diagn - 2026 - Genetic Investigation of Pregnancies With an Isolated Fetal Pelvic Kidney. (https://doi.org/10.1002/pd.70271)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/10/14",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1299
+}

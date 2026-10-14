@@ -1,0 +1,45 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 COLD OPEN: What Changed This Week"
+    },
+    {
+      "startTime": 49.89,
+      "title": "\u2014 HEADLINE: Study Design and Why It Earns the Evidence Grade"
+    },
+    {
+      "startTime": 99.78,
+      "title": "\u2014 HEADLINE: Functional Outcome Findings"
+    },
+    {
+      "startTime": 149.67,
+      "title": "\u2014 HEADLINE: Key Caveat \u2014 What n=70 Can and Cannot Support"
+    },
+    {
+      "startTime": 199.56,
+      "title": "\u2014 HEADLINE: Practice Impact"
+    },
+    {
+      "startTime": 249.45,
+      "title": "\u2014 ROUND 1: Galloway / ClinGen Prenatal Gene Curation"
+    },
+    {
+      "startTime": 299.34,
+      "title": "\u2014 ROUND 2: Munoz / Genetic Testing During TTTS Laser"
+    },
+    {
+      "startTime": 349.23,
+      "title": "\u2014 ROUND 3: Shinar / Fetal Intracranial Hemorrhage"
+    },
+    {
+      "startTime": 399.11,
+      "title": "\u2014 ROUND 4: Yu / Isolated Pelvic Kidney Genetic Yield"
+    },
+    {
+      "startTime": 449.0,
+      "title": "\u2014 CLOSE: What to Watch, What Remains Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}
