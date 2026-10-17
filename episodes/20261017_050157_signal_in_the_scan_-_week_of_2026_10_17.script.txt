@@ -1,0 +1,38 @@
+CASPAR [measured]: Dense-breast supplemental screening has been a live policy argument for years — two modalities, different evidence grades, very different access profiles — and it's been running mostly on observational data. The randomized head-to-head comparison hasn't existed until this week.
+JUNO [dry]: DENSE-2.
+CASPAR [confirming]: DENSE-2. From Radiology, 2026: van Grinsven and colleagues, a multicenter RCT embedded in the Dutch national screening program — contrast-enhanced mammography versus abbreviated MRI for supplemental screening in women with extremely dense breasts. Walk through the design first, because it's earning the evidence grade.
+JUNO [grounded]: Go ahead.
+CASPAR [even]: Women with extremely dense breasts already enrolled in the Dutch national mammography program, randomized to CEM or abbreviated MRI as their supplemental screen. The enrollment mechanism matters — this isn't a self-selected research cohort. These are women who showed up for routine screening, had density confirmed, and got allocated. That's real screening behavior, not a referral population.
+JUNO [pressing]: Endpoints?
+CASPAR [direct]: Supplemental cancer detection rate, interval cancer incidence, recall metrics. The endpoint selection is conservative in the right direction — interval cancer incidence is the outcome that actually matters for harm. It tells you whether cancers are being missed between screens, not just whether the modality finds something on the day.
+JUNO [pressing]: Recall rate is where the patient-facing cost lives, though. False positives from supplemental screening aren't trivial.
+CASPAR [agreeing]: No, they're not. Both endpoints matter, and the trial captures both. Caveat before numbers.
+JUNO [dry]: As it should be.
+CASPAR [even]: The Dutch population. Screening interval, density distribution, radiologist training in the Netherlands — none of that is universal. A system with different density prevalence and different workflow norms cannot import these numbers without asking whether the denominator matches.
+JUNO [specific]: So what did the comparison show?
+CASPAR [direct]: CEM held up. Supplemental cancer detection rates were comparable across arms, interval cancer incidence didn't separate in a way that favored abbreviated MRI, and recall metrics were in the same range. A non-inferiority signal is present. The confidence intervals are not narrow, and this is one national program, one population — but the signal is randomized.
+JUNO [clinical]: Which means the access argument for CEM is no longer just a cost argument.
+CASPAR [picking up]: Right. If non-inferiority holds, CEM becomes a defensible first-line supplemental option where abbreviated MRI throughput is constrained — and that's most settings. The argument is now randomized. Not "CEM is cheaper and we think it's probably fine."
+JUNO [pressing]: What doesn't change?
+CASPAR [flat]: Optimal supplemental screening interval for extremely dense breasts, regardless of modality — not answered here. And whether this result moves reimbursement language or guideline text before the next update cycle is an institutional mechanism question. The evidence exists. Whether it reaches the right committees in time is a separate variable.
+JUNO [noting]: Programs that have already built CEM capacity are in a different position than those still waiting on MRI throughput. Worth naming before you bring this to an administration conversation.
+CASPAR [brief]: Agreed.
+CASPAR [pivot]: Rounds — four other things this week.
+CASPAR [even]: From Radiology, 2026: Saha and colleagues, external validation across more than 22,000 prostate MRIs globally — the SCARLET-1 study of AI for clinically significant prostate cancer detection. The AI achieved radiologist-level agreement across scanner diversity and site heterogeneity that prior single-center validations couldn't demonstrate.
+JUNO [flat]: Agreement with radiologists — that's the metric.
+CASPAR [holding]: That's the metric, and the caveat follows immediately. Agreement is not biopsy yield, not overdiagnosis rate, not patient trajectory. SCARLET-1 is what makes prospective trials with clinical endpoints fundable. It is not the trial that answers whether AI-first triage changes outcomes.
+JUNO [brief]: Watch for prospective trials with biopsy endpoints.
+CASPAR [moving]: From Radiology, 2026: Ding and colleagues, a multicenter cohort linking contrast-enhanced ultrasound features to HCC recurrence — perfusion beyond margin as a prognostic marker. Perfusion signal extending beyond the visible tumor margin independently predicted recurrence and local progression, and correlated with histologic invasiveness via bioinformatics analysis.
+JUNO [noting]: Operator-dependence is the standing caveat with CEUS interpretation.
+CASPAR [confirming]: And it applies here. The feature needs prospective validation and a defined acquisition protocol before it touches resection margin planning or surveillance intervals. If your center runs a structured HCC CEUS program, track this prospectively. Don't build a protocol around a retrospective multicenter cohort.
+CASPAR [moving]: From JAMIA, 2026: Frank and colleagues, an RCT of 220 clinicians — whether transparency features calibrate trust in AI diagnostic support. The finding: they don't. Clinicians shifted their diagnoses toward the AI recommendation 46 percent of the time when the AI disagreed with them, regardless of whether they saw the AI's reasoning, confidence score, or explanation.
+JUNO [landing it]: Forty-six percent held across all the transparency conditions.
+CASPAR [direct]: Forty-six percent is the number that belongs in every procurement conversation. Explainability features did not move it. Which means vendors selling transparency as the solution to overtrust now have an RCT to answer.
+JUNO [pressing]: One clinical context, one interface design.
+CASPAR [conceding slightly]: Real limit. The finding doesn't universalize the 46 percent, and it doesn't say explainability is useless in every domain. But the design is an RCT. That's harder to wave off than a survey. Workflow design and training are the named candidates for reducing automation bias — no paper this week answers that, and the Frank result makes it harder to avoid designing the trial that does.
+JUNO [dry]: The vendors will have thoughts.
+CASPAR [moving]: From Radiology, 2026: Zhang and colleagues, a large prospective comparison across 13 cardiovascular conditions — MOLLI versus ShMOLLI T1 mapping reference ranges at 3 Tesla. Large prospective Chinese cohort, healthy volunteers and 13 cardiovascular pathologies. MOLLI and ShMOLLI yield distinct T1 and ECV reference ranges at 3T. The sequences are not interchangeable for quantitative reporting.
+JUNO [brief]: Population portability is the named limit.
+CASPAR [confirming]: A program serving a different demographic mix should not import these ranges without local calibration. If your population is comparable and you're adopting quantitative T1 mapping, this is a useful normative anchor. If not, replicate the benchmark locally before the values go into your reporting template.
+JUNO [closing]: Two threads to watch. DENSE-2 and reimbursement — the evidence is there; whether it moves guideline language before the next cycle is the institutional variable. And Frank — if transparency features don't reduce automation bias, what does? That question is now formally open in a way it wasn't before this RCT.
+CASPAR [closing]: SCARLET-1 and the HCC perfusion marker are both waiting on prospective data with clinical endpoints. Note both; check back when those trials report. Full citations — van Grinsven, Saha, Ding, Frank, Zhang — Radiology and JAMIA, 2026 — DOIs in the show notes.

@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "\u2014 Cold Open: The Policy Gap DENSE-2 Was Built to Fill"
+    },
+    {
+      "startTime": 46.65,
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "startTime": 93.31,
+      "title": "\u2014 Headline: Effect in Numbers"
+    },
+    {
+      "startTime": 139.96,
+      "title": "\u2014 Headline: Practice Implication and Honest Accounting"
+    },
+    {
+      "startTime": 186.61,
+      "title": "\u2014 Round 1: SCARLET-1 (Saha, Radiology 2026)"
+    },
+    {
+      "startTime": 233.27,
+      "title": "\u2014 Round 2: HCC Perfusion Beyond Margin (Ding, Radiology 2026)"
+    },
+    {
+      "startTime": 279.92,
+      "title": "\u2014 Round 3: Transparency Features and Automation Bias (Frank, JAMIA 2026)"
+    },
+    {
+      "startTime": 326.57,
+      "title": "\u2014 Round 4: Cardiac T1 Mapping Reference Ranges (Zhang, Radiology 2026)"
+    },
+    {
+      "startTime": 373.23,
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "version": "1.2.0"
+}

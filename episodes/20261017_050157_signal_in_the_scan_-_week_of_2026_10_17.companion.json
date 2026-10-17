@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261017_050157_signal_in_the_scan_-_week_of_2026_10_17.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Policy Gap DENSE-2 Was Built to Fill"
+    },
+    {
+      "start_sec": 46.65,
+      "start_time": "0:47",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 93.31,
+      "start_time": "1:33",
+      "title": "\u2014 Headline: Effect in Numbers"
+    },
+    {
+      "start_sec": 139.96,
+      "start_time": "2:20",
+      "title": "\u2014 Headline: Practice Implication and Honest Accounting"
+    },
+    {
+      "start_sec": 186.61,
+      "start_time": "3:07",
+      "title": "\u2014 Round 1: SCARLET-1 (Saha, Radiology 2026)"
+    },
+    {
+      "start_sec": 233.27,
+      "start_time": "3:53",
+      "title": "\u2014 Round 2: HCC Perfusion Beyond Margin (Ding, Radiology 2026)"
+    },
+    {
+      "start_sec": 279.92,
+      "start_time": "4:40",
+      "title": "\u2014 Round 3: Transparency Features and Automation Bias (Frank, JAMIA 2026)"
+    },
+    {
+      "start_sec": 326.57,
+      "start_time": "5:27",
+      "title": "\u2014 Round 4: Cardiac T1 Mapping Reference Ranges (Zhang, Radiology 2026)"
+    },
+    {
+      "start_sec": 373.23,
+      "start_time": "6:13",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261017_050157_signal_in_the_scan_-_week_of_2026_10_17.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261017_050157_signal_in_the_scan_-_week_of_2026_10_17.companion.json",
+  "duration_sec": 464.879751,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First RCT directly comparing CEM and abbreviated MRI in a national screening program; could reshape dense-breast supplemental screening policy",
+      "source": "Radiology",
+      "title": "Supplemental Breast Cancer Screening with Contrast-enhanced Mammography or Abbreviated MRI for Extremely Dense Breasts: The DENSE-2 Trial",
+      "url": "https://doi.org/10.1148/radiol.260333"
+    },
+    {
+      "reason": "Largest multicenter external validation of AI for prostate MRI; establishes radiologist-level agreement across diverse global sites",
+      "source": "Radiology",
+      "title": "Artificial Intelligence for Prostate Cancer Detection and Screening on MRI in Global Populations: The SCARLET-1 Study",
+      "url": "https://doi.org/10.1148/radiol.262081"
+    },
+    {
+      "reason": "Introduces a reproducible CEUS marker that independently predicts HCC recurrence; potential to refine surveillance and surgical planning",
+      "source": "Radiology",
+      "title": "Perfusion beyond Margin in Hepatocellular Carcinoma: A Contrast-enhanced US Feature Related to Tumor Invasiveness and Prognosis",
+      "url": "https://doi.org/10.1148/radiol.260918"
+    },
+    {
+      "reason": "RCT evidence that explainability features do not fix automation bias; reframes the AI-adoption conversation toward workflow and training",
+      "source": "J Am Med Inform Assoc",
+      "title": "Transparency features alone are insufficient for trust calibration in artificial intelligence diagnostic support",
+      "url": "https://doi.org/10.1093/jamia/ocag176"
+    },
+    {
+      "reason": "Establishes population-specific T1 and ECV reference ranges at 3T; essential normative data for quantitative cardiac MRI programs",
+      "source": "Radiology",
+      "title": "Myocardial T1 Mapping at 3 T: A Comparison of MOLLI and ShMOLLI across Healthy Volunteers and Various Cardiovascular Pathologies",
+      "url": "https://doi.org/10.1148/radiol.252886"
+    }
+  ],
+  "generated_at": "2026-10-17T10:10:00.238417+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Contrast-enhanced mammography and abbreviated MRI are being compared head-to-head as supplemental screening modalities for extremely dense breasts within a randomized trial embedded in the Dutch national program.",
+      "confidence": "high",
+      "id": "van_grinsven_2026",
+      "source_ids": [
+        "van_grinsven_2026"
+      ]
+    },
+    {
+      "claim": "An AI system for detecting clinically significant prostate cancer on MRI achieved radiologist-level agreement across more than 22,000 exams in diagnostic and screening populations globally.",
+      "confidence": "medium",
+      "id": "saha_2026",
+      "source_ids": [
+        "saha_2026"
+      ]
+    },
+    {
+      "claim": "A contrast-enhanced ultrasound feature termed perfusion beyond margin independently predicts recurrence and local progression in hepatocellular carcinoma and correlates with tumor invasiveness.",
+      "confidence": "medium",
+      "id": "ding_2026",
+      "source_ids": [
+        "ding_2026"
+      ]
+    },
+    {
+      "claim": "Transparency features such as confidence scores and explanations do not improve clinicians' trust calibration in AI diagnostic support; AI recommendations still shifted diagnoses 46 percent of the time.",
+      "confidence": "high",
+      "id": "frank_2026",
+      "source_ids": [
+        "frank_2026"
+      ]
+    },
+    {
+      "claim": "MOLLI and ShMOLLI T1 mapping sequences yield distinct reference ranges at 3 Tesla across 13 cardiovascular conditions in a large Chinese cohort.",
+      "confidence": "medium",
+      "id": "zhang_2026",
+      "source_ids": [
+        "zhang_2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "van Grinsven",
+      "id": "van_grinsven_2026",
+      "publication": "Radiology",
+      "title": "Supplemental Breast Cancer Screening with Contrast-enhanced Mammography or Abbreviated MRI for Extremely Dense Breasts: The DENSE-2 Trial",
+      "url": "https://doi.org/10.1148/radiol.260333",
+      "why_it_matters": "First RCT directly comparing CEM and abbreviated MRI in a national screening program; could reshape dense-breast supplemental screening policy",
+      "year": 2026
+    },
+    {
+      "author": "Saha",
+      "id": "saha_2026",
+      "publication": "Radiology",
+      "title": "Artificial Intelligence for Prostate Cancer Detection and Screening on MRI in Global Populations: The SCARLET-1 Study",
+      "url": "https://doi.org/10.1148/radiol.262081",
+      "why_it_matters": "Largest multicenter external validation of AI for prostate MRI; establishes radiologist-level agreement across diverse global sites",
+      "year": 2026
+    },
+    {
+      "author": "Ding",
+      "id": "ding_2026",
+      "publication": "Radiology",
+      "title": "Perfusion beyond Margin in Hepatocellular Carcinoma: A Contrast-enhanced US Feature Related to Tumor Invasiveness and Prognosis",
+      "url": "https://doi.org/10.1148/radiol.260918",
+      "why_it_matters": "Introduces a reproducible CEUS marker that independently predicts HCC recurrence; potential to refine surveillance and surgical planning",
+      "year": 2026
+    },
+    {
+      "author": "Frank",
+      "id": "frank_2026",
+      "publication": "J Am Med Inform Assoc",
+      "title": "Transparency features alone are insufficient for trust calibration in artificial intelligence diagnostic support",
+      "url": "https://doi.org/10.1093/jamia/ocag176",
+      "why_it_matters": "RCT evidence that explainability features do not fix automation bias; reframes the AI-adoption conversation toward workflow and training",
+      "year": 2026
+    },
+    {
+      "author": "Zhang",
+      "id": "zhang_2026",
+      "publication": "Radiology",
+      "title": "Myocardial T1 Mapping at 3 T: A Comparison of MOLLI and ShMOLLI across Healthy Volunteers and Various Cardiovascular Pathologies",
+      "url": "https://doi.org/10.1148/radiol.252886",
+      "why_it_matters": "Establishes population-specific T1 and ECV reference ranges at 3T; essential normative data for quantitative cardiac MRI programs",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "van Grinsven - Radiology - 2026 - Supplemental Breast Cancer Screening with Contrast-enhanced Mammography or Abbreviated MRI for Extremely Dense Breasts: The DENSE-2 Trial (https://doi.org/10.1148/radiol.260333)",
+    "Saha et al. - Radiology - 2026 - Artificial Intelligence for Prostate Cancer Detection and Screening on MRI in Global Populations: The SCARLET-1 Study (https://doi.org/10.1148/radiol.262081)",
+    "Ding et al. - Radiology - 2026 - Perfusion beyond Margin in Hepatocellular Carcinoma: A Contrast-enhanced US Feature Related to Tumor Invasiveness and Prognosis (https://doi.org/10.1148/radiol.260918)",
+    "Frank et al. - J Am Med Inform Assoc - 2026 - Transparency features alone are insufficient for trust calibration in artificial intelligence diagnostic support (https://doi.org/10.1093/jamia/ocag176)",
+    "Zhang et al. - Radiology - 2026 - Myocardial T1 Mapping at 3 T: A Comparison of MOLLI and ShMOLLI across Healthy Volunteers and Various Cardiovascular Pathologies (https://doi.org/10.1148/radiol.252886)"
+  ],
+  "topic": "Signal in the Scan - week of 2026/10/17",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1120
+}
