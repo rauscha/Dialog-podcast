@@ -1,0 +1,204 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261019_050158_mfm_rounds_-_week_of_2026_10_19.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: What This Week's Lead Paper Changes"
+    },
+    {
+      "start_sec": 47.2,
+      "start_time": "0:47",
+      "title": "\u2014 Headline: The Clinical Question and Why It Needs a Sham Control"
+    },
+    {
+      "start_sec": 94.41,
+      "start_time": "1:34",
+      "title": "\u2014 Headline: The Effect, the Numbers, and the Mechanistic Gap"
+    },
+    {
+      "start_sec": 141.61,
+      "start_time": "2:22",
+      "title": "\u2014 Headline: What Actually Changes in Practice"
+    },
+    {
+      "start_sec": 188.82,
+      "start_time": "3:09",
+      "title": "\u2014 Pivot and Round 1: Gulersen \u2014 Steroid Threshold"
+    },
+    {
+      "start_sec": 236.02,
+      "start_time": "3:56",
+      "title": "\u2014 Round 2: Komargodski \u2014 ADHD Medications in Pregnancy"
+    },
+    {
+      "start_sec": 283.23,
+      "start_time": "4:43",
+      "title": "\u2014 Round 3: Rao \u2014 Transabdominal Cerclage Indications"
+    },
+    {
+      "start_sec": 330.43,
+      "start_time": "5:30",
+      "title": "\u2014 Round 4: Foo \u2014 Preeclampsia Cardiovascular Phenotyping"
+    },
+    {
+      "start_sec": 377.64,
+      "start_time": "6:18",
+      "title": "\u2014 Close: What to Watch, What Is Still Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261019_050158_mfm_rounds_-_week_of_2026_10_19.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261019_050158_mfm_rounds_-_week_of_2026_10_19.companion.json",
+  "duration_sec": 469.843968,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First multicenter double-blind RCT showing LIPUS accelerates postpartum uterine involution and reduces complications versus sham",
+      "source": "Ultrasound Obstet Gynecol",
+      "title": "Low-intensity pulsed ultrasound to facilitate uterine involution: prospective multicenter study on clinical efficacy and mechanistic insights",
+      "url": "https://doi.org/10.1002/uog.70330"
+    },
+    {
+      "reason": "Proposes an evidence-based threshold to rationalize steroid administration and reduce unnecessary fetal exposure",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Changing practice: establishing a preterm birth risk threshold to guide antenatal corticosteroid administration",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102149"
+    },
+    {
+      "reason": "Quantifies associations between prenatal ADHD medication exposure and adverse pregnancy outcomes for counseling",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Pregnancy and Offspring Outcomes After Prenatal Stimulant or Atomoxetine Exposure: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102165"
+    },
+    {
+      "reason": "Clarifies precise indications for TAC with RCT-level support for recurrent sPTB under 28 weeks after failed TVC",
+      "source": "Am J Obstet Gynecol MFM",
+      "title": "Transabdominal Cerclage: Who, When, How",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102161"
+    },
+    {
+      "reason": "RCOG guideline-level synthesis supporting cardiovascular phenotype-guided antihypertensive therapy in preeclampsia",
+      "source": "BJOG",
+      "title": "Pre-Eclampsia and Maternal Cardiovascular Function: Insights Into Pathophysiology and Care (Scientific Impact Paper No. 79)",
+      "url": "https://doi.org/10.1111/1471-0528.70275"
+    }
+  ],
+  "generated_at": "2026-10-19T10:09:18.445857+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Low-intensity pulsed ultrasound applied postpartum accelerates uterine involution and reduces postpartum complications compared to sham treatment",
+      "confidence": "high",
+      "id": "liu2026",
+      "source_ids": [
+        "liu2026"
+      ]
+    },
+    {
+      "claim": "An evidence-based preterm birth risk threshold can rationalize which patients should receive antenatal corticosteroids",
+      "confidence": "medium",
+      "id": "gulersen2026",
+      "source_ids": [
+        "gulersen2026"
+      ]
+    },
+    {
+      "claim": "Prenatal ADHD stimulant or atomoxetine exposure is associated with increased preterm birth, low birthweight, and possible congenital anomaly risk; neurodevelopmental signals are modest",
+      "confidence": "medium",
+      "id": "komargodski2026",
+      "source_ids": [
+        "komargodski2026"
+      ]
+    },
+    {
+      "claim": "Transabdominal cerclage is supported by RCT-level evidence specifically for recurrent spontaneous preterm birth before 28 weeks after failed transvaginal cerclage",
+      "confidence": "high",
+      "id": "rao2026",
+      "source_ids": [
+        "rao2026"
+      ]
+    },
+    {
+      "claim": "Maternal cardiovascular phenotyping in preeclampsia can guide individualized antihypertensive therapy selection",
+      "confidence": "medium",
+      "id": "foo2026",
+      "source_ids": [
+        "foo2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Liu",
+      "id": "liu2026",
+      "publication": "Ultrasound Obstet Gynecol",
+      "title": "Low-intensity pulsed ultrasound to facilitate uterine involution: prospective multicenter study on clinical efficacy and mechanistic insights",
+      "url": "https://doi.org/10.1002/uog.70330",
+      "why_it_matters": "First multicenter double-blind RCT showing LIPUS accelerates postpartum uterine involution and reduces complications versus sham",
+      "year": 2026
+    },
+    {
+      "author": "Gulersen",
+      "id": "gulersen2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Changing practice: establishing a preterm birth risk threshold to guide antenatal corticosteroid administration",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102149",
+      "why_it_matters": "Proposes an evidence-based threshold to rationalize steroid administration and reduce unnecessary fetal exposure",
+      "year": 2026
+    },
+    {
+      "author": "Komargodski",
+      "id": "komargodski2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Pregnancy and Offspring Outcomes After Prenatal Stimulant or Atomoxetine Exposure: A Systematic Review and Meta-analysis",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102165",
+      "why_it_matters": "Quantifies associations between prenatal ADHD medication exposure and adverse pregnancy outcomes for counseling",
+      "year": 2026
+    },
+    {
+      "author": "Rao",
+      "id": "rao2026",
+      "publication": "Am J Obstet Gynecol MFM",
+      "title": "Transabdominal Cerclage: Who, When, How",
+      "url": "https://doi.org/10.1016/j.ajogmf.2026.102161",
+      "why_it_matters": "Clarifies precise indications for TAC with RCT-level support for recurrent sPTB under 28 weeks after failed TVC",
+      "year": 2026
+    },
+    {
+      "author": "Foo",
+      "id": "foo2026",
+      "publication": "BJOG",
+      "title": "Pre-Eclampsia and Maternal Cardiovascular Function: Insights Into Pathophysiology and Care (Scientific Impact Paper No. 79)",
+      "url": "https://doi.org/10.1111/1471-0528.70275",
+      "why_it_matters": "RCOG guideline-level synthesis supporting cardiovascular phenotype-guided antihypertensive therapy in preeclampsia",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Liu et al. - Ultrasound Obstet Gynecol - 2026 - Low-intensity pulsed ultrasound to facilitate uterine involution: prospective multicenter study on clinical efficacy and mechanistic insights (https://doi.org/10.1002/uog.70330)",
+    "Gulersen et al. - Am J Obstet Gynecol MFM - 2026 - Changing practice: establishing a preterm birth risk threshold to guide antenatal corticosteroid administration (https://doi.org/10.1016/j.ajogmf.2026.102149)",
+    "Komargodski et al. - Am J Obstet Gynecol MFM - 2026 - Pregnancy and Offspring Outcomes After Prenatal Stimulant or Atomoxetine Exposure: A Systematic Review and Meta-analysis (https://doi.org/10.1016/j.ajogmf.2026.102165)",
+    "Rao et al. - Am J Obstet Gynecol MFM - 2026 - Transabdominal Cerclage: Who, When, How (https://doi.org/10.1016/j.ajogmf.2026.102161)",
+    "Foo et al. - BJOG - 2026 - Pre-Eclampsia and Maternal Cardiovascular Function: Insights Into Pathophysiology and Care (Scientific Impact Paper No. 79) (https://doi.org/10.1111/1471-0528.70275)"
+  ],
+  "topic": "MFM Rounds - week of 2026/10/19",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1099
+}
