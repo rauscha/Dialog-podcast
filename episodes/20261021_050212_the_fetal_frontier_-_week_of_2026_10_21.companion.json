@@ -1,0 +1,209 @@
+{
+  "audio_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261021_050212_the_fetal_frontier_-_week_of_2026_10_21.mp3",
+  "chapters": [
+    {
+      "start_sec": 0.0,
+      "start_time": "0:00",
+      "title": "\u2014 Cold Open: The Clinical Question"
+    },
+    {
+      "start_sec": 45.13,
+      "start_time": "0:45",
+      "title": "\u2014 Headline: Citation and Design"
+    },
+    {
+      "start_sec": 90.26,
+      "start_time": "1:30",
+      "title": "\u2014 Headline: Effect Size and Target Population"
+    },
+    {
+      "start_sec": 135.39,
+      "start_time": "2:15",
+      "title": "\u2014 Headline: Caveats and Evidence Ceiling"
+    },
+    {
+      "start_sec": 180.52,
+      "start_time": "3:01",
+      "title": "\u2014 Headline: Practice Impact and What to Watch"
+    },
+    {
+      "start_sec": 225.65,
+      "start_time": "3:46",
+      "title": "\u2014 Rounds: Cruz-Mart\u00ednez (BPS Laser Ablation)"
+    },
+    {
+      "start_sec": 270.78,
+      "start_time": "4:31",
+      "title": "\u2014 Rounds: Leonidou (Hemoglobinopathy NIPD)"
+    },
+    {
+      "start_sec": 315.91,
+      "start_time": "5:16",
+      "title": "\u2014 Rounds: Vaik\u00fcll (Fetal-Fraction Enrichment for CNV Detection)"
+    },
+    {
+      "start_sec": 361.04,
+      "start_time": "6:01",
+      "title": "\u2014 Rounds: Houri (Post-Fetoscopy PPROM Resistance Profiles)"
+    },
+    {
+      "start_sec": 406.17,
+      "start_time": "6:46",
+      "title": "\u2014 Close: What to Watch and What Remains Unsettled"
+    }
+  ],
+  "chapters_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261021_050212_the_fetal_frontier_-_week_of_2026_10_21.chapters.json",
+  "companion_url": "https://rauscha.github.io/Dialog-podcast/episodes/20261021_050212_the_fetal_frontier_-_week_of_2026_10_21.companion.json",
+  "duration_sec": 496.302789,
+  "episode_type": "digest",
+  "episode_type_label": "Journal Digest",
+  "follow_up_links": [
+    {
+      "reason": "First large blinded prospective comparison showing cfDNA exome sequencing approaches amniocentesis accuracy for both chromosomal and monogenic disorders",
+      "source": "Prenat Diagn",
+      "title": "Extended Non-Invasive Prenatal Testing for Chromosomal and Monogenic Disorders by Cell-Free DNA Sequencing: A Blinded Comparison With Amniocentesis",
+      "url": "https://doi.org/10.1002/pd.70285"
+    },
+    {
+      "reason": "Largest standardized prospective cohort for fetal BPS laser ablation; 96.6% survival with minimal postnatal morbidity",
+      "source": "Prenat Diagn",
+      "title": "Standardized Technique for Full Laser Ablation of Feeding Artery in Fetuses With Bronchopulmonary Sequestration and Large Pleural Effusion",
+      "url": "https://doi.org/10.1002/pd.70273"
+    },
+    {
+      "reason": "Practical synthesis of NIPD methods for sickle cell and thalassemia, mapping implementation pathway for high-prevalence settings",
+      "source": "Prenat Diagn",
+      "title": "Non-Invasive Prenatal Diagnosis of Haemoglobinopathies: From Concept to Clinical Reality",
+      "url": "https://doi.org/10.1002/pd.70279"
+    },
+    {
+      "reason": "Demonstrates fetal-fraction enrichment enables reliable CNV detection down to ~1 Mb across BMI groups in large real-world cohort",
+      "source": "Prenat Diagn",
+      "title": "Genome-Wide NIPT With Fetal-Fraction Enrichment and BinDel: Clinical Cohort Evaluation of Microdeletion and -Duplication Detection",
+      "url": "https://doi.org/10.1002/pd.70286"
+    },
+    {
+      "reason": "Reveals distinct resistance patterns after fetoscopic procedures, informing empiric antibiotic selection post-fetal surgery",
+      "source": "Prenat Diagn",
+      "title": "Microbial Culture Profiles Following Fetal Surgery Versus Spontaneous Preterm Prelabor Rupture of Membranes in Multifetal Gestations",
+      "url": "https://doi.org/10.1002/pd.70283"
+    }
+  ],
+  "generated_at": "2026-10-21T10:10:02.607958+00:00",
+  "guest_hosts": [],
+  "key_claims": [
+    {
+      "claim": "Integrated cfDNA exome sequencing achieved approximately 99% sensitivity and specificity compared to amniocentesis for detecting both chromosomal abnormalities and monogenic disorders in a blinded prospective study of 612 pregnancies.",
+      "confidence": "medium",
+      "id": "claim1",
+      "source_ids": [
+        "mesoraca2026"
+      ]
+    },
+    {
+      "claim": "Standardized laser coagulation of the feeding artery in fetal bronchopulmonary sequestration with large pleural effusion yielded 96.6% survival with minimal respiratory morbidity and near-elimination of postnatal resection over 14 years.",
+      "confidence": "medium",
+      "id": "claim2",
+      "source_ids": [
+        "cruzmartinez2026"
+      ]
+    },
+    {
+      "claim": "Non-invasive prenatal diagnosis for hemoglobinopathies using relative haplotype dosage and relative mutation dosage methods is transitioning from research validation to clinical implementation.",
+      "confidence": "low",
+      "id": "claim3",
+      "source_ids": [
+        "leonidou2026"
+      ]
+    },
+    {
+      "claim": "Fetal-fraction enrichment increased mean fetal fraction 2.4-fold, enabling genome-wide NIPT to reliably detect copy number variants down to approximately 1 Mb across all BMI categories in over 10,500 singleton pregnancies.",
+      "confidence": "medium",
+      "id": "claim4",
+      "source_ids": [
+        "vaikull2026"
+      ]
+    },
+    {
+      "claim": "Preterm prelabor rupture of membranes following fetoscopic laser or selective fetal reduction in multifetal gestations carries higher positive culture rates and greater ampicillin and macrolide resistance than spontaneous PPROM.",
+      "confidence": "medium",
+      "id": "claim5",
+      "source_ids": [
+        "houri2026"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_cards": [
+    {
+      "author": "Mesoraca",
+      "id": "mesoraca2026",
+      "publication": "Prenat Diagn",
+      "title": "Extended Non-Invasive Prenatal Testing for Chromosomal and Monogenic Disorders by Cell-Free DNA Sequencing: A Blinded Comparison With Amniocentesis",
+      "url": "https://doi.org/10.1002/pd.70285",
+      "why_it_matters": "First large blinded prospective comparison showing cfDNA exome sequencing approaches amniocentesis accuracy for both chromosomal and monogenic disorders",
+      "year": 2026
+    },
+    {
+      "author": "Cruz-Mart\u00ednez",
+      "id": "cruzmartinez2026",
+      "publication": "Prenat Diagn",
+      "title": "Standardized Technique for Full Laser Ablation of Feeding Artery in Fetuses With Bronchopulmonary Sequestration and Large Pleural Effusion",
+      "url": "https://doi.org/10.1002/pd.70273",
+      "why_it_matters": "Largest standardized prospective cohort for fetal BPS laser ablation; 96.6% survival with minimal postnatal morbidity",
+      "year": 2026
+    },
+    {
+      "author": "Leonidou",
+      "id": "leonidou2026",
+      "publication": "Prenat Diagn",
+      "title": "Non-Invasive Prenatal Diagnosis of Haemoglobinopathies: From Concept to Clinical Reality",
+      "url": "https://doi.org/10.1002/pd.70279",
+      "why_it_matters": "Practical synthesis of NIPD methods for sickle cell and thalassemia, mapping implementation pathway for high-prevalence settings",
+      "year": 2026
+    },
+    {
+      "author": "Vaik\u00fcll",
+      "id": "vaikull2026",
+      "publication": "Prenat Diagn",
+      "title": "Genome-Wide NIPT With Fetal-Fraction Enrichment and BinDel: Clinical Cohort Evaluation of Microdeletion and -Duplication Detection",
+      "url": "https://doi.org/10.1002/pd.70286",
+      "why_it_matters": "Demonstrates fetal-fraction enrichment enables reliable CNV detection down to ~1 Mb across BMI groups in large real-world cohort",
+      "year": 2026
+    },
+    {
+      "author": "Houri",
+      "id": "houri2026",
+      "publication": "Prenat Diagn",
+      "title": "Microbial Culture Profiles Following Fetal Surgery Versus Spontaneous Preterm Prelabor Rupture of Membranes in Multifetal Gestations",
+      "url": "https://doi.org/10.1002/pd.70283",
+      "why_it_matters": "Reveals distinct resistance patterns after fetoscopic procedures, informing empiric antibiotic selection post-fetal surgery",
+      "year": 2026
+    }
+  ],
+  "sources": [
+    "Mesoraca et al. - Prenat Diagn - 2026 - Extended Non-Invasive Prenatal Testing for Chromosomal and Monogenic Disorders by Cell-Free DNA Sequencing: A Blinded Comparison With Amniocentesis (https://doi.org/10.1002/pd.70285)",
+    "Cruz-Mart\u00ednez et al. - Prenat Diagn - 2026 - Standardized Technique for Full Laser Ablation of Feeding Artery in Fetuses With Bronchopulmonary Sequestration and Large Pleural Effusion (https://doi.org/10.1002/pd.70273)",
+    "Leonidou et al. - Prenat Diagn - 2026 - Non-Invasive Prenatal Diagnosis of Haemoglobinopathies: From Concept to Clinical Reality (https://doi.org/10.1002/pd.70279)",
+    "Vaik\u00fcll et al. - Prenat Diagn - 2026 - Genome-Wide NIPT With Fetal-Fraction Enrichment and BinDel: Clinical Cohort Evaluation of Microdeletion and -Duplication Detection (https://doi.org/10.1002/pd.70286)",
+    "Houri et al. - Prenat Diagn - 2026 - Microbial Culture Profiles Following Fetal Surgery Versus Spontaneous Preterm Prelabor Rupture of Membranes in Multifetal Gestations (https://doi.org/10.1002/pd.70283)"
+  ],
+  "topic": "The Fetal Frontier - week of 2026/10/21",
+  "tts_routes": {
+    "CASPAR": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "CASPAR"
+    },
+    "JUNO": {
+      "model": "eleven_turbo_v2",
+      "provider": "elevenlabs",
+      "similarity_boost": 0.75,
+      "stability": 0.5,
+      "voice_label": "JUNO"
+    }
+  },
+  "word_count": 1133
+}
