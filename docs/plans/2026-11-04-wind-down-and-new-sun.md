@@ -24,7 +24,24 @@ of the books, about 20 years after the first.** What follows from that:
 - **Length: 25–30 minutes**, for 20–40 minute drives. That makes roughly 20 episodes across the
   four books, about five per volume.
 - **Digests: stop all three.** Phase 1 goes ahead as written; mark each feed complete.
-- **Hosts: Juno and Caspar.**
+- **Hosts: Juno and Caspar, with two new voices** (Andrew, 2026-11-04: no ElevenLabs credits until
+  they're chosen). Shortlist from the ElevenLabs library, picked by description and popularity.
+  Neither is applied to `config.json` yet:
+  - Juno: **Claudette, Chill and Smooth Podcast Host** (`h4gYnmFGJDsuTFS1LX7D`), a medium-low, warm,
+    mature American voice described as "never overly polished or announcer-like". Alternate:
+    **Eliza, Conversational Podcast Host** (`ut2XM2wJyIZLTtW6lFzZ`).
+  - Caspar: **Oliver, British Podcast Narrator** (`rduzwhyZDdtuFPq1Z1mL`), a relaxed mid-40s British
+    podcast host, "friendly and engaging without being over-energetic". The accent contrast with
+    Juno helps an ear-only listener tell the hosts apart. Alternates: **Nate, Warm, Relaxed and
+    Natural** (`R0NHZSY77YjjG5oXHqmE`, American) and **Edmund, British Podcast Host**
+    (`bDTlr4ICxntY9qVWyL0o`).
+  - Narrator voices (audiobook readers) were passed over: they're trained on read prose and tend
+    to sound like it in back-and-forth.
+  - The model matters as much as the voice. `config.json` still uses `eleven_turbo_v2`, the
+    oldest and flattest option. Try the new voices on `eleven_v3` before judging them.
+- **Script generator:** `book_study.py` (brief, checked "what this sets up" notes, script,
+  text-check, guide). Its first run failed on 2026-11-04 because tikiserv's Anthropic API key was
+  rejected (401), so the pilot copy was written in-session instead.
 - **Name: *Ultan's Library*,** after the blind master librarian of the Citadel, whose stacks
   Severian walks in the first volume to fetch books for Thecla. Andrew asked for a name that
   points to archives or a *-nomicon*. The fallback, if he prefers the second, is *The Urthonomicon*.

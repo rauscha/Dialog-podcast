@@ -1,0 +1,333 @@
+#!/usr/bin/env python3
+"""Ultan's Library: write one Book of the New Sun study episode (text only).
+
+Reads books/new-sun/chapters.json (made by scripts/ingest_new_sun.py) and writes,
+under books/ultans-library/epNN/ (gitignored, like the book text):
+
+  brief.json   chapter summaries, who's who, glossary, quotes, discussion seeds
+  tail.json    "what this sets up" notes, each checked against later chapters
+  script.txt   the dialogue, in the house format  SPEAKER [emotion]: text
+  check.md     the text-check report (claims the book doesn't support, misquotes)
+  guide.md     the written study guide
+
+Spoiler fence by construction: the body of the episode is written and checked
+with only the chapters read so far in context. Later chapters are used only for
+the closing "what this sets up" segment, which the script announces so the
+listener can skip it.
+
+No audio. Rendering is a separate step once the voices are chosen.
+
+    python book_study.py --episode 1 --volume 1 --chapters 1-7
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+
+import anthropic
+
+from secret_env import load_secret_env
+
+ROOT = Path(__file__).parent
+load_secret_env(ROOT)
+
+BOOK_DIR = ROOT / "books" / "new-sun"
+OUT_DIR = ROOT / "books" / "ultans-library"
+MODEL = "claude-opus-5-5"
+TAIL_MARKER = "### WHAT THIS SETS UP ###"
+WORDS_PER_MINUTE = 150
+
+_SHOW = """\
+"Ultan's Library" is a private two-host study show for one listener: Andrew, a
+physician and musician, rereading Gene Wolfe's The Book of the New Sun for the
+first time in about twenty years. He listens in the car, so everything must work
+by ear alone: no "as you can see", no lists read aloud, names said clearly and
+re-anchored ("Thecla, the exultant prisoner"), chapter titles spoken so he can
+find his place. He remembers the shape of the books, not the details.
+
+The hosts:
+- JUNO: artistic, literary. She hears the prose: Wolfe's rare words, Severian's
+  claim of perfect memory and what he chooses not to tell, the religious and
+  mythic undertow, the way scenes rhyme. Warm, quick, delighted by a sentence.
+- CASPAR: scientific, dry, a careful reader. He notices the far-future science
+  fiction hiding under the fantasy furniture, keeps track of what the text
+  actually says versus what the reader assumes, and asks "how do we know that?"
+  Measured, with dry wit. He is the one who says "let's look at what's on the page."
+
+The register is a good seminar between two people who love the book, not a
+lecture and not a fan podcast. They disagree sometimes and leave some questions
+open. Every interpretive claim is marked by how strong it is: what the text
+says, a strong reading, or a theory readers argue about."""
+
+
+def load_chapters(volume: int) -> list[dict]:
+    data = json.loads((BOOK_DIR / "chapters.json").read_text(encoding="utf-8"))
+    return [c for c in data if c["volume"] == volume and isinstance(c["chapter"], int)]
+
+
+def chapter_block(chapters: list[dict]) -> str:
+    return "\n\n".join(
+        f"=== {c['volume_title']}, Chapter {c['chapter']}: {c['title']} ===\n\n{c['text']}"
+        for c in chapters
+    )
+
+
+def ask(client: anthropic.Anthropic, system: str, book_text: str, prompt: str,
+        effort: str = "high") -> str:
+    """One streamed call with the book text as a cached first block."""
+    with client.beta.messages.stream(
+        model=MODEL,
+        max_tokens=64000,
+        betas=["server-side-fallback-2026-07-01"],
+        extra_body={"fallbacks": "default"},
+        output_config={"effort": effort},
+        system=system,
+        messages=[{
+            "role": "user",
+            "content": [
+                {"type": "text", "text": book_text, "cache_control": {"type": "ephemeral"}},
+                {"type": "text", "text": prompt},
+            ],
+        }],
+    ) as stream:
+        msg = stream.get_final_message()
+    if msg.stop_reason == "refusal":
+        raise RuntimeError(f"model declined: {msg.stop_details}")
+    if msg.stop_reason == "max_tokens":
+        raise RuntimeError("hit max_tokens; output truncated")
+    u = msg.usage
+    print(f"    tokens in {u.input_tokens} (+{u.cache_read_input_tokens or 0} cached) "
+          f"out {u.output_tokens}", flush=True)
+    return "".join(b.text for b in msg.content if b.type == "text").strip()
+
+
+def parse_json(text: str):
+    m = re.search(r"```(?:json)?\s*(.*?)```", text, re.S)
+    return json.loads(m.group(1) if m else text)
+
+
+_BRIEF_PROMPT = """\
+These are chapters {first}-{last} of {volume}, the part Andrew has just read.
+Using ONLY this text, write a study brief as JSON (no commentary) with:
+
+{{
+ "chapters": [{{"chapter": n, "title": "...", "summary": "4-6 sentences of what happens"}}],
+ "who_is_who": [{{"name": "...", "how_to_say_it": "...", "who": "one line, as of this point"}}],
+ "glossary": [{{"word": "...", "how_to_say_it": "...", "meaning": "what it means here, and the real
+   archaic or technical word Wolfe took it from, if he did", "chapter": n}}],
+ "quotes": [{{"chapter": n, "text": "exact words from the text, at most 40", "why": "..."}}],
+ "threads": ["questions, images and patterns worth discussing, grounded in these chapters"],
+ "watch_for": ["things to keep an eye on in the next chapters, phrased so they spoil nothing"]
+}}
+
+10-15 glossary words, 6-10 quotes copied exactly, 8-12 threads, 4-6 watch_for.
+Nothing from later in the books, not even hints of it."""
+
+_TAIL_PROMPT = """\
+These are chapters {first}-{last} of {volume}. You also know the whole tetralogy.
+For the closing, skippable segment of the episode, list 4-6 things in these
+chapters that pay off later in The Book of the New Sun (all four volumes; not
+The Urth of the New Sun). For each, say where the payoff is and give words that
+appear in that later passage so it can be found in the text.
+
+JSON only:
+[{{"setup": "what happens or is said in these chapters",
+   "payoff": "what it turns out to mean later",
+   "volume": 1-4, "chapter_guess": n, "search_terms": ["2-4 distinctive words"]}}]"""
+
+_TAIL_CHECK_PROMPT = """\
+Below are "what this sets up" notes for a study episode, each followed by passages
+retrieved from the book where the payoff is said to be. For each note: keep it if
+the passages support it, correct it if they support a different version, and drop
+it if nothing supports it. Distinguish what the text says from interpretation.
+
+JSON only: [{{"setup": "...", "payoff": "...", "where": "Volume, chapter n: title",
+"strength": "the text says | strong reading | reader theory", "verdict": "kept | corrected | dropped",
+"note": "why"}}]
+
+{notes}"""
+
+_SCRIPT_PROMPT = """\
+These are chapters {first}-{last} of {volume}. Write episode {episode} of Ultan's
+Library covering them.
+
+Study brief (from these chapters only):
+{brief}
+
+Checked notes for the closing segment:
+{tail}
+
+Shape:
+1. Open by orienting the listener: what book and chapters this is, where Severian
+   is, and (episode 1 only) what kind of book this is and who is telling it.
+2. The body: three or four movements built around the strongest threads, not a
+   chapter-by-chapter recap. Walk through what happens as you go, so he can follow
+   even if his memory is hazy. Speak chapter titles at least once. Gloss rare
+   words in passing, by ear. Quote the text a few times, briefly and exactly.
+   Leave at least one question genuinely open between them.
+3. Close the body with two or three questions to think about on the next drive.
+4. Then a line on its own, exactly: {marker}
+5. The skippable segment: one host says plainly that what follows draws on the
+   rest of the books, so this is the place to stop if he wants it fresh. Then
+   the checked setups and payoffs, with how sure each one is. Short.
+6. A brief sign-off naming the chapters for next time if known.
+
+Rules:
+- The body uses ONLY what is in these chapters. Nothing from later books, no
+  winks at what is coming. Everything later lives after the marker.
+- Every line: SPEAKER [emotion]: text, with SPEAKER either JUNO or CASPAR and a
+  2-4 word delivery note in the brackets. No headers, no stage directions, no
+  bullet points, nothing that isn't spoken except the marker line.
+- Interruptions with em dashes. They build on each other; no trading monologues.
+- About {words} words in all, about {tail_words} of them after the marker.
+- Plain spoken English. No sourcing of the "sources for today's episode" kind."""
+
+_CHECK_PROMPT = """\
+These are chapters {first}-{last} of {volume}. Below is the body of a study-episode
+script about them. Check every claim about the book against this text only.
+
+Report as JSON:
+{{"issues": [{{"line": "the script line, abridged", "problem": "unsupported | contradicted |
+  misquote | beyond these chapters | mispronunciation guide wrong", "detail": "...",
+  "fix": "the corrected line, in the same SPEAKER [emotion]: text format, or empty to delete"}}],
+ "verdict": "one sentence"}}
+
+Interpretation is fine when it is presented as interpretation. Flag interpretation
+stated as fact. A quote must match the text word for word.
+
+SCRIPT BODY:
+{body}"""
+
+
+def retrieve(volume: int, terms: list[str], limit: int = 3) -> list[str]:
+    chapters = load_chapters(volume)
+    scored = []
+    for c in chapters:
+        for para in c["text"].split("\n\n"):
+            low = para.lower()
+            hits = sum(1 for t in terms if t.lower() in low)
+            if hits:
+                scored.append((hits, f"[{c['volume_title']}, ch. {c['chapter']}: {c['title']}] {para}"))
+    scored.sort(key=lambda x: -x[0])
+    return [p[:1500] for _, p in scored[:limit]]
+
+
+def apply_fixes(body: str, issues: list[dict]) -> tuple[str, int]:
+    lines = body.splitlines()
+    applied = 0
+    for issue in issues:
+        target = issue.get("line", "").strip().rstrip(".…")
+        if not target:
+            continue
+        probe = target[:60]
+        for i, ln in enumerate(lines):
+            if probe and probe in ln:
+                lines[i] = issue.get("fix", "").strip()
+                applied += 1
+                break
+    return "\n".join(lines), applied
+
+
+def render_guide(episode: int, volume_title: str, first: int, last: int, brief: dict,
+                 tail: list[dict]) -> str:
+    out = [f"# Ultan's Library, episode {episode}", "",
+           f"*{volume_title}*, chapters {first}–{last}", ""]
+    out += ["## What happens", ""]
+    for c in brief["chapters"]:
+        out += [f"**{c['chapter']}. {c['title']}.** {c['summary']}", ""]
+    out += ["## Who's who", ""]
+    out += [f"- **{p['name']}** ({p['how_to_say_it']}): {p['who']}" for p in brief["who_is_who"]] + [""]
+    out += ["## Words", ""]
+    out += [f"- **{g['word']}** ({g['how_to_say_it']}), ch. {g['chapter']}: {g['meaning']}"
+            for g in brief["glossary"]] + [""]
+    out += ["## Passages", ""]
+    out += [f"> {q['text']}\n>\n> — ch. {q['chapter']}. {q['why']}\n" for q in brief["quotes"]]
+    out += ["## To think about", ""]
+    out += [f"{i}. {t}" for i, t in enumerate(brief["threads"], 1)] + [""]
+    out += ["## Watch for", ""]
+    out += [f"- {w}" for w in brief["watch_for"]] + [""]
+    kept = [t for t in tail if t.get("verdict") != "dropped"]
+    if kept:
+        out += ["## What this sets up (spoilers for the rest of the books)", ""]
+        out += [f"- **{t['setup']}** → {t['payoff']} ({t['where']}; {t['strength']})" for t in kept]
+    return "\n".join(out) + "\n"
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--episode", type=int, required=True)
+    ap.add_argument("--volume", type=int, required=True)
+    ap.add_argument("--chapters", required=True, help="e.g. 1-7")
+    ap.add_argument("--minutes", type=int, default=27)
+    args = ap.parse_args()
+
+    first, last = (int(x) for x in args.chapters.split("-"))
+    chapters = [c for c in load_chapters(args.volume) if first <= c["chapter"] <= last]
+    if len(chapters) != last - first + 1:
+        print(f"expected {last - first + 1} chapters, found {len(chapters)}", file=sys.stderr)
+        return 1
+    volume_title = chapters[0]["volume_title"]
+    book_text = chapter_block(chapters)
+    out = OUT_DIR / f"ep{args.episode:02d}"
+    out.mkdir(parents=True, exist_ok=True)
+    fmt = dict(first=first, last=last, volume=volume_title, episode=args.episode)
+    client = anthropic.Anthropic()
+
+    print(f"[1/5] brief: {volume_title} ch. {first}-{last}, "
+          f"{sum(c['words'] for c in chapters):,} words of text", flush=True)
+    brief = parse_json(ask(client, _SHOW, book_text, _BRIEF_PROMPT.format(**fmt)))
+    (out / "brief.json").write_text(json.dumps(brief, indent=1, ensure_ascii=False))
+
+    print("[2/5] what this sets up: draft, then check against later chapters", flush=True)
+    notes = parse_json(ask(client, _SHOW, book_text, _TAIL_PROMPT.format(**fmt)))
+    blocks = []
+    for n in notes:
+        passages = retrieve(int(n["volume"]), n.get("search_terms", []))
+        blocks.append(json.dumps({k: n[k] for k in ("setup", "payoff", "volume", "chapter_guess")})
+                      + "\nPASSAGES:\n" + ("\n---\n".join(passages) or "(none found)"))
+    tail = parse_json(ask(client, _SHOW, book_text,
+                          _TAIL_CHECK_PROMPT.format(notes="\n\n=====\n\n".join(blocks))))
+    (out / "tail.json").write_text(json.dumps(tail, indent=1, ensure_ascii=False))
+    kept = [t for t in tail if t.get("verdict") != "dropped"]
+    print(f"    {len(kept)} of {len(tail)} notes kept", flush=True)
+
+    words = args.minutes * WORDS_PER_MINUTE
+    print(f"[3/5] script: about {words:,} words ({args.minutes} min)", flush=True)
+    script = ask(client, _SHOW, book_text, _SCRIPT_PROMPT.format(
+        **fmt, brief=json.dumps(brief, ensure_ascii=False), tail=json.dumps(kept, ensure_ascii=False),
+        marker=TAIL_MARKER, words=words, tail_words=words // 7))
+    (out / "script.draft.txt").write_text(script + "\n")
+    if TAIL_MARKER not in script:
+        print("    warning: no tail marker in the script", flush=True)
+    body, _, tail_text = script.partition(TAIL_MARKER)
+
+    print("[4/5] text-check the body against these chapters only", flush=True)
+    report = parse_json(ask(client, _SHOW, book_text, _CHECK_PROMPT.format(**fmt, body=body)))
+    issues = report.get("issues", [])
+    body, applied = apply_fixes(body, issues)
+    final = body.rstrip() + ("\n\n" + TAIL_MARKER + tail_text if tail_text else "")
+    final = re.sub(r"\n{3,}", "\n\n", final)
+    (out / "script.txt").write_text(final.strip() + "\n")
+    lines = [f"# Text-check, episode {args.episode}", "", report.get("verdict", ""), "",
+             f"{len(issues)} issues, {applied} fixes applied to script.txt "
+             f"(the draft is in script.draft.txt).", ""]
+    for i in issues:
+        lines += [f"- **{i.get('problem')}**: {i.get('line')}", f"  - {i.get('detail')}",
+                  f"  - fix: {i.get('fix') or '(line deleted)'}"]
+    (out / "check.md").write_text("\n".join(lines) + "\n")
+
+    print("[5/5] study guide", flush=True)
+    (out / "guide.md").write_text(render_guide(args.episode, volume_title, first, last, brief, tail))
+
+    spoken = sum(len(re.sub(r"^\w+\s*\[[^\]]*\]\s*:", "", ln).split())
+                 for ln in final.splitlines() if ":" in ln)
+    print(f"done: {spoken:,} spoken words, about {spoken / WORDS_PER_MINUTE:.0f} min -> {out}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
