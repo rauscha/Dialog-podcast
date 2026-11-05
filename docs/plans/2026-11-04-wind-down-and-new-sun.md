@@ -24,6 +24,17 @@ of the books, about 20 years after the first.** What follows from that:
 - **Length: 25–30 minutes**, for 20–40 minute drives. That makes roughly 20 episodes across the
   four books, about five per volume.
 - **Digests: stop all three.** Phase 1 goes ahead as written; mark each feed complete.
+- **Hosts: Juno and Caspar.**
+- **Name: *Ultan's Library*,** after the blind master librarian of the Citadel, whose stacks
+  Severian walks in the first volume to fetch books for Thecla. Andrew asked for a name that
+  points to archives or a *-nomicon*. The fallback, if he prefers the second, is *The Urthonomicon*.
+- **Text in hand (2026-11-04):** four EPUBs, split by `scripts/ingest_new_sun.py` into
+  `books/new-sun/chapters.json` (gitignored). 35 + 31 + 38 + 38 = **142 chapters, about 389,000
+  words**, plus Wolfe's appendices for the first three volumes. At about 20 episodes that is
+  roughly 7 chapters (19,000 words) per episode, which fits in one model context. *Shadow* is a
+  PDF conversion: paragraph breaks are lost, and each chapter's first line has its words run
+  together where the drop cap was. It's good enough for grounding, but weak for checking exact
+  quotes. A cleaner *Shadow* EPUB would help, since the pilot comes from that volume.
 
 ---
 
@@ -53,18 +64,18 @@ of the books, about 20 years after the first.** What follows from that:
 
 ## Phase 1 — Wind down the digests (small; can happen now)
 
-1. **Stop the schedule, reversibly.** On crane-desk (Andrew, or a fixer-agent task when it's
+1. **Stop the schedule, reversibly.** *(Still to do on crane-desk; it was offline 2026-11-04.)* On crane-desk (Andrew, or a fixer-agent task when it's
    online):
    `Disable-ScheduledTask -TaskName "Dialog-podcast-daily-digests"`
    Disable rather than unregister, so `Enable-ScheduledTask` brings it back.
-2. **Add a code-side switch as a backstop:** `"active": false` per show in `digests.json`, checked
+2. **Done 2026-11-04 (`11b39d3`).** Code-side switch as a backstop: `"active": false` per show in `digests.json`, checked
    first in `_show_is_due` (inactive → not due, unless `--force`). This records the decision in the
    repo and keeps a stray manual `--digest-all` from publishing. It needs a `git pull` on
    crane-desk to take effect there. Small change, with one unit test in the style of the existing
    `today=` checks.
 3. **Keep on-demand.** The Telegram bot's `/digest <show>` path keeps working for a one-off
    (with `--force`).
-4. **Leave the feeds up.** Subscribers keep the back catalog. If a show is ending for good, add
+4. **Done 2026-11-04: all three feeds marked complete.** Leave the feeds up. Subscribers keep the back catalog. If a show is ending for good, add
    `<itunes:complete>Yes</itunes:complete>` to its channel so apps stop expecting new episodes.
    Skip that for any show that might come back.
 5. **Optional, separate repo:** mark the three cards on `andrewrausch.com/apps.html` as archived.
@@ -149,8 +160,8 @@ no spending on weeks he doesn't read.
 4. ~~Wind-down scope~~ **Answered:** stop all three.
 5. **The text:** is there an EPUB of his own to ground it? Which edition (omnibus *Shadow & Claw* /
    *Sword & Citadel*, or the four single volumes)? Chapter breaks drive the unit plan.
-6. **Hosts:** Juno (artistic) and Caspar (scientific) fit well. Juno takes the prose, memory and
+6. ~~Hosts~~ **Answered:** Juno and Caspar. (Original note: Juno (artistic) and Caspar (scientific) fit well. Juno takes the prose, memory and
    religion; Caspar takes the dying-sun science fiction hiding under the fantasy. Or new voices for
-   a new show?
-7. **Name:** working title only. Candidates: *Fuligin* (the guild's color "darker than black"),
+   a new show?)
+7. ~~Name~~ **Answered:** *Ultan's Library* (see above). Earlier candidates: Candidates: *Fuligin* (the guild's color "darker than black"),
    *The Matachin Tower*, *Severian Remembers*.
