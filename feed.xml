@@ -447,5 +447,17 @@ The bullet stops. The crowd sees it. And then t...<br><br><em>Juno, Caspar, and 
       <itunes:explicit>false</itunes:explicit>
       <podcast:chapters url="https://rauscha.github.io/Dialog-podcast/episodes/20260806_064957_let_s_keep_diving_into_the_lore_of_the_world_of_darkness_thi.chapters.json" type="application/json+chapters"/>
     </item>
+      <item>
+      <title>Ultan's Library 1: The Locked Gate</title>
+      <description><![CDATA[<strong>Ultan's Library, session 1: The Locked Gate.</strong> The first episode of a course-style reread of Gene Wolfe's <em>The Book of the New Sun</em>, covering <em>The Shadow of the Torturer</em>, chapters 1 to 7. Juno and Caspar meet the narrator before the story: an old man with a perfect memory, writing long after the night a torturer's apprentice chose a side at a cemetery gate. They follow the gold coin in his pocket, the strange ruins under the Citadel's medieval surface, and the guild that raised him.<br><br><strong>Spoilers:</strong> the main discussion stays inside chapters 1 to 7. At 25:02 a short pause marks a skippable segment on what these chapters set up later in the series, drawing on all four books.<br><br><strong>Reading alongside:</strong> Peter Wright, <em>Attending Daedalus</em>; Michael Andre-Driussi, <em>Lexicon Urthus</em> and <em>The Book of the New Sun: A Chapter Guide</em>; Neil Gaiman, "How to Read Gene Wolfe."<br><br><em>Juno and Caspar are AI-generated voices. Episode text and audio are generated with human-directed software.</em>]]></description>
+      <content:encoded><![CDATA[<strong>Ultan's Library, session 1: The Locked Gate.</strong> The first episode of a course-style reread of Gene Wolfe's <em>The Book of the New Sun</em>, covering <em>The Shadow of the Torturer</em>, chapters 1 to 7. Juno and Caspar meet the narrator before the story: an old man with a perfect memory, writing long after the night a torturer's apprentice chose a side at a cemetery gate. They follow the gold coin in his pocket, the strange ruins under the Citadel's medieval surface, and the guild that raised him.<br><br><strong>Spoilers:</strong> the main discussion stays inside chapters 1 to 7. At 25:02 a short pause marks a skippable segment on what these chapters set up later in the series, drawing on all four books.<br><br><strong>Reading alongside:</strong> Peter Wright, <em>Attending Daedalus</em>; Michael Andre-Driussi, <em>Lexicon Urthus</em> and <em>The Book of the New Sun: A Chapter Guide</em>; Neil Gaiman, "How to Read Gene Wolfe."<br><br><em>Juno and Caspar are AI-generated voices. Episode text and audio are generated with human-directed software.</em>]]></content:encoded>
+      <pubDate>Thu, 05 Nov 2026 12:57:00 +0000</pubDate>
+      <guid isPermaLink="false">34f07f2fef059ab774a34b04bd52e89fcf30e436f022f767fac7ed0c0447ea6c</guid>
+      <enclosure url="https://github.com/rauscha/Dialog-podcast/releases/download/ultans-library-01/ultans-library-01-the-locked-gate.mp3" length="49601868" type="audio/mpeg"/>
+      <itunes:duration>34:27</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+      <podcast:chapters url="https://rauscha.github.io/Dialog-podcast/episodes/ultans-library-01-the-locked-gate.chapters.json" type="application/json+chapters"/>
+    </item>
   </channel>
 </rss>
