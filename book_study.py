@@ -65,6 +65,64 @@ open. Every interpretive claim is marked by how strong it is: what the text
 says, a strong reading, or a theory readers argue about."""
 
 
+COURSE = ROOT / "docs" / "ultans-library" / "course.md"
+SOURCES = ROOT / "books" / "sources" / "text"
+
+
+def course_unit(episode: int) -> dict:
+    """This episode's unit from the course: fenced aims, payoff notes, critical frame."""
+    if not COURSE.exists():
+        return {}
+    text = COURSE.read_text(encoding="utf-8")
+    m = re.search(rf"^### Unit {episode} \u2014.*?(?=^### Unit |^## 6\.|\Z)", text, re.S | re.M)
+    if not m:
+        return {}
+    unit = m.group(0)
+    fenced, _, rest = unit.partition("**Payoff notes")
+    payoff, _, frame = rest.partition("**Critical frame:**")
+    return {"fenced": fenced.strip(), "payoff": ("**Payoff notes" + payoff).strip(),
+            "frame": frame.strip()}
+
+
+def chapter_guide(volume: int, first: int, last: int) -> str:
+    """Andre-Driussi's Chapter Guide entries for these chapters (local copy, if present)."""
+    path = SOURCES / "chapter-guide.txt"
+    if not path.exists():
+        return ""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    starts = [i for i, ln in enumerate(lines) if ln.startswith("1. ")]  # four volumes, then Urth
+    if len(starts) < volume:
+        return ""
+    lo = starts[volume - 1]
+    hi = starts[volume] if volume < len(starts) else len(lines)
+    out, keep = [], False
+    for ln in lines[lo:hi]:
+        m = re.match(r"^(\d+)\. \S", ln)
+        if m:
+            keep = first <= int(m.group(1)) <= last
+        elif ln.startswith("Appendix"):
+            keep = False
+        if keep:
+            out.append(ln)
+    return "\n".join(out)
+
+
+def lexicon(words: list[str]) -> str:
+    """Lexicon Urthus entries for these headwords (local copy, if present)."""
+    path = SOURCES / "lexicon-urthus.txt"
+    if not path.exists() or not words:
+        return ""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    out = []
+    for w in words:
+        key = w.lower().strip()
+        for i, ln in enumerate(lines):
+            if ln.lower().startswith(key + " ") or ln.lower() == key:
+                out.extend(lines[i:i + 3])
+                break
+    return "\n".join(out)
+
+
 def load_chapters(volume: int) -> list[dict]:
     data = json.loads((BOOK_DIR / "chapters.json").read_text(encoding="utf-8"))
     return [c for c in data if c["volume"] == volume and isinstance(c["chapter"], int)]
@@ -113,7 +171,16 @@ def parse_json(text: str):
 
 _BRIEF_PROMPT = """\
 These are chapters {first}-{last} of {volume}, the part Andrew has just read.
-Using ONLY this text, write a study brief as JSON (no commentary) with:
+
+This episode's unit in the course plan (teaching aims are spoiler-fenced):
+{unit}
+
+Michael Andre-Driussi's Chapter Guide notes for these chapters (a reference for
+allusions and word sources; it sometimes mentions later events, which must not
+reach the brief):
+{guide}
+
+Using ONLY the chapter text for what happens, write a study brief as JSON (no commentary) with:
 
 {{
  "chapters": [{{"chapter": n, "title": "...", "summary": "4-6 sentences of what happens"}}],
@@ -155,23 +222,37 @@ JSON only: [{{"setup": "...", "payoff": "...", "where": "Volume, chapter n: titl
 
 _SCRIPT_PROMPT = """\
 These are chapters {first}-{last} of {volume}. Write episode {episode} of Ultan's
-Library covering them.
+Library covering them. This is one session of a literature course on the whole
+book, not a recap: the episode knows what it is teaching.
+
+This episode's unit in the course plan. Its teaching aims are the spine of the
+body; its payoff notes are material for after the marker only:
+{unit}
+
+Lexicon Urthus entries for this episode's words (for glosses; say them in your
+own words):
+{lexicon}
 
 Study brief (from these chapters only):
 {brief}
 
-Checked notes for the closing segment:
+Checked notes for the closing segment (the course's payoff notes are in the
+unit above; use both, after the marker only):
 {tail}
 
 Shape:
 1. Open by orienting the listener: what book and chapters this is, where Severian
-   is, and (episode 1 only) what kind of book this is and who is telling it.
+   is, and (episode 1 only) what kind of book this is and who is telling it. Then
+   say, in a sentence or two of natural talk, what this session is about: the
+   question it will chase.
 2. The body: three or four movements built around the strongest threads, not a
    chapter-by-chapter recap. Walk through what happens as you go, so he can follow
    even if his memory is hazy. Speak chapter titles at least once. Gloss rare
    words in passing, by ear. Quote the text a few times, briefly and exactly.
    Leave at least one question genuinely open between them.
-3. Close the body with two or three questions to think about on the next drive.
+3. Close the body by saying plainly what this session taught, which threads it
+   leaves open for the course, and two or three questions for the next drive.
+   When a critic's reading helps, name the critic and label it.
 4. Then a line on its own, exactly: {marker}
 5. The skippable segment: one host says plainly that what follows draws on the
    rest of the books, so this is the place to stop if he wants it fresh. Then
@@ -335,12 +416,16 @@ def main() -> int:
     book_text = chapter_block(chapters)
     out = OUT_DIR / f"ep{args.episode:02d}"
     out.mkdir(parents=True, exist_ok=True)
+    unit = course_unit(args.episode)
+    unit_fenced = "\n\n".join(x for x in (unit.get("fenced"), unit.get("frame")) if x) or "(none)"
+    unit_all = "\n\n".join(x for x in (unit_fenced, unit.get("payoff")) if x)
     fmt = dict(first=first, last=last, volume=volume_title, episode=args.episode)
     client = anthropic.Anthropic()
 
     print(f"[1/5] brief: {volume_title} ch. {first}-{last}, "
           f"{sum(c['words'] for c in chapters):,} words of text", flush=True)
-    brief = parse_json(ask(client, _SHOW, book_text, _BRIEF_PROMPT.format(**fmt)))
+    brief = parse_json(ask(client, _SHOW, book_text, _BRIEF_PROMPT.format(
+        **fmt, unit=unit_fenced, guide=chapter_guide(args.volume, first, last) or "(none)")))
     (out / "brief.json").write_text(json.dumps(brief, indent=1, ensure_ascii=False))
 
     print("[2/5] what this sets up: draft, then check against later chapters", flush=True)
@@ -360,6 +445,7 @@ def main() -> int:
     print(f"[3/5] script: about {words:,} words ({args.minutes} min)", flush=True)
     script = ask(client, _SHOW, book_text, _SCRIPT_PROMPT.format(
         **fmt, brief=json.dumps(brief, ensure_ascii=False), tail=json.dumps(kept, ensure_ascii=False),
+        unit=unit_all, lexicon=lexicon([g["word"] for g in brief.get("glossary", [])]) or "(none)",
         marker=TAIL_MARKER, words=words))
     (out / "script.draft.txt").write_text(script + "\n")
     if TAIL_MARKER not in script:
