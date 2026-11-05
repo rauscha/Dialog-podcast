@@ -142,7 +142,23 @@ handling, and the two-host format decides Phase 3. Expect a second pilot.
    community theory* (with the source named). Models confabulate about Wolfe with total
    confidence (identities, family trees, who is who), so this stage carries the most weight in the
    whole show.
-5. **Secondary sources (to verify before relying on them):** Michael Andre-Driussi's *Lexicon
+5. **Secondary sources.** A first search was made on 2026-11-04, from search results only; nothing
+   has been read in full yet.
+   - *Books:* Michael Andre-Driussi, *Lexicon Urthus* (1994; a reference to Wolfe's words and
+     names) and *The Book of the New Sun: A Chapter Guide* (influences and allusions, chapter by
+     chapter, which matches this show's unit shape). Peter Wright, *Attending Daedalus: Gene Wolfe,
+     Artifice and the Reader* (Liverpool UP, 2003; the main academic study). Robert Borski, *Solar
+     Labyrinth*. Marc Aramini, *Between Light and Shadow* (Castalia House, 2015; 826 pages, story
+     by story; Hugo runner-up for Best Related Work). Wolfe's own *The Castle of the Otter*.
+   - *Online:* ultan.org.uk, "a web resource for the study of Gene Wolfe" and literally named
+     **Ultan's Library**, with reviews, interviews and essays. Reactor (Tor.com) essay on Severian
+     as unreliable narrator. Neil Gaiman's short essay "How to Read Gene Wolfe" (F&SF, April 2007).
+     The Urth mailing list (urth.net).
+   - *Podcast:* Alzabo Soup (Phil Armstrong and Andrew Metzroth), chapter by chapter through all
+     four books and *Urth*. A study show already exists in that form, so avoid copying its takes.
+   - *Course syllabi:* none found. The nearest is a public-library SF book club discussion guide
+     (Middletown) and an undergraduate honors thesis (Bridgewater State, via core.ac.uk).
+   Earlier note (written before the search): Michael Andre-Driussi's *Lexicon
    Urthus*, Wolfe's own *The Castle of the Otter*, Robert Borski's *Solar Labyrinth*, Peter
    Wright's *Attending Daedalus*, the urth.net mailing-list archive. Use them for references and
    readings; write the glossary fresh rather than copying the *Lexicon*.
