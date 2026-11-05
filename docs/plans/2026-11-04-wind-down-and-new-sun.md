@@ -38,7 +38,7 @@ of the books, about 20 years after the first.** What follows from that:
   - Narrator voices (audiobook readers) were passed over: they're trained on read prose and tend
     to sound like it in back-and-forth.
   - The model matters as much as the voice. `config.json` still uses `eleven_turbo_v2`, the
-    oldest and flattest option. Try the new voices on `eleven_v3` before judging them.
+    oldest and flattest option. **Switched to `eleven_v4` on 2026-11-04** (the newest model this account can run; ElevenLabs lists it as the default), and script delivery notes now go to v4 as inline audio tags. v4 costs twice as much per character as Turbo.
 - **Script generator:** `book_study.py` (brief, checked "what this sets up" notes, script,
   text-check, guide). Its first run failed on 2026-11-04 because tikiserv's Anthropic API key was
   rejected (401), so the pilot copy was written in-session instead.

@@ -132,7 +132,7 @@ def _build_route(provider: str, label: str, cfg: dict) -> dict | None:
         return {
             "provider": "elevenlabs",
             "voice_id": voice_id,
-            "model": cfg.get("elevenlabs_model") or "eleven_turbo_v2",
+            "model": cfg.get("elevenlabs_model") or "eleven_v4",
             "stability": float(cfg.get("elevenlabs_stability", 0.5)),
             "similarity_boost": float(cfg.get("elevenlabs_similarity_boost", 0.75)),
         }

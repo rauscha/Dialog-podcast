@@ -421,7 +421,7 @@ def _tts_config(repo_root: Path) -> dict[str, Any]:
         "elevenlabs_voice_id_a": "",
         "elevenlabs_voice_id_b": "",
         "elevenlabs_guest_voice_ids": "",
-        "elevenlabs_model": "eleven_turbo_v2",
+        "elevenlabs_model": "eleven_v4",
         "tts_default_route": {},
         "tts_routes": {},
         "tts_command": "",

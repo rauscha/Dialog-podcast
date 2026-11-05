@@ -134,6 +134,7 @@ def synthesize_tts(
     route: dict[str, Any],
     cfg: dict[str, Any],
     instructions: str = "",
+    audio_tag: str = "",
 ) -> Path:
     provider = str(route.get("provider") or cfg.get("tts_provider") or "openai").lower()
     if provider == "openai":
@@ -150,6 +151,7 @@ def synthesize_tts(
             output_path=output_path,
             route=route,
             cfg=cfg,
+            audio_tag=audio_tag,
         )
     if provider == "cartesia":
         return synthesize_cartesia(
@@ -232,12 +234,30 @@ def synthesize_openai(
     return output_path
 
 
+# ElevenLabs models that read inline [audio tags] as delivery directions. Older
+# models speak bracketed text aloud, so tags are only sent to these.
+ELEVENLABS_TAG_MODELS = ("eleven_v3", "eleven_v4")
+
+
+def elevenlabs_audio_tag(tag: str, model_id: str) -> str:
+    """Return a script emotion tag as an inline ElevenLabs audio tag, or ''.
+
+    ElevenLabs asks for plain words in tags, so hyphens become spaces.
+    """
+    if not tag or not model_id.startswith(ELEVENLABS_TAG_MODELS):
+        return ""
+    words = re.sub(r"[\[\]]", "", tag).replace("-", " ")
+    words = re.sub(r"\s+", " ", words).strip()
+    return f"[{words}] " if words else ""
+
+
 def synthesize_elevenlabs(
     *,
     text: str,
     output_path: Path,
     route: dict[str, Any],
     cfg: dict[str, Any],
+    audio_tag: str = "",
 ) -> Path:
     if not HAS_REQUESTS or req_lib is None:
         raise ImportError("requests package not installed.")
@@ -252,7 +272,7 @@ def synthesize_elevenlabs(
     output_path = output_path.with_suffix(".mp3")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     chunks = chunk_text(clean_for_tts(text), max_chars=int(route.get("max_chars", 4500)))
-    model_id = str(route.get("model") or cfg.get("elevenlabs_model") or "eleven_turbo_v2")
+    model_id = str(route.get("model") or cfg.get("elevenlabs_model") or "eleven_v4")
     voice_settings = route.get("voice_settings")
     if not isinstance(voice_settings, dict):
         voice_settings = {
@@ -264,6 +284,9 @@ def synthesize_elevenlabs(
                 )
             ),
         }
+    tag = elevenlabs_audio_tag(audio_tag, model_id)
+    if tag and chunks:
+        chunks[0] = tag + chunks[0]
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
     headers = {"xi-api-key": api_key, "Content-Type": "application/json"}
     chunk_paths: list[Path] = []

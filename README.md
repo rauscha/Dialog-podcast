@@ -174,7 +174,7 @@ Defaults live in `generate_podcast.py`, repo settings live in `config.json`, and
 | `host_b_role` | `"scientific"` | Informational label |
 | `elevenlabs_voice_id_a` | `""` | ElevenLabs voice ID for host A |
 | `elevenlabs_voice_id_b` | `""` | ElevenLabs voice ID for host B |
-| `elevenlabs_model` | `"eleven_turbo_v2"` | ElevenLabs model used by ElevenLabs routes |
+| `elevenlabs_model` | `"eleven_v4"` | ElevenLabs model used by ElevenLabs routes |
 | `elevenlabs_stability` | `0.5` | Default ElevenLabs stability setting |
 | `elevenlabs_similarity_boost` | `0.75` | Default ElevenLabs similarity setting |
 | `tts_default_route` | `{}` | Route fields merged into every speaker before per-speaker overrides |
@@ -253,7 +253,7 @@ Example `config.json` override:
     "CASPAR": {
       "provider": "elevenlabs",
       "voice_id": "your-elevenlabs-voice-id",
-      "model": "eleven_turbo_v2",
+      "model": "eleven_v4",
       "stability": 0.42,
       "similarity_boost": 0.82
     },

@@ -121,7 +121,7 @@ DEFAULTS: dict = {
     "elevenlabs_voice_id_a": "",
     "elevenlabs_voice_id_b": "",
     "elevenlabs_guest_voice_ids": "",
-    "elevenlabs_model":     "eleven_turbo_v2",
+    "elevenlabs_model":     "eleven_v4",
     "elevenlabs_stability": 0.5,
     "elevenlabs_similarity_boost": 0.75,
     "cartesia_voice_id_a":  "",
@@ -4325,11 +4325,11 @@ def _tts_two_host(
             emotion_tag, label, cfg, prev_emotion_tag=prev_emotion
         )
         turn_path = work_dir / f"turn_{i:04d}_{_speaker_file_stem(label)}.mp3"
-        work_items.append((i, label, route, instructions, text, turn_path))
+        work_items.append((i, label, route, instructions, emotion_tag, text, turn_path))
         prev_emotion = emotion_tag
 
     def _synthesize_one(item: tuple):
-        idx, lbl, route, instructions, text, turn_path = item
+        idx, lbl, route, instructions, emotion_tag, text, turn_path = item
         try:
             generated_path = tts_engines.synthesize_tts(
                 text=text,
@@ -4337,6 +4337,7 @@ def _tts_two_host(
                 route=route,
                 cfg=cfg,
                 instructions=instructions,
+                audio_tag=emotion_tag,
             )
             if generated_path.exists():
                 _normalize_turn_loudness(generated_path, cfg, work_dir)
