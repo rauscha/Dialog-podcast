@@ -5600,6 +5600,9 @@ def _show_is_due(
     """Return (is_due: bool, reason: str) for a digest show.
 
     Rules (checked in order):
+    0. ``active: false`` in digests.json → never due, even when forced. A
+       single named show (``--digest <id>``) bypasses this function entirely,
+       so one-offs still work.
     1. ``force=True`` → always due.
     2. ``last_run.aired_at`` is within the last ``_DIGEST_MIN_DAYS_BETWEEN_RUNS``
        days → weekly throttle, skip (also covers the "already ran today" case).
@@ -5609,6 +5612,8 @@ def _show_is_due(
     """
     from datetime import datetime as _dt, timezone as _tz
 
+    if not show.get("active", True):
+        return False, "inactive (active: false in digests.json)"
     if force:
         return True, "forced"
 

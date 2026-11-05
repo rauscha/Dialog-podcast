@@ -13,3 +13,6 @@ __pycache__/
 
 # Claude Code harness state (worktrees, plans, agent transcripts)
 .claude/
+
+# Book texts for the New Sun show: copyrighted, local only, never pushed
+books/

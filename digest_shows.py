@@ -125,6 +125,7 @@ def _validate_show(show_id: str, show: dict[str, Any]) -> dict[str, Any]:
     out.setdefault("category", "Science")
     out.setdefault("cover_image", "")
     out["include_preprints"] = bool(show.get("include_preprints", False))
+    out["active"] = bool(show.get("active", True))
     out["mesh_terms"] = [str(m).strip() for m in (show.get("mesh_terms") or []) if str(m).strip()]
     out["keywords"] = [str(k).strip() for k in (show.get("keywords") or []) if str(k).strip()]
 

@@ -2,6 +2,7 @@
   "schema_version": 1,
   "shows": {
     "mfm": {
+      "active": false,
       "display_name": "MFM Rounds",
       "description": "A weekly peer-level digest of the most important new maternal-fetal medicine research, with Juno and Caspar.",
       "author": "Juno & Caspar",
@@ -24,6 +25,7 @@
       "keywords": ["maternal-fetal medicine", "preeclampsia", "preterm birth", "stillbirth", "fetal growth restriction", "gestational diabetes"]
     },
     "fetal": {
+      "active": false,
       "display_name": "The Fetal Frontier",
       "description": "A weekly peer-level digest of the most important new research in fetal and prenatal diagnosis and therapy, with Juno and Caspar.",
       "author": "Juno & Caspar",
@@ -46,6 +48,7 @@
       "keywords": ["fetal therapy", "fetal surgery", "prenatal diagnosis", "cell-free DNA", "noninvasive prenatal testing", "fetoscopy", "fetal MRI"]
     },
     "ai": {
+      "active": false,
       "display_name": "Signal in the Scan",
       "description": "A weekly peer-level digest of the most important new research on AI in medicine, focused on obstetrics and gynecology and on medical imaging, with Juno and Caspar.",
       "author": "Juno & Caspar",
