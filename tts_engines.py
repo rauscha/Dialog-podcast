@@ -234,6 +234,29 @@ def synthesize_openai(
     return output_path
 
 
+def _post_with_backoff(url: str, payload: dict, headers: dict, *, timeout: int, attempts: int = 6):
+    """POST, retrying 429 (too many concurrent requests) and 5xx with backoff.
+
+    Honors Retry-After when the provider sends it; otherwise waits 2, 4, 8, ... s.
+    """
+    import time
+
+    for attempt in range(max(1, attempts)):
+        response = req_lib.post(url, json=payload, headers=headers, timeout=timeout)
+        retryable = response.status_code == 429 or response.status_code >= 500
+        if not retryable or attempt == attempts - 1:
+            response.raise_for_status()
+            return response
+        try:
+            wait = float(response.headers.get("retry-after", ""))
+        except ValueError:
+            wait = 2.0 * (2 ** attempt)
+        logger.info("TTS %s; retrying in %.0fs (attempt %d/%d)",
+                    response.status_code, wait, attempt + 2, attempts)
+        time.sleep(min(wait, 60.0))
+    return response
+
+
 # ElevenLabs models that read inline [audio tags] as delivery directions. Older
 # models speak bracketed text aloud, so tags are only sent to these.
 ELEVENLABS_TAG_MODELS = ("eleven_v3", "eleven_v4")
@@ -299,13 +322,13 @@ def synthesize_elevenlabs(
             "model_id": model_id,
             "voice_settings": voice_settings,
         }
-        response = req_lib.post(
+        response = _post_with_backoff(
             url,
-            json=payload,
-            headers=headers,
+            payload,
+            headers,
             timeout=int(route.get("timeout_sec", cfg.get("tts_request_timeout_sec", 180))),
+            attempts=int(cfg.get("tts_retry_attempts", 6)),
         )
-        response.raise_for_status()
         chunk_path = output_path.with_stem(f"{output_path.stem}_elevenlabs_{idx}")
         chunk_path.write_bytes(response.content)
         chunk_paths.append(chunk_path)

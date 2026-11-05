@@ -4330,6 +4330,8 @@ def _tts_two_host(
 
     def _synthesize_one(item: tuple):
         idx, lbl, route, instructions, emotion_tag, text, turn_path = item
+        if cfg.get("tts_reuse_existing_turns") and turn_path.exists() and turn_path.stat().st_size:
+            return (idx, turn_path)  # already voiced in an earlier attempt of this same script
         try:
             generated_path = tts_engines.synthesize_tts(
                 text=text,

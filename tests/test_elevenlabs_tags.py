@@ -19,6 +19,8 @@ def test_v4_request_carries_tag(tmp_path: Path, monkeypatch):
 
     class _Resp:
         content = b"ID3"
+        status_code = 200
+        headers: dict = {}
 
         def raise_for_status(self):
             pass
@@ -34,3 +36,20 @@ def test_v4_request_carries_tag(tmp_path: Path, monkeypatch):
                       route=route, cfg={}, audio_tag="dry, measured")
     assert sent[0]["model_id"] == "eleven_v4"
     assert sent[0]["text"] == "[dry, measured] Hello there."
+
+
+def test_backoff_retries_429(monkeypatch):
+    calls = []
+
+    class _Resp:
+        def __init__(self, code):
+            self.status_code, self.headers, self.content = code, {"retry-after": "0"}, b"ID3"
+
+        def raise_for_status(self):
+            if self.status_code >= 400:
+                raise RuntimeError(self.status_code)
+
+    codes = iter([429, 429, 200])
+    monkeypatch.setattr(te.req_lib, "post", lambda *a, **k: calls.append(1) or _Resp(next(codes)))
+    r = te._post_with_backoff("u", {}, {}, timeout=5, attempts=4)
+    assert r.status_code == 200 and len(calls) == 3
