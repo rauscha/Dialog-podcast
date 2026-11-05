@@ -53,3 +53,15 @@ def test_backoff_retries_429(monkeypatch):
     monkeypatch.setattr(te.req_lib, "post", lambda *a, **k: calls.append(1) or _Resp(next(codes)))
     r = te._post_with_backoff("u", {}, {}, timeout=5, attempts=4)
     assert r.status_code == 200 and len(calls) == 3
+
+
+def test_turn_cache_key_tracks_text_and_voice(tmp_path):
+    import generate_podcast as gp
+
+    cfg = {"tts_turn_cache_dir": str(tmp_path)}
+    route = {"provider": "elevenlabs", "voice_id": "v", "model": "eleven_v4"}
+    a = gp._turn_cache_path(cfg, route, "", "dry", "Hello.")
+    assert a == gp._turn_cache_path(cfg, dict(route), "", "dry", "Hello.")
+    assert a != gp._turn_cache_path(cfg, route, "", "dry", "Hello there.")
+    assert a != gp._turn_cache_path(cfg, {**route, "voice_id": "w"}, "", "dry", "Hello.")
+    assert gp._turn_cache_path({}, route, "", "dry", "Hello.") is None

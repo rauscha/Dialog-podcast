@@ -354,6 +354,8 @@ def render(episode: int) -> int:
     cfg = gp.load_config(ROOT)
     show = json.loads((ROOT / "ultans_library.json").read_text(encoding="utf-8"))
     cfg.update({k: v for k, v in show.items() if not k.startswith("_")})
+    if cfg.get("tts_turn_cache_dir"):
+        cfg["tts_turn_cache_dir"] = str(ROOT / cfg["tts_turn_cache_dir"])
 
     work = out / "render"
     parts = []

@@ -545,7 +545,10 @@ play (II.24) is a 7,600-word script that reads fast and belongs with its afterma
 2. *Read the necropolis scene as a first sentence.* A rebel exultant, his beautiful companion, a
    corpse pulled from a grave, a man killed with his own ax, and a coin. Severian chooses a side by
    instinct and spends three chapters doubting his own memory of it (I.3), finally checking the coin
-   and finding that its face is androgynous and is not Vodalus's.
+   and finding that its face is androgynous and is not Vodalus's. Keep the two coins apart, as the
+   text does: soldiers swear on a silver asimi with the Autarch's profile (I.1); Severian's gold
+   chrisos shows a crowned face he first took for a woman's, with a flying ship on the reverse (I.3).
+   Only the chapter title points to the Autarch. (Andrew caught the episode conflating them, 2026-11-05.)
 3. *See that this is a very old world.* The sun is dim; the Citadel's towers are of "unsmeltable" metal and
    Malrubius woke the boys by drumming on a bulkhead (I.2); the picture cleaner is working on a painting of an armored figure in a
    desert with a stiff banner and a gold visor (I.5). Let the listener recognize the moon landing

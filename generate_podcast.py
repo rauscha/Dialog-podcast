@@ -4276,6 +4276,22 @@ def _tts_openai_voice(
     )
 
 
+def _turn_cache_path(cfg: dict, route: dict, instructions: str, emotion_tag: str,
+                     text: str) -> Path | None:
+    """Where a voiced turn is kept when cfg["tts_turn_cache_dir"] is set.
+
+    Keyed on everything that changes the audio, so an edited line misses the
+    cache and an unchanged one is never paid for twice.
+    """
+    root = cfg.get("tts_turn_cache_dir")
+    if not root:
+        return None
+    key = json.dumps([route.get("provider"), route.get("voice_id") or route.get("voice"),
+                      route.get("model"), route.get("stability"), route.get("similarity_boost"),
+                      instructions, emotion_tag, text], sort_keys=True, default=str)
+    return Path(root) / (hashlib.sha256(key.encode("utf-8")).hexdigest()[:24] + ".mp3")
+
+
 def _tts_two_host(
     script: str,
     output_path: Path,
@@ -4330,8 +4346,10 @@ def _tts_two_host(
 
     def _synthesize_one(item: tuple):
         idx, lbl, route, instructions, emotion_tag, text, turn_path = item
-        if cfg.get("tts_reuse_existing_turns") and turn_path.exists() and turn_path.stat().st_size:
-            return (idx, turn_path)  # already voiced in an earlier attempt of this same script
+        cached = _turn_cache_path(cfg, route, instructions, emotion_tag, text)
+        if cached and cached.exists() and cached.stat().st_size:
+            shutil.copyfile(cached, turn_path)  # same line, voice and delivery: no new spend
+            return (idx, turn_path)
         try:
             generated_path = tts_engines.synthesize_tts(
                 text=text,
@@ -4344,6 +4362,9 @@ def _tts_two_host(
             if generated_path.exists():
                 _normalize_turn_loudness(generated_path, cfg, work_dir)
                 _edge_trim_silence(generated_path, cfg)
+                if cached:
+                    cached.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(generated_path, cached)
                 return (idx, generated_path)
         except Exception as exc:
             logger.warning("TTS synthesis failed for turn %d (%s): %s", idx, lbl, exc)

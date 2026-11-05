@@ -9,6 +9,6 @@
   "spoiler_gap_sec": 2.5,
   "tts_max_workers": 3,
   "_tts_max_workers_note": "8 parallel requests drew 429s from ElevenLabs on eleven_v4 (2026-11-05)",
-  "tts_reuse_existing_turns": true,
+  "tts_turn_cache_dir": "books/ultans-library/tts-cache",
   "tts_max_fail_ratio": 0
 }
