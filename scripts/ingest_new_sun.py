@@ -11,10 +11,9 @@ next ordinal in sequence, is followed by a title line, and prose follows within
 a few lines. That skips tables of contents. Wolfe's appendices are kept as a
 final "appendix" entry per volume.
 
-The Shadow EPUB is a PDF conversion: lines break mid-sentence and page numbers
-sit on their own lines. Page numbers are dropped and lines are rejoined;
-paragraph breaks are lost, and chapter openings can have squashed words where
-a drop cap was.
+pdf_derived=True handles a PDF-converted EPUB (lines broken mid-sentence, page
+numbers on their own lines): page numbers are dropped and lines rejoined. The
+first Shadow copy was one; the current copy (Pocket Books, via calibre) is not.
 """
 
 from __future__ import annotations
@@ -91,6 +90,7 @@ def spine_lines(path: Path) -> list[str]:
         href = items.get(idref)
         if href:
             raw += z.read(normpath(join(base, href))).decode("utf-8", "replace")
+    raw = re.sub(r"\s+", " ", raw)  # source newlines are line wrap, not breaks
     raw = re.sub(r"<(p|div|br|h\d|li)\b[^>]*>", "\n", raw, flags=re.I)
     text = html.unescape(re.sub(r"<[^>]+>", "", raw))
     return [ln.strip() for ln in text.splitlines() if ln.strip()]
@@ -108,7 +108,7 @@ def split_chapters(lines: list[str], pdf_derived: bool) -> list[dict]:
         if pdf_derived and lines[k + 2].isupper() and len(lines[k + 2]) < 40:
             title, skip = f"{title} {lines[k + 2]}", 3  # title wrapped onto two lines
         after = lines[k + skip:k + skip + 3]
-        min_prose = 30 if pdf_derived else 80
+        min_prose = 30
         if len(title) > 70 or not any(len(x) > min_prose and re.search(r"[a-z]", x) for x in after):
             continue
         starts.append((k, want, title, skip))
@@ -136,7 +136,7 @@ def main() -> int:
     out = []
     for vol, name, fname in VOLUMES:
         path = BOOK_DIR / fname
-        chapters = split_chapters(spine_lines(path), pdf_derived=(vol == 1))
+        chapters = split_chapters(spine_lines(path), pdf_derived=False)
         numbered = [c for c in chapters if c["chapter"] != "appendix"]
         words = sum(len(c["text"].split()) for c in numbered)
         print(f"{vol} {name}: {len(numbered)} chapters, {words:,} words"
