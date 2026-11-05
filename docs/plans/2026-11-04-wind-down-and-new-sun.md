@@ -158,10 +158,9 @@ no spending on weeks he doesn't read.
 2. ~~Spoilers~~ **Answered:** fence plus skippable tail.
 3. ~~Granularity~~ **Answered:** 25–30 minute episodes, about 20 in all.
 4. ~~Wind-down scope~~ **Answered:** stop all three.
-5. **The text:** is there an EPUB of his own to ground it? Which edition (omnibus *Shadow & Claw* /
-   *Sword & Citadel*, or the four single volumes)? Chapter breaks drive the unit plan.
+5. ~~The text~~ **Answered:** four single-volume EPUBs, 142 chapters (see above).
 6. ~~Hosts~~ **Answered:** Juno and Caspar. (Original note: Juno (artistic) and Caspar (scientific) fit well. Juno takes the prose, memory and
    religion; Caspar takes the dying-sun science fiction hiding under the fantasy. Or new voices for
    a new show?)
-7. ~~Name~~ **Answered:** *Ultan's Library* (see above). Earlier candidates: Candidates: *Fuligin* (the guild's color "darker than black"),
+7. ~~Name~~ **Answered:** *Ultan's Library* (see above). Earlier candidates: *Fuligin* (the guild's color "darker than black"),
    *The Matachin Tower*, *Severian Remembers*.
