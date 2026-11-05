@@ -557,7 +557,7 @@ play (II.24) is a 7,600-word script that reads fast and belongs with its afterma
 **Threads in play:** MEMORY, FACE, SUN, REALM, WORDS, FAMILY (the boatman, quietly), THECLA (I.6–7).
 
 **Payoff notes (spoilers allowed)**
-- The androgynous face on the coin (I.3) is the Autarch's: the host of the House Azure (I.9) and the
+- The androgynous face on the coin (I.3) is likely the Autarch's (*a strong reading*: no volume says so outright): the host of the House Azure (I.9) and the
   androgyne of II.20–21, revealed at IV.23–24.
 - "Backed into the throne" (I.1) is literal by IV.29.
 - The boatman who asks "Not a woman?" (I.2) is fishing for his drowned wife, Cas (I.22). She is
@@ -569,7 +569,7 @@ play (II.24) is a 7,600-word script that reads fast and belongs with its afterma
   them as the first Severian's arms (IV.38 and Chapter Guide Postlude 1). *A community theory.*
 - Valeria in the Atrium of Time (I.4) is the woman he sends for at IV.38.
 - Triskele (I.4), revived by the boy, returns with Malrubius in visions (I.33) and as an aquastor
-  (IV.30–31). At IV.18 Severian learns a dire wolf killed the dog, which is the hinge of
+  (IV.30–31). At IV.18 Severian supposes a dire wolf killed the dog (and then says it "wasn't really dead"), which is the hinge of
   Andre-Driussi's "resurrect only what you kill."
 - Ultan's remark about sharing a dead historian's mind (I.6) prepares the feast (II.10–11).
 - The Book of Gold (I.6) returns at IV.33, where Severian wonders whether he has written one.
