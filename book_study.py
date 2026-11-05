@@ -18,6 +18,7 @@ listener can skip it.
 No audio. Rendering is a separate step once the voices are chosen.
 
     python book_study.py --episode 1 --volume 1 --chapters 1-7
+    python book_study.py --episode 1 --render     # audio, using ultans_library.json
 """
 
 from __future__ import annotations
@@ -129,8 +130,9 @@ Nothing from later in the books, not even hints of it."""
 
 _TAIL_PROMPT = """\
 These are chapters {first}-{last} of {volume}. You also know the whole tetralogy.
-For the closing, skippable segment of the episode, list 4-6 things in these
-chapters that pay off later in The Book of the New Sun (all four volumes; not
+For the closing, skippable segment of the episode, list every thing in these
+chapters that genuinely pays off later (as many as there are; often 4-10, fewer
+is fine if that is what the text supports) in The Book of the New Sun (all four volumes; not
 The Urth of the New Sun). For each, say where the payoff is and give words that
 appear in that later passage so it can be found in the text.
 
@@ -173,7 +175,8 @@ Shape:
 4. Then a line on its own, exactly: {marker}
 5. The skippable segment: one host says plainly that what follows draws on the
    rest of the books, so this is the place to stop if he wants it fresh. Then
-   the checked setups and payoffs, with how sure each one is. Short.
+   the checked setups and payoffs, with how sure each one is. Give it the room
+   the payoffs need, and no more.
 6. A brief sign-off naming the chapters for next time if known.
 
 Rules:
@@ -183,7 +186,8 @@ Rules:
   2-4 word delivery note in the brackets. No headers, no stage directions, no
   bullet points, nothing that isn't spoken except the marker line.
 - Interruptions with em dashes. They build on each other; no trading monologues.
-- About {words} words in all, about {tail_words} of them after the marker.
+- About {words} words before the marker. After it, as long as the payoffs need
+  (roughly 100-150 words each).
 - Plain spoken English. No sourcing of the "sources for today's episode" kind."""
 
 _CHECK_PROMPT = """\
@@ -257,13 +261,70 @@ def render_guide(episode: int, volume_title: str, first: int, last: int, brief: 
     return "\n".join(out) + "\n"
 
 
+def render(episode: int) -> int:
+    """Voice script.txt with the show's voices; a pause marks the spoiler segment."""
+    import subprocess
+
+    import generate_podcast as gp
+    from audio_utils import two_pass_loudnorm
+
+    out = OUT_DIR / f"ep{episode:02d}"
+    script = (out / "script.txt").read_text(encoding="utf-8")
+    cfg = gp.load_config(ROOT)
+    show = json.loads((ROOT / "ultans_library.json").read_text(encoding="utf-8"))
+    cfg.update({k: v for k, v in show.items() if not k.startswith("_")})
+
+    work = out / "render"
+    parts = []
+    for name, text in zip(("body", "tail"), script.split(TAIL_MARKER, 1)):
+        turns = gp._parse_dialogue_turns(text, cfg)
+        if not turns:
+            continue
+        chars = sum(len(t[2]) for t in turns)
+        print(f"{name}: {len(turns)} turns, {chars:,} characters", flush=True)
+        turn_dir = work / f"turns_{name}"
+        path = gp._tts_two_host(text, work / f"{name}.mp3", cfg, turn_dir)
+        made = len(list(turn_dir.glob("turn_*.mp3")))
+        if made < len(turns):
+            print(f"{name}: only {made} of {len(turns)} turns were voiced; see the log", file=sys.stderr)
+            return 1
+        parts.append(path)
+
+    joined = work / "joined.mp3"
+    gap = float(cfg.get("spoiler_gap_sec", 2.5))
+    inputs, chain = [], []
+    for i, part in enumerate(parts):
+        inputs += ["-i", str(part)]
+        chain.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo[a{i}]")
+    if len(parts) == 2:
+        chain.append(f"[a0]apad=pad_dur={gap}[p0]")
+        chain.append("[p0][a1]concat=n=2:v=0:a=1[out]")
+    else:
+        chain.append("[a0]anull[out]")
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs,
+                    "-filter_complex", ";".join(chain), "-map", "[out]",
+                    "-c:a", "libmp3lame", "-b:a", "192k", str(joined)], check=True)
+    final = out / f"ultans-library-ep{episode:02d}.mp3"
+    two_pass_loudnorm(joined, final, target_i=float(cfg.get("audio_loudness_i", -14.0)),
+                      target_tp=float(cfg.get("audio_true_peak", -1.0)))
+    dur = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                          "-of", "csv=p=0", str(final)], capture_output=True, text=True).stdout
+    print(f"done: {final} ({float(dur) / 60:.1f} min)")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--episode", type=int, required=True)
-    ap.add_argument("--volume", type=int, required=True)
-    ap.add_argument("--chapters", required=True, help="e.g. 1-7")
+    ap.add_argument("--volume", type=int)
+    ap.add_argument("--chapters", help="e.g. 1-7")
     ap.add_argument("--minutes", type=int, default=27)
+    ap.add_argument("--render", action="store_true", help="voice an existing script.txt")
     args = ap.parse_args()
+    if args.render:
+        return render(args.episode)
+    if not (args.volume and args.chapters):
+        ap.error("--volume and --chapters are required to write an episode")
 
     first, last = (int(x) for x in args.chapters.split("-"))
     chapters = [c for c in load_chapters(args.volume) if first <= c["chapter"] <= last]
@@ -299,7 +360,7 @@ def main() -> int:
     print(f"[3/5] script: about {words:,} words ({args.minutes} min)", flush=True)
     script = ask(client, _SHOW, book_text, _SCRIPT_PROMPT.format(
         **fmt, brief=json.dumps(brief, ensure_ascii=False), tail=json.dumps(kept, ensure_ascii=False),
-        marker=TAIL_MARKER, words=words, tail_words=words // 7))
+        marker=TAIL_MARKER, words=words))
     (out / "script.draft.txt").write_text(script + "\n")
     if TAIL_MARKER not in script:
         print("    warning: no tail marker in the script", flush=True)
