@@ -3,7 +3,7 @@
   "tts_provider": "elevenlabs",
   "elevenlabs_model": "eleven_v4",
   "elevenlabs_voice_id_a": "ut2XM2wJyIZLTtW6lFzZ",
-  "_elevenlabs_voice_id_a_label": "Eliza - Conversational Podcast Host (JUNO), chosen 2026-11-04",
+  "_elevenlabs_voice_id_a_label": "Eliza - Conversational Podcast Host (JUNO), chosen 2026-11-04; REJECTED 2026-11-05 (too ebullient), replacement pending",
   "elevenlabs_voice_id_b": "rduzwhyZDdtuFPq1Z1mL",
   "_elevenlabs_voice_id_b_label": "Oliver - British Podcast Narrator (CASPAR), chosen 2026-11-04",
   "spoiler_gap_sec": 2.5,

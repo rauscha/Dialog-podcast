@@ -282,7 +282,9 @@ Report as JSON:
  "verdict": "one sentence"}}
 
 Interpretation is fine when it is presented as interpretation. Flag interpretation
-stated as fact. A quote must match the text word for word.
+stated as fact. A quote must match the text word for word. When the hosts connect
+two passages (this means that, this explains that), confirm the text itself makes
+the link; if it only sets them side by side, flag it.
 
 SCRIPT BODY:
 {body}"""
