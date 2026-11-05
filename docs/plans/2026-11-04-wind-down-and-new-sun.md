@@ -15,6 +15,16 @@ of the books, about 20 years after the first.** What follows from that:
   feed is unlisted: the URL is reachable so his podcast app can subscribe, but nothing links to it.
 - **Length follows the drive**, not a house standard.
 
+**Also decided 2026-11-04:**
+
+- **Spoilers: fence plus a skippable tail.** The main discussion uses only what's been read so far.
+  Each episode closes with a clearly announced "what this sets up" segment that may draw on the
+  whole tetralogy, so he can skip it or keep listening. In the pipeline that means two contexts:
+  the fenced text for the body, and full knowledge for the tail only.
+- **Length: 25–30 minutes**, for 20–40 minute drives. That makes roughly 20 episodes across the
+  four books, about five per volume.
+- **Digests: stop all three.** Phase 1 goes ahead as written; mark each feed complete.
+
 ---
 
 ## Where things stand (checked 2026-11-04)
@@ -134,12 +144,9 @@ no spending on weeks he doesn't read.
 ## Open questions (Andrew's calls)
 
 1. ~~Who is it for?~~ **Answered:** Andrew alone, in the car, second read after about 20 years.
-2. **Spoilers, given it's a reread with faded memory:** fence to the current chapter (rediscovery),
-   allow full knowledge (the foreshadowing is the payoff of a Wolfe reread), or fence the main
-   discussion and close each episode with a marked "what this sets up" segment he can skip?
-3. **Granularity:** about 20 episodes of 5–8 chapters each, or coarser (one per half-volume, about 8)?
-4. **Wind-down scope:** stop all three digests, or keep one (on a slower cadence, or on demand only)?
-   Mark the feeds complete, or leave them open?
+2. ~~Spoilers~~ **Answered:** fence plus skippable tail.
+3. ~~Granularity~~ **Answered:** 25–30 minute episodes, about 20 in all.
+4. ~~Wind-down scope~~ **Answered:** stop all three.
 5. **The text:** is there an EPUB of his own to ground it? Which edition (omnibus *Shadow & Claw* /
    *Sword & Citadel*, or the four single volumes)? Chapter breaks drive the unit plan.
 6. **Hosts:** Juno (artistic) and Caspar (scientific) fit well. Juno takes the prose, memory and
