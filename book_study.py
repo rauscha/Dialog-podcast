@@ -364,12 +364,13 @@ def render(episode: int) -> int:
         chars = sum(len(t[2]) for t in turns)
         print(f"{name}: {len(turns)} turns, {chars:,} characters", flush=True)
         turn_dir = work / f"turns_{name}"
-        path = gp._tts_two_host(text, work / f"{name}.mp3", cfg, turn_dir)
-        made = len(list(turn_dir.glob("turn_*.mp3")))
-        if made < len(turns):
-            print(f"{name}: only {made} of {len(turns)} turns were voiced; see the log", file=sys.stderr)
-            return 1
-        parts.append(path)
+        target = work / f"{name}.mp3"
+        if target.exists() and target.stat().st_mtime > (out / "script.txt").stat().st_mtime:
+            print(f"{name}: already rendered from this script, reusing", flush=True)
+            parts.append(target)
+            continue
+        # tts_max_fail_ratio 0 (show config) makes a single unvoiced line abort the render.
+        parts.append(gp._tts_two_host(text, target, cfg, turn_dir))
 
     joined = work / "joined.mp3"
     gap = float(cfg.get("spoiler_gap_sec", 2.5))
