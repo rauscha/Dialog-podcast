@@ -3,6 +3,18 @@
 **Status: DRAFT, not reviewed by Andrew.** Written 2026-11-04. Nothing below is decided until
 the open questions at the end are answered. Phases are ordered; each one waits on the one before.
 
+**Decided 2026-11-04:** the show is **for Andrew alone, listened to in the car, on his second read
+of the books, about 20 years after the first.** What follows from that:
+
+- **Audio has to stand on its own.** No visuals, nothing to follow along with while driving. The
+  written guide becomes an optional extra for after the drive, not half of the product.
+- **He remembers the shape, not the detail.** He isn't a first-time reader who needs protecting,
+  and he isn't a fresh rereader who can take allusions on faith. Each episode should re-establish
+  who's who and open with a short spoken recap, because weeks may pass between drives.
+- **Tuned to one listener.** No public polish, no listing on `andrewrausch.com`, no apps card. The
+  feed is unlisted: the URL is reachable so his podcast app can subscribe, but nothing links to it.
+- **Length follows the drive**, not a house standard.
+
 ---
 
 ## Where things stand (checked 2026-11-04)
@@ -96,7 +108,8 @@ handling, and the two-host format decides Phase 3. Expect a second pilot.
    Urthus*, Wolfe's own *The Castle of the Otter*, Robert Borski's *Solar Labyrinth*, Peter
    Wright's *Attending Daedalus*, the urth.net mailing-list archive. Use them for references and
    readings; write the glossary fresh rather than copying the *Lexicon*.
-6. **Feed and hosting.** A new show entry and feed (`feed-newsun.xml`, own cover). New episodes
+6. **Feed and hosting.** A new show entry and an unlisted feed (`feed-newsun.xml`, own cover; not
+   linked from `index.html` or the site). New episodes
    upload with `gh release upload` and the enclosure points at the Release URL. This builds step 2
    of the storage P0 for new episodes only; migrating the 97 old MP3s stays a separate job.
 7. **Written guides published** as one HTML page per unit on the podcast site, linked from each
@@ -112,18 +125,18 @@ no spending on weeks he doesn't read.
 
 ## Phase 5 — Optional, later
 
-- A **reread track**: full-knowledge episodes that go back over the same chapters with the
-  foreshadowing explained. A second feed, so first-time readers never hit it by accident.
 - *The Urth of the New Sun* as a coda unit.
+- If the spoiler policy chosen below turns out wrong in practice, a second pass over the same
+  chapters under the other policy is cheap, since the unit plan and text are already in place.
 
 ---
 
 ## Open questions (Andrew's calls)
 
-1. **Who is it for, and where are they in the book?** Him on a first read, him rereading, a book
-   club or a person reading along, or a public audience. This sets everything else.
-2. **Spoilers:** fenced to the current chapter (recommended for a first read), or full-knowledge
-   analysis?
+1. ~~Who is it for?~~ **Answered:** Andrew alone, in the car, second read after about 20 years.
+2. **Spoilers, given it's a reread with faded memory:** fence to the current chapter (rediscovery),
+   allow full knowledge (the foreshadowing is the payoff of a Wolfe reread), or fence the main
+   discussion and close each episode with a marked "what this sets up" segment he can skip?
 3. **Granularity:** about 20 episodes of 5–8 chapters each, or coarser (one per half-volume, about 8)?
 4. **Wind-down scope:** stop all three digests, or keep one (on a slower cadence, or on demand only)?
    Mark the feeds complete, or leave them open?
