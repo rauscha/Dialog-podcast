@@ -2,7 +2,30 @@
 
 The running list. Sourced from `reviews/2026-05-30-deep-review.md` and updated each session. Top of file is what's nearest.
 
+## Now — Ultan's Library (added 2026-11-04)
+
+Course-style study show on *The Book of the New Sun*. Plan: `docs/plans/2026-11-04-wind-down-and-new-sun.md`
+(DRAFT). Course: `docs/ultans-library/course.md` (DRAFT). Andrew's feedback: `docs/ultans-library/production-notes.md`.
+
+- [x] Retire the three digests in code; mark their feeds complete.
+- [x] Episode 1 written, rendered and published to the main feed (2026-11-05).
+- [x] Archive 88 old feed entries off GitHub, with copies on tikiserv and BACKUP16.
+- [ ] Andrew picks a new Juno voice (Eliza rejected as too ebullient; IDs in `.handoff/SESSION-HANDOFF.md`).
+- [ ] Andrew's reaction to episode 1: length, payoff section. Episode 1 will not be re-rendered.
+- [ ] Episode 2 (Unit 2, *Shadow* I.8–14), once he has read it.
+- [ ] Andrew reviews `course.md`.
+- [ ] Andrew replaces tikiserv's Anthropic API key (401), so `book_study.py` can run by itself.
+- [ ] On crane-desk, Andrew runs `git pull` and `Disable-ScheduledTask -TaskName "Dialog-podcast-daily-digests"`.
+- [ ] Script the publish step (Release asset, chapters file, feed item); it was done by hand for episode 1.
+- [ ] Copy `books/` to BACKUP16; it exists only on tikiserv.
+- [ ] Maybe: move Ultan's Library to its own unlisted feed (the original plan); it's on the public main feed now.
+- [ ] Maybe: try ElevenLabs Text to Dialogue for two-host turns.
+
 ## P0 — Move episode audio to GitHub Releases, before Pages hits its 1 GB cap (added 2026-09-21)
+
+**Status 2026-11-05: pressure is off.** `episodes/` is 174 MB after the archive, and Ultan's Library audio
+already goes to Releases. Left over: the 11 MP3s still in `episodes/`, and removing old audio from git history
+(about 1.2 GB per clone), which needs a force push and Andrew's explicit OK.
 
 **Why:** the feeds serve every episode from GitHub Pages (`rauscha.github.io/Dialog-podcast/episodes/...`), and a published Pages site can be at most **1 GB**.
 As of 2026-09-21, `episodes/` is **~960 MB across 79 MP3s**, so there's only room for a few more episodes. The audio also means every clone downloads ~1 GB of history.

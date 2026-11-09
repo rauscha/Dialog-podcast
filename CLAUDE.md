@@ -2,6 +2,19 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Current work: Ultan's Library
+
+The weekly digests are retired (`"active": false` in `digests.json`). The active show is Ultan's Library, a
+course-style study of *The Book of the New Sun*.
+
+- **Authoritative, in order:** `docs/ultans-library/production-notes.md` (Andrew's feedback),
+  `docs/ultans-library/course.md`, then `docs/plans/2026-11-04-wind-down-and-new-sun.md`. The last two are drafts.
+- **Write an episode:** `.venv/bin/python -u book_study.py --episode N --volume V --chapters A-B`
+  **Voice it:** `.venv/bin/python -u book_study.py --episode N --render` (spends ElevenLabs credits; settings in `ultans_library.json`).
+- **Tests:** `.venv/bin/python -m pytest -q`. There is no linter.
+- `books/` (book text, Andrew's secondary sources, scripts, audio) is gitignored, copyrighted and only on tikiserv. Never commit or publish it.
+- **Traps:** importing `book_study.py` loads secrets. ElevenLabs v4 returns 429 at 8 parallel requests; the show uses 3. Pages is served through `andrewrausch.com`, so URL checks need `curl -L`. New audio goes to GitHub Releases, not `episodes/`.
+
 ## Running an episode
 
 ```powershell
